@@ -1,2 +1,2 @@
-# 5972.github.io
-All No.5972 Projects programmed in various languages
+# No.5972.github.io
+No.5972 Github Website
