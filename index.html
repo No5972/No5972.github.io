@@ -1,19 +1,68 @@
 <style>
-.qd
-{
-position: absolute;
-left:50%;
-top:20%;
-animation:qdd 3s infinite linear;
+.PM5544 {
+	width: 100%;
+	position: absolute;
+	left: 0px; top: 0px;
 }
 
-@keyframes qdd
-{
-0% {transform:scale(1,1);}
-50% {transform:scale(4,4);}
-100% {transform:scale(1,1);}
+.logo2 {
+	position: absolute;
+	left: 42%; top: 400px;
+	color: white;
+	font-family: Arial !important;
+	font-size:50px;
 }
-
-
+.logo1 {
+	position: absolute;
+	left: 41%; top: 400px;
+	color: white;
+	font-family: Arial !important;
+	font-size:50px;
+}
+.date {
+	position: absolute;
+	left: 21%; top: 400px;
+	color: white;
+	font-family: Arial !important;
+	font-size:50px;
+}
+.time {
+	position: absolute;
+	left: 60%; top: 400px;
+	color: white;
+	font-family: Arial !important;
+	font-size:50px;
+}
 </style>
-<p class="qd">No.5972 Hello World</p>
+<img class="PM5544" src="PM5544.jpg" />
+<span class="logo2" id="logo2">No.5972</span>
+<span class="logo1" id="logo1">NO5972</span>
+<span class="date" id="date">00-00-00</span>
+<span class="time" id="time">00:00:00</span>
+<audio src="http://www.51taoshi.com/uploads/file/20180216/1518716334340098812.mp3" autoplay loop></audio>
+<script>
+Date.prototype.Format = function (fmt) { //author: meizz
+  var o = {
+    "M+": this.getMonth() + 1, //月份
+    "d+": this.getDate(), //日
+    "h+": this.getHours(), //小时
+    "m+": this.getMinutes(), //分
+    "s+": this.getSeconds(), //秒
+    "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+    "S": this.getMilliseconds() //毫秒
+  };
+  if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+  for (var k in o)
+  if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+  return fmt;
+}
+var update=function() {
+	document.getElementById("logo2").style.top=document.body.clientWidth/1.75;
+	document.getElementById("logo1").style.top=document.body.clientWidth/12;
+	document.getElementById("date").style.top=document.body.clientWidth/2.85;
+	document.getElementById("time").style.top=document.body.clientWidth/2.85;
+	document.getElementById("date").innerText=new Date().Format("yy-MM-dd");
+	document.getElementById("time").innerText=new Date().Format("hh:mm:ss");
+}
+setInterval(update,100);
+</script>
