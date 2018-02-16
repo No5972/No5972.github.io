@@ -5,20 +5,6 @@
 	left: 0px; top: 0px;
 }
 
-.logo2 {
-	position: absolute;
-	left: 42%; top: 400px;
-	color: white;
-	font-family: Arial !important;
-	font-size:50px;
-}
-.logo1 {
-	position: absolute;
-	left: 41%; top: 400px;
-	color: white;
-	font-family: Arial !important;
-	font-size:50px;
-}
 .date {
 	position: absolute;
 	left: 21%; top: 400px;
@@ -35,8 +21,6 @@
 }
 </style>
 <img class="PM5544" src="PM5544.jpg" />
-<span class="logo2" id="logo2">No.5972</span>
-<span class="logo1" id="logo1">NO5972</span>
 <span class="date" id="date">00-00-00</span>
 <span class="time" id="time">00:00:00</span>
 <audio src="http://www.51taoshi.com/uploads/file/20180216/1518716334340098812.mp3" autoplay loop></audio>
@@ -57,8 +41,6 @@ Date.prototype.Format = function (fmt) { //author: meizz
   return fmt;
 }
 var update=function() {
-	document.getElementById("logo2").style.top=document.body.clientWidth/1.75;
-	document.getElementById("logo1").style.top=document.body.clientWidth/12;
 	document.getElementById("date").style.top=document.body.clientWidth/2.85;
 	document.getElementById("time").style.top=document.body.clientWidth/2.85;
 	document.getElementById("date").innerText=new Date().Format("yy-MM-dd");
