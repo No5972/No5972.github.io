@@ -1,3 +1,6 @@
+ï»¿<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
 <script src="list_A.js"></script>
 <script src="list_B.js"></script>
 <script src="list_C.js"></script>
@@ -5,7 +8,7 @@
 <script src="list_E.js"></script>
 <script src="list_F.js"></script>
 <link href="autoc.css" rel="stylesheet" />
-<script src="autoc.js"></script>
+<script src="autoc.js" charset="utf-8"></script>
 <script>
 var inptimes=1; var a;
 	var times,ntotimes=0,nepic,ntoepic=0,nequi,ntoinvite=0,neye=0,wheeye=0,nepicfra=0,ntobead=0,whebead=0,nchal=0;
@@ -19,7 +22,7 @@ var fixedcost=0,totprice=0;
 var test1=function() {
 
 	times=document.getElementById("text1").value;
-	//document.getElementById("test").innerHTML+="»ñµÃ";
+	//document.getElementById("test").innerHTML+="è·å¾—";
 	nacepic=0;
 	nacinvite=0;
 	nacbead=0;
@@ -94,24 +97,24 @@ var test1=function() {
 			}
 		}
 		if (diff==0) {
-			//printf("µÚ%6d¾Ö£¬Õâ¾ÖÊÇÀ§ÄÑ¡¡¡¡£¬Ò»¹²%d¼ş×°±¸£¬³öÁË%d¼şSS¡£",i,nequi,nepic);
-			//document.getElementById("test").innerHTML="µÚ"+(++i)+"¾Ö£¬Õâ¾ÖÊÇÀ§ÄÑ¡¡¡¡£¬Ò»¹²"+nequi+"¼ş×°±¸£¬³öÁË"+nepic+"¼şSS¡£";
-			document.getElementById("test").innerHTML="µÚ"+(++i)+"¾Ö£¬Õâ¾Ö³öÁË"+nepic+"¼şSS¡£";
+			//printf("ç¬¬%6då±€ï¼Œè¿™å±€æ˜¯å›°éš¾ã€€ã€€ï¼Œä¸€å…±%dä»¶è£…å¤‡ï¼Œå‡ºäº†%dä»¶SSã€‚",i,nequi,nepic);
+			//document.getElementById("test").innerHTML="ç¬¬"+(++i)+"å±€ï¼Œè¿™å±€æ˜¯å›°éš¾ã€€ã€€ï¼Œä¸€å…±"+nequi+"ä»¶è£…å¤‡ï¼Œå‡ºäº†"+nepic+"ä»¶SSã€‚";
+			document.getElementById("test").innerHTML="ç¬¬"+(++i)+"å±€ï¼Œè¿™å±€å‡ºäº†"+nepic+"ä»¶SSã€‚";
 		} else {
-			//printf("µÚ%6d¾Ö£¬Õâ¾ÖÊÇ·Ç³£À§ÄÑ£¬Ò»¹²%d¼ş×°±¸£¬³öÁË%d¼şSS¡£",i,nequi,nepic);
-			//document.getElementById("test").innerHTML="µÚ"+(++i)+"¾Ö£¬Õâ¾ÖÊÇ·Ç³£À§ÄÑ£¬Ò»¹²"+nequi+"¼ş×°±¸£¬³öÁË"+nepic+"¼şSS¡£";
-			document.getElementById("test").innerHTML="µÚ"+(++i)+"¾Ö£¬Õâ¾Ö³öÁË"+nepic+"¼şSS¡£";
+			//printf("ç¬¬%6då±€ï¼Œè¿™å±€æ˜¯éå¸¸å›°éš¾ï¼Œä¸€å…±%dä»¶è£…å¤‡ï¼Œå‡ºäº†%dä»¶SSã€‚",i,nequi,nepic);
+			//document.getElementById("test").innerHTML="ç¬¬"+(++i)+"å±€ï¼Œè¿™å±€æ˜¯éå¸¸å›°éš¾ï¼Œä¸€å…±"+nequi+"ä»¶è£…å¤‡ï¼Œå‡ºäº†"+nepic+"ä»¶SSã€‚";
+			document.getElementById("test").innerHTML="ç¬¬"+(++i)+"å±€ï¼Œè¿™å±€å‡ºäº†"+nepic+"ä»¶SSã€‚";
 		}
 		if (wheeye==1) {
-			//printf("»ñµÃ%dÑûÇëº¯¡£»ñµÃ¹·ÑÛ1¸ö¡£\n",ninvite);
-			document.getElementById("test").innerHTML+="»ñµÃ"+ninvite+"ÑûÇëº¯¡£»ñµÃ¹·ÑÛ1¸ö¡£";
+			//printf("è·å¾—%dé‚€è¯·å‡½ã€‚è·å¾—ç‹—çœ¼1ä¸ªã€‚\n",ninvite);
+			document.getElementById("test").innerHTML+="è·å¾—"+ninvite+"é‚€è¯·å‡½ã€‚è·å¾—ç‹—çœ¼1ä¸ªã€‚";
 		} else {
-			//printf("»ñµÃ%dÑûÇëº¯¡£\n",ninvite);
-			document.getElementById("test").innerHTML+="»ñµÃ"+ninvite+"ÑûÇëº¯¡£";
+			//printf("è·å¾—%dé‚€è¯·å‡½ã€‚\n",ninvite);
+			document.getElementById("test").innerHTML+="è·å¾—"+ninvite+"é‚€è¯·å‡½ã€‚";
 		}
 		if (whebead==1) {
-			//printf("»ñµÃÉîÔ¨¾§Ê¯1¸ö¡£\n");
-			document.getElementById("test").innerHTML+="»ñµÃÉîÔ¨¾§Ê¯1¸ö¡£<br>";
+			//printf("è·å¾—æ·±æ¸Šæ™¶çŸ³1ä¸ªã€‚\n");
+			document.getElementById("test").innerHTML+="è·å¾—æ·±æ¸Šæ™¶çŸ³1ä¸ªã€‚<br>";
 			//delay(500);
 		}
 		if (nepic>0) {
@@ -119,22 +122,22 @@ var test1=function() {
 				var index; var epicname;
 				index=Math.random()*1064;
 				//getfileline("tste.txt",index,epicname);
-				//printf("»ñµÃSS£º%s\n", epicname);
-				document.getElementById("test").innerHTML+="<br>»ñµÃSS£º";
-				document.getElementById("record").innerHTML+="<br>»ñµÃ[";
+				//printf("è·å¾—SSï¼š%s\n", epicname);
+				document.getElementById("test").innerHTML+="<br>è·å¾—SSï¼š";
+				document.getElementById("record").innerHTML+="<br>è·å¾—[";
 				if (document.getElementById("dungeons").value=="1"||document.getElementById("dungeons").value=="0") epicnA();
 				if (document.getElementById("dungeons").value=="2") epicnB();
 				if (document.getElementById("dungeons").value=="3") epicnC();
 				if (document.getElementById("dungeons").value=="4") epicnD();
 				if (document.getElementById("dungeons").value=="5") epicnE();
 				if (document.getElementById("dungeons").value=="6") epicnF();
-				document.getElementById("record").innerHTML+="]1¸ö£¬µÚ"+i+"°Ñ£¬µØÏÂ³Ç£º"+document.getElementById("dungeons").options[document.getElementById("dungeons").selectedIndex].text;
+				document.getElementById("record").innerHTML+="]1ä¸ªï¼Œç¬¬"+i+"æŠŠï¼Œåœ°ä¸‹åŸï¼š"+document.getElementById("dungeons").options[document.getElementById("dungeons").selectedIndex].text;
 			}
 			//delay(500);
 		}
 		if (nepic>1) {
-			//printf("¹§Ï²Äã³ö¶à»Æ£¡ÉÔºó¼ÌĞø¡£\n\a");
-			document.getElementById("test").innerHTML+="¹§Ï²Äã³ö¶à»Æ£¡ÉÔºó¼ÌĞø¡£<br>";
+			//printf("æ­å–œä½ å‡ºå¤šé»„ï¼ç¨åç»§ç»­ã€‚\n\a");
+			document.getElementById("test").innerHTML+="æ­å–œä½ å‡ºå¤šé»„ï¼ç¨åç»§ç»­ã€‚<br>";
 			nmulepic++;
 			//delay(2000);
 			//getch();
@@ -145,14 +148,14 @@ var test1=function() {
 			var qdis=0.8;
 			basedis=Math.random()*10000+1;
 			if (basedis<qdis*10000) {
-				//printf("ÍøÂçÁ¬½ÓÖĞ¶Ï\n\a");
-				document.getElementById("record").innerHTML+="<br><span style='color: #ee6600;'>ÍøÂçÁ¬½ÓÖĞ¶Ï</span>";
+				//printf("ç½‘ç»œè¿æ¥ä¸­æ–­\n\a");
+				document.getElementById("record").innerHTML+="<br><span style='color: #ee6600;'>ç½‘ç»œè¿æ¥ä¸­æ–­</span>";
 				ndisconnect++;
 				//delay(1000);
 			} else {
-				//printf("×ğ¾´µÄÓÂÊ¿£¬·Ç³£±§Ç¸£¬ÄúµÄÍøÂç³öÏÖÒì³££¬ÇëÖØĞÂµÇÂ¼¡£\nÍøÂçÁ¬½ÓÖĞ¶Ï\n\a\a");
-				document.getElementById("record").innerHTML+="<br><span style='color: #ee8800;'>×ğ¾´µÄÓÂÊ¿£¬·Ç³£±§Ç¸£¬ÄúµÄÍøÂç³öÏÖÒì³££¬ÇëÖØĞÂµÇÂ¼¡£<br>ÍøÂçÁ¬½ÓÖĞ¶Ï</span>";
-				document.getElementById("alert_text").innerText="×ğ¾´µÄÓÂÊ¿£¬·Ç³£±§Ç¸£¬ÄúµÄÍøÂç³öÏÖÒì³££¬ÇëÖØĞÂµÇÂ¼¡£";
+				//printf("å°Šæ•¬çš„å‹‡å£«ï¼Œéå¸¸æŠ±æ­‰ï¼Œæ‚¨çš„ç½‘ç»œå‡ºç°å¼‚å¸¸ï¼Œè¯·é‡æ–°ç™»å½•ã€‚\nç½‘ç»œè¿æ¥ä¸­æ–­\n\a\a");
+				document.getElementById("record").innerHTML+="<br><span style='color: #ee8800;'>å°Šæ•¬çš„å‹‡å£«ï¼Œéå¸¸æŠ±æ­‰ï¼Œæ‚¨çš„ç½‘ç»œå‡ºç°å¼‚å¸¸ï¼Œè¯·é‡æ–°ç™»å½•ã€‚<br>ç½‘ç»œè¿æ¥ä¸­æ–­</span>";
+				document.getElementById("alert_text").innerText="å°Šæ•¬çš„å‹‡å£«ï¼Œéå¸¸æŠ±æ­‰ï¼Œæ‚¨çš„ç½‘ç»œå‡ºç°å¼‚å¸¸ï¼Œè¯·é‡æ–°ç™»å½•ã€‚";
 				document.getElementById("alert").style.display="";
 				setTimeout("document.getElementById('alert').style.display='none';",2000);
 				n3rd++;
@@ -161,7 +164,7 @@ var test1=function() {
 
 		}
 		if (base<r*10000) {
-			//printf("×ğ¾´µÄÍæ¼Ò£ºÓÉÓÚÄúÔÚÓÎÏ·ÖĞÓĞÎ¥·´¡°DNFÓÎÏ·Ğ­Òé¡±µÄĞĞÎª£¬¸ÃÕËºÅ±»ÓÀ¾ÃÍ£·â\n°´ÈÎÒâ¼ü¼ÌĞø¡­¡­\n\a\a\a");
+			//printf("å°Šæ•¬çš„ç©å®¶ï¼šç”±äºæ‚¨åœ¨æ¸¸æˆä¸­æœ‰è¿åâ€œDNFæ¸¸æˆåè®®â€çš„è¡Œä¸ºï¼Œè¯¥è´¦å·è¢«æ°¸ä¹…åœå°\næŒ‰ä»»æ„é”®ç»§ç»­â€¦â€¦\n\a\a\a");
 			//getch();
 			//exit(0);
 		}
@@ -183,26 +186,26 @@ var test1=function() {
 		totprice=fixedcost*document.getElementById("price").value;
 		document.getElementById("nchall").innerHTML=fixedcost;
 if (totprice/10000<10000)
-		document.getElementById("ngold").innerHTML=(totprice/10000).toFixed(2)+"Íò";
+		document.getElementById("ngold").innerHTML=(totprice/10000).toFixed(2)+"ä¸‡";
 else
-		document.getElementById("ngold").innerHTML=(totprice/100000000).toFixed(1)+"ÒÚ";
+		document.getElementById("ngold").innerHTML=(totprice/100000000).toFixed(1)+"äº¿";
 /*
-	printf("ÉîÔ¨¾ÖÊı£º%d\t³ö»õ¾ÖÊı£º%d\t×ÜSSÊı£º%d\n¶à»Æ¾ÖÊı£º%d\t×î´óÁ¬Ğø²»³ö»õ¾ÖÊı£º%d\n",ntotimes,nsinepic,ntoepic,nmulepic,nmaxconunepic);
-	printf("×Ü¹·ÑÛÊı£º%d\t×ÜÑûÇëº¯Êı£º%d\tÄ¿±êSSµÄËéÆ¬Êı£º%d\tÉîÔ¨¾§Ê¯Êı£º%d\n",neye,ntoinvite,nepicfra,ntobead);
-	printf("µôÏß´ÎÊı£º%d\tÈı·½´ÎÊı£º%d\n\n",ndisconnect,n3rd);
-	printf("»¹Ê£ÑûÇëº¯£º%d\t»¹Ê£¾§Ê¯£º%d\t»¹Ê£SS£º%d\t»¹Ê£¹·ÑÛ£º%d\n",nacinvite,nacbead,nacepic,naceye);
-	printf("ÊÇ·ñ·Ö½âSS¼ÌĞøË¢£¿£¨Y/N£©");
+	printf("æ·±æ¸Šå±€æ•°ï¼š%d\tå‡ºè´§å±€æ•°ï¼š%d\tæ€»SSæ•°ï¼š%d\nå¤šé»„å±€æ•°ï¼š%d\tæœ€å¤§è¿ç»­ä¸å‡ºè´§å±€æ•°ï¼š%d\n",ntotimes,nsinepic,ntoepic,nmulepic,nmaxconunepic);
+	printf("æ€»ç‹—çœ¼æ•°ï¼š%d\tæ€»é‚€è¯·å‡½æ•°ï¼š%d\tç›®æ ‡SSçš„ç¢ç‰‡æ•°ï¼š%d\tæ·±æ¸Šæ™¶çŸ³æ•°ï¼š%d\n",neye,ntoinvite,nepicfra,ntobead);
+	printf("æ‰çº¿æ¬¡æ•°ï¼š%d\tä¸‰æ–¹æ¬¡æ•°ï¼š%d\n\n",ndisconnect,n3rd);
+	printf("è¿˜å‰©é‚€è¯·å‡½ï¼š%d\tè¿˜å‰©æ™¶çŸ³ï¼š%d\tè¿˜å‰©SSï¼š%d\tè¿˜å‰©ç‹—çœ¼ï¼š%d\n",nacinvite,nacbead,nacepic,naceye);
+	printf("æ˜¯å¦åˆ†è§£SSç»§ç»­åˆ·ï¼Ÿï¼ˆY/Nï¼‰");
 	chcon=getch();
 	if (chcon==121) {
 		printf("\n");
 		nchal=nacepic*1*100+nacbead*500+naceye*100+nacinvite;
 		if (nchal<26) {
-			printf("ÑûÇëº¯²»¹»À²£¡Äã»¹ÊÇÈ¥°á×©°É£¡\n");
+			printf("é‚€è¯·å‡½ä¸å¤Ÿå•¦ï¼ä½ è¿˜æ˜¯å»æ¬ç –å§ï¼\n");
 			getch();
 			exit(0);
 		}
 		times=nchal/26;
-		printf("ÄãÏÖÔÚÓĞ%dÕÅÑûÇëº¯£¬¿ÉË¢%d´ÎÉîÔ¨¡£ÕıÔÚ½øÈëÉîÔ¨ÅÉ¶Ô¡­¡­\n",nchal,nchal/26);
+		printf("ä½ ç°åœ¨æœ‰%då¼ é‚€è¯·å‡½ï¼Œå¯åˆ·%dæ¬¡æ·±æ¸Šã€‚æ­£åœ¨è¿›å…¥æ·±æ¸Šæ´¾å¯¹â€¦â€¦\n",nchal,nchal/26);
 		nchal=0;
 		//delay(2000);
 		test1();
@@ -212,8 +215,8 @@ else
 
 var jiathis_config={
 	url:"https://no5972.github.io/the-hell-emulator/the-hell-emulator.html",
-	summary:"ÎÒ³É¹¦ÔÚÉîÔ¨Ä£ÄâÆ÷±¬³öÁË[]£¡Ò»¹²Ë¢ÁË0¾ÖÉîÔ¨£¬»¨ÁË0½ğ±Ò¡£»¶Ó­´ó¼ÒÒ²À´ÊÔÊÔ£¡o(^¨Œ^)o",
-	title:"DNFÉîÔ¨Ä£ÄâÆ÷ÍøÒ³°æ V0.05 BY ±ÉÈË ##",
+	summary:"æˆ‘æˆåŠŸåœ¨æ·±æ¸Šæ¨¡æ‹Ÿå™¨çˆ†å‡ºäº†[]ï¼ä¸€å…±åˆ·äº†0å±€æ·±æ¸Šï¼ŒèŠ±äº†0é‡‘å¸ã€‚æ¬¢è¿å¤§å®¶ä¹Ÿæ¥è¯•è¯•ï¼o(^â–½^)o",
+	title:"DNFæ·±æ¸Šæ¨¡æ‹Ÿå™¨ç½‘é¡µç‰ˆ V0.05 BY é„™äºº ##",
 	shortUrl:false,
 	hideMore:false
 }
@@ -244,15 +247,16 @@ function helltime() {
 			test1();
 			inptimes++;
 		} else {
+			var targetequipmenttext=document.getElementById("equiname").innerText;
 			clearInterval(a);
-			document.getElementById("getepic_text").innerHTML="×£ºØÄã³É¹¦±¬³öÁË["+document.getElementById("equiname").innerText+"]£¡ÄãÒ»¹²Ë¢ÁË"+ntotimes+"¾ÖÉîÔ¨£¬»¨ÁË"+document.getElementById("ngold").innerText+"¡£¸ĞĞ»ÄúµÄÖ§³Ö£¡o(^¨Œ^)o";
+			document.getElementById("getepic_text").innerHTML="ç¥è´ºä½ æˆåŠŸçˆ†å‡ºäº†["+document.getElementById("equiname").innerText+"]ï¼ä½ ä¸€å…±åˆ·äº†"+ntotimes+"å±€æ·±æ¸Šï¼ŒèŠ±äº†"+document.getElementById("ngold").innerText+"ã€‚æ„Ÿè°¢æ‚¨çš„æ”¯æŒï¼o(^â–½^)o";
+			jiathis_config.summary="æˆ‘æˆåŠŸåœ¨æ·±æ¸Šæ¨¡æ‹Ÿå™¨çˆ†å‡ºäº†["+document.getElementById("getepic_text").innerText.substring(document.getElementById("getepic_text").innerText.indexOf('[')+1,document.getElementById("getepic_text").innerText.lastIndexOf(']'))+"]ï¼æˆ‘ä¸€å…±åˆ·äº†"+ntotimes+"å±€æ·±æ¸Šï¼Œå±…ç„¶èŠ±äº†"+document.getElementById("ngold").innerText+"é‡‘å¸ã€‚æ¬¢è¿å¤§å®¶ä¹Ÿæ¥è¯•è¯•ï¼o(^â–½^)o";
 			document.getElementById("equiname").innerText="";
 			document.getElementById("getepic").style.display="";
 			document.getElementById("start").disabled=false;
 			document.getElementById("termin").disabled=true;
 			document.getElementById("price").disabled=false;
 			document.getElementById("freq").disabled=false;
-			jiathis_config.summary="ÎÒ³É¹¦ÔÚÉîÔ¨Ä£ÄâÆ÷±¬³öÁË["+document.getElementById("equiname").innerText+"]£¡ÎÒÒ»¹²Ë¢ÁË"+ntotimes+"¾ÖÉîÔ¨£¬¾ÓÈ»»¨ÁË"+document.getElementById("ngold").innerText+"½ğ±Ò¡£»¶Ó­´ó¼ÒÒ²À´ÊÔÊÔ£¡o(^¨Œ^)o";
 		}
 	}
 }
@@ -268,10 +272,10 @@ function terminate() {
 function shellhell() {
 	inptimes=0;
 if (isNaN(document.getElementById("price").value)||document.getElementById("price").value=="") {
-	alert("ÌôÕ½Êé¼Û¸ñ²»ÊÇÊı×Ö£¬ÇëĞŞ¸Ä¡£"); return;
+	alert("æŒ‘æˆ˜ä¹¦ä»·æ ¼ä¸æ˜¯æ•°å­—ï¼Œè¯·ä¿®æ”¹ã€‚"); return;
 }
 if (parseInt(document.getElementById("freq").value)<1||parseInt(document.getElementById("freq").value)>300000||isNaN(document.getElementById("freq").value)) {
-	alert("¼ä¸ô³¬³ö·¶Î§£¨1-300000£©£¬ÇëĞŞ¸Ä¡£"); return;
+	alert("é—´éš”è¶…å‡ºèŒƒå›´ï¼ˆ1-300000ï¼‰ï¼Œè¯·ä¿®æ”¹ã€‚"); return;
 }
 	a=setInterval(helltime,parseInt(document.getElementById("freq").value));
 }
@@ -287,52 +291,54 @@ function enabletext() {
 	}
 }
 </script>
+</head>
+<body>
 <div style="float:left;">
-<p>DNFÉîÔ¨Ä£ÄâÆ÷ÍøÒ³°æ V0.06 BY ±ÉÈË<br>Ìù°É£º@wujiuqier<br>DNFÕÙ»½Ê¦°É DNFÃÀ·ş°É DFO°É DNFÕÆÓÎ±¦ 17173DNF×¨Çø ÁªºÏ·¢ĞĞ</p>
+<p>DNFæ·±æ¸Šæ¨¡æ‹Ÿå™¨ç½‘é¡µç‰ˆ V0.06 BY é„™äºº<br>è´´å§ï¼š@wujiuqier<br>DNFå¬å”¤å¸ˆå§ DNFç¾æœå§ DFOå§ DNFæŒæ¸¸å® 17173DNFä¸“åŒº è”åˆå‘è¡Œ</p>
 <p>
-Ñ¡ÔñµØÏÂ³Ç£º
+é€‰æ‹©åœ°ä¸‹åŸï¼š
 <select id="dungeons" style="font-size:12pt;">
-<option value="0">¸ñÀ¼Ö®»ğ</option> <!-- 70,75 -->
-<option value="0">ÎÁÒßÖ®Ô´</option>
-<option value="1">¿¨ÀÕÌØÖ®³õ</option>
-<option value="1">°µºÚÊ¥Õ½</option>
-<option value="1">¾øÃÜÇøÓò</option>
-<option value="2">ÎôÈÕ±¯Ãù</option> <!-- 75,80 -->
-<option value="2">Áİ¶¬</option>
-<option value="2">ÃÕÖ®¾õÎò</option>
-<option value="3">¿ËÀ×·¢µçÕ¾</option> <!-- 75,80,85 -->
-<option value="4">ÆÕÂ³×È·¢µçÕ¾</option> <!-- 80,85 -->
-<option value="4">ÌØÂ×Ë¹·¢µçÕ¾</option>
-<option value="4">¸ñÀ¼µÏ·¢µçÕ¾</option>
-<option value="5">µ¹ĞüµÄ²tÍûÌ¨</option> <!-- 85 -->
-<option value="5">Â¬¿ËµÄ¾Û¹â¾µ</option>
-<option value="5">¸ÖÌúÖ®±Û</option>
-<option value="5">ÄÜÔ´ÈÛÂ¯</option>
-<option value="5">¹âÖ®Îè»á</option>
-<option value="6" selected="selected">Ê±¼ä¹ã³¡</option> <!-- 85,90 -->
-<option value="6">ÊŞÈËÏ¿¹È</option>
-<option value="6">¿Ö²ÀµÄÆÜÏ¢µØ</option>
-<option value="6">¼²·çµØ´ø</option>
-<option value="6">ºìÉ«Ä§Å®Ö®É­</option>
+<option value="0">æ ¼å…°ä¹‹ç«</option> <!-- 70,75 -->
+<option value="0">ç˜Ÿç–«ä¹‹æº</option>
+<option value="1">å¡å‹’ç‰¹ä¹‹åˆ</option>
+<option value="1">æš—é»‘åœ£æˆ˜</option>
+<option value="1">ç»å¯†åŒºåŸŸ</option>
+<option value="2">æ˜”æ—¥æ‚²é¸£</option> <!-- 75,80 -->
+<option value="2">å‡›å†¬</option>
+<option value="2">è°œä¹‹è§‰æ‚Ÿ</option>
+<option value="3">å…‹é›·å‘ç”µç«™</option> <!-- 75,80,85 -->
+<option value="4">æ™®é²å…¹å‘ç”µç«™</option> <!-- 80,85 -->
+<option value="4">ç‰¹ä¼¦æ–¯å‘ç”µç«™</option>
+<option value="4">æ ¼å…°è¿ªå‘ç”µç«™</option>
+<option value="5">å€’æ‚¬çš„ç­æœ›å°</option> <!-- 85 -->
+<option value="5">å¢å…‹çš„èšå…‰é•œ</option>
+<option value="5">é’¢é“ä¹‹è‡‚</option>
+<option value="5">èƒ½æºç†”ç‚‰</option>
+<option value="5">å…‰ä¹‹èˆä¼š</option>
+<option value="6" selected="selected">æ—¶é—´å¹¿åœº</option> <!-- 85,90 -->
+<option value="6">å…½äººå³¡è°·</option>
+<option value="6">ææ€–çš„æ –æ¯åœ°</option>
+<option value="6">ç–¾é£åœ°å¸¦</option>
+<option value="6">çº¢è‰²é­”å¥³ä¹‹æ£®</option>
 </select>
-<button onclick="test1()" id="manual">ÊÖ¶¯±¬£¡</button><p>
-ÊäÈëÌôÕ½Êéµ¥¼Û£º<input type="text" id="price" value="28000" 
+<button onclick="test1()" id="manual">æ‰‹åŠ¨çˆ†ï¼</button><p>
+è¾“å…¥æŒ‘æˆ˜ä¹¦å•ä»·ï¼š<input type="text" id="price" value="28000" 
 onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"
 onkeypress="this.value=this.value.replace(/\D/g,'')"
 /></p>
-<input type="checkbox" id="disa" checked />·Ö½âÆäËûÊ·Ê«
+<input type="checkbox" id="disa" checked />åˆ†è§£å…¶ä»–å²è¯—
 <p><input type="radio" name="method" id="method1" checked="checked" />
-1. ÊäÈëÉîÔ¨¾ÖÊı£º<input id="text1" type="text" style="font-size:12pt;"></input></p>
+1. è¾“å…¥æ·±æ¸Šå±€æ•°ï¼š<input id="text1" type="text" style="font-size:12pt;"></input></p>
 <p><input type="radio" name="method" id="method2" />
-2. Ë¢µ½³ö<input type="text" style="width:300px;font-size:12pt;" id="o" onkeyup="autoComplete.start(event)">ÎªÖ¹£¡
-<div class="auto_hidden" id="auto"><!--×Ô¶¯Íê³É DIV--></div>
+2. åˆ·åˆ°å‡º<input type="text" style="width:300px;font-size:12pt;" id="o" onkeyup="autoComplete.start(event)">ä¸ºæ­¢ï¼
+<div class="auto_hidden" id="auto"><!--è‡ªåŠ¨å®Œæˆ DIV--></div>
 <script src="listsel.js"></script></p>
-<button onclick="shellhell()" id="start">×Ô¶¯Ë¢£¡</button>
-<button onclick="terminate()" id="termin" disabled>ÖĞÖ¹</button>
-<button onclick="history.go(0)">¹éÁã</button>
-ÊäÈë×Ô¶¯Ë¢ÉîÔ¨¼ä¸ô£¨1-300000£©£º<input type="text" id="freq" value="1" />
+<button onclick="shellhell()" id="start">è‡ªåŠ¨åˆ·ï¼</button>
+<button onclick="terminate()" id="termin" disabled>ä¸­æ­¢</button>
+<button onclick="history.go(0)">å½’é›¶</button>
+è¾“å…¥è‡ªåŠ¨åˆ·æ·±æ¸Šé—´éš”ï¼ˆ1-300000ï¼‰ï¼š<input type="text" id="freq" value="1" />
 <span id="equiname" style="display:none;"></span></p>
-<div id="test" style="height: 50px;">¡¡&nbsp;</div>
+<div id="test" style="height: 50px;">ã€€&nbsp;</div>
 </div>
 <div id="record" style="
 overflow-y:scroll; height:350px; width: 400px; 
@@ -346,9 +352,9 @@ text-shadow:#000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;
 *filter: Glow(color=#000, strength=1);
 "></div>
 <table width="100%">
-<tr><td>ÉîÔ¨¾ÖÊı£º</td><td id="syjs">0</td><td>³ö»õ¾ÖÊı£º</td><td id="chjs">0</td><td>×ÜÊ·Ê«Êı£º</td><td id="zsss">0</td><td>¶à»Æ¾ÖÊı£º</td><td id="dhjs">0</td><td>×î´óÁ¬Ğø²»³ö»õ¾ÖÊı£º</td><td id="zdlxbchjs">0</td></tr>
-<tr><td>×Ü¹·ÑÛÊı£º</td><td id="zgys">0</td><td>×ÜÑûÇëº¯Êı£º</td><td id="zyqhs">0</td><td>Ä¿±êÊ·Ê«µÄËéÆ¬Êı£º</td><td id="mbssdsps">0</td><td>ÉîÔ¨¾§Ê¯Êı£º</td><td id="syjss">0</td></tr>
-<tr><td>µôÏß´ÎÊı£º</td><td id="dxcs">0</td><td>Èı·½´ÎÊı£º</td><td id="sfcs">0</td><td>ÏûºÄÌôÕ½ÊéÊı£º</td><td id="nchall">0</td><td>³É±¾£¨½ğ±Ò£©£º</td><td id="ngold">0</td></tr>
+<tr><td>æ·±æ¸Šå±€æ•°ï¼š</td><td id="syjs">0</td><td>å‡ºè´§å±€æ•°ï¼š</td><td id="chjs">0</td><td>æ€»å²è¯—æ•°ï¼š</td><td id="zsss">0</td><td>å¤šé»„å±€æ•°ï¼š</td><td id="dhjs">0</td><td>æœ€å¤§è¿ç»­ä¸å‡ºè´§å±€æ•°ï¼š</td><td id="zdlxbchjs">0</td></tr>
+<tr><td>æ€»ç‹—çœ¼æ•°ï¼š</td><td id="zgys">0</td><td>æ€»é‚€è¯·å‡½æ•°ï¼š</td><td id="zyqhs">0</td><td>ç›®æ ‡å²è¯—çš„ç¢ç‰‡æ•°ï¼š</td><td id="mbssdsps">0</td><td>æ·±æ¸Šæ™¶çŸ³æ•°ï¼š</td><td id="syjss">0</td></tr>
+<tr><td>æ‰çº¿æ¬¡æ•°ï¼š</td><td id="dxcs">0</td><td>ä¸‰æ–¹æ¬¡æ•°ï¼š</td><td id="sfcs">0</td><td>æ¶ˆè€—æŒ‘æˆ˜ä¹¦æ•°ï¼š</td><td id="nchall">0</td><td>æˆæœ¬ï¼ˆé‡‘å¸ï¼‰ï¼š</td><td id="ngold">0</td></tr>
 </table>
 <div style="
 margin: 0 auto;
@@ -362,8 +368,8 @@ text-align: center;
 padding: 5px;
 display:none;
 font-size: 12px;
-" id="alert">¹«¸æ<hr><span id="alert_text">×ğ¾´µÄÓÂÊ¿£¬·Ç³£±§Ç¸£¬ÄúµÄÍøÂç³öÏÖÒì³££¬ÇëÖØĞÂµÇÂ¼¡£</span>
-<center style="margin-top:10px;"><button onclick="document.getElementById('alert').style.display='none';">È·ÈÏ</button></center></div>
+" id="alert">å…¬å‘Š<hr><span id="alert_text">å°Šæ•¬çš„å‹‡å£«ï¼Œéå¸¸æŠ±æ­‰ï¼Œæ‚¨çš„ç½‘ç»œå‡ºç°å¼‚å¸¸ï¼Œè¯·é‡æ–°ç™»å½•ã€‚</span>
+<center style="margin-top:10px;"><button onclick="document.getElementById('alert').style.display='none';">ç¡®è®¤</button></center></div>
 <div style="
 margin: 0 auto;
 border: 1px solid #000;
@@ -376,9 +382,9 @@ text-align: center;
 padding: 5px;
 display:none;
 font-size: 12px;
-" id="getepic">¹«¸æ<hr><span id="getepic_text">×ğ¾´µÄÓÂÊ¿£¬·Ç³£±§Ç¸£¬ÄúµÄÍøÂç³öÏÖÒì³££¬ÇëÖØĞÂµÇÂ¼¡£</span>
-<center style="margin-top:10px;"><button onclick="document.getElementById('getepic').style.display='none';">È·ÈÏ</button></center>
-<div class="jiathis_style" style="display:; margin:10px;" id="share"><span class="jiathis_txt">·ÖÏíµ½£º</span>
+" id="getepic">å…¬å‘Š<hr><span id="getepic_text">å°Šæ•¬çš„å‹‡å£«ï¼Œéå¸¸æŠ±æ­‰ï¼Œæ‚¨çš„ç½‘ç»œå‡ºç°å¼‚å¸¸ï¼Œè¯·é‡æ–°ç™»å½•ã€‚</span>
+<center style="margin-top:10px;"><button onclick="document.getElementById('getepic').style.display='none';">ç¡®è®¤</button></center>
+<div class="jiathis_style" style="display:; margin:10px;" id="share"><span class="jiathis_txt">åˆ†äº«åˆ°ï¼š</span>
 <a class="jiathis_button_qzone"></a>
 <a class="jiathis_button_tsina"></a>
 <a class="jiathis_button_cqq"></a>
@@ -388,3 +394,4 @@ font-size: 12px;
 <a class="jiathis_counter_style"></a>
 </div>
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script></div>
+</body>

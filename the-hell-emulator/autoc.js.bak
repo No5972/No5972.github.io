@@ -115,7 +115,8 @@ AutoComplete.prototype={
                     div.seq=valueArr[i];
                     div.onclick=this.setValue(this);
                     div.onmouseover=this.autoOnmouseover(this,div_index);
-                    div.innerHTML=valueArr[i].replace(reg,"<strong>$1</strong>");//搜索到的字符粗体显示
+                    div.innerHTML=valueArr[i];
+                    //div.innerHTML=valueArr[i].replace(reg,"<strong>$1</strong>");//搜索到的字符粗体显示
                     this.autoObj.appendChild(div);
                     this.autoObj.className="auto_show";
                     div_index++;
