@@ -216,7 +216,7 @@ else
 var jiathis_config={
 	url:"https://no5972.github.io/the-hell-emulator/the-hell-emulator.html",
 	summary:"我成功在深渊模拟器爆出了[]！一共刷了0局深渊，花了0金币。欢迎大家也来试试！o(^▽^)o",
-	title:"DNF深渊模拟器网页版 V0.05 BY 鄙人 ##",
+	title:"",
 	shortUrl:false,
 	hideMore:false
 }
@@ -250,7 +250,20 @@ function helltime() {
 			var targetequipmenttext=document.getElementById("equiname").innerText;
 			clearInterval(a);
 			document.getElementById("getepic_text").innerHTML="祝贺你成功爆出了["+document.getElementById("equiname").innerText+"]！你一共刷了"+ntotimes+"局深渊，花了"+document.getElementById("ngold").innerText+"。感谢您的支持！o(^▽^)o";
-			jiathis_config.summary="我成功在深渊模拟器爆出了["+document.getElementById("getepic_text").innerText.substring(document.getElementById("getepic_text").innerText.indexOf('[')+1,document.getElementById("getepic_text").innerText.lastIndexOf(']'))+"]！我一共刷了"+ntotimes+"局深渊，居然花了"+document.getElementById("ngold").innerText+"金币。欢迎大家也来试试！o(^▽^)o";
+			window._bd_share_config={
+				"common":{
+					"bdSnsKey":{},
+					"bdText":"DNF深渊模拟器网页版 V0.06 BY 鄙人 #DNF# ",
+					"bdDesc":"我成功在深渊模拟器爆出了["+document.getElementById("getepic_text").innerText.substring(document.getElementById("getepic_text").innerText.indexOf('[')+1,document.getElementById("getepic_text").innerText.lastIndexOf(']'))+"]！我一共刷了"+ntotimes+"局深渊，居然花了"+document.getElementById("ngold").innerText+"金币。欢迎大家也来试试！o(^▽^)o",
+					"bdUrl":"https://no5972.github.io/the-hell-emulator/the-hell-emulator.html",
+					"bdMini":"2",
+					"bdMiniList":false,
+					"bdPic":"",
+					"bdStyle":"0",
+					"bdSize":"16"
+				},"share":{}
+			};
+			with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?'];
 			document.getElementById("equiname").innerText="";
 			document.getElementById("getepic").style.display="";
 			document.getElementById("start").disabled=false;
@@ -332,7 +345,7 @@ onkeypress="this.value=this.value.replace(/\D/g,'')"
 <p><input type="radio" name="method" id="method2" />
 2. 刷到出<input type="text" style="width:300px;font-size:12pt;" id="o" onkeyup="autoComplete.start(event)">为止！
 <div class="auto_hidden" id="auto"><!--自动完成 DIV--></div>
-<script src="listsel.js" charset="utf-8"></script></p>
+<script src="listsel.js"></script></p>
 <button onclick="shellhell()" id="start">自动刷！</button>
 <button onclick="terminate()" id="termin" disabled>中止</button>
 <button onclick="history.go(0)">归零</button>
@@ -384,14 +397,15 @@ display:none;
 font-size: 12px;
 " id="getepic">公告<hr><span id="getepic_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
 <center style="margin-top:10px;"><button onclick="document.getElementById('getepic').style.display='none';">确认</button></center>
-<div class="jiathis_style" style="display:; margin:10px;" id="share"><span class="jiathis_txt">分享到：</span>
-<a class="jiathis_button_qzone"></a>
-<a class="jiathis_button_tsina"></a>
-<a class="jiathis_button_cqq"></a>
-<a class="jiathis_button_weixin"></a>
-<a class="jiathis_button_renren"></a>
-<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-<a class="jiathis_counter_style"></a>
+<div class="bdsharebuttonbox">
+	<a href="#" class="bds_more" data-cmd="more"></a>
+	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
 </div>
-<script type="text/javascript" src="https://no5972.github.io/the-hell-emulator/jia.js" charset="utf-8"></script></div>
+<script charset="utf-8">
+//with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script></div>
 </body>
