@@ -1,7 +1,6 @@
 ﻿<html>
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<title>DNF深渊模拟器网页版 V0.06 BY 鄙人</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <script src="list_A.js"></script>
 <script src="list_B.js"></script>
 <script src="list_C.js"></script>
@@ -10,406 +9,609 @@
 <script src="list_F.js"></script>
 <link href="autoc.css" rel="stylesheet" />
 <script src="autoc.js" charset="utf-8"></script>
+<style>
+.oneTargetEpic:hover {
+	color: ared;
+	cursor: pointer;
+}
+</style>
 <script>
-var inptimes=1; var a;
-	var times,ntotimes=0,nepic,ntoepic=0,nequi,ntoinvite=0,neye=0,wheeye=0,nepicfra=0,ntobead=0,whebead=0,nchal=0;
-	var nacepic=0,nacinvite=0,nacbead=0,naceye=0;
-	var i=0,j,ninvite,chcon;
-	var diff,base=10000;
-	var nmulepic=0,nsinepic=0,nconunepic=0,nmaxconunepic=0,ndisconnect=0,n3rd=0;
-	var p=0.007,q=0.005,r=0.000001,peye=0.01,pepicfra=0.003,pbead=0.01;
-var totcost=0,price=0,singleentry=0;
-var fixedcost=0,totprice=0;
-var test1=function() {
+	Array.prototype.indexOf = function(val) {
+		for (var i = 0; i < this.length; i++) {
+			if (this[i] == val)
+				return i;
+		}
+		return -1;
+	};
 
-	times=document.getElementById("text1").value;
-	//document.getElementById("test").innerHTML+="获得";
-	nacepic=0;
-	nacinvite=0;
-	nacbead=0;
-	nacepic=0;
-	naceye=0; 
-		whebead=0;
-		wheeye=0;
-		ninvite=0;
-		nepic=0;
-		diff=parseInt(Math.random()*2);
+	Array.prototype.remove = function(val) {
+		var index = this.indexOf(val);
+		if (index > -1) {
+			this.splice(index, 1);
+		}
+	};
+
+	var inptimes = 1;
+	var a;
+	var times, ntotimes = 0, nepic, ntoepic = 0, nequi, ntoinvite = 0, neye = 0, wheeye = 0, nepicfra = 0, ntobead = 0, whebead = 0, nchal = 0;
+	var nacepic = 0, nacinvite = 0, nacbead = 0, naceye = 0;
+	var i = 0, j, ninvite, chcon;
+	var diff, base = 10000;
+	var nmulepic = 0, nsinepic = 0, nconunepic = 0, nmaxconunepic = 0, ndisconnect = 0, n3rd = 0;
+	var p = 0.007, q = 0.005, r = 0.000001, peye = 0.01, pepicfra = 0.003, pbead = 0.01;
+	var totcost = 0, price = 0, singleentry = 0;
+	var fixedcost = 0, totprice = 0;
+	var targetEpics = new Array();
+
+	var test1 = function() {
+
+		times = document.getElementById("text1").value;
+		//document.getElementById("test").innerHTML+="获得";
+		nacepic = 0;
+		nacinvite = 0;
+		nacbead = 0;
+		nacepic = 0;
+		naceye = 0;
+		whebead = 0;
+		wheeye = 0;
+		ninvite = 0;
+		nepic = 0;
+		diff = parseInt(Math.random() * 2);
 		//nequi=diff==0?4:6;
-		nequi=diff==0?6:6;
+		nequi = diff == 0 ? 6 : 6;
 		//nequi=9;
-	switch(document.getElementById("dungeons").value) {
-		case "0": singleentry=20;
-		case "1": singleentry=21;
-		case "2": singleentry=22;
-		case "3": singleentry=23; 
-		case "4": singleentry=24;
-		case "5": singleentry=26;
-		case "6": singleentry=28;
-	}
-	totcost+=singleentry;
-		for (j=1;j<=nequi;j++) {
-			base=Math.random()*10000+1;
-			if (base<p*10000) {
+		switch (document.getElementById("dungeons").value) {
+		case "0":
+			singleentry = 20;
+		case "1":
+			singleentry = 21;
+		case "2":
+			singleentry = 22;
+		case "3":
+			singleentry = 23;
+		case "4":
+			singleentry = 24;
+		case "5":
+			singleentry = 26;
+		case "6":
+			singleentry = 28;
+		}
+		totcost += singleentry;
+		for (j = 1; j <= nequi; j++) {
+			base = Math.random() * 10000 + 1;
+			if (base < p * 10000) {
 				nepic++;
 				ntoepic++;
 				nacepic++;
 			}
 		}
-		for (j=1;j<=10;j++) {
-			base=Math.random()*10000+1;
-			if (base<pepicfra*10000) {
+		for (j = 1; j <= 10; j++) {
+			base = Math.random() * 10000 + 1;
+			if (base < pepicfra * 10000) {
 				nepicfra++;
 			}
 		}
-		base=Math.random()*10000+1;
-		if (base<peye*10000) {
-			wheeye=1;
+		base = Math.random() * 10000 + 1;
+		if (base < peye * 10000) {
+			wheeye = 1;
 			neye++;
 			naceye++;
 		}
-		base=Math.random()*10000+1;
-		if (base<pbead*10000) {
-			whebead=1;
+		base = Math.random() * 10000 + 1;
+		if (base < pbead * 10000) {
+			whebead = 1;
 			ntobead++;
 			nacbead++;
 		}
 		//
 		//ninvite=Math.random()*3+3;
 		//ninvite=parseInt(Math.random()*2)*2;
-		base=Math.random()*10000+1;
-		if (base<5000) {
-			ninvite=0;
-		} else if (base>=5000&&base<9000) {
-			ninvite=2;
-		} else if (base>=9000&&base<9500) {
-			ninvite=10;
-		} else if (base>=9500) {
-			ninvite=20;
+		base = Math.random() * 10000 + 1;
+		if (base < 5000) {
+			ninvite = 0;
+		} else if (base >= 5000 && base < 9000) {
+			ninvite = 2;
+		} else if (base >= 9000 && base < 9500) {
+			ninvite = 10;
+		} else if (base >= 9500) {
+			ninvite = 20;
 		}
-		ntoinvite+=ninvite;
-		nacinvite+=ninvite;
-		if (nepic>0) {
-			nconunepic=0;
+		ntoinvite += ninvite;
+		nacinvite += ninvite;
+		if (nepic > 0) {
+			nconunepic = 0;
 			nsinepic++;
 		} else {
 			nconunepic++;
-			if (nmaxconunepic<nconunepic) {
-				nmaxconunepic=nconunepic;
+			if (nmaxconunepic < nconunepic) {
+				nmaxconunepic = nconunepic;
 			}
 		}
-		if (diff==0) {
+		if (diff == 0) {
 			//printf("第%6d局，这局是困难　　，一共%d件装备，出了%d件SS。",i,nequi,nepic);
 			//document.getElementById("test").innerHTML="第"+(++i)+"局，这局是困难　　，一共"+nequi+"件装备，出了"+nepic+"件SS。";
-			document.getElementById("test").innerHTML="第"+(++i)+"局，这局出了"+nepic+"件SS。";
+			document.getElementById("test").innerHTML = "第" + (++i) + "局，这局出了"
+					+ nepic + "件SS。";
 		} else {
 			//printf("第%6d局，这局是非常困难，一共%d件装备，出了%d件SS。",i,nequi,nepic);
 			//document.getElementById("test").innerHTML="第"+(++i)+"局，这局是非常困难，一共"+nequi+"件装备，出了"+nepic+"件SS。";
-			document.getElementById("test").innerHTML="第"+(++i)+"局，这局出了"+nepic+"件SS。";
+			document.getElementById("test").innerHTML = "第" + (++i) + "局，这局出了"
+					+ nepic + "件SS。";
 		}
-		if (wheeye==1) {
+		if (wheeye == 1) {
 			//printf("获得%d邀请函。获得狗眼1个。\n",ninvite);
-			document.getElementById("test").innerHTML+="获得"+ninvite+"邀请函。获得狗眼1个。";
+			document.getElementById("test").innerHTML += "获得" + ninvite
+					+ "邀请函。获得狗眼1个。";
 		} else {
 			//printf("获得%d邀请函。\n",ninvite);
-			document.getElementById("test").innerHTML+="获得"+ninvite+"邀请函。";
+			document.getElementById("test").innerHTML += "获得" + ninvite
+					+ "邀请函。";
 		}
-		if (whebead==1) {
+		if (whebead == 1) {
 			//printf("获得深渊晶石1个。\n");
-			document.getElementById("test").innerHTML+="获得深渊晶石1个。<br>";
+			document.getElementById("test").innerHTML += "获得深渊晶石1个。<br>";
 			//delay(500);
 		}
-		if (nepic>0) {
-			for (var epicnname=1;epicnname<=nepic;epicnname++) {
-				var index; var epicname;
-				index=Math.random()*1064;
+		if (nepic > 0) {
+			for (var epicnname = 1; epicnname <= nepic; epicnname++) {
+				var index;
+				var epicname;
+				index = Math.random() * 1064;
 				//getfileline("tste.txt",index,epicname);
 				//printf("获得SS：%s\n", epicname);
-				document.getElementById("test").innerHTML+="<br>获得SS：";
-				document.getElementById("record").innerHTML+="<br>获得[";
-				if (document.getElementById("dungeons").value=="1"||document.getElementById("dungeons").value=="0") epicnA();
-				if (document.getElementById("dungeons").value=="2") epicnB();
-				if (document.getElementById("dungeons").value=="3") epicnC();
-				if (document.getElementById("dungeons").value=="4") epicnD();
-				if (document.getElementById("dungeons").value=="5") epicnE();
-				if (document.getElementById("dungeons").value=="6") epicnF();
-				document.getElementById("record").innerHTML+="]1个，第"+i+"把，地下城："+document.getElementById("dungeons").options[document.getElementById("dungeons").selectedIndex].text;
+				document.getElementById("test").innerHTML += "<br>获得SS：";
+				document.getElementById("record").innerHTML += "<br>获得[";
+				if (document.getElementById("dungeons").value == "1"
+						|| document.getElementById("dungeons").value == "0")
+					epicnA();
+				if (document.getElementById("dungeons").value == "2")
+					epicnB();
+				if (document.getElementById("dungeons").value == "3")
+					epicnC();
+				if (document.getElementById("dungeons").value == "4")
+					epicnD();
+				if (document.getElementById("dungeons").value == "5")
+					epicnE();
+				if (document.getElementById("dungeons").value == "6")
+					epicnF();
+				document.getElementById("record").innerHTML += "]1个，第"
+						+ i
+						+ "把，地下城："
+						+ document.getElementById("dungeons").options[document
+								.getElementById("dungeons").selectedIndex].text;
 			}
 			//delay(500);
 		}
-		if (nepic>1) {
+		if (nepic > 1) {
 			//printf("恭喜你出多黄！稍后继续。\n\a");
-			document.getElementById("test").innerHTML+="恭喜你出多黄！稍后继续。<br>";
+			document.getElementById("test").innerHTML += "恭喜你出多黄！稍后继续。<br>";
 			nmulepic++;
 			//delay(2000);
 			//getch();
 		}
-		base=Math.random()*10000+1;
-		if (base<q*10000) {
-			var basedis=10000;
-			var qdis=0.8;
-			basedis=Math.random()*10000+1;
-			if (basedis<qdis*10000) {
+		base = Math.random() * 10000 + 1;
+		if (base < q * 10000) {
+			var basedis = 10000;
+			var qdis = 0.8;
+			basedis = Math.random() * 10000 + 1;
+			if (basedis < qdis * 10000) {
 				//printf("网络连接中断\n\a");
-				document.getElementById("record").innerHTML+="<br><span style='color: #ee6600;'>网络连接中断</span>";
+				document.getElementById("record").innerHTML += "<br><span style='color: #ee6600;'>网络连接中断</span>";
 				ndisconnect++;
 				//delay(1000);
 			} else {
 				//printf("尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。\n网络连接中断\n\a\a");
-				document.getElementById("record").innerHTML+="<br><span style='color: #ee8800;'>尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。<br>网络连接中断</span>";
-				document.getElementById("alert_text").innerText="尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。";
-				document.getElementById("alert").style.display="";
-				setTimeout("document.getElementById('alert').style.display='none';",2000);
+				document.getElementById("record").innerHTML += "<br><span style='color: #ee8800;'>尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。<br>网络连接中断</span>";
+				document.getElementById("alert_text").innerText = "尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。";
+				document.getElementById("alert").style.display = "";
+				setTimeout(
+						"document.getElementById('alert').style.display='none';",
+						2000);
 				n3rd++;
 				//delay(2000);
 			}
 
 		}
-		if (base<r*10000) {
+		if (base < r * 10000) {
 			//printf("尊敬的玩家：由于您在游戏中有违反“DNF游戏协议”的行为，该账号被永久停封\n按任意键继续……\n\a\a\a");
 			//getch();
 			//exit(0);
 		}
-		document.getElementById("syjs").innerHTML=++ntotimes;
-		document.getElementById("chjs").innerHTML=nsinepic;
-		document.getElementById("zsss").innerHTML=ntoepic;
-		document.getElementById("dhjs").innerHTML=nmulepic;
-		document.getElementById("zdlxbchjs").innerHTML=nmaxconunepic;
+		document.getElementById("syjs").innerHTML = ++ntotimes;
+		document.getElementById("chjs").innerHTML = nsinepic;
+		document.getElementById("zsss").innerHTML = ntoepic;
+		document.getElementById("dhjs").innerHTML = nmulepic;
+		document.getElementById("zdlxbchjs").innerHTML = nmaxconunepic;
 
-		document.getElementById("zgys").innerHTML=neye;
-		document.getElementById("zyqhs").innerHTML=ntoinvite;
-		document.getElementById("mbssdsps").innerHTML=nepicfra;
-		document.getElementById("syjss").innerHTML=ntobead;
+		document.getElementById("zgys").innerHTML = neye;
+		document.getElementById("zyqhs").innerHTML = ntoinvite;
+		document.getElementById("mbssdsps").innerHTML = nepicfra;
+		document.getElementById("syjss").innerHTML = ntobead;
 
-		document.getElementById("dxcs").innerHTML=ndisconnect;
-		document.getElementById("sfcs").innerHTML=n3rd;
+		document.getElementById("dxcs").innerHTML = ndisconnect;
+		document.getElementById("sfcs").innerHTML = n3rd;
 
-		fixedcost=totcost-ntoinvite-ntobead*500-(document.getElementById("disa").checked==true?ntoepic*100:0)-neye*100;
-		totprice=fixedcost*document.getElementById("price").value;
-		document.getElementById("nchall").innerHTML=fixedcost;
-if (totprice/10000<10000)
-		document.getElementById("ngold").innerHTML=(totprice/10000).toFixed(2)+"万";
-else
-		document.getElementById("ngold").innerHTML=(totprice/100000000).toFixed(1)+"亿";
-/*
-	printf("深渊局数：%d\t出货局数：%d\t总SS数：%d\n多黄局数：%d\t最大连续不出货局数：%d\n",ntotimes,nsinepic,ntoepic,nmulepic,nmaxconunepic);
-	printf("总狗眼数：%d\t总邀请函数：%d\t目标SS的碎片数：%d\t深渊晶石数：%d\n",neye,ntoinvite,nepicfra,ntobead);
-	printf("掉线次数：%d\t三方次数：%d\n\n",ndisconnect,n3rd);
-	printf("还剩邀请函：%d\t还剩晶石：%d\t还剩SS：%d\t还剩狗眼：%d\n",nacinvite,nacbead,nacepic,naceye);
-	printf("是否分解SS继续刷？（Y/N）");
-	chcon=getch();
-	if (chcon==121) {
-		printf("\n");
-		nchal=nacepic*1*100+nacbead*500+naceye*100+nacinvite;
-		if (nchal<26) {
-			printf("邀请函不够啦！你还是去搬砖吧！\n");
-			getch();
-			exit(0);
+		fixedcost = totcost
+				- ntoinvite
+				- ntobead
+				* 500
+				- (document.getElementById("disa").checked == true ? ntoepic * 100
+						: 0) - neye * 100;
+		totprice = fixedcost * document.getElementById("price").value;
+		document.getElementById("nchall").innerHTML = fixedcost;
+		if (totprice / 10000 < 10000)
+			document.getElementById("ngold").innerHTML = (totprice / 10000)
+					.toFixed(2)
+					+ "万";
+		else
+			document.getElementById("ngold").innerHTML = (totprice / 100000000)
+					.toFixed(1)
+					+ "亿";
+		/*
+		 printf("深渊局数：%d\t出货局数：%d\t总SS数：%d\n多黄局数：%d\t最大连续不出货局数：%d\n",ntotimes,nsinepic,ntoepic,nmulepic,nmaxconunepic);
+		 printf("总狗眼数：%d\t总邀请函数：%d\t目标SS的碎片数：%d\t深渊晶石数：%d\n",neye,ntoinvite,nepicfra,ntobead);
+		 printf("掉线次数：%d\t三方次数：%d\n\n",ndisconnect,n3rd);
+		 printf("还剩邀请函：%d\t还剩晶石：%d\t还剩SS：%d\t还剩狗眼：%d\n",nacinvite,nacbead,nacepic,naceye);
+		 printf("是否分解SS继续刷？（Y/N）");
+		 chcon=getch();
+		 if (chcon==121) {
+		 printf("\n");
+		 nchal=nacepic*1*100+nacbead*500+naceye*100+nacinvite;
+		 if (nchal<26) {
+		 printf("邀请函不够啦！你还是去搬砖吧！\n");
+		 getch();
+		 exit(0);
+		 }
+		 times=nchal/26;
+		 printf("你现在有%d张邀请函，可刷%d次深渊。正在进入深渊派对……\n",nchal,nchal/26);
+		 nchal=0;
+		 //delay(2000);
+		 test1();
+		 }
+		 */
+	}
+
+	var jiathis_config = {
+		url : "https://no5972.github.io/the-hell-emulator/the-hell-emulator.html",
+		summary : "我成功在深渊模拟器爆出了[]！一共刷了0局深渊，花了0金币。欢迎大家也来试试！o(^▽^)o",
+		title : "",
+		shortUrl : false,
+		hideMore : false
+	}
+
+	function helltime() {
+		if (document.getElementById("method1").checked == true) {
+			if (inptimes < document.getElementById("text1").value) {
+				document.getElementById("start").disabled = true;
+				document.getElementById("termin").disabled = false;
+				document.getElementById("price").disabled = true;
+				document.getElementById("freq").disabled = true;
+				test1();
+				inptimes++;
+			} else {
+				clearInterval(a);
+				document.getElementById("start").disabled = false;
+				document.getElementById("termin").disabled = true;
+				document.getElementById("price").disabled = false;
+				document.getElementById("freq").disabled = false;
+			}
 		}
-		times=nchal/26;
-		printf("你现在有%d张邀请函，可刷%d次深渊。正在进入深渊派对……\n",nchal,nchal/26);
-		nchal=0;
-		//delay(2000);
-		test1();
-	}
-*/
-}
-
-var jiathis_config={
-	url:"https://no5972.github.io/the-hell-emulator/the-hell-emulator.html",
-	summary:"我成功在深渊模拟器爆出了[]！一共刷了0局深渊，花了0金币。欢迎大家也来试试！o(^▽^)o",
-	title:"",
-	shortUrl:false,
-	hideMore:false
-}
-
-function helltime() {
-	if (document.getElementById("method1").checked==true) {
-		if (inptimes<document.getElementById("text1").value) {
-			document.getElementById("start").disabled=true;	
-			document.getElementById("termin").disabled=false;
-			document.getElementById("price").disabled=true;
-			document.getElementById("freq").disabled=true;
-			test1();
-			inptimes++;
-		} else {
-			clearInterval(a);
-			document.getElementById("start").disabled=false;
-			document.getElementById("termin").disabled=true;
-			document.getElementById("price").disabled=false;
-			document.getElementById("freq").disabled=false;
+		if (document.getElementById("method2").checked == true) {
+			if (document.getElementById("equiname").innerText != document
+					.getElementById("o").value) {
+				document.getElementById("start").disabled = true;
+				document.getElementById("termin").disabled = false;
+				document.getElementById("price").disabled = true;
+				document.getElementById("freq").disabled = true;
+				test1();
+				inptimes++;
+			} else {
+				var targetequipmenttext = document.getElementById("equiname").innerText;
+				clearInterval(a);
+				document.getElementById("getepic_text").innerHTML = "祝贺你成功爆出了["
+						+ document.getElementById("equiname").innerText
+						+ "]！你一共刷了" + ntotimes + "局深渊，花了"
+						+ document.getElementById("ngold").innerText
+						+ "。感谢您的支持！o(^▽^)o";
+				window._bd_share_config = {
+					"common" : {
+						"bdSnsKey" : {},
+						"bdText" : "DNF深渊模拟器网页版 V0.06 BY 鄙人 #DNF# ",
+						"bdDesc" : "我成功在深渊模拟器爆出了["
+								+ document.getElementById("getepic_text").innerText
+										.substring(
+												document
+														.getElementById("getepic_text").innerText
+														.indexOf('[') + 1,
+												document
+														.getElementById("getepic_text").innerText
+														.lastIndexOf(']'))
+								+ "]！我一共刷了" + ntotimes + "局深渊，居然花了"
+								+ document.getElementById("ngold").innerText
+								+ "金币。欢迎大家也来试试！o(^▽^)o",
+						"bdUrl" : "https://no5972.github.io/the-hell-emulator/the-hell-emulator.html",
+						"bdMini" : "2",
+						"bdMiniList" : false,
+						"bdPic" : "",
+						"bdStyle" : "0",
+						"bdSize" : "16"
+					},
+					"share" : {}
+				};
+				with (document)
+					0[(getElementsByTagName('head')[0] || body)
+							.appendChild(createElement('script')).src = '/static/api/js/share.js?v=89860593.js?'];
+				document.getElementById("equiname").innerText = "";
+				document.getElementById("getepic").style.display = "";
+				document.getElementById("start").disabled = false;
+				document.getElementById("termin").disabled = true;
+				document.getElementById("price").disabled = false;
+				document.getElementById("freq").disabled = false;
+			}
+		}
+		if (document.getElementById("method3").checked == true) {
+			if (targetEpics.length != 0) {
+				document.getElementById("start").disabled = true;
+				document.getElementById("termin").disabled = false;
+				document.getElementById("price").disabled = true;
+				document.getElementById("freq").disabled = true;
+				test1();
+				inptimes++;
+				targetEpics
+						.remove(document.getElementById("equiname").innerText);
+				var selectDom = document
+						.getElementsByClassName("oneTargetEpic");
+				var newArr = [];
+				for (var i = 0; i < selectDom.length; i++) {
+					newArr.push(selectDom[i]);
+				}
+				for (var i = 0; i < newArr.length; i++) {
+					if (newArr[i].innerText == document
+							.getElementById("equiname").innerText)
+						newArr[i].style.color = "blue";
+				}
+			} else {
+				clearInterval(a);
+				document.getElementById("getepic_text").innerHTML = "祝贺你，全部都出齐了！你一共刷了"
+						+ ntotimes
+						+ "局深渊，花了"
+						+ document.getElementById("ngold").innerText
+						+ "。感谢您的支持！o(^▽^)o";
+				window._bd_share_config = {
+					"common" : {
+						"bdSnsKey" : {},
+						"bdText" : "DNF深渊模拟器网页版 V0.06 BY 鄙人 #DNF# ",
+						"bdDesc" : "我成功在深渊模拟器爆出了这些装备[" + targetEpics
+								+ "]！我一共刷了" + ntotimes + "局深渊，居然花了"
+								+ document.getElementById("ngold").innerText
+								+ "金币。欢迎大家也来试试！o(^▽^)o",
+						"bdUrl" : "https://no5972.github.io/the-hell-emulator/the-hell-emulator.html",
+						"bdMini" : "2",
+						"bdMiniList" : false,
+						"bdPic" : "",
+						"bdStyle" : "0",
+						"bdSize" : "16"
+					},
+					"share" : {}
+				};
+				with (document)
+					0[(getElementsByTagName('head')[0] || body)
+							.appendChild(createElement('script')).src = '/static/api/js/share.js?v=89860593.js?'];
+				document.getElementById("equiname").innerText = "";
+				document.getElementById("getepic").style.display = "";
+				document.getElementById("start").disabled = false;
+				document.getElementById("termin").disabled = true;
+				document.getElementById("price").disabled = false;
+				document.getElementById("freq").disabled = false;
+			}
 		}
 	}
-	if (document.getElementById("method2").checked==true) {
-		if (document.getElementById("equiname").innerText!=document.getElementById("o").value) {
-			document.getElementById("start").disabled=true;	
-			document.getElementById("termin").disabled=false;
-			document.getElementById("price").disabled=true;
-			document.getElementById("freq").disabled=true;
-			test1();
-			inptimes++;
-		} else {
-			var targetequipmenttext=document.getElementById("equiname").innerText;
-			clearInterval(a);
-			document.getElementById("getepic_text").innerHTML="祝贺你成功爆出了["+document.getElementById("equiname").innerText+"]！你一共刷了"+ntotimes+"局深渊，花了"+document.getElementById("ngold").innerText+"。感谢您的支持！o(^▽^)o";
-			window._bd_share_config={
-				"common":{
-					"bdSnsKey":{},
-					"bdText":"DNF深渊模拟器网页版 V0.06 BY 鄙人 #DNF# ",
-					"bdDesc":"我成功在深渊模拟器爆出了["+document.getElementById("getepic_text").innerText.substring(document.getElementById("getepic_text").innerText.indexOf('[')+1,document.getElementById("getepic_text").innerText.lastIndexOf(']'))+"]！我一共刷了"+ntotimes+"局深渊，居然花了"+document.getElementById("ngold").innerText+"金币。欢迎大家也来试试！o(^▽^)o",
-					"bdUrl":"https://no5972.github.io/the-hell-emulator/the-hell-emulator.html",
-					"bdMini":"2",
-					"bdMiniList":false,
-					"bdPic":"",
-					"bdStyle":"0",
-					"bdSize":"16"
-				},"share":{}
-			};
-			with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?'];
-			document.getElementById("equiname").innerText="";
-			document.getElementById("getepic").style.display="";
-			document.getElementById("start").disabled=false;
-			document.getElementById("termin").disabled=true;
-			document.getElementById("price").disabled=false;
-			document.getElementById("freq").disabled=false;
+
+	function terminate() {
+		clearInterval(a);
+		document.getElementById("start").disabled = false;
+		document.getElementById("termin").disabled = true;
+		document.getElementById("price").disabled = false;
+		document.getElementById("freq").disabled = false;
+	}
+
+	function shellhell() {
+		targetEpics.push(document.getElementById("o").value);
+		inptimes = 0;
+		if (isNaN(document.getElementById("price").value)
+				|| document.getElementById("price").value == "") {
+			alert("挑战书价格不是数字，请修改。");
+			return;
+		}
+		if (parseInt(document.getElementById("freq").value) < 1
+				|| parseInt(document.getElementById("freq").value) > 300000
+				|| isNaN(document.getElementById("freq").value)) {
+			alert("间隔超出范围（1-300000），请修改。");
+			return;
+		}
+		a = setInterval(helltime,
+				parseInt(document.getElementById("freq").value));
+	}
+
+	function enabletext() {
+		if (document.getElementById("method1").checked == true
+				&& document.getElementById("method2").checked == false) {
+			document.getElementById("text1").enabled = false;
+			document.getElementById("o").enabled = true;
+		}
+		if (document.getElementById("method2").checked == true
+				&& document.getElementById("method1").checked == false) {
+			document.getElementById("o").enabled = false;
+			document.getElementById("text1").enabled = false;
 		}
 	}
-}
 
-function terminate() {
-	clearInterval(a);
-	document.getElementById("start").disabled=false;
-	document.getElementById("termin").disabled=true;
-	document.getElementById("price").disabled=false;
-	document.getElementById("freq").disabled=false;
-}
-
-function shellhell() {
-	inptimes=0;
-if (isNaN(document.getElementById("price").value)||document.getElementById("price").value=="") {
-	alert("挑战书价格不是数字，请修改。"); return;
-}
-if (parseInt(document.getElementById("freq").value)<1||parseInt(document.getElementById("freq").value)>300000||isNaN(document.getElementById("freq").value)) {
-	alert("间隔超出范围（1-300000），请修改。"); return;
-}
-	a=setInterval(helltime,parseInt(document.getElementById("freq").value));
-}
-
-function enabletext() {
-	if (document.getElementById("method1").checked==true&&document.getElementById("method2").checked==false) {
-		document.getElementById("text1").enabled=false;
-		document.getElementById("o").enabled=true;
+	function deleteFromList(name) {
+		targetEpics.remove(name);
+		return targetEpics;
 	}
-	if (document.getElementById("method2").checked==true&&document.getElementById("method1").checked==false) {
-		document.getElementById("o").enabled=false;
-		document.getElementById("text1").enabled=false;
+
+	function refreshEpicList() {
+		document.getElementById('targetEpicList').innerHTML = "&nbsp;";
+		for (var i = 0; i < targetEpics.length; i++) {
+			document.getElementById('targetEpicList').innerHTML += '<span class=\'oneTargetEpic\' onclick=\'console.log(this.innerText); deleteFromList(this.innerText); console.log(targetEpics); refreshEpicList();\'>'
+					+ targetEpics[i] + '</span>,';
+		}
 	}
-}
+
+	function saveEpicList() {
+		if (targetEpics.indexOf(document.getElementById('o2').value) == -1)
+			targetEpics.push(document.getElementById('o2').value);
+		refreshEpicList();
+	}
 </script>
 </head>
 <body>
-<div style="float:left;">
-<p>DNF深渊模拟器网页版 V0.06 BY 鄙人<br>贴吧：@wujiuqier<br>DNF召唤师吧 DNF美服吧 DFO吧 DNF掌游宝 17173DNF专区 联合发行</p>
-<p>
-选择地下城：
-<select id="dungeons" style="font-size:12pt;">
-<option value="0">格兰之火</option> <!-- 70,75 -->
-<option value="0">瘟疫之源</option>
-<option value="1">卡勒特之初</option>
-<option value="1">暗黑圣战</option>
-<option value="1">绝密区域</option>
-<option value="2">昔日悲鸣</option> <!-- 75,80 -->
-<option value="2">凛冬</option>
-<option value="2">谜之觉悟</option>
-<option value="3">克雷发电站</option> <!-- 75,80,85 -->
-<option value="4">普鲁兹发电站</option> <!-- 80,85 -->
-<option value="4">特伦斯发电站</option>
-<option value="4">格兰迪发电站</option>
-<option value="5">倒悬的瞭望台</option> <!-- 85 -->
-<option value="5">卢克的聚光镜</option>
-<option value="5">钢铁之臂</option>
-<option value="5">能源熔炉</option>
-<option value="5">光之舞会</option>
-<option value="6" selected="selected">时间广场</option> <!-- 85,90 -->
-<option value="6">兽人峡谷</option>
-<option value="6">恐怖的栖息地</option>
-<option value="6">疾风地带</option>
-<option value="6">红色魔女之森</option>
-</select>
-<button onclick="test1()" id="manual">手动爆！</button><p>
-输入挑战书单价：<input type="text" id="price" value="28000" 
-onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"
-onkeypress="this.value=this.value.replace(/\D/g,'')"
-/></p>
-<input type="checkbox" id="disa" checked />分解其他史诗
-<p><input type="radio" name="method" id="method1" checked="checked" />
-1. 输入深渊局数：<input id="text1" type="text" style="font-size:12pt;"></input></p>
-<p><input type="radio" name="method" id="method2" />
-2. 刷到出<input type="text" style="width:300px;font-size:12pt;" id="o" onkeyup="autoComplete.start(event)">为止！
-<div class="auto_hidden" id="auto"><!--自动完成 DIV--></div>
-<script src="listsel.js"></script></p>
-<button onclick="shellhell()" id="start">自动刷！</button>
-<button onclick="terminate()" id="termin" disabled>中止</button>
-<button onclick="history.go(0)">归零</button>
-输入自动刷深渊间隔（1-300000）：<input type="text" id="freq" value="1" />
-<span id="equiname" style="display:none;"></span></p>
-<div id="test" style="height: 50px;">　&nbsp;</div>
-</div>
-<div id="record" style="
-overflow-y:scroll; height:350px; width: 400px; 
-float:right;
-background-color: #222288;
-color: #FFEB3B;
-font-size: 12px;
-font-family: 宋体;
-text-shadow:#000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;
--webkit-text-shadow:#000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;
--moz-text-shadow:#000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;
-*filter: Glow(color=#000, strength=1);
-"></div>
-<table width="100%">
-<tr><td>深渊局数：</td><td id="syjs">0</td><td>出货局数：</td><td id="chjs">0</td><td>总史诗数：</td><td id="zsss">0</td><td>多黄局数：</td><td id="dhjs">0</td><td>最大连续不出货局数：</td><td id="zdlxbchjs">0</td></tr>
-<tr><td>总狗眼数：</td><td id="zgys">0</td><td>总邀请函数：</td><td id="zyqhs">0</td><td>目标史诗的碎片数：</td><td id="mbssdsps">0</td><td>深渊晶石数：</td><td id="syjss">0</td></tr>
-<tr><td>掉线次数：</td><td id="dxcs">0</td><td>三方次数：</td><td id="sfcs">0</td><td>消耗挑战书数：</td><td id="nchall">0</td><td>成本（金币）：</td><td id="ngold">0</td></tr>
-</table>
-<div style="
-margin: 0 auto;
-border: 1px solid #000;
-width:400px; height:100px; 
-background-color: #fff;
-left: 35%;
-top: 150px;
-z-index:2;position:absolute;
-text-align: center;
-padding: 5px;
-display:none;
-font-size: 12px;
-font-family: 宋体;
-" id="alert">公告<hr><span id="alert_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
-<center style="margin-top:10px;"><button onclick="document.getElementById('alert').style.display='none';">确认</button></center></div>
-<div style="
-margin: 0 auto;
-border: 1px solid #000;
-width:400px; height:150px; 
-background-color: #fff;
-left: 35%;
-top: 150px;
-z-index:2;position:absolute;
-text-align: center;
-padding: 5px;
-display:none;
-font-size: 12px;
-font-family: 宋体;
-" id="getepic">公告<hr><span id="getepic_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
-<center style="margin-top:10px;"><button onclick="document.getElementById('getepic').style.display='none';">确认</button></center>
-<div class="bdsharebuttonbox">
-	<a href="#" class="bds_more" data-cmd="more"></a>
-	<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-	<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-	<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
-	<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-	<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-</div>
-<script charset="utf-8">
+	<div style="float: left;">
+		<p>
+			DNF深渊模拟器网页版 V0.07 BY 鄙人<br>贴吧：@wujiuqier<br>DNF召唤师吧 DNF美服吧
+			DFO吧 DNF掌游宝 17173DNF专区 联合发行
+		</p>
+		<p>
+			选择地下城： <select id="dungeons" style="font-size: 12pt;">
+				<option value="0">格兰之火</option>
+				<!-- 70,75 -->
+				<option value="0">瘟疫之源</option>
+				<option value="1">卡勒特之初</option>
+				<option value="1">暗黑圣战</option>
+				<option value="1">绝密区域</option>
+				<option value="2">昔日悲鸣</option>
+				<!-- 75,80 -->
+				<option value="2">凛冬</option>
+				<option value="2">谜之觉悟</option>
+				<option value="3">克雷发电站</option>
+				<!-- 75,80,85 -->
+				<option value="4">普鲁兹发电站</option>
+				<!-- 80,85 -->
+				<option value="4">特伦斯发电站</option>
+				<option value="4">格兰迪发电站</option>
+				<option value="5">倒悬的瞭望台</option>
+				<!-- 85 -->
+				<option value="5">卢克的聚光镜</option>
+				<option value="5">钢铁之臂</option>
+				<option value="5">能源熔炉</option>
+				<option value="5">光之舞会</option>
+				<option value="6" selected="selected">时间广场</option>
+				<!-- 85,90 -->
+				<option value="6">兽人峡谷</option>
+				<option value="6">恐怖的栖息地</option>
+				<option value="6">疾风地带</option>
+				<option value="6">红色魔女之森</option>
+			</select>
+			<button onclick="test1()" id="manual">手动爆！</button>
+		<p>
+			输入挑战书单价：<input type="text" id="price" value="28000"
+				onkeyup="this.value=this.value.replace(/\D/g,'')"
+				onafterpaste="this.value=this.value.replace(/\D/g,'')"
+				onkeypress="this.value=this.value.replace(/\D/g,'')" />
+		</p>
+		<input type="checkbox" id="disa" checked />分解其他史诗
+		<p>
+			<input type="radio" name="method" id="method1" checked="checked" />
+			1. 输入深渊局数：<input id="text1" type="text" style="font-size: 12pt;"></input>
+		</p>
+		<p>
+			<input type="radio" name="method" id="method2" /> 2. 刷到出<input
+				type="text" style="width: 300px; font-size: 12pt;" id="o"
+				onkeyup="autoComplete.start(event)">为止！
+		<div class="auto_hidden" id="auto">
+			<!--自动完成 DIV-->
+		</div>
+		<script src="listsel.js"></script>
+		</p>
+		<p>
+			<input type="radio" name="method" id="method3" /> 3. 刷到下列史诗出齐为止！添加：<input
+				type="text" style="width: 300px; font-size: 12pt;" id="o2"
+				onkeyup="autoComplete2.start(event); 
+if (event.keyCode==13) saveEpicList();
+">（点击可以删除）
+		
+		<div class="auto_hidden" id="auto2">
+			<!--自动完成 DIV-->
+		</div>
+		<script src="listsel2.js"></script>
+		<p id="targetEpicList">&nbsp;</p>
+		</p>
+		<button onclick="shellhell()" id="start">自动刷！</button>
+		<button onclick="terminate()" id="termin" disabled>中止</button>
+		<button onclick="history.go(0)">归零</button>
+		输入自动刷深渊间隔（1-300000）：<input type="text" id="freq" value="1" /> <span
+			id="equiname" style="display: none;"></span>
+		</p>
+		<div id="test" style="height: 50px;">&nbsp;</div>
+	</div>
+	<div id="record"
+		style="overflow-y: scroll; height: 350px; width: 400px; float: right; background-color: #222288; color: #FFEB3B; font-size: 12px; font-family: 宋体; text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -webkit-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -moz-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; *filter: Glow(color = #000, strength = 1);"></div>
+	<table width="100%">
+		<tr>
+			<td>深渊局数：</td>
+			<td id="syjs">0</td>
+			<td>出货局数：</td>
+			<td id="chjs">0</td>
+			<td>总史诗数：</td>
+			<td id="zsss">0</td>
+			<td>多黄局数：</td>
+			<td id="dhjs">0</td>
+			<td>最大连续不出货局数：</td>
+			<td id="zdlxbchjs">0</td>
+		</tr>
+		<tr>
+			<td>总狗眼数：</td>
+			<td id="zgys">0</td>
+			<td>总邀请函数：</td>
+			<td id="zyqhs">0</td>
+			<td>目标史诗的碎片数：</td>
+			<td id="mbssdsps">0</td>
+			<td>深渊晶石数：</td>
+			<td id="syjss">0</td>
+		</tr>
+		<tr>
+			<td>掉线次数：</td>
+			<td id="dxcs">0</td>
+			<td>三方次数：</td>
+			<td id="sfcs">0</td>
+			<td>消耗挑战书数：</td>
+			<td id="nchall">0</td>
+			<td>成本（金币）：</td>
+			<td id="ngold">0</td>
+		</tr>
+	</table>
+	<div
+		style="margin: 0 auto; border: 1px solid #000; width: 400px; height: 100px; background-color: #fff; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体;"
+		id="alert">
+		公告
+		<hr>
+		<span id="alert_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
+		<center style="margin-top: 10px;">
+			<button
+				onclick="document.getElementById('alert').style.display='none';">确认</button>
+		</center>
+	</div>
+	<div
+		style="margin: 0 auto; border: 1px solid #000; width: 400px; height: 150px; background-color: #fff; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体;"
+		id="getepic">
+		公告
+		<hr>
+		<span id="getepic_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
+		<center style="margin-top: 10px;">
+			<button
+				onclick="document.getElementById('getepic').style.display='none';">确认</button>
+		</center>
+		<div class="bdsharebuttonbox">
+			<a href="#" class="bds_more" data-cmd="more"></a> <a href="#"
+				class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a> <a href="#"
+				class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a> <a href="#"
+				class="bds_renren" data-cmd="renren" title="分享到人人网"></a> <a href="#"
+				class="bds_weixin" data-cmd="weixin" title="分享到微信"></a> <a href="#"
+				class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+		</div>
+		<script charset="utf-8">
 //with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script></div>
+</script>
+	</div>
 </body>
