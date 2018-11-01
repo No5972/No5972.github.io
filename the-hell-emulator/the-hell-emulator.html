@@ -13,7 +13,7 @@
 <script src="autoc.js" charset="utf-8"></script>
 <style>
 .oneTargetEpic:hover {
-	color: ared;
+	color: red;
 	cursor: pointer;
 }
 </style>
@@ -568,7 +568,7 @@
 				type="text" style="width: 300px; font-size: 12pt;" id="o2"
 				onkeyup="autoComplete2.start(event); 
 if (event.keyCode==13) saveEpicList();
-">（点击可以删除）
+">&nbsp;<button onclick="saveEpicList();">添加</button>（点击可以删除）
 		
 		<div class="auto_hidden" id="auto2">
 			<!--自动完成 DIV-->
