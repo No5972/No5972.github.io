@@ -8,6 +8,8 @@
 <script src="list_E.js"></script>
 <script src="list_F.js"></script>
 <link href="autoc.css" rel="stylesheet" />
+<title>DNF深渊模拟器网页版 V0.08 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
+			DFO吧 DNF掌游宝 17173DNF专区 联合发行</title>
 <script src="autoc.js" charset="utf-8"></script>
 <style>
 .oneTargetEpic:hover {
@@ -150,6 +152,24 @@
 		if (whebead == 1) {
 			//printf("获得深渊晶石1个。\n");
 			document.getElementById("test").innerHTML += "获得深渊晶石1个。<br>";
+			document.getElementById("record").innerHTML += "<br><span style='color: #ff44ff;'>获得[</span>";
+			if (document.getElementById("dungeons").value == "0"
+					|| document.getElementById("dungeons").value == "1"
+					|| document.getElementById("dungeons").value == "2")
+				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>时空之门深渊晶石</span>";
+			if (document.getElementById("dungeons").value == "3"
+					|| document.getElementById("dungeons").value == "4")
+				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>能源中心深渊晶石</span>";
+			if (document.getElementById("dungeons").value == "5")
+				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>name_10146492</span>";
+			if (document.getElementById("dungeons").value == "6")
+				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>地轨中心深渊宝珠</span>";
+			document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>]1个，第"
+					+ i
+					+ "把，地下城："
+					+ document.getElementById("dungeons").options[document
+							.getElementById("dungeons").selectedIndex].text
+					+ "</span>";
 			//delay(500);
 		}
 		if (nepic > 0) {
@@ -201,7 +221,7 @@
 				//delay(1000);
 			} else {
 				//printf("尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。\n网络连接中断\n\a\a");
-				document.getElementById("record").innerHTML += "<br><span style='color: #ee8800;'>尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。<br>网络连接中断</span>";
+				document.getElementById("record").innerHTML += "<br><span style='color: #ee6600;'>尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。<br>网络连接中断</span>";
 				document.getElementById("alert_text").innerText = "尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。";
 				document.getElementById("alert").style.display = "";
 				setTimeout(
@@ -231,12 +251,31 @@
 		document.getElementById("dxcs").innerHTML = ndisconnect;
 		document.getElementById("sfcs").innerHTML = n3rd;
 
-		fixedcost = totcost
-				- ntoinvite
-				- ntobead
-				* 500
-				- (document.getElementById("disa").checked == true ? ntoepic * 100
-						: 0) - neye * 100;
+		if (document.getElementById("dungeons").value == "0"
+				|| document.getElementById("dungeons").value == "1"
+				|| document.getElementById("dungeons").value == "2")
+			fixedcost = totcost
+					- ntoinvite
+					- ntobead
+					* 400
+					- (document.getElementById("disa").checked == true ? ntoepic * 100
+							: 0) - neye * 100;
+		if (document.getElementById("dungeons").value == "3"
+				|| document.getElementById("dungeons").value == "4")
+			fixedcost = totcost
+					- ntoinvite
+					- ntobead
+					* 450
+					- (document.getElementById("disa").checked == true ? ntoepic * 100
+							: 0) - neye * 100;
+		if (document.getElementById("dungeons").value == "5"
+				|| document.getElementById("dungeons").value == "6")
+			fixedcost = totcost
+					- ntoinvite
+					- ntobead
+					* 500
+					- (document.getElementById("disa").checked == true ? ntoepic * 100
+							: 0) - neye * 100;
 		totprice = fixedcost * document.getElementById("price").value;
 		document.getElementById("nchall").innerHTML = fixedcost;
 		if (totprice / 10000 < 10000)
@@ -469,7 +508,7 @@
 <body>
 	<div style="float: left;">
 		<p>
-			DNF深渊模拟器网页版 V0.07 BY 鄙人<br>贴吧：@wujiuqier<br>DNF召唤师吧 DNF美服吧
+			DNF深渊模拟器网页版 V0.08 BY 鄙人<br>贴吧：@wujiuqier<br>DNF召唤师吧 DNF美服吧
 			DFO吧 DNF掌游宝 17173DNF专区 联合发行
 		</p>
 		<p>
