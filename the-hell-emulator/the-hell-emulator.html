@@ -8,13 +8,63 @@
 <script src="list_E.js"></script>
 <script src="list_F.js"></script>
 <link href="autoc.css" rel="stylesheet" />
-<title>DNF深渊模拟器网页版 V0.08 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
+<title>DNF深渊模拟器网页版 V0.09 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
 			DFO吧 DNF掌游宝 17173DNF专区 联合发行</title>
 <script src="autoc.js" charset="utf-8"></script>
 <style>
 .oneTargetEpic:hover {
 	color: red;
-	cursor: pointer;
+	cursor: url("cancel.cur"), auto;
+}
+* { 
+	color: #e6c89b;
+	cursor: url("basic.cur"), auto;
+	font-family: "宋体";
+	font-size: 12px;
+}
+#main_body {
+	background: #000;
+}
+a {
+	cursor: url("detailview.cur"), auto;
+	color: #00f;
+}
+input, select {
+	padding: 1px 1px 2px 3px;
+	border: 1px solid #e6c89b;
+	border-radius: 4px;
+	background: #000;
+	color: #fff;
+	outline:none;
+}
+button {
+	width: 56px; height: 23px;
+	background: url("button_1.png");
+	border: 0;
+	color: #e6c89b;
+	outline:none;
+}
+button:hover {
+	background: url("button_3.png");
+}
+button:active {
+	background: url("button_4.png");
+}
+button:active>span {
+	display:inline-block;
+	transform:translate(1px,1px);
+}
+button>span {
+	*filter: drop-shadow(0px 1px 0px #000);
+	-webkit-filter: drop-shadow(0px 1px 0px #000); /* Chrome, Safari, Opera */
+}
+#start, #manual {
+	width: 70px; height: 23px;
+	background-size:100% 100%;
+}
+button[disabled] {
+	background: url("button_2.png");
+	color: #bdbdbd;
 }
 </style>
 <script>
@@ -144,6 +194,13 @@
 			//printf("获得%d邀请函。获得狗眼1个。\n",ninvite);
 			document.getElementById("test").innerHTML += "获得" + ninvite
 					+ "邀请函。获得狗眼1个。";
+			document.getElementById("record").innerHTML += "<br>获得[史诗灵魂]1个，第"
+					+ i
+					+ "把，地下城："
+					+ document.getElementById("dungeons").options[document
+							.getElementById("dungeons").selectedIndex].text
+					+ "，频道："
+					+ document.getElementById("channel").value;
 		} else {
 			//printf("获得%d邀请函。\n",ninvite);
 			document.getElementById("test").innerHTML += "获得" + ninvite
@@ -152,7 +209,7 @@
 		if (whebead == 1) {
 			//printf("获得深渊晶石1个。\n");
 			document.getElementById("test").innerHTML += "获得深渊晶石1个。<br>";
-			document.getElementById("record").innerHTML += "<br><span style='color: #ff44ff;'>获得[</span>";
+			document.getElementById("record").innerHTML += "<br><span style='color: #ff00ff;'>获得[</span>";
 			if (document.getElementById("dungeons").value == "0"
 					|| document.getElementById("dungeons").value == "1"
 					|| document.getElementById("dungeons").value == "2")
@@ -169,6 +226,8 @@
 					+ "把，地下城："
 					+ document.getElementById("dungeons").options[document
 							.getElementById("dungeons").selectedIndex].text
+					+ "，频道："
+					+ document.getElementById("channel").value
 					+ "</span>";
 			//delay(500);
 		}
@@ -198,7 +257,9 @@
 						+ i
 						+ "把，地下城："
 						+ document.getElementById("dungeons").options[document
-								.getElementById("dungeons").selectedIndex].text;
+								.getElementById("dungeons").selectedIndex].text
+						+ "，频道："
+						+ document.getElementById("channel").value;
 			}
 			//delay(500);
 		}
@@ -216,17 +277,22 @@
 			basedis = Math.random() * 10000 + 1;
 			if (basedis < qdis * 10000) {
 				//printf("网络连接中断\n\a");
-				document.getElementById("record").innerHTML += "<br><span style='color: #ee6600;'>网络连接中断</span>";
+				document.getElementById("record").innerHTML += "<br><span style='color: #ff6100;'>网络连接中断</span>";
 				ndisconnect++;
 				//delay(1000);
 			} else {
 				//printf("尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。\n网络连接中断\n\a\a");
-				document.getElementById("record").innerHTML += "<br><span style='color: #ee6600;'>尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。<br>网络连接中断</span>";
+				document.getElementById("record").innerHTML += "<br><span style='color: #ff6100;'>尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。<br>网络连接中断</span>";
 				document.getElementById("alert_text").innerText = "尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。";
+				document.getElementById("record").innerHTML += "<br><span style='color: #e6c89b;'>系统检测到您的帐号数据近期出现异常，您已受到收益制裁处罚。您获得的经验值/金币/道具方面会受到限制，同时不能进行组队/使用决斗场/势力战等部分功能。<br>359小时59分钟后收益制裁将自动解除。</span>"
 				document.getElementById("alert").style.display = "";
 				setTimeout(
 						"document.getElementById('alert').style.display='none';",
 						2000);
+				document.getElementById("main_body").style.background="#f00";
+				setTimeout(
+						"document.getElementById('main_body').style.background='#000';",
+						100);
 				n3rd++;
 				//delay(2000);
 			}
@@ -505,14 +571,14 @@
 	}
 </script>
 </head>
-<body>
+<body id="main_body">
 	<div style="float: left;">
 		<p>
-			DNF深渊模拟器网页版 V0.08 BY 鄙人<br>贴吧：@wujiuqier<br>DNF召唤师吧 DNF美服吧
+			DNF深渊模拟器网页版 V0.09 BY 鄙人<br>贴吧：<a href="http://tieba.baidu.com/home/main/?un=wujiuqier" target="_blank">@wujiuqier </a><br>DNF召唤师吧 DNF美服吧
 			DFO吧 DNF掌游宝 17173DNF专区 联合发行
 		</p>
 		<p>
-			选择地下城： <select id="dungeons" style="font-size: 12pt;">
+			选择地下城： <select id="dungeons" style="font-size: 12px;">
 				<option value="0">格兰之火</option>
 				<!-- 70,75 -->
 				<option value="0">瘟疫之源</option>
@@ -542,9 +608,446 @@
 				<option value="6">疾风地带</option>
 				<option value="6">红色魔女之森</option>
 			</select>
-			<button onclick="test1()" id="manual">手动爆！</button>
+			选择频道：<select id="channel" style="font-size: 12px;">
+				<option>地轨中心9030</option>
+				<option>地轨中心5030</option>
+				<option>地轨中心115030</option>
+				<option>地轨中心117030</option>
+				<option>地轨中心127030</option>
+				<option>地轨中心24030</option>
+				<option>地轨中心25030</option>
+				<option>地轨中心48030</option>
+				<option>地轨中心50030</option>
+				<option>地轨中心66030</option>
+				<option>地轨中心68030</option>
+				<option>地轨中心74030</option>
+				<option>地轨中心76030</option>
+				<option>地轨中心85030</option>
+				<option>地轨中心94030</option>
+				<option>地轨中心9031</option>
+				<option>地轨中心5031</option>
+				<option>地轨中心115031</option>
+				<option>地轨中心117031</option>
+				<option>地轨中心127031</option>
+				<option>地轨中心24031</option>
+				<option>地轨中心25031</option>
+				<option>地轨中心48031</option>
+				<option>地轨中心50031</option>
+				<option>地轨中心66031</option>
+				<option>地轨中心68031</option>
+				<option>地轨中心74031</option>
+				<option>地轨中心76031</option>
+				<option>地轨中心85031</option>
+				<option>地轨中心94031</option>
+				<option>地轨中心9032</option>
+				<option>地轨中心5032</option>
+				<option>地轨中心115032</option>
+				<option>地轨中心117032</option>
+				<option>地轨中心127032</option>
+				<option>地轨中心24032</option>
+				<option>地轨中心25032</option>
+				<option>地轨中心48032</option>
+				<option>地轨中心50032</option>
+				<option>地轨中心66032</option>
+				<option>地轨中心68032</option>
+				<option>地轨中心74032</option>
+				<option>地轨中心76032</option>
+				<option>地轨中心85032</option>
+				<option>地轨中心94032</option>
+				<option>地轨中心9033</option>
+				<option>地轨中心5033</option>
+				<option>地轨中心115033</option>
+				<option>地轨中心117033</option>
+				<option>地轨中心127033</option>
+				<option>地轨中心24033</option>
+				<option>地轨中心25033</option>
+				<option>地轨中心48033</option>
+				<option>地轨中心50033</option>
+				<option>地轨中心66033</option>
+				<option>地轨中心68033</option>
+				<option>地轨中心74033</option>
+				<option>地轨中心76033</option>
+				<option>地轨中心85033</option>
+				<option>地轨中心94033</option>
+				<option>地轨中心9034</option>
+				<option>地轨中心5034</option>
+				<option>地轨中心115034</option>
+				<option>地轨中心117034</option>
+				<option>地轨中心127034</option>
+				<option>地轨中心24034</option>
+				<option>地轨中心25034</option>
+				<option>地轨中心48034</option>
+				<option>地轨中心50034</option>
+				<option>地轨中心66034</option>
+				<option>地轨中心68034</option>
+				<option>地轨中心74034</option>
+				<option>地轨中心76034</option>
+				<option>地轨中心85034</option>
+				<option>地轨中心94034</option>
+				<option>格兰之森9006</option>
+				<option>格兰之森5006</option>
+				<option>格兰之森115006</option>
+				<option>格兰之森117006</option>
+				<option>格兰之森127006</option>
+				<option>格兰之森24006</option>
+				<option>格兰之森25006</option>
+				<option>格兰之森48006</option>
+				<option>格兰之森50006</option>
+				<option>格兰之森66006</option>
+				<option>格兰之森68006</option>
+				<option>格兰之森74006</option>
+				<option>格兰之森76006</option>
+				<option>格兰之森85006</option>
+				<option>格兰之森94006</option>
+				<option>格兰之森9007</option>
+				<option>格兰之森5007</option>
+				<option>格兰之森115007</option>
+				<option>格兰之森117007</option>
+				<option>格兰之森127007</option>
+				<option>格兰之森24007</option>
+				<option>格兰之森25007</option>
+				<option>格兰之森48007</option>
+				<option>格兰之森50007</option>
+				<option>格兰之森66007</option>
+				<option>格兰之森68007</option>
+				<option>格兰之森74007</option>
+				<option>格兰之森76007</option>
+				<option>格兰之森85007</option>
+				<option>格兰之森94007</option>
+				<option>格兰之森9008</option>
+				<option>格兰之森5008</option>
+				<option>格兰之森115008</option>
+				<option>格兰之森117008</option>
+				<option>格兰之森127008</option>
+				<option>格兰之森24008</option>
+				<option>格兰之森25008</option>
+				<option>格兰之森48008</option>
+				<option>格兰之森50008</option>
+				<option>格兰之森66008</option>
+				<option>格兰之森68008</option>
+				<option>格兰之森74008</option>
+				<option>格兰之森76008</option>
+				<option>格兰之森85008</option>
+				<option>格兰之森94008</option>
+				<option>天空之城9009</option>
+				<option>天空之城5009</option>
+				<option>天空之城115009</option>
+				<option>天空之城117009</option>
+				<option>天空之城127009</option>
+				<option>天空之城24009</option>
+				<option>天空之城25009</option>
+				<option>天空之城48009</option>
+				<option>天空之城50009</option>
+				<option>天空之城66009</option>
+				<option>天空之城68009</option>
+				<option>天空之城74009</option>
+				<option>天空之城76009</option>
+				<option>天空之城85009</option>
+				<option>天空之城94009</option>
+				<option>天空之城9010</option>
+				<option>天空之城5010</option>
+				<option>天空之城115010</option>
+				<option>天空之城117010</option>
+				<option>天空之城127010</option>
+				<option>天空之城24010</option>
+				<option>天空之城25010</option>
+				<option>天空之城48010</option>
+				<option>天空之城50010</option>
+				<option>天空之城66010</option>
+				<option>天空之城68010</option>
+				<option>天空之城74010</option>
+				<option>天空之城76010</option>
+				<option>天空之城85010</option>
+				<option>天空之城94010</option>
+				<option>天帷巨兽9011</option>
+				<option>天帷巨兽5011</option>
+				<option>天帷巨兽115011</option>
+				<option>天帷巨兽117011</option>
+				<option>天帷巨兽127011</option>
+				<option>天帷巨兽24011</option>
+				<option>天帷巨兽25011</option>
+				<option>天帷巨兽48011</option>
+				<option>天帷巨兽50011</option>
+				<option>天帷巨兽66011</option>
+				<option>天帷巨兽68011</option>
+				<option>天帷巨兽74011</option>
+				<option>天帷巨兽76011</option>
+				<option>天帷巨兽85011</option>
+				<option>天帷巨兽94011</option>
+				<option>天帷巨兽9012</option>
+				<option>天帷巨兽5012</option>
+				<option>天帷巨兽115012</option>
+				<option>天帷巨兽117012</option>
+				<option>天帷巨兽127012</option>
+				<option>天帷巨兽24012</option>
+				<option>天帷巨兽25012</option>
+				<option>天帷巨兽48012</option>
+				<option>天帷巨兽50012</option>
+				<option>天帷巨兽66012</option>
+				<option>天帷巨兽68012</option>
+				<option>天帷巨兽74012</option>
+				<option>天帷巨兽76012</option>
+				<option>天帷巨兽85012</option>
+				<option>天帷巨兽94012</option>
+				<option>阿法利亚9013</option>
+				<option>阿法利亚5013</option>
+				<option>阿法利亚115013</option>
+				<option>阿法利亚117013</option>
+				<option>阿法利亚127013</option>
+				<option>阿法利亚24013</option>
+				<option>阿法利亚25013</option>
+				<option>阿法利亚48013</option>
+				<option>阿法利亚50013</option>
+				<option>阿法利亚66013</option>
+				<option>阿法利亚68013</option>
+				<option>阿法利亚74013</option>
+				<option>阿法利亚76013</option>
+				<option>阿法利亚85013</option>
+				<option>阿法利亚94013</option>
+				<option>阿法利亚9014</option>
+				<option>阿法利亚5014</option>
+				<option>阿法利亚115014</option>
+				<option>阿法利亚117014</option>
+				<option>阿法利亚127014</option>
+				<option>阿法利亚24014</option>
+				<option>阿法利亚25014</option>
+				<option>阿法利亚48014</option>
+				<option>阿法利亚50014</option>
+				<option>阿法利亚66014</option>
+				<option>阿法利亚68014</option>
+				<option>阿法利亚74014</option>
+				<option>阿法利亚76014</option>
+				<option>阿法利亚85014</option>
+				<option>阿法利亚94014</option>
+				<option>诺伊佩拉9015</option>
+				<option>诺伊佩拉5015</option>
+				<option>诺伊佩拉115015</option>
+				<option>诺伊佩拉117015</option>
+				<option>诺伊佩拉127015</option>
+				<option>诺伊佩拉24015</option>
+				<option>诺伊佩拉25015</option>
+				<option>诺伊佩拉48015</option>
+				<option>诺伊佩拉50015</option>
+				<option>诺伊佩拉66015</option>
+				<option>诺伊佩拉68015</option>
+				<option>诺伊佩拉74015</option>
+				<option>诺伊佩拉76015</option>
+				<option>诺伊佩拉85015</option>
+				<option>诺伊佩拉94015</option>
+				<option>万年雪山9016</option>
+				<option>万年雪山5016</option>
+				<option>万年雪山115016</option>
+				<option>万年雪山117016</option>
+				<option>万年雪山127016</option>
+				<option>万年雪山24016</option>
+				<option>万年雪山25016</option>
+				<option>万年雪山48016</option>
+				<option>万年雪山50016</option>
+				<option>万年雪山66016</option>
+				<option>万年雪山68016</option>
+				<option>万年雪山74016</option>
+				<option>万年雪山76016</option>
+				<option>万年雪山85016</option>
+				<option>万年雪山94016</option>
+				<option>诺斯玛尔9017</option>
+				<option>诺斯玛尔5017</option>
+				<option>诺斯玛尔115017</option>
+				<option>诺斯玛尔117017</option>
+				<option>诺斯玛尔127017</option>
+				<option>诺斯玛尔24017</option>
+				<option>诺斯玛尔25017</option>
+				<option>诺斯玛尔48017</option>
+				<option>诺斯玛尔50017</option>
+				<option>诺斯玛尔66017</option>
+				<option>诺斯玛尔68017</option>
+				<option>诺斯玛尔74017</option>
+				<option>诺斯玛尔76017</option>
+				<option>诺斯玛尔85017</option>
+				<option>诺斯玛尔94017</option>
+				<option>亚诺法森林9018</option>
+				<option>亚诺法森林5018</option>
+				<option>亚诺法森林115018</option>
+				<option>亚诺法森林117018</option>
+				<option>亚诺法森林127018</option>
+				<option>亚诺法森林24018</option>
+				<option>亚诺法森林25018</option>
+				<option>亚诺法森林48018</option>
+				<option>亚诺法森林50018</option>
+				<option>亚诺法森林66018</option>
+				<option>亚诺法森林68018</option>
+				<option>亚诺法森林74018</option>
+				<option>亚诺法森林76018</option>
+				<option>亚诺法森林85018</option>
+				<option>亚诺法森林94018</option>
+				<option>厄运之城9019</option>
+				<option>厄运之城5019</option>
+				<option>厄运之城115019</option>
+				<option>厄运之城117019</option>
+				<option>厄运之城127019</option>
+				<option>厄运之城24019</option>
+				<option>厄运之城25019</option>
+				<option>厄运之城48019</option>
+				<option>厄运之城50019</option>
+				<option>厄运之城66019</option>
+				<option>厄运之城68019</option>
+				<option>厄运之城74019</option>
+				<option>厄运之城76019</option>
+				<option>厄运之城85019</option>
+				<option>厄运之城94019</option>
+				<option>逆流瀑布9020</option>
+				<option>逆流瀑布5020</option>
+				<option>逆流瀑布115020</option>
+				<option>逆流瀑布117020</option>
+				<option>逆流瀑布127020</option>
+				<option>逆流瀑布24020</option>
+				<option>逆流瀑布25020</option>
+				<option>逆流瀑布48020</option>
+				<option>逆流瀑布50020</option>
+				<option>逆流瀑布66020</option>
+				<option>逆流瀑布68020</option>
+				<option>逆流瀑布74020</option>
+				<option>逆流瀑布76020</option>
+				<option>逆流瀑布85020</option>
+				<option>逆流瀑布94020</option>
+				<option>安特贝鲁峡谷9021</option>
+				<option>安特贝鲁峡谷5021</option>
+				<option>安特贝鲁峡谷115021</option>
+				<option>安特贝鲁峡谷117021</option>
+				<option>安特贝鲁峡谷127021</option>
+				<option>安特贝鲁峡谷24021</option>
+				<option>安特贝鲁峡谷25021</option>
+				<option>安特贝鲁峡谷48021</option>
+				<option>安特贝鲁峡谷50021</option>
+				<option>安特贝鲁峡谷66021</option>
+				<option>安特贝鲁峡谷68021</option>
+				<option>安特贝鲁峡谷74021</option>
+				<option>安特贝鲁峡谷76021</option>
+				<option>安特贝鲁峡谷85021</option>
+				<option>安特贝鲁峡谷94021</option>
+				<option>海上列车9022</option>
+				<option>海上列车5022</option>
+				<option>海上列车115022</option>
+				<option>海上列车117022</option>
+				<option>海上列车127022</option>
+				<option>海上列车24022</option>
+				<option>海上列车25022</option>
+				<option>海上列车48022</option>
+				<option>海上列车50022</option>
+				<option>海上列车66022</option>
+				<option>海上列车68022</option>
+				<option>海上列车74022</option>
+				<option>海上列车76022</option>
+				<option>海上列车85022</option>
+				<option>海上列车94022</option>
+				<option>海上列车9023</option>
+				<option>海上列车5023</option>
+				<option>海上列车115023</option>
+				<option>海上列车117023</option>
+				<option>海上列车127023</option>
+				<option>海上列车24023</option>
+				<option>海上列车25023</option>
+				<option>海上列车48023</option>
+				<option>海上列车50023</option>
+				<option>海上列车66023</option>
+				<option>海上列车68023</option>
+				<option>海上列车74023</option>
+				<option>海上列车76023</option>
+				<option>海上列车85023</option>
+				<option>海上列车94023</option>
+				<option>时空之门9024</option>
+				<option>时空之门5024</option>
+				<option>时空之门115024</option>
+				<option>时空之门117024</option>
+				<option>时空之门127024</option>
+				<option>时空之门24024</option>
+				<option>时空之门25024</option>
+				<option>时空之门48024</option>
+				<option>时空之门50024</option>
+				<option>时空之门66024</option>
+				<option>时空之门68024</option>
+				<option>时空之门74024</option>
+				<option>时空之门76024</option>
+				<option>时空之门85024</option>
+				<option>时空之门94024</option>
+				<option>时空之门9025</option>
+				<option>时空之门5025</option>
+				<option>时空之门115025</option>
+				<option>时空之门117025</option>
+				<option>时空之门127025</option>
+				<option>时空之门24025</option>
+				<option>时空之门25025</option>
+				<option>时空之门48025</option>
+				<option>时空之门50025</option>
+				<option>时空之门66025</option>
+				<option>时空之门68025</option>
+				<option>时空之门74025</option>
+				<option>时空之门76025</option>
+				<option>时空之门85025</option>
+				<option>时空之门94025</option>
+				<option>能源中心9026</option>
+				<option>能源中心5026</option>
+				<option>能源中心115026</option>
+				<option>能源中心117026</option>
+				<option>能源中心127026</option>
+				<option>能源中心24026</option>
+				<option>能源中心25026</option>
+				<option>能源中心48026</option>
+				<option>能源中心50026</option>
+				<option>能源中心66026</option>
+				<option>能源中心68026</option>
+				<option>能源中心74026</option>
+				<option>能源中心76026</option>
+				<option>能源中心85026</option>
+				<option>能源中心94026</option>
+				<option>苍穹贵族号9027</option>
+				<option>苍穹贵族号5027</option>
+				<option>苍穹贵族号115027</option>
+				<option>苍穹贵族号117027</option>
+				<option>苍穹贵族号127027</option>
+				<option>苍穹贵族号24027</option>
+				<option>苍穹贵族号25027</option>
+				<option>苍穹贵族号48027</option>
+				<option>苍穹贵族号50027</option>
+				<option>苍穹贵族号66027</option>
+				<option>苍穹贵族号68027</option>
+				<option>苍穹贵族号74027</option>
+				<option>苍穹贵族号76027</option>
+				<option>苍穹贵族号85027</option>
+				<option>苍穹贵族号94027</option>
+				<option>苍穹贵族号9028</option>
+				<option>苍穹贵族号5028</option>
+				<option>苍穹贵族号115028</option>
+				<option>苍穹贵族号117028</option>
+				<option>苍穹贵族号127028</option>
+				<option>苍穹贵族号24028</option>
+				<option>苍穹贵族号25028</option>
+				<option>苍穹贵族号48028</option>
+				<option>苍穹贵族号50028</option>
+				<option>苍穹贵族号66028</option>
+				<option>苍穹贵族号68028</option>
+				<option>苍穹贵族号74028</option>
+				<option>苍穹贵族号76028</option>
+				<option>苍穹贵族号85028</option>
+				<option>苍穹贵族号94028</option>
+				<option>寂静城9029</option>
+				<option>寂静城5029</option>
+				<option>寂静城115029</option>
+				<option>寂静城117029</option>
+				<option>寂静城127029</option>
+				<option>寂静城24029</option>
+				<option>寂静城25029</option>
+				<option>寂静城48029</option>
+				<option>寂静城50029</option>
+				<option>寂静城66029</option>
+				<option>寂静城68029</option>
+				<option>寂静城74029</option>
+				<option>寂静城76029</option>
+				<option>寂静城85029</option>
+				<option>寂静城94029</option>
+			</select>
+			<button onclick="test1()" id="manual"><span>手动爆！</span></button>
 		<p>
-			输入挑战书单价：<input type="text" id="price" value="28000"
+			输入挑战书单价：<input type="text" id="price" value="11000"
 				onkeyup="this.value=this.value.replace(/\D/g,'')"
 				onafterpaste="this.value=this.value.replace(/\D/g,'')"
 				onkeypress="this.value=this.value.replace(/\D/g,'')" />
@@ -552,11 +1055,11 @@
 		<input type="checkbox" id="disa" checked />分解其他史诗
 		<p>
 			<input type="radio" name="method" id="method1" checked="checked" />
-			1. 输入深渊局数：<input id="text1" type="text" style="font-size: 12pt;"></input>
+			1. 输入深渊局数：<input id="text1" type="text" style="font-size: 12px;"></input>
 		</p>
 		<p>
 			<input type="radio" name="method" id="method2" /> 2. 刷到出<input
-				type="text" style="width: 300px; font-size: 12pt;" id="o"
+				type="text" style="width: 300px; font-size: 12px;" id="o"
 				onkeyup="autoComplete.start(event)">为止！
 		<div class="auto_hidden" id="auto">
 			<!--自动完成 DIV-->
@@ -565,10 +1068,10 @@
 		</p>
 		<p>
 			<input type="radio" name="method" id="method3" /> 3. 刷到下列史诗出齐为止！添加：<input
-				type="text" style="width: 300px; font-size: 12pt;" id="o2"
+				type="text" style="width: 300px; font-size: 12px;" id="o2"
 				onkeyup="autoComplete2.start(event); 
 if (event.keyCode==13) saveEpicList();
-">&nbsp;<button onclick="saveEpicList();">添加</button>（点击可以删除）
+">&nbsp;<button onclick="saveEpicList();"><span>添加</span></button>（点击可以删除）
 		
 		<div class="auto_hidden" id="auto2">
 			<!--自动完成 DIV-->
@@ -576,16 +1079,17 @@ if (event.keyCode==13) saveEpicList();
 		<script src="listsel2.js"></script>
 		<p id="targetEpicList">&nbsp;</p>
 		</p>
-		<button onclick="shellhell()" id="start">自动刷！</button>
-		<button onclick="terminate()" id="termin" disabled>中止</button>
-		<button onclick="history.go(0)">归零</button>
+		<button onclick="shellhell()" id="start"><span>自动刷！</span></button>
+		<button onclick="terminate()" id="termin" disabled><span>中止</span></button>
+		<button onclick="history.go(0)"><span>归零</span></button>
 		输入自动刷深渊间隔（1-300000）：<input type="text" id="freq" value="1" /> <span
 			id="equiname" style="display: none;"></span>
+		<button onclick="document.getElementById('record').innerHTML=''"><span>清屏</span></button>
 		</p>
 		<div id="test" style="height: 50px;">&nbsp;</div>
 	</div>
 	<div id="record"
-		style="overflow-y: scroll; height: 350px; width: 400px; float: right; background-color: #222288; color: #FFEB3B; font-size: 12px; font-family: 宋体; text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -webkit-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -moz-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; *filter: Glow(color = #000, strength = 1);"></div>
+		style="padding: 2px; overflow-y: scroll; height: 350px; width: 500px; float: right; background-color: #000; border: 1px solid #e6c89b; border-radius: 4px; color: #FFEB3B; font-size: 12px; font-family: 宋体; text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -webkit-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -moz-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; *filter: Glow(color = #000, strength = 1);"></div>
 	<table width="100%">
 		<tr>
 			<td>深渊局数：</td>
@@ -621,25 +1125,25 @@ if (event.keyCode==13) saveEpicList();
 		</tr>
 	</table>
 	<div
-		style="margin: 0 auto; border: 1px solid #000; width: 400px; height: 100px; background-color: #fff; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体;"
+		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 100px; background-color: #000; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体;"
 		id="alert">
 		公告
 		<hr>
 		<span id="alert_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
 		<center style="margin-top: 10px;">
 			<button
-				onclick="document.getElementById('alert').style.display='none';">确认</button>
+				onclick="document.getElementById('alert').style.display='none';"><span>确认</span></button>
 		</center>
 	</div>
 	<div
-		style="margin: 0 auto; border: 1px solid #000; width: 400px; height: 150px; background-color: #fff; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体;"
+		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 150px; background-color: #000; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体;"
 		id="getepic">
 		公告
 		<hr>
 		<span id="getepic_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
 		<center style="margin-top: 10px;">
 			<button
-				onclick="document.getElementById('getepic').style.display='none';">确认</button>
+				onclick="document.getElementById('getepic').style.display='none';"><span>确认</span></button>
 		</center>
 		<div class="bdsharebuttonbox">
 			<a href="#" class="bds_more" data-cmd="more"></a> <a href="#"
