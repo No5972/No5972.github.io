@@ -66,6 +66,10 @@ button[disabled] {
 	background: url("button_2.png");
 	color: #bdbdbd;
 }
+button[disabled]:active>span {
+	display:inline-block;
+	transform:translate(0,0);
+}
 </style>
 <script>
 	Array.prototype.indexOf = function(val) {
