@@ -200,10 +200,10 @@ button[disabled]:active>span {
 					+ "邀请函。获得狗眼1个。";
 			document.getElementById("record").innerHTML += "<br>获得[史诗灵魂]1个，第"
 					+ i
-					+ "把，地下城："
+					+ "把，"
 					+ document.getElementById("dungeons").options[document
 							.getElementById("dungeons").selectedIndex].text
-					+ "，频道："
+					+ "，"
 					+ document.getElementById("channel").value;
 		} else {
 			//printf("获得%d邀请函。\n",ninvite);
@@ -227,10 +227,10 @@ button[disabled]:active>span {
 				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>地轨中心深渊宝珠</span>";
 			document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>]1个，第"
 					+ i
-					+ "把，地下城："
+					+ "把，"
 					+ document.getElementById("dungeons").options[document
 							.getElementById("dungeons").selectedIndex].text
-					+ "，频道："
+					+ "，"
 					+ document.getElementById("channel").value
 					+ "</span>";
 			//delay(500);
@@ -259,10 +259,10 @@ button[disabled]:active>span {
 					epicnF();
 				document.getElementById("record").innerHTML += "]1个，第"
 						+ i
-						+ "把，地下城："
+						+ "把，"
 						+ document.getElementById("dungeons").options[document
 								.getElementById("dungeons").selectedIndex].text
-						+ "，频道："
+						+ "，"
 						+ document.getElementById("channel").value;
 			}
 			//delay(500);
@@ -1054,16 +1054,17 @@ button[disabled]:active>span {
 			输入挑战书单价：<input type="text" id="price" value="11000"
 				onkeyup="this.value=this.value.replace(/\D/g,'')"
 				onafterpaste="this.value=this.value.replace(/\D/g,'')"
-				onkeypress="this.value=this.value.replace(/\D/g,'')" />
+				onkeypress="this.value=this.value.replace(/\D/g,'')" 
+				style="width: 50px;" />
 		</p>
 		<input type="checkbox" id="disa" checked />分解其他史诗
 		<p>
 			<input type="radio" name="method" id="method1" checked="checked" />
-			1. 输入深渊局数：<input id="text1" type="text" style="font-size: 12px;"></input>
+			1. 输入深渊局数：<input id="text1" type="text" style="font-size: 12px; width: 50px;"></input>
 		</p>
 		<p>
 			<input type="radio" name="method" id="method2" /> 2. 刷到出<input
-				type="text" style="width: 300px; font-size: 12px;" id="o"
+				type="text" style="width: 150px; font-size: 12px;" id="o"
 				onkeyup="autoComplete.start(event)">为止！
 		<div class="auto_hidden" id="auto">
 			<!--自动完成 DIV-->
@@ -1072,7 +1073,7 @@ button[disabled]:active>span {
 		</p>
 		<p>
 			<input type="radio" name="method" id="method3" /> 3. 刷到下列史诗出齐为止！添加：<input
-				type="text" style="width: 300px; font-size: 12px;" id="o2"
+				type="text" style="width: 150px; font-size: 12px;" id="o2"
 				onkeyup="autoComplete2.start(event); 
 if (event.keyCode==13) saveEpicList();
 ">&nbsp;<button onclick="saveEpicList();"><span>添加</span></button>（点击可以删除）
@@ -1086,14 +1087,14 @@ if (event.keyCode==13) saveEpicList();
 		<button onclick="shellhell()" id="start"><span>自动刷！</span></button>
 		<button onclick="terminate()" id="termin" disabled><span>中止</span></button>
 		<button onclick="history.go(0)"><span>归零</span></button>
-		输入自动刷深渊间隔（1-300000）：<input type="text" id="freq" value="1" /> <span
+		输入自动刷深渊间隔（1-300000）：<input type="text" id="freq" value="1"  style="width: 50px;" /> <span
 			id="equiname" style="display: none;"></span>
 		<button onclick="document.getElementById('record').innerHTML=''"><span>清屏</span></button>
 		</p>
 		<div id="test" style="height: 50px;">&nbsp;</div>
 	</div>
 	<div id="record"
-		style="padding: 2px; overflow-y: scroll; height: 350px; width: 500px; float: right; background-color: #000; border: 1px solid #e6c89b; border-radius: 3px; color: #FFEB3B; font-size: 12px; font-family: 宋体; text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -webkit-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -moz-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; *filter: Glow(color = #000, strength = 1);"></div>
+		style="padding: 2px; overflow-y: scroll; height: 350px; width: 400px; float: right; background-color: #000; border: 1px solid #e6c89b; border-radius: 3px; color: #FFEB3B; font-size: 12px; font-family: 宋体; text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -webkit-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -moz-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; *filter: Glow(color = #000, strength = 1);"></div>
 	<table width="100%">
 		<tr>
 			<td>深渊局数：</td>
@@ -1129,10 +1130,9 @@ if (event.keyCode==13) saveEpicList();
 		</tr>
 	</table>
 	<div
-		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 100px; background-color: #000; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体;"
+		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 80px; background-color: #000; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat;"
 		id="alert">
-		公告
-		<hr>
+		<br><br>
 		<span id="alert_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
 		<center style="margin-top: 10px;">
 			<button
@@ -1140,10 +1140,9 @@ if (event.keyCode==13) saveEpicList();
 		</center>
 	</div>
 	<div
-		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 150px; background-color: #000; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体;"
+		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 130px; background-color: #000; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat;"
 		id="getepic">
-		公告
-		<hr>
+		<br><br>
 		<span id="getepic_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
 		<center style="margin-top: 10px;">
 			<button
