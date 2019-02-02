@@ -7,8 +7,9 @@
 <script src="list_D.js"></script>
 <script src="list_E.js"></script>
 <script src="list_F.js"></script>
+<script src="list_G.js"></script>
 <link href="autoc.css" rel="stylesheet" />
-<title>DNF深渊模拟器网页版 V0.09 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
+<title>DNF深渊模拟器网页版 V0.10 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
 			DFO吧 DNF掌游宝 17173DNF专区 联合发行</title>
 <script src="autoc.js" charset="utf-8"></script>
 <style>
@@ -131,6 +132,8 @@ button[disabled]:active>span {
 			singleentry = 26;
 		case "6":
 			singleentry = 28;
+		case "7":
+			singleentry = 30;
 		}
 		totcost += singleentry;
 		for (j = 1; j <= nequi; j++) {
@@ -143,7 +146,7 @@ button[disabled]:active>span {
 		}
 		for (j = 1; j <= 10; j++) {
 			base = Math.random() * 10000 + 1;
-			if (base < pepicfra * 10000) {
+			if (base < pepicfra * 10000 && document.getElementById("dungeons").value != "7") {
 				nepicfra++;
 			}
 		}
@@ -225,6 +228,8 @@ button[disabled]:active>span {
 				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>name_10146492</span>";
 			if (document.getElementById("dungeons").value == "6")
 				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>地轨中心深渊宝珠</span>";
+			if (document.getElementById("dungeons").value == "7")
+				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>哈林深渊宝珠</span>";
 			document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>]1个，第"
 					+ i
 					+ "把，"
@@ -257,6 +262,8 @@ button[disabled]:active>span {
 					epicnE();
 				if (document.getElementById("dungeons").value == "6")
 					epicnF();
+				if (document.getElementById("dungeons").value == "7")
+					epicnG();
 				document.getElementById("record").innerHTML += "]1个，第"
 						+ i
 						+ "把，"
@@ -339,7 +346,8 @@ button[disabled]:active>span {
 					- (document.getElementById("disa").checked == true ? ntoepic * 100
 							: 0) - neye * 100;
 		if (document.getElementById("dungeons").value == "5"
-				|| document.getElementById("dungeons").value == "6")
+				|| document.getElementById("dungeons").value == "6"
+				|| document.getElementById("dungeons").value == "7")
 			fixedcost = totcost
 					- ntoinvite
 					- ntobead
@@ -578,7 +586,7 @@ button[disabled]:active>span {
 <body id="main_body">
 	<div style="float: left;">
 		<p>
-			DNF深渊模拟器网页版 V0.09 BY 鄙人<br>贴吧：<a href="http://tieba.baidu.com/home/main/?un=wujiuqier" target="_blank">@wujiuqier </a><br>DNF召唤师吧 DNF美服吧
+			DNF深渊模拟器网页版 V0.10 BY 鄙人<br>贴吧：<a href="http://tieba.baidu.com/home/main/?un=wujiuqier" target="_blank">@wujiuqier </a><br>DNF召唤师吧 DNF美服吧
 			DFO吧 DNF掌游宝 17173DNF专区 联合发行
 		</p>
 		<p>
@@ -605,14 +613,171 @@ button[disabled]:active>span {
 				<option value="5">钢铁之臂</option>
 				<option value="5">能源熔炉</option>
 				<option value="5">光之舞会</option>
-				<option value="6" selected="selected">时间广场</option>
+				<option value="6">时间广场</option>
 				<!-- 85,90 -->
 				<option value="6">兽人峡谷</option>
 				<option value="6">恐怖的栖息地</option>
 				<option value="6">疾风地带</option>
 				<option value="6">红色魔女之森</option>
+				<!-- 90,95 -->
+				<option value="7">亡命杀镇</option>
+				<option value="7">全蚀市场</option>
+				<option value="7">黑暗都市</option>
+				<option value="7">第九隔离区</option>
+				<option value="7" selected="selected">皇家娱乐</option>
+				<option value="7">搏击俱乐部</option>
 			</select>
 			选择频道：<select id="channel" style="font-size: 12px;">
+				<option>哈林9066</option>
+				<option>哈林5066</option>
+				<option>哈林115066</option>
+				<option>哈林117066</option>
+				<option>哈林127066</option>
+				<option>哈林24066</option>
+				<option>哈林25066</option>
+				<option>哈林48066</option>
+				<option>哈林50066</option>
+				<option>哈林66066</option>
+				<option>哈林68066</option>
+				<option>哈林74066</option>
+				<option>哈林76066</option>
+				<option>哈林85066</option>
+				<option>哈林94066</option>
+				<option>哈林9067</option>
+				<option>哈林5067</option>
+				<option>哈林115067</option>
+				<option>哈林117067</option>
+				<option>哈林127067</option>
+				<option>哈林24067</option>
+				<option>哈林25067</option>
+				<option>哈林48067</option>
+				<option>哈林50067</option>
+				<option>哈林66067</option>
+				<option>哈林68067</option>
+				<option>哈林74067</option>
+				<option>哈林76067</option>
+				<option>哈林85067</option>
+				<option>哈林94067</option>
+				<option>哈林9068</option>
+				<option>哈林5068</option>
+				<option>哈林115068</option>
+				<option>哈林117068</option>
+				<option>哈林127068</option>
+				<option>哈林24068</option>
+				<option>哈林25068</option>
+				<option>哈林48068</option>
+				<option>哈林50068</option>
+				<option>哈林66068</option>
+				<option>哈林68068</option>
+				<option>哈林74068</option>
+				<option>哈林76068</option>
+				<option>哈林85068</option>
+				<option>哈林94068</option>
+				<option>哈林9069</option>
+				<option>哈林5069</option>
+				<option>哈林115069</option>
+				<option>哈林117069</option>
+				<option>哈林127069</option>
+				<option>哈林24069</option>
+				<option>哈林25069</option>
+				<option>哈林48069</option>
+				<option>哈林50069</option>
+				<option>哈林66069</option>
+				<option>哈林68069</option>
+				<option>哈林74069</option>
+				<option>哈林76069</option>
+				<option>哈林85069</option>
+				<option>哈林94069</option>
+				<option>哈林9070</option>
+				<option>哈林5070</option>
+				<option>哈林115070</option>
+				<option>哈林117070</option>
+				<option>哈林127070</option>
+				<option>哈林24070</option>
+				<option>哈林25070</option>
+				<option>哈林48070</option>
+				<option>哈林50070</option>
+				<option>哈林66070</option>
+				<option>哈林68070</option>
+				<option>哈林74070</option>
+				<option>哈林76070</option>
+				<option>哈林85070</option>
+				<option>哈林94070</option>
+				<option>哈林9071</option>
+				<option>哈林5071</option>
+				<option>哈林115071</option>
+				<option>哈林117071</option>
+				<option>哈林127071</option>
+				<option>哈林24071</option>
+				<option>哈林25071</option>
+				<option>哈林48071</option>
+				<option>哈林50071</option>
+				<option>哈林66071</option>
+				<option>哈林68071</option>
+				<option>哈林74071</option>
+				<option>哈林76071</option>
+				<option>哈林85071</option>
+				<option>哈林94071</option>
+				<option>哈林9072</option>
+				<option>哈林5072</option>
+				<option>哈林115072</option>
+				<option>哈林117072</option>
+				<option>哈林127072</option>
+				<option>哈林24072</option>
+				<option>哈林25072</option>
+				<option>哈林48072</option>
+				<option>哈林50072</option>
+				<option>哈林66072</option>
+				<option>哈林68072</option>
+				<option>哈林74072</option>
+				<option>哈林76072</option>
+				<option>哈林85072</option>
+				<option>哈林94072</option>
+				<option>哈林9073</option>
+				<option>哈林5073</option>
+				<option>哈林115073</option>
+				<option>哈林117073</option>
+				<option>哈林127073</option>
+				<option>哈林24073</option>
+				<option>哈林25073</option>
+				<option>哈林48073</option>
+				<option>哈林50073</option>
+				<option>哈林66073</option>
+				<option>哈林68073</option>
+				<option>哈林74073</option>
+				<option>哈林76073</option>
+				<option>哈林85073</option>
+				<option>哈林94073</option>
+				<option>哈林9074</option>
+				<option>哈林5074</option>
+				<option>哈林115074</option>
+				<option>哈林117074</option>
+				<option>哈林127074</option>
+				<option>哈林24074</option>
+				<option>哈林25074</option>
+				<option>哈林48074</option>
+				<option>哈林50074</option>
+				<option>哈林66074</option>
+				<option>哈林68074</option>
+				<option>哈林74074</option>
+				<option>哈林76074</option>
+				<option>哈林85074</option>
+				<option>哈林94074</option>
+				<option>哈林9075</option>
+				<option>哈林5075</option>
+				<option>哈林115075</option>
+				<option>哈林117075</option>
+				<option>哈林127075</option>
+				<option>哈林24075</option>
+				<option>哈林25075</option>
+				<option>哈林48075</option>
+				<option>哈林50075</option>
+				<option>哈林66075</option>
+				<option>哈林68075</option>
+				<option>哈林74075</option>
+				<option>哈林76075</option>
+				<option>哈林85075</option>
+				<option>哈林94075</option>
 				<option>地轨中心9030</option>
 				<option>地轨中心5030</option>
 				<option>地轨中心115030</option>
@@ -1051,7 +1216,7 @@ button[disabled]:active>span {
 			</select>
 			<button onclick="test1()" id="manual"><span>手动爆！</span></button>
 		<p>
-			输入挑战书单价：<input type="text" id="price" value="11000"
+			输入挑战书单价：<input type="text" id="price" value="7000"
 				onkeyup="this.value=this.value.replace(/\D/g,'')"
 				onafterpaste="this.value=this.value.replace(/\D/g,'')"
 				onkeypress="this.value=this.value.replace(/\D/g,'')" 
