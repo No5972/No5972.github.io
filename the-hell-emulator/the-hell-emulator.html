@@ -9,7 +9,7 @@
 <script src="list_F.js"></script>
 <script src="list_G.js"></script>
 <link href="autoc.css" rel="stylesheet" />
-<title>DNF深渊模拟器网页版 V0.10 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
+<title>DNF深渊模拟器网页版 V0.11 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
 			DFO吧 DNF掌游宝 17173DNF专区 联合发行</title>
 <script src="autoc.js" charset="utf-8"></script>
 <style>
@@ -90,7 +90,7 @@ button[disabled]:active>span {
 
 	var inptimes = 1;
 	var a;
-	var times, ntotimes = 0, nepic, ntoepic = 0, nequi, ntoinvite = 0, neye = 0, wheeye = 0, nepicfra = 0, ntobead = 0, whebead = 0, nchal = 0;
+	var times, ntotimes = 0, nepic, ntoepic = 0, nequi, ntoinvite = 0, neye = 0, wheeye = 0, nepicfra = 0, ntobead = 0, whebead = 0, nchal = 0, ncrys = 0;
 	var nacepic = 0, nacinvite = 0, nacbead = 0, naceye = 0;
 	var i = 0, j, ninvite, chcon;
 	var diff, base = 10000;
@@ -162,6 +162,9 @@ button[disabled]:active>span {
 			ntobead++;
 			nacbead++;
 		}
+		if (document.getElementById("dungeons").value == "7") {
+			ncrys += 13;
+		}
 		//
 		//ninvite=Math.random()*3+3;
 		//ninvite=parseInt(Math.random()*2)*2;
@@ -229,7 +232,7 @@ button[disabled]:active>span {
 			if (document.getElementById("dungeons").value == "6")
 				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>地轨中心深渊宝珠</span>";
 			if (document.getElementById("dungeons").value == "7")
-				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>哈林深渊宝珠</span>";
+				document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>哈林深渊晶石</span>";
 			document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>]1个，第"
 					+ i
 					+ "把，"
@@ -294,8 +297,8 @@ button[disabled]:active>span {
 			} else {
 				//printf("尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。\n网络连接中断\n\a\a");
 				document.getElementById("record").innerHTML += "<br><span style='color: #ff6100;'>尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。<br>网络连接中断</span>";
-				document.getElementById("alert_text").innerText = "尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。";
-				document.getElementById("record").innerHTML += "<br><span style='color: #e6c89b;'>系统检测到您的帐号数据近期出现异常，您已受到收益制裁处罚。您获得的经验值/金币/道具方面会受到限制，同时不能进行组队/使用决斗场/势力战等部分功能。<br>359小时59分钟后收益制裁将自动解除。</span>"
+				document.getElementById("alert_text").innerText = "系统检测到您的帐号近期（不限当日）数据曾出现异常或第三方模块加载，服务器与您的连接已断开。您将受到1小时收益制裁处罚。获得的经验值/金币/道具方面会受到限制。同时不能进行组队/使用决斗场/战场等部分功能。";
+				document.getElementById("record").innerHTML += "<br><span style='color: #e6c89b;'>系统检测到您的帐号近期（不限当日）数据曾出现异常或第三方模块加载，您已受到收益制裁处罚。获得的经验值/金币/道具方面会受到限制，同时不能进行组队/使用决斗场/势力战等部分功能。<br>0小时59分钟后收益制裁将自动解除。</span>"
 				document.getElementById("alert").style.display = "";
 				setTimeout(
 						"document.getElementById('alert').style.display='none';",
@@ -324,6 +327,7 @@ button[disabled]:active>span {
 		document.getElementById("zyqhs").innerHTML = ntoinvite;
 		document.getElementById("mbssdsps").innerHTML = nepicfra;
 		document.getElementById("syjss").innerHTML = ntobead;
+		document.getElementById("yxjjs").innerHTML = ncrys;
 
 		document.getElementById("dxcs").innerHTML = ndisconnect;
 		document.getElementById("sfcs").innerHTML = n3rd;
@@ -586,7 +590,7 @@ button[disabled]:active>span {
 <body id="main_body">
 	<div style="float: left;">
 		<p>
-			DNF深渊模拟器网页版 V0.10 BY 鄙人<br>贴吧：<a href="http://tieba.baidu.com/home/main/?un=wujiuqier" target="_blank">@wujiuqier </a><br>DNF召唤师吧 DNF美服吧
+			DNF深渊模拟器网页版 V0.11 BY 鄙人<br>贴吧：<a href="http://tieba.baidu.com/home/main/?un=wujiuqier" target="_blank">@wujiuqier </a><br>DNF召唤师吧 DNF美服吧
 			DFO吧 DNF掌游宝 17173DNF专区 联合发行
 		</p>
 		<p>
@@ -624,8 +628,8 @@ button[disabled]:active>span {
 				<option value="7">全蚀市场</option>
 				<option value="7">黑暗都市</option>
 				<option value="7">第九隔离区</option>
-				<option value="7" selected="selected">皇家娱乐</option>
-				<option value="7">搏击俱乐部</option>
+				<option value="7">皇家娱乐</option>
+				<option value="7" selected="selected">搏击俱乐部</option>
 			</select>
 			选择频道：<select id="channel" style="font-size: 12px;">
 				<option>哈林9066</option>
@@ -1282,6 +1286,8 @@ if (event.keyCode==13) saveEpicList();
 			<td id="mbssdsps">0</td>
 			<td>深渊晶石数：</td>
 			<td id="syjss">0</td>
+			<td>异形结晶数：</td>
+			<td id="yxjjs">0</td>
 		</tr>
 		<tr>
 			<td>掉线次数：</td>
@@ -1295,20 +1301,20 @@ if (event.keyCode==13) saveEpicList();
 		</tr>
 	</table>
 	<div
-		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 80px; background-color: #000; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat; color: #fff;"
+		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 120px; background-color: rgba(0,0,0,0.8); left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat; color: #fff;"
 		id="alert">
 		<br><br>
-		<span id="alert_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
+		<span id="alert_text" style="color: #fff;">系统检测到您的帐号近期（不限当日）数据曾出现异常或第三方模块加载，服务器与您的连接已断开。您将受到1小时收益制裁处罚。获得的经验值/金币/道具方面会受到限制。同时不能进行组队/使用决斗场/战场等部分功能。</span>
 		<center style="margin-top: 10px;">
 			<button
 				onclick="document.getElementById('alert').style.display='none';"><span>确认</span></button>
 		</center>
 	</div>
 	<div
-		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 130px; background-color: #000; left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat; color: #fff;"
+		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 150px; background-color: rgba(0,0,0,0.8); left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat; color: #fff;"
 		id="getepic">
 		<br><br>
-		<span id="getepic_text">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
+		<span id="getepic_text" style="color: #fff;">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
 		<center style="margin-top: 10px;">
 			<button
 				onclick="document.getElementById('getepic').style.display='none';"><span>确认</span></button>
