@@ -24,7 +24,8 @@
 	font-size: 12px;
 }
 #main_body {
-	background: #000;
+	background: url("http://att.colg.cn/album/201902/09/234230wzgve00lhevbvuug.jpg");
+	background-size: 100%,100%;
 }
 a {
 	cursor: url("detailview.cur"), auto;
@@ -585,14 +586,23 @@ button[disabled]:active>span {
 			targetEpics.push(document.getElementById('o2').value);
 		refreshEpicList();
 	}
+	function mute() {
+		var myVid=document.getElementById("123");
+		if (!myVid.muted) {
+			myVid.muted = true;
+		} else {
+			myVid.muted = false;
+		}
+	}
 </script>
 </head>
 <body id="main_body">
-	<div style="float: left;">
+	<div style="float: left; border: 1px solid #e6c89b; border-radius: 3px; padding: 5px; background-color: rgba(0,0,0,0.7); margin-bottom: 5px;">
 		<p>
 			DNF深渊模拟器网页版 V0.11 BY 鄙人<br>贴吧：<a href="http://tieba.baidu.com/home/main/?un=wujiuqier" target="_blank">@wujiuqier </a><br>DNF召唤师吧 DNF美服吧
 			DFO吧 DNF掌游宝 17173DNF专区 联合发行
 		</p>
+		<audio src="hellmonster.mp3" autoplay="true" id="123" loop="true"></audio>
 		<p>
 			选择地下城： <select id="dungeons" style="font-size: 12px;">
 				<option value="0">格兰之火</option>
@@ -1219,6 +1229,7 @@ button[disabled]:active>span {
 				<option>寂静城94029</option>
 			</select>
 			<button onclick="test1()" id="manual"><span>手动爆！</span></button>
+			<button onclick="mute()"><span>音乐</span></button>
 		<p>
 			输入挑战书单价：<input type="text" id="price" value="7000"
 				onkeyup="this.value=this.value.replace(/\D/g,'')"
@@ -1263,8 +1274,8 @@ if (event.keyCode==13) saveEpicList();
 		<div id="test" style="height: 50px;">&nbsp;</div>
 	</div>
 	<div id="record"
-		style="padding: 2px; overflow-y: scroll; height: 350px; width: 400px; float: right; background-color: #000; border: 1px solid #e6c89b; border-radius: 3px; color: #FFEB3B; font-size: 12px; font-family: 宋体; text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -webkit-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -moz-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; *filter: Glow(color = #000, strength = 1);"></div>
-	<table width="100%">
+		style="padding: 2px; overflow-y: scroll; height: 350px; width: 400px; float: right; background-color: rgba(0,0,0,0.8); border: 1px solid #e6c89b; border-radius: 3px; color: #FFEB3B; font-size: 12px; font-family: 宋体; text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -webkit-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -moz-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; *filter: Glow(color = #000, strength = 1);"></div>
+	<table width="100%" style="border: 1px solid #e6c89b; border-radius: 3px; padding: 5px; background-color: rgba(0,0,0,0.7);">
 		<tr>
 			<td>深渊局数：</td>
 			<td id="syjs">0</td>
@@ -1311,7 +1322,7 @@ if (event.keyCode==13) saveEpicList();
 		</center>
 	</div>
 	<div
-		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 150px; background-color: rgba(0,0,0,0.8); left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat; color: #fff;"
+		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 150px; background-color: rgba(0,0,0,0.7); left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat; color: #fff;"
 		id="getepic">
 		<br><br>
 		<span id="getepic_text" style="color: #fff;">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
