@@ -129,21 +129,41 @@
 				　　return hexCharCode.join("");
 				}
 				
+				if (!HTMLCanvasElement.prototype.toBlob) {
+				 Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+				  value: function (callback, type, quality) {
+
+					var binStr = atob( this.toDataURL(type, quality).split(',')[1] ),
+						len = binStr.length,
+						arr = new Uint8Array(len);
+
+					for (var i=0; i<len; i++ ) {
+					 arr[i] = binStr.charCodeAt(i);
+					}
+
+					callback( new Blob( [arr], {type: type || 'image/png'} ) );
+				  }
+				 });
+				}
+				
 				function downloadSingleFrame(type) {
 				    var oA = document.createElement("a");
 					if ($("canvas").length == 0) alert("Error: GIF not imported!");
 					oA.download = '';// 设置下载的文件名，默认是'下载'
 					switch (type) {
 						case 'PNG':
-							oA.href = $("canvas")[0].toDataURL("image/png");
+							$("canvas")[0].toBlob(function (blob) {
+								oA.href = window.URL.createObjectURL(blob);
+								document.body.appendChild(oA);
+								debugger;
+								oA.click();
+								oA.remove(); // 下载之后把创建的元素删除
+							});
 						case 'JPG':
-							oA.href = $("canvas")[0].toDataURL("image/jpeg");
+							oA.href = $("canvas")[0].toBlob();
 						case 'BMP':
-							oA.href = $("canvas")[0].toDataURL("image/bmp");
+							oA.href = $("canvas")[0].toBlob();
 					}
-					document.body.appendChild(oA);
-					oA.click();
-					oA.remove(); // 下载之后把创建的元素删除
 				}
 				
 				$("#select").change(function() {
