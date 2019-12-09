@@ -14,12 +14,14 @@
 
 	<body>
 		<center>
+			<h1>GIF Extractor By No.5972 Using libgif.js</h1>
 			<input type="file" id="files" style="display: none" onchange="fileImport();">
 			<input type="button" id="fileImport" value="Import...">
+			<button onclick="history.go(0)">Reset</button>
 			<button onclick="downloadSingleFrame('PNG')">Download This Frame</button>
 			<!-- <button onclick="downloadSingleFrame('BMP')">BMP</button>
 			<button onclick="downloadSingleFrame('JPG')">JPG</button> -->
-			<h1>Select Frame</h1>
+			<h2>Select Frame</h2>
 			<p><span id="status">Frames Count: # | Current Frame: #</span><select id="select" style="width: 100px; margin-left: 10px;"></select></p>
 			<img id="example1" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" rel:animated_src="" rel:auto_play="0" width="467" height="375" />
 			<img id="oupSingle"></img>
@@ -33,7 +35,7 @@
 			<a href="javascript:;" onmousedown="sup1.move_relative(1); updateStatus(true); return false;">Step forward</a> |
 			<a href="javascript:;" onmousedown="sup1.move_relative(-1); updateStatus(true); return false;">Step back</a>
 
-			<h1>Animated GIF Preview</h1>
+			<h2>Animated GIF Preview</h2>
 			
 			<img id="example2" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" rel:auto_play="1" width="467" height="375" rel:rubbable="1" />
 			<br>
