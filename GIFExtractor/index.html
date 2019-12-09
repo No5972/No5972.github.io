@@ -8,17 +8,17 @@
 		<script type="text/javascript" src="./jquery-2.2.0.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 		<title>
-			Example gif
+			GIF Extractor By No.5972 Using libgif.js V0.1
 		</title>
 	</head>
 
 	<body>
 		<center>
-			<h1>GIF Extractor By No.5972 Using libgif.js</h1>
+			<h1>GIF Extractor By No.5972 Using libgif.js V0.1</h1>
 			<input type="file" id="files" style="display: none" onchange="fileImport();">
 			<input type="button" id="fileImport" value="Import...">
 			<button onclick="history.go(0)">Reset</button>
-			<button onclick="downloadSingleFrame('PNG')">Download This Frame</button>
+			<button onclick="downloadSingleFrame('PNG'); $(this).text('Long Press to Save');">Download This Frame</button>
 			<!-- <button onclick="downloadSingleFrame('BMP')">BMP</button>
 			<button onclick="downloadSingleFrame('JPG')">JPG</button> -->
 			<h2>Select Frame</h2>
