@@ -15,17 +15,17 @@
 
 	<body>
 		<center>
-			<h1>GIF Extractor By No.5972 Using libgif.js V0.1</h1>
+			<h1>GIF Extractor By No.5972 Using libgif.js V0.2</h1>
 			<input type="file" id="files" style="display: none" onchange="fileImport();">
 			<input type="button" id="fileImport" value="Import...">
 			<button onclick="history.go(0)">Reset</button>
-			<button onclick="downloadSingleFrame('PNG'); $(this).text('Long Press to Save');">Download This Frame</button>
+			<button onclick="downloadSingleFrame('PNG'); $(this).text('Long Press to Save');">Save This Frame</button>
 			<!-- <button onclick="downloadSingleFrame('BMP')">BMP</button>
 			<button onclick="downloadSingleFrame('JPG')">JPG</button> -->
 			<h2>Select Frame</h2>
 			<p><span id="status">Frames Count: # | Current Frame: #</span><select id="select" style="width: 100px; margin-left: 10px;"></select></p>
 			<img id="example1" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" rel:animated_src="" rel:auto_play="0" width="467" height="375" />
-			<img id="oupSingle"></img>
+			<img id="oupSingle" style="display: none;"></img>
 			<br>
 			<script type="text/javascript">
 				
@@ -175,6 +175,18 @@
 					sup1.move_to($(this).val());
 					updateStatus(true);
 				});
+				
+				$("button").get(1).onclick = function() {
+				 if ($("#oupSingle").is(":visible")) {
+					$("#oupSingle").hide();
+					$("canvas:first").show();
+					$(this).text('Save This Frame');
+				 } else {
+					$("#oupSingle").show();
+					downloadSingleFrame('PNG'); 
+					$(this).text('Long Press Picture to Save');
+				 }
+				}
 			</script>
 
 			<br><br>
