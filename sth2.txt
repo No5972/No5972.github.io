@@ -1,17 +1,17 @@
-v15
-// CCTV1 综合
+锘縱15
+// CCTV1 缁煎悎
 c8r16g8r16d+8f8r16g8r.
 c8r16g8r16d+8a+8r16>c8r.
 <f8r16a8>c8c1
-r1// CCTV2 财经
+r1// CCTV2 璐㈢粡
 <b16>c+16f+8
-r1// CCTV5 体育
+r1// CCTV5 浣撹偛
 <b16>c+16d8r8c+8<a8f+8>e8<a8b8
-r1// CCTV6 电影
+r1// CCTV6 鐢靛奖
 c2g2b2g2>d16e2
-r1// CCTV13 新闻
+r1// CCTV13 鏂伴椈
 <e16.a16.ba>e1
-r1// CCTV14 少儿
+r1// CCTV14 灏戝効
 d8e8a8f+2
-r1// CGTN 英语
+r1// CGTN 鑻辫
 e1<<a>cd2e1aa8b8>cd2e1<b2>d2<e2ag2ebab1
