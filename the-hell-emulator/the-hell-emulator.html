@@ -8,9 +8,11 @@
 <script src="list_E.js"></script>
 <script src="list_F.js"></script>
 <script src="list_G.js"></script>
+<script src="list_H.js"></script>
+<script src="sh.js"></script>
 <link href="autoc.css" rel="stylesheet" />
-<title>DNF深渊模拟器网页版 V0.12 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
-			DFO吧 DNF掌游宝 17173DNF专区 联合发行</title>
+<title>DNF深渊模拟器网页版 V0.13 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
+			Bilibili  联合发行</title>
 <script src="autoc.js" charset="utf-8"></script>
 <style>
 .oneTargetEpic:hover {
@@ -18,13 +20,13 @@
 	cursor: url("cancel.cur"), auto;
 }
 * { 
-	color: #e6c89b;
+	color: rgb(147,118,57);
 	cursor: url("basic.cur"), auto;
 	font-family: "宋体";
 	font-size: 12px;
 }
 #main_body {
-	background-image: url("harlem.jpg"); /* harlem */
+	background-image: url("leadofwisdom.png"); /* harlem */
 	background-size: 100%, 100%;
 	background-repeat: no-repeat;
 	background-color: #000;
@@ -35,17 +37,17 @@ a {
 }
 input, select {
 	padding: 1px 1px 2px 3px;
-	border: 1px solid #e6c89b;
+	border: 1px solid rgb(91,71,42);
 	border-radius: 3px;
 	background: #000;
 	color: #fff;
 	outline:none;
 }
 button {
-	width: 56px; height: 23px;
+	width: 56px; height: 24px;
 	background: url("button_1.png");
 	border: 0;
-	color: #e6c89b;
+	color: rgb(147,118,57);
 	outline:none;
 }
 button:hover {
@@ -59,11 +61,11 @@ button:active>span {
 	transform:translate(1px,1px);
 }
 button>span {
-	*filter: drop-shadow(0px 1px 0px #000);
-	-webkit-filter: drop-shadow(0px 1px 0px #000); /* Chrome, Safari, Opera */
+	/* *filter: drop-shadow(0px 1px 0px #000);
+	-webkit-filter: drop-shadow(0px 1px 0px #000); */ /* Chrome, Safari, Opera */
 }
 #start, #manual {
-	width: 70px; height: 23px;
+	width: 70px; height: 24px;
 	background-size:100% 100%;
 }
 button[disabled] {
@@ -73,6 +75,40 @@ button[disabled] {
 button[disabled]:active>span {
 	display:inline-block;
 	transform:translate(0,0);
+}
+
+td {
+	color: #fff;
+}
+
+::-webkit-scrollbar {
+	width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(35,35,35);
+	border: 1px solid rgb(69,55,34);
+}
+
+::-webkit-scrollbar-button:decrement {
+	width: 9px;
+	height: 12px;
+	border-radius: 1px;
+	background: url('scrollup.png');
+	border: 1px solid rgb(69,55,34);
+}
+
+::-webkit-scrollbar-button:increment {
+	width: 9px;
+	height: 12px;
+	border-radius: 1px;
+	background: url('scrolldown.png');
+	border: 1px solid rgb(69,55,34);
+}
+
+::-webkit-scrollbar-track {
+	width: 9px;
+	background: #000;
 }
 </style>
 <script>
@@ -93,8 +129,8 @@ button[disabled]:active>span {
 
 	var inptimes = 1;
 	var a;
-	var times, ntotimes = 0, nepic, ntoepic = 0, nequi, ntoinvite = 0, neye = 0, wheeye = 0, nepicfra = 0, ntobead = 0, whebead = 0, nchal = 0, ncrys = 0;
-	var nacepic = 0, nacinvite = 0, nacbead = 0, naceye = 0;
+	var times, ntotimes = 0, nepic, nSH, ntoepic = 0, ntoSH = 0, nequi, ntoinvite = 0, neye = 0, wheeye = 0, nepicfra = 0, ntobead = 0, whebead = 0, nchal = 0, ncrys = 0, nWizCrys = 0;
+	var nacepic = 0, nacSH = 0, nacinvite = 0, nacbead = 0, naceye = 0;
 	var i = 0, j, ninvite, chcon;
 	var diff, base = 10000;
 	var nmulepic = 0, nsinepic = 0, nconunepic = 0, nmaxconunepic = 0, ndisconnect = 0, n3rd = 0;
@@ -102,6 +138,14 @@ button[disabled]:active>span {
 	var totcost = 0, price = 0, singleentry = 0;
 	var fixedcost = 0, totprice = 0;
 	var targetEpics = new Array();
+
+	var buttonOnce = function () {
+		if (document.getElementById("dungeons").value == "8") {
+			test2();
+		} else {
+			test1();
+		}
+	}
 
 	var test1 = function() {
 
@@ -396,6 +440,190 @@ button[disabled]:active>span {
 		 */
 	}
 
+	var test2 = function () {
+		var oneEpicRate = 0.026;
+		var oneSHRate = 0.006;
+		times = document.getElementById("text1").value;
+		nacepic = 0;
+		nacinvite = 0;
+		nacbead = 0;
+		nacepic = 0;
+		naceye = 0;
+		whebead = 0;
+		wheeye = 0;
+		ninvite = 0;
+		nepic = 0;
+		nSH = 0;
+		nequi = 4;
+		singleentry = 360;
+		totcost += singleentry;
+		for (j = 1; j <= nequi; j++) {
+			base = Math.random() * 10000 + 1;
+			if (base < oneEpicRate * 10000) {
+				var base2 = Math.random() * 10000 + 1;
+				if (base2 < oneSHRate * 10000) { // 是神话装备
+
+					nSH++;
+					ntoSH++;
+					nacSH++;
+				} else { // 是史诗装备
+					nepic++;
+					ntoepic++;
+					nacepic++;
+				}
+			}
+		}
+		base = Math.random() * 10000 + 1;
+		if (base < pbead * 10000) {
+			whebead = 1;
+			ntobead++;
+			nacbead++;
+		}
+		nWizCrys += parseInt(Math.random() * 4) + 9; // 智慧的结晶碎片
+		base = Math.random() * 10000 + 1;
+		if (base < 5000) {
+			ninvite = 0;
+		} else {
+			ninvite = 40;
+		}
+		ntoinvite += ninvite;
+		nacinvite += ninvite;
+		if (nepic > 0) {
+			nconunepic = 0;
+			nsinepic++;
+		} else {
+			nconunepic++;
+			if (nmaxconunepic < nconunepic) {
+				nmaxconunepic = nconunepic;
+			}
+		}
+		document.getElementById("test").innerHTML = "第" + (++i) + "局，这局出了" + nepic + "件SS和" + nSH + "件SH。";
+		if (whebead == 1) {
+			document.getElementById("test").innerHTML += "获得深渊晶石1个。<br>";
+			document.getElementById("record").innerHTML += "<br><span style='color: #ff00ff;'>获得[</span>";
+			document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>智慧的引导晶石</span>";
+			document.getElementById("record").innerHTML += "<span style='color: #ff44ff;'>]1个，第"
+					+ i
+					+ "把，"
+					+ document.getElementById("dungeons").options[document
+							.getElementById("dungeons").selectedIndex].text
+					+ "，"
+					+ document.getElementById("channel").value
+					+ "</span>";
+			//delay(500);
+		}
+		if (nepic > 0) {
+			for (var epicnname = 1; epicnname <= nepic; epicnname++) {
+				var index;
+				var epicname;
+				index = Math.random() * 1064;
+				//getfileline("tste.txt",index,epicname);
+				//printf("获得SS：%s\n", epicname);
+				document.getElementById("test").innerHTML += "<br>获得SS：";
+				document.getElementById("record").innerHTML += "<br>获得[";
+				epicnH(); 
+				document.getElementById("record").innerHTML += "]1个，第"
+						+ i
+						+ "把，"
+						+ document.getElementById("dungeons").options[document
+								.getElementById("dungeons").selectedIndex].text
+						+ "，"
+						+ document.getElementById("channel").value;
+			}
+			//delay(500);
+		}
+		if (nepic > 1) {
+			//printf("恭喜你出多黄！稍后继续。\n\a");
+			document.getElementById("test").innerHTML += "恭喜你出多黄！稍后继续。<br>";
+			nmulepic++;
+			//delay(2000);
+			//getch();
+		}
+		if (nSH > 0) {
+			for (var shnname = 1; shnname <= nSH; shnname++) {
+				var index;
+				var shname;
+				document.getElementById("test").innerHTML += "<br>获得SH：";
+				document.getElementById("record").innerHTML += "<br><span style='background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #F8C63D), color-stop(1, #CC66E7));color: transparent;-webkit-background-clip: text;'>获得[</span>";
+				sh() ; // 在页面指定位置填写神话装备名称
+				document.getElementById("record").innerHTML += "<span style='background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #F8C63D), color-stop(1, #CC66E7));color: transparent;-webkit-background-clip: text;'>]1个，第"
+						+ i
+						+ "把，"
+						+ document.getElementById("dungeons").options[document
+								.getElementById("dungeons").selectedIndex].text
+						+ "，"
+						+ document.getElementById("channel").value
+						+ "</span>";
+			}
+		}
+		base = Math.random() * 10000 + 1;
+		if (base < q * 10000) {
+			var basedis = 10000;
+			var qdis = 0.8;
+			basedis = Math.random() * 10000 + 1;
+			if (basedis < qdis * 10000) {
+				//printf("网络连接中断\n\a");
+				document.getElementById("record").innerHTML += "<br><span style='color: #ff6100;'>网络连接中断</span>";
+				ndisconnect++;
+				//delay(1000);
+			} else {
+				//printf("尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。\n网络连接中断\n\a\a");
+				document.getElementById("record").innerHTML += "<br><span style='color: #ff6100;'>尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。<br>网络连接中断</span>";
+				document.getElementById("alert_text").innerText = "系统检测到您的帐号近期（不限当日）数据曾出现异常或第三方模块加载，服务器与您的连接已断开。您将受到1小时收益制裁处罚。获得的经验值/金币/道具方面会受到限制。同时不能进行组队/使用决斗场/战场等部分功能。";
+				document.getElementById("record").innerHTML += "<br><span style='color: #e6c89b;'>系统检测到您的帐号近期（不限当日）数据曾出现异常或第三方模块加载，您已受到收益制裁处罚。获得的经验值/金币/道具方面会受到限制，同时不能进行组队/使用决斗场/势力战等部分功能。<br>0小时59分钟后收益制裁将自动解除。</span>"
+				document.getElementById("alert").style.display = "";
+				setTimeout(
+						"document.getElementById('alert').style.display='none';",
+						2000);
+				document.getElementById("main_body").style.background="#f00";
+				//setTimeout(
+						//"document.getElementById('main_body').style.background='#000';",
+						//100);
+				setTimeout(changeBackground, 100);
+				n3rd++;
+				//delay(2000);
+			}
+
+		}
+		if (base < r * 10000) {
+			//printf("尊敬的玩家：由于您在游戏中有违反“DNF游戏协议”的行为，该账号被永久停封\n按任意键继续……\n\a\a\a");
+			//getch();
+			//exit(0);
+		}
+		document.getElementById("syjs").innerHTML = ++ntotimes;
+		document.getElementById("chjs").innerHTML = nsinepic;
+		document.getElementById("zsss").innerHTML = ntoepic;
+		document.getElementById("zshs").innerHTML = ntoSH;
+		document.getElementById("dhjs").innerHTML = nmulepic;
+		document.getElementById("zdlxbchjs").innerHTML = nmaxconunepic;
+
+		document.getElementById("zgys").innerHTML = neye;
+		document.getElementById("zyqhs").innerHTML = ntoinvite;
+		document.getElementById("mbssdsps").innerHTML = nepicfra;
+		document.getElementById("syjss").innerHTML = ntobead;
+		document.getElementById("yxjjs").innerHTML = ncrys;
+
+		document.getElementById("dxcs").innerHTML = ndisconnect;
+		document.getElementById("sfcs").innerHTML = n3rd;
+
+		fixedcost = totcost
+					- ntoinvite
+					- ntobead
+					* 4000
+					- (document.getElementById("disa").checked == true ? ntoepic * 100
+							: 0) - neye * 100;
+		totprice = fixedcost * document.getElementById("price").value;
+		document.getElementById("nchall").innerHTML = fixedcost;
+		if (totprice / 10000 < 10000)
+			document.getElementById("ngold").innerHTML = (totprice / 10000)
+					.toFixed(2)
+					+ "万";
+		else
+			document.getElementById("ngold").innerHTML = (totprice / 100000000)
+					.toFixed(1)
+					+ "亿";
+	}
+
 	var jiathis_config = {
 		url : "https://no5972.github.io/the-hell-emulator/the-hell-emulator.html",
 		summary : "我成功在深渊模拟器爆出了[]！一共刷了0局深渊，花了0金币。欢迎大家也来试试！o(^▽^)o",
@@ -411,7 +639,11 @@ button[disabled]:active>span {
 				document.getElementById("termin").disabled = false;
 				document.getElementById("price").disabled = true;
 				document.getElementById("freq").disabled = true;
-				test1();
+				if (document.getElementById("dungeons").value == "8") {
+					test2();
+				} else {
+					test1();
+				}
 				inptimes++;
 			} else {
 				clearInterval(a);
@@ -428,7 +660,11 @@ button[disabled]:active>span {
 				document.getElementById("termin").disabled = false;
 				document.getElementById("price").disabled = true;
 				document.getElementById("freq").disabled = true;
-				test1();
+				if (document.getElementById("dungeons").value == "8") {
+					test2();
+				} else {
+					test1();
+				}
 				inptimes++;
 			} else {
 				var targetequipmenttext = document.getElementById("equiname").innerText;
@@ -480,7 +716,11 @@ button[disabled]:active>span {
 				document.getElementById("termin").disabled = false;
 				document.getElementById("price").disabled = true;
 				document.getElementById("freq").disabled = true;
-				test1();
+				if (document.getElementById("dungeons").value == "8") {
+					test2();
+				} else {
+					test1();
+				}
 				inptimes++;
 				targetEpics
 						.remove(document.getElementById("equiname").innerText);
@@ -623,6 +863,9 @@ button[disabled]:active>span {
 			case "7":
 				document.getElementById("main_body").style.backgroundImage = "url(\"harlem.jpg\")";
 				break;
+			case "8":
+				document.getElementById("main_body").style.backgroundImage = "url(\"leadofwisdom.png\")";
+				break;
 		}
 		document.getElementById("main_body").style.backgroundRepeat = "no-repeat";
 		document.getElementById("main_body").style.backgroundSize = "100%, 100%";
@@ -631,10 +874,10 @@ button[disabled]:active>span {
 </script>
 </head>
 <body id="main_body">
-	<div style="float: left; border: 1px solid #e6c89b; border-radius: 3px; padding: 5px; background-color: rgba(0,0,0,0.7); margin-bottom: 5px;">
+	<div style="float: left; border: 1px solid rgb(147,118,57); border-radius: 3px; padding: 5px; background-color: rgba(0,0,0,0.8); margin-bottom: 5px;">
 		<p>
-			DNF深渊模拟器网页版 V0.12 BY 鄙人<br>贴吧：<a href="https://tieba.baidu.com/home/main/?un=wujiuqier" target="_blank">@wujiuqier </a><br>DNF召唤师吧 DNF美服吧
-			DFO吧 DNF掌游宝 17173DNF专区 联合发行
+			DNF深渊模拟器网页版 V0.13 BY 鄙人<br>贴吧：<a href="https://tieba.baidu.com/home/main/?un=wujiuqier" target="_blank">@wujiuqier </a>&nbsp;鸣谢：恋恋EX反馈群的“仙灵冰叶”<br>DNF召唤师吧 DNF美服吧
+			Bilibili 联合发行
 		</p>
 		<audio src="hellmonster.mp3" autoplay="true" id="123" loop="true"></audio>
 		<p>
@@ -673,7 +916,9 @@ button[disabled]:active>span {
 				<option value="7">黑暗都市</option>
 				<option value="7">第九隔离区</option>
 				<option value="7">皇家娱乐</option>
-				<option value="7" selected="selected">搏击俱乐部</option>
+				<option value="7">搏击俱乐部</option>
+				<!-- 96,100 -->
+				<option value="8" selected="selected">智慧的引导</option>
 			</select>
 			选择频道：<select id="channel" style="font-size: 12px;">
 				<option>哈林9066</option>
@@ -1262,10 +1507,10 @@ button[disabled]:active>span {
 				<option>寂静城85029</option>
 				<option>寂静城94029</option>
 			</select>
-			<button onclick="test1()" id="manual"><span>手动爆！</span></button>
+			<button onclick="buttonOnce()" id="manual"><span>手动爆！</span></button>
 			<button onclick="mute()"><span>音乐</span></button>
 		<p>
-			输入挑战书单价：<input type="text" id="price" value="7000"
+			输入挑战书单价：<input type="text" id="price" value="4000"
 				onkeyup="this.value=this.value.replace(/\D/g,'')"
 				onafterpaste="this.value=this.value.replace(/\D/g,'')"
 				onkeypress="this.value=this.value.replace(/\D/g,'')" 
@@ -1308,8 +1553,8 @@ if (event.keyCode==13) saveEpicList();
 		<div id="test" style="height: 50px;">&nbsp;</div>
 	</div>
 	<div id="record"
-		style="padding: 2px; overflow-y: scroll; height: 350px; width: 400px; float: right; background-color: rgba(0,0,0,0.8); border: 1px solid #e6c89b; border-radius: 3px; color: #FFEB3B; font-size: 12px; font-family: 宋体; text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -webkit-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -moz-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; *filter: Glow(color = #000, strength = 1);"></div>
-	<table width="100%" style="border: 1px solid #e6c89b; border-radius: 3px; padding: 5px; background-color: rgba(0,0,0,0.7);">
+		style="padding: 2px; overflow-y: scroll; height: 350px; width: 400px; float: right; background-color: rgba(0,0,0,0.8); border: 1px solid rgb(147,118,57); border-radius: 3px; color: #FFEB3B; font-size: 12px; font-family: 宋体; /* text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -webkit-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; -moz-text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0; */ *filter: Glow(color = #000, strength = 1);"></div>
+	<table width="100%" style="border: 1px solid rgb(147,118,57); border-radius: 3px; padding: 5px; background-color: rgba(0,0,0,0.8);">
 		<tr>
 			<td>深渊局数：</td>
 			<td id="syjs">0</td>
@@ -1317,12 +1562,14 @@ if (event.keyCode==13) saveEpicList();
 			<td id="chjs">0</td>
 			<td>总史诗数：</td>
 			<td id="zsss">0</td>
+			<td>总神话数：</td>
+			<td id="zshs">0</td>
 			<td>多黄局数：</td>
 			<td id="dhjs">0</td>
-			<td>最大连续不出货局数：</td>
-			<td id="zdlxbchjs">0</td>
 		</tr>
 		<tr>
+			<td>最大连续不出货局数：</td>
+			<td id="zdlxbchjs">0</td>
 			<td>总狗眼数：</td>
 			<td id="zgys">0</td>
 			<td>总邀请函数：</td>
@@ -1331,10 +1578,10 @@ if (event.keyCode==13) saveEpicList();
 			<td id="mbssdsps">0</td>
 			<td>深渊晶石数：</td>
 			<td id="syjss">0</td>
-			<td>异形碎片数：</td>
-			<td id="yxjjs">0</td>
 		</tr>
 		<tr>
+			<td>异形碎片数：</td>
+			<td id="yxjjs">0</td>
 			<td>掉线次数：</td>
 			<td id="dxcs">0</td>
 			<td>三方次数：</td>
@@ -1347,7 +1594,7 @@ if (event.keyCode==13) saveEpicList();
 		<tr><td colspan="10" style="text-align: center;">所有素材版权归Neople的“던전앤파이터”所有</td></tr>
 	</table>
 	<div
-		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 120px; background-color: rgba(0,0,0,0.8); left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat; color: #fff;"
+		style="margin: 0 auto; border: 1px solid rgb(147,118,57); width: 400px; height: 120px; background-color: rgba(0,0,0,0.8); left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat; color: #fff;"
 		id="alert">
 		<br><br>
 		<span id="alert_text" style="color: #fff;">系统检测到您的帐号近期（不限当日）数据曾出现异常或第三方模块加载，服务器与您的连接已断开。您将受到1小时收益制裁处罚。获得的经验值/金币/道具方面会受到限制。同时不能进行组队/使用决斗场/战场等部分功能。</span>
@@ -1357,7 +1604,7 @@ if (event.keyCode==13) saveEpicList();
 		</center>
 	</div>
 	<div
-		style="margin: 0 auto; border: 1px solid #e6c89b; width: 400px; height: 150px; background-color: rgba(0,0,0,0.7); left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat; color: #fff;"
+		style="margin: 0 auto; border: 1px solid rgb(147,118,57); width: 400px; height: 150px; background-color: rgba(0,0,0,0.8); left: 35%; top: 150px; z-index: 2; position: absolute; text-align: center; padding: 5px; display: none; font-size: 12px; font-family: 宋体; background-image: url('header.png'); background-repeat: no-repeat; color: #fff;"
 		id="getepic">
 		<br><br>
 		<span id="getepic_text" style="color: #fff;">尊敬的勇士，非常抱歉，您的网络出现异常，请重新登录。</span>
