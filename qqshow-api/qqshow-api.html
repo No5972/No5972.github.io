@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer" />
+    <title>Title</title>
+</head>
+<body>
+    <p style="text-align: center">
+    <input id="qqnumber" type="number" onkeypress="query()" />
+    <input type="text" value="" style="display: none" />
+    <button type="button">提交</button><br/>
+    <img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" id="qqshow" style="width: 140px; height: 226px;margin-top: 10px" />
+    </p>
+    <script>
+
+        document.querySelector("#qqnumber").addEventListener("keypress" , function (event) {
+            if (event.charCode == 13) {
+                // alert("simulate query qq show");
+                document.getElementById("qqshow").src="https://qs1.qlogo.cn/qs_app/"  + this.value + "/" + this.value + "_qs_bg/140?r=0.67" + new Date().getTime();
+            }
+        });
+
+        document.querySelector("#qqnumber").addEventListener("keyup", function () {
+            if(! /^\d+$/.test(event.key)){
+                this.value=this.value.replace(/!(^\d+$)/, "");
+            }
+        })
+
+    </script>
+</body>
+</html>
