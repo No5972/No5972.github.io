@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer" />
+    <title>在线根据QQ号获取QQ秀 - GIF格式</title>
+</head>
+<body>
+<h1 style="text-align: center">在线根据QQ号获取QQ秀 - GIF格式</h1>
+<p style="text-align: center">
+
+    <input id="qqnumber" type="number" placeholder="输入QQ号回车或点击提交按钮" />
+    <input type="text" value="" style="display: none" />
+    <button type="button">提交</button><br/>
+    <img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" id="qqshow" style="width: 140px; height: 226px;margin-top: 10px" onload="display()" onerror="displayError()" />
+    <p id="prompt" style="text-align: center"></p>
+    <p style="text-align: center">
+        本接口调用了xuehuaimg的镜像缓存服务。<br/>
+        本站该接口无任何本站后台记录的提交数据，源代码可查看。<br/>
+        所有加载图片均由QQ秀提供，加载显示的图片内容与本站无关，不代表本站立场。</p>
+</p>
+<script>
+
+    document.querySelector("#qqnumber").addEventListener("keypress" , function (event) {
+        if (event.charCode == 13) {
+            // alert("simulate query qq show");
+            document.getElementById("qqshow").src="https://pic1.xuehuaimg.com/proxy/https://qs1.qlogo.cn/qs_app/"  + this.value + "/" + this.value + "_qs_bg/140?r=0.67" + new Date().getTime();
+            document.getElementById("qqshow").style.filter = "brightness(0.5)";
+            document.getElementById("prompt").innerText = "正在加载！";
+        }
+    });
+
+    document.querySelector("button").addEventListener("click" , function (event) {
+        // alert("simulate query qq show");
+        document.getElementById("qqshow").src="https://pic1.xuehuaimg.com/proxy/https://qs1.qlogo.cn/qs_app/"  + document.getElementById("qqnumber").value + "/" + document.getElementById("qqnumber").value + "_qs_bg/140?r=0.67" + new Date().getTime();
+        document.getElementById("qqshow").style.filter = "brightness(0.5)";
+        document.getElementById("prompt").innerText = "正在加载！";
+    });
+
+    function display() {
+        document.getElementById("qqshow").style.filter = "brightness(1)"
+        document.getElementById("prompt").innerText = "";
+    }
+
+    function displayError() {
+        document.getElementById("qqshow").style.filter = "brightness(1)"
+        document.getElementById("prompt").innerText = "加载失败！QQ秀后台错误";
+    }
+
+
+
+    document.querySelector("#qqnumber").addEventListener("keyup", function () {
+        if(! /^\d+$/.test(event.key)){
+            this.value=this.value.replace(/!(^\d+$)/, "");
+        }
+    })
+
+</script>
+</body>
+</html>
