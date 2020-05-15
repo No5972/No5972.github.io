@@ -11,7 +11,7 @@
 <script src="list_H.js"></script>
 <script src="sh.js"></script>
 <link href="autoc.css" rel="stylesheet" />
-<title>DNF深渊模拟器网页版 V0.13 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
+<title>DNF深渊模拟器网页版 V0.14 BY 鄙人 贴吧：@wujiuqier DNF召唤师吧 DNF美服吧
 			Bilibili  联合发行</title>
 <script src="autoc.js" charset="utf-8"></script>
 <style>
@@ -457,7 +457,23 @@ td {
 		nequi = 4;
 		singleentry = 360;
 		totcost += singleentry;
-		for (j = 1; j <= nequi; j++) {
+
+		base = Math.random() * 10000 + 1; // 时间引导石
+		if (base < 5000) {
+			ninvite = 0;
+		} else if (base >= 5000 && base < 6000) {
+			ninvite = 2 * 20;
+		} else if (base >= 6000 && base < 7000) {
+			ninvite = 3 * 20;
+		} else if (base >= 7000 && base < 9000) {
+			ninvite = 4 * 20;
+		} else if (base >= 9000 && base < 9500) {
+			ninvite = 5 * 20;
+		} else if (base >= 9500) {
+			ninvite = 10 * 20;
+		}
+
+		for (j = 1; j <= nequi; j++) { // 神话或史诗
 			base = Math.random() * 10000 + 1;
 			if (base < oneEpicRate * 10000) {
 				var base2 = Math.random() * 10000 + 1;
@@ -473,6 +489,14 @@ td {
 				}
 			}
 		}
+
+		base = Math.random() * 10000 + 1; // 狗眼
+		if (base < peye * 10000) {
+			wheeye = 1;
+			neye++;
+			naceye++;
+		}
+
 		base = Math.random() * 10000 + 1;
 		if (base < pbead * 10000) {
 			whebead = 1;
@@ -482,9 +506,9 @@ td {
 		nWizCrys += parseInt(Math.random() * 4) + 9; // 智慧的结晶碎片
 		base = Math.random() * 10000 + 1;
 		if (base < 5000) {
-			ninvite = 0;
+			// ninvite = 0;
 		} else {
-			ninvite = 40;
+			// ninvite = 40;
 		}
 		ntoinvite += ninvite;
 		nacinvite += ninvite;
@@ -498,6 +522,24 @@ td {
 			}
 		}
 		document.getElementById("test").innerHTML = "第" + (++i) + "局，这局出了" + nepic + "件SS和" + nSH + "件SH。";
+
+		if (wheeye == 1) {
+			//printf("获得%d邀请函。获得狗眼1个。\n",ninvite);
+			document.getElementById("test").innerHTML += "获得" + (ninvite/20)
+					+ "时间引导石。获得狗眼1个。";
+			document.getElementById("record").innerHTML += "<br>获得[史诗灵魂]1个，第"
+					+ i
+					+ "把，"
+					+ document.getElementById("dungeons").options[document
+							.getElementById("dungeons").selectedIndex].text
+					+ "，"
+					+ document.getElementById("channel").value;
+		} else {
+			//printf("获得%d邀请函。\n",ninvite);
+			document.getElementById("test").innerHTML += "获得" + (ninvite/20)
+					+ "时间引导石。";
+		}
+
 		if (whebead == 1) {
 			document.getElementById("test").innerHTML += "获得深渊晶石1个。<br>";
 			document.getElementById("record").innerHTML += "<br><span style='color: #ff00ff;'>获得[</span>";
@@ -876,7 +918,7 @@ td {
 <body id="main_body">
 	<div style="float: left; border: 1px solid rgb(147,118,57); border-radius: 3px; padding: 5px; background-color: rgba(0,0,0,0.8); margin-bottom: 5px;">
 		<p>
-			DNF深渊模拟器网页版 V0.13 BY 鄙人<br>贴吧：<a href="https://tieba.baidu.com/home/main/?un=wujiuqier" target="_blank">@wujiuqier </a>&nbsp;鸣谢：恋恋EX反馈群的“仙灵冰叶”<br>DNF召唤师吧 DNF美服吧
+			DNF深渊模拟器网页版 V0.14 BY 鄙人<br>贴吧：<a href="https://tieba.baidu.com/home/main/?un=wujiuqier" target="_blank">@wujiuqier </a>&nbsp;鸣谢：恋恋EX反馈群的“仙灵冰叶”<br>DNF召唤师吧 DNF美服吧
 			Bilibili 联合发行
 		</p>
 		<audio src="hellmonster.mp3" autoplay="true" id="123" loop="true"></audio>

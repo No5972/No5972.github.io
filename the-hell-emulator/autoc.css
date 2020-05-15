@@ -19,10 +19,9 @@
 }
 .auto_onmouseover{
     color:#e6c89b;
-    background-color: #000;
+    background-color: rgb(8,24,50);
     width:99.5%;
-    border: 1px solid #44f;
-    border-radius: 2px;
+    border: 1px solid rgb(8,24,50);
 }
 .auto_onmouseout{
     color:#e6c89b;
