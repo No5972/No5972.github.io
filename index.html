@@ -1,53 +1,127 @@
-﻿<style>
-.PM5544 {
-	width: 100%;
-	position: absolute;
-	left: 0px; top: 0px;
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>No.5972 Personal Little Nest - Cover</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+  <link rel="stylesheet" href="/static/demo.css">
+  <style>
+
+@font-face {
+  font-family: DOS;
+  src: url('/static/Moder-DOS-437-Win.ttf');
 }
 
-.date {
-	position: absolute;
-	left: 21%; top: 400px;
-	color: white;
-	font-family: Arial !important;
-	font-size:50px;
+body {
+  font-size: 16px;
+  background: #000;
+  color: #aaa;
 }
-.time {
-	position: absolute;
-	left: 59.5%; top: 400px;
-	color: white;
-	font-family: Arial !important;
-	font-size:50px;
+
+.typing-cursor {
+  color: #aaa;
 }
-</style>
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?" />
-<title>(Click to Continue)</title>
-<a href="/cms"><img class="PM5544" src="https://cdn.jsdelivr.net/gh/No5972/Other_demos@audio1/PM5544.jpg" /></a>
-<span class="date" id="date">00-00-00</span>
-<span class="time" id="time">00:00:00</span>
-<!-- <audio src="http://www.51taoshi.com/uploads/file/20180216/1518716334340098812.mp3" autoplay loop></audio> -->
-<audio src="https://cdn.jsdelivr.net/gh/No5972/Other_demos@audio1/CCTV2ED3.mp3" autoplay loop></audio>
-<script>
-Date.prototype.Format = function (fmt) { //author: meizz
-	var o = {
-		"M+": this.getMonth() + 1, //月份
-		"d+": this.getDate(), //日
-		"h+": this.getHours(), //小时
-		"m+": this.getMinutes(), //分
-		"s+": this.getSeconds(), //秒
-		"q+": Math.floor((this.getMonth() + 3) / 3), //季度
-		"S": this.getMilliseconds() //毫秒
-	};
-	if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-	for (var k in o)
-	if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-	return fmt;
-}
-var update=function() {
-	document.getElementById("date").style.top=document.body.clientWidth/2.85;
-	document.getElementById("time").style.top=document.body.clientWidth/2.85;
-	document.getElementById("date").innerText=new Date().Format("yy-MM-dd");
-	document.getElementById("time").innerText=new Date().Format("hh:mm:ss");
-}
-setInterval(update,100);
-</script>
+  </style>
+  <script src="typing.js"></script>
+</head>
+<body>
+  <audio src="https://cdn.jsdelivr.net/gh/No5972/Other_demos@audio1/CCTV2ED3.mp3" autoplay loop></audio>
+  <a href="/cms"><div style="height: 100%;width: 100%;display: block;position: absolute;overflow: hidden;left: 0;top: 0;"></div></a>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6" style="display: none;">
+        <div id="source">
+Welcome to 5972DOS 0.01...<br>
+Copyright No.5972 All rights reserved.<br>
+<br>
+Now you are in 5972DOS 0.01 prompt. Typing is not supported yet!<br>
+<br>
+<br>
+        </div>
+        <div id="source2">D:
+<br><br>cd COVER
+<br><br>type HELLO.TXT
+        </div>
+
+        <div id="source3">
+<br>No.5972 (wujiuqier) Personal Little Nest<br>
+https://no5972.github.io<br>
+https://cms.no5972.now.sh (Weblog Mirror Website)<br>
+<br>
+It could be hard to design a website cover, but anyways it has been finished. <br>
+This is only a personal weblog which contains IT articles that are about various fields.<br>
+<br>
+These words might be modified at any time.<br>
+<br>
+Just click anywhere on this page using your mouse and you can start browsing my blog. Have fun!<br>
+<br>
+D:\COVER> 
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div id="output-wrap" style="font-family: DOS;">
+          <span id="output"></span>
+          <span class="typing-cursor">_</span>
+        </div>
+        <div id="output2-wrap" style="font-family: DOS;">
+          <span id="output2"></span>
+          <span class="typing-cursor">_</span>
+        </div>
+        <div id="output3-wrap" style="font-family: DOS;">
+          <span id="output3"></span>
+          <span class="typing-cursor">_</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var typing = new Typing({
+      source: document.getElementById('source'),
+      output: document.getElementById('output'),
+      delay: 1,
+      done: function() {
+        console.log(this);
+        console.log('done')
+        document.querySelector("#output-wrap .typing-cursor").style.display = "none";
+        document.querySelector("#output2-wrap .typing-cursor").style.display = "inline";
+        typing2.start();
+      }
+    });
+    var typing2 = new Typing({
+      source: document.getElementById('source2'),
+      output: document.getElementById('output2'),
+      delay: 120,
+      done: function() {
+        console.log(this);
+        console.log('done');
+        document.querySelector("#output2-wrap .typing-cursor").style.display = "none";
+        document.querySelector("#output3-wrap .typing-cursor").style.display = "inline";
+        typing3.start();
+      },
+      typeOne: function() {
+        var str = document.getElementById("output2").innerHTML;
+        var strArr = str.split("<br>")
+        for (var i in strArr) {
+          if (i == 0 && strArr[i].lastIndexOf("C:\\&gt;") == -1) strArr[i] = "C:\\> " + strArr[i];
+          if (i == 2 && strArr[i].lastIndexOf("D:\\&gt;") == -1) strArr[i] = "D:\\> " + strArr[i];
+          if (i == 4 && strArr[i].lastIndexOf("D:\\COVER&gt;") == -1) strArr[i] = "D:\\COVER> " + strArr[i];
+        }
+        document.getElementById("output2").innerHTML = strArr.join("<br>");
+      }
+    });
+    var typing3 = new Typing({
+      source: document.getElementById('source3'),
+      output: document.getElementById('output3'),
+      delay: 1,
+      done: function() {
+        console.log(this);
+        console.log('done');
+        
+      }
+    });
+    typing.start();
+    document.querySelector("#output2-wrap .typing-cursor").style.display = "none";
+    document.querySelector("#output3-wrap .typing-cursor").style.display = "none";
+  </script>
+</body>
+</html>
