@@ -55,7 +55,7 @@ These words might be modified at any time.<br>
 <br>
 Just click anywhere on this page using your mouse and you can start browsing my blog. Have fun!<br>
 <br>
-D:\COVER> 
+D:\COVER>
         </div>
       </div>
       <div class="col-lg-6">
@@ -99,9 +99,9 @@ D:\COVER>
         var str = document.getElementById("output2").innerHTML;
         var strArr = str.split("<br>")
         for (var i in strArr) {
-          if (i == 0 && strArr[i].lastIndexOf("C:\\&gt;") == -1) strArr[i] = "C:\\> " + strArr[i];
-          if (i == 2 && strArr[i].lastIndexOf("D:\\&gt;") == -1) strArr[i] = "D:\\> " + strArr[i];
-          if (i == 4 && strArr[i].lastIndexOf("D:\\COVER&gt;") == -1) strArr[i] = "D:\\COVER> " + strArr[i];
+          if (i == 0 && strArr[i].lastIndexOf("C:\\&gt;") == -1) strArr[i] = "C:\\>" + strArr[i];
+          if (i == 2 && strArr[i].lastIndexOf("D:\\&gt;") == -1) strArr[i] = "D:\\>" + strArr[i];
+          if (i == 4 && strArr[i].lastIndexOf("D:\\COVER&gt;") == -1) strArr[i] = "D:\\COVER>" + strArr[i];
         }
         document.getElementById("output2").innerHTML = strArr.join("<br>");
       }
