@@ -96,6 +96,7 @@ D:\COVER></div>
                 var input = document.getElementById("output3").innerText.substring(document.getElementById("output3").innerText.lastIndexOf("D:\\COVER>") + 9, document.getElementById("output3").innerText.length);
                 if (input.toUpperCase().indexOf("ECHO ") == 0) {
                      document.getElementById("output3").innerHTML += "<br>" + input.substring(5) + "<br><br>D:\\COVER&gt;";
+                     scroll(0,document.body.scrollHeight);
                      break;
                 }
                 switch (input.toUpperCase()) {
