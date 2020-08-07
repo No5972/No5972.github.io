@@ -116,6 +116,10 @@ D:\COVER></div>
                     case 'TYPE HELLO.TXT':
                         document.getElementById("output3").innerHTML += "<br>" + document.getElementById("source3").innerHTML;
                         break;
+                    case 'BLOG':
+                        document.getElementById("output3").innerHTML += "<br><br>D:\\COVER>";
+                        location.href="cms";
+                        break;             
                     case 'CLS':
                         document.getElementById("output").innerHTML = "";
                         document.getElementById("output2").innerHTML = "";
@@ -130,7 +134,9 @@ No.5972 5972DOS Version 0.03<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(C)Copyright No.5972 2011-2020.<br><br>D:\\COVER>`;
                         break;
                     case 'HELP':
-                        document.getElementById("output3").innerHTML += `<br>CLS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears the screen.<br>
+                        document.getElementById("output3").innerHTML += `<br>
+BLOG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start browsing this weblog.<br>
+CLS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears the screen.<br>
 COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the title.<br>
 DIR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays a list of files and subdirectories in a directory.<br>
 ECHO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Displays messages, or turns command echoing on or off.<br>
