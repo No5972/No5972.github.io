@@ -32,12 +32,12 @@ body {
     <div class="row">
       <div class="col-lg-6" style="display: none;">
         <div id="source">
-Welcome to 5972DOS 0.02...<br>
+Welcome to 5972DOS 0.03...<br>
 Copyright No.5972 All rights reserved.<br>
 <br>
 Start playing CCTV2ED3.MP3 ...<br>
 <br>
-Now you are in 5972DOS 0.02 prompt. Type 'HELP' for help.<br>
+Now you are in 5972DOS 0.03 prompt. Type 'HELP' for help.<br>
 <br>
         </div>
         <div id="source2">D:
@@ -121,23 +121,32 @@ D:\COVER></div>
                         document.getElementById("output3").innerHTML = "D:\\COVER&gt;";
                         break;
                     case 'VER':
-                        document.getElementById("output3").innerHTML += "<br><br>5972DOS Version 0.02<br><br><br>D:\\COVER>";
+                        document.getElementById("output3").innerHTML += "<br><br>5972DOS Version 0.03<br><br><br>D:\\COVER>";
                         break;
                     case 'COMMAND':
                         document.getElementById("output3").innerHTML += `<br><br>
-No.5972 5972DOS Version 0.02<br>
+No.5972 5972DOS Version 0.03<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(C)Copyright No.5972 2011-2020.<br><br>D:\\COVER>`;
                         break;
                     case 'HELP':
                         document.getElementById("output3").innerHTML += `<br>CLS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears the screen.<br>
 COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the title.<br>
+DIR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays a list of files and subdirectories in a directory.<br>
 EXIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Refresh the page.<br>
+ECHO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Displays messages, or turns command echoing on or off.<br>
 HELP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides all commands information.<br>
 MUSIC --PAUSE&nbsp;&nbsp;&nbsp;&nbsp;Pause the background music.<br>
 MUSIC --PLAY&nbsp;&nbsp;&nbsp;&nbsp; Resume the paused music.<br>
 REBOOT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh the page.<br>
 TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the contents of a text file. (Supports HELLO.txt only)<br>
 VER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the DOS version.<br><br>D:\\COVER&gt;`
+                        break;
+                    case 'DIR':
+                        document.getElementById("output3").innerHTML += `<br><br>&nbsp;Volume in drive D is 5972DOS<br>
+&nbsp;Directory of D:\\COVER\\<br><br>
+HELLO&nbsp;&nbsp;&nbsp;&nbsp;TXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;350&nbsp;07-22-20&nbsp;&nbsp;11:02p<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;file(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;350&nbsp;bytes
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 bytes free<br><br>D:\\COVER&gt;`;
                         break;
                     case '':
                         document.getElementById("output3").innerHTML += "<br>D:\\COVER>";
