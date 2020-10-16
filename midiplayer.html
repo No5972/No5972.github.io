@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <title>
+        Online Local MIDI File Player using MIDI.js
+    </title>
+    <script src="//www.midijs.net/lib/midi.js" type="text/javascript"></script>
+</head>
+
+<body style="text-align: center;">
+    <h1>
+            Play Local MIDI File Without MIDI Support using MIDI.js
+        </h1>
+    <p>
+        May cost a bit of data usage for loading sound fonts after beginning first playing
+    </p>
+    <form>
+        <input id="fileInput" type="file" accept=".*" style="">
+    </form>
+    <div class="row">
+        <div class="col-md-12" style="">
+            <textarea id="main" class="form-control" placeholder="" style="display:none;"></textarea>
+            <p id="filename">
+                File name:
+            </p>
+            <p>
+                <button onclick="MIDIjs.pause()">Pause</button>
+                <button onclick="MIDIjs.resume()">Resume</button>
+                <button onclick="MIDIjs.stop()">Stop</button>
+            </p>
+        </div>
+        <script type="text/javascript">
+            function checkttf() {
+                var base64 = document.getElementById("main").value;
+
+                var base64Arr = base64.split(',');
+                //alert(base64Arr.length);
+                var imgtype = '';
+                var base64String = '';
+                if (base64Arr.length == 2 && base64Arr[0] == "data:application/x-font-ttf;base64") {
+                    //濡傛灉鏄浘鐗嘼ase64锛屽幓鎺夊ご淇℃伅
+
+                    base64String = base64Arr[1];
+                    document.getElementById("main").value = "data:font/truetype;charset=utf-8;base64," + base64String;
+                }
+
+            }
+
+
+
+            (function() {
+
+                function b64EncodeUnicode(str) {
+                    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(match, p1) {
+                        return String.fromCharCode('0x' + p1);
+                    }));
+                }
+
+                function b64DecodeUnicode(str) {
+                    return decodeURIComponent(Array.prototype.map.call(atob(str), function(c) {
+                        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                    }).join(''));
+                }
+
+
+
+
+                window.addEventListener("dragenter", function(event) {
+                    event.preventDefault();
+                }, false);
+                window.addEventListener("dragover", function(event) {
+                    event.preventDefault();
+                }, false);
+                window.addEventListener("drop", function(event) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        //document.getElementById("main").insertAdjacentText  
+                        document.getElementById("main").value = e.target.result;
+                        //document.getElementById("main").classList.remove('empty');
+                        checkttf();
+                    };
+                    reader.readAsDataURL(event.dataTransfer.files[0]);
+                    event.preventDefault();
+                }, false);
+
+                var fileInput = document.getElementById('fileInput');
+                fileInput.addEventListener('change', function(e) {
+                    // Put the rest of the demo code here.
+
+                    var file = fileInput.files[0];
+                    var reader = new FileReader();
+                    document.getElementById("filename").innerText = "File name: " + file.name;
+
+                    reader.onload = function(e) {
+                        document.getElementById("main").value = e.target.result;
+                        MIDIjs.play(e.target.result);
+                        //document.getElementById("main").classList.remove('empty');
+                        checkttf();
+                    }
+
+                    reader.readAsDataURL(file);
+                    event.preventDefault();
+                    fileInput.value = "";
+                });
+
+                document.getElementById("main").addEventListener('dblclick', function(e) {
+                    //alert("A");
+                    fileInput.click();
+                    e.preventDefault();
+                    // Some dazzling stuff happens be here
+
+                });
+            })();
+        </script>
+    </div>
+</body>
+
+</html>
