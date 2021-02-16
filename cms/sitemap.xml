@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.github.io/cms/archivers/test.html</loc>
+    
+    <lastmod>2021-02-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/archivers/70.html</loc>
     
     <lastmod>2021-02-09</lastmod>
@@ -554,13 +561,6 @@
     
   </url>
   
-  <url>
-    <loc>https://no5972.github.io/cms/archivers/test.html</loc>
-    
-    <lastmod>2021-02-07</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://no5972.github.io/cms</loc>
@@ -587,13 +587,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
-    <lastmod>2021-02-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.github.io/cms/categories/JavaScript/</loc>
     <lastmod>2021-02-16</lastmod>
     <changefreq>daily</changefreq>
@@ -601,7 +594,7 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/C/</loc>
+    <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
     <lastmod>2021-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -615,6 +608,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.github.io/cms/categories/C/</loc>
+    <lastmod>2021-02-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
     <lastmod>2021-02-16</lastmod>
     <changefreq>daily</changefreq>
@@ -622,14 +622,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Other/</loc>
+    <loc>https://no5972.github.io/cms/categories/Moving-Away-from-Flash/</loc>
     <lastmod>2021-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Moving-Away-from-Flash/</loc>
+    <loc>https://no5972.github.io/cms/categories/Other/</loc>
     <lastmod>2021-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
