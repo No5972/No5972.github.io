@@ -129,31 +129,19 @@
     var CONFIG = {"hostname":"no5972.github.io","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="这是鄙人又摸索出来的一套解决方案，通过Chrome或Chromium的F12工具来截取高清截图。正如鄙人此前在CSDN发布的笔记一样，Chrome在62版本之后就已经原生支持了截取指定HTML节点的截图以及截取实际像素的截图，国产浏览器只要不是太老的版本应该都是可以支持的。之前那个通过RDP远程桌面截图的方式实在太过于麻烦，鄙人现在这一套方法比使用远程桌面要简单不少。">
+  <meta name="description" content="鄙人这个站点主页是一个仓库，而博客又是一个仓库。但是直接使用GitHub访问速度很慢，即使是电信网有时候也得半分钟以上，移动联通就更难说了。如果能使用Vercel作为镜像来访问就能快不少，但是Vercel目前还没有发展到能把多个仓库部署到同一个项目的不同目录下，所以这里又要劳驾GitHub Actions了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【小花仙】提供一个比较复杂但是可以截全身的截高清图的方法（重新整理）">
-<meta property="og:url" content="https://no5972.github.io/cms/archivers/53.html">
+<meta property="og:title" content="将多个仓库组成的GitHub站点部署到Vercel并绑定独立域名">
+<meta property="og:url" content="https://no5972.github.io/cms/archivers/71.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="这是鄙人又摸索出来的一套解决方案，通过Chrome或Chromium的F12工具来截取高清截图。正如鄙人此前在CSDN发布的笔记一样，Chrome在62版本之后就已经原生支持了截取指定HTML节点的截图以及截取实际像素的截图，国产浏览器只要不是太老的版本应该都是可以支持的。之前那个通过RDP远程桌面截图的方式实在太过于麻烦，鄙人现在这一套方法比使用远程桌面要简单不少。">
+<meta property="og:description" content="鄙人这个站点主页是一个仓库，而博客又是一个仓库。但是直接使用GitHub访问速度很慢，即使是电信网有时候也得半分钟以上，移动联通就更难说了。如果能使用Vercel作为镜像来访问就能快不少，但是Vercel目前还没有发展到能把多个仓库部署到同一个项目的不同目录下，所以这里又要劳驾GitHub Actions了。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/5f497a72c874747eaef62c91774a14bb.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/3e02389cd5da55944e94761e461d6d00.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/c7dcdf26de8fb78b00dca8d881a4f154.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/e4e0b2854324e7ccfee6f23ab36fc875.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/e4e0b2854324e7ccfee6f23ab36fc875.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/0d1a8a239f64e6cf02a3fc5299d41ca6.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/094efe59a7f0d31a1890fc799e3e6c31.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/dee3d97cd10900fc7af666791fb56475.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/a6b64230f72e2881dad7a3f3da5fe27f.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/18a3e43b21ee37e8f1c916667431ea88.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/533ec9af8e89608a7d98faeea048393c.png">
-<meta property="article:published_time" content="2020-12-15T03:00:00.000Z">
-<meta property="article:modified_time" content="2021-02-07T16:35:42.678Z">
+<meta property="article:published_time" content="2021-02-16T19:00:00.000Z">
+<meta property="article:modified_time" content="2021-02-16T19:25:11.673Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/img_convert/5f497a72c874747eaef62c91774a14bb.png">
 
-<link rel="canonical" href="https://no5972.github.io/cms/archivers/53.html">
+<link rel="canonical" href="https://no5972.github.io/cms/archivers/71.html">
 
 
 <script class="page-configurations">
@@ -166,7 +154,7 @@
   };
 </script>
 
-  <title>【小花仙】提供一个比较复杂但是可以截全身的截高清图的方法（重新整理） | No.5972 Publishment Website</title>
+  <title>将多个仓库组成的GitHub站点部署到Vercel并绑定独立域名 | No.5972 Publishment Website</title>
   <script>
       if (!!window.ActiveXObject || "ActiveXObject" in window) {
         document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
@@ -605,7 +593,7 @@ window.onload = function () {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/53.html">
+    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/71.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
@@ -619,7 +607,7 @@ window.onload = function () {
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-          【小花仙】提供一个比较复杂但是可以截全身的截高清图的方法（重新整理）
+          将多个仓库组成的GitHub站点部署到Vercel并绑定独立域名
         </h1>
 
         <div class="post-meta">
@@ -629,7 +617,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-12-15 11:00:00 | Modified: 2021-02-08 00:35:42" itemprop="dateCreated datePublished" datetime="2020-12-15T11:00:00+08:00">2020-12-15 11:00:00</time>
+              <time title="Created: 2021-02-17 03:00:00 | Modified: 2021-02-17 03:25:11" itemprop="dateCreated datePublished" datetime="2021-02-17T03:00:00+08:00">2021-02-17 03:00:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -637,7 +625,11 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a>
+                  <a href="/cms/categories/Web-Building/" itemprop="url" rel="index"><span itemprop="name">Web-Building</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/cms/categories/Github/" itemprop="url" rel="index"><span itemprop="name">Github</span></a>
                 </span>
             </span>
 
@@ -650,8 +642,8 @@ window.onload = function () {
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/cms/archivers/53.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/53.html" itemprop="commentCount"></span>
+    <a title="valine" href="/cms/archivers/71.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/71.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -666,27 +658,18 @@ window.onload = function () {
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>高能预警：此法需要一定的JavaScript基础！不会的建议先恶补点JS基础知识再来阅读。这方法如果掌握好了比浏览器缩放要方便的多。</p>
-<p>这是鄙人又摸索出来的一套解决方案，通过Chrome或Chromium的F12工具来截取高清截图。正如鄙人此前在CSDN发布的笔记一样，Chrome在62版本之后就已经原生支持了截取指定HTML节点的截图以及截取实际像素的截图，国产浏览器只要不是太老的版本应该都是可以支持的。之前那个通过RDP远程桌面截图的方式实在太过于麻烦，鄙人现在这一套方法比使用远程桌面要简单不少。</p>
-<p>2020年底之后Chrome和Chromium浏览器将停止对Flash的支持，但是不排除一些国产浏览器会继续支持Flash，所以可能还是需要使用国产浏览器来进行操作。国产浏览器启用Flash方法请看鄙人前段时间在本吧发的那个关于Flash停止支持的解决方案。</p>
-<p>前往<code>http://hua.61.com/Client.swf?t=4561654354</code>（随便输入一串数字，空格换成点）。国产浏览器大都能直接显示，但是Edge和Chrome不能直接打开，他会变成文件下载。鄙人曾经开发过一个扩展可以让浏览器直接播放本地SWF或远程的SWF的URL。但是在试图向微软的浏览器扩展商店投稿时被审核退回了。。。所以建议大家使用国产浏览器来操作。</p>
-<p>把F12开发人员工具打开，不同的浏览器操作方式可能不一样，鄙人的星愿浏览器是顶部菜单按钮-更多工具-开发人员工具。建议先切换成拆分窗口的模式，在出现的侧边栏右上角点击三个点的按钮，然后第一行的显示模式Dock Side点击第一个按钮，就变成拆分窗口的模式了。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/5f497a72c874747eaef62c91774a14bb.png" alt="" /></p>
-<p>然后点击左上角第二个图标打开设备模式。点击网页上边选择设备的下拉框选编辑（Edit）。点击添加自定义设备（Add custom device）。先添加一个稍微低一点的分辨率设备，比例确保是一致的，例如360 640（9:16的宽高比）。设备名称（Device Name）随便输入，然后尺寸我们用360 640。设备像素比（Device pixel ratio）不用管，用户戴笠字符串（User agent string）也不用管，设备类型选桌面（Desktop）。点击添加（Add）。此举是为了在放大画面的时候减少卡顿，因为如果直接使用高分辨率的话整个操作会变的异常卡顿。然后再添加一个高分辨率的设备。设备名称（Device Name）随便输入，然后尺寸我们用3840 2160。当然你也可以尝试8K的7680 4320，但是8K分辨率在放大到400%或以上的倍率的时候有可能会出现贴图显示不完整的问题，所以使用8K分辨率的时候建议不要达到400%。设备像素比、用户戴笠字符串、设备类型和前一个设备一样。然后在网页上边的选择设备的下拉框选择我们刚刚添加的较低分辨率的设备。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3e02389cd5da55944e94761e461d6d00.png" alt="" /></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/c7dcdf26de8fb78b00dca8d881a4f154.png" alt="" /></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/e4e0b2854324e7ccfee6f23ab36fc875.png" alt="" /></p>
-<p>刷新一下页面（F5可能是失效的，因为此时输入焦点可能在Flash里面，建议使用鼠标点击浏览器的刷新按钮来刷新）。然后登录账号，把你要截图的画面或者玩家面板打开。这个时候就开始敲JS代码了！</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/e4e0b2854324e7ccfee6f23ab36fc875.png" alt="" /></p>
-<p>使用形如<code>document.getElementsByTagName(&quot;embed&quot;)[0].Zoom(25)</code>这样的语句就可以直接让游戏画面缩放到指定的倍率（<code>Zoom</code>是Flash组件的原生方法，相当于右键菜单的放大和缩小，但是这个可以指定任意的倍率），其中最后的参数填写放大倍率的倒数乘以100，例如放大4倍就填25，1/4*100=25。</p>
-<p>切回开发人员工具，在开发人员工具里面打开Console，然后输入这个JS语句回车。可以按上方向键重新打出这个语句然后调整倍率再回车（注意这个之后输入的倍率是按照前一次缩放之后的倍率来指定的相对的倍率），直到倍率满意为止。然后右键菜单，设置，直接点击关闭，鼠标不要动，此时鼠标光标会变成拖动手形的图案，按住左键来拖动视野对准要截图的区域。区域对准好了之后，在网页上边的选择设备的下拉框选择我们之后添加的较高分辨率的设备。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/0d1a8a239f64e6cf02a3fc5299d41ca6.png" alt="" /></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/094efe59a7f0d31a1890fc799e3e6c31.png" alt="" /></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/dee3d97cd10900fc7af666791fb56475.png" alt="" /></p>
-<p>回到开发人员工具。点击右上角三个点的按钮，选择运行命令（Run Command），或者也可以按快捷键Ctrl+Shift+P，然后就会呼出一个神秘菜单。我们在这个菜单输入&quot;Capture screenshot&quot;，当然不需要全部输入他自己就能显示出来。看到这个选项之后用鼠标或者用键盘移动光标回车选择这个选项，一张全身的高清截图就出来了。</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/a6b64230f72e2881dad7a3f3da5fe27f.png" alt="" /></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/18a3e43b21ee37e8f1c916667431ea88.png" alt="" /></p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/533ec9af8e89608a7d98faeea048393c.png" alt="" /></p>
+        <p>鄙人这个站点主页是一个仓库，而博客又是一个仓库。但是直接使用GitHub访问速度很慢，即使是电信网有时候也得半分钟以上，移动联通就更难说了。如果能使用Vercel作为镜像来访问就能快不少，但是Vercel目前还没有发展到能把多个仓库部署到同一个项目的不同目录下，所以这里又要劳驾GitHub Actions了。</p>
+<p>GitHub有一个可以在不同仓库之间拷贝文件或目录的动作：<a href="https://github.com/andstor/copycat-action" target="_blank" rel="noopener">Copycat</a>。我们通过这个动作把各个非主页仓库的所有文件拷贝到主页仓库中对应的子文件夹下。</p>
+<p>把非主页仓库按照这个动作的说明书添加<code>.github/workflows/xxx.yml</code>文件（<code>xxx.yml</code>文件名可以随便起，后缀保证是<code>.yml</code>就行）。如果是Hexo生成的博客，则应参考此前的文章<a href="70.html">《Hexo Gitee Pages 自动部署站点》</a>来进行特别配置。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Copy</span></span><br><span class="line"><span class="attr">on:</span> <span class="string">push</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">copy:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Copycat</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">andstor/copycat-action@v3</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">personal_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PERSONAL_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">src_path:</span> <span class="string">改成来源仓库的要拷贝的路径，根目录则填/.</span></span><br><span class="line">        <span class="attr">dst_path:</span> <span class="string">改成目标仓库的拷贝位置，以斜杠结尾。这里需要填写斜杠非主页仓库名斜杠</span></span><br><span class="line">        <span class="attr">dst_owner:</span> <span class="string">改成目标仓库所在的用户名</span></span><br><span class="line">        <span class="attr">dst_repo_name:</span> <span class="string">改成目标仓库名（也就是用户名点github点io）</span></span><br><span class="line">        <span class="attr">dst_branch:</span> <span class="string">改成目标仓库的分支名</span></span><br><span class="line">        <span class="attr">src_branch:</span> <span class="string">改成来源仓库的分支名</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">改成操作的用户名</span></span><br><span class="line">        <span class="attr">email:</span> <span class="string">改成操作用户的邮箱</span></span><br></pre></td></tr></table></figure>
+<p>前往GitHub网站，进入账号设置，Developer Settings，Personal access tokens，然后点击Generate new token。Note处随便起个名字，Select scopes里面把Repo勾选。点击最下边的Generate token。把显示出来的令牌复制出来，这个只会显示一次，之后将永远不再显示， 所以需要暂时先复制出来。</p>
+<p>在非主页仓库后台设置的Settings里面打开Secrets，添加一个密钥<code>PERSONAL_TOKEN</code>，取值就是刚才复制的令牌，注意不要带空格。</p>
+<p>这样就可以在提交此非主页仓库时自动把此仓库所有文件拷贝到主页仓库下了。</p>
+<hr />
+<p>参考其他的博文配置好Vercel和GitHub的链接（包括绑定账号和Github的安装Vercel）。</p>
+<p>在Vercel的主页点击右上方的New Project，在左边Import Git Repository里面搜索找到主页仓库用户名点github点io那个。点击右边Import。然后找到绑定的账号点击右边的Select。然后直接点击Continue。下一步直接点击Deploy。</p>
+<p>进入这个项目，选择Settings，Domains，添加之前注册的独立域名。添加以后这时候Vercel的界面会提示你需要添加域名的解析。到这个域名解析的后台，添加一个类型为<code>A</code>，主机记录为<code>@</code>的解析记录，如果之前有这个记录则直接修改。记录值按照Vercel的界面提示填写<code>76.76.21.21</code>。其他选项保持默认即可。</p>
+<p>稍等片刻，再访问这个域名，即可以更快的速度显示页面了。</p>
 
     </div>
 
@@ -722,13 +705,10 @@ window.onload = function () {
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/cms/archivers/50.html" rel="prev" title="Linux系统 运行小花仙游戏（针对2021年Flash停止维护的情况）">
-      <i class="fa fa-chevron-left"></i> Linux系统 运行小花仙游戏（针对2021年Flash停止维护的情况）
+    <a href="/cms/archivers/70.html" rel="prev" title="Hexo Gitee Pages 自动部署站点">
+      <i class="fa fa-chevron-left"></i> Hexo Gitee Pages 自动部署站点
     </a></div>
-      <div class="post-nav-item">
-    <a href="/cms/archivers/51.html" rel="next" title="C# CEF 使用内置devtools对整个网页截图">
-      C# CEF 使用内置devtools对整个网页截图 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -909,6 +889,9 @@ window.onload = function () {
   
 
   
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
 
   
 
