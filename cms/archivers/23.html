@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+
+<!-- MODIFIED BY 5972 -->
+  <script data-ad-client="ca-pub-3179887013052109" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+  <link rel="stylesheet" href="/cms/css/main.css">
+  <link rel="stylesheet" href="/cms/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/cms/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/api/css/share.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/No5972/Live2D@6/live2d/css/live2d.css" />
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1939188_d0c71y2xrhb.css">
+  <!-- <link rel="stylesheet" href="https://fonts.font.im/css?family=Noto%20Serif%20TC&display=swap&subset=latin,latin-ext"/> -->
+  <!-- <link rel="stylesheet" href="https://fonts.font.im/css?family=Noto%20Serif%20SC&display=swap&subset=latin,latin-ext"/> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-TC-CSS@4.0.0/noto_serif_tc_regular/css.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-TC-CSS@4.0.0/noto_serif_tc_bold/css.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-SC-CSS@4.0.0/noto_serif_sc_regular/css.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-SC-CSS@4.0.0/noto_serif_sc_bold/css.css"/>
+  <style>
+    #landlord {
+      bottom: -70px;
+      width: 200px;
+      height: 400px;
+    }
+    
+    #live2d {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/No5972/live2d-widget@20/autoload.js"></script> -->
+  
+  
+  <style>
+    @font-face
+    {
+      font-family: HappyZcool-2016;
+      src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@10/zcoolhappy_1630.6.woff'); /* IE9+ */
+    }
+
+    @font-face
+    {
+      font-family: CCKT;
+      src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@12/cckt.woff'); /* IE9+ */
+    }
+
+    
+    @font-face
+    {
+      font-family: DIN-Bold;
+      src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@10/din-bold-2.otf'); /* IE9+ */
+    }
+
+    @font-face
+    {
+        font-family: FreeSerif;
+        src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerif.otf');
+        font-style: normal;
+        font-weight: normal;
+    }
+	
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerif.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifBold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifItalic.otf');
+    font-style: italic;
+    font-weight: normal;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifBoldItalic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+    .message {
+      font-family: HappyZcool-2016;
+    }
+  </style> 
+  <style>
+    .pace .pace-progress {
+      background: #fff !important;
+    }
+  </style>
+<!-- MODIFIED BY 5972 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/cms/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/cms/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/cms/images/favicon.ico">
+  <link rel="mask-icon" href="/cms/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/cms/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+  
+  <link rel="stylesheet" href="/cms/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.min.css">
+  <script data-pace-options='{ "ajax": false }' src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"no5972.github.io","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="上网，现在已经成为人们生活中不可或缺的一部分，看新闻、看视频、网络购物、玩游戏、刷微博，网络服务也越来越五花八门、花样繁多了，随着网络服务的不断丰富人们对网络速度的要求也越来越高了，往往会花更多的钱购买更快的宽带网络服务。但是不少网民在花高价买了宽带服务之后，却发现网速并没有明显提升，甚至有人还觉得网速更慢了，这究竟是怎么回事呢？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="假宽带真相">
+<meta property="og:url" content="https://no5972.github.io/cms/archivers/23.html">
+<meta property="og:site_name" content="No.5972 Publishment Website">
+<meta property="og:description" content="上网，现在已经成为人们生活中不可或缺的一部分，看新闻、看视频、网络购物、玩游戏、刷微博，网络服务也越来越五花八门、花样繁多了，随着网络服务的不断丰富人们对网络速度的要求也越来越高了，往往会花更多的钱购买更快的宽带网络服务。但是不少网民在花高价买了宽带服务之后，却发现网速并没有明显提升，甚至有人还觉得网速更慢了，这究竟是怎么回事呢？">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img.shields.io/badge/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0-%E6%AF%8F%E5%91%A8%E8%B4%A8%E9%87%8F%E6%8A%A5%E5%91%8A-brightgreen">
+<meta property="og:image" content="http://p2.img.cctvpic.com/program/zhiliangbaogao/20121008/images/1349650078029_1349650078029_r.jpg">
+<meta property="og:image" content="http://p2.img.cctvpic.com/program/zhiliangbaogao/20121008/images/1349650125436_1349650125436_r.jpg">
+<meta property="og:image" content="http://p2.img.cctvpic.com/program/zhiliangbaogao/20121008/images/1349650033675_1349650033675_r.jpg">
+<meta property="article:published_time" content="2020-08-11T03:00:00.000Z">
+<meta property="article:modified_time" content="2021-02-07T16:35:42.667Z">
+<meta property="article:author" content="No.5972">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.shields.io/badge/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0-%E6%AF%8F%E5%91%A8%E8%B4%A8%E9%87%8F%E6%8A%A5%E5%91%8A-brightgreen">
+
+<link rel="canonical" href="https://no5972.github.io/cms/archivers/23.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>假宽带真相 | No.5972 Publishment Website</title>
+  <script>
+      if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
+        window.onload = function () {
+          $("style,link").remove();
+        }
+        console.log("IE Found!");
+        
+      }
+
+  </script>
+  <script>
+function loadJS( url, callback ){
+    var script = document.createElement('script'),fn = callback || function(){};
+    script.type = 'text/javascript';
+    //IE
+    if(script.readyState){
+        script.onreadystatechange = function(){
+            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                script.onreadystatechange = null;
+                fn();
+            }
+        };
+    }else{
+        //其他浏览器
+        script.onload = function(){
+            fn();
+        };
+    }
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+
+
+
+  </script>
+  <style>
+#switchBackgroundBtn {
+ right: 30px;
+ opacity: 0 !important;
+ transition: opacity 0.5s;
+}
+
+#switchBackgroundBtn {
+
+} 
+
+#switchBackgroundBtn:hover {
+ opacity: 1 !important;
+} 
+
+@media (max-width: 991px) {
+ #switchBackgroundBtn {
+  right: 20px;
+ } 
+}
+  </style>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/cms/feed.xml" title="No.5972 Publishment Website" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <!-- <div style="position:fixed;width: 100%;height: 100%;background: url(https://cdndata.fairyabc.com/attachment/album/201809/06/161517g07y9z06yfunuuub.jpg);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none;" id="customBackground"></div> -->
+    <div style="position:fixed;width: 100%;height: 100%;background: url(https://img.paulzzh.tech/touhou/random);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none; display: none; filter: blur(3px)" id="randomBackground"></div>
+    <div style="position:fixed;width: 100%;height: 100%;background: url(https://cdn.jsdelivr.net/gh/No5972/Live2D@13/161517g07y9z06yfunuuub.jpg);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none; display: block;" id="customBackground"></div>
+    <div class="back-to-top1" id="switchBackgroundBtn" onclick="toggleRandomBackground()" style="bottom: 60px; box-sizing: border-box; color: #fff; padding: 0 6px; transition: bottom 0.2s ease-in-out; background: #007ff3; cursor: pointer; opacity: 0.6; position: fixed; z-index: 1300; width: 24px; font-size: 12px;"><i class="fa fa-paint-brush"></i></div>
+    <div id="cookie-alert" style="position: absolute; width: 100%; height: fit-content; background: white; left: 0; top: 0; display: none; z-index: 1000;">We use cookies to improve your experience on our website. By browsing this website, you agree to our use of cookies. <a href="#" onclick="agreeCookies()">OK</a>&nbsp;|&nbsp;<a href="/cms/cookie-notice">Learn More &gt;</a></div>
+    <script>
+      
+
+      if(!localStorage.getItem('mask')){
+       document.getElementById("cookie-alert").style.display = "block";
+      }
+
+      function refreshRandomBackgroundStatus() {
+       document.getElementById('randomBackground').style.display = "block";
+       if (localStorage.getItem('randomBackground') == 'true') {
+        document.getElementById('randomBackground').style.display = "block";
+        document.getElementById('customBackground').style.display = "none";
+       } else {
+        document.getElementById('randomBackground').style.display = "none";
+        document.getElementById('customBackground').style.display = "block";
+       }
+      }
+
+      function toggleRandomBackground() {
+       if (localStorage.getItem('randomBackground') == null || localStorage.getItem('randomBackground') == 'false') {
+        localStorage.setItem('randomBackground', 'true');
+       } else {
+        localStorage.setItem('randomBackground', 'false');
+       }
+       refreshRandomBackgroundStatus();
+      }
+
+      refreshRandomBackgroundStatus();
+      
+      function agreeCookies() {
+        document.getElementById("cookie-alert").style.display = "none";
+        localStorage.setItem('mask','true');
+      }
+
+      window.onload = function () {
+        // IE Alert
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+         var p = document.createElement("div");
+         p.style.color="#000";
+         p.style.position="absolute";
+         p.style.width="100%";
+         p.style.height="fit-content";
+         p.style.background="white";
+         p.style.left=0;
+         if(!localStorage.getItem('mask')){
+           p.style.top="32px";
+         } else {
+           p.style.top=0;
+         }
+         p.style.zIndex=1000;
+         p.innerHTML = 'Please note that this site no longer supports Internet Explorer. Please use <a href="https://www.microsoft.com/edge" target="_blank" rel="noopener">Microsoft Edge</a> or other browsers to browse this site.'
+         document.body.insertBefore(p, document.getElementsByClassName("cookie-alert")[0]);
+        }
+
+        const selects = document.querySelectorAll('.lang-select');
+        selects.forEach(sel => {
+          sel.addEventListener('change', () => {
+            const target = sel.options[sel.selectedIndex];
+            sessionStorage.setItem("lang", target.label);
+          });
+        });
+        
+        $("a[target=_blank]").each (function () { $(this).attr("onclick", "window.open('/cms/confirm.html?' + encodeURI($(this).attr(\"href\"))) ; return false;");} )
+
+        var pageLoadTime = new Date().getTime()  - window.performance.timing.navigationStart;
+        if (pageLoadTime > 10000 && location.pathname == "/cms/") {
+         loadJS("https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.min.js?v=" + new Date().getTime(), function () {
+          layer.msg('本次访问网站消耗了 ' + pageLoadTime + ' 毫秒，访问较慢，推荐访问国内镜像站 https://no5972.gitee.io ，访问更快。', {
+            time: 10000, //20s后自动关闭
+            btn: ['确认', '取消'],
+            yes: function () {
+              location.href="https://no5972.gitee.io/cms";
+            }
+          })
+         })
+        }
+      }
+
+      if (sessionStorage.getItem("lang") == "简体中文" && location.href.lastIndexOf("zh-CN") == -1) { 
+        location.href = location.href.replace("/cms/", "/cms/zh-CN/");
+      }
+
+/*
+window.onload = function () {
+	if (navigator.userAgent.lastIndexOf("Macintosh") != -1 || navigator.userAgent.lastIndexOf("Windows NT") != -1) {
+	if (navigator.platform.lastIndexOf("Linux arm") == -1) { // 手机浏览器不支持视频透明
+		var v = document.createElement("video");
+		v.src = "https://cdn.jsdelivr.net/gh/No5972/Live2D@master-1/2ce423abb276a932119.mp4";	
+		v.loop = true;
+		v.autoplay = true;
+		v.currentTime = 40;
+		$(v).css("height" ,"100%");
+		$(v).css("width" ,"100%");
+		$(v).css("object-fit" ,"fill");
+
+
+		$("#customBackground").html("");
+		$("#customBackground").append(v);
+		$("#customBackground").find("video")[0].play();
+	}
+	}
+}
+*/
+
+    </script>
+    <!-- <script>
+      (function(d) {
+        var config = {
+          kitId: 'cwe3tnz',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script> -->
+
+    <main class="main">
+
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/cms/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">No.5972 Publishment Website</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Easier than easy.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-return">
+
+    <a href="https://no5972.github.io/" rel="section"><i class="fa fa-reply fa-fw"></i>Return</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/cms/about.html" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/cms/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/cms/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-toolkit">
+
+    <a href="/cms/archivers/4.html" rel="section"><i class="fa fa-wrench fa-fw"></i>Toolkit</a>
+
+  </li>
+        <li class="menu-item menu-item-donate">
+
+    <a href="/cms/donate/" rel="section"><i class="fa fa-child fa-fw"></i>Donate</a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/cms/links/" rel="section"><i class="fa fa-link fa-fw"></i>Site Navigation</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar" style="background: #fff2; padding: 20px 0;">
+
+    <div class="sidebar-inner sidebar-overview-active" style="display: contents;">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="No.5972"
+      src="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
+  <p class="site-author-name" itemprop="name">No.5972</p>
+  <div class="site-description" itemprop="description">No.5972 is silly B</div>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/No5972" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;No5972" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/14547429/no-5972" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;14547429&#x2F;no-5972" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wujiuqier#foxmail.com" title="E-Mail → mailto:wujiuqier#foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/cms/feed.xml" title="RSS → &#x2F;feed.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_35977139" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_35977139" rel="noopener" target="_blank"><i class="iconfont icon-csdn_new fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/12551304" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;12551304" rel="noopener" target="_blank"><i class="iconfont icon-bilibili-fill fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://tieba.baidu.com/home/main?un=wujiuqier" title="Tieba → https:&#x2F;&#x2F;tieba.baidu.com&#x2F;home&#x2F;main?un&#x3D;wujiuqier" rel="noopener" target="_blank"><i class="iconfont icon-tieba fa-fw"></i></a>
+      </span>
+  </div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/cms/archives/">
+        
+          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+
+    
+                <nav class="site-nav">
+                  <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C/">C#</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Github/">Github</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Java/">Java</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Moving-Away-from-Flash/">Moving-Away-from-Flash</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Other/">Other</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Python/">Python</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Server/">Server</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Web-Building/">Web-Building</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Webapp/">Webapp</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll/">jekyll</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll-update/">jekyll update</a><span class="category-list-count">1</span></li></ul>
+                </nav>
+                <nav class="site-nav" style="width: 80%; overflow-x: hidden;">
+                  <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/70.html">Hexo Gitee Pages 自动部署站点</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/69.html">Github 添加一个实时显示StackOverflow分数Reputation的徽章</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/68.html">根据之前文章整理的在2021年继续使用Flash Player的方法【重新整理】</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/67.html">证明0.999...=1 《高等数学》复旦版黄立宏第四版</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/66.html">Github 个人Profile 自动实时获取最新博客博文日志并生成链接</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/65.html">AX版Flash 1月12日之后继续使用Flash的方法</a></li></ul>
+                </nav>
+              
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/No5972" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/23.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
+      <meta itemprop="name" content="No.5972">
+      <meta itemprop="description" content="No.5972 is silly B">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="No.5972 Publishment Website">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+          假宽带真相
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-08-11 11:00:00 | Modified: 2021-02-08 00:35:42" itemprop="dateCreated datePublished" datetime="2020-08-11T11:00:00+08:00">2020-08-11 11:00:00</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/cms/categories/Webapp/" itemprop="url" rel="index"><span itemprop="name">Webapp</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/cms/archivers/23.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/23.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>来源：<a href="http://tv.cctv.com/2012/12/10/VIDE1355099956906900.shtml" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E4%B8%AD%E5%A4%AE%E7%94%B5%E8%A7%86%E5%8F%B0-%E6%AF%8F%E5%91%A8%E8%B4%A8%E9%87%8F%E6%8A%A5%E5%91%8A-brightgreen" alt="中央电视台每周质量报告" /></a></p>
+<p>上网，现在已经成为人们生活中不可或缺的一部分，看新闻、看视频、网络购物、玩游戏、刷微博，网络服务也越来越五花八门、花样繁多了，随着网络服务的不断丰富人们对网络速度的要求也越来越高了，往往会花更多的钱购买更快的宽带网络服务。但是不少网民在花高价买了宽带服务之后，却发现网速并没有明显提升，甚至有人还觉得网速更慢了，这究竟是怎么回事呢？</p>
+<p>北京市的苏小姐由于嫌4兆宽带网速慢，便在今年3月9号花2100元钱，购买了包月的6兆宽带。然而，钱花出去半年多了，至今网速都没有快起来。</p>
+<p>苏小姐：基本都是很卡，一般比如说我要是看一个东西，我得先缓冲，缓冲5到10分钟，然后能看个5到10分钟，然后再缓冲，再看。</p>
+<p>调查中，记者注意到，像苏小姐一样怀疑宽带网速有问题的用户不在少数。北京的郭先生甚至觉得家里的6兆宽带和之前安装的3兆宽带网速相差不大。</p>
+<p>郭先生：网速这么慢，比如说看视频非常卡的时候，就会很影响心情，心情很糟糕。</p>
+<p>记者调查发现，不少宽带用户怀疑自己包月购买的宽带有问题，然而，宽带网络服务商却往往另有说法。这家名为“英联宽带”的网络服务商强调，苏小姐等用户购买的宽带都是独享的，不会受别的宽带用户上网的影响，比如用户买的是6兆宽带，网速就能保证有6兆，宽带带宽越大，网速也就越快。</p>
+<p>英联宽带公司业务员：这个速度肯定够，因为咱这帐号绑定宽带，独享的。</p>
+<p>宽带服务商还建议怀疑网速有问题的用户，可以用网上公开的一些测速试软件检测去网速。用户测试后发现，尽管宽带用起来很慢，但测试显示的网速却并不低。宽带公司独享宽带的承诺，再加上用网上公开的网速测试软件测出来的网速并不低的印证结果，并不能彻底消除用户对网速慢的质疑。</p>
+<p>根据全国消费者协会组织受理投诉情况的不完全统计，今年上半年，包括宽带服务在内的互联网服务等服务类投诉占投诉总量的比重继续呈上升趋势，由2011年同期的32.9%上升到34.5%。今年8月份，仅北京市工商局、北京市消费者协会的12315和96315两条热线，共受理涉及宽带网络接入类的投诉156件，比7月份增加了一半多。而且，投诉的主要问题就是宽带网速慢，经常断网，实际网速和合同约定不符。</p>
+<p><img src="http://p2.img.cctvpic.com/program/zhiliangbaogao/20121008/images/1349650078029_1349650078029_r.jpg" alt="" /></p>
+<p>为了了解用户所用宽带的真实技术参数信息，清华大学网络中心的专家先后对北京、四川、天津、河北、深圳等地的一些用户使用的宽带质量进行测试。</p>
+<p>专家告诉记者，比如一首普通的MP3歌曲，用6兆带宽的宽带来下载，通常只需要6秒左右就能下载完毕，宽带越大，下载速度也就越快。</p>
+<p>那么，苏小姐家所购买的6兆宽带，事实上到底是多大的带宽呢？</p>
+<p>对于一般住宅小区宽带来说，白天时段是非上网高峰期，6月30日中午，专业技术人员对苏小姐家的宽带进行了第一次专业测试，结果发现，实际带宽和所购买的带宽相差甚远。</p>
+<p>清华大学网络中心工程师许伟林：我们现在一共做了三个测速试验，我们可以得出一个结论，就是这个服务商它提供的带宽呢，实际上就是3兆左右。</p>
+<p>专业技术人员在晚上八九点钟上网高峰期，对用户使用的宽带进一步测试后发现，实际网速更加慢。</p>
+<p>清华大学网络中心工程师许伟林：首先我们是用iperf这个工具测试上传带宽，结果只有0.5兆，丢包率达到了12%；然后，我们用FTP协议测试下载带宽。最终结果显示，下载带宽只有0.29兆。也就是说，上网高峰期用户实际拥有的带宽还不到所购买宽带带宽的百分之五。</p>
+<p><img src="http://p2.img.cctvpic.com/program/zhiliangbaogao/20121008/images/1349650125436_1349650125436_r.jpg" alt="" /></p>
+<p>清华大学网络中心副教授诸葛建伟：他的网速之所以很慢，就是因为宽带的服务商并没有给他提供足量的网络带宽的资源。</p>
+<p>技术人员随后对宽带测试结果进一步分析发现，用户在上网高峰期发送的数据文件在这个宽带传输时丢包率高达12%，反映出用户的宽带网速极其不稳定。</p>
+<p>清华大学网络中心工程师许伟林：所谓丢包率，指的就是丢失的数据包数量占发送数据包数量的一个百分比。通俗地说，发送100个数据包，如果丢了12个，那么丢包率就是12%，这是一个非常高的数字，这就说明，这个宽带，网速不仅非常的慢而且还不太稳定。</p>
+<p>此前，北京这家“英联宽带”网络服务商明确地告诉记者，他们向用户承诺的是独享带宽，也就是说，用户买的6兆的宽带，实际享用到的也就应该是6兆的带宽。</p>
+<p>清华大学网络中心工程师许伟林：从6月到8月，我们不定期地在那个上网的高峰期和非上网高峰期多个时段进行了测试，发现带宽最高的时候只有3兆，最低的时候才零点几兆。这就充分说明一个问题，用户使用的这个宽带，它不是独享带宽，它肯定是一个共享带宽。共享带宽的一个显著特点就是，随着上网用户增多的时候，它的带宽是不稳定的，用户越多，它的网速，每个人分摊到的网速就越慢。</p>
+<p>记者跟随清华大学的网络技术专家先后在北京、四川、天津、深圳、河北、山东等地，对英联宽带、中宽网、同创宽带等网络服务商提供给用户的宽带进行测试调查后发现，像这种宽带带宽缺斤短两、网速严重偏慢的现象绝非个别。</p>
+<p>专业的中国互联网调查组织机构和数据平台DCCI互联网数据中心今年年初公布的一项《中国宽带用户调查》数据也表明，我国绝大部分互联网用户所使用的宽带的实际下载速率低于宽带运营商提供的名义宽带速率。用户所用宽带的实际平均上网速度，超过一半以上都达不到标定网速。数据显示，多数用户办理的固网宽带带宽为2M或4M。4M宽带，理论上应有512KB/s的网速；2M宽带，理论网速是256KB/s，而实际上，2M带宽下用户平均上网速度仅为142.2KB/s，4M带宽下平均网速仅仅为232.7KB/s，与名义速度相差很大。</p>
+<p>通过专家的测试，发现宽带运营商提供给用户的带宽比所标称的带宽明显要小，但是，在调查中，记者注意到一个奇怪的现象，对于许多用户来说，由于无法证实自己对网速的怀疑，而只能用宽带运营商推荐的，或者网上公开的一些测试软件进行测试，但是测试结果往往却显示用户的宽带网速完全能够达到合同约定的带宽，这又是怎么回事呢？</p>
+<p>记者调查发现，宽带用户按照宽带运营商的说法，用一些测试软件测试宽带网速，有些测试结果竟然比用户所购买的宽带所标称的网速还要高出很多。成都市龙泉驿区的李先生购买的原本是3兆的宽带，用网上免费使用的360安全卫士自带的网速测试软件进行测试后，发现所显示的宽带网速竟然达到10兆。</p>
+<p>宽带用户李先生：一开始，我是用360的测速来(测速)，结果却显示，我的宽带速度接近10兆，它的速度，就是夸张点形容就是像火箭一样快，但是呢，我办的网上这个宽带只有3兆。</p>
+<p><img src="http://p2.img.cctvpic.com/program/zhiliangbaogao/20121008/images/1349650033675_1349650033675_r.jpg" alt="" /></p>
+<p>记者拨通了360安全卫士的网速测试软件的客户服务电话。</p>
+<p>360安全卫士客户服务人员</p>
+<p>记者：360吗？</p>
+<p>对</p>
+<p>记者：您好，我问一下，咱们这边用你的安全卫士带的测速软件会不会有问题？</p>
+<p>不会有问题</p>
+<p>记者：会不会不准？</p>
+<p>不会不准。</p>
+<p>记者：会不会有偏差？</p>
+<p>不会有偏差。</p>
+<p>记者：这么绝对啊？</p>
+<p>对。</p>
+<p>那么，真相到底如何，用360自带的测速工具等测速软件测试出的宽带速度又究竟是从何而来的呢？清华大学的网络研究专家对此进行仔细研究后发现，这类测速软件，本身就有明显的设计缺陷。</p>
+<p>清华大学网络中心副教授诸葛建伟：它的P2SP一个测速方法存在着一个设计上的缺陷。这种P2SP测速方法，它会去选择一些同样安装了这款软件的其他的连接节点来进行测速，只要其中有一个节点，它是在这个用户同一个小区宽带的子网里面，它的这个链路质量就非常好，网速就非常快，所以它测得的网速就可能超过了运营商所提供的那样一个带宽的水平。</p>
+<p>专家进一步研究后还发现，网上360安全卫士自带的测速工具、一些在线测速器等免费网速测试软件几乎都不可靠，测试结果可以轻易地被多种方法干扰。原本不到10兆的宽带，一经测试甚至会变成高达几百兆的宽带。</p>
+<p>清华大学网络中心副教授诸葛建伟：我们发现很多方法，会干扰到测速软件的测试结果，比如DNAT，DNS污染，这些作弊手段，可以随心所欲地让测速软件测得任意的网速。那现在这款360安全卫士的软件，它提供的排行榜功能，就已经成为了一个骗人的道具。</p>
+<p>用户花高价买到的宽带网速达不到宽带运营商所承诺的标准，而一些网速测试软件测试的结果又往往明显偏高。那么，这些测试软件掩饰真实网速的背后到底隐藏着什么秘密？</p>
+<p>在北京天通苑这个小区的一栋公寓楼外，宽带服务商的广告特别醒目，所提供的宽带没有低于4兆的带宽。而且，带宽数值越大，用户需要缴纳的包月费用就越多。4兆的宽带，包1年送1年用户需要缴纳1960元钱；而6兆的宽带包1年送1年，用户则需要缴纳2100元，相当于1年包月的费用是1050元。</p>
+<p>宽带公司业务员：天天能装个二三十户。我刚才跟您说，是我们之前几个月，是它突破一万户。</p>
+<p>1万用户数，如果按照平均包月购买的都是6兆宽带来计算，这家名为英联宽带的运营商仅在这个小区的年业务收入为1050万元。专家告诉记者，如果该宽带公司履行承诺让用户使用上独享6兆宽带的话，该公司将入不敷出。</p>
+<p>清华大学网络中心副教授诸葛建伟：即便这些宽带公司能够以一个极低的、3折的一个优惠，从一级运营商那里拿到这个带宽，那它们要保证1万户独享带宽的用户享受到6兆带宽的接入，那它们仅上交给一级运营商的一个成本就达到了2700多万元，那这些宽带公司早就破产了。</p>
+<p>一位业内人士向记者透露，目前，我国宽带运营体系除联通公司和电信公司等一级宽带运营商外，还有许多大大小小的二级、三级宽带运营商，以及小区宽带运营商，他们从上一级宽带运营商手里集中购买一定数量的宽带，然后再转售给宽带用户牟利。由于宽带用户几乎很少会同时在线上网，对于宽带运营商、宽带公司来说，用最低的成本获取宽带资源，然后，再尽可能地最大化地利用这些资源，也就是卖给许许多多的宽带用户，就可以极大地摊薄宽带公司的运营成本，所以，大量的宽带用户，拥挤在有限的宽带资源上，必然会出现上网高峰期，网络拥挤，网速急速下降的情况。</p>
+<p>宽带业内人员：比如说，包了100兆，或者包了10兆，包完之后，他自己再往外分。比如说10兆的话，可以分给10个人；每人1兆的话，它现在就分给100个人，然后也是每人1兆，这样共享。如果说这100个人，只有10个人在上网的时候，它就能保证它那个质量，但如果这100个人都在上网的话，那这个速度就达不到了。</p>
+<p>这家宽带公司的业务员最终向记者承认：他们向苏小姐等宽带用户所提供的宽带网速事实上达不到所承诺的标准。而且他还向记者透露，宽带的带宽缺斤短两是行业内的一个普遍现象。</p>
+<p>宽带公司业务员：都是一到上网高峰期，他的网速肯定不会达到理想的、预期这种效果。</p>
+<p>记者：6兆的在高峰期、晚上，它不会低于多少兆？</p>
+<p>4兆吧。</p>
+<p>记者：那包4兆的呢，高峰期不会低于多少兆？</p>
+<p>不会低于2.5兆。</p>
+<p>记者：那怎么这个少了一半呢？怎么能这样干呢？</p>
+<p>所有宽带都是这样。</p>
+<p>至此，记者调查发现，我国一些宽带网络服务提供商在用最低的成本获取宽带资源后，便往往罔顾消费者利益，背弃当初向用户推销宽带时所许下的独享宽带、保证网速的承诺，把有限的宽带资源分卖给尽量多的用户，来摊薄运营成本，实现利益最大化；与此同时，一些网上公开供人免费使用的网速测试软件，由于有设计缺陷，会显示虚高的网速测试结果，无形中又帮了宽带网络服务商的忙，让用户不容易对宽带网速产生怀疑，如此一来，吃亏的总是宽带用户。</p>
+<p>清华大学网络中心副教授诸葛建伟：经过我们的调查测算，我们发现全国固网宽带用户达到的实际带宽仅仅是标称带宽的55%。换句话说，这就意味着这些固网宽带用户在带宽上花的钱将近一半都是冤枉钱。</p>
+<p>经过测试发现，不少用户花大价钱购买的高速宽带，实际上达不到网络服务商标定的带宽，因此有些用户感到网速过慢，甚至感觉到上当受骗。我们的生活已经在向网络化迈进，网络服务的质量关系和我们的生活关系已经越来越密切了。我国现在非常重视网络建设的投入和发展，甚至已经把宽带发展摆到了国家战略的层面。然而一些网络运营商和服务商却在提供网络服务的时候缺斤短两，愚弄用户。希望有关部门能切实加强对这种不合理现象的监管和打击力度，切实提高网速，维护消费者的正当权益。感谢收看《每周质量报告》，下周同一时间再见。</p>
+
+    </div>
+
+    
+    
+    
+         <div style="color: #888a; font-family: DIN-Bold; background: #eee5; padding: 10px; margin-bottom: 10px;">Publishing this article is for the purpose of conveying more information, and does not mean agreeing with its views or confirming its description, nor does it mean that we are responsible for its authenticity. Should you have any questions or doubts about the content of the post, please don't hesitate to contact us. We will respond to you and deal with it as quickly as possible.</div>
+
+      <footer class="post-footer">
+
+        
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1fe0947c0fa73a" async="async"></script>
+  </div>
+  <div class="ad" style="text-align: center;">
+    <a href="https://curl.qcloud.com/rU5hN2sp" target="_blank"><img src="//s3.ax1x.com/2021/01/25/sLsRbt.jpg"></img></a>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/cms/archivers/22.html" rel="prev" title="（正式版已修复）Hexo NexT主题 Valine评论 多语言失效">
+      <i class="fa fa-chevron-left"></i> （正式版已修复）Hexo NexT主题 Valine评论 多语言失效
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/cms/archivers/24.html" rel="next" title="博客设置误区多">
+      博客设置误区多 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="author" itemprop="copyrightHolder">No.5972</span>
+</div>
+
+<div class="copyright" style="
+    vertical-align: middle;
+">
+<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/" style="
+    padding-right: 10px;
+    border: none;
+"><img alt="Creative Commons License" style="border-width:0;margin: unset;/* max-width: unset; */display: inline;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAABGdBTUEAANbY1E9YMgAAAJZQTFRF////7u7u3d3dys7KzMzMyMzIxsrGxcbFur+6u7u7s7iyq7GqqqqqmZmZlJmTj5CPiIiIh4eHhoaGgICAfYJ9d3d3cnZxZ2tnZmZmW15bVVVVS0xLREREQ0NDQkJCQUJBOz07OTs5MzMzMTMxLjAuJygnJCUjIiIiISEhICAgGRkZERERDxAPDg4ODQ4NDQ0NDQ0MAAAADbeuvgAAANNJREFUeNqtk2kTgiAQhl/KzlWzgw6j+7Ayq/3/f64hTPNLNskOMMwuPLzsAtiygWHVNJC0TThIXSrxierXv/UZoJ8E2SHqQNQeVgSuT7lqh2dEjXk14C2AE7ESiiMHakdU773igF5keu5AKXDEHUQhpIyF50LeiNotEzct4+XO78AxO0JXJdzqO8uEqNvMBKUaYcbXDD8qVNNYSA/yXlRYEISfFNI9gBvzVCje1rDYF3L4sf+d03Lg5my5yv6jnwGXRwvvkMY8SHmrS9WfYvsvW7YnkDuZd7/ChBQAAAAASUVORK5CYII="></a>
+    <p style="display:inline-block;margin:0;">Original content of this site, except those works that are given appropriate credits, is licensed under a<br> <a rel="license noopener" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</div>
+  <div class="powered-by">
+    <a href="/cms/cookie-notice">Cookie Notice</a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/No5972/cms_source" target="_blank" rel="noopener">Site Source</a>
+    &nbsp;|&nbsp;Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 4.2.1 & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 8.0.0-rc.4
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        UV: <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class=""></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        PV: <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span id="daysCount"></span>
+    <script>
+      document.getElementById("daysCount").innerText = " " + parseInt(Math.abs(new Date()  -  new Date("2018-11-14"))  /  1000  /  60  /  60  /24)   + " days since this blog's being founded";
+    </script>
+
+
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.5/source/js/utils.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.5/source/js/motion.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.5/source/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.4/source/js/local-search.js"></script>
+
+
+
+<!-- public live2d -->
+<div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="550" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
+<div class="marquee-container" style="position: fixed; width: 100%; height: 30px; color: black; background-color: white; left: 0; bottom: 0;">
+<div class="marquee">推进创文常态化 共建文明襄阳城　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　做文明襄阳人 建文明襄阳城 凝聚文明正能量 筑梦千年古襄阳　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　创建全国文明城市 加快建设汉江流域中心城市　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　讲文明 树新风　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　用微笑融化陌生 用文明美化襄阳　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　争当文明使者 播撒文明新风</div>
+</div>
+<script>$('.marquee').marquee({duration: 25000});</script>
+
+<script type="text/javascript">
+    var message_Path = 'https://cdn.jsdelivr.net/gh/No5972/Live2D@24/live2d/'
+    var home_Path = 'https://no5972.github.io/cms/'  //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/No5972/Live2D@11/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/No5972/Live2D@11/live2d/js/message.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://cdn.jsdelivr.net/gh/QiShaoXuan/live2DModel@1.0.0/live2d-widget-model-miku/assets/miku.model.json");
+    $("#landlord").draggable();
+</script>
+<!-- public live2d -->
+
+
+
+<script>
+    $(document).on('mouseenter', 'button:contains(Donate)', function(){
+        $("#post-reward").show();
+    }).on('mouseleave', 'button:contains(Donate)', function(){
+        $("#post-reward").hide();
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: location.pathname,
+    }, {"enable":true,"appId":"nOdccOqHtNBWpnoqXaBLw5Og-MdYXbMMI","appKey":"tYz6qEF31fk2WBHYsyO8RHQP","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"en","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":"https://nodccoqh.api.lncldglobal.com"}
+    ));
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+
+<!-- MODIFIED BY 5972 -->
+  <script data-ad-client="ca-pub-3179887013052109" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+  <link rel="stylesheet" href="/cms/css/main.css">
+  <link rel="stylesheet" href="/cms/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/cms/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/api/css/share.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/No5972/Live2D@6/live2d/css/live2d.css" />
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1939188_d0c71y2xrhb.css">
+  <!-- <link rel="stylesheet" href="https://fonts.font.im/css?family=Noto%20Serif%20TC&display=swap&subset=latin,latin-ext"/> -->
+  <!-- <link rel="stylesheet" href="https://fonts.font.im/css?family=Noto%20Serif%20SC&display=swap&subset=latin,latin-ext"/> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-TC-CSS@4.0.0/noto_serif_tc_regular/css.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-TC-CSS@4.0.0/noto_serif_tc_bold/css.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-SC-CSS@4.0.0/noto_serif_sc_regular/css.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-SC-CSS@4.0.0/noto_serif_sc_bold/css.css"/>
+  <style>
+    #landlord {
+      bottom: -70px;
+      width: 200px;
+      height: 400px;
+    }
+    
+    #live2d {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/No5972/live2d-widget@20/autoload.js"></script> -->
+  
+  
+  <style>
+    @font-face
+    {
+      font-family: HappyZcool-2016;
+      src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@10/zcoolhappy_1630.6.woff'); /* IE9+ */
+    }
+
+    @font-face
+    {
+      font-family: CCKT;
+      src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@12/cckt.woff'); /* IE9+ */
+    }
+
+    
+    @font-face
+    {
+      font-family: DIN-Bold;
+      src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@10/din-bold-2.otf'); /* IE9+ */
+    }
+
+    @font-face
+    {
+        font-family: FreeSerif;
+        src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerif.otf');
+        font-style: normal;
+        font-weight: normal;
+    }
+	
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerif.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifBold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifItalic.otf');
+    font-style: italic;
+    font-weight: normal;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifBoldItalic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+    .message {
+      font-family: HappyZcool-2016;
+    }
+  </style> 
+  <style>
+    .pace .pace-progress {
+      background: #fff !important;
+    }
+  </style>
+<!-- MODIFIED BY 5972 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/cms/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/cms/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/cms/images/favicon.ico">
+  <link rel="mask-icon" href="/cms/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/cms/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+  
+  <link rel="stylesheet" href="/cms/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.min.css">
+  <script data-pace-options='{ "ajax": false }' src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"no5972.github.io","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Flash即将在2020年底停止支持。如果仍然有一些业内业务需要Flash我們应该如何应对，这里找到了更多的线索。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="探讨更多关于Flash Player的线索（21.01.28更新）">
+<meta property="og:url" content="https://no5972.github.io/cms/archivers/48.html">
+<meta property="og:site_name" content="No.5972 Publishment Website">
+<meta property="og:description" content="Flash即将在2020年底停止支持。如果仍然有一些业内业务需要Flash我們应该如何应对，这里找到了更多的线索。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201124155808679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTc3MTM5,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2020-11-24T08:45:00.000Z">
+<meta property="article:modified_time" content="2021-02-07T16:35:42.677Z">
+<meta property="article:author" content="No.5972">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201124155808679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTc3MTM5,size_16,color_FFFFFF,t_70#pic_center">
+
+<link rel="canonical" href="https://no5972.github.io/cms/archivers/48.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>探讨更多关于Flash Player的线索（21.01.28更新） | No.5972 Publishment Website</title>
+  <script>
+      if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
+        window.onload = function () {
+          $("style,link").remove();
+        }
+        console.log("IE Found!");
+        
+      }
+
+  </script>
+  <script>
+function loadJS( url, callback ){
+    var script = document.createElement('script'),fn = callback || function(){};
+    script.type = 'text/javascript';
+    //IE
+    if(script.readyState){
+        script.onreadystatechange = function(){
+            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                script.onreadystatechange = null;
+                fn();
+            }
+        };
+    }else{
+        //其他浏览器
+        script.onload = function(){
+            fn();
+        };
+    }
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+
+
+
+  </script>
+  <style>
+#switchBackgroundBtn {
+ right: 30px;
+ opacity: 0 !important;
+ transition: opacity 0.5s;
+}
+
+#switchBackgroundBtn {
+
+} 
+
+#switchBackgroundBtn:hover {
+ opacity: 1 !important;
+} 
+
+@media (max-width: 991px) {
+ #switchBackgroundBtn {
+  right: 20px;
+ } 
+}
+  </style>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/cms/feed.xml" title="No.5972 Publishment Website" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <!-- <div style="position:fixed;width: 100%;height: 100%;background: url(https://cdndata.fairyabc.com/attachment/album/201809/06/161517g07y9z06yfunuuub.jpg);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none;" id="customBackground"></div> -->
+    <div style="position:fixed;width: 100%;height: 100%;background: url(https://img.paulzzh.tech/touhou/random);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none; display: none; filter: blur(3px)" id="randomBackground"></div>
+    <div style="position:fixed;width: 100%;height: 100%;background: url(https://cdn.jsdelivr.net/gh/No5972/Live2D@13/161517g07y9z06yfunuuub.jpg);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none; display: block;" id="customBackground"></div>
+    <div class="back-to-top1" id="switchBackgroundBtn" onclick="toggleRandomBackground()" style="bottom: 60px; box-sizing: border-box; color: #fff; padding: 0 6px; transition: bottom 0.2s ease-in-out; background: #007ff3; cursor: pointer; opacity: 0.6; position: fixed; z-index: 1300; width: 24px; font-size: 12px;"><i class="fa fa-paint-brush"></i></div>
+    <div id="cookie-alert" style="position: absolute; width: 100%; height: fit-content; background: white; left: 0; top: 0; display: none; z-index: 1000;">We use cookies to improve your experience on our website. By browsing this website, you agree to our use of cookies. <a href="#" onclick="agreeCookies()">OK</a>&nbsp;|&nbsp;<a href="/cms/cookie-notice">Learn More &gt;</a></div>
+    <script>
+      
+
+      if(!localStorage.getItem('mask')){
+       document.getElementById("cookie-alert").style.display = "block";
+      }
+
+      function refreshRandomBackgroundStatus() {
+       document.getElementById('randomBackground').style.display = "block";
+       if (localStorage.getItem('randomBackground') == 'true') {
+        document.getElementById('randomBackground').style.display = "block";
+        document.getElementById('customBackground').style.display = "none";
+       } else {
+        document.getElementById('randomBackground').style.display = "none";
+        document.getElementById('customBackground').style.display = "block";
+       }
+      }
+
+      function toggleRandomBackground() {
+       if (localStorage.getItem('randomBackground') == null || localStorage.getItem('randomBackground') == 'false') {
+        localStorage.setItem('randomBackground', 'true');
+       } else {
+        localStorage.setItem('randomBackground', 'false');
+       }
+       refreshRandomBackgroundStatus();
+      }
+
+      refreshRandomBackgroundStatus();
+      
+      function agreeCookies() {
+        document.getElementById("cookie-alert").style.display = "none";
+        localStorage.setItem('mask','true');
+      }
+
+      window.onload = function () {
+        // IE Alert
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+         var p = document.createElement("div");
+         p.style.color="#000";
+         p.style.position="absolute";
+         p.style.width="100%";
+         p.style.height="fit-content";
+         p.style.background="white";
+         p.style.left=0;
+         if(!localStorage.getItem('mask')){
+           p.style.top="32px";
+         } else {
+           p.style.top=0;
+         }
+         p.style.zIndex=1000;
+         p.innerHTML = 'Please note that this site no longer supports Internet Explorer. Please use <a href="https://www.microsoft.com/edge" target="_blank" rel="noopener">Microsoft Edge</a> or other browsers to browse this site.'
+         document.body.insertBefore(p, document.getElementsByClassName("cookie-alert")[0]);
+        }
+
+        const selects = document.querySelectorAll('.lang-select');
+        selects.forEach(sel => {
+          sel.addEventListener('change', () => {
+            const target = sel.options[sel.selectedIndex];
+            sessionStorage.setItem("lang", target.label);
+          });
+        });
+        
+        $("a[target=_blank]").each (function () { $(this).attr("onclick", "window.open('/cms/confirm.html?' + encodeURI($(this).attr(\"href\"))) ; return false;");} )
+
+        var pageLoadTime = new Date().getTime()  - window.performance.timing.navigationStart;
+        if (pageLoadTime > 10000 && location.pathname == "/cms/") {
+         loadJS("https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.min.js?v=" + new Date().getTime(), function () {
+          layer.msg('本次访问网站消耗了 ' + pageLoadTime + ' 毫秒，访问较慢，推荐访问国内镜像站 https://no5972.gitee.io ，访问更快。', {
+            time: 10000, //20s后自动关闭
+            btn: ['确认', '取消'],
+            yes: function () {
+              location.href="https://no5972.gitee.io/cms";
+            }
+          })
+         })
+        }
+      }
+
+      if (sessionStorage.getItem("lang") == "简体中文" && location.href.lastIndexOf("zh-CN") == -1) { 
+        location.href = location.href.replace("/cms/", "/cms/zh-CN/");
+      }
+
+/*
+window.onload = function () {
+	if (navigator.userAgent.lastIndexOf("Macintosh") != -1 || navigator.userAgent.lastIndexOf("Windows NT") != -1) {
+	if (navigator.platform.lastIndexOf("Linux arm") == -1) { // 手机浏览器不支持视频透明
+		var v = document.createElement("video");
+		v.src = "https://cdn.jsdelivr.net/gh/No5972/Live2D@master-1/2ce423abb276a932119.mp4";	
+		v.loop = true;
+		v.autoplay = true;
+		v.currentTime = 40;
+		$(v).css("height" ,"100%");
+		$(v).css("width" ,"100%");
+		$(v).css("object-fit" ,"fill");
+
+
+		$("#customBackground").html("");
+		$("#customBackground").append(v);
+		$("#customBackground").find("video")[0].play();
+	}
+	}
+}
+*/
+
+    </script>
+    <!-- <script>
+      (function(d) {
+        var config = {
+          kitId: 'cwe3tnz',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script> -->
+
+    <main class="main">
+
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/cms/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">No.5972 Publishment Website</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Easier than easy.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-return">
+
+    <a href="https://no5972.github.io/" rel="section"><i class="fa fa-reply fa-fw"></i>Return</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/cms/about.html" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/cms/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/cms/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-toolkit">
+
+    <a href="/cms/archivers/4.html" rel="section"><i class="fa fa-wrench fa-fw"></i>Toolkit</a>
+
+  </li>
+        <li class="menu-item menu-item-donate">
+
+    <a href="/cms/donate/" rel="section"><i class="fa fa-child fa-fw"></i>Donate</a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/cms/links/" rel="section"><i class="fa fa-link fa-fw"></i>Site Navigation</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar" style="background: #fff2; padding: 20px 0;">
+
+    <div class="sidebar-inner sidebar-overview-active" style="display: contents;">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="No.5972"
+      src="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
+  <p class="site-author-name" itemprop="name">No.5972</p>
+  <div class="site-description" itemprop="description">No.5972 is silly B</div>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/No5972" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;No5972" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/14547429/no-5972" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;14547429&#x2F;no-5972" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wujiuqier#foxmail.com" title="E-Mail → mailto:wujiuqier#foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/cms/feed.xml" title="RSS → &#x2F;feed.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_35977139" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_35977139" rel="noopener" target="_blank"><i class="iconfont icon-csdn_new fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/12551304" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;12551304" rel="noopener" target="_blank"><i class="iconfont icon-bilibili-fill fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://tieba.baidu.com/home/main?un=wujiuqier" title="Tieba → https:&#x2F;&#x2F;tieba.baidu.com&#x2F;home&#x2F;main?un&#x3D;wujiuqier" rel="noopener" target="_blank"><i class="iconfont icon-tieba fa-fw"></i></a>
+      </span>
+  </div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/cms/archives/">
+        
+          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+
+    
+                <nav class="site-nav">
+                  <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C/">C#</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Github/">Github</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Java/">Java</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/JavaScript/">JavaScript</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Moving-Away-from-Flash/">Moving-Away-from-Flash</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Other/">Other</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Python/">Python</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Server/">Server</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Web-Building/">Web-Building</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Webapp/">Webapp</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll/">jekyll</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll-update/">jekyll update</a><span class="category-list-count">1</span></li></ul>
+                </nav>
+                <nav class="site-nav" style="width: 80%; overflow-x: hidden;">
+                  <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/70.html">Hexo Gitee Pages 自动部署站点</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/69.html">Github 添加一个实时显示StackOverflow分数Reputation的徽章</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/68.html">根据之前文章整理的在2021年继续使用Flash Player的方法【重新整理】</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/67.html">证明0.999...=1 《高等数学》复旦版黄立宏第四版</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/66.html">Github 个人Profile 自动实时获取最新博客博文日志并生成链接</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/65.html">AX版Flash 1月12日之后继续使用Flash的方法</a></li></ul>
+                </nav>
+              
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/No5972" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/48.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
+      <meta itemprop="name" content="No.5972">
+      <meta itemprop="description" content="No.5972 is silly B">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="No.5972 Publishment Website">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+                <span class="post-meta-item-icon">
+                <i class="fa fa-thumbtack"></i>
+                </span>
+                <font color="#007ff3">PINNED</font>
+                <span class="post-meta-divider">|</span>
+          探讨更多关于Flash Player的线索（21.01.28更新）
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-24 16:45:00 | Modified: 2021-02-08 00:35:42" itemprop="dateCreated datePublished" datetime="2020-11-24T16:45:00+08:00">2020-11-24 16:45:00</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/cms/categories/Moving-Away-from-Flash/" itemprop="url" rel="index"><span itemprop="name">Moving-Away-from-Flash</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/cms/archivers/48.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/48.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Flash即将在2020年底停止支持。如果仍然有一些业内业务需要Flash我們应该如何应对，这里找到了更多的线索。</p>
+<ol>
+<li>
+<p>21.01.28更新：网传已有Edge的绿色版出现，经测试，版本小于88的Edge绿色版也可以通过手动导入Flash的方式来使用Flash。</p>
+</li>
+<li>
+<p>21.01.22更新：Edge今天已经更新了88版本。Flash已经无法使用。请大家下载绿色版Chrome来继续使用Flash。有不少绿色版Chrome内置旧版Flash Player。</p>
+</li>
+<li>
+<p>21.01.20更新：Chrome今天已经正式更新了88版本，Flash已经无法再继续使用。Chrome的网上应用店出现了一款可以使用H5替代方案播放Flash内容的扩展<a href="https://chrome.google.com/webstore/detail/flashplayer-swf-to-html/nodnmpgjlnclahkmgjiinfjklgbbgecg/" target="_blank" rel="noopener">《FlashPlayer - SWF to HTML》</a>。此扩展会检测当前网页有无Flash对象，若有，则可以点击工具栏上的该扩展图标，即可以H5形式来播放Flash内容。</p>
+<ul>
+<li>该扩展整合了当前两种常用的开源替代方案来播放Flash内容。<a href="https://ruffle.rs/" target="_blank" rel="noopener">Ruffle</a>和<a href="https://swf2js.com/" target="_blank" rel="noopener">SWF2JS</a>。使用过程中可通过右击工具栏上该扩展图标来切换渲染方式。</li>
+<li>由于Ruffle目前尚未支持Action Script 3.0，所以使用AS3的Flash内容可能无法正常运作。</li>
+<li>SWF2JS的免费版尚未提供对AS3的支持；收费版则支持了90%的AS3，并且也提供了Stage3D、Socket、FLV、MP4的支持。</li>
+</ul>
+</li>
+<li>
+<p>21.01.19更新：淘米已经更新了<a href="http://dl.61.com/hua/WeHua.msi" target="_blank" rel="noopener">新的小花仙微端</a>。经过实测已经可以在移除了Flash 的机器使用。</p>
+<ul>
+<li>但此微端体积较大，安装后占用约250MB磁盘空间。</li>
+<li>此微端使用Electron开发，目前暂时还没有实现画面缩放和截图功能。</li>
+<li>集成的也是版本27的Flash，为PPAPI版本，无弹窗广告和隐私服务。</li>
+</ul>
+</li>
+<li>
+<p>21.01.18更新：淘米已经更新了<a href="http://dl.61.com/seer/Seer.msi" target="_blank" rel="noopener">新的赛尔号微端</a>，经过实测已经可以在移除了Flash的机器使用。微端集成的是版本27的Flash，无弹窗广告和隐私服务。</p>
+<ul>
+<li>大致看了一下文件结构，技术细节应该是走的内嵌Mozilla浏览器（也就是<code>GeckoWebBrowser</code>）加载NPAPI Flash。博客园那边也有不少相关文章讨论这方面内容。<a href="https://www.cnblogs.com/chengzi/p/4497692.html" target="_blank" rel="noopener">.net winform程序下使用firefox作为Web浏览器</a>、<a href="https://www.cnblogs.com/deali/p/6426593.html" target="_blank" rel="noopener">C#使用Gecko实现浏览器</a></li>
+</ul>
+</li>
+<li>
+<p>21.01.18更新：<a href="https://www.cr173.com/soft/1311482.html" target="_blank" rel="noopener">西西软件园已将吾爱破解论坛上的Flash破解补丁整合打包</a>，有出现Flash无法使用的用户可以尝试使用，<a href="https://www.52pojie.cn/thread-1350285-1-1.html" target="_blank" rel="noopener">注意一定要先看说明。</a></p>
+<ul>
+<li>此补丁中的Flash恢复包的OCX控件是32.0.0.445版本的，并且已经修改掉了自毁的定时器（也是通过最后的<code>42</code>字节改成<code>72</code>），注意此恢复包仅适用于安装了KB4577586“移除Flash的系统更新”的机器，未安装此更新的机器不要安装，否则会出现无法恢复的异常情况。</li>
+</ul>
+</li>
+<li>
+<p>21.01.13更新：百分浏览器论坛官方<a href="https://www.centbrowser.net/zh-cn/forum.php?mod=viewthread&amp;tid=6719&amp;extra=page%3D1" target="_blank" rel="noopener">推荐使用32.0.0.371版本</a>。猜测此版本也没有自毁。论坛超版回应：<a href="https://www.centbrowser.net/zh-cn/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=8423&amp;pid=49387" target="_blank" rel="noopener">看到有大佬实测最后一个能用的国际版版本是 32.0.0.371</a>。</p>
+</li>
+<li>
+<p>21.01.12更新：Flash 32.0.0.303没有自毁，仍然可以使用。</p>
+</li>
+<li>
+<p>21.01.12更新：今天开始已经无法在版本32以及以上的Flash Player中加载Flash内容。请大家使用国产浏览器来解决Flash停止支持的情况。</p>
+</li>
+<li>
+<p>21.01.08更新：淘米页游再次更新了浏览器不支持Flash时的提示信息。左上方出现了“安装Flash插件”的“点击下载”的按钮。此链接指向的是所谓的“特供版Flash”，此版本Flash本方从未承认过，请大家不要从该按钮指向的页面下载任何工具。我們呼吁淘米不要推荐所谓的“特供版Flash”。</p>
+</li>
+<li>
+<p>21.01.01更新：搜狗浏览器技术支持工程师回应：<a href="http://ie.sogou.com/bbs/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=2747473&amp;pid=8433589" target="_blank" rel="noopener">搜狗浏览器会一直支持flash插件的</a>。</p>
+</li>
+<li>
+<p>21.01.01更新：4399推荐使用360安全浏览器来游玩小游戏。4399已在1月1日更新了所有小游戏游玩页面，如果浏览器不支持Flash则显示“当前浏览器无法运行Flash。继续游戏，可使用以下第三方浏览器：360浏览器极速模式”，4399页面上的下载链接指向的是4399提供的360安全浏览器10。</p>
+<ul>
+<li>未经过测试，但是在云电脑上测试了360官方提供的360安全浏览器12，安装界面和安装过程无捆绑，但是在安装之后使用期间会有弹窗推送建议安装360安全卫士，这一点需注意。</li>
+<li>此外7k7k也更新了小游戏游玩页面，7k7k推荐使用360浏览器和搜狗浏览器，链接指向的分别是360安全浏览器的官网和搜狗浏览器的官网。</li>
+</ul>
+</li>
+<li>
+<p>21.01.01更新：淘米旗下所有Flash页游（包括赛尔号、摩尔庄园、小花仙等）更新了如果浏览器不支持Flash时的提示信息。淘米推荐使用猎豹浏览器、360安全浏览器、360极速浏览器、搜狗浏览器，此外还针对Mac系统推荐360极速浏览器。所有这些浏览器的链接指向的都是淘米提供的浏览器安装包。</p>
+</li>
+<li>
+<p>20.12.29更新：ZDNet消息：但是，跳过此最新的Flash更新不会删除此“定时炸弹”在以前的版本中，几个月前已添加了killswitch代码，而此最后的Flash更新仅修改了提示用户使用该应用程序的提示中使用的语言。</p>
+</li>
+<li>
+<p>20.12.29更新：Adobe那边又有动静，说1月12日开始将阻止Flash内容在Flash Player中加载，如果属实，之前的从Edge导入的Flash组件文件也将无法使用Flash，这种情况得换版本29的Flash（网上很难下载到）。对此的对策还在研究中！</p>
+</li>
+<li>
+<p>20.11.12更新：360极速浏览器产品答疑师“fly颖”回应：<a href="https://bbs.360.cn/forum.php?mod=viewthread&amp;tid=15933600&amp;page=1#pid118058892" target="_blank" rel="noopener">360浏览器会继续支持Flash的</a>。</p>
+</li>
+<li>
+<p>从<a href="https://blog.csdn.net/qq_35977139/article/details/109255750" target="_blank" rel="noopener">Chromium官方的消息</a>来看，预计将于2021年1月更新的88版本的内核将原生不支持Flash。即使国内继续支持也将无法在88版本以上内核的浏览器使用（这其中包括Win10 20H2开始自带的新版Edge浏览器）。</p>
+</li>
+<li>
+<p>Edge 88的Beta版预计将于12月7日上线，<a href="https://dy.163.com/article/FP68QH4Q0511MVC3.html" target="_blank" rel="noopener">微软官方明确此版本开始不再包含Flash</a>。而稳定版将于1月21日上线。而<a href="https://blog.csdn.net/qq_35977139/article/details/109255750#t10" target="_blank" rel="noopener">88版本开始Chromium将原生不支持Flash</a>，这意味着无论如何魔改也不会让使用这种内核的浏览器再去支持Flash。（已在版本89的Chromium中实测，将Edge的PepperFlash文件夹手动拷贝到Chromium的User Data文件夹下，运行Chromium时Chromium会自动删除PepperFlash文件夹。Chromium浏览器加载Flash会显示Adobe Flash Player已不再受支持，如图所示）（当然，这里的魔改是建立在不动源代码的前提下。因为Chromium本身是开源的，如果能魔改源代码使其能支持Flash也不是不可以）<br />
+<img src="https://img-blog.csdnimg.cn/20201124155808679.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTc3MTM5,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+</li>
+<li>
+<p>据外媒报道，Chrome 88版本将于1月19日正式发布。</p>
+</li>
+<li>
+<p>目前一些浏览器诸如百分浏览器、星愿浏览器均因某些不可描述的原因移除了集成的Flash。需要手动拷贝文件并从hosts屏蔽一些域名。</p>
+</li>
+<li>
+<p>从已经掌握的各个CVE漏洞（未修复的和已修复的）复现步骤来看，大部分Flash漏洞引起的黑客攻击是因为调用了恶意的SWF或者FLV文件，包含但不限于打开了内嵌恶意Flash的Office文档，以及打开了内嵌恶意Flash URL的网址页面。</p>
+</li>
+<li>
+<p>谷歌的Chromium内核的浏览器默认使用PPAPI的Flash，这种Flash运行在Chromium的一个沙箱之中，有效减少Flash利用漏洞的黑客攻击。但有些国产浏览器考虑到PPAPI Flash占用运行内存比较大，刻意将其替换为较不安全的NPAPI Flash。</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.getElementById('post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div id="post-reward">
+      
+      <div>
+        <img src="/cms/sponsor.png" alt="No.5972 Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+      <footer class="post-footer">
+
+        
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1fe0947c0fa73a" async="async"></script>
+  </div>
+  <div class="ad" style="text-align: center;">
+    <a href="https://curl.qcloud.com/rU5hN2sp" target="_blank"><img src="//s3.ax1x.com/2021/01/25/sLsRbt.jpg"></img></a>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/cms/archivers/47.html" rel="prev" title="NexT主题 Group Pictures添加超链接">
+      <i class="fa fa-chevron-left"></i> NexT主题 Group Pictures添加超链接
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/cms/archivers/49.html" rel="next" title="根据线索整理的一套在2021年继续使用Flash Player的方法（20.12.29更新）">
+      根据线索整理的一套在2021年继续使用Flash Player的方法（20.12.29更新） <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="author" itemprop="copyrightHolder">No.5972</span>
+</div>
+
+<div class="copyright" style="
+    vertical-align: middle;
+">
+<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/" style="
+    padding-right: 10px;
+    border: none;
+"><img alt="Creative Commons License" style="border-width:0;margin: unset;/* max-width: unset; */display: inline;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAABGdBTUEAANbY1E9YMgAAAJZQTFRF////7u7u3d3dys7KzMzMyMzIxsrGxcbFur+6u7u7s7iyq7GqqqqqmZmZlJmTj5CPiIiIh4eHhoaGgICAfYJ9d3d3cnZxZ2tnZmZmW15bVVVVS0xLREREQ0NDQkJCQUJBOz07OTs5MzMzMTMxLjAuJygnJCUjIiIiISEhICAgGRkZERERDxAPDg4ODQ4NDQ0NDQ0MAAAADbeuvgAAANNJREFUeNqtk2kTgiAQhl/KzlWzgw6j+7Ayq/3/f64hTPNLNskOMMwuPLzsAtiygWHVNJC0TThIXSrxierXv/UZoJ8E2SHqQNQeVgSuT7lqh2dEjXk14C2AE7ESiiMHakdU773igF5keu5AKXDEHUQhpIyF50LeiNotEzct4+XO78AxO0JXJdzqO8uEqNvMBKUaYcbXDD8qVNNYSA/yXlRYEISfFNI9gBvzVCje1rDYF3L4sf+d03Lg5my5yv6jnwGXRwvvkMY8SHmrS9WfYvsvW7YnkDuZd7/ChBQAAAAASUVORK5CYII="></a>
+    <p style="display:inline-block;margin:0;">Original content of this site, except those works that are given appropriate credits, is licensed under a<br> <a rel="license noopener" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</div>
+  <div class="powered-by">
+    <a href="/cms/cookie-notice">Cookie Notice</a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/No5972/cms_source" target="_blank" rel="noopener">Site Source</a>
+    &nbsp;|&nbsp;Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 4.2.1 & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 8.0.0-rc.4
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        UV: <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class=""></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        PV: <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span id="daysCount"></span>
+    <script>
+      document.getElementById("daysCount").innerText = " " + parseInt(Math.abs(new Date()  -  new Date("2018-11-14"))  /  1000  /  60  /  60  /24)   + " days since this blog's being founded";
+    </script>
+
+
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.5/source/js/utils.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.5/source/js/motion.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.5/source/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.4/source/js/local-search.js"></script>
+
+
+
+<!-- public live2d -->
+<div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="550" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
+<div class="marquee-container" style="position: fixed; width: 100%; height: 30px; color: black; background-color: white; left: 0; bottom: 0;">
+<div class="marquee">推进创文常态化 共建文明襄阳城　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　做文明襄阳人 建文明襄阳城 凝聚文明正能量 筑梦千年古襄阳　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　创建全国文明城市 加快建设汉江流域中心城市　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　讲文明 树新风　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　用微笑融化陌生 用文明美化襄阳　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　争当文明使者 播撒文明新风</div>
+</div>
+<script>$('.marquee').marquee({duration: 25000});</script>
+
+<script type="text/javascript">
+    var message_Path = 'https://cdn.jsdelivr.net/gh/No5972/Live2D@24/live2d/'
+    var home_Path = 'https://no5972.github.io/cms/'  //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/No5972/Live2D@11/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/No5972/Live2D@11/live2d/js/message.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://cdn.jsdelivr.net/gh/QiShaoXuan/live2DModel@1.0.0/live2d-widget-model-miku/assets/miku.model.json");
+    $("#landlord").draggable();
+</script>
+<!-- public live2d -->
+
+
+
+<script>
+    $(document).on('mouseenter', 'button:contains(Donate)', function(){
+        $("#post-reward").show();
+    }).on('mouseleave', 'button:contains(Donate)', function(){
+        $("#post-reward").hide();
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: location.pathname,
+    }, {"enable":true,"appId":"nOdccOqHtNBWpnoqXaBLw5Og-MdYXbMMI","appKey":"tYz6qEF31fk2WBHYsyO8RHQP","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"en","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":"https://nodccoqh.api.lncldglobal.com"}
+    ));
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
