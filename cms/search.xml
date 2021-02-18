@@ -158,6 +158,18 @@
       </categories>
   </entry>
   <entry>
+    <title>SpringMVC cannot map requests after importing Baidu Aip into Maven POM/在Maven配置里面添加百度语音之后SpringMVC不能映射请求</title>
+    <url>/cms//archivers/springmvc-baiduaip-problem.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Encountered a problem about SpringMVC and Baidu Aip Speech.<br />
+After adding</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baidu.aip<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>java-sdk<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;baidu.aip.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>this into Maven POM, SpringMVC cannot map requests. The console does not display map information. But once deleted this, SpringMVC can map requests again. I would like to know how to solve the problem…</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>【KEX】根据传说的ImagePacks2代码表修改的NPK辞典</title>
     <url>/cms//archivers/1.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>此贴为鄙人受KEX作者恋恋委托发布，原帖摘自COLG。</h1>
@@ -228,18 +240,6 @@
       </categories>
   </entry>
   <entry>
-    <title>SpringMVC cannot map requests after importing Baidu Aip into Maven POM/在Maven配置里面添加百度语音之后SpringMVC不能映射请求</title>
-    <url>/cms//archivers/springmvc-baiduaip-problem.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Encountered a problem about SpringMVC and Baidu Aip Speech.<br />
-After adding</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baidu.aip<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>java-sdk<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;baidu.aip.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>this into Maven POM, SpringMVC cannot map requests. The console does not display map information. But once deleted this, SpringMVC can map requests again. I would like to know how to solve the problem…</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
     <title>探讨在国内使用Flash Player的解决方案 - 一些找到的线索</title>
     <url>/cms//archivers/6.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>目前在国内仍然有大量的而且是非用不可的业务必须依赖Flash Player。Flash确实是要在2020年底要停止支持了，但是这并不是说Flash要淘汰了你就可以不用了，也不是说你觉得这个网页需要依赖Flash你就不进这个网站了，有些时候你遇到某些非用不可的业务你还非用不可。例如各种网课平台、政务平台、以及这段时间出现的一些虚拟实验平台（特别是一些学校的内网的平台），这些你还说Flash淘汰了不要去，你敢不用试试？【手动狗头】（有的学生因为不能运行Flash导致网课旷课进而导致被学校退学）</p>
@@ -275,21 +275,6 @@ After adding</p>
       </categories>
   </entry>
   <entry>
-    <title>哔哩哔哩：弹幕屏蔽：百家姓：直接导入XML</title>
-    <url>/cms//archivers/5.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注意到B站有些视频特别是动物圈频道的视频，弹幕里面会大量的刷出人名，且不说这对名誉有影响，这是严重污染弹幕环境。</p>
-<p>这里将《百家姓》的姓氏整理成哔哩哔哩弹幕屏蔽适用的正则表达式的批量导入XML，只需要从网页端导入XML即可有效屏蔽掉刷人名的弹幕。</p>
-<p>使用方法：复制这段代码保存为XML格式，注意保存编码选择UTF-8。在网页端随便点开一个视频，点击弹幕列表右边的三个小点按钮，选择屏蔽设定，右击下方列表的空白处选择导入XML文件。将这个XML文件导入即可实现屏蔽人名弹幕。如果需要取消屏蔽，点击这个屏蔽条目的状态的启用，使其切换到关闭即可。</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">filters</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">item</span> <span class="attr">enabled</span>=<span class="string">"true"</span>&gt;</span>r=赵|钱|孙|李|周|吴|郑|王|冯|陈|楮|卫|蒋|沈|韩|杨|朱|秦|尤|许|何|吕|施|张|孔|曹|严|华|金|魏|陶|姜|戚|谢|邹|喻|柏|水|窦|章|云|苏|潘|葛|奚|范|彭|郎|鲁|韦|昌|马|苗|凤|花|方|俞|任|袁|柳|酆|鲍|史|唐|费|廉|岑|薛|雷|贺|倪|汤|滕|殷|罗|毕|郝|邬|安|常|乐|于|时|傅|皮|卞|齐|康|伍|余|元|卜|顾|孟|平|黄|和|穆|萧|尹|姚|邵|湛|汪|祁|毛|禹|狄|米|贝|明|臧|计|伏|成|戴|谈|宋|茅|庞|熊|纪|舒|屈|项|祝|董|梁|杜|阮|蓝|闽|席|季|麻|强|贾|路|娄|危|江|童|颜|郭|梅|盛|林|刁|锺|徐|丘|骆|高|夏|蔡|田|樊|胡|凌|霍|虞|万|支|柯|昝|管|卢|莫|经|房|裘|缪|干|解|应|宗|丁|宣|贲|邓|郁|单|杭|洪|包|诸|左|石|崔|吉|钮|龚|程|嵇|邢|滑|裴|陆|荣|翁|荀|羊|於|惠|甄|麹|家|封|芮|羿|储|靳|汲|邴|糜|松|井|段|富|巫|乌|焦|巴|弓|牧|隗|山|谷|车|侯|宓|蓬|全|郗|班|仰|秋|仲|伊|宫|宁|仇|栾|暴|甘|斜|厉|戎|祖|武|符|刘|景|詹|束|龙|叶|幸|司|韶|郜|黎|蓟|薄|印|宿|白|怀|蒲|邰|从|鄂|索|咸|籍|赖|卓|蔺|屠|蒙|池|乔|阴|郁|胥|能|苍|双|闻|莘|党|翟|谭|贡|劳|逄|姬|申|扶|堵|冉|宰|郦|雍|郤|璩|桑|桂|濮|牛|寿|通|边|扈|燕|冀|郏|浦|尚|农|温|别|庄|晏|柴|瞿|阎|充|慕|连|茹|习|宦|艾|鱼|容|向|古|易|慎|戈|廖|庾|终|暨|居|衡|步|都|耿|满|弘|匡|国|文|寇|广|禄|阙|东|欧|殳|沃|利|蔚|越|夔|隆|师|巩|厍|聂|晁|勾|敖|融|冷|訾|辛|阚|那|简|饶|空|曾|毋|沙|乜|养|鞠|须|丰|巢|关|蒯|相|查|后|荆|红|游|竺|权|逑|盖|益|桓|公|万俟|司马|上官|欧阳|夏侯|诸葛|闻人|东方|赫连|皇甫|尉迟|公羊|澹台|公冶|宗政|濮阳|淳于|单于|太叔|申屠|公孙|仲孙|轩辕|令狐|锺离|宇文|长孙|慕容|鲜于|闾丘|司徒|司空|丌官|司寇|仉|督|子车|颛孙|端木|巫马|公西|漆雕|乐正|壤驷|公良|拓拔|夹谷|宰父|谷梁|晋|楚|阎|法|汝|鄢|涂|钦|段干|百里|东郭|南门|呼延|归|海|羊舌|微生|岳|帅|缑|亢|况|后|有|琴|梁丘|左丘|东门|西门|商|牟|佘|佴|伯|赏|南宫|墨|哈|谯|笪|年|爱|阳|佟|第五|言|福<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filters</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>或者也可以直接从这个链接下载然后按上述方法导入：<br />
-<a href="https://no5972.github.io/cms/static/tv.bilibili.player.baijiaxin.xml">https://no5972.github.io/cms/static/tv.bilibili.player.baijiaxin.xml</a></p>
-<p><a href="https://imgchr.com/i/B9LcnI" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/21/B9LcnI.png" alt="B9LcnI.png" /></a></p>
-]]></content>
-      <categories>
-        <category>Webapp</category>
-      </categories>
-  </entry>
-  <entry>
     <title>GitHub JSDelivr 更新</title>
     <url>/cms//archivers/8.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在github编辑好文件以后在最后一个编辑的文件提交之前选择“Create a new branch for this commit and start a pull request.”创建一个分支，输入一个分支名称。然后访问URL即可更新为“<a href="https://cdn.jsdelivr.net/gh/%5B%E4%BD%A0%E7%9A%84github%E7%94%A8%E6%88%B7%E5%90%8D%5D/%5B%E4%BD%A0%E7%9A%84github%E4%BB%93%E5%BA%93%5D@%5B%E4%BD%A0%E5%88%9B%E5%BB%BA%E7%9A%84%E5%88%86%E6%94%AF%5D/%5B%E4%BD%A0%E7%9A%84%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%5D%E2%80%9D%E3%80%82" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/[你的github用户名]/[你的github仓库]@[你创建的分支]/[你的文件路径]”。</a></p>
@@ -303,30 +288,15 @@ After adding</p>
       </categories>
   </entry>
   <entry>
-    <title>常用软件之我见（不定期更新）</title>
-    <url>/cms//archivers/12.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在B站和不少个人博客上也看到了相当多的软件推荐。这里也将鄙人自己常用的一些电脑软件做一个分享。如有任何疏漏谬误欢迎指正。</p>
-<ul>
-<li>Edge：微软的新的Chromium内核的浏览器。支持国内直接微软账号登录，自己也有一套国内可以直接访问的扩展商店，扩展齐全。</li>
-<li>Chrome：不用装专门的PDF阅读器来看PDF了！这个浏览器直接就能看PDF。<s>但是为什么不直接推荐Edge呢，新的Chromium内核的Edge居然还是不能按目录跳转！</s> <strong>（20.09.21更新：Edge在86版本终于上线了PDF目录跳转的功能，这个被全球用户吐槽的缺陷，微软终于给大家填坑了！！！Edge的PDF浏览界面在左上角已经增设了目录按钮，点击即可展开目录列表，然后就可以点击目录项来跳转位置了。）</strong></li>
-<li>Everything：快速搜索</li>
-<li>IrfanView：一款比较小众的看图软件。速度也快，也支持扩展。100MB以上的大图还没尝试过，有试过的欢迎反馈。</li>
-<li>TamperMonkey：浏览器扩展，Edge和Firefox都能用。油猴脚本，可以对自定义适配的网站添加自定义脚本。强大的网址适配规则定义功能。但GreasyFork这个脚本分享网站并不是油猴开发的，这一点需注意。</li>
-<li>7-Zip：免费开源的解压缩软件。甚至可以拆绝大部分的EXE文件。</li>
-<li>Universal Extractor：解压绝大部分的EXE格式的安装包或归档，避免吃到恶意捆绑软件。</li>
-<li>MPC-HC：全称Media Player Classic - Home Cinema。开源的媒体播放器。鄙人每天听歌就是用的这个。虽然项目已停更，但是基本上所有的媒体格式都能正常使用。甚至可以直接通过网络上.m3u8的流媒体URL来看电视。</li>
-<li>Bandicam：老版本Win10没有XBOX录屏的备用录屏方案！</li>
-<li>Ventoy：2020年才出来的一套U盘集成多个ISO启动的解决方案，将U盘通过该工具制成启动盘之后把各个ISO文件丢到U盘指定目录即可。支持同一个盘同时支持传统启动和UEFI启动。之前虽然老毛桃大白菜也有同样的功能，但是众所周知的那些8384的东西很闹心。这个是开源的解决方案，Github上面可以查阅源代码。</li>
-<li>恋恋EX：也给我们群自家的软件打个小广告，虽然不是鄙人开发的。这个是修改DNF游戏NPK资源的一套开源解决方案。（EX是唯一公开闭源的，现在ES都已经开源了。。。）鄙人Github上面存了这个工具的源代码，仓库是在Koishi_Extractor_English_Translation。原作者Lucky-Koishi那个Github她说不会用。。。</li>
-<li>EagleGet：MSDN我告诉你给的很多系统镜像的是ed2k和磁力链，ed2k现在还可以用迷你迅雷下载，但是磁力链现在很多软件都是不支持的。EagleGet是鄙人找了很久才找到的支持这个磁力链下载的。</li>
-<li>LibreOffice：用不起正版Office又不想用WPS的可以试试这套开源的Office解决方案。</li>
-<li>Wallpaper Engine：“啥都不说了，冲就完事了”。导入自定义的MP4视频，桌面就是极乐净土的舞台！就是还得装个Steam很烦。</li>
-<li>Upupoo：不想花钱买楼上那个的话或者<strong>磁盘空间装不下Steam的话</strong>也可以用这个备用方案。就是这个占用系统资源稍微高一些（即使是屏蔽了那些插件的运行）。</li>
-<li>Vpings Video Wallpaper：同上，系统资源占用介于Wallpaper Engine和Upupoo。</li>
-<li>Native HLS Playback：看电视也可以在浏览器看，如果不想用播放器的话。在浏览器装了这个扩展就可以在浏览器播放.m3u8的直播源了。</li>
-<li>HxD Hex Editor：轻量级的16进制编辑器。对编码支持很好。</li>
-<li>Scanner：平时使用计算机时经常出现C盘空间飘红的情况。这个软件用来分析各个文件和各个目录在分区的占用空间占比，它很形象地使用了多层扇形图来表示文件或者目录的大小占比，就像机械硬盘的碟片一样。之前的各种管家里面也有大文件清理的功能，但是这个软件不仅能分析大文件，还能分析体积较大的文件夹。</li>
-</ul>
+    <title>哔哩哔哩：弹幕屏蔽：百家姓：直接导入XML</title>
+    <url>/cms//archivers/5.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注意到B站有些视频特别是动物圈频道的视频，弹幕里面会大量的刷出人名，且不说这对名誉有影响，这是严重污染弹幕环境。</p>
+<p>这里将《百家姓》的姓氏整理成哔哩哔哩弹幕屏蔽适用的正则表达式的批量导入XML，只需要从网页端导入XML即可有效屏蔽掉刷人名的弹幕。</p>
+<p>使用方法：复制这段代码保存为XML格式，注意保存编码选择UTF-8。在网页端随便点开一个视频，点击弹幕列表右边的三个小点按钮，选择屏蔽设定，右击下方列表的空白处选择导入XML文件。将这个XML文件导入即可实现屏蔽人名弹幕。如果需要取消屏蔽，点击这个屏蔽条目的状态的启用，使其切换到关闭即可。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">filters</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">item</span> <span class="attr">enabled</span>=<span class="string">"true"</span>&gt;</span>r=赵|钱|孙|李|周|吴|郑|王|冯|陈|楮|卫|蒋|沈|韩|杨|朱|秦|尤|许|何|吕|施|张|孔|曹|严|华|金|魏|陶|姜|戚|谢|邹|喻|柏|水|窦|章|云|苏|潘|葛|奚|范|彭|郎|鲁|韦|昌|马|苗|凤|花|方|俞|任|袁|柳|酆|鲍|史|唐|费|廉|岑|薛|雷|贺|倪|汤|滕|殷|罗|毕|郝|邬|安|常|乐|于|时|傅|皮|卞|齐|康|伍|余|元|卜|顾|孟|平|黄|和|穆|萧|尹|姚|邵|湛|汪|祁|毛|禹|狄|米|贝|明|臧|计|伏|成|戴|谈|宋|茅|庞|熊|纪|舒|屈|项|祝|董|梁|杜|阮|蓝|闽|席|季|麻|强|贾|路|娄|危|江|童|颜|郭|梅|盛|林|刁|锺|徐|丘|骆|高|夏|蔡|田|樊|胡|凌|霍|虞|万|支|柯|昝|管|卢|莫|经|房|裘|缪|干|解|应|宗|丁|宣|贲|邓|郁|单|杭|洪|包|诸|左|石|崔|吉|钮|龚|程|嵇|邢|滑|裴|陆|荣|翁|荀|羊|於|惠|甄|麹|家|封|芮|羿|储|靳|汲|邴|糜|松|井|段|富|巫|乌|焦|巴|弓|牧|隗|山|谷|车|侯|宓|蓬|全|郗|班|仰|秋|仲|伊|宫|宁|仇|栾|暴|甘|斜|厉|戎|祖|武|符|刘|景|詹|束|龙|叶|幸|司|韶|郜|黎|蓟|薄|印|宿|白|怀|蒲|邰|从|鄂|索|咸|籍|赖|卓|蔺|屠|蒙|池|乔|阴|郁|胥|能|苍|双|闻|莘|党|翟|谭|贡|劳|逄|姬|申|扶|堵|冉|宰|郦|雍|郤|璩|桑|桂|濮|牛|寿|通|边|扈|燕|冀|郏|浦|尚|农|温|别|庄|晏|柴|瞿|阎|充|慕|连|茹|习|宦|艾|鱼|容|向|古|易|慎|戈|廖|庾|终|暨|居|衡|步|都|耿|满|弘|匡|国|文|寇|广|禄|阙|东|欧|殳|沃|利|蔚|越|夔|隆|师|巩|厍|聂|晁|勾|敖|融|冷|訾|辛|阚|那|简|饶|空|曾|毋|沙|乜|养|鞠|须|丰|巢|关|蒯|相|查|后|荆|红|游|竺|权|逑|盖|益|桓|公|万俟|司马|上官|欧阳|夏侯|诸葛|闻人|东方|赫连|皇甫|尉迟|公羊|澹台|公冶|宗政|濮阳|淳于|单于|太叔|申屠|公孙|仲孙|轩辕|令狐|锺离|宇文|长孙|慕容|鲜于|闾丘|司徒|司空|丌官|司寇|仉|督|子车|颛孙|端木|巫马|公西|漆雕|乐正|壤驷|公良|拓拔|夹谷|宰父|谷梁|晋|楚|阎|法|汝|鄢|涂|钦|段干|百里|东郭|南门|呼延|归|海|羊舌|微生|岳|帅|缑|亢|况|后|有|琴|梁丘|左丘|东门|西门|商|牟|佘|佴|伯|赏|南宫|墨|哈|谯|笪|年|爱|阳|佟|第五|言|福<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filters</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>或者也可以直接从这个链接下载然后按上述方法导入：<br />
+<a href="https://no5972.github.io/cms/static/tv.bilibili.player.baijiaxin.xml">https://no5972.github.io/cms/static/tv.bilibili.player.baijiaxin.xml</a></p>
+<p><a href="https://imgchr.com/i/B9LcnI" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/21/B9LcnI.png" alt="B9LcnI.png" /></a></p>
 ]]></content>
       <categories>
         <category>Webapp</category>
@@ -394,6 +364,57 @@ After adding</p>
       </categories>
   </entry>
   <entry>
+    <title>国内互联网Flash依赖状况调查</title>
+    <url>/cms//archivers/15.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="以下仅为引用现有的观点不代表本站立场"><a class="markdownIt-Anchor" href="#以下仅为引用现有的观点不代表本站立场"></a> 以下仅为引用现有的观点，不代表本站立场。</h1>
+<p>Flash即将在年底停止支持，但是国内依旧有很多平台在依赖Flash，究竟国内还有多少平台还在依赖Flash？</p>
+<p>知乎@松果煲粥 ：大量的办公，报名，教育等公共平台都是用的Flash来运行的，原本我电脑上是根本没装Flash的，但是前几个月发现弟弟上网课的网页居然需要Flash插件才能看。</p>
+<p>知乎 佚名：用flash的什么医学实验模拟课程 医学魔课.泰盟医学虚拟仿真实验教学平台的太烦人了</p>
+<p>CSDN@wujiuqier ：有些时候你遇到某些非用不可的业务你还非用不可。例如各种网课平台、政务平台、以及这段时间出现的一些虚拟实验平台（特别是一些学校的内网的平台），这些你还说Flash淘汰了不要去，你敢不用试试？</p>
+<p>知乎@梦沧海 ：无所谓，对flashplayer重度依赖的是内网环境，我单位多个业务系统没了这个就运作不正常。</p>
+<p>B站@wujiuqier ：这里点名长江云这个平台，各大湖北省的省电视台，地市电视台，县市电视台的视频在PC页面还得非要用Flash才能播放，上线一个HLS播放就这么难吗？</p>
+<p>B站@柏木ゆっき ：你不知道这个软件比你想象的更恶心 我为了上网课下的这个 只有中国版能有 然后我发现这个广告弹窗之后当时也给禁用了 结果 网课页面都进去了 几秒之后马上变成系统服务组件没有开启要我去下修复工具[微笑] 想了各种办法都没能给他降服 只要禁用就听不了网课 真就恶心的一批</p>
+<p>B站@冥土追魂-呱太神医 ：删不了的，一堆政府网站，还有老网站都必须要flash支持，像是很知名的4399，7k7k，QQ空间都需要flash的支持。</p>
+<p>知乎@爱做梦的大傻子 ：mooc课不用flash没办法看课程的ppt！</p>
+<p>知乎 佚名：大量国企和事业单位的PC网页没有彻底放弃Flash；相当的商业网站仍不放弃Flash……</p>
+<p>知乎 佚名：各位电脑大神，每次都是电脑上优慕课网址里面的视频一直要自动下载flash才能观看，这要如何解决啊？[鄙人：就是这个页面，提示文字和这边长江云的提示文字一模一样]</p>
+<p>知乎@天涯羽伏麟 ：国内这些官媒、教育、校内教务的网站大部分还在用flash，不能不开，麻烦死，要那就多下一个浏览器，要嘛就得重新调开flash，无力吐槽。。也不知道是承包给谁做的，运维我都怀疑是校内老师兼职的。</p>
+]]></content>
+      <categories>
+        <category>Moving-Away-from-Flash</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>常用软件之我见（不定期更新）</title>
+    <url>/cms//archivers/12.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在B站和不少个人博客上也看到了相当多的软件推荐。这里也将鄙人自己常用的一些电脑软件做一个分享。如有任何疏漏谬误欢迎指正。</p>
+<ul>
+<li>Edge：微软的新的Chromium内核的浏览器。支持国内直接微软账号登录，自己也有一套国内可以直接访问的扩展商店，扩展齐全。</li>
+<li>Chrome：不用装专门的PDF阅读器来看PDF了！这个浏览器直接就能看PDF。<s>但是为什么不直接推荐Edge呢，新的Chromium内核的Edge居然还是不能按目录跳转！</s> <strong>（20.09.21更新：Edge在86版本终于上线了PDF目录跳转的功能，这个被全球用户吐槽的缺陷，微软终于给大家填坑了！！！Edge的PDF浏览界面在左上角已经增设了目录按钮，点击即可展开目录列表，然后就可以点击目录项来跳转位置了。）</strong></li>
+<li>Everything：快速搜索</li>
+<li>IrfanView：一款比较小众的看图软件。速度也快，也支持扩展。100MB以上的大图还没尝试过，有试过的欢迎反馈。</li>
+<li>TamperMonkey：浏览器扩展，Edge和Firefox都能用。油猴脚本，可以对自定义适配的网站添加自定义脚本。强大的网址适配规则定义功能。但GreasyFork这个脚本分享网站并不是油猴开发的，这一点需注意。</li>
+<li>7-Zip：免费开源的解压缩软件。甚至可以拆绝大部分的EXE文件。</li>
+<li>Universal Extractor：解压绝大部分的EXE格式的安装包或归档，避免吃到恶意捆绑软件。</li>
+<li>MPC-HC：全称Media Player Classic - Home Cinema。开源的媒体播放器。鄙人每天听歌就是用的这个。虽然项目已停更，但是基本上所有的媒体格式都能正常使用。甚至可以直接通过网络上.m3u8的流媒体URL来看电视。</li>
+<li>Bandicam：老版本Win10没有XBOX录屏的备用录屏方案！</li>
+<li>Ventoy：2020年才出来的一套U盘集成多个ISO启动的解决方案，将U盘通过该工具制成启动盘之后把各个ISO文件丢到U盘指定目录即可。支持同一个盘同时支持传统启动和UEFI启动。之前虽然老毛桃大白菜也有同样的功能，但是众所周知的那些8384的东西很闹心。这个是开源的解决方案，Github上面可以查阅源代码。</li>
+<li>恋恋EX：也给我们群自家的软件打个小广告，虽然不是鄙人开发的。这个是修改DNF游戏NPK资源的一套开源解决方案。（EX是唯一公开闭源的，现在ES都已经开源了。。。）鄙人Github上面存了这个工具的源代码，仓库是在Koishi_Extractor_English_Translation。原作者Lucky-Koishi那个Github她说不会用。。。</li>
+<li>EagleGet：MSDN我告诉你给的很多系统镜像的是ed2k和磁力链，ed2k现在还可以用迷你迅雷下载，但是磁力链现在很多软件都是不支持的。EagleGet是鄙人找了很久才找到的支持这个磁力链下载的。</li>
+<li>LibreOffice：用不起正版Office又不想用WPS的可以试试这套开源的Office解决方案。</li>
+<li>Wallpaper Engine：“啥都不说了，冲就完事了”。导入自定义的MP4视频，桌面就是极乐净土的舞台！就是还得装个Steam很烦。</li>
+<li>Upupoo：不想花钱买楼上那个的话或者<strong>磁盘空间装不下Steam的话</strong>也可以用这个备用方案。就是这个占用系统资源稍微高一些（即使是屏蔽了那些插件的运行）。</li>
+<li>Vpings Video Wallpaper：同上，系统资源占用介于Wallpaper Engine和Upupoo。</li>
+<li>Native HLS Playback：看电视也可以在浏览器看，如果不想用播放器的话。在浏览器装了这个扩展就可以在浏览器播放.m3u8的直播源了。</li>
+<li>HxD Hex Editor：轻量级的16进制编辑器。对编码支持很好。</li>
+<li>Scanner：平时使用计算机时经常出现C盘空间飘红的情况。这个软件用来分析各个文件和各个目录在分区的占用空间占比，它很形象地使用了多层扇形图来表示文件或者目录的大小占比，就像机械硬盘的碟片一样。之前的各种管家里面也有大文件清理的功能，但是这个软件不仅能分析大文件，还能分析体积较大的文件夹。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Webapp</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Github Hexo 一键更新</title>
     <url>/cms//archivers/16.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这个博客换成Hexo后台之后变成了绑定3个仓库：展示仓库，后台仓库，主题仓库。结果每次更新需要输入3对账号密码，很不方便。整合各路搜集到的资料之后总结出来一套一键更新的方案，可以一次性同步后台代码、主题代码和展示代码。</p>
@@ -417,7 +438,7 @@ After adding</p>
 <p>免密更新配置好以后，编写一键更新的CMD批处理放到项目根目录。</p>
 </li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git pull origin master</span><br><span class="line">git commit -m <span class="string">"update"</span></span><br><span class="line">git push origin -u master</span><br><span class="line"><span class="built_in">cd</span> themes/next</span><br><span class="line">git add .</span><br><span class="line">git pull origin master</span><br><span class="line">git commit -m <span class="string">"update"</span></span><br><span class="line">git push origin -u master</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git pull origin master</span><br><span class="line">git commit -m <span class="string">"update"</span></span><br><span class="line">git push origin -u master</span><br><span class="line"><span class="built_in">cd</span> themes/next</span><br><span class="line">git add .</span><br><span class="line">git pull origin master</span><br><span class="line">git commit -m <span class="string">"update"</span></span><br><span class="line">git push origin -u master</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 <ol start="5">
 <li>批处理搞定之后以后可以在编辑了主题代码、后台代码之后在后台仓库根目录直接执行<code>./保存的CMD文件名.cmd</code>即可实现一条命令将展示仓库，后台仓库，主题仓库一并更新。</li>
 </ol>
@@ -425,27 +446,6 @@ After adding</p>
       <categories>
         <category>Web-Building</category>
         <category>Github</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>国内互联网Flash依赖状况调查</title>
-    <url>/cms//archivers/15.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="以下仅为引用现有的观点不代表本站立场"><a class="markdownIt-Anchor" href="#以下仅为引用现有的观点不代表本站立场"></a> 以下仅为引用现有的观点，不代表本站立场。</h1>
-<p>Flash即将在年底停止支持，但是国内依旧有很多平台在依赖Flash，究竟国内还有多少平台还在依赖Flash？</p>
-<p>知乎@松果煲粥 ：大量的办公，报名，教育等公共平台都是用的Flash来运行的，原本我电脑上是根本没装Flash的，但是前几个月发现弟弟上网课的网页居然需要Flash插件才能看。</p>
-<p>知乎 佚名：用flash的什么医学实验模拟课程 医学魔课.泰盟医学虚拟仿真实验教学平台的太烦人了</p>
-<p>CSDN@wujiuqier ：有些时候你遇到某些非用不可的业务你还非用不可。例如各种网课平台、政务平台、以及这段时间出现的一些虚拟实验平台（特别是一些学校的内网的平台），这些你还说Flash淘汰了不要去，你敢不用试试？</p>
-<p>知乎@梦沧海 ：无所谓，对flashplayer重度依赖的是内网环境，我单位多个业务系统没了这个就运作不正常。</p>
-<p>B站@wujiuqier ：这里点名长江云这个平台，各大湖北省的省电视台，地市电视台，县市电视台的视频在PC页面还得非要用Flash才能播放，上线一个HLS播放就这么难吗？</p>
-<p>B站@柏木ゆっき ：你不知道这个软件比你想象的更恶心 我为了上网课下的这个 只有中国版能有 然后我发现这个广告弹窗之后当时也给禁用了 结果 网课页面都进去了 几秒之后马上变成系统服务组件没有开启要我去下修复工具[微笑] 想了各种办法都没能给他降服 只要禁用就听不了网课 真就恶心的一批</p>
-<p>B站@冥土追魂-呱太神医 ：删不了的，一堆政府网站，还有老网站都必须要flash支持，像是很知名的4399，7k7k，QQ空间都需要flash的支持。</p>
-<p>知乎@爱做梦的大傻子 ：mooc课不用flash没办法看课程的ppt！</p>
-<p>知乎 佚名：大量国企和事业单位的PC网页没有彻底放弃Flash；相当的商业网站仍不放弃Flash……</p>
-<p>知乎 佚名：各位电脑大神，每次都是电脑上优慕课网址里面的视频一直要自动下载flash才能观看，这要如何解决啊？[鄙人：就是这个页面，提示文字和这边长江云的提示文字一模一样]</p>
-<p>知乎@天涯羽伏麟 ：国内这些官媒、教育、校内教务的网站大部分还在用flash，不能不开，麻烦死，要那就多下一个浏览器，要嘛就得重新调开flash，无力吐槽。。也不知道是承包给谁做的，运维我都怀疑是校内老师兼职的。</p>
-]]></content>
-      <categories>
-        <category>Moving-Away-from-Flash</category>
       </categories>
   </entry>
   <entry>
@@ -486,23 +486,6 @@ After adding</p>
       </categories>
   </entry>
   <entry>
-    <title>Java树形统计: 各节点追加直属部门人数</title>
-    <url>/cms//archivers/20.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>代码修改自: <a href="https://blog.csdn.net/xuxingfan000/article/details/52159851" target="_blank" rel="noopener">https://blog.csdn.net/xuxingfan000/article/details/52159851</a><br />
-感谢@xuxingfan000</p>
-<p>最近做项目遇到树形结构的统计，树的的深度不定，父亲节点=孩子节点之和<br />
-本修改代码要实现父亲节点的计数要追加父亲节点本身的数量.<br />
-实体bean代码略 参考上述链接<br />
-统计demo代码修改如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> tt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">XxfMain</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> List&lt;Xmzb&gt; allList = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Xmzb root = <span class="keyword">new</span> Xmzb(<span class="string">"1"</span>, <span class="string">"0"</span>, <span class="number">0</span>);</span><br><span class="line">		Xmzb root1_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1"</span>, <span class="string">"1"</span>, <span class="number">3999</span>);</span><br><span class="line">		Xmzb root1_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2"</span>, <span class="string">"1"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_1_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1-1"</span>, <span class="string">"1-1"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_1_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1-2"</span>, <span class="string">"1-1"</span>, <span class="number">0</span>);</span><br><span class="line">		Xmzb root1_2_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2-1"</span>, <span class="string">"1-2"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_2_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2-2"</span>, <span class="string">"1-2"</span>, <span class="number">0</span>);</span><br><span class="line">		allList.add(root);</span><br><span class="line">		allList.add(root1_1);</span><br><span class="line">		allList.add(root1_2);</span><br><span class="line">		allList.add(root1_1_1);</span><br><span class="line">		allList.add(root1_1_2);</span><br><span class="line">		allList.add(root1_2_1);</span><br><span class="line">		allList.add(root1_2_2);</span><br><span class="line">		List&lt;Xmzb&gt; list = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line">		list.add(root);</span><br><span class="line">		doCount(root, list);</span><br><span class="line">		<span class="keyword">for</span> (Xmzb xmzb : allList) &#123;</span><br><span class="line">			System.out.println(xmzb.getId() + <span class="string">":"</span> + xmzb.getXmgs());</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Map&lt;String, Object&gt; <span class="title">doCount</span><span class="params">(Xmzb root, List&lt;Xmzb&gt; list)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// System.out.println(root.getXmgs());</span></span><br><span class="line">		Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</span><br><span class="line">		Double xmgs = <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line">		List&lt;Xmzb&gt; clist = findByQueryString(root.getId());<span class="comment">// 此处可以使用sql通过父节点查询孩子节点sql:from</span></span><br><span class="line">															<span class="comment">// Xmzb where</span></span><br><span class="line">															<span class="comment">// year='2016' and</span></span><br><span class="line">															<span class="comment">// pid='"+root.getId()+"'</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 叶子节点</span></span><br><span class="line">		<span class="keyword">if</span> (clist == <span class="keyword">null</span> || clist.size() == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">null</span> != root.getXmgs()) &#123;</span><br><span class="line">				map.put(<span class="string">"xmgs"</span>, root.getXmgs());</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				map.put(<span class="string">"xmgs"</span>, xmgs);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> map;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 父节点</span></span><br><span class="line">		<span class="keyword">if</span> (clist != <span class="keyword">null</span> &amp;&amp; clist.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			list.addAll(clist);</span><br><span class="line">			<span class="keyword">for</span> (Xmzb child : clist) &#123;</span><br><span class="line">				<span class="comment">// 递归</span></span><br><span class="line">				Map&lt;String, Object&gt; map_c = doCount(child, list);</span><br><span class="line">				Double res = Double.parseDouble(map_c.get(<span class="string">"xmgs"</span>).toString());</span><br><span class="line">				child.setXmgs(res.intValue());</span><br><span class="line">				<span class="comment">// 统计当前元素的子节点个数</span></span><br><span class="line">				xmgs += res;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		<span class="comment">//注意这两行修改//</span></span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		root.setXmgs(root.getXmgs() + xmgs.intValue()); </span><br><span class="line">		map.put(<span class="string">"xmgs"</span>, root.getXmgs());</span><br><span class="line">	    <span class="comment">/////////////////</span></span><br><span class="line">		<span class="comment">//注意这两行修改//</span></span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		map.put(<span class="string">"list"</span>, list);</span><br><span class="line">		<span class="keyword">return</span> map;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Xmzb&gt; <span class="title">findByQueryString</span><span class="params">(String pid)</span> </span>&#123;</span><br><span class="line">		List&lt;Xmzb&gt; list = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line">		<span class="keyword">for</span> (Xmzb xmzb : allList) &#123;</span><br><span class="line">			<span class="keyword">if</span> (xmzb.getPid().equals(pid)) &#123;</span><br><span class="line">				list.add(xmzb);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> list;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果如下</p>
-<p><img src="https://img-blog.csdnimg.cn/20190726111628862.png" alt="运行结果" /></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
     <title>（正式版已修复）Hexo NexT主题 Valine评论 多语言失效</title>
     <url>/cms//archivers/22.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>8.0.0正式版已经修复了这个小bug，使用8.0.0正式版或者更新版本就可以避免出现此问题了。</strong></p>
@@ -521,6 +504,23 @@ After adding</p>
       </categories>
   </entry>
   <entry>
+    <title>Java树形统计: 各节点追加直属部门人数</title>
+    <url>/cms//archivers/20.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>代码修改自: <a href="https://blog.csdn.net/xuxingfan000/article/details/52159851" target="_blank" rel="noopener">https://blog.csdn.net/xuxingfan000/article/details/52159851</a><br />
+感谢@xuxingfan000</p>
+<p>最近做项目遇到树形结构的统计，树的的深度不定，父亲节点=孩子节点之和<br />
+本修改代码要实现父亲节点的计数要追加父亲节点本身的数量.<br />
+实体bean代码略 参考上述链接<br />
+统计demo代码修改如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> tt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">XxfMain</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> List&lt;Xmzb&gt; allList = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Xmzb root = <span class="keyword">new</span> Xmzb(<span class="string">"1"</span>, <span class="string">"0"</span>, <span class="number">0</span>);</span><br><span class="line">		Xmzb root1_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1"</span>, <span class="string">"1"</span>, <span class="number">3999</span>);</span><br><span class="line">		Xmzb root1_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2"</span>, <span class="string">"1"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_1_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1-1"</span>, <span class="string">"1-1"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_1_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1-2"</span>, <span class="string">"1-1"</span>, <span class="number">0</span>);</span><br><span class="line">		Xmzb root1_2_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2-1"</span>, <span class="string">"1-2"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_2_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2-2"</span>, <span class="string">"1-2"</span>, <span class="number">0</span>);</span><br><span class="line">		allList.add(root);</span><br><span class="line">		allList.add(root1_1);</span><br><span class="line">		allList.add(root1_2);</span><br><span class="line">		allList.add(root1_1_1);</span><br><span class="line">		allList.add(root1_1_2);</span><br><span class="line">		allList.add(root1_2_1);</span><br><span class="line">		allList.add(root1_2_2);</span><br><span class="line">		List&lt;Xmzb&gt; list = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line">		list.add(root);</span><br><span class="line">		doCount(root, list);</span><br><span class="line">		<span class="keyword">for</span> (Xmzb xmzb : allList) &#123;</span><br><span class="line">			System.out.println(xmzb.getId() + <span class="string">":"</span> + xmzb.getXmgs());</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Map&lt;String, Object&gt; <span class="title">doCount</span><span class="params">(Xmzb root, List&lt;Xmzb&gt; list)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// System.out.println(root.getXmgs());</span></span><br><span class="line">		Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</span><br><span class="line">		Double xmgs = <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line">		List&lt;Xmzb&gt; clist = findByQueryString(root.getId());<span class="comment">// 此处可以使用sql通过父节点查询孩子节点sql:from</span></span><br><span class="line">															<span class="comment">// Xmzb where</span></span><br><span class="line">															<span class="comment">// year='2016' and</span></span><br><span class="line">															<span class="comment">// pid='"+root.getId()+"'</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 叶子节点</span></span><br><span class="line">		<span class="keyword">if</span> (clist == <span class="keyword">null</span> || clist.size() == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">null</span> != root.getXmgs()) &#123;</span><br><span class="line">				map.put(<span class="string">"xmgs"</span>, root.getXmgs());</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				map.put(<span class="string">"xmgs"</span>, xmgs);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> map;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 父节点</span></span><br><span class="line">		<span class="keyword">if</span> (clist != <span class="keyword">null</span> &amp;&amp; clist.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			list.addAll(clist);</span><br><span class="line">			<span class="keyword">for</span> (Xmzb child : clist) &#123;</span><br><span class="line">				<span class="comment">// 递归</span></span><br><span class="line">				Map&lt;String, Object&gt; map_c = doCount(child, list);</span><br><span class="line">				Double res = Double.parseDouble(map_c.get(<span class="string">"xmgs"</span>).toString());</span><br><span class="line">				child.setXmgs(res.intValue());</span><br><span class="line">				<span class="comment">// 统计当前元素的子节点个数</span></span><br><span class="line">				xmgs += res;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		<span class="comment">//注意这两行修改//</span></span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		root.setXmgs(root.getXmgs() + xmgs.intValue()); </span><br><span class="line">		map.put(<span class="string">"xmgs"</span>, root.getXmgs());</span><br><span class="line">	    <span class="comment">/////////////////</span></span><br><span class="line">		<span class="comment">//注意这两行修改//</span></span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		map.put(<span class="string">"list"</span>, list);</span><br><span class="line">		<span class="keyword">return</span> map;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Xmzb&gt; <span class="title">findByQueryString</span><span class="params">(String pid)</span> </span>&#123;</span><br><span class="line">		List&lt;Xmzb&gt; list = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line">		<span class="keyword">for</span> (Xmzb xmzb : allList) &#123;</span><br><span class="line">			<span class="keyword">if</span> (xmzb.getPid().equals(pid)) &#123;</span><br><span class="line">				list.add(xmzb);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> list;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果如下</p>
+<p><img src="https://img-blog.csdnimg.cn/20190726111628862.png" alt="运行结果" /></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>云服务器初始化Kafka</title>
     <url>/cms//archivers/21.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="本地机器git-bash新版windows10也可以直接使用命令"><a class="markdownIt-Anchor" href="#本地机器git-bash新版windows10也可以直接使用命令"></a> 本地机器（Git Bash（新版Windows10也可以直接使用命令））</h1>
@@ -532,32 +532,6 @@ After adding</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bin/zookeeper-server-start.sh -daemon config/zookeeper.properties</span><br><span class="line">bin/kafka-server-start.sh -daemon config/server.properties</span><br><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic <span class="built_in">test</span></span><br><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br><span class="line">bin/kafka-console-producer.sh --broker-list 公网IP:9092 --topic <span class="built_in">test</span></span><br><span class="line">bin/kafka-console-consumer.sh --bootstrap-server 公网IP:9092 --topic <span class="built_in">test</span> --from-beginning</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Server</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>商业博客三大误区</title>
-    <url>/cms//archivers/25.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="http://www.chinavalue.net/Biz/Article/2009-2-3/157174.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E4%BB%B7%E5%80%BC%E4%B8%AD%E5%9B%BD%E7%BD%91-%E6%A2%81%E6%99%94-brightgreen" alt="价值中国网 梁晔" /></a></p>
-<p>博客不仅仅是一款优秀的社会软件，而且具有颠覆互联网的力量。许多嗅觉灵敏的企业也纷纷开设企业博客宣传自身的品牌以及产品，尤其是在各种博客门事件的发生之后，几乎没有企业敢轻视博客的力量，而同时，博客已经成为企业网站必备的基础应用之一。</p>
-<p>中国博客经过多年发展，目前已渗透到经济、政治和社会生活的各个角落。利用企业博客进行信息发布、品牌推广和开展电子商务已成为商业发展的重要模式。随着互联网节点的急剧扩张，博客作为企业在互联网世界中的标识，具有与现实世界中商标和品牌同等重要的意义，是一种稀缺资源。</p>
-<p>目前企业迫切需要的是，知道如何正确地创建一个商业博客，使之取得成功。以下是3个常见的错误，告诉公司与公司博客，可以做什么不可以做什么，以避免它们。</p>
-<h1 id="第一误区没有目标"><a class="markdownIt-Anchor" href="#第一误区没有目标"></a> 第一误区：没有目标</h1>
-<p>许多商业博客开始没有具体的目标。</p>
-<p>博客软件通常是如此易于安装和设置，使得一些新的博客一诞生就处在被压倒的境地，因此很难使任何一个这样的商业博客脱颖而出。</p>
-<p>企业要确定商业博客的宗旨，重要研究类似的博客和他们参与的行业社区。用户的网络与博客类似的目的和内容，以及和自己的博客相匹配的目标受众。</p>
-<h1 id="第二误区无法控制"><a class="markdownIt-Anchor" href="#第二误区无法控制"></a> 第二误区：无法控制</h1>
-<p>由于许多企业开始博客只是作为一个实验，他们往往没有进行慎重考虑。因此，通常使用第三方博客托管平台。</p>
-<p>首先，你无法控制。如果您想更改博客平台，但通常是没有方法从旧到新的博客地址重新导向流量。</p>
-<p>再者，在搜索引擎的排名也要重新开始，丧失原有的友好度。</p>
-<p>独立域名的商业博客是企业控制发言权的首选。</p>
-<h1 id="误区之三缺乏储备"><a class="markdownIt-Anchor" href="#误区之三缺乏储备"></a> 误区之三：缺乏储备</h1>
-<p>商业博客的运作是一个考验。大多数人都很难写良好的电子邮件，更不用说400字的博客帖子。</p>
-<p>博客写作的原始内容，如果没有编辑计划取得相应的采集内容，那么博客更新需要的每天至少一次或者一个星期数次成为不可能。</p>
-<p>商业博客中还会出现更多的错误，公司与公司博客从来没有优化博客模板和标题等，张贴中也缺乏指标。</p>
-<p>企业要尽量避免决策失误，在内需不足的情况下，商业博客可以聘请顾问博客，也可以把喜欢在TopRank或任何贡献者列为商业博客咨询名单。</p>
-]]></content>
-      <categories>
-        <category>Web-Building</category>
       </categories>
   </entry>
   <entry>
@@ -596,6 +570,32 @@ After adding</p>
       </categories>
   </entry>
   <entry>
+    <title>商业博客三大误区</title>
+    <url>/cms//archivers/25.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="http://www.chinavalue.net/Biz/Article/2009-2-3/157174.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E4%BB%B7%E5%80%BC%E4%B8%AD%E5%9B%BD%E7%BD%91-%E6%A2%81%E6%99%94-brightgreen" alt="价值中国网 梁晔" /></a></p>
+<p>博客不仅仅是一款优秀的社会软件，而且具有颠覆互联网的力量。许多嗅觉灵敏的企业也纷纷开设企业博客宣传自身的品牌以及产品，尤其是在各种博客门事件的发生之后，几乎没有企业敢轻视博客的力量，而同时，博客已经成为企业网站必备的基础应用之一。</p>
+<p>中国博客经过多年发展，目前已渗透到经济、政治和社会生活的各个角落。利用企业博客进行信息发布、品牌推广和开展电子商务已成为商业发展的重要模式。随着互联网节点的急剧扩张，博客作为企业在互联网世界中的标识，具有与现实世界中商标和品牌同等重要的意义，是一种稀缺资源。</p>
+<p>目前企业迫切需要的是，知道如何正确地创建一个商业博客，使之取得成功。以下是3个常见的错误，告诉公司与公司博客，可以做什么不可以做什么，以避免它们。</p>
+<h1 id="第一误区没有目标"><a class="markdownIt-Anchor" href="#第一误区没有目标"></a> 第一误区：没有目标</h1>
+<p>许多商业博客开始没有具体的目标。</p>
+<p>博客软件通常是如此易于安装和设置，使得一些新的博客一诞生就处在被压倒的境地，因此很难使任何一个这样的商业博客脱颖而出。</p>
+<p>企业要确定商业博客的宗旨，重要研究类似的博客和他们参与的行业社区。用户的网络与博客类似的目的和内容，以及和自己的博客相匹配的目标受众。</p>
+<h1 id="第二误区无法控制"><a class="markdownIt-Anchor" href="#第二误区无法控制"></a> 第二误区：无法控制</h1>
+<p>由于许多企业开始博客只是作为一个实验，他们往往没有进行慎重考虑。因此，通常使用第三方博客托管平台。</p>
+<p>首先，你无法控制。如果您想更改博客平台，但通常是没有方法从旧到新的博客地址重新导向流量。</p>
+<p>再者，在搜索引擎的排名也要重新开始，丧失原有的友好度。</p>
+<p>独立域名的商业博客是企业控制发言权的首选。</p>
+<h1 id="误区之三缺乏储备"><a class="markdownIt-Anchor" href="#误区之三缺乏储备"></a> 误区之三：缺乏储备</h1>
+<p>商业博客的运作是一个考验。大多数人都很难写良好的电子邮件，更不用说400字的博客帖子。</p>
+<p>博客写作的原始内容，如果没有编辑计划取得相应的采集内容，那么博客更新需要的每天至少一次或者一个星期数次成为不可能。</p>
+<p>商业博客中还会出现更多的错误，公司与公司博客从来没有优化博客模板和标题等，张贴中也缺乏指标。</p>
+<p>企业要尽量避免决策失误，在内需不足的情况下，商业博客可以聘请顾问博客，也可以把喜欢在TopRank或任何贡献者列为商业博客咨询名单。</p>
+]]></content>
+      <categories>
+        <category>Web-Building</category>
+      </categories>
+  </entry>
+  <entry>
     <title>JS保留两位小数只舍不进（简化写法）</title>
     <url>/cms//archivers/26.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> DECIMAL_PREFIX = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> x = <span class="number">144.4599999999</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="built_in">parseFloat</span>(<span class="built_in">JSON</span>.stringify(x).substring(<span class="number">0</span>, <span class="built_in">JSON</span>.stringify(x).lastIndexOf(<span class="string">'.'</span>) + DECIMAL_PREFIX + <span class="number">2</span>)); <span class="comment">// 2 = 保留小数点后的位数</span></span><br><span class="line"><span class="built_in">console</span>.log(y);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出：144.45</span></span><br></pre></td></tr></table></figure>
@@ -617,28 +617,6 @@ After adding</p>
 ]]></content>
       <categories>
         <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>我们为什么那么痛恨计算机等级与那些问题（二级党请进）</title>
-    <url>/cms//archivers/27.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://tieba.baidu.com/p/1877978397" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/C%E8%AF%AD%E8%A8%80%E5%90%A7@%E6%B1%87%E8%93%9D%E9%B8%9F-%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E9%82%A3%E4%B9%88%E7%97%9B%E6%81%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%8E%E9%82%A3%E4%BA%9B%E9%97%AE%E9%A2%98%EF%BC%88%E4%BA%8C%E7%BA%A7%E5%85%9A%E8%AF%B7%E8%BF%9B%EF%BC%89-brightgreen" alt="C语言吧@汇蓝鸟-我们为什么那么痛恨计算机等级与那些问题（二级党请进）" /></a></p>
-<p>如果要我评论天朝计算机等级的意义，四个字，劳民伤财。这句话甚至出自某个某即将当上教育局局长的人之口，别人问他他当上教育局长后第一件事是做什么，那兄台毫不客气：废除二四级，英语四级真有点用处这个我不做评论，要是废除计算机二级，我绝对举双手赞成，但是废了吗，没有，因为二级一次报名毛爷爷就要一张，那百来块也许有5块钱交给了出卷的老师，也许有2块钱用来付上机考试那没网烂电脑的上机电费，也许还拿了一块钱支付了那张笔试的考试纸，一块钱交给了改卷老师，剩下的百余元涉及了太太多多的利益关系（这句话摘抄自网上，有事联系原作者，本行仅作为检验本人屏幕光电及键盘机械性能测试），想废，没那么简单！</p>
-<p>当然，这个绝对不是我痛恨计算机等级的原因，我不是粪青，我知道很多人不服，我考二级怎么了，有一个证也比没有一个证好啊，很多人对吧里封杀二级表示不理解，当他们打上<code>(i++)+(++i)</code>之类的题目并问个结果的时候，即使也许真与二级无关，但很多的时候就是被吧主给删掉了，并为此感到愤愤不平，因为很多人是刚刚学C语言的（我也是新手），谁没有菜的时候，就算是卡马克卡神也是从helloworld走过来的，提问自然理所当然。这点我完全同意，但是你们是否有想过，<strong>那些问题明明是出于自己的小粗心小缺漏造成的，只要自己静下心来多加思考，明明花上十几分钟就能自己解决的问题，却要到贴吧来请大神等回贴，然后最小化浏览器跑去打lol，斗地主。</strong></p>
-<p>我敢说，其实你花在那问题上的时间不超过二十分钟，而你花在游戏上的时间却超过了三个小时。而那些代码就那么区区十几二十行。</p>
-<p>我甚至不看问题都能猜到个八九分，比如少打了一个分号，大写变成了小写，<code>o</code>打成了<code>0</code>，和一些乱七八糟的语法错误，至于逻辑错误，那种程序的算法复杂度甚至不会超过解初中的二元一次方程，因为这个你在抱怨C语言难？</p>
-<p>当然，二级党无可厚非，毕竟他们只是为了混上一张二级的护照，而那些二三四级计算机等级证我可以告诉你，这玩意对你找工作没有一点，哪怕是一点的帮助，它就像高中时候的会考，谁都知道那只是一个“joke”，而一个要付你工资的公司，会为了一个“joke”而雇佣你吗，是我绝对不会，就像我们团队的第一任首席招新的时候说的一句：别以为你拿到了等级证就有多大的优势，我宁愿你没过。按他的说法，那些屁证只要认真看个一两个星期的书，只要是个人就能过，假如有人为此炫耀，他说他甚至看都懒得看一眼。</p>
-<p>所以，在讨论一个程序源代码的时候，请**摸摸你自己的胸口，问问自己是不是真的热爱C语言，真的热爱编程，假如是的话，重新坐在你的源代码面前，百度也好，谷歌也罢，最重要的是重新一个一个字母的省查自己的源代码，看看哪里与书上正确的代码不同，靠自己的力量解决一个问题，而不是去网上毫无目的的等大神。**假如不是，学编程的唯一目的就是为了考证，那么出门左拐进二级吧，看那些参考会比你在吧里等回复更有收效的多。</p>
-<p>其实那句我宁愿你没过二级这句话更是意味深长，二级我也考过，书上除了教给你一些纯粹是装X的专业术语与概念，还教给你了一些极其糟糕的编程习惯，那种习惯除了不能参加代码混乱大赛之外，几乎涵盖了所有令人厌恶的书写规范，我甚至敢说要是我团队里有一个家伙敢写出像二级考试里那样的<code>(i++)+(++i)</code>之类的代码，我马上会抡起键盘敲死他。</p>
-<p>在这里真的想为贴吧管理团队说句话，我觉得封杀这种二级与XX提问是有一定的理由的，谁都想把贴吧建设的更好，当初我也是抱着玩玩的姿态进c语言吧来看看的，但是最近我对这个已经不大感冒了，假如要我选的话，我会先去gamedev逛逛，然后可以去MSDN或CSDN论坛，只有突然看到百度上有回复的时候，才回到吧里看看，很多时候就是看完回复就走了，包括很多对我程序源代码的疑问我都没有回复，这不是说我想装X，而是包括贴吧里那些很多的疑问一样，错误都错的千篇一律，不管是谁看一个问题看了一千遍却还要解答都会厌烦，假如<strong>某天吧里全部都是那种伸手问题的话，那些懂得的估计都觉得无聊走光了，不懂的因为没人帮他解答也走光了，为什么那些知名的技术论坛能够经久不衰，是因为在哪里的不管是伸手还是奉献的都很有含金量。</strong></p>
-<p>有一句话叫一屋不扫何以扫天下，二十几行代码都解决不了，以后成为老鸟面对几万行代码怎么办，二十分钟都坐不住，以后面对一个月都无法解决的bug怎么办，翻一翻书都觉得麻烦，以后还有没有勇气面对重新构架几千行代码的程序。</p>
-<p>不是吧里那些大神冷血，哪一个大神不是“错”过来的，又有几个当初有老师教，当初连百度都没有，用电话线上网看到了外面的东西就兴奋了半天，假如说编程的那么些年我学到了什么，我觉得最重要学到的不是如何编码，是一种冷静分析的能力与持之以恒的耐力。<br />
-知道的越多，不知道的也就越多，这也就是为什么很多人学到后面越来越发现自己是一个弱笔，保持一个平稳的心态，自己琢磨了很久发现自己解决的代价太高再去虚心求教，少跳大神，偶尔犯2可以，毕竟人不犯2枉少年，但跳大神，发神论，作为娱乐可以，但你无法从中学到任何的东西。</p>
-<p>最后，衷心祝愿那些热爱C语言热爱编程的朋友们学习愉快。</p>
-<p><img src="https://s1.ax1x.com/2020/08/20/d8CMiF.png" alt="图片名称" /></p>
-<center>～～面码拜</center>]]></content>
-      <categories>
-        <category>Other</category>
       </categories>
   </entry>
   <entry>
@@ -678,23 +656,25 @@ We recognize that there are legitimate projects that consist of a large number o
       </categories>
   </entry>
   <entry>
-    <title>随机图片API接口</title>
-    <url>/cms//archivers/30.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="#"><img src="https://img.shields.io/badge/%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87API%E6%8E%A5%E5%8F%A3-brightgreen" alt="随机图片API接口" /></a></p>
-<p><a href="https://unsplash.it/1600/900?random" target="_blank" rel="noopener">https://unsplash.it/1600/900?random</a> （据说国内加载略慢，我试了一下还好都差不多）</p>
-<p><a href="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" target="_blank" rel="noopener">https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture</a> （必应每日图片）</p>
-<p><a href="https://uploadbeta.com/api/pictures/random" target="_blank" rel="noopener">https://uploadbeta.com/api/pictures/random</a> （必应图库，一些风景图人物图什么的，都是现代风格）</p>
-<p><a href="https://source.unsplash.com/random" target="_blank" rel="noopener">https://source.unsplash.com/random</a> （风格同上，但这个的图尺寸不是大图）</p>
-<p>下面是几个二次元的,都差不多ヽ(´o｀（大部分都在本地测试过，可以放心食用），但是以下这些唯一的问题就是，有些图片质量参差不齐。所以要想完全和自己口味的话还是自己做一个吧，有开源代码。</p>
-<p><a href="https://img.xjh.me/random_img.php" target="_blank" rel="noopener">https://img.xjh.me/random_img.php</a> （850+） <a href="https://www.xjh.me/3069.html?replytocom=4888" target="_blank" rel="noopener">出处(・ω・)ノ</a></p>
-<p><a href="http://www.dmoe.cc/random.php" target="_blank" rel="noopener">http://www.dmoe.cc/random.php</a> （1000+） <a href="http://www.dmoe.cc/" target="_blank" rel="noopener">出处(・ω・)ノ</a></p>
-<p><a href="https://acg.yanwz.cn/api.php" target="_blank" rel="noopener">https://acg.yanwz.cn/api.php</a> （400+） <a href="https://acg.yanwz.cn/" target="_blank" rel="noopener">出处(・ω・)ノ</a></p>
-<p><a href="https://img.paulzzh.tech/touhou/random" target="_blank" rel="noopener">https://img.paulzzh.tech/touhou/random</a> （东方的随机图，43000+）<a href="https://img.paulzzh.tech/" target="_blank" rel="noopener">出处(・ω・)ノ</a></p>
-<p><a href="https://acg.toubiec.cn/random.php" target="_blank" rel="noopener">https://acg.toubiec.cn/random.php</a> （1000+） <a href="https://acg.toubiec.cn/" target="_blank" rel="noopener">出处(・ω・)ノ</a> 作者开源了，这篇博客里有介绍和源码，先蟹蟹大佬了。 <a href="https://www.toubiec.cn/164.html" target="_blank" rel="noopener">[项目]随机二次元图片API-已经开源</a></p>
-<p>mark一下慢慢研究➡️ <a href="https://www.xhboke.com/14.html" target="_blank" rel="noopener">一个可在php中直接输出随机图片的API</a></p>
-]]></content>
+    <title>我们为什么那么痛恨计算机等级与那些问题（二级党请进）</title>
+    <url>/cms//archivers/27.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://tieba.baidu.com/p/1877978397" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/C%E8%AF%AD%E8%A8%80%E5%90%A7@%E6%B1%87%E8%93%9D%E9%B8%9F-%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E9%82%A3%E4%B9%88%E7%97%9B%E6%81%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%8E%E9%82%A3%E4%BA%9B%E9%97%AE%E9%A2%98%EF%BC%88%E4%BA%8C%E7%BA%A7%E5%85%9A%E8%AF%B7%E8%BF%9B%EF%BC%89-brightgreen" alt="C语言吧@汇蓝鸟-我们为什么那么痛恨计算机等级与那些问题（二级党请进）" /></a></p>
+<p>如果要我评论天朝计算机等级的意义，四个字，劳民伤财。这句话甚至出自某个某即将当上教育局局长的人之口，别人问他他当上教育局长后第一件事是做什么，那兄台毫不客气：废除二四级，英语四级真有点用处这个我不做评论，要是废除计算机二级，我绝对举双手赞成，但是废了吗，没有，因为二级一次报名毛爷爷就要一张，那百来块也许有5块钱交给了出卷的老师，也许有2块钱用来付上机考试那没网烂电脑的上机电费，也许还拿了一块钱支付了那张笔试的考试纸，一块钱交给了改卷老师，剩下的百余元涉及了太太多多的利益关系（这句话摘抄自网上，有事联系原作者，本行仅作为检验本人屏幕光电及键盘机械性能测试），想废，没那么简单！</p>
+<p>当然，这个绝对不是我痛恨计算机等级的原因，我不是粪青，我知道很多人不服，我考二级怎么了，有一个证也比没有一个证好啊，很多人对吧里封杀二级表示不理解，当他们打上<code>(i++)+(++i)</code>之类的题目并问个结果的时候，即使也许真与二级无关，但很多的时候就是被吧主给删掉了，并为此感到愤愤不平，因为很多人是刚刚学C语言的（我也是新手），谁没有菜的时候，就算是卡马克卡神也是从helloworld走过来的，提问自然理所当然。这点我完全同意，但是你们是否有想过，<strong>那些问题明明是出于自己的小粗心小缺漏造成的，只要自己静下心来多加思考，明明花上十几分钟就能自己解决的问题，却要到贴吧来请大神等回贴，然后最小化浏览器跑去打lol，斗地主。</strong></p>
+<p>我敢说，其实你花在那问题上的时间不超过二十分钟，而你花在游戏上的时间却超过了三个小时。而那些代码就那么区区十几二十行。</p>
+<p>我甚至不看问题都能猜到个八九分，比如少打了一个分号，大写变成了小写，<code>o</code>打成了<code>0</code>，和一些乱七八糟的语法错误，至于逻辑错误，那种程序的算法复杂度甚至不会超过解初中的二元一次方程，因为这个你在抱怨C语言难？</p>
+<p>当然，二级党无可厚非，毕竟他们只是为了混上一张二级的护照，而那些二三四级计算机等级证我可以告诉你，这玩意对你找工作没有一点，哪怕是一点的帮助，它就像高中时候的会考，谁都知道那只是一个“joke”，而一个要付你工资的公司，会为了一个“joke”而雇佣你吗，是我绝对不会，就像我们团队的第一任首席招新的时候说的一句：别以为你拿到了等级证就有多大的优势，我宁愿你没过。按他的说法，那些屁证只要认真看个一两个星期的书，只要是个人就能过，假如有人为此炫耀，他说他甚至看都懒得看一眼。</p>
+<p>所以，在讨论一个程序源代码的时候，请**摸摸你自己的胸口，问问自己是不是真的热爱C语言，真的热爱编程，假如是的话，重新坐在你的源代码面前，百度也好，谷歌也罢，最重要的是重新一个一个字母的省查自己的源代码，看看哪里与书上正确的代码不同，靠自己的力量解决一个问题，而不是去网上毫无目的的等大神。**假如不是，学编程的唯一目的就是为了考证，那么出门左拐进二级吧，看那些参考会比你在吧里等回复更有收效的多。</p>
+<p>其实那句我宁愿你没过二级这句话更是意味深长，二级我也考过，书上除了教给你一些纯粹是装X的专业术语与概念，还教给你了一些极其糟糕的编程习惯，那种习惯除了不能参加代码混乱大赛之外，几乎涵盖了所有令人厌恶的书写规范，我甚至敢说要是我团队里有一个家伙敢写出像二级考试里那样的<code>(i++)+(++i)</code>之类的代码，我马上会抡起键盘敲死他。</p>
+<p>在这里真的想为贴吧管理团队说句话，我觉得封杀这种二级与XX提问是有一定的理由的，谁都想把贴吧建设的更好，当初我也是抱着玩玩的姿态进c语言吧来看看的，但是最近我对这个已经不大感冒了，假如要我选的话，我会先去gamedev逛逛，然后可以去MSDN或CSDN论坛，只有突然看到百度上有回复的时候，才回到吧里看看，很多时候就是看完回复就走了，包括很多对我程序源代码的疑问我都没有回复，这不是说我想装X，而是包括贴吧里那些很多的疑问一样，错误都错的千篇一律，不管是谁看一个问题看了一千遍却还要解答都会厌烦，假如<strong>某天吧里全部都是那种伸手问题的话，那些懂得的估计都觉得无聊走光了，不懂的因为没人帮他解答也走光了，为什么那些知名的技术论坛能够经久不衰，是因为在哪里的不管是伸手还是奉献的都很有含金量。</strong></p>
+<p>有一句话叫一屋不扫何以扫天下，二十几行代码都解决不了，以后成为老鸟面对几万行代码怎么办，二十分钟都坐不住，以后面对一个月都无法解决的bug怎么办，翻一翻书都觉得麻烦，以后还有没有勇气面对重新构架几千行代码的程序。</p>
+<p>不是吧里那些大神冷血，哪一个大神不是“错”过来的，又有几个当初有老师教，当初连百度都没有，用电话线上网看到了外面的东西就兴奋了半天，假如说编程的那么些年我学到了什么，我觉得最重要学到的不是如何编码，是一种冷静分析的能力与持之以恒的耐力。<br />
+知道的越多，不知道的也就越多，这也就是为什么很多人学到后面越来越发现自己是一个弱笔，保持一个平稳的心态，自己琢磨了很久发现自己解决的代价太高再去虚心求教，少跳大神，偶尔犯2可以，毕竟人不犯2枉少年，但跳大神，发神论，作为娱乐可以，但你无法从中学到任何的东西。</p>
+<p>最后，衷心祝愿那些热爱C语言热爱编程的朋友们学习愉快。</p>
+<p><img src="https://s1.ax1x.com/2020/08/20/d8CMiF.png" alt="图片名称" /></p>
+<center>～～面码拜</center>]]></content>
       <categories>
-        <category>Web-Building</category>
+        <category>Other</category>
       </categories>
   </entry>
   <entry>
@@ -736,6 +716,26 @@ We recognize that there are legitimate projects that consist of a large number o
       </categories>
   </entry>
   <entry>
+    <title>随机图片API接口</title>
+    <url>/cms//archivers/30.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="#"><img src="https://img.shields.io/badge/%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87API%E6%8E%A5%E5%8F%A3-brightgreen" alt="随机图片API接口" /></a></p>
+<p><a href="https://unsplash.it/1600/900?random" target="_blank" rel="noopener">https://unsplash.it/1600/900?random</a> （据说国内加载略慢，我试了一下还好都差不多）</p>
+<p><a href="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" target="_blank" rel="noopener">https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture</a> （必应每日图片）</p>
+<p><a href="https://uploadbeta.com/api/pictures/random" target="_blank" rel="noopener">https://uploadbeta.com/api/pictures/random</a> （必应图库，一些风景图人物图什么的，都是现代风格）</p>
+<p><a href="https://source.unsplash.com/random" target="_blank" rel="noopener">https://source.unsplash.com/random</a> （风格同上，但这个的图尺寸不是大图）</p>
+<p>下面是几个二次元的,都差不多ヽ(´o｀（大部分都在本地测试过，可以放心食用），但是以下这些唯一的问题就是，有些图片质量参差不齐。所以要想完全和自己口味的话还是自己做一个吧，有开源代码。</p>
+<p><a href="https://img.xjh.me/random_img.php" target="_blank" rel="noopener">https://img.xjh.me/random_img.php</a> （850+） <a href="https://www.xjh.me/3069.html?replytocom=4888" target="_blank" rel="noopener">出处(・ω・)ノ</a></p>
+<p><a href="http://www.dmoe.cc/random.php" target="_blank" rel="noopener">http://www.dmoe.cc/random.php</a> （1000+） <a href="http://www.dmoe.cc/" target="_blank" rel="noopener">出处(・ω・)ノ</a></p>
+<p><a href="https://acg.yanwz.cn/api.php" target="_blank" rel="noopener">https://acg.yanwz.cn/api.php</a> （400+） <a href="https://acg.yanwz.cn/" target="_blank" rel="noopener">出处(・ω・)ノ</a></p>
+<p><a href="https://img.paulzzh.tech/touhou/random" target="_blank" rel="noopener">https://img.paulzzh.tech/touhou/random</a> （东方的随机图，43000+）<a href="https://img.paulzzh.tech/" target="_blank" rel="noopener">出处(・ω・)ノ</a></p>
+<p><a href="https://acg.toubiec.cn/random.php" target="_blank" rel="noopener">https://acg.toubiec.cn/random.php</a> （1000+） <a href="https://acg.toubiec.cn/" target="_blank" rel="noopener">出处(・ω・)ノ</a> 作者开源了，这篇博客里有介绍和源码，先蟹蟹大佬了。 <a href="https://www.toubiec.cn/164.html" target="_blank" rel="noopener">[项目]随机二次元图片API-已经开源</a></p>
+<p>mark一下慢慢研究➡️ <a href="https://www.xhboke.com/14.html" target="_blank" rel="noopener">一个可在php中直接输出随机图片的API</a></p>
+]]></content>
+      <categories>
+        <category>Web-Building</category>
+      </categories>
+  </entry>
+  <entry>
     <title>（已恢复）Valine评论失效 由于LeanCloud国际版通用域名失效</title>
     <url>/cms//archivers/35.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>9月27日更新：通用域名已经恢复，但是仍然不建议使用通用域名，仍然建议更换为自定义URL。</strong></p>
@@ -749,6 +749,21 @@ We recognize that there are legitimate projects that consist of a large number o
 ]]></content>
       <categories>
         <category>Web-Building</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>小花仙 对Flash页游截取4K级别高清图的方法</title>
+    <url>/cms//archivers/38.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这是鄙人又摸索出来的一套解决方案，通过Chrome或Chromium的F12工具来截取高清截图。正如<a href="https://blog.csdn.net/qq_35977139/article/details/108988838" target="_blank" rel="noopener">鄙人此前在CSDN发布的笔记</a>一样，Chrome在62版本之后就已经原生支持了截取指定HTML节点的截图，国产浏览器只要不是太老的版本应该都是可以支持的。之前那个通过RDP远程桌面截图的方式实在太过于麻烦，鄙人现在这一套方法比使用远程桌面要简单不少。</p>
+<p><strong>2020年底之后Chrome和Chromium浏览器将停止对Flash的支持，但是不排除一些国产浏览器会继续支持Flash，所以可能还是需要使用国产浏览器来进行操作。</strong></p>
+<p>前往http://hua.61.com/Client.swf?t=4561654354 （随便输入一串数字）。国产浏览器大都能直接显示，但是Edge和Chrome不能直接打开，他会变成文件下载。鄙人曾经开发过一个扩展可以让浏览器直接播放本地SWF或远程的SWF的URL。但是在试图向微软的浏览器扩展商店投稿时被审核退回了。。。</p>
+<p>把F12开发人员工具打开，不同的浏览器操作方式可能不一样，鄙人的Edge浏览器是菜单按钮-更多工具-开发人员工具。然后点击左上角第二个图标打开设备模式。点击网页上边选择设备的下拉框选编辑（Edit）。点击添加自定义设备（Add custom device），设备名称（Device Name）随便输入，然后尺寸我们用3840 2160当然你也可以尝试8K的7680 4320，但是鄙人发现8K竖屏放大到大约4倍的时候就不能再放大了。设备像素比（Device pixel ratio）不用管，用户戴笠字符串（User agent string）也不用管，设备类型选桌面（Desktop）。点击添加（Add）。然后在网页上边的选择设备的下拉框选择我们刚刚添加的设备。</p>
+<p>刷新一下页面（F5可能是失效的，因为此时输入焦点可能在Flash里面，建议使用鼠标点击浏览器的刷新按钮来刷新）。按照原来使用右键设置麦克风的方法把画面改成显示全部。大概是右键设置麦克风选项卡展开那个下拉框然后鼠标不要动直接右键单击就可以出来缩放画面的菜单了，这个不是一定能成功的得多试几次。使用高分辨率的模拟设备的时候界面有点小，可能会不好点，需要一定的眼力来控制好鼠标的位置。</p>
+<p>然后进到你要截图的画面，回到开发人员工具。到元素（Elements）标签，选中那个<code>embed</code>标签。然后我们要按一个快捷键<code>Ctrl+Shift+P</code>，然后就会呼出一个神秘菜单。我们在这个菜单输入&quot;Capture node screenshot&quot;，当然不需要全部输入他自己就能显示出来。<strong>看到这个选项之后用鼠标或者用键盘移动光标回车选择这个选项，一张4K截图就出来了。</strong></p>
+<p>当然你也可以继续使用原来右键设置麦克风的方法继续放大画面再回到F12执行&quot;Capture node screenshot&quot;，从而截图更细节的图像。</p>
+]]></content>
+      <categories>
+        <category>Other</category>
       </categories>
   </entry>
   <entry>
@@ -782,21 +797,6 @@ We recognize that there are legitimate projects that consist of a large number o
 ]]></content>
       <categories>
         <category>Moving-Away-from-Flash</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>小花仙 对Flash页游截取4K级别高清图的方法</title>
-    <url>/cms//archivers/38.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这是鄙人又摸索出来的一套解决方案，通过Chrome或Chromium的F12工具来截取高清截图。正如<a href="https://blog.csdn.net/qq_35977139/article/details/108988838" target="_blank" rel="noopener">鄙人此前在CSDN发布的笔记</a>一样，Chrome在62版本之后就已经原生支持了截取指定HTML节点的截图，国产浏览器只要不是太老的版本应该都是可以支持的。之前那个通过RDP远程桌面截图的方式实在太过于麻烦，鄙人现在这一套方法比使用远程桌面要简单不少。</p>
-<p><strong>2020年底之后Chrome和Chromium浏览器将停止对Flash的支持，但是不排除一些国产浏览器会继续支持Flash，所以可能还是需要使用国产浏览器来进行操作。</strong></p>
-<p>前往http://hua.61.com/Client.swf?t=4561654354 （随便输入一串数字）。国产浏览器大都能直接显示，但是Edge和Chrome不能直接打开，他会变成文件下载。鄙人曾经开发过一个扩展可以让浏览器直接播放本地SWF或远程的SWF的URL。但是在试图向微软的浏览器扩展商店投稿时被审核退回了。。。</p>
-<p>把F12开发人员工具打开，不同的浏览器操作方式可能不一样，鄙人的Edge浏览器是菜单按钮-更多工具-开发人员工具。然后点击左上角第二个图标打开设备模式。点击网页上边选择设备的下拉框选编辑（Edit）。点击添加自定义设备（Add custom device），设备名称（Device Name）随便输入，然后尺寸我们用3840 2160当然你也可以尝试8K的7680 4320，但是鄙人发现8K竖屏放大到大约4倍的时候就不能再放大了。设备像素比（Device pixel ratio）不用管，用户戴笠字符串（User agent string）也不用管，设备类型选桌面（Desktop）。点击添加（Add）。然后在网页上边的选择设备的下拉框选择我们刚刚添加的设备。</p>
-<p>刷新一下页面（F5可能是失效的，因为此时输入焦点可能在Flash里面，建议使用鼠标点击浏览器的刷新按钮来刷新）。按照原来使用右键设置麦克风的方法把画面改成显示全部。大概是右键设置麦克风选项卡展开那个下拉框然后鼠标不要动直接右键单击就可以出来缩放画面的菜单了，这个不是一定能成功的得多试几次。使用高分辨率的模拟设备的时候界面有点小，可能会不好点，需要一定的眼力来控制好鼠标的位置。</p>
-<p>然后进到你要截图的画面，回到开发人员工具。到元素（Elements）标签，选中那个<code>embed</code>标签。然后我们要按一个快捷键<code>Ctrl+Shift+P</code>，然后就会呼出一个神秘菜单。我们在这个菜单输入&quot;Capture node screenshot&quot;，当然不需要全部输入他自己就能显示出来。<strong>看到这个选项之后用鼠标或者用键盘移动光标回车选择这个选项，一张4K截图就出来了。</strong></p>
-<p>当然你也可以继续使用原来右键设置麦克风的方法继续放大画面再回到F12执行&quot;Capture node screenshot&quot;，从而截图更细节的图像。</p>
-]]></content>
-      <categories>
-        <category>Other</category>
       </categories>
   </entry>
   <entry>
@@ -935,16 +935,6 @@ Flash Player将被标记为过期，试图加载时将被禁用。</p>
       </categories>
   </entry>
   <entry>
-    <title>关于Flash停止支持后Chrome如何启用过期插件</title>
-    <url>/cms//archivers/45.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>根据前段时间翻译的<a href="41.html#Flash-Player-blocked-as-%E2%80%9Cout-of-date%E2%80%9D-Target-All-Chrome-versions-Jan-2021-%E4%BB%A5%E2%80%9C%E8%BF%87%E6%9C%9F%E2%80%9D%E5%8E%9F%E5%9B%A0%E7%A6%81%E7%94%A8Flash-2021-1%EF%BC%8C%E6%89%80%E6%9C%89%E7%89%88%E6%9C%AC">Chrome/Chromium停止支持Flash的详细事宜</a>中提到的，2021年以后新版Chrome将直接不支持Flash，而旧版Chrome也会将Flash插件视为过期插件。届时即使是使用旧版的Chrome也会出现“Adobe Flash Player因过期而遭到阻止”的提示，每次都需要点击旁边的运行一次才能使用。</p>
-<p>如果仍然有需要依赖Flash的业务，应该提前关闭Chrome的自动更新，然后对旧版的Chrome主程序添加启动参数来手动启用过期的插件。启动参数如下：</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">chrome.exe --allow-outdated-plugins</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Moving-Away-from-Flash</category>
-      </categories>
-  </entry>
-  <entry>
     <title>某一线大厂IT开发岗位简历筛选标准</title>
     <url>/cms//archivers/44.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="#"><img src="https://img.shields.io/badge/%E6%9C%AA%E7%9F%A5-brightgreen" alt="未知" /></a></p>
@@ -1014,6 +1004,16 @@ Flash Player将被标记为过期，试图加载时将被禁用。</p>
 ]]></content>
       <categories>
         <category>Webapp</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>关于Flash停止支持后Chrome如何启用过期插件</title>
+    <url>/cms//archivers/45.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>根据前段时间翻译的<a href="41.html#Flash-Player-blocked-as-%E2%80%9Cout-of-date%E2%80%9D-Target-All-Chrome-versions-Jan-2021-%E4%BB%A5%E2%80%9C%E8%BF%87%E6%9C%9F%E2%80%9D%E5%8E%9F%E5%9B%A0%E7%A6%81%E7%94%A8Flash-2021-1%EF%BC%8C%E6%89%80%E6%9C%89%E7%89%88%E6%9C%AC">Chrome/Chromium停止支持Flash的详细事宜</a>中提到的，2021年以后新版Chrome将直接不支持Flash，而旧版Chrome也会将Flash插件视为过期插件。届时即使是使用旧版的Chrome也会出现“Adobe Flash Player因过期而遭到阻止”的提示，每次都需要点击旁边的运行一次才能使用。</p>
+<p>如果仍然有需要依赖Flash的业务，应该提前关闭Chrome的自动更新，然后对旧版的Chrome主程序添加启动参数来手动启用过期的插件。启动参数如下：</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">chrome.exe --allow-outdated-plugins</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Moving-Away-from-Flash</category>
       </categories>
   </entry>
   <entry>
@@ -1138,24 +1138,6 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
       </categories>
   </entry>
   <entry>
-    <title>西一爱服 小花仙登录器下载地址和项目代码</title>
-    <url>/cms//archivers/52.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>下载地址：<a href="https://www.lanzous.com/iivU9jgdclg" target="_blank" rel="noopener">https://www.lanzous.com/iivU9jgdclg</a><br />
-项目地址：<a href="https://github.com/No5972/CEFHuaClient" target="_blank" rel="noopener">https://github.com/No5972/CEFHuaClient</a></p>
-<p>这个是UP主自制的一个小花仙的登录器，用C#编写的，如果不放心可以用软件反编译查看源代码。<br />
-怕一些杀软查杀，弄了一个数字签名，但是有没有用就不知道了。<br />
-登录器后续会开源到Github，基于BSD-3-Clause协议开源，禁止商用。如有商用，欢迎举报。<br />
-体积有点大，打包之后的zip有80多M，解压后将近200M，这是因为登录器使用CEF来作为Flash的渲染容器，也就是说登录器内嵌了一个谷歌浏览器Chromium！单一个CEF库就有100多M。<br />
-目前主要解决3个问题<br />
-一个是Flash即将停止支持，这个登录器实现了在没有Flash组件的电脑上也能正常使用。但是不排除后续会移除，改为由玩家自行选择Flash组件文件的位置。<br />
-第二个是广大小花仙玩家希望要的一个功能，将游戏画面缩放到较高的分辨率尺寸。本登录器已经实现了缩放到4K、8K级别的高清分辨率，并且即使是超出屏幕分辨率也能完整加载。就是窗口尺寸已经超出了屏幕的显示范围，如果要查看画面的其他部分的话需要多次拖动标题栏。<br />
-第三个就是截图功能，通常配合第二个缩放画面的功能使用。即使是缩放画面超出了屏幕的显示，或者被其他的窗口挡住了，这个截图功能也能截取到完整的游戏画面。</p>
-]]></content>
-      <categories>
-        <category>Other</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Python Selenium Chrome 控制Devtools 一些线索</title>
     <url>/cms//archivers/54.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol>
@@ -1214,6 +1196,24 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
       </categories>
   </entry>
   <entry>
+    <title>西一爱服 小花仙登录器下载地址和项目代码</title>
+    <url>/cms//archivers/52.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>下载地址：<a href="https://www.lanzous.com/iivU9jgdclg" target="_blank" rel="noopener">https://www.lanzous.com/iivU9jgdclg</a><br />
+项目地址：<a href="https://github.com/No5972/CEFHuaClient" target="_blank" rel="noopener">https://github.com/No5972/CEFHuaClient</a></p>
+<p>这个是UP主自制的一个小花仙的登录器，用C#编写的，如果不放心可以用软件反编译查看源代码。<br />
+怕一些杀软查杀，弄了一个数字签名，但是有没有用就不知道了。<br />
+登录器后续会开源到Github，基于BSD-3-Clause协议开源，禁止商用。如有商用，欢迎举报。<br />
+体积有点大，打包之后的zip有80多M，解压后将近200M，这是因为登录器使用CEF来作为Flash的渲染容器，也就是说登录器内嵌了一个谷歌浏览器Chromium！单一个CEF库就有100多M。<br />
+目前主要解决3个问题<br />
+一个是Flash即将停止支持，这个登录器实现了在没有Flash组件的电脑上也能正常使用。但是不排除后续会移除，改为由玩家自行选择Flash组件文件的位置。<br />
+第二个是广大小花仙玩家希望要的一个功能，将游戏画面缩放到较高的分辨率尺寸。本登录器已经实现了缩放到4K、8K级别的高清分辨率，并且即使是超出屏幕分辨率也能完整加载。就是窗口尺寸已经超出了屏幕的显示范围，如果要查看画面的其他部分的话需要多次拖动标题栏。<br />
+第三个就是截图功能，通常配合第二个缩放画面的功能使用。即使是缩放画面超出了屏幕的显示，或者被其他的窗口挡住了，这个截图功能也能截取到完整的游戏画面。</p>
+]]></content>
+      <categories>
+        <category>Other</category>
+      </categories>
+  </entry>
+  <entry>
     <title>提供一个Java SE程序打单个EXE包部署到不带JRE电脑运行的实现（有点复杂）</title>
     <url>/cms//archivers/56.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>详细步骤：</p>
@@ -1251,20 +1251,6 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
 ]]></content>
       <categories>
         <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>【绝对机密】github上面有些零散的PPAPI Flash Player的DLL文件下载</title>
-    <url>/cms//archivers/58.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://github.com/search?l=&amp;q=filename%3Apepflashplayer.dll&amp;type=code" target="_blank" rel="noopener">https://github.com/search?l=&amp;q=filename%3Apepflashplayer.dll&amp;type=code</a><br />
-点开看一下分支名字，看下有没有Releases，如果有的话访问</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;用户名或组织名&#x2F;仓库名@分支名&#x2F;路径&#x2F;pepflashplayer.dll</span><br></pre></td></tr></table></figure>
-<p>就可以下载了。<br />
-如果有需要<code>manifest.json</code>的话试着把最后的文件名改成这个，可能会报“Couldn’t find the requested file”。如果报的话就再换一个搜索结果看看。</p>
-]]></content>
-      <categories>
-        <category>Moving-Away-from-Flash</category>
-        <category>Github</category>
       </categories>
   </entry>
   <entry>
@@ -1363,25 +1349,6 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
       </categories>
   </entry>
   <entry>
-    <title>百分浏览器继续使用Flash Player的临时解决方案！</title>
-    <url>/cms//archivers/62.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>21.01.13更新：百分浏览器已经将自动下载的Flash改成了下载32.0.0.371的版本，据浏览器论坛超版回应，这个是最后一个没加定时自毁的版本。大家可以不用替换文件和屏蔽域名了。</strong></p>
-<hr />
-<p>百分浏览器会自动下载版本32的Flash Player放进浏览器的安装目录，这样的话即使是手动替换了Flash Player组件文件也会被新版的Flash Player覆盖掉，<strong>而新版Flash Player今天已经自毁了，无法使用！</strong> 所以我们得想办法阻止覆盖！</p>
-<p>没有这个浏览器的用户如果要使用这个浏览器，应该下载32位便携版的百分浏览器。</p>
-<p>已经猜测出浏览器自动下载Flash Player的域名：<code>static.centbrowser.cn</code>。</p>
-<p>大家需要手动将29版本的Flash Player组件文件放进浏览器的<code>User Data\PepperFlash</code>目录！如果有原来的文件则需要覆盖！通常是两个文件：<code>pepflashplayer.dll</code>和<code>manifest.json</code>。<br />
-<img src="https://img-blog.csdnimg.cn/20210112094602630.png#pic_center" alt="在这里插入图片描述" /><br />
-然后在运行之前从hosts屏蔽这个域名！</p>
-<p>打开<code>C:\Windows\System32\drivers\etc\hosts</code>这个文件，添加一行这样的内容以屏蔽这个域名。注意IP和域名之间有一个空格。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">127.0.0.1 static.centbrowser.cn</span><br></pre></td></tr></table></figure>
-<p>但是这样的话就不能再从官网重新下载浏览器了，官网这个下载链接也是来自这个域名的。如果需要从官网重新下载浏览器， 则需要将hosts的这个域名解除屏蔽。</p>
-]]></content>
-      <categories>
-        <category>Moving-Away-from-Flash</category>
-      </categories>
-  </entry>
-  <entry>
     <title>手把手教学：使用油猴脚本对CCTV央视网启用HTML5播放器</title>
     <url>/cms//archivers/61.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Flash Player明天就会阻止加载Flash内容。但是CCTV也仅仅是把新出的视频启用了H5播放器，之前的视频仍然需要Flash插件才能播放。很多人说装一个油猴脚本，可是问题是，不是所有人都玩得转这个油猴脚本的。这里提供一个比较详细的说明来阐释安装过程。</p>
@@ -1405,6 +1372,39 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
 <li>点击安装此脚本，然后会跳转到油猴的确认添加界面，在这个界面点击确认。</li>
 <li>此时再打开央视网，点开要看的视频，视频应该可以播放了。之前打开的央视网视频需要刷新一下。</li>
 </ol>
+]]></content>
+      <categories>
+        <category>Moving-Away-from-Flash</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【绝对机密】github上面有些零散的PPAPI Flash Player的DLL文件下载</title>
+    <url>/cms//archivers/58.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://github.com/search?l=&amp;q=filename%3Apepflashplayer.dll&amp;type=code" target="_blank" rel="noopener">https://github.com/search?l=&amp;q=filename%3Apepflashplayer.dll&amp;type=code</a><br />
+点开看一下分支名字，看下有没有Releases，如果有的话访问</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;用户名或组织名&#x2F;仓库名@分支名&#x2F;路径&#x2F;pepflashplayer.dll</span><br></pre></td></tr></table></figure>
+<p>就可以下载了。<br />
+如果有需要<code>manifest.json</code>的话试着把最后的文件名改成这个，可能会报“Couldn’t find the requested file”。如果报的话就再换一个搜索结果看看。</p>
+]]></content>
+      <categories>
+        <category>Moving-Away-from-Flash</category>
+        <category>Github</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>百分浏览器继续使用Flash Player的临时解决方案！</title>
+    <url>/cms//archivers/62.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>21.01.13更新：百分浏览器已经将自动下载的Flash改成了下载32.0.0.371的版本，据浏览器论坛超版回应，这个是最后一个没加定时自毁的版本。大家可以不用替换文件和屏蔽域名了。</strong></p>
+<hr />
+<p>百分浏览器会自动下载版本32的Flash Player放进浏览器的安装目录，这样的话即使是手动替换了Flash Player组件文件也会被新版的Flash Player覆盖掉，<strong>而新版Flash Player今天已经自毁了，无法使用！</strong> 所以我们得想办法阻止覆盖！</p>
+<p>没有这个浏览器的用户如果要使用这个浏览器，应该下载32位便携版的百分浏览器。</p>
+<p>已经猜测出浏览器自动下载Flash Player的域名：<code>static.centbrowser.cn</code>。</p>
+<p>大家需要手动将29版本的Flash Player组件文件放进浏览器的<code>User Data\PepperFlash</code>目录！如果有原来的文件则需要覆盖！通常是两个文件：<code>pepflashplayer.dll</code>和<code>manifest.json</code>。<br />
+<img src="https://img-blog.csdnimg.cn/20210112094602630.png#pic_center" alt="在这里插入图片描述" /><br />
+然后在运行之前从hosts屏蔽这个域名！</p>
+<p>打开<code>C:\Windows\System32\drivers\etc\hosts</code>这个文件，添加一行这样的内容以屏蔽这个域名。注意IP和域名之间有一个空格。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">127.0.0.1 static.centbrowser.cn</span><br></pre></td></tr></table></figure>
+<p>但是这样的话就不能再从官网重新下载浏览器了，官网这个下载链接也是来自这个域名的。如果需要从官网重新下载浏览器， 则需要将hosts的这个域名解除屏蔽。</p>
 ]]></content>
       <categories>
         <category>Moving-Away-from-Flash</category>
@@ -1448,6 +1448,22 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
       </categories>
   </entry>
   <entry>
+    <title>AX版Flash 1月12日之后继续使用Flash的方法</title>
+    <url>/cms//archivers/65.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"><a class="markdownIt-Anchor" href="#flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"></a> Flash已经停止维护了，大家能不用Flash就尽量不要用Flash，停止维护之后此组件会非常不安全！</h1>
+<p>稍微简化了一下，整了一个BAT加Node.js的脚本。需要把BAT、<code>demo32.js</code>、<code>demo64.js</code>、和<code>node.exe</code>（Node.js的可执行文件）放进同一目录。然后右键BAT文件以管理员身份运行。</p>
+<h1 id="bat文件"><a class="markdownIt-Anchor" href="#bat文件"></a> BAT文件：</h1>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">net</span>.exe session <span class="number">1</span>&gt;<span class="built_in">NUL</span> <span class="number">2</span>&gt;<span class="built_in">NUL</span> &amp;&amp; (</span><br><span class="line">    <span class="keyword">goto</span> as_admin</span><br><span class="line">) || (</span><br><span class="line">    <span class="keyword">goto</span> not_admin</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:as_admin</span><br><span class="line">	<span class="built_in">title</span> 一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">color</span> <span class="number">09</span></span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>      一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">echo</span>                       作者：佚名</span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">echo</span>                    按任意键开始修改！</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">pause</span></span><br><span class="line">	<span class="built_in">echo</span> 开始修改Flash.ocx所有者到Administrators</span><br><span class="line">	TAKEOWN /F <span class="variable">%SystemRoot%</span>\system32\Macromed\Flash\Flash.ocx /a</span><br><span class="line">	TAKEOWN /F <span class="variable">%SystemRoot%</span>\sysWOW64\Macromed\Flash\Flash.ocx /a</span><br><span class="line">	<span class="built_in">echo</span> 开始修改Flash.ocx权限</span><br><span class="line">	ICACLS <span class="variable">%SystemRoot%</span>\system32\Macromed\Flash\Flash.ocx /grant Administrators:F</span><br><span class="line">	ICACLS <span class="variable">%SystemRoot%</span>\sysWOW64\Macromed\Flash\Flash.ocx /grant Administrators:F</span><br><span class="line">	%~dp0\node.exe %~dp0\demo32.js</span><br><span class="line">	%~dp0\node.exe %~dp0\demo64.js</span><br><span class="line">	<span class="built_in">echo</span> 程序结束</span><br><span class="line">	<span class="keyword">goto</span> end</span><br><span class="line"></span><br><span class="line">:not_admin	</span><br><span class="line">	<span class="built_in">title</span> 一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">color</span> <span class="number">09</span></span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>      一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">echo</span>                       作者：佚名</span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">echo</span>    错误：未得到管理员权限，请右键以管理员身份运行！</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line"></span><br><span class="line">:end</span><br><span class="line">	<span class="built_in">pause</span></span><br><span class="line">	@<span class="built_in">echo</span> on</span><br></pre></td></tr></table></figure>
+<h1 id="demo32js文件"><a class="markdownIt-Anchor" href="#demo32js文件"></a> <code>demo32.js</code>文件：</h1>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>) ;</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>) ;</span><br><span class="line"><span class="keyword">var</span> filePath = path.resolve(<span class="string">"C:/Windows/System32/Macromed/Flash/Flash.ocx"</span>);</span><br><span class="line"></span><br><span class="line">fs.open(filePath, <span class="string">'r'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, fd</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (error) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[31m打开文件错误！没有找到文件或者没有权限，可能已经安装了移除Flash的系统更新\u001b[0m"</span>);</span><br><span class="line">		</span><br><span class="line">		process.exit();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">let</span> size = fs.statSync(filePath).size;</span><br><span class="line">	<span class="keyword">let</span> buf = Buffer.alloc(size);</span><br><span class="line">	fs.read(fd, buf, <span class="number">0</span>, size, <span class="number">0</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, data, buffer</span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件路径："</span> + filePath + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件长度："</span> + buffer.length + <span class="string">"\u001b[0m"</span>) ;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> sourceBytes = [<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x40</span>, <span class="number">0x46</span>, <span class="number">0x3E</span>, <span class="number">0x6F</span>, <span class="number">0x77</span>, <span class="number">0x42</span>];</span><br><span class="line">		<span class="keyword">var</span> isFound = <span class="literal">false</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buffer.length - <span class="number">8</span> &amp;&amp; !isFound; i++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; sourceBytes.length; j++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] != sourceBytes[j]) <span class="keyword">break</span>;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] == sourceBytes[j] &amp;&amp; j == sourceBytes.length - <span class="number">1</span>) isFound = <span class="literal">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"越界！位置："</span> + (i+j));</span><br><span class="line">			<span class="keyword">throw</span>(err);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (i == size - <span class="number">8</span>) &#123;</span><br><span class="line">			<span class="built_in">console</span>.error(<span class="string">"\u001b[31m文件找到了，但是没找到定时自毁的代码！或者已经修改过！\u001b[0m"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"\u001b[37m已找到定时自毁的代码："</span> + (--i) + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">			buffer[i+<span class="number">7</span>] = <span class="number">0x72</span>;</span><br><span class="line">			fs.close(fd, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">				fs.writeFile(filePath, buffer, &#123;<span class="attr">encoding</span>: <span class="string">"ascii"</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">if</span> (err) &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[31m写入失败！错误信息："</span> + err + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[32m"</span> + <span class="string">"写入成功！已去除自毁定时器，现在可以使用AX版Flash了。"</span> + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="demo64js文件"><a class="markdownIt-Anchor" href="#demo64js文件"></a> <code>demo64.js</code>文件：</h1>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>) ;</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>) ;</span><br><span class="line"><span class="keyword">var</span> filePath = path.resolve(<span class="string">"C:/Windows/SysWOW64/Macromed/Flash/Flash.ocx"</span>);</span><br><span class="line"></span><br><span class="line">fs.open(filePath, <span class="string">'r'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, fd</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (error) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[31m打开文件错误！没有找到文件或者没有权限，可能已经安装了移除Flash的系统更新\u001b[0m"</span>);</span><br><span class="line">		</span><br><span class="line">		process.exit();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">let</span> size = fs.statSync(filePath).size;</span><br><span class="line">	<span class="keyword">let</span> buf = Buffer.alloc(size);</span><br><span class="line">	fs.read(fd, buf, <span class="number">0</span>, size, <span class="number">0</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, data, buffer</span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件路径："</span> + filePath + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件长度："</span> + buffer.length + <span class="string">"\u001b[0m"</span>) ;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> sourceBytes = [<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x40</span>, <span class="number">0x46</span>, <span class="number">0x3E</span>, <span class="number">0x6F</span>, <span class="number">0x77</span>, <span class="number">0x42</span>];</span><br><span class="line">		<span class="keyword">var</span> isFound = <span class="literal">false</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buffer.length - <span class="number">8</span> &amp;&amp; !isFound; i++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; sourceBytes.length; j++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] != sourceBytes[j]) <span class="keyword">break</span>;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] == sourceBytes[j] &amp;&amp; j == sourceBytes.length - <span class="number">1</span>) isFound = <span class="literal">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"越界！位置："</span> + (i+j));</span><br><span class="line">			<span class="keyword">throw</span>(err);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (i == size - <span class="number">8</span>) &#123;</span><br><span class="line">			<span class="built_in">console</span>.error(<span class="string">"\u001b[31m文件找到了，但是没找到定时自毁的代码！或者已经修改过！\u001b[0m"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"\u001b[37m已找到定时自毁的代码："</span> + (--i) + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">			buffer[i+<span class="number">7</span>] = <span class="number">0x72</span>;</span><br><span class="line">			fs.close(fd, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">				fs.writeFile(filePath, buffer, &#123;<span class="attr">encoding</span>: <span class="string">"ascii"</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">if</span> (err) &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[31m写入失败！错误信息："</span> + err + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[32m"</span> + <span class="string">"写入成功！已去除自毁定时器，现在可以使用AX版Flash了。"</span> + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Moving-Away-from-Flash</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Github 个人Profile 自动实时获取最新博客博文日志并生成链接</title>
     <url>/cms//archivers/66.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>很多文章详细阐述了个性化个人Profile说明的方法，却鲜有提到如何实时更新最新博客博文并生成链接的方法。<br />
@@ -1464,22 +1480,6 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
 ]]></content>
       <categories>
         <category>Github</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>AX版Flash 1月12日之后继续使用Flash的方法</title>
-    <url>/cms//archivers/65.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"><a class="markdownIt-Anchor" href="#flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"></a> Flash已经停止维护了，大家能不用Flash就尽量不要用Flash，停止维护之后此组件会非常不安全！</h1>
-<p>稍微简化了一下，整了一个BAT加Node.js的脚本。需要把BAT、<code>demo32.js</code>、<code>demo64.js</code>、和<code>node.exe</code>（Node.js的可执行文件）放进同一目录。然后右键BAT文件以管理员身份运行。</p>
-<h1 id="bat文件"><a class="markdownIt-Anchor" href="#bat文件"></a> BAT文件：</h1>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">net</span>.exe session <span class="number">1</span>&gt;<span class="built_in">NUL</span> <span class="number">2</span>&gt;<span class="built_in">NUL</span> &amp;&amp; (</span><br><span class="line">    <span class="keyword">goto</span> as_admin</span><br><span class="line">) || (</span><br><span class="line">    <span class="keyword">goto</span> not_admin</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:as_admin</span><br><span class="line">	<span class="built_in">title</span> 一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">color</span> <span class="number">09</span></span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>      一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">echo</span>                       作者：佚名</span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">echo</span>                    按任意键开始修改！</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">pause</span></span><br><span class="line">	<span class="built_in">echo</span> 开始修改Flash.ocx所有者到Administrators</span><br><span class="line">	TAKEOWN /F <span class="variable">%SystemRoot%</span>\system32\Macromed\Flash\Flash.ocx /a</span><br><span class="line">	TAKEOWN /F <span class="variable">%SystemRoot%</span>\sysWOW64\Macromed\Flash\Flash.ocx /a</span><br><span class="line">	<span class="built_in">echo</span> 开始修改Flash.ocx权限</span><br><span class="line">	ICACLS <span class="variable">%SystemRoot%</span>\system32\Macromed\Flash\Flash.ocx /grant Administrators:F</span><br><span class="line">	ICACLS <span class="variable">%SystemRoot%</span>\sysWOW64\Macromed\Flash\Flash.ocx /grant Administrators:F</span><br><span class="line">	%~dp0\node.exe %~dp0\demo32.js</span><br><span class="line">	%~dp0\node.exe %~dp0\demo64.js</span><br><span class="line">	<span class="built_in">echo</span> 程序结束</span><br><span class="line">	<span class="keyword">goto</span> end</span><br><span class="line"></span><br><span class="line">:not_admin	</span><br><span class="line">	<span class="built_in">title</span> 一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">color</span> <span class="number">09</span></span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>      一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">echo</span>                       作者：佚名</span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">echo</span>    错误：未得到管理员权限，请右键以管理员身份运行！</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line"></span><br><span class="line">:end</span><br><span class="line">	<span class="built_in">pause</span></span><br><span class="line">	@<span class="built_in">echo</span> on</span><br></pre></td></tr></table></figure>
-<h1 id="demo32js文件"><a class="markdownIt-Anchor" href="#demo32js文件"></a> <code>demo32.js</code>文件：</h1>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>) ;</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>) ;</span><br><span class="line"><span class="keyword">var</span> filePath = path.resolve(<span class="string">"C:/Windows/System32/Macromed/Flash/Flash.ocx"</span>);</span><br><span class="line"></span><br><span class="line">fs.open(filePath, <span class="string">'r'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, fd</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (error) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[31m打开文件错误！没有找到文件或者没有权限，可能已经安装了移除Flash的系统更新\u001b[0m"</span>);</span><br><span class="line">		</span><br><span class="line">		process.exit();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">let</span> size = fs.statSync(filePath).size;</span><br><span class="line">	<span class="keyword">let</span> buf = Buffer.alloc(size);</span><br><span class="line">	fs.read(fd, buf, <span class="number">0</span>, size, <span class="number">0</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, data, buffer</span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件路径："</span> + filePath + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件长度："</span> + buffer.length + <span class="string">"\u001b[0m"</span>) ;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> sourceBytes = [<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x40</span>, <span class="number">0x46</span>, <span class="number">0x3E</span>, <span class="number">0x6F</span>, <span class="number">0x77</span>, <span class="number">0x42</span>];</span><br><span class="line">		<span class="keyword">var</span> isFound = <span class="literal">false</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buffer.length - <span class="number">8</span> &amp;&amp; !isFound; i++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; sourceBytes.length; j++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] != sourceBytes[j]) <span class="keyword">break</span>;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] == sourceBytes[j] &amp;&amp; j == sourceBytes.length - <span class="number">1</span>) isFound = <span class="literal">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"越界！位置："</span> + (i+j));</span><br><span class="line">			<span class="keyword">throw</span>(err);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (i == size - <span class="number">8</span>) &#123;</span><br><span class="line">			<span class="built_in">console</span>.error(<span class="string">"\u001b[31m文件找到了，但是没找到定时自毁的代码！或者已经修改过！\u001b[0m"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"\u001b[37m已找到定时自毁的代码："</span> + (--i) + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">			buffer[i+<span class="number">7</span>] = <span class="number">0x72</span>;</span><br><span class="line">			fs.close(fd, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">				fs.writeFile(filePath, buffer, &#123;<span class="attr">encoding</span>: <span class="string">"ascii"</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">if</span> (err) &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[31m写入失败！错误信息："</span> + err + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[32m"</span> + <span class="string">"写入成功！已去除自毁定时器，现在可以使用AX版Flash了。"</span> + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="demo64js文件"><a class="markdownIt-Anchor" href="#demo64js文件"></a> <code>demo64.js</code>文件：</h1>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>) ;</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>) ;</span><br><span class="line"><span class="keyword">var</span> filePath = path.resolve(<span class="string">"C:/Windows/SysWOW64/Macromed/Flash/Flash.ocx"</span>);</span><br><span class="line"></span><br><span class="line">fs.open(filePath, <span class="string">'r'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, fd</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (error) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[31m打开文件错误！没有找到文件或者没有权限，可能已经安装了移除Flash的系统更新\u001b[0m"</span>);</span><br><span class="line">		</span><br><span class="line">		process.exit();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">let</span> size = fs.statSync(filePath).size;</span><br><span class="line">	<span class="keyword">let</span> buf = Buffer.alloc(size);</span><br><span class="line">	fs.read(fd, buf, <span class="number">0</span>, size, <span class="number">0</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, data, buffer</span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件路径："</span> + filePath + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件长度："</span> + buffer.length + <span class="string">"\u001b[0m"</span>) ;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> sourceBytes = [<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x40</span>, <span class="number">0x46</span>, <span class="number">0x3E</span>, <span class="number">0x6F</span>, <span class="number">0x77</span>, <span class="number">0x42</span>];</span><br><span class="line">		<span class="keyword">var</span> isFound = <span class="literal">false</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buffer.length - <span class="number">8</span> &amp;&amp; !isFound; i++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; sourceBytes.length; j++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] != sourceBytes[j]) <span class="keyword">break</span>;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] == sourceBytes[j] &amp;&amp; j == sourceBytes.length - <span class="number">1</span>) isFound = <span class="literal">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"越界！位置："</span> + (i+j));</span><br><span class="line">			<span class="keyword">throw</span>(err);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (i == size - <span class="number">8</span>) &#123;</span><br><span class="line">			<span class="built_in">console</span>.error(<span class="string">"\u001b[31m文件找到了，但是没找到定时自毁的代码！或者已经修改过！\u001b[0m"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"\u001b[37m已找到定时自毁的代码："</span> + (--i) + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">			buffer[i+<span class="number">7</span>] = <span class="number">0x72</span>;</span><br><span class="line">			fs.close(fd, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">				fs.writeFile(filePath, buffer, &#123;<span class="attr">encoding</span>: <span class="string">"ascii"</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">if</span> (err) &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[31m写入失败！错误信息："</span> + err + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[32m"</span> + <span class="string">"写入成功！已去除自毁定时器，现在可以使用AX版Flash了。"</span> + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Moving-Away-from-Flash</category>
       </categories>
   </entry>
   <entry>
@@ -1557,6 +1557,27 @@ c124.7 8 235 61.7 331 161 31.3 33.3 59.7 72.7 85 118l7 13v35z'/></svg></span></s
       </categories>
   </entry>
   <entry>
+    <title>Hexo Gitee Pages 自动部署站点</title>
+    <url>/cms//archivers/70.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>此博客站点使用了Github作为主站，又使用了Gitee作为镜像站。但是Gitee免费账户是不支持提交后自动部署的，所以有大佬开发了在Github上使用的动作：<code>gitee-pages-action</code>（<a href="https://github.com/yanglbme/gitee-pages-action" target="_blank" rel="noopener">点击查看</a>）。只要在某个仓库配置好这个动作就能在往这个仓库提交任何内容时自动让Gitee部署Gitee里面指定仓库的内容。</p>
+<p>我们按照这个仓库的文档往Hexo站点的<code>source</code>目录添加<code>.github\workflows\sync.yml</code>这个文件，并在这个文件里面配置要使用的Gitee站点仓库和用户名。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Sync</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">master</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">Gitee</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">yanglbme/gitee-pages-action@main</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="comment"># 注意替换为你的 Gitee 用户名</span></span><br><span class="line">          <span class="attr">gitee-username:</span> <span class="string">改成你的Gitee用户名</span></span><br><span class="line">          <span class="comment"># 注意在 Settings-&gt;Secrets 配置 GITEE_PASSWORD</span></span><br><span class="line">          <span class="attr">gitee-password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITEE_PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="comment"># 注意替换为你的 Gitee 仓库，仓库名严格区分大小写，请准确填写，否则会出错</span></span><br><span class="line">          <span class="attr">gitee-repo:</span> <span class="string">改成你的Gitee仓库（用户名斜杠仓库名）</span></span><br><span class="line">          <span class="comment"># 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）</span></span><br><span class="line">          <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<p>但是一个比较严重的问题是鄙人要让Github这边部署站点的仓库更新时触发这个动作，鄙人用的是Hexo，如果鄙人在<code>source</code>目录配置了<code>.github</code>目录时使用Hexo的<code>generate</code>命令是不会向Github提交这个动作的配置的。国内也没有一个比较好的解决方案，只好去查Hexo的文档。</p>
+<p>经过查阅<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">Hexo文档</a>发现，Hexo默认会忽略隐藏文件和文件夹（包括名称以下划线和 <strong><code>.</code>开头的文件和文件夹</strong>，Hexo的<code>_posts</code>和<code>_data</code>等目录除外）。因此需要在后台仓库的<code>_config.yml</code>文件添加这样的配置才能把<code>.github</code>的目录也给带进来。可能已经预留了<code>include</code>属性，建议先搜索这个属性，然后直接往这里面添加。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">include:</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">".github/**/*"</span></span><br></pre></td></tr></table></figure>
+<p>但是这样即使配置了添加这些文件，他默认也会把这个源文件也给渲染，所以我们还需要设置忽略这个文件的渲染。继续在<code>_config.yml</code>文件查找<code>skip_render</code>属性，添加这个文件名。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">skip_render:</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">".github/**/*"</span></span><br></pre></td></tr></table></figure>
+<p>还有一处也需要修改，往远程仓库部署时要设置不能跳过隐藏的文件，因为Git Bash是按Linux设计的，默认会将<code>.</code>开头的文件和文件夹视为隐藏文件。所以要继续在<code>_config.yml</code>文件查找<code>deploy</code>属性，设置里面<code>ignore_hidden</code>为<code>false</code>。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">false</span> <span class="comment"># 添加这个属性值为false</span></span><br><span class="line">  <span class="attr">repo:</span> </span><br><span class="line">    <span class="attr">gitee:</span> <span class="string">git@gitee.com:你的Gitee仓库.git,要使用的分支名</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">git@github.com:你的Github仓库.git,要使用的分支名</span></span><br><span class="line">    <span class="comment"># 可以先提交Gitee然后再提交Github，也就是把这个Gitee的地址放在前面。这样保证Gitee的站点内容能在Github开始动作之前完成提交。</span></span><br></pre></td></tr></table></figure>
+<p>注意Github的部署仓库后台的Settings里面也要按照最上面那个仓库说明中那样配置Secrets（<code>GITEE_RSA_PRIVATE_KEY</code>和<code>GITEE_PASSWORD</code>的两个密钥。其中：<code>GITEE_RSA_PRIVATE_KEY</code>存放<code>id_rsa</code>私钥；<code>GITEE_PASSWORD</code>存放Gitee帐号的密码），这一步不要忘记了。</p>
+<p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
+]]></content>
+      <categories>
+        <category>Web-Building</category>
+        <category>Github</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Github 添加一个实时显示StackOverflow分数Reputation的徽章</title>
     <url>/cms//archivers/69.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我們采用XPath强行解析StackOverflow用户主页的HTML节点来获取用户的Reputation数字。<br />
@@ -1575,27 +1596,6 @@ Shields.io提供了后端XPath解析网络上XML内容并输出到徽章的接�
 <p>类似的，其他不能使用JSON方式获取数字的平台也可以通过这种XPath的方式来读取用户或项目主页的DOM节点来获取需要显示的动态内容。这里就不再赘述了。</p>
 ]]></content>
       <categories>
-        <category>Github</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hexo Gitee Pages 自动部署站点</title>
-    <url>/cms//archivers/70.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>此博客站点使用了Github作为主站，又使用了Gitee作为镜像站。但是Gitee免费账户是不支持提交后自动部署的，所以有大佬开发了在Github上使用的动作：<code>gitee-pages-action</code>（<a href="https://github.com/yanglbme/gitee-pages-action" target="_blank" rel="noopener">点击查看</a>）。只要在某个仓库配置好这个动作就能在往这个仓库提交任何内容时自动让Gitee部署Gitee里面指定仓库的内容。</p>
-<p>我们按照这个仓库的文档往Hexo站点的<code>source</code>目录添加<code>.github\workflows\sync.yml</code>这个文件，并在这个文件里面配置要使用的Gitee站点仓库和用户名。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Sync</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">master</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">Gitee</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">yanglbme/gitee-pages-action@main</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="comment"># 注意替换为你的 Gitee 用户名</span></span><br><span class="line">          <span class="attr">gitee-username:</span> <span class="string">改成你的Gitee用户名</span></span><br><span class="line">          <span class="comment"># 注意在 Settings-&gt;Secrets 配置 GITEE_PASSWORD</span></span><br><span class="line">          <span class="attr">gitee-password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITEE_PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="comment"># 注意替换为你的 Gitee 仓库，仓库名严格区分大小写，请准确填写，否则会出错</span></span><br><span class="line">          <span class="attr">gitee-repo:</span> <span class="string">改成你的Gitee仓库（用户名斜杠仓库名）</span></span><br><span class="line">          <span class="comment"># 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）</span></span><br><span class="line">          <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-<p>但是一个比较严重的问题是鄙人要让Github这边部署站点的仓库更新时触发这个动作，鄙人用的是Hexo，如果鄙人在<code>source</code>目录配置了<code>.github</code>目录时使用Hexo的<code>generate</code>命令是不会向Github提交这个动作的配置的。国内也没有一个比较好的解决方案，只好去查Hexo的文档。</p>
-<p>经过查阅<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">Hexo文档</a>发现，Hexo默认会忽略隐藏文件和文件夹（包括名称以下划线和 <strong><code>.</code>开头的文件和文件夹</strong>，Hexo的<code>_posts</code>和<code>_data</code>等目录除外）。因此需要在后台仓库的<code>_config.yml</code>文件添加这样的配置才能把<code>.github</code>的目录也给带进来。可能已经预留了<code>include</code>属性，建议先搜索这个属性，然后直接往这里面添加。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">include:</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">".github/**/*"</span></span><br></pre></td></tr></table></figure>
-<p>但是这样即使配置了添加这些文件，他默认也会把这个源文件也给渲染，所以我们还需要设置忽略这个文件的渲染。继续在<code>_config.yml</code>文件查找<code>skip_render</code>属性，添加这个文件名。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">skip_render:</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="string">".github/**/*"</span></span><br></pre></td></tr></table></figure>
-<p>还有一处也需要修改，往远程仓库部署时要设置不能跳过隐藏的文件，因为Git Bash是按Linux设计的，默认会将<code>.</code>开头的文件和文件夹视为隐藏文件。所以要继续在<code>_config.yml</code>文件查找<code>deploy</code>属性，设置里面<code>ignore_hidden</code>为<code>false</code>。</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">false</span> <span class="comment"># 添加这个属性值为false</span></span><br><span class="line">  <span class="attr">repo:</span> </span><br><span class="line">    <span class="attr">gitee:</span> <span class="string">git@gitee.com:你的Gitee仓库.git,要使用的分支名</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">git@github.com:你的Github仓库.git,要使用的分支名</span></span><br><span class="line">    <span class="comment"># 可以先提交Gitee然后再提交Github，也就是把这个Gitee的地址放在前面。这样保证Gitee的站点内容能在Github开始动作之前完成提交。</span></span><br></pre></td></tr></table></figure>
-<p>注意Github的部署仓库后台的Settings里面也要按照最上面那个仓库说明中那样配置Secrets（<code>GITEE_RSA_PRIVATE_KEY</code>和<code>GITEE_PASSWORD</code>的两个密钥。其中：<code>GITEE_RSA_PRIVATE_KEY</code>存放<code>id_rsa</code>私钥；<code>GITEE_PASSWORD</code>存放Gitee帐号的密码），这一步不要忘记了。</p>
-<p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
-]]></content>
-      <categories>
-        <category>Web-Building</category>
         <category>Github</category>
       </categories>
   </entry>
@@ -2258,6 +2258,51 @@ I want you to make contracts with me, and become magical girls!<br></p>
       </categories>
   </entry>
   <entry>
+    <title>重读《由C#风潮想起的－给初学编程者的忠告》有感</title>
+    <url>/cms//archivers/36.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://www.cnblogs.com/XmNotes/archive/2009/12/27/1633448.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E5%B0%8F%E5%9F%8E%E6%95%85%E4%BA%8B-%E9%87%8D%E8%AF%BB%E3%80%8A%E7%94%B1C%EF%BC%83%E9%A3%8E%E6%BD%AE%E6%83%B3%E8%B5%B7%E7%9A%84%EF%BC%8D%E7%BB%99%E5%88%9D%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%80%85%E7%9A%84%E5%BF%A0%E5%91%8A%E3%80%8B%E6%9C%89%E6%84%9F-brightgreen" alt="小城故事-重读《由C#风潮想起的－给初学编程者的忠告》有感" /></a></p>
+<p>我大约刚开始学编程时就看到<a href="34.html">这篇文章</a>了（下面简称《C#风潮》），这是一篇被转载了上万次的名文，可参见这里<a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;hl=zh-CN&amp;ei=w91-X5jBAZH4hwO4rIX4Aw&amp;q=%E6%88%91%E5%A7%8B%E7%BB%88%E8%AE%A4%E4%B8%BA%EF%BC%8C%E5%AF%B9%E4%B8%80%E4%B8%AA%E5%88%9D%E5%AD%A6%E8%80%85%E6%9D%A5%E8%AF%B4%EF%BC%8CIT%E7%95%8C%E7%9A%84%E6%8A%80%E6%9C%AF%E9%A3%8E%E6%BD%AE%E6%98%AF%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%BD%E8%B5%B6%E7%9A%84%EF%BC%8C%E8%80%8C%E4%B8%94%E4%B9%9F%E6%B2%A1%E6%9C%89%E8%83%BD%E5%8A%9B%E5%8E%BB%E8%BF%BD%E8%B5%B6%E3%80%82%E6%88%91%E6%97%B6%E5%B8%B8%E7%9C%8B+%E8%A7%81%E8%87%AA%E5%B7%B1%E7%9A%84DDMM%E4%BB%AC%E6%8A%8A%E8%AF%BE%E6%9C%AC%E6%89%94%E4%BA%86%EF%BC%8C%E5%8E%BB&amp;oq=%E6%88%91%E5%A7%8B%E7%BB%88%E8%AE%A4%E4%B8%BA%EF%BC%8C%E5%AF%B9%E4%B8%80%E4%B8%AA%E5%88%9D%E5%AD%A6%E8%80%85%E6%9D%A5%E8%AF%B4%EF%BC%8CIT%E7%95%8C%E7%9A%84%E6%8A%80%E6%9C%AF%E9%A3%8E%E6%BD%AE%E6%98%AF%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%BD%E8%B5%B6%E7%9A%84%EF%BC%8C%E8%80%8C%E4%B8%94%E4%B9%9F%E6%B2%A1%E6%9C%89%E8%83%BD%E5%8A%9B%E5%8E%BB%E8%BF%BD%E8%B5%B6%E3%80%82%E6%88%91%E6%97%B6%E5%B8%B8%E7%9C%8B+%E8%A7%81%E8%87%AA%E5%B7%B1%E7%9A%84DDMM%E4%BB%AC%E6%8A%8A%E8%AF%BE%E6%9C%AC%E6%89%94%E4%BA%86%EF%BC%8C%E5%8E%BB&amp;gs_lcp=CgZwc3ktYWIQA1DDTFjDTGDhTmgAcAB4AIABowGIAdUEkgEDMS40mAEAoAEBqgEHZ3dzLXdpesABAQ&amp;sclient=psy-ab&amp;ved=0ahUKEwjYrsSa2aTsAhUR_GEKHThWAT8Q4dUDCA0&amp;uact=5" target="_blank" rel="noopener">文章搜索</a>。今天无意间又看到它，《C#风潮》显然是很不错的文章，作者列举学习中的实例包括自己的经历，将自己对技术学习的深刻理解，清晰地展示给我们，并指出了学习的方向。又一年就要过去了，现在重读，联想这几年的经历和认识的发展，我觉得有一些新的体会。</p>
+<p>文章的第一句话是：“我始终认为，对一个初学者来说，IT界的技术风潮是不可以追赶的，而且也没有能力去追赶。”</p>
+<p>作者没有直接解释原因。为什么呢，现在我有点明白了。很显然，如果你能比别人更早地认识到一项新技术的潜力，你就比别人有更好的发展机会，获得更大的收获。作者的想法是，作为初学者，他不太可能具备判断技术前景的能力。其实这种能力其实在真正的技术人员中，也只有少数人具备。</p>
+<p>接着，作者对大学的师弟师妹们忽视基础课程，学习C#等“先进”语言感到痛心。可是，为什么同学们会把课本扔了呢？我来解释吧，乏味的课程、过时的教材、水平低下的师资、脱离实践的教学让大学生们失去了方向。作者是非常有才华的，他在大学的成功是个别案例。说实话，中国的大学教育让每个有识之士都痛心。</p>
+<p>最近常在看李开复等大家的博客，开始体会到一点学习的本质，就是忘掉你学到的知识和技能后剩下来的东西。不管是大学生也好，初学编程者也好，如果没有面临眼前的生活压力，就请追随自己的激情和兴趣，选你最喜欢的技术吧，不用管那些科班的教授专家怎么说。你可能走得不是他们指定的阳关大道，但关键是，要去学，有目的地学，不管是C#也好还是汇编也好，都可以找到共通的学习方法。</p>
+<p>如果你对新技术感兴趣，完全可以勇敢地去追。当然也不能为了赶流行风潮，看到别人追我也追，而是为了它的学习价值。确实有绝大多数新技术是昙花一现，但有旺盛生命力的技术也在不断扎根发芽。现在早已证明了，当年涌现C#语言及其所在的.Net平台不是一阵风，而是一场革命。即使某项技术失败了，也未必就是技术本身的问题，比如可能是过于超前了，但其中蕴含的思想却可能非常可贵。将思想和方法学到手，会让人终身受用。</p>
+<p>接下来作者讲了几个初学者的误区。第一个是“认为计算机技术等于编程技术”，这个说不上什么误区，人的认识是随着对事物了解的逐渐深入而提升的，这是一个持续无止境的过程。很多人开始连网络和服务器都搞不清，自然不会对计算机技术有多全面的认识。不过我认为，对于初学者来说，只要能像作者后面说的“日三省乎己”，时常想想自己学了些什么，还有些什么相关的东西需要掌握，自己对什么最感兴趣之类问题，对计算机技术认识自然会丰富并立体起来。</p>
+<p>第二个误区是“咬文嚼字的孔已己作风”，双手赞成，这显然是应试教育的恶果。有个作者的师弟跟他说：“C++ 太难了，学了这里忘了那里，学了继承忘了模板。”作者的回答道：“你不去学就容易了”。作者说，“死抠C<ins>的语法就和孔已己炫耀茴字有几种写法一样毫无意义。你根本不需要对的C</ins>语法太关心，动手编程就是了，有不记得的地方一查MSDN就立马搞定。”编程是创造性思维的结晶，不像马哲那样可以靠死记硬背，而要结合实践加以理解贯通。而如果你对这个技术点的应用有相当的心得，让你再描述一下这个知识点，你说得会比国内绝大多数技术书籍上那些专家写得还要好。</p>
+<p>联想到前几个月，园子上有个热门文章<a href="http://www.cnblogs.com/MichaelTao/archive/2009/08/04/1536983.html" target="_blank" rel="noopener">关于最近面试的一点感想</a>，讲面试时询问对方“<code>delegate</code><a href="http://xn--3ds.net" target="_blank" rel="noopener">在.net</a> framework1.1,2.0,3.5各可以怎么写”的问题。老赵为此连作三篇文章（<a href="http://www.cnblogs.com/JeffreyZhao/archive/2009/08/05/from-delegate-to-others.html" target="_blank" rel="noopener">从.NET中委托写法的演变谈开去</a>）详述了对<code>delegate</code>这个技术点的心得，事实充分，论证严密，证明这确实是一个能够检验面试技术人员水平的好问题。这才是真正地学懂了、学会了！不过好问题也是有条件的，这个问题将来会在网上广泛传播，要是再有面试官出这样的题目，就值得商榷了，有可能会真的招到像孔已己一般的牛人。不过时下的环境各种浮躁，从那篇文章的评论中，可以看到山间竹笋和墙上芦苇盛行，连孔已己都不多见了。</p>
+<p>第三个误区点到《C#风潮》文的核心，“不顾基础，盲目追赶时髦技术”。作者举了自己的亲身经历，并与同学对比，看上去很有说服力。综合看这篇文章，作者不经意泄露了他的潜意识，即从汇编到C++到VC的道路才是编程的武学正宗，其他都是“歪门邪道”。作者下面对各个编程相关课程的描述也证明了这一点。</p>
+<p>首先，编程语言没有高低之分，编程开发者的水平，当然也包括他的报酬，和他用语言没有关系。C<ins>程序员能拿到的薪水，C#或VB程序员一样能达到，并且未必就得比C</ins>程序员付出的努力多。只是由于C#是更容易入门的语言，所以菜鸟程序员要多得多，显得好像不如C++“高贵”，其实这反倒是它先进的体现。</p>
+<p>至于说数据结构和操作系统原理是学习编程的基础，前者还算可以，可以使你更好地理解性能、存储、算法的概念。至于操作系统原理，如果你有志于参加个Windows 8开发（微软总部已经在招聘了），当然是必须学好的。但对于一般地C/S、B/S以及嵌入式开发，我实在是想不明白了解操作系统原理有什么必要性。当然了解了更好，但是可能还不如花半小时研究一个性能测试工具的使用更有意义。</p>
+<p>其实，并不是先学HTML和VB导致作者的同学在毕业时输给了作者，而是那位同学不够努力和专注。他没有在Web开发上，达到与作者相同的高度。我认为初学者真正的第三个误区是（如果第一个算的话），不明白成功源自努力和专注。开始作者说，师弟师妹们把课本扔了花钱买C#、ASP的书看，但据我所知，绝大多数人花钱买了书，看不几页也丢到一边了。大学新生，只要去将毕业的师兄师姐物品处理摊拉，肯定能淘到好多新书。同样，很多人买了电脑，开始是想练编程，过不多久就成了网游用机。</p>
+<p>这也不能怪这些初学者。国内出版的技术书籍水平实在不敢恭维，近两三年还好了些，翻译的书多了，也有个别不错的国内作者，但对初学者一开始就看出某本书的价值还是困难了点。再就是应试教育环境下长大，大家自学能力和意识普遍很差，大学里又没有人指引，实践机会也少，遇到一些困难和困惑，结果自然就是放弃了。</p>
+<p>作者还以课程描述的形式，设计了他理想中的Windows程序员技术学习路线。我想他认为这条路线适应于所有想成为程序员的人，但还是保留了一下。我觉得《操作系统原理》、《计算机体系结构》大致了解一下就行，不了解也没太大关系。《数据结构》还是比较重要的，尤其是其中的思路和方法。英语的重要性就不用说了，至于《大学英语》就算了，那不是我们需要的，多看原版技术书籍和文章吧。软件工程也非常重要，作者的学习方法非常值得称道：“不要花太多的时间 去记条条框框，看不懂就跳过去。在每次自己完成了一个软件设计任务（不管是练习还是工作）以后再来回顾回顾，每次都会有收获”。许多开发人员甚至技术管理人员，都完全没有软件工程的概念和意识，你如果有，哪怕是一点，也是将对未来你的发展弥足珍贵。</p>
+<p>这些课程中，作者相当推崇《Windows 程序设计》，现在情况也不一样了。作普通windows程序设计，.Net平台下开发效率要远超过C<ins>平台。就是在C</ins>平台中，VC<ins>也属于较难上手的，C</ins> Builder则容易得多。我们有很多的选择，每个人的情况都不一样，适合自己的才是最好的。</p>
+<p>最后，作者谆谆提出了对初学者的忠告：为你的将来着想，把最多的时间花在学习上。只要去学，只要不是学害人的东西，学什么都要比把时间荒废要好得多。环境也许无法改变，但你可以改变自己。</p>
+<p>纵观全文，不可否认，《C#风潮》是有部分保守的观点。 但多年之后重读此文，在到处是浮躁的大学，浮躁的业界，浮躁的社会中，这篇文章依然能闪光。</p>
+]]></content>
+      <categories>
+        <category>Other</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>一个程序员给初学编程人的建议</title>
+    <url>/cms//archivers/39.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://www.cnblogs.com/clinging/articles/925852.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E6%9C%AA%E7%9F%A5-%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E7%BB%99%E5%88%9D%E5%AD%A6%E7%BC%96%E7%A8%8B%E4%BA%BA%E7%9A%84%E5%BB%BA%E8%AE%AE-brightgreen" alt="未知-一个程序员给初学编程人的建议" /></a></p>
+<p>本篇文章是作者多年来的一些感受，主要写给那些想学习程序设计而又很迷惘的朋友，希望可以带来一点帮助。</p>
+<p>我第一次接触电脑是在小学二年级的时候。那时纯粹是因为喜欢打电子游戏，听别人说电脑上的游戏十分好玩，于是就漫漫开始与之接触了。在三年级时父母出于我对计算机浓厚的兴趣送我去了一个BASIC编程学习班，从那时起我才真正开始走上编程这条不归之路。虽然说现在程序设计这门专业在社会上很热，竞争十分激烈，但是这只是学习编程的人比较多而已。真正能够掌握以至于精通的人实际上很少，毕竟中国的软件业才刚刚起步不久。现在社会对优秀的程序设计人员的需求量还是相当大的，但是前提是必须要优秀。我自己虽然也谈不上优秀，但多少还是有些感触。在这里想讲述自己对于一般程序员和优秀程序员之间在技术上的一些认识（什么敬业精神生活态度我就不多说了）：</p>
+<h1 id="首先作为一个优秀的程序员数学是十分重要的"><a class="markdownIt-Anchor" href="#首先作为一个优秀的程序员数学是十分重要的"></a> 首先作为一个优秀的程序员，数学是十分重要的。</h1>
+<p>数学是自然科学的基础，计算机科学实际上是数学的一个分支。数学主要能让人懂得一种分析问题的方法，然后再通过编程去实现它。计算机内部的许多原理也都牵涉到比较复杂的数学知识。它是我们用来解决现实问题的最高效的工具。很多学习编程的朋友对数学觉得不屑一顾，觉得对于编程没有什么关系。实际上优秀程序员和一般程序员拉开档次很大一个程度上就是取决于对数学的能力。一些项目有时需要很复杂的数学建模和利用数学对于系统效率进行分析，而这些项目对于一般的程序员是很困难的。正确应用数学知识有时候能使你的程序的效率产生质的飞跃。现在的程序员在数学上普遍是薄弱环节，这点是大家应该引起足够重视的。当别人对于这些项目感到无从下手，而你却能够完成，这个时候你的价值也就表现出来了。真正优秀的程序员是能够最基本的一点就是要能够通过自己的知识来解决一般程序员所无法完成的问题。而数学能力就是一个很重要的环节。</p>
+<h1 id="其次就是要对数据结构引起足够的重视"><a class="markdownIt-Anchor" href="#其次就是要对数据结构引起足够的重视"></a> 其次就是要对数据结构引起足够的重视。</h1>
+<p>如果说计算机专业的学生与非计算机专业的最根本的差别绝对是数据结构（数学大家都一样学了，主要看你自己学得好坏）。对数据结构的掌握与运用能力是衡量你编程能力的一个很重要的指标。有的人对于看了链表，栈，树，广义表这些东西就头痛。然而这些东西往往能使你的程序的效率比别人高出百倍。由于一直搞信息学竞赛，到了大学又搞ACM，所以我对数学和数据结构都掌握得相对较好。这使我在应聘与工作中明显感到胜人一酬。记得自己大学时去一家公司应聘的经历，当时去应凭的还有3个人，有2个大学毕业，有个也工作了一段时间了。他们几个都在大讲自己的能力如何之强，会使用的语言及编程工具如何之多，经验如何之丰富。按理说我应该是资质最浅的。当时也是初生牛X不怕虎，也就硬着头皮去了。当时面试的题目是一个公司的资金管理项目的一个问题，要求每个人都在思考后给出自己的设计方案。其中比较核心的一个问题就是要计算一个资金最小波动值的问题，给出的数据量相当大，对效率要求很高。对于整个程序的面向对象化的分析我们几个都是差不多的，毕竟这些东西在学校里是很重视的，而且不是真正的难点。然而到了最关键的问题时其余的人都卡壳了，有两个是用简单的双重循环，时间复杂度(<em>N</em><sup>2</sup>)，惨不忍睹。还有一个在冥思苦想了好一阵以后说用树，具体技术细节又讲不清楚，效率分析也很马虎。只有我当时很快就给出了采取AVL树的方案，并且利用高等数学推导作出了很详细的效率分析和时空换算，并提出了引入汇编的方法。很自然的我得到了这份工作。在这里大家显然可以看到数学和数据结构对于一个优秀程序员是多么重要，它们是和一般的程序员打开档次的最关键的地方。这样向“枣子”碰到的那种情况应该很轻松的就可以想到。</p>
+<p>如果你是一位想学习编程的朋友，我经过多年的学习总结出来了一个学习的线路希望对你有所帮助。要学习编程是要有很大恒心和毅力的，首先你要明确自己的目标，想好自己编程是为了干什么。如果你学习仅仅只是一时想编出QUAKE和成为比尔盖茨的冲动，那么我劝你还是应该还是不要开始学习，应为这样的目标很难支持你日后大量的学习。而且你的年龄不能太大（最好是中学或者大学生）。如果你想好目标并决定开始奋斗，那就让我们开始吧。如果你一开始对电脑一无所知，那么你应该先熟悉一些电脑的一些最基本的原理和操作，这个不需要特别细致的学习，只要大概知道二进制和一些基本操作就可以了。接下来你应该先学习BASIC语言，这个语言并不会耽误你太多的时间，学习它完全是为了入门，让你对电脑编程有一个比较初步的认识。这时候你应该多编一些小的程序，知道一些最基本每条语句的功能，搞清楚一些基本的数据结构（尤其是数组）对于一些其余用途的函数最好不要做任何学习，因为这样只会分散你的注意力。当你能够可以熟练的运用BASIC编出猴子选大王，以及电脑出题考试之类的程序时，你就可以开始后面的学习了。接下来如果觉得自己接受能力强的话就可以开始学C了（注意不是C++），如果感觉有困难也可以先学Pascal过度一下。还有很重要的一点就是千万不要一开始就学VB，Delphi，VC之类的东西，这些东西在一开始学会对你造成很坏的影响。有可能会把你引入另外一个错误的学习方向而忽略了真正应该掌握的东西。学C主要是学过程话的程序设计，学会把自己的程序分成许多的函数（或过程），养成良好的编程习惯。这时可以多看一下高人的程序，不一定要懂意思，主要是学会别人程序的格式（比如变量如何起名，怎么划分函数）。除开掌握基本的控制流语句外，应该学习一些很简单的I/O函数和数学函数。</p>
+<p>C的学习主要是你舍弃原来BASIC程序那种把所有语句积成一大堆的风格，要学会使用函数，提高代码重用性。对于指针之类的东西如果实在看不懂可以先不去管，到后面会有办法。当你能够比较自如的用C编写一些小的计算程序时，你就可以开始你的数据结构的学习了（数学的学习主要是在学校，自己要多用心）。数据结构你可以一点一点漫漫看，并不需要专门空出一段时间来专门研究，这样的目的是让你能够很好的掌握它，要学会用数据结构的知识来规范自己的程序设计和提高程序的效率。学完C我认为接着最好学习汇编。这个或许有许多人都会反对，然而我个人认为这样是很好的。从最基本的DOS汇编开始，买本《IBM PC汇编程序设计》（清华黄皮）一定要一点一点吃透，实在看不懂就跳，反复的严读是一定可以看懂的。汇编是一定要掌握的，因为它涉及到很多最基本的知识。掌握了汇编和对I/O有了个很彻底的认识后，应该去学编译原理。这个东西并不要精通，但是一定要知道，在大脑里要有一个这样的概念，这对你对程序语言的控制能力都有很大的帮助。这样最基本的学习就算完成了。一般智力正常的人前一段东西应该都是可以掌握的。接着后面的学习就要看你自身的造化了。这个时候你应该研究一下数据结构，不要分散自己学习的注意力，要知道数据结构是异常重要的（相信我，绝对没错）如果你觉得自己已经对于树，连表，堆栈之类的东西和排序，递归之类的算法已经十分清楚，就可以开始学习C<ins>了。学习前一定要有个正确的认识，那就是C和C</ins>是两个不同的东西。学习C<ins>是为了学习面向对象的程序设计，这个时候你对于指针应该也能够掌握了（有汇编的基础），主要抓住C</ins>和C相比的一些新特性，对于多态之类的特性要注意理解掌握，如果没有搞懂就坚决不要往下学习。一些基本的概念掌握以后可以看一些别人设计的程序，学习别人怎么利用面向对象的方法来设计程序的。这个东西也是人之间拉开档次的一个环节，可以和数据结构放在同等重要的地位。我就见过有的人都大学毕业了还搞不懂<code>virtual</code>到底是怎么一回事情。其实我认为学到这里你已经为你成为一个优秀的程序员打下了很好的基础，你已经能够应用C++，懂得面向对象程序设计，对数据结构掌握很好，掌握汇编和编译原理。接下来的学习就是基于操作平台的了，一般是先学Windows（Microsoft毕竟是老大），先学Win32 API，搞请Windows基本消息机制和原理，有汇编基础基本上不会碰到什么困难。其实只要会了API，其余什么MFC，VCL都是囊中之物了，都不过是对于API的封装而已。VC，C++Builder都可轻松拿下，这只是开发工具的问题。以后的OLE(ActiveX)，.NET，数据库就要看自己的发展方向而定了。我在这里强调的是前面的基本能力的学习，后面操作平台虽然知识体系庞大，然而毕竟比较死，更好掌握。最后编程能力的高低主要还是有以下几点决定：1. 编程的习惯 2. 数学能力（包括逻辑思维，分析问题的能力） 3. 对数据结构的认识能力 4. 经验的多少（包括多使用语言的掌握能力）</p>
+<p>以上只是本人一些愚见，希望大家指出不正确的地方并与我多多交流。</p>
+]]></content>
+      <categories>
+        <category>Other</category>
+      </categories>
+  </entry>
+  <entry>
     <title>初学编程者的良言警句</title>
     <url>/cms//archivers/34.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://blog.csdn.net/FlyHope2005/article/details/184527" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E5%88%98%E5%B7%8D-%E7%94%B1C%EF%BC%83%E9%A3%8E%E6%BD%AE%E6%83%B3%E8%B5%B7%E7%9A%84%E2%80%94%E2%80%94%E7%BB%99%E5%88%9D%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%80%85%E7%9A%84%E5%BF%A0%E5%91%8A-brightgreen" alt="刘巍-由C#风潮想起的——给初学编程者的忠告" /></a></p>
@@ -2310,51 +2355,6 @@ I want you to make contracts with me, and become magical girls!<br></p>
 <h1 id="把最多的时间花在学习上"><a class="markdownIt-Anchor" href="#把最多的时间花在学习上"></a> 把最多的时间花在学习上</h1>
 <p>这是对初学者最后的忠告。把每个星期玩SC或者CS的时间压缩到最少，不玩它们是最好的。同时，如果你的ASP技术已经能够来钱，甚至有公司请你兼职的话，这就证明你的天份能够保证你在努力的学习之后取得更好的收益，你应该去做更复杂的东西。眼光放长远一些，这无论是对谁都是适用的。</p>
 <p>相信你已经能够决定是否学习C＃或者什么时候去学它了。</p>
-]]></content>
-      <categories>
-        <category>Other</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>重读《由C#风潮想起的－给初学编程者的忠告》有感</title>
-    <url>/cms//archivers/36.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://www.cnblogs.com/XmNotes/archive/2009/12/27/1633448.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E5%B0%8F%E5%9F%8E%E6%95%85%E4%BA%8B-%E9%87%8D%E8%AF%BB%E3%80%8A%E7%94%B1C%EF%BC%83%E9%A3%8E%E6%BD%AE%E6%83%B3%E8%B5%B7%E7%9A%84%EF%BC%8D%E7%BB%99%E5%88%9D%E5%AD%A6%E7%BC%96%E7%A8%8B%E8%80%85%E7%9A%84%E5%BF%A0%E5%91%8A%E3%80%8B%E6%9C%89%E6%84%9F-brightgreen" alt="小城故事-重读《由C#风潮想起的－给初学编程者的忠告》有感" /></a></p>
-<p>我大约刚开始学编程时就看到<a href="34.html">这篇文章</a>了（下面简称《C#风潮》），这是一篇被转载了上万次的名文，可参见这里<a href="https://www.google.com.hk/search?newwindow=1&amp;safe=strict&amp;hl=zh-CN&amp;ei=w91-X5jBAZH4hwO4rIX4Aw&amp;q=%E6%88%91%E5%A7%8B%E7%BB%88%E8%AE%A4%E4%B8%BA%EF%BC%8C%E5%AF%B9%E4%B8%80%E4%B8%AA%E5%88%9D%E5%AD%A6%E8%80%85%E6%9D%A5%E8%AF%B4%EF%BC%8CIT%E7%95%8C%E7%9A%84%E6%8A%80%E6%9C%AF%E9%A3%8E%E6%BD%AE%E6%98%AF%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%BD%E8%B5%B6%E7%9A%84%EF%BC%8C%E8%80%8C%E4%B8%94%E4%B9%9F%E6%B2%A1%E6%9C%89%E8%83%BD%E5%8A%9B%E5%8E%BB%E8%BF%BD%E8%B5%B6%E3%80%82%E6%88%91%E6%97%B6%E5%B8%B8%E7%9C%8B+%E8%A7%81%E8%87%AA%E5%B7%B1%E7%9A%84DDMM%E4%BB%AC%E6%8A%8A%E8%AF%BE%E6%9C%AC%E6%89%94%E4%BA%86%EF%BC%8C%E5%8E%BB&amp;oq=%E6%88%91%E5%A7%8B%E7%BB%88%E8%AE%A4%E4%B8%BA%EF%BC%8C%E5%AF%B9%E4%B8%80%E4%B8%AA%E5%88%9D%E5%AD%A6%E8%80%85%E6%9D%A5%E8%AF%B4%EF%BC%8CIT%E7%95%8C%E7%9A%84%E6%8A%80%E6%9C%AF%E9%A3%8E%E6%BD%AE%E6%98%AF%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%BF%BD%E8%B5%B6%E7%9A%84%EF%BC%8C%E8%80%8C%E4%B8%94%E4%B9%9F%E6%B2%A1%E6%9C%89%E8%83%BD%E5%8A%9B%E5%8E%BB%E8%BF%BD%E8%B5%B6%E3%80%82%E6%88%91%E6%97%B6%E5%B8%B8%E7%9C%8B+%E8%A7%81%E8%87%AA%E5%B7%B1%E7%9A%84DDMM%E4%BB%AC%E6%8A%8A%E8%AF%BE%E6%9C%AC%E6%89%94%E4%BA%86%EF%BC%8C%E5%8E%BB&amp;gs_lcp=CgZwc3ktYWIQA1DDTFjDTGDhTmgAcAB4AIABowGIAdUEkgEDMS40mAEAoAEBqgEHZ3dzLXdpesABAQ&amp;sclient=psy-ab&amp;ved=0ahUKEwjYrsSa2aTsAhUR_GEKHThWAT8Q4dUDCA0&amp;uact=5" target="_blank" rel="noopener">文章搜索</a>。今天无意间又看到它，《C#风潮》显然是很不错的文章，作者列举学习中的实例包括自己的经历，将自己对技术学习的深刻理解，清晰地展示给我们，并指出了学习的方向。又一年就要过去了，现在重读，联想这几年的经历和认识的发展，我觉得有一些新的体会。</p>
-<p>文章的第一句话是：“我始终认为，对一个初学者来说，IT界的技术风潮是不可以追赶的，而且也没有能力去追赶。”</p>
-<p>作者没有直接解释原因。为什么呢，现在我有点明白了。很显然，如果你能比别人更早地认识到一项新技术的潜力，你就比别人有更好的发展机会，获得更大的收获。作者的想法是，作为初学者，他不太可能具备判断技术前景的能力。其实这种能力其实在真正的技术人员中，也只有少数人具备。</p>
-<p>接着，作者对大学的师弟师妹们忽视基础课程，学习C#等“先进”语言感到痛心。可是，为什么同学们会把课本扔了呢？我来解释吧，乏味的课程、过时的教材、水平低下的师资、脱离实践的教学让大学生们失去了方向。作者是非常有才华的，他在大学的成功是个别案例。说实话，中国的大学教育让每个有识之士都痛心。</p>
-<p>最近常在看李开复等大家的博客，开始体会到一点学习的本质，就是忘掉你学到的知识和技能后剩下来的东西。不管是大学生也好，初学编程者也好，如果没有面临眼前的生活压力，就请追随自己的激情和兴趣，选你最喜欢的技术吧，不用管那些科班的教授专家怎么说。你可能走得不是他们指定的阳关大道，但关键是，要去学，有目的地学，不管是C#也好还是汇编也好，都可以找到共通的学习方法。</p>
-<p>如果你对新技术感兴趣，完全可以勇敢地去追。当然也不能为了赶流行风潮，看到别人追我也追，而是为了它的学习价值。确实有绝大多数新技术是昙花一现，但有旺盛生命力的技术也在不断扎根发芽。现在早已证明了，当年涌现C#语言及其所在的.Net平台不是一阵风，而是一场革命。即使某项技术失败了，也未必就是技术本身的问题，比如可能是过于超前了，但其中蕴含的思想却可能非常可贵。将思想和方法学到手，会让人终身受用。</p>
-<p>接下来作者讲了几个初学者的误区。第一个是“认为计算机技术等于编程技术”，这个说不上什么误区，人的认识是随着对事物了解的逐渐深入而提升的，这是一个持续无止境的过程。很多人开始连网络和服务器都搞不清，自然不会对计算机技术有多全面的认识。不过我认为，对于初学者来说，只要能像作者后面说的“日三省乎己”，时常想想自己学了些什么，还有些什么相关的东西需要掌握，自己对什么最感兴趣之类问题，对计算机技术认识自然会丰富并立体起来。</p>
-<p>第二个误区是“咬文嚼字的孔已己作风”，双手赞成，这显然是应试教育的恶果。有个作者的师弟跟他说：“C++ 太难了，学了这里忘了那里，学了继承忘了模板。”作者的回答道：“你不去学就容易了”。作者说，“死抠C<ins>的语法就和孔已己炫耀茴字有几种写法一样毫无意义。你根本不需要对的C</ins>语法太关心，动手编程就是了，有不记得的地方一查MSDN就立马搞定。”编程是创造性思维的结晶，不像马哲那样可以靠死记硬背，而要结合实践加以理解贯通。而如果你对这个技术点的应用有相当的心得，让你再描述一下这个知识点，你说得会比国内绝大多数技术书籍上那些专家写得还要好。</p>
-<p>联想到前几个月，园子上有个热门文章<a href="http://www.cnblogs.com/MichaelTao/archive/2009/08/04/1536983.html" target="_blank" rel="noopener">关于最近面试的一点感想</a>，讲面试时询问对方“<code>delegate</code><a href="http://xn--3ds.net" target="_blank" rel="noopener">在.net</a> framework1.1,2.0,3.5各可以怎么写”的问题。老赵为此连作三篇文章（<a href="http://www.cnblogs.com/JeffreyZhao/archive/2009/08/05/from-delegate-to-others.html" target="_blank" rel="noopener">从.NET中委托写法的演变谈开去</a>）详述了对<code>delegate</code>这个技术点的心得，事实充分，论证严密，证明这确实是一个能够检验面试技术人员水平的好问题。这才是真正地学懂了、学会了！不过好问题也是有条件的，这个问题将来会在网上广泛传播，要是再有面试官出这样的题目，就值得商榷了，有可能会真的招到像孔已己一般的牛人。不过时下的环境各种浮躁，从那篇文章的评论中，可以看到山间竹笋和墙上芦苇盛行，连孔已己都不多见了。</p>
-<p>第三个误区点到《C#风潮》文的核心，“不顾基础，盲目追赶时髦技术”。作者举了自己的亲身经历，并与同学对比，看上去很有说服力。综合看这篇文章，作者不经意泄露了他的潜意识，即从汇编到C++到VC的道路才是编程的武学正宗，其他都是“歪门邪道”。作者下面对各个编程相关课程的描述也证明了这一点。</p>
-<p>首先，编程语言没有高低之分，编程开发者的水平，当然也包括他的报酬，和他用语言没有关系。C<ins>程序员能拿到的薪水，C#或VB程序员一样能达到，并且未必就得比C</ins>程序员付出的努力多。只是由于C#是更容易入门的语言，所以菜鸟程序员要多得多，显得好像不如C++“高贵”，其实这反倒是它先进的体现。</p>
-<p>至于说数据结构和操作系统原理是学习编程的基础，前者还算可以，可以使你更好地理解性能、存储、算法的概念。至于操作系统原理，如果你有志于参加个Windows 8开发（微软总部已经在招聘了），当然是必须学好的。但对于一般地C/S、B/S以及嵌入式开发，我实在是想不明白了解操作系统原理有什么必要性。当然了解了更好，但是可能还不如花半小时研究一个性能测试工具的使用更有意义。</p>
-<p>其实，并不是先学HTML和VB导致作者的同学在毕业时输给了作者，而是那位同学不够努力和专注。他没有在Web开发上，达到与作者相同的高度。我认为初学者真正的第三个误区是（如果第一个算的话），不明白成功源自努力和专注。开始作者说，师弟师妹们把课本扔了花钱买C#、ASP的书看，但据我所知，绝大多数人花钱买了书，看不几页也丢到一边了。大学新生，只要去将毕业的师兄师姐物品处理摊拉，肯定能淘到好多新书。同样，很多人买了电脑，开始是想练编程，过不多久就成了网游用机。</p>
-<p>这也不能怪这些初学者。国内出版的技术书籍水平实在不敢恭维，近两三年还好了些，翻译的书多了，也有个别不错的国内作者，但对初学者一开始就看出某本书的价值还是困难了点。再就是应试教育环境下长大，大家自学能力和意识普遍很差，大学里又没有人指引，实践机会也少，遇到一些困难和困惑，结果自然就是放弃了。</p>
-<p>作者还以课程描述的形式，设计了他理想中的Windows程序员技术学习路线。我想他认为这条路线适应于所有想成为程序员的人，但还是保留了一下。我觉得《操作系统原理》、《计算机体系结构》大致了解一下就行，不了解也没太大关系。《数据结构》还是比较重要的，尤其是其中的思路和方法。英语的重要性就不用说了，至于《大学英语》就算了，那不是我们需要的，多看原版技术书籍和文章吧。软件工程也非常重要，作者的学习方法非常值得称道：“不要花太多的时间 去记条条框框，看不懂就跳过去。在每次自己完成了一个软件设计任务（不管是练习还是工作）以后再来回顾回顾，每次都会有收获”。许多开发人员甚至技术管理人员，都完全没有软件工程的概念和意识，你如果有，哪怕是一点，也是将对未来你的发展弥足珍贵。</p>
-<p>这些课程中，作者相当推崇《Windows 程序设计》，现在情况也不一样了。作普通windows程序设计，.Net平台下开发效率要远超过C<ins>平台。就是在C</ins>平台中，VC<ins>也属于较难上手的，C</ins> Builder则容易得多。我们有很多的选择，每个人的情况都不一样，适合自己的才是最好的。</p>
-<p>最后，作者谆谆提出了对初学者的忠告：为你的将来着想，把最多的时间花在学习上。只要去学，只要不是学害人的东西，学什么都要比把时间荒废要好得多。环境也许无法改变，但你可以改变自己。</p>
-<p>纵观全文，不可否认，《C#风潮》是有部分保守的观点。 但多年之后重读此文，在到处是浮躁的大学，浮躁的业界，浮躁的社会中，这篇文章依然能闪光。</p>
-]]></content>
-      <categories>
-        <category>Other</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>一个程序员给初学编程人的建议</title>
-    <url>/cms//archivers/39.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://www.cnblogs.com/clinging/articles/925852.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E6%9C%AA%E7%9F%A5-%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%91%98%E7%BB%99%E5%88%9D%E5%AD%A6%E7%BC%96%E7%A8%8B%E4%BA%BA%E7%9A%84%E5%BB%BA%E8%AE%AE-brightgreen" alt="未知-一个程序员给初学编程人的建议" /></a></p>
-<p>本篇文章是作者多年来的一些感受，主要写给那些想学习程序设计而又很迷惘的朋友，希望可以带来一点帮助。</p>
-<p>我第一次接触电脑是在小学二年级的时候。那时纯粹是因为喜欢打电子游戏，听别人说电脑上的游戏十分好玩，于是就漫漫开始与之接触了。在三年级时父母出于我对计算机浓厚的兴趣送我去了一个BASIC编程学习班，从那时起我才真正开始走上编程这条不归之路。虽然说现在程序设计这门专业在社会上很热，竞争十分激烈，但是这只是学习编程的人比较多而已。真正能够掌握以至于精通的人实际上很少，毕竟中国的软件业才刚刚起步不久。现在社会对优秀的程序设计人员的需求量还是相当大的，但是前提是必须要优秀。我自己虽然也谈不上优秀，但多少还是有些感触。在这里想讲述自己对于一般程序员和优秀程序员之间在技术上的一些认识（什么敬业精神生活态度我就不多说了）：</p>
-<h1 id="首先作为一个优秀的程序员数学是十分重要的"><a class="markdownIt-Anchor" href="#首先作为一个优秀的程序员数学是十分重要的"></a> 首先作为一个优秀的程序员，数学是十分重要的。</h1>
-<p>数学是自然科学的基础，计算机科学实际上是数学的一个分支。数学主要能让人懂得一种分析问题的方法，然后再通过编程去实现它。计算机内部的许多原理也都牵涉到比较复杂的数学知识。它是我们用来解决现实问题的最高效的工具。很多学习编程的朋友对数学觉得不屑一顾，觉得对于编程没有什么关系。实际上优秀程序员和一般程序员拉开档次很大一个程度上就是取决于对数学的能力。一些项目有时需要很复杂的数学建模和利用数学对于系统效率进行分析，而这些项目对于一般的程序员是很困难的。正确应用数学知识有时候能使你的程序的效率产生质的飞跃。现在的程序员在数学上普遍是薄弱环节，这点是大家应该引起足够重视的。当别人对于这些项目感到无从下手，而你却能够完成，这个时候你的价值也就表现出来了。真正优秀的程序员是能够最基本的一点就是要能够通过自己的知识来解决一般程序员所无法完成的问题。而数学能力就是一个很重要的环节。</p>
-<h1 id="其次就是要对数据结构引起足够的重视"><a class="markdownIt-Anchor" href="#其次就是要对数据结构引起足够的重视"></a> 其次就是要对数据结构引起足够的重视。</h1>
-<p>如果说计算机专业的学生与非计算机专业的最根本的差别绝对是数据结构（数学大家都一样学了，主要看你自己学得好坏）。对数据结构的掌握与运用能力是衡量你编程能力的一个很重要的指标。有的人对于看了链表，栈，树，广义表这些东西就头痛。然而这些东西往往能使你的程序的效率比别人高出百倍。由于一直搞信息学竞赛，到了大学又搞ACM，所以我对数学和数据结构都掌握得相对较好。这使我在应聘与工作中明显感到胜人一酬。记得自己大学时去一家公司应聘的经历，当时去应凭的还有3个人，有2个大学毕业，有个也工作了一段时间了。他们几个都在大讲自己的能力如何之强，会使用的语言及编程工具如何之多，经验如何之丰富。按理说我应该是资质最浅的。当时也是初生牛X不怕虎，也就硬着头皮去了。当时面试的题目是一个公司的资金管理项目的一个问题，要求每个人都在思考后给出自己的设计方案。其中比较核心的一个问题就是要计算一个资金最小波动值的问题，给出的数据量相当大，对效率要求很高。对于整个程序的面向对象化的分析我们几个都是差不多的，毕竟这些东西在学校里是很重视的，而且不是真正的难点。然而到了最关键的问题时其余的人都卡壳了，有两个是用简单的双重循环，时间复杂度(<em>N</em><sup>2</sup>)，惨不忍睹。还有一个在冥思苦想了好一阵以后说用树，具体技术细节又讲不清楚，效率分析也很马虎。只有我当时很快就给出了采取AVL树的方案，并且利用高等数学推导作出了很详细的效率分析和时空换算，并提出了引入汇编的方法。很自然的我得到了这份工作。在这里大家显然可以看到数学和数据结构对于一个优秀程序员是多么重要，它们是和一般的程序员打开档次的最关键的地方。这样向“枣子”碰到的那种情况应该很轻松的就可以想到。</p>
-<p>如果你是一位想学习编程的朋友，我经过多年的学习总结出来了一个学习的线路希望对你有所帮助。要学习编程是要有很大恒心和毅力的，首先你要明确自己的目标，想好自己编程是为了干什么。如果你学习仅仅只是一时想编出QUAKE和成为比尔盖茨的冲动，那么我劝你还是应该还是不要开始学习，应为这样的目标很难支持你日后大量的学习。而且你的年龄不能太大（最好是中学或者大学生）。如果你想好目标并决定开始奋斗，那就让我们开始吧。如果你一开始对电脑一无所知，那么你应该先熟悉一些电脑的一些最基本的原理和操作，这个不需要特别细致的学习，只要大概知道二进制和一些基本操作就可以了。接下来你应该先学习BASIC语言，这个语言并不会耽误你太多的时间，学习它完全是为了入门，让你对电脑编程有一个比较初步的认识。这时候你应该多编一些小的程序，知道一些最基本每条语句的功能，搞清楚一些基本的数据结构（尤其是数组）对于一些其余用途的函数最好不要做任何学习，因为这样只会分散你的注意力。当你能够可以熟练的运用BASIC编出猴子选大王，以及电脑出题考试之类的程序时，你就可以开始后面的学习了。接下来如果觉得自己接受能力强的话就可以开始学C了（注意不是C++），如果感觉有困难也可以先学Pascal过度一下。还有很重要的一点就是千万不要一开始就学VB，Delphi，VC之类的东西，这些东西在一开始学会对你造成很坏的影响。有可能会把你引入另外一个错误的学习方向而忽略了真正应该掌握的东西。学C主要是学过程话的程序设计，学会把自己的程序分成许多的函数（或过程），养成良好的编程习惯。这时可以多看一下高人的程序，不一定要懂意思，主要是学会别人程序的格式（比如变量如何起名，怎么划分函数）。除开掌握基本的控制流语句外，应该学习一些很简单的I/O函数和数学函数。</p>
-<p>C的学习主要是你舍弃原来BASIC程序那种把所有语句积成一大堆的风格，要学会使用函数，提高代码重用性。对于指针之类的东西如果实在看不懂可以先不去管，到后面会有办法。当你能够比较自如的用C编写一些小的计算程序时，你就可以开始你的数据结构的学习了（数学的学习主要是在学校，自己要多用心）。数据结构你可以一点一点漫漫看，并不需要专门空出一段时间来专门研究，这样的目的是让你能够很好的掌握它，要学会用数据结构的知识来规范自己的程序设计和提高程序的效率。学完C我认为接着最好学习汇编。这个或许有许多人都会反对，然而我个人认为这样是很好的。从最基本的DOS汇编开始，买本《IBM PC汇编程序设计》（清华黄皮）一定要一点一点吃透，实在看不懂就跳，反复的严读是一定可以看懂的。汇编是一定要掌握的，因为它涉及到很多最基本的知识。掌握了汇编和对I/O有了个很彻底的认识后，应该去学编译原理。这个东西并不要精通，但是一定要知道，在大脑里要有一个这样的概念，这对你对程序语言的控制能力都有很大的帮助。这样最基本的学习就算完成了。一般智力正常的人前一段东西应该都是可以掌握的。接着后面的学习就要看你自身的造化了。这个时候你应该研究一下数据结构，不要分散自己学习的注意力，要知道数据结构是异常重要的（相信我，绝对没错）如果你觉得自己已经对于树，连表，堆栈之类的东西和排序，递归之类的算法已经十分清楚，就可以开始学习C<ins>了。学习前一定要有个正确的认识，那就是C和C</ins>是两个不同的东西。学习C<ins>是为了学习面向对象的程序设计，这个时候你对于指针应该也能够掌握了（有汇编的基础），主要抓住C</ins>和C相比的一些新特性，对于多态之类的特性要注意理解掌握，如果没有搞懂就坚决不要往下学习。一些基本的概念掌握以后可以看一些别人设计的程序，学习别人怎么利用面向对象的方法来设计程序的。这个东西也是人之间拉开档次的一个环节，可以和数据结构放在同等重要的地位。我就见过有的人都大学毕业了还搞不懂<code>virtual</code>到底是怎么一回事情。其实我认为学到这里你已经为你成为一个优秀的程序员打下了很好的基础，你已经能够应用C++，懂得面向对象程序设计，对数据结构掌握很好，掌握汇编和编译原理。接下来的学习就是基于操作平台的了，一般是先学Windows（Microsoft毕竟是老大），先学Win32 API，搞请Windows基本消息机制和原理，有汇编基础基本上不会碰到什么困难。其实只要会了API，其余什么MFC，VCL都是囊中之物了，都不过是对于API的封装而已。VC，C++Builder都可轻松拿下，这只是开发工具的问题。以后的OLE(ActiveX)，.NET，数据库就要看自己的发展方向而定了。我在这里强调的是前面的基本能力的学习，后面操作平台虽然知识体系庞大，然而毕竟比较死，更好掌握。最后编程能力的高低主要还是有以下几点决定：1. 编程的习惯 2. 数学能力（包括逻辑思维，分析问题的能力） 3. 对数据结构的认识能力 4. 经验的多少（包括多使用语言的掌握能力）</p>
-<p>以上只是本人一些愚见，希望大家指出不正确的地方并与我多多交流。</p>
 ]]></content>
       <categories>
         <category>Other</category>
