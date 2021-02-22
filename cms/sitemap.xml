@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.github.io/cms/archivers/73.html</loc>
+    
+    <lastmod>2021-02-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/archivers/48.html</loc>
     
     <lastmod>2021-02-22</lastmod>
@@ -601,6 +608,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.github.io/cms/categories/JavaScript/</loc>
+    <lastmod>2021-02-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
     <lastmod>2021-02-22</lastmod>
     <changefreq>daily</changefreq>
@@ -609,20 +623,6 @@
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Java/</loc>
-    <lastmod>2021-02-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.github.io/cms/categories/JavaScript/</loc>
-    <lastmod>2021-02-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.github.io/cms/categories/C/</loc>
     <lastmod>2021-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -643,6 +643,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.github.io/cms/categories/C/</loc>
+    <lastmod>2021-02-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/categories/Server/</loc>
     <lastmod>2021-02-22</lastmod>
     <changefreq>daily</changefreq>
@@ -650,14 +657,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Other/</loc>
+    <loc>https://no5972.github.io/cms/categories/Github/</loc>
     <lastmod>2021-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Github/</loc>
+    <loc>https://no5972.github.io/cms/categories/Other/</loc>
     <lastmod>2021-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

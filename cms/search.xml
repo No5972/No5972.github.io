@@ -81,16 +81,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Test</title>
-    <url>/cms//archivers/test3.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hello-world2"><a class="markdownIt-Anchor" href="#hello-world2"></a> Hello, world2</h1>
-<p>Hello world2</p>
-]]></content>
-      <categories>
-        <category>jekyll</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Welcome to Jekyll and EasyBook</title>
     <url>/cms//archivers/hello.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
@@ -136,6 +126,35 @@
 ]]></content>
       <categories>
         <category>jekyll update</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Test</title>
+    <url>/cms//archivers/test3.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hello-world2"><a class="markdownIt-Anchor" href="#hello-world2"></a> Hello, world2</h1>
+<p>Hello world2</p>
+]]></content>
+      <categories>
+        <category>jekyll</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>HTML5 datalist 使用jquery快速获取选中项元素</title>
+    <url>/cms//archivers/2.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注意到获取datalist目前仍然比较多的使用遍历datalist里面的option来获取选中项的元素(DOM). 如果项目数量比较多的时候效率会比较慢. 如果页面引用的有jquery的话可以直接使用jquery的选择器来快速获取选中项元素. 但是有一个前提, 就是所有option 的某个属性值一定是唯一的, 不能出现重复. 否则将会把全部对应选项都返回出来.</p>
+<p>范例: 已经给一个input输入 框绑定了一个datalist, 现希望在change事件弹出对话框显示datalist选中项的标题.</p>
+<p>HTML:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"type"</span> <span class="attr">list</span>=<span class="string">"dataList"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"dataList"</span>&gt;</span> <span class="comment">&lt;!-- 此范例value属性值必须唯一 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_4"</span>&gt;</span>选项4<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>JS:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#type"</span>).change(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert($(<span class="string">"#dataList option[value="</span> + <span class="keyword">this</span>.value + <span class="string">"]"</span>).text());</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>效果:</p>
+<p><img src="https://img-blog.csdnimg.cn/20191029161526424.gif" alt="在这里插入图片描述" /></p>
+<p>测试从6 192个选项中定位的计时:</p>
+<p>遍历: 3 680ms</p>
+<p>jquery选择器: 38ms</p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
       </categories>
   </entry>
   <entry>
@@ -187,25 +206,6 @@ After adding</p>
       </categories>
   </entry>
   <entry>
-    <title>HTML5 datalist 使用jquery快速获取选中项元素</title>
-    <url>/cms//archivers/2.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注意到获取datalist目前仍然比较多的使用遍历datalist里面的option来获取选中项的元素(DOM). 如果项目数量比较多的时候效率会比较慢. 如果页面引用的有jquery的话可以直接使用jquery的选择器来快速获取选中项元素. 但是有一个前提, 就是所有option 的某个属性值一定是唯一的, 不能出现重复. 否则将会把全部对应选项都返回出来.</p>
-<p>范例: 已经给一个input输入 框绑定了一个datalist, 现希望在change事件弹出对话框显示datalist选中项的标题.</p>
-<p>HTML:</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"type"</span> <span class="attr">list</span>=<span class="string">"dataList"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"dataList"</span>&gt;</span> <span class="comment">&lt;!-- 此范例value属性值必须唯一 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_4"</span>&gt;</span>选项4<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>JS:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#type"</span>).change(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert($(<span class="string">"#dataList option[value="</span> + <span class="keyword">this</span>.value + <span class="string">"]"</span>).text());</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>效果:</p>
-<p><img src="https://img-blog.csdnimg.cn/20191029161526424.gif" alt="在这里插入图片描述" /></p>
-<p>测试从6 192个选项中定位的计时:</p>
-<p>遍历: 3 680ms</p>
-<p>jquery选择器: 38ms</p>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-  </entry>
-  <entry>
     <title>本站工具整合导航</title>
     <url>/cms//archivers/4.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本站开发上线的工具逐渐增多，为改善排版，现将已有的工具链接进行整合，在本文章进行统一集中。大家可以从本文章点击链接进入相应的工具。</p>
@@ -236,22 +236,6 @@ After adding</p>
 ]]></content>
       <categories>
         <category>Webapp</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>子佩录音盒二次开发（C#）</title>
-    <url>/cms//archivers/7.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>对子佩录音盒进行二次开发需要使用到其SDK中的两个DLL文件，qnviccub.dll，bridge.dll。在C#中导入DLL的API声明参考SDK中的BriSDKLib.cs。文件内容较长这里不再贴出。</p>
-<p>子佩录音盒对于事件的监听是基于Win32的消息的。因此我们在接收程序中Windows消息的时候要判断消息类型（类型是一个UINT类型的无符号整数），而子佩录音盒的SDK里面也封装了一些消息类型的常量，我们只需要填写常量的名称即可。例如收到了来电的消息就是BriSDKLib.BriEvent_CallIn，得到了来电的电话号码就是BriSDKLib.BriEvent_GetCallID，等等。</p>
-<p>C语言里面是在注册类的时候通过给WNDCLASSEX的lpfnWndProc属性绑定消息处理函数来监听消息从而做相应动作的。而我们在C#里面可以直接在WinForm代码里面重写DefWndProc方法来做消息处理，例如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">protected override void DefWndProc(ref System.Windows.Forms.Message m)</span><br><span class="line">&#123;</span><br><span class="line">    switch (m.Msg)</span><br><span class="line">    &#123;</span><br><span class="line">        case BriSDKLib.BRI_EVENT_MESSAGE: &#x2F;&#x2F; 先判断是不是录音盒的消息</span><br><span class="line">        &#123;</span><br><span class="line">            BriSDKLib.TBriEvent_Data EventData &#x3D;</span><br><span class="line">                (BriSDKLib.TBriEvent_Data) Marshal.PtrToStructure(m.LParam, typeof(BriSDKLib.TBriEvent_Data));</span><br><span class="line">            string strValue &#x3D; &quot;&quot;;</span><br><span class="line">            switch (EventData.lEventType)</span><br><span class="line">            &#123;</span><br><span class="line">                case BriSDKLib.BriEvent_CallIn: &#123; ... break; &#125; &#x2F;&#x2F; 收到座机来电响铃的消息</span><br><span class="line">                case BriSDKLib.BriEvent_GetCallID: &#123; ... break; &#125; &#x2F;&#x2F; 收到座机来电号码的消息</span><br><span class="line">                &#x2F;&#x2F; 其他更多的消息类型</span><br><span class="line">                default: break;</span><br><span class="line">            &#125;</span><br><span class="line">            if (strValue.Length &gt; 0)</span><br><span class="line">            &#123;</span><br><span class="line">                AppendStatus(strValue);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; break;</span><br><span class="line">        default: &#x2F;&#x2F; 如果不是录音盒的消息则还按设计器里面添加的事件来处理</span><br><span class="line">            base.DefWndProc(ref m);</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>一个简单demo，没有界面，只有一个托盘图标，托盘图标只有一个退出菜单项。如果座机接到来电时，就将来电的电话号码读取出来。这里只是做了一个弹出消息框显示电话号码。将来还可以扩展成将 来电的时间、收到来电的座机所插的接口和电话号码存入数据库。</p>
-<p>把BriSDKLib.cs复制进项目，然后在WinForm添加一个菜单控件（父级菜单和一个退出菜单项）和一个系统托盘图标控件，添加Form的Load事件、FormClosed事件、Shown事件，添加退出菜单项的点击事件。然后编写代码。</p>
-<p>运行前将进户线接到录音盒的LINE口，把座机的电话线接到录音盒的PHONE口，把录音盒的USB口通过随机提供的数据线接到电脑的USB接口。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.ComponentModel;</span><br><span class="line">using System.Data;</span><br><span class="line">using System.Drawing;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Runtime.InteropServices;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line">using System.Windows.Forms;</span><br><span class="line"></span><br><span class="line">namespace GetPhoneNumber</span><br><span class="line">&#123;</span><br><span class="line">    public partial class Form1 : Form</span><br><span class="line">    &#123;</span><br><span class="line">        public static string FromUnicodeByteArray(byte[] characters)</span><br><span class="line">        &#123;</span><br><span class="line">            UnicodeEncoding u &#x3D; new UnicodeEncoding();</span><br><span class="line">            string ustring &#x3D; u.GetString(characters);</span><br><span class="line">            return ustring;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public static string FromASCIIByteArray(byte[] characters)</span><br><span class="line">        &#123;</span><br><span class="line">            ASCIIEncoding encoding &#x3D; new ASCIIEncoding();</span><br><span class="line">            string constructedString &#x3D; encoding.GetString(characters);</span><br><span class="line">            return (constructedString);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public Form1()</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void Form1_Load(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            if (BriSDKLib.QNV_OpenDevice(BriSDKLib.ODT_LBRIDGE, 0, &quot;&quot;) &lt;&#x3D; 0 || BriSDKLib.QNV_DevInfo(0, BriSDKLib.QNV_DEVINFO_GETCHANNELS) &lt;&#x3D; 0)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F; AppendStatus(&quot;打开设备失败&quot;);</span><br><span class="line">                MessageBox.Show(&quot;打开设备失败&quot;);</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">            for (Int16 i &#x3D; 0; i &lt; BriSDKLib.QNV_DevInfo(-1, BriSDKLib.QNV_DEVINFO_GETCHANNELS); i++)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F;在windowproc处理接收到的消息</span><br><span class="line">                BriSDKLib.QNV_Event(i, BriSDKLib.QNV_EVENT_REGWND, (Int32) this.Handle, &quot;&quot;, new StringBuilder(0), 0);</span><br><span class="line">                &#x2F;&#x2F; selchannel.Items.Add(i+1);               </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void Form1_FormClosed(object sender, FormClosedEventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            BriSDKLib.QNV_CloseDevice(BriSDKLib.ODT_ALL, 0);</span><br><span class="line">            for (Int16 i &#x3D; 0; i &lt; BriSDKLib.QNV_DevInfo(-1, BriSDKLib.QNV_DEVINFO_GETCHANNELS); i++)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F;在windowproc处理接收到的消息</span><br><span class="line">                BriSDKLib.QNV_Event(i, BriSDKLib.QNV_EVENT_REGWND, (Int32) this.Handle, &quot;&quot;, new StringBuilder(0), 0);</span><br><span class="line">                &#x2F;&#x2F; selchannel.Items.Add(i+1);               </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        protected override void DefWndProc(ref System.Windows.Forms.Message m)</span><br><span class="line">        &#123;</span><br><span class="line">            switch (m.Msg)</span><br><span class="line">            &#123;</span><br><span class="line">                case BriSDKLib.BRI_EVENT_MESSAGE:</span><br><span class="line">                &#123;</span><br><span class="line">                    BriSDKLib.TBriEvent_Data EventData &#x3D;</span><br><span class="line">                        (BriSDKLib.TBriEvent_Data) Marshal.PtrToStructure(m.LParam, typeof(BriSDKLib.TBriEvent_Data));</span><br><span class="line">                    string strValue &#x3D; &quot;&quot;;</span><br><span class="line">                    switch (EventData.lEventType)</span><br><span class="line">                    &#123;</span><br><span class="line">                        case BriSDKLib.BriEvent_GetCallID:</span><br><span class="line">                        &#123;</span><br><span class="line">                            strValue &#x3D; &quot;通道&quot; + (EventData.uChannelID + 1).ToString() + &quot;：接收到来电号码 &quot; +</span><br><span class="line">                                       FromASCIIByteArray(EventData.szData);</span><br><span class="line">                            MessageBox.Show(strValue);</span><br><span class="line">                            this.Activate();</span><br><span class="line"></span><br><span class="line">                        &#125;</span><br><span class="line">                            break;</span><br><span class="line">                        default: break;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                    break;</span><br><span class="line">                default: </span><br><span class="line">                    base.DefWndProc(ref m);</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void 退出XToolStripMenuItem_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            BriSDKLib.QNV_CloseDevice(BriSDKLib.ODT_ALL, 0);</span><br><span class="line">            for (Int16 i &#x3D; 0; i &lt; BriSDKLib.QNV_DevInfo(-1, BriSDKLib.QNV_DEVINFO_GETCHANNELS); i++)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F;在windowproc处理接收到的消息</span><br><span class="line">                BriSDKLib.QNV_Event(i, BriSDKLib.QNV_EVENT_REGWND, (Int32) this.Handle, &quot;&quot;, new StringBuilder(0), 0);</span><br><span class="line">                &#x2F;&#x2F; selchannel.Items.Add(i+1);               </span><br><span class="line">            &#125;</span><br><span class="line">            Application.Exit();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void Form1_Shown(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Hide();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C#</category>
       </categories>
   </entry>
   <entry>
@@ -303,63 +287,19 @@ After adding</p>
       </categories>
   </entry>
   <entry>
-    <title>网站构建 网站设计</title>
-    <url>/cms//archivers/13.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="#"><img src="https://img.shields.io/badge/%E6%9C%AA%E7%9F%A5-brightgreen" alt="未知" /></a></p>
-<h2 id="设计网站需要严谨的思考和周全的计划"><a class="markdownIt-Anchor" href="#设计网站需要严谨的思考和周全的计划"></a> 设计网站需要严谨的思考和周全的计划。</h2>
-<h2 id="最重要的事情是了解您的受众用户"><a class="markdownIt-Anchor" href="#最重要的事情是了解您的受众用户"></a> 最重要的事情是了解您的受众（用户）。</h2>
-<h1 id="用户都是浏览者"><a class="markdownIt-Anchor" href="#用户都是浏览者"></a> 用户都是浏览者</h1>
-<p>如果您认为一般的用户会完完整整地阅读您的网页，那么您就错了。</p>
-<p>无论您在网页中发布了多么有用的信息，一个访问者在决定是否继续阅读之前仅仅会花几秒钟的时间进行浏览。</p>
-<p>如果您希望用户阅读您的文字，请确保在页面段落的第一句就说明您的观点。另外，您还需要在整个页面中使用简短的段落以及有趣的标题。</p>
-<h1 id="少即是多"><a class="markdownIt-Anchor" href="#少即是多"></a> 少即是多</h1>
-<p>使所有的句子尽可能地短。使所有的段落尽可能地短。使所有的章节尽可能地短。使您的页面尽可能地短。</p>
-<p>请在段落和章节之间使用很多的留白。充斥着冗长文字的页面会赶走您的用户。</p>
-<p>也不要在单一的页面上放置太多的内容。如果确实有必要传递大量的信息，请尽量把内容分为小块，然后放入不同的页面中。不要指望每个访问者都能把一张数千字的页面一路滚动到底。</p>
-<h1 id="导航"><a class="markdownIt-Anchor" href="#导航"></a> 导航</h1>
-<p>尽量创建通用于网站中所有页面的导航结构。</p>
-<p>把文本段落中的超链接使用量降至最低。请不要使用文本段落内的超链接随意地把访问者带到别的页面。因此这样做会破坏导航结构一致性的感觉。</p>
-<p>如果您必须使用超级链接，请把它们添加到段落的底部，或站点的导航菜单。</p>
-<h1 id="下载速度"><a class="markdownIt-Anchor" href="#下载速度"></a> 下载速度</h1>
-<p>最常见的错误是用于网站开发者的开发环境造成的，例如使用一台本地的机器开发站点，或者使用一条高速的因特网连接。开发人员有时不会意识到下载他们的页面要花很长的时间。</p>
-<p>因特网可用性方面的研究告诉我们，如果网页的下载时间超过7秒，大多数的访问者会选择离开。</p>
-<p>在您发布任何大量的内容前，请确保这些页面在低速的调制解调器连接上进行过测试。如果您的页面需要花大量的时间下载，您或许应当考虑删除某些图片或多媒体内容。</p>
-<h1 id="允许您的用户发言"><a class="markdownIt-Anchor" href="#允许您的用户发言"></a> 允许您的用户发言！</h1>
-<p>得到来自用户的反馈是件好事情。您的访问者就是你的“客户”。他们经常会给您一些有价值的点子，或者无偿地向您提供改进的建议。</p>
-<p>如果您提供了某种方便的联系途径，您将得到来自很多技能和知识都各不相同的人们大量有益的反馈。</p>
+    <title>子佩录音盒二次开发（C#）</title>
+    <url>/cms//archivers/7.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>对子佩录音盒进行二次开发需要使用到其SDK中的两个DLL文件，qnviccub.dll，bridge.dll。在C#中导入DLL的API声明参考SDK中的BriSDKLib.cs。文件内容较长这里不再贴出。</p>
+<p>子佩录音盒对于事件的监听是基于Win32的消息的。因此我们在接收程序中Windows消息的时候要判断消息类型（类型是一个UINT类型的无符号整数），而子佩录音盒的SDK里面也封装了一些消息类型的常量，我们只需要填写常量的名称即可。例如收到了来电的消息就是BriSDKLib.BriEvent_CallIn，得到了来电的电话号码就是BriSDKLib.BriEvent_GetCallID，等等。</p>
+<p>C语言里面是在注册类的时候通过给WNDCLASSEX的lpfnWndProc属性绑定消息处理函数来监听消息从而做相应动作的。而我们在C#里面可以直接在WinForm代码里面重写DefWndProc方法来做消息处理，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">protected override void DefWndProc(ref System.Windows.Forms.Message m)</span><br><span class="line">&#123;</span><br><span class="line">    switch (m.Msg)</span><br><span class="line">    &#123;</span><br><span class="line">        case BriSDKLib.BRI_EVENT_MESSAGE: &#x2F;&#x2F; 先判断是不是录音盒的消息</span><br><span class="line">        &#123;</span><br><span class="line">            BriSDKLib.TBriEvent_Data EventData &#x3D;</span><br><span class="line">                (BriSDKLib.TBriEvent_Data) Marshal.PtrToStructure(m.LParam, typeof(BriSDKLib.TBriEvent_Data));</span><br><span class="line">            string strValue &#x3D; &quot;&quot;;</span><br><span class="line">            switch (EventData.lEventType)</span><br><span class="line">            &#123;</span><br><span class="line">                case BriSDKLib.BriEvent_CallIn: &#123; ... break; &#125; &#x2F;&#x2F; 收到座机来电响铃的消息</span><br><span class="line">                case BriSDKLib.BriEvent_GetCallID: &#123; ... break; &#125; &#x2F;&#x2F; 收到座机来电号码的消息</span><br><span class="line">                &#x2F;&#x2F; 其他更多的消息类型</span><br><span class="line">                default: break;</span><br><span class="line">            &#125;</span><br><span class="line">            if (strValue.Length &gt; 0)</span><br><span class="line">            &#123;</span><br><span class="line">                AppendStatus(strValue);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; break;</span><br><span class="line">        default: &#x2F;&#x2F; 如果不是录音盒的消息则还按设计器里面添加的事件来处理</span><br><span class="line">            base.DefWndProc(ref m);</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一个简单demo，没有界面，只有一个托盘图标，托盘图标只有一个退出菜单项。如果座机接到来电时，就将来电的电话号码读取出来。这里只是做了一个弹出消息框显示电话号码。将来还可以扩展成将 来电的时间、收到来电的座机所插的接口和电话号码存入数据库。</p>
+<p>把BriSDKLib.cs复制进项目，然后在WinForm添加一个菜单控件（父级菜单和一个退出菜单项）和一个系统托盘图标控件，添加Form的Load事件、FormClosed事件、Shown事件，添加退出菜单项的点击事件。然后编写代码。</p>
+<p>运行前将进户线接到录音盒的LINE口，把座机的电话线接到录音盒的PHONE口，把录音盒的USB口通过随机提供的数据线接到电脑的USB接口。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.ComponentModel;</span><br><span class="line">using System.Data;</span><br><span class="line">using System.Drawing;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Runtime.InteropServices;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line">using System.Windows.Forms;</span><br><span class="line"></span><br><span class="line">namespace GetPhoneNumber</span><br><span class="line">&#123;</span><br><span class="line">    public partial class Form1 : Form</span><br><span class="line">    &#123;</span><br><span class="line">        public static string FromUnicodeByteArray(byte[] characters)</span><br><span class="line">        &#123;</span><br><span class="line">            UnicodeEncoding u &#x3D; new UnicodeEncoding();</span><br><span class="line">            string ustring &#x3D; u.GetString(characters);</span><br><span class="line">            return ustring;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public static string FromASCIIByteArray(byte[] characters)</span><br><span class="line">        &#123;</span><br><span class="line">            ASCIIEncoding encoding &#x3D; new ASCIIEncoding();</span><br><span class="line">            string constructedString &#x3D; encoding.GetString(characters);</span><br><span class="line">            return (constructedString);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public Form1()</span><br><span class="line">        &#123;</span><br><span class="line">            InitializeComponent();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void Form1_Load(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            if (BriSDKLib.QNV_OpenDevice(BriSDKLib.ODT_LBRIDGE, 0, &quot;&quot;) &lt;&#x3D; 0 || BriSDKLib.QNV_DevInfo(0, BriSDKLib.QNV_DEVINFO_GETCHANNELS) &lt;&#x3D; 0)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F; AppendStatus(&quot;打开设备失败&quot;);</span><br><span class="line">                MessageBox.Show(&quot;打开设备失败&quot;);</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">            for (Int16 i &#x3D; 0; i &lt; BriSDKLib.QNV_DevInfo(-1, BriSDKLib.QNV_DEVINFO_GETCHANNELS); i++)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F;在windowproc处理接收到的消息</span><br><span class="line">                BriSDKLib.QNV_Event(i, BriSDKLib.QNV_EVENT_REGWND, (Int32) this.Handle, &quot;&quot;, new StringBuilder(0), 0);</span><br><span class="line">                &#x2F;&#x2F; selchannel.Items.Add(i+1);               </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void Form1_FormClosed(object sender, FormClosedEventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            BriSDKLib.QNV_CloseDevice(BriSDKLib.ODT_ALL, 0);</span><br><span class="line">            for (Int16 i &#x3D; 0; i &lt; BriSDKLib.QNV_DevInfo(-1, BriSDKLib.QNV_DEVINFO_GETCHANNELS); i++)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F;在windowproc处理接收到的消息</span><br><span class="line">                BriSDKLib.QNV_Event(i, BriSDKLib.QNV_EVENT_REGWND, (Int32) this.Handle, &quot;&quot;, new StringBuilder(0), 0);</span><br><span class="line">                &#x2F;&#x2F; selchannel.Items.Add(i+1);               </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        protected override void DefWndProc(ref System.Windows.Forms.Message m)</span><br><span class="line">        &#123;</span><br><span class="line">            switch (m.Msg)</span><br><span class="line">            &#123;</span><br><span class="line">                case BriSDKLib.BRI_EVENT_MESSAGE:</span><br><span class="line">                &#123;</span><br><span class="line">                    BriSDKLib.TBriEvent_Data EventData &#x3D;</span><br><span class="line">                        (BriSDKLib.TBriEvent_Data) Marshal.PtrToStructure(m.LParam, typeof(BriSDKLib.TBriEvent_Data));</span><br><span class="line">                    string strValue &#x3D; &quot;&quot;;</span><br><span class="line">                    switch (EventData.lEventType)</span><br><span class="line">                    &#123;</span><br><span class="line">                        case BriSDKLib.BriEvent_GetCallID:</span><br><span class="line">                        &#123;</span><br><span class="line">                            strValue &#x3D; &quot;通道&quot; + (EventData.uChannelID + 1).ToString() + &quot;：接收到来电号码 &quot; +</span><br><span class="line">                                       FromASCIIByteArray(EventData.szData);</span><br><span class="line">                            MessageBox.Show(strValue);</span><br><span class="line">                            this.Activate();</span><br><span class="line"></span><br><span class="line">                        &#125;</span><br><span class="line">                            break;</span><br><span class="line">                        default: break;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                    break;</span><br><span class="line">                default: </span><br><span class="line">                    base.DefWndProc(ref m);</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void 退出XToolStripMenuItem_Click(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            BriSDKLib.QNV_CloseDevice(BriSDKLib.ODT_ALL, 0);</span><br><span class="line">            for (Int16 i &#x3D; 0; i &lt; BriSDKLib.QNV_DevInfo(-1, BriSDKLib.QNV_DEVINFO_GETCHANNELS); i++)</span><br><span class="line">            &#123;</span><br><span class="line">                &#x2F;&#x2F;在windowproc处理接收到的消息</span><br><span class="line">                BriSDKLib.QNV_Event(i, BriSDKLib.QNV_EVENT_REGWND, (Int32) this.Handle, &quot;&quot;, new StringBuilder(0), 0);</span><br><span class="line">                &#x2F;&#x2F; selchannel.Items.Add(i+1);               </span><br><span class="line">            &#125;</span><br><span class="line">            Application.Exit();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        private void Form1_Shown(object sender, EventArgs e)</span><br><span class="line">        &#123;</span><br><span class="line">            Hide();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Web-Building</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>常用软件之我见（不定期更新）</title>
-    <url>/cms//archivers/12.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在B站和不少个人博客上也看到了相当多的软件推荐。这里也将鄙人自己常用的一些电脑软件做一个分享。如有任何疏漏谬误欢迎指正。</p>
-<ul>
-<li>Edge：微软的新的Chromium内核的浏览器。支持国内直接微软账号登录，自己也有一套国内可以直接访问的扩展商店，扩展齐全。</li>
-<li>Chrome：不用装专门的PDF阅读器来看PDF了！这个浏览器直接就能看PDF。<s>但是为什么不直接推荐Edge呢，新的Chromium内核的Edge居然还是不能按目录跳转！</s> <strong>（20.09.21更新：Edge在86版本终于上线了PDF目录跳转的功能，这个被全球用户吐槽的缺陷，微软终于给大家填坑了！！！Edge的PDF浏览界面在左上角已经增设了目录按钮，点击即可展开目录列表，然后就可以点击目录项来跳转位置了。）</strong></li>
-<li>Everything：快速搜索</li>
-<li>IrfanView：一款比较小众的看图软件。速度也快，也支持扩展。100MB以上的大图还没尝试过，有试过的欢迎反馈。</li>
-<li>TamperMonkey：浏览器扩展，Edge和Firefox都能用。油猴脚本，可以对自定义适配的网站添加自定义脚本。强大的网址适配规则定义功能。但GreasyFork这个脚本分享网站并不是油猴开发的，这一点需注意。</li>
-<li>7-Zip：免费开源的解压缩软件。甚至可以拆绝大部分的EXE文件。</li>
-<li>Universal Extractor：解压绝大部分的EXE格式的安装包或归档，避免吃到恶意捆绑软件。</li>
-<li>MPC-HC：全称Media Player Classic - Home Cinema。开源的媒体播放器。鄙人每天听歌就是用的这个。虽然项目已停更，但是基本上所有的媒体格式都能正常使用。甚至可以直接通过网络上.m3u8的流媒体URL来看电视。</li>
-<li>Bandicam：老版本Win10没有XBOX录屏的备用录屏方案！</li>
-<li>Ventoy：2020年才出来的一套U盘集成多个ISO启动的解决方案，将U盘通过该工具制成启动盘之后把各个ISO文件丢到U盘指定目录即可。支持同一个盘同时支持传统启动和UEFI启动。之前虽然老毛桃大白菜也有同样的功能，但是众所周知的那些8384的东西很闹心。这个是开源的解决方案，Github上面可以查阅源代码。</li>
-<li>恋恋EX：也给我们群自家的软件打个小广告，虽然不是鄙人开发的。这个是修改DNF游戏NPK资源的一套开源解决方案。（EX是唯一公开闭源的，现在ES都已经开源了。。。）鄙人Github上面存了这个工具的源代码，仓库是在Koishi_Extractor_English_Translation。原作者Lucky-Koishi那个Github她说不会用。。。</li>
-<li>EagleGet：MSDN我告诉你给的很多系统镜像的是ed2k和磁力链，ed2k现在还可以用迷你迅雷下载，但是磁力链现在很多软件都是不支持的。EagleGet是鄙人找了很久才找到的支持这个磁力链下载的。</li>
-<li>LibreOffice：用不起正版Office又不想用WPS的可以试试这套开源的Office解决方案。</li>
-<li>Wallpaper Engine：“啥都不说了，冲就完事了”。导入自定义的MP4视频，桌面就是极乐净土的舞台！就是还得装个Steam很烦。</li>
-<li>Upupoo：不想花钱买楼上那个的话或者<strong>磁盘空间装不下Steam的话</strong>也可以用这个备用方案。就是这个占用系统资源稍微高一些（即使是屏蔽了那些插件的运行）。</li>
-<li>Vpings Video Wallpaper：同上，系统资源占用介于Wallpaper Engine和Upupoo。</li>
-<li>Native HLS Playback：看电视也可以在浏览器看，如果不想用播放器的话。在浏览器装了这个扩展就可以在浏览器播放.m3u8的直播源了。</li>
-<li>HxD Hex Editor：轻量级的16进制编辑器。对编码支持很好。</li>
-<li>Scanner：平时使用计算机时经常出现C盘空间飘红的情况。这个软件用来分析各个文件和各个目录在分区的占用空间占比，它很形象地使用了多层扇形图来表示文件或者目录的大小占比，就像机械硬盘的碟片一样。之前的各种管家里面也有大文件清理的功能，但是这个软件不仅能分析大文件，还能分析体积较大的文件夹。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Webapp</category>
+        <category>C#</category>
       </categories>
   </entry>
   <entry>
@@ -394,37 +334,33 @@ After adding</p>
       </categories>
   </entry>
   <entry>
-    <title>Github Hexo 一键更新</title>
-    <url>/cms//archivers/16.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这个博客换成Hexo后台之后变成了绑定3个仓库：展示仓库，后台仓库，主题仓库。结果每次更新需要输入3对账号密码，很不方便。整合各路搜集到的资料之后总结出来一套一键更新的方案，可以一次性同步后台代码、主题代码和展示代码。</p>
-<ol>
-<li>
-<p>原来那个Next主题代码显然是已经不能再直接用了，即使是把后台代码单独拿出来建仓库，主题代码还是不能用自己修改的那个。把这个位于<code>themes\next</code>目录的主题代码单独拿出来，原来主题代码的目录建一个github仓库！然后把拿出来的主题代码拷回去！提交！</p>
-</li>
-<li>
-<p>按照网上现有的操作步骤设置账号全局的免密更新。现在据说github也有针对单个仓库的免密密钥，但是个人不建议在Hexo博客环境使用单个仓库密钥，毕竟更新一次要更新好几个仓库，不方便管理。<br><br />
-这里再稍微重复一下。<br><br />
-在Git Bash里面<code>cd ~; ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</code>，然后全部回车默认设置。<br><br />
-继续执行<code>cd ~; cd .ssh; cat id_rsa.pub</code>，把从<code>ssh-rsa</code>开头一直到段落结尾复制。<br><br />
-在网页打开Github，账号Settings里面SSH and GPG Keys，New SSH Key，名字随便输入，下边的文本域粘贴刚才复制的pub内容。</p>
-</li>
-<li>
-<p>这边设置好以后试一下git push origin发现还是要输入密码。之后查阅资料发现方式不对，最开始git clone的时候用的是 <code>https://github.com/用户名/仓库名</code> 的方式。这叫HTTPS方式，但是上文使用的是SSH方式，不是HTTPS方式。因此需要修改远程仓库地址格式，改成SSH的格式。<br><br />
-进入仓库的<code>.git</code>目录，编辑里面的<code>config</code>文件。把里面的<code>url</code>从 <code>https://github.com/用户名/仓库名</code> 改成 <code>git@github.com:用户名/仓库名</code> 。<br><br />
-3个仓库都要这么改！但是展示仓库的地址不在<code>config</code>文件，而是在后台仓库根目录的<code>_config.yml</code>文件。最下边有个<code>deploy</code>，把里面的<code>repo</code>改成 <code>git@github.com:用户名/仓库名</code> 。</p>
-</li>
-<li>
-<p>免密更新配置好以后，编写一键更新的CMD批处理放到项目根目录。</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git pull origin master</span><br><span class="line">git commit -m <span class="string">"update"</span></span><br><span class="line">git push origin -u master</span><br><span class="line"><span class="built_in">cd</span> themes/next</span><br><span class="line">git add .</span><br><span class="line">git pull origin master</span><br><span class="line">git commit -m <span class="string">"update"</span></span><br><span class="line">git push origin -u master</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>批处理搞定之后以后可以在编辑了主题代码、后台代码之后在后台仓库根目录直接执行<code>./保存的CMD文件名.cmd</code>即可实现一条命令将展示仓库，后台仓库，主题仓库一并更新。</li>
-</ol>
+    <title>常用软件之我见（不定期更新）</title>
+    <url>/cms//archivers/12.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在B站和不少个人博客上也看到了相当多的软件推荐。这里也将鄙人自己常用的一些电脑软件做一个分享。如有任何疏漏谬误欢迎指正。</p>
+<ul>
+<li>Edge：微软的新的Chromium内核的浏览器。支持国内直接微软账号登录，自己也有一套国内可以直接访问的扩展商店，扩展齐全。</li>
+<li>Chrome：不用装专门的PDF阅读器来看PDF了！这个浏览器直接就能看PDF。<s>但是为什么不直接推荐Edge呢，新的Chromium内核的Edge居然还是不能按目录跳转！</s> <strong>（20.09.21更新：Edge在86版本终于上线了PDF目录跳转的功能，这个被全球用户吐槽的缺陷，微软终于给大家填坑了！！！Edge的PDF浏览界面在左上角已经增设了目录按钮，点击即可展开目录列表，然后就可以点击目录项来跳转位置了。）</strong></li>
+<li>Everything：快速搜索</li>
+<li>IrfanView：一款比较小众的看图软件。速度也快，也支持扩展。100MB以上的大图还没尝试过，有试过的欢迎反馈。</li>
+<li>TamperMonkey：浏览器扩展，Edge和Firefox都能用。油猴脚本，可以对自定义适配的网站添加自定义脚本。强大的网址适配规则定义功能。但GreasyFork这个脚本分享网站并不是油猴开发的，这一点需注意。</li>
+<li>7-Zip：免费开源的解压缩软件。甚至可以拆绝大部分的EXE文件。</li>
+<li>Universal Extractor：解压绝大部分的EXE格式的安装包或归档，避免吃到恶意捆绑软件。</li>
+<li>MPC-HC：全称Media Player Classic - Home Cinema。开源的媒体播放器。鄙人每天听歌就是用的这个。虽然项目已停更，但是基本上所有的媒体格式都能正常使用。甚至可以直接通过网络上.m3u8的流媒体URL来看电视。</li>
+<li>Bandicam：老版本Win10没有XBOX录屏的备用录屏方案！</li>
+<li>Ventoy：2020年才出来的一套U盘集成多个ISO启动的解决方案，将U盘通过该工具制成启动盘之后把各个ISO文件丢到U盘指定目录即可。支持同一个盘同时支持传统启动和UEFI启动。之前虽然老毛桃大白菜也有同样的功能，但是众所周知的那些8384的东西很闹心。这个是开源的解决方案，Github上面可以查阅源代码。</li>
+<li>恋恋EX：也给我们群自家的软件打个小广告，虽然不是鄙人开发的。这个是修改DNF游戏NPK资源的一套开源解决方案。（EX是唯一公开闭源的，现在ES都已经开源了。。。）鄙人Github上面存了这个工具的源代码，仓库是在Koishi_Extractor_English_Translation。原作者Lucky-Koishi那个Github她说不会用。。。</li>
+<li>EagleGet：MSDN我告诉你给的很多系统镜像的是ed2k和磁力链，ed2k现在还可以用迷你迅雷下载，但是磁力链现在很多软件都是不支持的。EagleGet是鄙人找了很久才找到的支持这个磁力链下载的。</li>
+<li>LibreOffice：用不起正版Office又不想用WPS的可以试试这套开源的Office解决方案。</li>
+<li>Wallpaper Engine：“啥都不说了，冲就完事了”。导入自定义的MP4视频，桌面就是极乐净土的舞台！就是还得装个Steam很烦。</li>
+<li>Upupoo：不想花钱买楼上那个的话或者<strong>磁盘空间装不下Steam的话</strong>也可以用这个备用方案。就是这个占用系统资源稍微高一些（即使是屏蔽了那些插件的运行）。</li>
+<li>Vpings Video Wallpaper：同上，系统资源占用介于Wallpaper Engine和Upupoo。</li>
+<li>Native HLS Playback：看电视也可以在浏览器看，如果不想用播放器的话。在浏览器装了这个扩展就可以在浏览器播放.m3u8的直播源了。</li>
+<li>HxD Hex Editor：轻量级的16进制编辑器。对编码支持很好。</li>
+<li>Scanner：平时使用计算机时经常出现C盘空间飘红的情况。这个软件用来分析各个文件和各个目录在分区的占用空间占比，它很形象地使用了多层扇形图来表示文件或者目录的大小占比，就像机械硬盘的碟片一样。之前的各种管家里面也有大文件清理的功能，但是这个软件不仅能分析大文件，还能分析体积较大的文件夹。</li>
+</ul>
 ]]></content>
       <categories>
-        <category>Web-Building</category>
-        <category>Github</category>
+        <category>Webapp</category>
       </categories>
   </entry>
   <entry>
@@ -465,6 +401,87 @@ After adding</p>
       </categories>
   </entry>
   <entry>
+    <title>网站构建 网站设计</title>
+    <url>/cms//archivers/13.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="#"><img src="https://img.shields.io/badge/%E6%9C%AA%E7%9F%A5-brightgreen" alt="未知" /></a></p>
+<h2 id="设计网站需要严谨的思考和周全的计划"><a class="markdownIt-Anchor" href="#设计网站需要严谨的思考和周全的计划"></a> 设计网站需要严谨的思考和周全的计划。</h2>
+<h2 id="最重要的事情是了解您的受众用户"><a class="markdownIt-Anchor" href="#最重要的事情是了解您的受众用户"></a> 最重要的事情是了解您的受众（用户）。</h2>
+<h1 id="用户都是浏览者"><a class="markdownIt-Anchor" href="#用户都是浏览者"></a> 用户都是浏览者</h1>
+<p>如果您认为一般的用户会完完整整地阅读您的网页，那么您就错了。</p>
+<p>无论您在网页中发布了多么有用的信息，一个访问者在决定是否继续阅读之前仅仅会花几秒钟的时间进行浏览。</p>
+<p>如果您希望用户阅读您的文字，请确保在页面段落的第一句就说明您的观点。另外，您还需要在整个页面中使用简短的段落以及有趣的标题。</p>
+<h1 id="少即是多"><a class="markdownIt-Anchor" href="#少即是多"></a> 少即是多</h1>
+<p>使所有的句子尽可能地短。使所有的段落尽可能地短。使所有的章节尽可能地短。使您的页面尽可能地短。</p>
+<p>请在段落和章节之间使用很多的留白。充斥着冗长文字的页面会赶走您的用户。</p>
+<p>也不要在单一的页面上放置太多的内容。如果确实有必要传递大量的信息，请尽量把内容分为小块，然后放入不同的页面中。不要指望每个访问者都能把一张数千字的页面一路滚动到底。</p>
+<h1 id="导航"><a class="markdownIt-Anchor" href="#导航"></a> 导航</h1>
+<p>尽量创建通用于网站中所有页面的导航结构。</p>
+<p>把文本段落中的超链接使用量降至最低。请不要使用文本段落内的超链接随意地把访问者带到别的页面。因此这样做会破坏导航结构一致性的感觉。</p>
+<p>如果您必须使用超级链接，请把它们添加到段落的底部，或站点的导航菜单。</p>
+<h1 id="下载速度"><a class="markdownIt-Anchor" href="#下载速度"></a> 下载速度</h1>
+<p>最常见的错误是用于网站开发者的开发环境造成的，例如使用一台本地的机器开发站点，或者使用一条高速的因特网连接。开发人员有时不会意识到下载他们的页面要花很长的时间。</p>
+<p>因特网可用性方面的研究告诉我们，如果网页的下载时间超过7秒，大多数的访问者会选择离开。</p>
+<p>在您发布任何大量的内容前，请确保这些页面在低速的调制解调器连接上进行过测试。如果您的页面需要花大量的时间下载，您或许应当考虑删除某些图片或多媒体内容。</p>
+<h1 id="允许您的用户发言"><a class="markdownIt-Anchor" href="#允许您的用户发言"></a> 允许您的用户发言！</h1>
+<p>得到来自用户的反馈是件好事情。您的访问者就是你的“客户”。他们经常会给您一些有价值的点子，或者无偿地向您提供改进的建议。</p>
+<p>如果您提供了某种方便的联系途径，您将得到来自很多技能和知识都各不相同的人们大量有益的反馈。</p>
+]]></content>
+      <categories>
+        <category>Web-Building</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Github Hexo 一键更新</title>
+    <url>/cms//archivers/16.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这个博客换成Hexo后台之后变成了绑定3个仓库：展示仓库，后台仓库，主题仓库。结果每次更新需要输入3对账号密码，很不方便。整合各路搜集到的资料之后总结出来一套一键更新的方案，可以一次性同步后台代码、主题代码和展示代码。</p>
+<ol>
+<li>
+<p>原来那个Next主题代码显然是已经不能再直接用了，即使是把后台代码单独拿出来建仓库，主题代码还是不能用自己修改的那个。把这个位于<code>themes\next</code>目录的主题代码单独拿出来，原来主题代码的目录建一个github仓库！然后把拿出来的主题代码拷回去！提交！</p>
+</li>
+<li>
+<p>按照网上现有的操作步骤设置账号全局的免密更新。现在据说github也有针对单个仓库的免密密钥，但是个人不建议在Hexo博客环境使用单个仓库密钥，毕竟更新一次要更新好几个仓库，不方便管理。<br><br />
+这里再稍微重复一下。<br><br />
+在Git Bash里面<code>cd ~; ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</code>，然后全部回车默认设置。<br><br />
+继续执行<code>cd ~; cd .ssh; cat id_rsa.pub</code>，把从<code>ssh-rsa</code>开头一直到段落结尾复制。<br><br />
+在网页打开Github，账号Settings里面SSH and GPG Keys，New SSH Key，名字随便输入，下边的文本域粘贴刚才复制的pub内容。</p>
+</li>
+<li>
+<p>这边设置好以后试一下git push origin发现还是要输入密码。之后查阅资料发现方式不对，最开始git clone的时候用的是 <code>https://github.com/用户名/仓库名</code> 的方式。这叫HTTPS方式，但是上文使用的是SSH方式，不是HTTPS方式。因此需要修改远程仓库地址格式，改成SSH的格式。<br><br />
+进入仓库的<code>.git</code>目录，编辑里面的<code>config</code>文件。把里面的<code>url</code>从 <code>https://github.com/用户名/仓库名</code> 改成 <code>git@github.com:用户名/仓库名</code> 。<br><br />
+3个仓库都要这么改！但是展示仓库的地址不在<code>config</code>文件，而是在后台仓库根目录的<code>_config.yml</code>文件。最下边有个<code>deploy</code>，把里面的<code>repo</code>改成 <code>git@github.com:用户名/仓库名</code> 。</p>
+</li>
+<li>
+<p>免密更新配置好以后，编写一键更新的CMD批处理放到项目根目录。</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git pull origin master</span><br><span class="line">git commit -m <span class="string">"update"</span></span><br><span class="line">git push origin -u master</span><br><span class="line"><span class="built_in">cd</span> themes/next</span><br><span class="line">git add .</span><br><span class="line">git pull origin master</span><br><span class="line">git commit -m <span class="string">"update"</span></span><br><span class="line">git push origin -u master</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>批处理搞定之后以后可以在编辑了主题代码、后台代码之后在后台仓库根目录直接执行<code>./保存的CMD文件名.cmd</code>即可实现一条命令将展示仓库，后台仓库，主题仓库一并更新。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Web-Building</category>
+        <category>Github</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Java树形统计: 各节点追加直属部门人数</title>
+    <url>/cms//archivers/20.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>代码修改自: <a href="https://blog.csdn.net/xuxingfan000/article/details/52159851" target="_blank" rel="noopener">https://blog.csdn.net/xuxingfan000/article/details/52159851</a><br />
+感谢@xuxingfan000</p>
+<p>最近做项目遇到树形结构的统计，树的的深度不定，父亲节点=孩子节点之和<br />
+本修改代码要实现父亲节点的计数要追加父亲节点本身的数量.<br />
+实体bean代码略 参考上述链接<br />
+统计demo代码修改如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> tt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">XxfMain</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> List&lt;Xmzb&gt; allList = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Xmzb root = <span class="keyword">new</span> Xmzb(<span class="string">"1"</span>, <span class="string">"0"</span>, <span class="number">0</span>);</span><br><span class="line">		Xmzb root1_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1"</span>, <span class="string">"1"</span>, <span class="number">3999</span>);</span><br><span class="line">		Xmzb root1_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2"</span>, <span class="string">"1"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_1_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1-1"</span>, <span class="string">"1-1"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_1_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1-2"</span>, <span class="string">"1-1"</span>, <span class="number">0</span>);</span><br><span class="line">		Xmzb root1_2_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2-1"</span>, <span class="string">"1-2"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_2_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2-2"</span>, <span class="string">"1-2"</span>, <span class="number">0</span>);</span><br><span class="line">		allList.add(root);</span><br><span class="line">		allList.add(root1_1);</span><br><span class="line">		allList.add(root1_2);</span><br><span class="line">		allList.add(root1_1_1);</span><br><span class="line">		allList.add(root1_1_2);</span><br><span class="line">		allList.add(root1_2_1);</span><br><span class="line">		allList.add(root1_2_2);</span><br><span class="line">		List&lt;Xmzb&gt; list = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line">		list.add(root);</span><br><span class="line">		doCount(root, list);</span><br><span class="line">		<span class="keyword">for</span> (Xmzb xmzb : allList) &#123;</span><br><span class="line">			System.out.println(xmzb.getId() + <span class="string">":"</span> + xmzb.getXmgs());</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Map&lt;String, Object&gt; <span class="title">doCount</span><span class="params">(Xmzb root, List&lt;Xmzb&gt; list)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// System.out.println(root.getXmgs());</span></span><br><span class="line">		Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</span><br><span class="line">		Double xmgs = <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line">		List&lt;Xmzb&gt; clist = findByQueryString(root.getId());<span class="comment">// 此处可以使用sql通过父节点查询孩子节点sql:from</span></span><br><span class="line">															<span class="comment">// Xmzb where</span></span><br><span class="line">															<span class="comment">// year='2016' and</span></span><br><span class="line">															<span class="comment">// pid='"+root.getId()+"'</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 叶子节点</span></span><br><span class="line">		<span class="keyword">if</span> (clist == <span class="keyword">null</span> || clist.size() == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">null</span> != root.getXmgs()) &#123;</span><br><span class="line">				map.put(<span class="string">"xmgs"</span>, root.getXmgs());</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				map.put(<span class="string">"xmgs"</span>, xmgs);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> map;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 父节点</span></span><br><span class="line">		<span class="keyword">if</span> (clist != <span class="keyword">null</span> &amp;&amp; clist.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			list.addAll(clist);</span><br><span class="line">			<span class="keyword">for</span> (Xmzb child : clist) &#123;</span><br><span class="line">				<span class="comment">// 递归</span></span><br><span class="line">				Map&lt;String, Object&gt; map_c = doCount(child, list);</span><br><span class="line">				Double res = Double.parseDouble(map_c.get(<span class="string">"xmgs"</span>).toString());</span><br><span class="line">				child.setXmgs(res.intValue());</span><br><span class="line">				<span class="comment">// 统计当前元素的子节点个数</span></span><br><span class="line">				xmgs += res;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		<span class="comment">//注意这两行修改//</span></span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		root.setXmgs(root.getXmgs() + xmgs.intValue()); </span><br><span class="line">		map.put(<span class="string">"xmgs"</span>, root.getXmgs());</span><br><span class="line">	    <span class="comment">/////////////////</span></span><br><span class="line">		<span class="comment">//注意这两行修改//</span></span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		map.put(<span class="string">"list"</span>, list);</span><br><span class="line">		<span class="keyword">return</span> map;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Xmzb&gt; <span class="title">findByQueryString</span><span class="params">(String pid)</span> </span>&#123;</span><br><span class="line">		List&lt;Xmzb&gt; list = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line">		<span class="keyword">for</span> (Xmzb xmzb : allList) &#123;</span><br><span class="line">			<span class="keyword">if</span> (xmzb.getPid().equals(pid)) &#123;</span><br><span class="line">				list.add(xmzb);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> list;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果如下</p>
+<p><img src="https://img-blog.csdnimg.cn/20190726111628862.png" alt="运行结果" /></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Hexo 博客Github、Gitee同步</title>
     <url>/cms//archivers/18.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Github在国内访问还是偏慢的，尽管我们将所有能弄的静态资源都移到拥有国内节点的JSDelivr上了。这里决定将博客在Gitee建立一个镜像，这样如果国内访问太慢的话我们可以从Gitee也就是“码云”来访问网站。</p>
@@ -486,20 +503,6 @@ After adding</p>
       </categories>
   </entry>
   <entry>
-    <title>云服务器初始化Kafka</title>
-    <url>/cms//archivers/21.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="本地机器git-bash新版windows10也可以直接使用命令"><a class="markdownIt-Anchor" href="#本地机器git-bash新版windows10也可以直接使用命令"></a> 本地机器（Git Bash（新版Windows10也可以直接使用命令））</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp ./jdk-8u91-linux-x64.tar.gz root@公网IP:/root</span><br><span class="line">scp ./kafka_2.12-2.2.0.tgz root@公网IP:/root</span><br></pre></td></tr></table></figure>
-<h1 id="云服务器登录后"><a class="markdownIt-Anchor" href="#云服务器登录后"></a> 云服务器登录后</h1>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar zxvf jdk-8u91-linux-x64.tar.gz</span><br><span class="line">mv jdk1.8.0_91 /opt/java</span><br><span class="line"></span><br><span class="line">JAVA_HOME=/opt/java</span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME PATH </span><br><span class="line"></span><br><span class="line">java -version</span><br><span class="line"></span><br><span class="line">tar zxvf kafka_2.12-2.2.0.tgz</span><br><span class="line"><span class="built_in">cd</span> kafka_2.12-2.2.0</span><br><span class="line">vi config/server.properties</span><br></pre></td></tr></table></figure>
-<p>将listeners=PLAINTEXT://:9092注释去掉</p>
-<p>将advertised.listeners=PLAINTEXT://your.host.name:9092注释去掉，your.host.name改成公网IP</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bin/zookeeper-server-start.sh -daemon config/zookeeper.properties</span><br><span class="line">bin/kafka-server-start.sh -daemon config/server.properties</span><br><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic <span class="built_in">test</span></span><br><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br><span class="line">bin/kafka-console-producer.sh --broker-list 公网IP:9092 --topic <span class="built_in">test</span></span><br><span class="line">bin/kafka-console-consumer.sh --bootstrap-server 公网IP:9092 --topic <span class="built_in">test</span> --from-beginning</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Server</category>
-      </categories>
-  </entry>
-  <entry>
     <title>（正式版已修复）Hexo NexT主题 Valine评论 多语言失效</title>
     <url>/cms//archivers/22.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>8.0.0正式版已经修复了这个小bug，使用8.0.0正式版或者更新版本就可以避免出现此问题了。</strong></p>
@@ -518,20 +521,17 @@ After adding</p>
       </categories>
   </entry>
   <entry>
-    <title>Java树形统计: 各节点追加直属部门人数</title>
-    <url>/cms//archivers/20.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>代码修改自: <a href="https://blog.csdn.net/xuxingfan000/article/details/52159851" target="_blank" rel="noopener">https://blog.csdn.net/xuxingfan000/article/details/52159851</a><br />
-感谢@xuxingfan000</p>
-<p>最近做项目遇到树形结构的统计，树的的深度不定，父亲节点=孩子节点之和<br />
-本修改代码要实现父亲节点的计数要追加父亲节点本身的数量.<br />
-实体bean代码略 参考上述链接<br />
-统计demo代码修改如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> tt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">XxfMain</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> List&lt;Xmzb&gt; allList = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Xmzb root = <span class="keyword">new</span> Xmzb(<span class="string">"1"</span>, <span class="string">"0"</span>, <span class="number">0</span>);</span><br><span class="line">		Xmzb root1_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1"</span>, <span class="string">"1"</span>, <span class="number">3999</span>);</span><br><span class="line">		Xmzb root1_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2"</span>, <span class="string">"1"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_1_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1-1"</span>, <span class="string">"1-1"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_1_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-1-2"</span>, <span class="string">"1-1"</span>, <span class="number">0</span>);</span><br><span class="line">		Xmzb root1_2_1 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2-1"</span>, <span class="string">"1-2"</span>, <span class="number">1</span>);</span><br><span class="line">		Xmzb root1_2_2 = <span class="keyword">new</span> Xmzb(<span class="string">"1-2-2"</span>, <span class="string">"1-2"</span>, <span class="number">0</span>);</span><br><span class="line">		allList.add(root);</span><br><span class="line">		allList.add(root1_1);</span><br><span class="line">		allList.add(root1_2);</span><br><span class="line">		allList.add(root1_1_1);</span><br><span class="line">		allList.add(root1_1_2);</span><br><span class="line">		allList.add(root1_2_1);</span><br><span class="line">		allList.add(root1_2_2);</span><br><span class="line">		List&lt;Xmzb&gt; list = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line">		list.add(root);</span><br><span class="line">		doCount(root, list);</span><br><span class="line">		<span class="keyword">for</span> (Xmzb xmzb : allList) &#123;</span><br><span class="line">			System.out.println(xmzb.getId() + <span class="string">":"</span> + xmzb.getXmgs());</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Map&lt;String, Object&gt; <span class="title">doCount</span><span class="params">(Xmzb root, List&lt;Xmzb&gt; list)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// System.out.println(root.getXmgs());</span></span><br><span class="line">		Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</span><br><span class="line">		Double xmgs = <span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line">		List&lt;Xmzb&gt; clist = findByQueryString(root.getId());<span class="comment">// 此处可以使用sql通过父节点查询孩子节点sql:from</span></span><br><span class="line">															<span class="comment">// Xmzb where</span></span><br><span class="line">															<span class="comment">// year='2016' and</span></span><br><span class="line">															<span class="comment">// pid='"+root.getId()+"'</span></span><br><span class="line"></span><br><span class="line">		<span class="comment">// 叶子节点</span></span><br><span class="line">		<span class="keyword">if</span> (clist == <span class="keyword">null</span> || clist.size() == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">null</span> != root.getXmgs()) &#123;</span><br><span class="line">				map.put(<span class="string">"xmgs"</span>, root.getXmgs());</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				map.put(<span class="string">"xmgs"</span>, xmgs);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> map;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 父节点</span></span><br><span class="line">		<span class="keyword">if</span> (clist != <span class="keyword">null</span> &amp;&amp; clist.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">			list.addAll(clist);</span><br><span class="line">			<span class="keyword">for</span> (Xmzb child : clist) &#123;</span><br><span class="line">				<span class="comment">// 递归</span></span><br><span class="line">				Map&lt;String, Object&gt; map_c = doCount(child, list);</span><br><span class="line">				Double res = Double.parseDouble(map_c.get(<span class="string">"xmgs"</span>).toString());</span><br><span class="line">				child.setXmgs(res.intValue());</span><br><span class="line">				<span class="comment">// 统计当前元素的子节点个数</span></span><br><span class="line">				xmgs += res;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		<span class="comment">//注意这两行修改//</span></span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		root.setXmgs(root.getXmgs() + xmgs.intValue()); </span><br><span class="line">		map.put(<span class="string">"xmgs"</span>, root.getXmgs());</span><br><span class="line">	    <span class="comment">/////////////////</span></span><br><span class="line">		<span class="comment">//注意这两行修改//</span></span><br><span class="line">		<span class="comment">/////////////////</span></span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		map.put(<span class="string">"list"</span>, list);</span><br><span class="line">		<span class="keyword">return</span> map;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Xmzb&gt; <span class="title">findByQueryString</span><span class="params">(String pid)</span> </span>&#123;</span><br><span class="line">		List&lt;Xmzb&gt; list = <span class="keyword">new</span> ArrayList&lt;Xmzb&gt;();</span><br><span class="line">		<span class="keyword">for</span> (Xmzb xmzb : allList) &#123;</span><br><span class="line">			<span class="keyword">if</span> (xmzb.getPid().equals(pid)) &#123;</span><br><span class="line">				list.add(xmzb);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> list;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果如下</p>
-<p><img src="https://img-blog.csdnimg.cn/20190726111628862.png" alt="运行结果" /></p>
-]]></content>
+    <title>云服务器初始化Kafka</title>
+    <url>/cms//archivers/21.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="本地机器git-bash新版windows10也可以直接使用命令"><a class="markdownIt-Anchor" href="#本地机器git-bash新版windows10也可以直接使用命令"></a> 本地机器（Git Bash（新版Windows10也可以直接使用命令））</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp ./jdk-8u91-linux-x64.tar.gz root@公网IP:/root</span><br><span class="line">scp ./kafka_2.12-2.2.0.tgz root@公网IP:/root</span><br></pre></td></tr></table></figure>
+<h1 id="云服务器登录后"><a class="markdownIt-Anchor" href="#云服务器登录后"></a> 云服务器登录后</h1>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar zxvf jdk-8u91-linux-x64.tar.gz</span><br><span class="line">mv jdk1.8.0_91 /opt/java</span><br><span class="line"></span><br><span class="line">JAVA_HOME=/opt/java</span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME PATH </span><br><span class="line"></span><br><span class="line">java -version</span><br><span class="line"></span><br><span class="line">tar zxvf kafka_2.12-2.2.0.tgz</span><br><span class="line"><span class="built_in">cd</span> kafka_2.12-2.2.0</span><br><span class="line">vi config/server.properties</span><br></pre></td></tr></table></figure>
+<p>将listeners=PLAINTEXT://:9092注释去掉</p>
+<p>将advertised.listeners=PLAINTEXT://your.host.name:9092注释去掉，your.host.name改成公网IP</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bin/zookeeper-server-start.sh -daemon config/zookeeper.properties</span><br><span class="line">bin/kafka-server-start.sh -daemon config/server.properties</span><br><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic <span class="built_in">test</span></span><br><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br><span class="line">bin/kafka-console-producer.sh --broker-list 公网IP:9092 --topic <span class="built_in">test</span></span><br><span class="line">bin/kafka-console-consumer.sh --bootstrap-server 公网IP:9092 --topic <span class="built_in">test</span> --from-beginning</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Java</category>
+        <category>Server</category>
       </categories>
   </entry>
   <entry>
@@ -558,15 +558,6 @@ After adding</p>
 ]]></content>
       <categories>
         <category>Web-Building</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>JS保留两位小数只舍不进（简化写法）</title>
-    <url>/cms//archivers/26.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> DECIMAL_PREFIX = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> x = <span class="number">144.4599999999</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="built_in">parseFloat</span>(<span class="built_in">JSON</span>.stringify(x).substring(<span class="number">0</span>, <span class="built_in">JSON</span>.stringify(x).lastIndexOf(<span class="string">'.'</span>) + DECIMAL_PREFIX + <span class="number">2</span>)); <span class="comment">// 2 = 保留小数点后的位数</span></span><br><span class="line"><span class="built_in">console</span>.log(y);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出：144.45</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
       </categories>
   </entry>
   <entry>
@@ -602,6 +593,15 @@ After adding</p>
 ]]></content>
       <categories>
         <category>Web-Building</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>JS保留两位小数只舍不进（简化写法）</title>
+    <url>/cms//archivers/26.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> DECIMAL_PREFIX = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> x = <span class="number">144.4599999999</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="built_in">parseFloat</span>(<span class="built_in">JSON</span>.stringify(x).substring(<span class="number">0</span>, <span class="built_in">JSON</span>.stringify(x).lastIndexOf(<span class="string">'.'</span>) + DECIMAL_PREFIX + <span class="number">2</span>)); <span class="comment">// 2 = 保留小数点后的位数</span></span><br><span class="line"><span class="built_in">console</span>.log(y);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出：144.45</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
       </categories>
   </entry>
   <entry>
@@ -698,22 +698,6 @@ We recognize that there are legitimate projects that consist of a large number o
       </categories>
   </entry>
   <entry>
-    <title>（已恢复）Valine评论失效 由于LeanCloud国际版通用域名失效</title>
-    <url>/cms//archivers/35.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>9月27日更新：通用域名已经恢复，但是仍然不建议使用通用域名，仍然建议更换为自定义URL。</strong></p>
-<p>昨天开始，国内大量使用国际版LeanCloud后端的博客的Valine评论一齐失效。</p>
-<p>通过<a href="https://github.com/xCss/Valine/issues/340" target="_blank" rel="noopener">Valine的Github的Issue</a>得知，早在5月份LeanCloud官方就低调表示us.avoscloud.com域名将于不久后下线。</p>
-<p>现在如果使用国际版LeanCloud作为Valine评论的后端的话则必须指定自定义服务器URL才能正常使用了。</p>
-<p>自定义服务器的URL需要到LeanCloud后台查看。打开后台之后进入Settings - App Keys，找到Domain whitelist，里面的Request domain里面的那个xxxxxxxx.api.lncldglobal.com就是你需要指定的服务器URL。其中xxxxxxxx就是各位的AppID的前8位字符。</p>
-<p>NexT主题需要在主题的<code>_config.yml</code>找到<code>valine</code>的<code>serverURLs</code>，设置为：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">serverURLs:</span> <span class="string">https://xxxxxxxx.api.lncldglobal.com</span> <span class="comment"># 把xxxxxxxx替换成你自己AppID的前8位字符</span></span><br></pre></td></tr></table></figure>
-<p>这时候再重新部署应该就可以恢复了。</p>
-]]></content>
-      <categories>
-        <category>Web-Building</category>
-      </categories>
-  </entry>
-  <entry>
     <title>博客推广及搜索引擎优化</title>
     <url>/cms//archivers/33.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://io-oi.me/tech/hexo-next-optimization/#%E5%8D%9A%E5%AE%A2%E6%8E%A8%E5%B9%BF" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/reuixiy-%E6%89%93%E9%80%A0%E4%B8%AA%E6%80%A7%E8%B6%85%E8%B5%9E%E5%8D%9A%E5%AE%A2%20Hexo%20+%20NexT%20+%20GitHub%20Pages%20%E7%9A%84%E8%B6%85%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%8C%96-brightgreen" alt="reuixiy-打造个性超赞博客 Hexo + NexT + GitHub Pages 的超深度优化" /></a></p>
@@ -752,18 +736,19 @@ We recognize that there are legitimate projects that consist of a large number o
       </categories>
   </entry>
   <entry>
-    <title>小花仙 对Flash页游截取4K级别高清图的方法</title>
-    <url>/cms//archivers/38.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这是鄙人又摸索出来的一套解决方案，通过Chrome或Chromium的F12工具来截取高清截图。正如<a href="https://blog.csdn.net/qq_35977139/article/details/108988838" target="_blank" rel="noopener">鄙人此前在CSDN发布的笔记</a>一样，Chrome在62版本之后就已经原生支持了截取指定HTML节点的截图，国产浏览器只要不是太老的版本应该都是可以支持的。之前那个通过RDP远程桌面截图的方式实在太过于麻烦，鄙人现在这一套方法比使用远程桌面要简单不少。</p>
-<p><strong>2020年底之后Chrome和Chromium浏览器将停止对Flash的支持，但是不排除一些国产浏览器会继续支持Flash，所以可能还是需要使用国产浏览器来进行操作。</strong></p>
-<p>前往http://hua.61.com/Client.swf?t=4561654354 （随便输入一串数字）。国产浏览器大都能直接显示，但是Edge和Chrome不能直接打开，他会变成文件下载。鄙人曾经开发过一个扩展可以让浏览器直接播放本地SWF或远程的SWF的URL。但是在试图向微软的浏览器扩展商店投稿时被审核退回了。。。</p>
-<p>把F12开发人员工具打开，不同的浏览器操作方式可能不一样，鄙人的Edge浏览器是菜单按钮-更多工具-开发人员工具。然后点击左上角第二个图标打开设备模式。点击网页上边选择设备的下拉框选编辑（Edit）。点击添加自定义设备（Add custom device），设备名称（Device Name）随便输入，然后尺寸我们用3840 2160当然你也可以尝试8K的7680 4320，但是鄙人发现8K竖屏放大到大约4倍的时候就不能再放大了。设备像素比（Device pixel ratio）不用管，用户戴笠字符串（User agent string）也不用管，设备类型选桌面（Desktop）。点击添加（Add）。然后在网页上边的选择设备的下拉框选择我们刚刚添加的设备。</p>
-<p>刷新一下页面（F5可能是失效的，因为此时输入焦点可能在Flash里面，建议使用鼠标点击浏览器的刷新按钮来刷新）。按照原来使用右键设置麦克风的方法把画面改成显示全部。大概是右键设置麦克风选项卡展开那个下拉框然后鼠标不要动直接右键单击就可以出来缩放画面的菜单了，这个不是一定能成功的得多试几次。使用高分辨率的模拟设备的时候界面有点小，可能会不好点，需要一定的眼力来控制好鼠标的位置。</p>
-<p>然后进到你要截图的画面，回到开发人员工具。到元素（Elements）标签，选中那个<code>embed</code>标签。然后我们要按一个快捷键<code>Ctrl+Shift+P</code>，然后就会呼出一个神秘菜单。我们在这个菜单输入&quot;Capture node screenshot&quot;，当然不需要全部输入他自己就能显示出来。<strong>看到这个选项之后用鼠标或者用键盘移动光标回车选择这个选项，一张4K截图就出来了。</strong></p>
-<p>当然你也可以继续使用原来右键设置麦克风的方法继续放大画面再回到F12执行&quot;Capture node screenshot&quot;，从而截图更细节的图像。</p>
+    <title>（已恢复）Valine评论失效 由于LeanCloud国际版通用域名失效</title>
+    <url>/cms//archivers/35.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>9月27日更新：通用域名已经恢复，但是仍然不建议使用通用域名，仍然建议更换为自定义URL。</strong></p>
+<p>昨天开始，国内大量使用国际版LeanCloud后端的博客的Valine评论一齐失效。</p>
+<p>通过<a href="https://github.com/xCss/Valine/issues/340" target="_blank" rel="noopener">Valine的Github的Issue</a>得知，早在5月份LeanCloud官方就低调表示us.avoscloud.com域名将于不久后下线。</p>
+<p>现在如果使用国际版LeanCloud作为Valine评论的后端的话则必须指定自定义服务器URL才能正常使用了。</p>
+<p>自定义服务器的URL需要到LeanCloud后台查看。打开后台之后进入Settings - App Keys，找到Domain whitelist，里面的Request domain里面的那个xxxxxxxx.api.lncldglobal.com就是你需要指定的服务器URL。其中xxxxxxxx就是各位的AppID的前8位字符。</p>
+<p>NexT主题需要在主题的<code>_config.yml</code>找到<code>valine</code>的<code>serverURLs</code>，设置为：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">serverURLs:</span> <span class="string">https://xxxxxxxx.api.lncldglobal.com</span> <span class="comment"># 把xxxxxxxx替换成你自己AppID的前8位字符</span></span><br></pre></td></tr></table></figure>
+<p>这时候再重新部署应该就可以恢复了。</p>
 ]]></content>
       <categories>
-        <category>Other</category>
+        <category>Web-Building</category>
       </categories>
   </entry>
   <entry>
@@ -800,6 +785,21 @@ We recognize that there are legitimate projects that consist of a large number o
       </categories>
   </entry>
   <entry>
+    <title>小花仙 对Flash页游截取4K级别高清图的方法</title>
+    <url>/cms//archivers/38.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这是鄙人又摸索出来的一套解决方案，通过Chrome或Chromium的F12工具来截取高清截图。正如<a href="https://blog.csdn.net/qq_35977139/article/details/108988838" target="_blank" rel="noopener">鄙人此前在CSDN发布的笔记</a>一样，Chrome在62版本之后就已经原生支持了截取指定HTML节点的截图，国产浏览器只要不是太老的版本应该都是可以支持的。之前那个通过RDP远程桌面截图的方式实在太过于麻烦，鄙人现在这一套方法比使用远程桌面要简单不少。</p>
+<p><strong>2020年底之后Chrome和Chromium浏览器将停止对Flash的支持，但是不排除一些国产浏览器会继续支持Flash，所以可能还是需要使用国产浏览器来进行操作。</strong></p>
+<p>前往http://hua.61.com/Client.swf?t=4561654354 （随便输入一串数字）。国产浏览器大都能直接显示，但是Edge和Chrome不能直接打开，他会变成文件下载。鄙人曾经开发过一个扩展可以让浏览器直接播放本地SWF或远程的SWF的URL。但是在试图向微软的浏览器扩展商店投稿时被审核退回了。。。</p>
+<p>把F12开发人员工具打开，不同的浏览器操作方式可能不一样，鄙人的Edge浏览器是菜单按钮-更多工具-开发人员工具。然后点击左上角第二个图标打开设备模式。点击网页上边选择设备的下拉框选编辑（Edit）。点击添加自定义设备（Add custom device），设备名称（Device Name）随便输入，然后尺寸我们用3840 2160当然你也可以尝试8K的7680 4320，但是鄙人发现8K竖屏放大到大约4倍的时候就不能再放大了。设备像素比（Device pixel ratio）不用管，用户戴笠字符串（User agent string）也不用管，设备类型选桌面（Desktop）。点击添加（Add）。然后在网页上边的选择设备的下拉框选择我们刚刚添加的设备。</p>
+<p>刷新一下页面（F5可能是失效的，因为此时输入焦点可能在Flash里面，建议使用鼠标点击浏览器的刷新按钮来刷新）。按照原来使用右键设置麦克风的方法把画面改成显示全部。大概是右键设置麦克风选项卡展开那个下拉框然后鼠标不要动直接右键单击就可以出来缩放画面的菜单了，这个不是一定能成功的得多试几次。使用高分辨率的模拟设备的时候界面有点小，可能会不好点，需要一定的眼力来控制好鼠标的位置。</p>
+<p>然后进到你要截图的画面，回到开发人员工具。到元素（Elements）标签，选中那个<code>embed</code>标签。然后我们要按一个快捷键<code>Ctrl+Shift+P</code>，然后就会呼出一个神秘菜单。我们在这个菜单输入&quot;Capture node screenshot&quot;，当然不需要全部输入他自己就能显示出来。<strong>看到这个选项之后用鼠标或者用键盘移动光标回车选择这个选项，一张4K截图就出来了。</strong></p>
+<p>当然你也可以继续使用原来右键设置麦克风的方法继续放大画面再回到F12执行&quot;Capture node screenshot&quot;，从而截图更细节的图像。</p>
+]]></content>
+      <categories>
+        <category>Other</category>
+      </categories>
+  </entry>
+  <entry>
     <title>文科生如何成为高级程序员</title>
     <url>/cms//archivers/40.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="http://www.exam8.com/computer/djks/xinde/200503/8400.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E4%B8%AD%E5%9B%BD%E7%94%B5%E8%84%91%E6%95%99%E8%82%B2%E6%8A%A5%20%C2%B7%20%E5%88%98%E5%AE%97%E5%87%A1-%E7%94%B1%E2%80%9C%E7%94%B5%E8%84%91%E7%9B%B2%E2%80%9D%E6%88%90%E4%B8%BA%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E8%AF%AD%E6%96%87%E6%95%99%E5%B8%88-brightgreen" alt="中国电脑教育报 · 刘宗凡-由“电脑盲”成为高级程序员的语文教师" /></a></p>
@@ -824,49 +824,6 @@ We recognize that there are legitimate projects that consist of a large number o
 ]]></content>
       <categories>
         <category>Other</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>360浏览器官方回应Chromium停止支持Flash</title>
-    <url>/cms//archivers/43.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://bbs.360.cn/forum-141-1.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/360%E5%AE%89%E5%85%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%98%E6%96%B9%E8%AE%BA%E5%9D%9B-Spirit_%E6%82%94%E7%81%AD-brightgreen" alt="360安全浏览器官方论坛-Spirit_悔灭" /></a></p>
-<p><strong>11月12日更新：360极速浏览器产品答疑师“fly颖”回应：<a href="https://bbs.360.cn/forum.php?mod=viewthread&amp;tid=15933600&amp;page=1#pid118058892" target="_blank" rel="noopener">“360浏览器会继续支持Flash的”</a></strong></p>
-<p>鉴于Chrome和Chromium即将在年底停止对Flash的支持，有不少用户关心使用Chromium内核的国产浏览器是否也会相应地移除Flash的支持。对此360安全浏览器官方版主“Spirit_悔灭”做出回应。</p>
-<blockquote>
-<p>安全浏览器会根据Flash插件的安全性和需求量评估是否保留内置的Flash插件。另外国外是禁止了内容通过Flash插件加载才会有很长一段时间（2017年发布2020年停止支持）的预先警告，既使安全浏览器不再内置Flash插件，国内仍有其他方式提供Flash插件支持的方法，所以您描述的缓冲期应该询问Flash插件官方客服“什么时候会停止支持插件维护”。安全浏览器只是一种提供支持的客户端，如果不再内置Flash插件会在版本发布时进行公告，您可以留意论坛消息。旧版本不再更新维护，不会变化。</p>
-</blockquote>
-<p>360方面还在评估Flash的<strong>安全性和需求量</strong>，据此猜测，在最终讨论结果确认下来之前，360浏览器仍然将继续提供对Flash的支持。<br />
-此外，版主也提到兼容模式可以继续调用ActiveX版的Flash（可能需要国产版Flash）。</p>
-<blockquote>
-<p>安全浏览器兼容模式调用系统IE浏览器内核，与IE浏览器表现一致。您可以到Flash插件官网手动安装flash插件。</p>
-</blockquote>
-<p>此外，版主还提供了针对360浏览器使用Flash的解决方案。</p>
-<blockquote>
-<p>最近论坛上大家经常反馈视频网站或者网页游戏提示Flash未启用、经常提示Shockwave Flash崩溃。然后就会百度寻找各种Flash插件问题的解决方法，无一例外的都会写到重新安装Flash,但这是一个通用的方法。<em>下面就说明一下Flash插件在安全浏览器的具体情况以及解决办法</em>。</p>
-<ul>
-<li>先说下Flash插件现况。由于Flash插件经常被发现漏洞引发安全问题，Adobe公司发公告2020年会停止提供Flash插件更新和运行，微软公司也公告2020年12月前会逐步删除自带浏览器的Flash插件。 谷歌浏览器默认阻止Flash插件运行。</li>
-</ul>
-<p>安全浏览器新安装的时候是不会内置Flash。访问有需要Flash插件网页的时候，浏览器会自动下载解压我们预置的Flash插件，路径是<code>%appdata%\360se6\Application\components\npflash</code>和<code>%appdata%\360se6\Application\components\ppflash</code>。<br />
-所以使用安全浏览器，您不需要单独的去安装flash插件，<strong>当提示您Flash版本低或安装Flash版本时，您只要重新启动浏览器就可以正常浏览网页了。</strong> 如果您不单独安装，不管您安装在什么位置，chrome://plugins插件管理页面中Flash插件是不会出现多个版本的。<br />
-需要注意：我们预置的Flash插件只是极速模式下使用的，兼容模式下我们会调用IE浏览器自带的Flash插件<br />
-启用IE浏览器Flash插件的办法：</p>
-<ol>
-<li>您可以使用快捷键Win+R运行<code>inetcpl.cpl</code>打开Internet属性</li>
-<li>选择程序选项卡中的管理加载项</li>
-<li>在弹出的窗口中找到Flash启用即可</li>
-</ol>
-<ul>
-<li>您已经手动安装了Flash并且经常提示Shockwave Flash崩溃。麻烦您按照以下方法操作，看看是否还会出现。</li>
-</ul>
-<ol>
-<li>如果能够从其他地方获得谷歌浏览器使用的Flash插件，可以直接在<code>%appdata%\360se6\Application\components</code>路径下<code>ppflash</code>和<code>npflash</code>文件夹替换已有文件</li>
-<li>直接删除<code>%appdata%\360se6\Application\components</code>路径下<code>ppflash</code>和<code>npflash</code>文件夹</li>
-<li>如果前两种方法都不能正常，打开浏览器在地址栏输入<code>chrome://plugins</code>点击详细信息,停用您安装的版本，只留一个Shockwave Flash 29.0 PPAPI。</li>
-</ol>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Moving-Away-from-Flash</category>
       </categories>
   </entry>
   <entry>
@@ -930,6 +887,59 @@ Flash Player将被标记为过期，试图加载时将被禁用。</p>
 <p><img src="https://img.2125.com/20200806/img/h001/h31/img20200925100125f12470.png" alt="" /></p>
 <p>如果使用过程当中，还有遇到其它问题，还请联系露露予以反馈哦~</p>
 ]]></content>
+      <categories>
+        <category>Moving-Away-from-Flash</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>360浏览器官方回应Chromium停止支持Flash</title>
+    <url>/cms//archivers/43.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://bbs.360.cn/forum-141-1.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/360%E5%AE%89%E5%85%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AE%98%E6%96%B9%E8%AE%BA%E5%9D%9B-Spirit_%E6%82%94%E7%81%AD-brightgreen" alt="360安全浏览器官方论坛-Spirit_悔灭" /></a></p>
+<p><strong>11月12日更新：360极速浏览器产品答疑师“fly颖”回应：<a href="https://bbs.360.cn/forum.php?mod=viewthread&amp;tid=15933600&amp;page=1#pid118058892" target="_blank" rel="noopener">“360浏览器会继续支持Flash的”</a></strong></p>
+<p>鉴于Chrome和Chromium即将在年底停止对Flash的支持，有不少用户关心使用Chromium内核的国产浏览器是否也会相应地移除Flash的支持。对此360安全浏览器官方版主“Spirit_悔灭”做出回应。</p>
+<blockquote>
+<p>安全浏览器会根据Flash插件的安全性和需求量评估是否保留内置的Flash插件。另外国外是禁止了内容通过Flash插件加载才会有很长一段时间（2017年发布2020年停止支持）的预先警告，既使安全浏览器不再内置Flash插件，国内仍有其他方式提供Flash插件支持的方法，所以您描述的缓冲期应该询问Flash插件官方客服“什么时候会停止支持插件维护”。安全浏览器只是一种提供支持的客户端，如果不再内置Flash插件会在版本发布时进行公告，您可以留意论坛消息。旧版本不再更新维护，不会变化。</p>
+</blockquote>
+<p>360方面还在评估Flash的<strong>安全性和需求量</strong>，据此猜测，在最终讨论结果确认下来之前，360浏览器仍然将继续提供对Flash的支持。<br />
+此外，版主也提到兼容模式可以继续调用ActiveX版的Flash（可能需要国产版Flash）。</p>
+<blockquote>
+<p>安全浏览器兼容模式调用系统IE浏览器内核，与IE浏览器表现一致。您可以到Flash插件官网手动安装flash插件。</p>
+</blockquote>
+<p>此外，版主还提供了针对360浏览器使用Flash的解决方案。</p>
+<blockquote>
+<p>最近论坛上大家经常反馈视频网站或者网页游戏提示Flash未启用、经常提示Shockwave Flash崩溃。然后就会百度寻找各种Flash插件问题的解决方法，无一例外的都会写到重新安装Flash,但这是一个通用的方法。<em>下面就说明一下Flash插件在安全浏览器的具体情况以及解决办法</em>。</p>
+<ul>
+<li>先说下Flash插件现况。由于Flash插件经常被发现漏洞引发安全问题，Adobe公司发公告2020年会停止提供Flash插件更新和运行，微软公司也公告2020年12月前会逐步删除自带浏览器的Flash插件。 谷歌浏览器默认阻止Flash插件运行。</li>
+</ul>
+<p>安全浏览器新安装的时候是不会内置Flash。访问有需要Flash插件网页的时候，浏览器会自动下载解压我们预置的Flash插件，路径是<code>%appdata%\360se6\Application\components\npflash</code>和<code>%appdata%\360se6\Application\components\ppflash</code>。<br />
+所以使用安全浏览器，您不需要单独的去安装flash插件，<strong>当提示您Flash版本低或安装Flash版本时，您只要重新启动浏览器就可以正常浏览网页了。</strong> 如果您不单独安装，不管您安装在什么位置，chrome://plugins插件管理页面中Flash插件是不会出现多个版本的。<br />
+需要注意：我们预置的Flash插件只是极速模式下使用的，兼容模式下我们会调用IE浏览器自带的Flash插件<br />
+启用IE浏览器Flash插件的办法：</p>
+<ol>
+<li>您可以使用快捷键Win+R运行<code>inetcpl.cpl</code>打开Internet属性</li>
+<li>选择程序选项卡中的管理加载项</li>
+<li>在弹出的窗口中找到Flash启用即可</li>
+</ol>
+<ul>
+<li>您已经手动安装了Flash并且经常提示Shockwave Flash崩溃。麻烦您按照以下方法操作，看看是否还会出现。</li>
+</ul>
+<ol>
+<li>如果能够从其他地方获得谷歌浏览器使用的Flash插件，可以直接在<code>%appdata%\360se6\Application\components</code>路径下<code>ppflash</code>和<code>npflash</code>文件夹替换已有文件</li>
+<li>直接删除<code>%appdata%\360se6\Application\components</code>路径下<code>ppflash</code>和<code>npflash</code>文件夹</li>
+<li>如果前两种方法都不能正常，打开浏览器在地址栏输入<code>chrome://plugins</code>点击详细信息,停用您安装的版本，只留一个Shockwave Flash 29.0 PPAPI。</li>
+</ol>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Moving-Away-from-Flash</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>关于Flash停止支持后Chrome如何启用过期插件</title>
+    <url>/cms//archivers/45.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>根据前段时间翻译的<a href="41.html#Flash-Player-blocked-as-%E2%80%9Cout-of-date%E2%80%9D-Target-All-Chrome-versions-Jan-2021-%E4%BB%A5%E2%80%9C%E8%BF%87%E6%9C%9F%E2%80%9D%E5%8E%9F%E5%9B%A0%E7%A6%81%E7%94%A8Flash-2021-1%EF%BC%8C%E6%89%80%E6%9C%89%E7%89%88%E6%9C%AC">Chrome/Chromium停止支持Flash的详细事宜</a>中提到的，2021年以后新版Chrome将直接不支持Flash，而旧版Chrome也会将Flash插件视为过期插件。届时即使是使用旧版的Chrome也会出现“Adobe Flash Player因过期而遭到阻止”的提示，每次都需要点击旁边的运行一次才能使用。</p>
+<p>如果仍然有需要依赖Flash的业务，应该提前关闭Chrome的自动更新，然后对旧版的Chrome主程序添加启动参数来手动启用过期的插件。启动参数如下：</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">chrome.exe --allow-outdated-plugins</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Moving-Away-from-Flash</category>
       </categories>
@@ -1007,16 +1017,6 @@ Flash Player将被标记为过期，试图加载时将被禁用。</p>
       </categories>
   </entry>
   <entry>
-    <title>关于Flash停止支持后Chrome如何启用过期插件</title>
-    <url>/cms//archivers/45.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>根据前段时间翻译的<a href="41.html#Flash-Player-blocked-as-%E2%80%9Cout-of-date%E2%80%9D-Target-All-Chrome-versions-Jan-2021-%E4%BB%A5%E2%80%9C%E8%BF%87%E6%9C%9F%E2%80%9D%E5%8E%9F%E5%9B%A0%E7%A6%81%E7%94%A8Flash-2021-1%EF%BC%8C%E6%89%80%E6%9C%89%E7%89%88%E6%9C%AC">Chrome/Chromium停止支持Flash的详细事宜</a>中提到的，2021年以后新版Chrome将直接不支持Flash，而旧版Chrome也会将Flash插件视为过期插件。届时即使是使用旧版的Chrome也会出现“Adobe Flash Player因过期而遭到阻止”的提示，每次都需要点击旁边的运行一次才能使用。</p>
-<p>如果仍然有需要依赖Flash的业务，应该提前关闭Chrome的自动更新，然后对旧版的Chrome主程序添加启动参数来手动启用过期的插件。启动参数如下：</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">chrome.exe --allow-outdated-plugins</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Moving-Away-from-Flash</category>
-      </categories>
-  </entry>
-  <entry>
     <title>微软答应2021年再给Flash续命几个月</title>
     <url>/cms//archivers/46.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Windows%20Blogs-Update%20on%20Adobe%20Flash%20Player%20End%20of%20Support-brightgreen" alt="Windows Blogs-Update on Adobe Flash Player End of Support" /></a></p>
@@ -1031,6 +1031,21 @@ Flash Player将被标记为过期，试图加载时将被禁用。</p>
 ]]></content>
       <categories>
         <category>Moving-Away-from-Flash</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>NexT主题 Group Pictures添加超链接</title>
+    <url>/cms//archivers/47.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>鄙人向NexT主题提交的<a href="https://github.com/next-theme/hexo-theme-next/pull/143" target="_blank" rel="noopener">PR</a>已经得到合并，大家可以在下一个版本的NexT尝试。</strong></p>
+<p>NexT主题在博文中插入图片时，一张图片会单独占满一行。如果想要将多个尺寸较小的图片放在同一行就比较麻烦。好在NexT主题集成了一个扩展标签<a href="https://theme-next.js.org/docs/tag-plugins/group-pictures.html" target="_blank" rel="noopener">Group Pictures</a>，允许在同一行放多张图片（最多3张）。</p>
+<p>但是遇到我們这种非常特殊的需求，要在关于页面的同一行放置多个徽章并且还要能点击跳转。这就需要将图片设置超链接。Group Pictures并不支持超链接。如果直接使用Markdown图片超链接标签，则超链接效果包括<code>&lt;a&gt;</code>标签都会被吞掉。</p>
+<p>经过反复的查找相关JS代码包括编译站点的NodeJS代码，最终在<code>group-pictures.js</code>文件找到了问题所在。获取图片DOM的代码是通过正则表达式判断的，他会先把Hexo那边包裹在特定标签的内容生成出来的HTML代码取出来，然后通过正则表达式来找图片HTML标签。但是这个标签是按<code>&lt;img&gt;</code>标签去找的。这样会把包裹在<code>&lt;img&gt;</code>标签外面的<code>&lt;a&gt;</code>标签忽略，导致超链接无法生成。</p>
+<p>我們需要将这里的正则表达式改成既找<code>&lt;img&gt;</code>标签也找<code>&lt;a&gt;</code>标签。打开<code>group-pictures.js</code>，将下边的<code>groupPicture</code>函数的正则表达式修改。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">groupPicture</span>(<span class="params">args, content</span>) </span>&#123;</span><br><span class="line">  args = args[<span class="number">0</span>].split(<span class="string">'-'</span>);</span><br><span class="line">  <span class="keyword">const</span> group = <span class="built_in">parseInt</span>(args[<span class="number">0</span>], <span class="number">10</span>);</span><br><span class="line">  <span class="keyword">const</span> layout = <span class="built_in">parseInt</span>(args[<span class="number">1</span>], <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">  content = hexo.render.renderSync(&#123;<span class="attr">text</span>: content, <span class="attr">engine</span>: <span class="string">'markdown'</span>&#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// const pictures = content.match(/&lt;img[\s\S]*?&gt;/g);</span></span><br><span class="line">  <span class="keyword">const</span> pictures = content.match(<span class="regexp">/(&lt;a[^&gt;]*&gt;((?!&lt;\/a)(.|\n))+&lt;\/a&gt;)|(&lt;img[^&gt;]+&gt;)/g</span>); <span class="comment">// 这一行改成这样</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">`&lt;div class="group-picture"&gt;<span class="subst">$&#123;templates.dispatch(pictures, group, layout)&#125;</span>&lt;/div&gt;`</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样再使用Group Pictures的时候就可以直接放图片超链接了。例如：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% grouppicture 3-1 %&#125;</span><br><span class="line">  [<span class="string">![</span>](<span class="link">/images/docs/next.svg</span>)](<span class="link">https://theme-next.js.org/</span>)</span><br><span class="line">  ![](/images/docs/next.svg)</span><br><span class="line">  [<span class="string">![</span>](<span class="link">/images/docs/next.svg</span>)](<span class="link">https://theme-next.js.org/</span>)</span><br><span class="line">&#123;% endgrouppicture %&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Web-Building</category>
       </categories>
   </entry>
   <entry>
@@ -1051,21 +1066,6 @@ Flash Player将被标记为过期，试图加载时将被禁用。</p>
 ]]></content>
       <categories>
         <category>Moving-Away-from-Flash</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>NexT主题 Group Pictures添加超链接</title>
-    <url>/cms//archivers/47.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>鄙人向NexT主题提交的<a href="https://github.com/next-theme/hexo-theme-next/pull/143" target="_blank" rel="noopener">PR</a>已经得到合并，大家可以在下一个版本的NexT尝试。</strong></p>
-<p>NexT主题在博文中插入图片时，一张图片会单独占满一行。如果想要将多个尺寸较小的图片放在同一行就比较麻烦。好在NexT主题集成了一个扩展标签<a href="https://theme-next.js.org/docs/tag-plugins/group-pictures.html" target="_blank" rel="noopener">Group Pictures</a>，允许在同一行放多张图片（最多3张）。</p>
-<p>但是遇到我們这种非常特殊的需求，要在关于页面的同一行放置多个徽章并且还要能点击跳转。这就需要将图片设置超链接。Group Pictures并不支持超链接。如果直接使用Markdown图片超链接标签，则超链接效果包括<code>&lt;a&gt;</code>标签都会被吞掉。</p>
-<p>经过反复的查找相关JS代码包括编译站点的NodeJS代码，最终在<code>group-pictures.js</code>文件找到了问题所在。获取图片DOM的代码是通过正则表达式判断的，他会先把Hexo那边包裹在特定标签的内容生成出来的HTML代码取出来，然后通过正则表达式来找图片HTML标签。但是这个标签是按<code>&lt;img&gt;</code>标签去找的。这样会把包裹在<code>&lt;img&gt;</code>标签外面的<code>&lt;a&gt;</code>标签忽略，导致超链接无法生成。</p>
-<p>我們需要将这里的正则表达式改成既找<code>&lt;img&gt;</code>标签也找<code>&lt;a&gt;</code>标签。打开<code>group-pictures.js</code>，将下边的<code>groupPicture</code>函数的正则表达式修改。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">groupPicture</span>(<span class="params">args, content</span>) </span>&#123;</span><br><span class="line">  args = args[<span class="number">0</span>].split(<span class="string">'-'</span>);</span><br><span class="line">  <span class="keyword">const</span> group = <span class="built_in">parseInt</span>(args[<span class="number">0</span>], <span class="number">10</span>);</span><br><span class="line">  <span class="keyword">const</span> layout = <span class="built_in">parseInt</span>(args[<span class="number">1</span>], <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">  content = hexo.render.renderSync(&#123;<span class="attr">text</span>: content, <span class="attr">engine</span>: <span class="string">'markdown'</span>&#125;);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// const pictures = content.match(/&lt;img[\s\S]*?&gt;/g);</span></span><br><span class="line">  <span class="keyword">const</span> pictures = content.match(<span class="regexp">/(&lt;a[^&gt;]*&gt;((?!&lt;\/a)(.|\n))+&lt;\/a&gt;)|(&lt;img[^&gt;]+&gt;)/g</span>); <span class="comment">// 这一行改成这样</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">`&lt;div class="group-picture"&gt;<span class="subst">$&#123;templates.dispatch(pictures, group, layout)&#125;</span>&lt;/div&gt;`</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样再使用Group Pictures的时候就可以直接放图片超链接了。例如：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% grouppicture 3-1 %&#125;</span><br><span class="line">  [<span class="string">![</span>](<span class="link">/images/docs/next.svg</span>)](<span class="link">https://theme-next.js.org/</span>)</span><br><span class="line">  ![](/images/docs/next.svg)</span><br><span class="line">  [<span class="string">![</span>](<span class="link">/images/docs/next.svg</span>)](<span class="link">https://theme-next.js.org/</span>)</span><br><span class="line">&#123;% endgrouppicture %&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Web-Building</category>
       </categories>
   </entry>
   <entry>
@@ -1091,24 +1091,6 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
 ]]></content>
       <categories>
         <category>Moving-Away-from-Flash</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>西一爱服 小花仙登录器下载地址和项目代码</title>
-    <url>/cms//archivers/52.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>下载地址：<a href="https://www.lanzous.com/iivU9jgdclg" target="_blank" rel="noopener">https://www.lanzous.com/iivU9jgdclg</a><br />
-项目地址：<a href="https://github.com/No5972/CEFHuaClient" target="_blank" rel="noopener">https://github.com/No5972/CEFHuaClient</a></p>
-<p>这个是UP主自制的一个小花仙的登录器，用C#编写的，如果不放心可以用软件反编译查看源代码。<br />
-怕一些杀软查杀，弄了一个数字签名，但是有没有用就不知道了。<br />
-登录器后续会开源到Github，基于BSD-3-Clause协议开源，禁止商用。如有商用，欢迎举报。<br />
-体积有点大，打包之后的zip有80多M，解压后将近200M，这是因为登录器使用CEF来作为Flash的渲染容器，也就是说登录器内嵌了一个谷歌浏览器Chromium！单一个CEF库就有100多M。<br />
-目前主要解决3个问题<br />
-一个是Flash即将停止支持，这个登录器实现了在没有Flash组件的电脑上也能正常使用。但是不排除后续会移除，改为由玩家自行选择Flash组件文件的位置。<br />
-第二个是广大小花仙玩家希望要的一个功能，将游戏画面缩放到较高的分辨率尺寸。本登录器已经实现了缩放到4K、8K级别的高清分辨率，并且即使是超出屏幕分辨率也能完整加载。就是窗口尺寸已经超出了屏幕的显示范围，如果要查看画面的其他部分的话需要多次拖动标题栏。<br />
-第三个就是截图功能，通常配合第二个缩放画面的功能使用。即使是缩放画面超出了屏幕的显示，或者被其他的窗口挡住了，这个截图功能也能截取到完整的游戏画面。</p>
-]]></content>
-      <categories>
-        <category>Other</category>
       </categories>
   </entry>
   <entry>
@@ -1156,31 +1138,21 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
       </categories>
   </entry>
   <entry>
-    <title>【绝对机密】github上面有些零散的PPAPI Flash Player的DLL文件下载</title>
-    <url>/cms//archivers/58.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://github.com/search?l=&amp;q=filename%3Apepflashplayer.dll&amp;type=code" target="_blank" rel="noopener">https://github.com/search?l=&amp;q=filename%3Apepflashplayer.dll&amp;type=code</a><br />
-点开看一下分支名字，看下有没有Releases，如果有的话访问</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;用户名或组织名&#x2F;仓库名@分支名&#x2F;路径&#x2F;pepflashplayer.dll</span><br></pre></td></tr></table></figure>
-<p>就可以下载了。<br />
-如果有需要<code>manifest.json</code>的话试着把最后的文件名改成这个，可能会报“Couldn’t find the requested file”。如果报的话就再换一个搜索结果看看。</p>
+    <title>西一爱服 小花仙登录器下载地址和项目代码</title>
+    <url>/cms//archivers/52.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>下载地址：<a href="https://www.lanzous.com/iivU9jgdclg" target="_blank" rel="noopener">https://www.lanzous.com/iivU9jgdclg</a><br />
+项目地址：<a href="https://github.com/No5972/CEFHuaClient" target="_blank" rel="noopener">https://github.com/No5972/CEFHuaClient</a></p>
+<p>这个是UP主自制的一个小花仙的登录器，用C#编写的，如果不放心可以用软件反编译查看源代码。<br />
+怕一些杀软查杀，弄了一个数字签名，但是有没有用就不知道了。<br />
+登录器后续会开源到Github，基于BSD-3-Clause协议开源，禁止商用。如有商用，欢迎举报。<br />
+体积有点大，打包之后的zip有80多M，解压后将近200M，这是因为登录器使用CEF来作为Flash的渲染容器，也就是说登录器内嵌了一个谷歌浏览器Chromium！单一个CEF库就有100多M。<br />
+目前主要解决3个问题<br />
+一个是Flash即将停止支持，这个登录器实现了在没有Flash组件的电脑上也能正常使用。但是不排除后续会移除，改为由玩家自行选择Flash组件文件的位置。<br />
+第二个是广大小花仙玩家希望要的一个功能，将游戏画面缩放到较高的分辨率尺寸。本登录器已经实现了缩放到4K、8K级别的高清分辨率，并且即使是超出屏幕分辨率也能完整加载。就是窗口尺寸已经超出了屏幕的显示范围，如果要查看画面的其他部分的话需要多次拖动标题栏。<br />
+第三个就是截图功能，通常配合第二个缩放画面的功能使用。即使是缩放画面超出了屏幕的显示，或者被其他的窗口挡住了，这个截图功能也能截取到完整的游戏画面。</p>
 ]]></content>
       <categories>
-        <category>Moving-Away-from-Flash</category>
-        <category>Github</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>提供一个在Selenium截网页长图的实现</title>
-    <url>/cms//archivers/55.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近研究控制Chrome API来进行自动截图的方法。然后就看到了博客园的文章<a href="https://www.cnblogs.com/superhin/archive/2004/01/13/11481910.html" target="_blank" rel="noopener">https://www.cnblogs.com/superhin/archive/2004/01/13/11481910.html</a> 。文章说Selenium并不支持对整个页面截图，原因是Chrome虽然在开发者工具中提供了“Capture full size screenshot”的Run Command，但是在CDP中并没有提供<code>executeCdpCommand</code>的命令。<br />
-为了解决这个问题，鄙人把Chromium的源代码扒了出来，然后看到这个“Capture full size screenshot”实际上走的是先设置了一个设备模拟把高度调成和页面高度一样，然后再截当前屏幕截图。<br />
-鄙人也留意了一下国外的编程社区，发现国外基本上也是这么干的，临时设置了一个设备模拟，然后截当前屏幕的截图，截好图了再把设备模拟关闭。<br />
-这样的话使用Python语言操作如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接入既有的浏览器进程</span></span><br><span class="line">options = webdriver.ChromeOptions()</span><br><span class="line">options.debugger_address = <span class="string">"127.0.0.1:9222"</span></span><br><span class="line">driver = webdriver.Chrome(options=options)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取出页面的宽度和高度</span></span><br><span class="line">page_width = driver.execute_script(<span class="string">"return document.body.scrollWidth"</span>)</span><br><span class="line">page_height = driver.execute_script(<span class="string">"return document.body.scrollHeight"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 直接开启设备模拟，不要再手动开devtools了，否则截图截的是devtools的界面！</span></span><br><span class="line">driver.execute_cdp_cmd(<span class="string">'Emulation.setDeviceMetricsOverride'</span>, &#123;<span class="string">'mobile'</span>:<span class="literal">False</span>, <span class="string">'width'</span>:page_width, <span class="string">'height'</span>:page_height, <span class="string">'deviceScaleFactor'</span>: <span class="number">1</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行截图</span></span><br><span class="line">res = driver.execute_cdp_cmd(<span class="string">'Page.captureScreenshot'</span>, &#123; <span class="string">'fromSurface'</span>: <span class="literal">True</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回的base64内容写入PNG文件</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'hao123.png'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    img = base64.b64decode(res[<span class="string">'data'</span>])</span><br><span class="line">    f.write(img)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 等待截图完成</span></span><br><span class="line">sleep(<span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭设备模拟</span></span><br><span class="line">driver.execute_cdp_cmd(<span class="string">'Emulation.clearDeviceMetricsOverride'</span>, &#123;&#125;)</span><br></pre></td></tr></table></figure>
-<p><img src="https://img-blog.csdnimg.cn/20201222151946455.png" alt="" /></p>
-]]></content>
-      <categories>
-        <category>Python</category>
+        <category>Other</category>
       </categories>
   </entry>
   <entry>
@@ -1228,14 +1200,57 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
       </categories>
   </entry>
   <entry>
-    <title>B站 屏蔽空格弹幕</title>
-    <url>/cms//archivers/60.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>每次视频一点开顶部一堆空格分隔的弹幕，与视频毫不相干。恨死了，鄙人今天非把这些弹幕屏蔽了。😒<br />
-手机端：全屏播放，弹幕设置图标，屏蔽管理，然后输入<code>/\x20/</code>然后添加即可。<br />
-电脑端：展开弹幕列表，点击三个点的按钮，选择屏蔽设定，然后输入<code>/\x20/</code>然后添加即可。</p>
+    <title>提供一个在Selenium截网页长图的实现</title>
+    <url>/cms//archivers/55.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近研究控制Chrome API来进行自动截图的方法。然后就看到了博客园的文章<a href="https://www.cnblogs.com/superhin/archive/2004/01/13/11481910.html" target="_blank" rel="noopener">https://www.cnblogs.com/superhin/archive/2004/01/13/11481910.html</a> 。文章说Selenium并不支持对整个页面截图，原因是Chrome虽然在开发者工具中提供了“Capture full size screenshot”的Run Command，但是在CDP中并没有提供<code>executeCdpCommand</code>的命令。<br />
+为了解决这个问题，鄙人把Chromium的源代码扒了出来，然后看到这个“Capture full size screenshot”实际上走的是先设置了一个设备模拟把高度调成和页面高度一样，然后再截当前屏幕截图。<br />
+鄙人也留意了一下国外的编程社区，发现国外基本上也是这么干的，临时设置了一个设备模拟，然后截当前屏幕的截图，截好图了再把设备模拟关闭。<br />
+这样的话使用Python语言操作如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接入既有的浏览器进程</span></span><br><span class="line">options = webdriver.ChromeOptions()</span><br><span class="line">options.debugger_address = <span class="string">"127.0.0.1:9222"</span></span><br><span class="line">driver = webdriver.Chrome(options=options)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取出页面的宽度和高度</span></span><br><span class="line">page_width = driver.execute_script(<span class="string">"return document.body.scrollWidth"</span>)</span><br><span class="line">page_height = driver.execute_script(<span class="string">"return document.body.scrollHeight"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 直接开启设备模拟，不要再手动开devtools了，否则截图截的是devtools的界面！</span></span><br><span class="line">driver.execute_cdp_cmd(<span class="string">'Emulation.setDeviceMetricsOverride'</span>, &#123;<span class="string">'mobile'</span>:<span class="literal">False</span>, <span class="string">'width'</span>:page_width, <span class="string">'height'</span>:page_height, <span class="string">'deviceScaleFactor'</span>: <span class="number">1</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行截图</span></span><br><span class="line">res = driver.execute_cdp_cmd(<span class="string">'Page.captureScreenshot'</span>, &#123; <span class="string">'fromSurface'</span>: <span class="literal">True</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回的base64内容写入PNG文件</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'hao123.png'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    img = base64.b64decode(res[<span class="string">'data'</span>])</span><br><span class="line">    f.write(img)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 等待截图完成</span></span><br><span class="line">sleep(<span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭设备模拟</span></span><br><span class="line">driver.execute_cdp_cmd(<span class="string">'Emulation.clearDeviceMetricsOverride'</span>, &#123;&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20201222151946455.png" alt="" /></p>
 ]]></content>
       <categories>
-        <category>Webapp</category>
+        <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>提供一个Java SE程序打单个EXE包部署到不带JRE电脑运行的实现（有点复杂）</title>
+    <url>/cms//archivers/56.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>详细步骤：</p>
+<ol>
+<li>在IDE中打一个Runnable JAR。
+<ul>
+<li>Eclipse右键整个项目-Export-Java-Runnable JAR File，Library Handling前两个都可以，第三个比较麻烦不建议用。</li>
+<li>IDEA点击File-Project Structure-Artifacts，点击加号，JAR，From Modules and Dependencies，选中启动的那个模块，选择启动主类，选择Extract to the target JAR。然后点击Build-Build Artifacts，然后选中刚才添加的JAR即可。</li>
+</ul>
+</li>
+<li>将JRE目录拷贝一份出来，重命名为<code>jre</code>。</li>
+<li>使用exe4j把JAR包转换成EXE。
+<ul>
+<li>Project Type选择&quot;JAR in EXE mode&quot;</li>
+<li>Application Info是EXE属性附加信息的内容，以及生成EXE文件的位置。</li>
+<li>Executable Info的Executable Name是生成EXE文件的名字，Icon File可以用来指定生成EXE文件的图标。其他保持默认。</li>
+<li>Java Invocation里面的列表要添加第一步生成的JAR文件。</li>
+<li>JRE那一步的Search Sequence里面别的都不要，只设置一个Directory里面填<code>.\jre</code>。</li>
+<li>Splash Screen用来指定刚运行EXE时显示的Logo界面，可以不指定。</li>
+<li>Messages用来指定如果环境出错显示什么样的错误信息。默认是英文的提示，可以改成中文但是翻译量是比较大的。</li>
+</ul>
+</li>
+<li>把EXE文件和<code>jre</code>目录放在同一个目录。</li>
+<li>使用《单文件软件封装工具》（标题栏有QQ号，右下角状态栏显示压缩率的那个）把存放EXE和<code>jre</code>的目录打包成单个EXE文件。
+<ul>
+<li>选择程序目录，选择这个存放EXE和<code>jre</code>的目录。</li>
+<li>选择执行程序，选择这个EXE文件。</li>
+<li>选择保存路径，选择要导出单个EXE文件的位置。</li>
+<li>选择文件图标，可以指定单独的ICO图标，如果在exe4j中设置了图标也可以指定EXE文件。</li>
+<li>附加信息是EXE属性附加信息的内容，可以选择性设置。</li>
+<li>使用7z模式打包出来的EXE启动稍微快一些。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java</category>
       </categories>
   </entry>
   <entry>
@@ -1306,6 +1321,48 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
       </categories>
   </entry>
   <entry>
+    <title>【绝对机密】github上面有些零散的PPAPI Flash Player的DLL文件下载</title>
+    <url>/cms//archivers/58.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://github.com/search?l=&amp;q=filename%3Apepflashplayer.dll&amp;type=code" target="_blank" rel="noopener">https://github.com/search?l=&amp;q=filename%3Apepflashplayer.dll&amp;type=code</a><br />
+点开看一下分支名字，看下有没有Releases，如果有的话访问</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;用户名或组织名&#x2F;仓库名@分支名&#x2F;路径&#x2F;pepflashplayer.dll</span><br></pre></td></tr></table></figure>
+<p>就可以下载了。<br />
+如果有需要<code>manifest.json</code>的话试着把最后的文件名改成这个，可能会报“Couldn’t find the requested file”。如果报的话就再换一个搜索结果看看。</p>
+]]></content>
+      <categories>
+        <category>Moving-Away-from-Flash</category>
+        <category>Github</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CMD命令行Chrome自动网页截图到文件，截图完后自动退出浏览器</title>
+    <url>/cms//archivers/59.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>英文内容来自：<a href="https://developers.google.com/web/updates/2017/04/headless-chrome?hl=en#screenshots" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Eric%20Bidelman-Getting%20Started%20with%20Headless%20Chrome-brightgreen" alt="Eric Bidelman-Getting Started with Headless Chrome" /></a></p>
+<h1 id="taking-screenshots-截图"><a class="markdownIt-Anchor" href="#taking-screenshots-截图"></a> Taking screenshots 截图</h1>
+<p>To capture a screenshot of a page, use the <code>--screenshot</code>flag:<br />
+要对页面截图，只需使用<code>--screenshot</code>参数即可：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chrome --headless --<span class="built_in">disable</span>-gpu --screenshot https://www.baidu.com/</span><br><span class="line"></span><br><span class="line"><span class="comment"># Size of a standard letterhead. 标准的信件比例</span></span><br><span class="line">chrome --headless --<span class="built_in">disable</span>-gpu --screenshot --window-size=1280,1696 https://www.baidu.com/</span><br><span class="line"></span><br><span class="line"><span class="comment"># Nexus 5x</span></span><br><span class="line">chrome --headless --<span class="built_in">disable</span>-gpu --screenshot --window-size=412,732 https://www.baidu.com/</span><br></pre></td></tr></table></figure>
+<p>Running with <code>--screenshot</code>will produce a file named <code>screenshot.png</code>in the current working directory. If you’re looking for full page screenshots, things are a tad more involved. There’s a great blog post from David Schnurr that has you covered. Check out <a href="https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a" target="_blank" rel="noopener">Using headless Chrome as an automated screenshot tool</a>.<br />
+使用<code>--screenshot</code>参数会在当前目录生成一个名为<code>screenshot.png</code>的文件（编注：截图完成后浏览器会自动退出）。如果需要对整个页面截图的话还需要再加点东西。这里有一个David Schnurr写的博文<a href="https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a" target="_blank" rel="noopener">《使用无界面Chrome作为自动截图工具》</a>可以参考一下。</p>
+<hr />
+<p>编注：把鄙人之前那篇文章 <a href="https://blog.csdn.net/qq_35977139/article/details/111552903" target="_blank" rel="noopener">提供一个在Selenium截网页长图的实现</a> 稍微改动一下就可以了，之前那篇文章是接入现有浏览器，只需要改成无界面模式（headless）并且改成启动新的浏览器（<code>chrome_options</code>里面不设置<code>debugger_address</code>），网页截图完成后加一个<code>driver.quit()</code>就可以自动关闭浏览器。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"><span class="keyword">from</span> base64 <span class="keyword">import</span> b64decode</span><br><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> argv</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改成启动新的浏览器，使用headless无界面浏览器模式</span></span><br><span class="line">options = webdriver.ChromeOptions() </span><br><span class="line"><span class="comment"># 增加无界面选项</span></span><br><span class="line">chrome_options.add_argument(<span class="string">'--headless'</span>) </span><br><span class="line"><span class="comment"># 如果不加这个选项，有时定位会出现问题</span></span><br><span class="line">chrome_options.add_argument(<span class="string">'--disable-gpu'</span>) </span><br><span class="line"><span class="comment"># 启动浏览器</span></span><br><span class="line">driver = webdriver.Chrome(options=options)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 访问页面，这里可以改成获取启动参数 argv[1]</span></span><br><span class="line">driver.get(<span class="string">"https://www.baidu.com"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取出页面的宽度和高度</span></span><br><span class="line">page_width = driver.execute_script(<span class="string">"return document.body.scrollWidth"</span>)</span><br><span class="line">page_height = driver.execute_script(<span class="string">"return document.body.scrollHeight"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 直接开启设备模拟，不要再手动开devtools了，否则截图截的是devtools的界面！</span></span><br><span class="line">driver.execute_cdp_cmd(<span class="string">'Emulation.setDeviceMetricsOverride'</span>, &#123;<span class="string">'mobile'</span>:<span class="literal">False</span>, <span class="string">'width'</span>:page_width, <span class="string">'height'</span>:page_height, <span class="string">'deviceScaleFactor'</span>: <span class="number">1</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行截图</span></span><br><span class="line">res = driver.execute_cdp_cmd(<span class="string">'Page.captureScreenshot'</span>, &#123; <span class="string">'fromSurface'</span>: <span class="literal">True</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回的base64内容写入PNG文件</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'screenshot.png'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    img = b64decode(res[<span class="string">'data'</span>])</span><br><span class="line">    f.write(img)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 等待截图完成</span></span><br><span class="line">sleep(<span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭设备模拟</span></span><br><span class="line">driver.execute_cdp_cmd(<span class="string">'Emulation.clearDeviceMetricsOverride'</span>, &#123;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭浏览器</span></span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Other</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>B站 屏蔽空格弹幕</title>
+    <url>/cms//archivers/60.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>每次视频一点开顶部一堆空格分隔的弹幕，与视频毫不相干。恨死了，鄙人今天非把这些弹幕屏蔽了。😒<br />
+手机端：全屏播放，弹幕设置图标，屏蔽管理，然后输入<code>/\x20/</code>然后添加即可。<br />
+电脑端：展开弹幕列表，点击三个点的按钮，选择屏蔽设定，然后输入<code>/\x20/</code>然后添加即可。</p>
+]]></content>
+      <categories>
+        <category>Webapp</category>
+      </categories>
+  </entry>
+  <entry>
     <title>手把手教学：使用油猴脚本对CCTV央视网启用HTML5播放器</title>
     <url>/cms//archivers/61.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Flash Player明天就会阻止加载Flash内容。但是CCTV也仅仅是把新出的视频启用了H5播放器，之前的视频仍然需要Flash插件才能播放。很多人说装一个油猴脚本，可是问题是，不是所有人都玩得转这个油猴脚本的。这里提供一个比较详细的说明来阐释安装过程。</p>
@@ -1354,23 +1411,6 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
       </categories>
   </entry>
   <entry>
-    <title>CMD命令行Chrome自动网页截图到文件，截图完后自动退出浏览器</title>
-    <url>/cms//archivers/59.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>英文内容来自：<a href="https://developers.google.com/web/updates/2017/04/headless-chrome?hl=en#screenshots" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Eric%20Bidelman-Getting%20Started%20with%20Headless%20Chrome-brightgreen" alt="Eric Bidelman-Getting Started with Headless Chrome" /></a></p>
-<h1 id="taking-screenshots-截图"><a class="markdownIt-Anchor" href="#taking-screenshots-截图"></a> Taking screenshots 截图</h1>
-<p>To capture a screenshot of a page, use the <code>--screenshot</code>flag:<br />
-要对页面截图，只需使用<code>--screenshot</code>参数即可：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chrome --headless --<span class="built_in">disable</span>-gpu --screenshot https://www.baidu.com/</span><br><span class="line"></span><br><span class="line"><span class="comment"># Size of a standard letterhead. 标准的信件比例</span></span><br><span class="line">chrome --headless --<span class="built_in">disable</span>-gpu --screenshot --window-size=1280,1696 https://www.baidu.com/</span><br><span class="line"></span><br><span class="line"><span class="comment"># Nexus 5x</span></span><br><span class="line">chrome --headless --<span class="built_in">disable</span>-gpu --screenshot --window-size=412,732 https://www.baidu.com/</span><br></pre></td></tr></table></figure>
-<p>Running with <code>--screenshot</code>will produce a file named <code>screenshot.png</code>in the current working directory. If you’re looking for full page screenshots, things are a tad more involved. There’s a great blog post from David Schnurr that has you covered. Check out <a href="https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a" target="_blank" rel="noopener">Using headless Chrome as an automated screenshot tool</a>.<br />
-使用<code>--screenshot</code>参数会在当前目录生成一个名为<code>screenshot.png</code>的文件（编注：截图完成后浏览器会自动退出）。如果需要对整个页面截图的话还需要再加点东西。这里有一个David Schnurr写的博文<a href="https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a" target="_blank" rel="noopener">《使用无界面Chrome作为自动截图工具》</a>可以参考一下。</p>
-<hr />
-<p>编注：把鄙人之前那篇文章 <a href="https://blog.csdn.net/qq_35977139/article/details/111552903" target="_blank" rel="noopener">提供一个在Selenium截网页长图的实现</a> 稍微改动一下就可以了，之前那篇文章是接入现有浏览器，只需要改成无界面模式（headless）并且改成启动新的浏览器（<code>chrome_options</code>里面不设置<code>debugger_address</code>），网页截图完成后加一个<code>driver.quit()</code>就可以自动关闭浏览器。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> sleep</span><br><span class="line"><span class="keyword">from</span> base64 <span class="keyword">import</span> b64decode</span><br><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> argv</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改成启动新的浏览器，使用headless无界面浏览器模式</span></span><br><span class="line">options = webdriver.ChromeOptions() </span><br><span class="line"><span class="comment"># 增加无界面选项</span></span><br><span class="line">chrome_options.add_argument(<span class="string">'--headless'</span>) </span><br><span class="line"><span class="comment"># 如果不加这个选项，有时定位会出现问题</span></span><br><span class="line">chrome_options.add_argument(<span class="string">'--disable-gpu'</span>) </span><br><span class="line"><span class="comment"># 启动浏览器</span></span><br><span class="line">driver = webdriver.Chrome(options=options)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 访问页面，这里可以改成获取启动参数 argv[1]</span></span><br><span class="line">driver.get(<span class="string">"https://www.baidu.com"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 取出页面的宽度和高度</span></span><br><span class="line">page_width = driver.execute_script(<span class="string">"return document.body.scrollWidth"</span>)</span><br><span class="line">page_height = driver.execute_script(<span class="string">"return document.body.scrollHeight"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 直接开启设备模拟，不要再手动开devtools了，否则截图截的是devtools的界面！</span></span><br><span class="line">driver.execute_cdp_cmd(<span class="string">'Emulation.setDeviceMetricsOverride'</span>, &#123;<span class="string">'mobile'</span>:<span class="literal">False</span>, <span class="string">'width'</span>:page_width, <span class="string">'height'</span>:page_height, <span class="string">'deviceScaleFactor'</span>: <span class="number">1</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行截图</span></span><br><span class="line">res = driver.execute_cdp_cmd(<span class="string">'Page.captureScreenshot'</span>, &#123; <span class="string">'fromSurface'</span>: <span class="literal">True</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 返回的base64内容写入PNG文件</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'screenshot.png'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    img = b64decode(res[<span class="string">'data'</span>])</span><br><span class="line">    f.write(img)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 等待截图完成</span></span><br><span class="line">sleep(<span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭设备模拟</span></span><br><span class="line">driver.execute_cdp_cmd(<span class="string">'Emulation.clearDeviceMetricsOverride'</span>, &#123;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭浏览器</span></span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Other</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Edge、Chrome 1月12日之后继续使用Flash的方法（超级专业，高能预警）</title>
     <url>/cms//archivers/63.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"><a class="markdownIt-Anchor" href="#flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"></a> Flash已经停止维护了，大家能不用Flash就尽量不要用Flash，停止维护之后此组件会非常不安全！</h1>
@@ -1408,18 +1448,16 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
       </categories>
   </entry>
   <entry>
-    <title>根据之前文章整理的在2021年继续使用Flash Player的方法【重新整理】</title>
-    <url>/cms//archivers/68.html</url>
+    <title>AX版Flash 1月12日之后继续使用Flash的方法</title>
+    <url>/cms//archivers/65.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"><a class="markdownIt-Anchor" href="#flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"></a> Flash已经停止维护了，大家能不用Flash就尽量不要用Flash，停止维护之后此组件会非常不安全！</h1>
-<hr />
-<p>目前针对国内2021年继续使用Flash Player的方法也已经基本成熟。这里重新做一个汇总。</p>
-<ol>
-<li>Edge、Chrome浏览器提示“Adobe Flash Player已不再受支持”：Edge和Chrome的正式版都已经更新到88版本以上，已经原生不支持Flash了。如果仍然有需要使用Flash的特殊需求 <strong>应换用绿色便携版的Edge或Chrome——网传已经有绿色版的Edge出现了，但是Edge和Chrome绿色版都是一定要使用版本小于不等于88的。或者也可以换用国产浏览器——国产浏览器大都集成Flash Player。</strong></li>
-<li>一些客户端程序显示了一个“fi”图标：Flash已经在1月12日自毁了，32.0.0.371是最后一个没有加定时自毁的版本。<strong>需要将<code>C:\Windows\System32\Macromed\Flash\Flash.ocx</code>以及<code>C:\Windows\SysWOW64\Macromed\Flash\Flash.ocx</code>这两个文件里面的十六进制内容<code>3E6F7742</code>的最后的<code>42</code>改成更大的数值，例如<code>72</code>或者<code>7F</code>。可以使用Ultra Edit或者WinHex来修改，但是需要注意必须先把这两个文件的权限改掉。 详细操作可以参考<a href="63.html">Edge、Chrome 1月12日之后继续使用Flash的方法（超级专业，高能预警）</a>。</strong></li>
-<li>一些客户端无法打开，或者加载到Flash就闪退或提示停止工作：这是因为电脑已经安装了“移除Flash Player的系统更新”（若为手动安装则补丁编号为KB4577586），导致Flash组件已经不在电脑上。 <strong><a href="https://www.cr173.com/soft/1311482.html" target="_blank" rel="noopener">西西软件园已将吾爱破解论坛上的Flash破解补丁整合打包</a>，其中的“Flash恢复包”正是针对此系统更新来恢复Flash组件的。注意那个BAT应该右键以管理员身份运行。</strong> 里面的OCX控件是32.0.0.445版本的，并且已经修改掉了自毁的定时器（也是通过最后的<code>42</code>字节改成<code>72</code>），<strong>注意此恢复包仅适用于安装了“移除Flash的系统更新”的机器，未安装此更新的机器不要安装，否则会出现无法恢复的异常情况。</strong></li>
-<li>Firefox看不到Flash内容：Firefox已经更新到85版本以上，已经完全停止支持Flash了。若有需要使用Flash则<strong>需要使用旧版Firefox来使用Flash内容。Firefox也会自动更新，建议使用开发者版来操作。</strong></li>
-<li>IE浏览器的Flash内容看不到：这是因为电脑已经安装了“移除Flash Player的系统更新”（若为手动安装则补丁编号为KB4577586），导致Flash组件已经不在电脑上。<strong>参考第三条。</strong></li>
-</ol>
+<p>稍微简化了一下，整了一个BAT加Node.js的脚本。需要把BAT、<code>demo32.js</code>、<code>demo64.js</code>、和<code>node.exe</code>（Node.js的可执行文件）放进同一目录。然后右键BAT文件以管理员身份运行。</p>
+<h1 id="bat文件"><a class="markdownIt-Anchor" href="#bat文件"></a> BAT文件：</h1>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">net</span>.exe session <span class="number">1</span>&gt;<span class="built_in">NUL</span> <span class="number">2</span>&gt;<span class="built_in">NUL</span> &amp;&amp; (</span><br><span class="line">    <span class="keyword">goto</span> as_admin</span><br><span class="line">) || (</span><br><span class="line">    <span class="keyword">goto</span> not_admin</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:as_admin</span><br><span class="line">	<span class="built_in">title</span> 一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">color</span> <span class="number">09</span></span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>      一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">echo</span>                       作者：佚名</span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">echo</span>                    按任意键开始修改！</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">pause</span></span><br><span class="line">	<span class="built_in">echo</span> 开始修改Flash.ocx所有者到Administrators</span><br><span class="line">	TAKEOWN /F <span class="variable">%SystemRoot%</span>\system32\Macromed\Flash\Flash.ocx /a</span><br><span class="line">	TAKEOWN /F <span class="variable">%SystemRoot%</span>\sysWOW64\Macromed\Flash\Flash.ocx /a</span><br><span class="line">	<span class="built_in">echo</span> 开始修改Flash.ocx权限</span><br><span class="line">	ICACLS <span class="variable">%SystemRoot%</span>\system32\Macromed\Flash\Flash.ocx /grant Administrators:F</span><br><span class="line">	ICACLS <span class="variable">%SystemRoot%</span>\sysWOW64\Macromed\Flash\Flash.ocx /grant Administrators:F</span><br><span class="line">	%~dp0\node.exe %~dp0\demo32.js</span><br><span class="line">	%~dp0\node.exe %~dp0\demo64.js</span><br><span class="line">	<span class="built_in">echo</span> 程序结束</span><br><span class="line">	<span class="keyword">goto</span> end</span><br><span class="line"></span><br><span class="line">:not_admin	</span><br><span class="line">	<span class="built_in">title</span> 一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">color</span> <span class="number">09</span></span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>      一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">echo</span>                       作者：佚名</span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">echo</span>    错误：未得到管理员权限，请右键以管理员身份运行！</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line"></span><br><span class="line">:end</span><br><span class="line">	<span class="built_in">pause</span></span><br><span class="line">	@<span class="built_in">echo</span> on</span><br></pre></td></tr></table></figure>
+<h1 id="demo32js文件"><a class="markdownIt-Anchor" href="#demo32js文件"></a> <code>demo32.js</code>文件：</h1>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>) ;</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>) ;</span><br><span class="line"><span class="keyword">var</span> filePath = path.resolve(<span class="string">"C:/Windows/System32/Macromed/Flash/Flash.ocx"</span>);</span><br><span class="line"></span><br><span class="line">fs.open(filePath, <span class="string">'r'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, fd</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (error) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[31m打开文件错误！没有找到文件或者没有权限，可能已经安装了移除Flash的系统更新\u001b[0m"</span>);</span><br><span class="line">		</span><br><span class="line">		process.exit();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">let</span> size = fs.statSync(filePath).size;</span><br><span class="line">	<span class="keyword">let</span> buf = Buffer.alloc(size);</span><br><span class="line">	fs.read(fd, buf, <span class="number">0</span>, size, <span class="number">0</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, data, buffer</span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件路径："</span> + filePath + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件长度："</span> + buffer.length + <span class="string">"\u001b[0m"</span>) ;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> sourceBytes = [<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x40</span>, <span class="number">0x46</span>, <span class="number">0x3E</span>, <span class="number">0x6F</span>, <span class="number">0x77</span>, <span class="number">0x42</span>];</span><br><span class="line">		<span class="keyword">var</span> isFound = <span class="literal">false</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buffer.length - <span class="number">8</span> &amp;&amp; !isFound; i++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; sourceBytes.length; j++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] != sourceBytes[j]) <span class="keyword">break</span>;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] == sourceBytes[j] &amp;&amp; j == sourceBytes.length - <span class="number">1</span>) isFound = <span class="literal">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"越界！位置："</span> + (i+j));</span><br><span class="line">			<span class="keyword">throw</span>(err);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (i == size - <span class="number">8</span>) &#123;</span><br><span class="line">			<span class="built_in">console</span>.error(<span class="string">"\u001b[31m文件找到了，但是没找到定时自毁的代码！或者已经修改过！\u001b[0m"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"\u001b[37m已找到定时自毁的代码："</span> + (--i) + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">			buffer[i+<span class="number">7</span>] = <span class="number">0x72</span>;</span><br><span class="line">			fs.close(fd, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">				fs.writeFile(filePath, buffer, &#123;<span class="attr">encoding</span>: <span class="string">"ascii"</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">if</span> (err) &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[31m写入失败！错误信息："</span> + err + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[32m"</span> + <span class="string">"写入成功！已去除自毁定时器，现在可以使用AX版Flash了。"</span> + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="demo64js文件"><a class="markdownIt-Anchor" href="#demo64js文件"></a> <code>demo64.js</code>文件：</h1>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>) ;</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>) ;</span><br><span class="line"><span class="keyword">var</span> filePath = path.resolve(<span class="string">"C:/Windows/SysWOW64/Macromed/Flash/Flash.ocx"</span>);</span><br><span class="line"></span><br><span class="line">fs.open(filePath, <span class="string">'r'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, fd</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (error) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[31m打开文件错误！没有找到文件或者没有权限，可能已经安装了移除Flash的系统更新\u001b[0m"</span>);</span><br><span class="line">		</span><br><span class="line">		process.exit();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">let</span> size = fs.statSync(filePath).size;</span><br><span class="line">	<span class="keyword">let</span> buf = Buffer.alloc(size);</span><br><span class="line">	fs.read(fd, buf, <span class="number">0</span>, size, <span class="number">0</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, data, buffer</span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件路径："</span> + filePath + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件长度："</span> + buffer.length + <span class="string">"\u001b[0m"</span>) ;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> sourceBytes = [<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x40</span>, <span class="number">0x46</span>, <span class="number">0x3E</span>, <span class="number">0x6F</span>, <span class="number">0x77</span>, <span class="number">0x42</span>];</span><br><span class="line">		<span class="keyword">var</span> isFound = <span class="literal">false</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buffer.length - <span class="number">8</span> &amp;&amp; !isFound; i++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; sourceBytes.length; j++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] != sourceBytes[j]) <span class="keyword">break</span>;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] == sourceBytes[j] &amp;&amp; j == sourceBytes.length - <span class="number">1</span>) isFound = <span class="literal">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"越界！位置："</span> + (i+j));</span><br><span class="line">			<span class="keyword">throw</span>(err);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (i == size - <span class="number">8</span>) &#123;</span><br><span class="line">			<span class="built_in">console</span>.error(<span class="string">"\u001b[31m文件找到了，但是没找到定时自毁的代码！或者已经修改过！\u001b[0m"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"\u001b[37m已找到定时自毁的代码："</span> + (--i) + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">			buffer[i+<span class="number">7</span>] = <span class="number">0x72</span>;</span><br><span class="line">			fs.close(fd, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">				fs.writeFile(filePath, buffer, &#123;<span class="attr">encoding</span>: <span class="string">"ascii"</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">if</span> (err) &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[31m写入失败！错误信息："</span> + err + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[32m"</span> + <span class="string">"写入成功！已去除自毁定时器，现在可以使用AX版Flash了。"</span> + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Moving-Away-from-Flash</category>
@@ -1442,44 +1480,6 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
 ]]></content>
       <categories>
         <category>Github</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Github 添加一个实时显示StackOverflow分数Reputation的徽章</title>
-    <url>/cms//archivers/69.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我們采用XPath强行解析StackOverflow用户主页的HTML节点来获取用户的Reputation数字。<br />
-Shields.io提供了后端XPath解析网络上XML内容并输出到徽章的接口：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;img.shields.io&#x2F;badge&#x2F;dynamic&#x2F;xml?url&#x3D;&lt;URL&gt;&amp;label&#x3D;&lt;LABEL&gt;&amp;query&#x3D;&lt;&#x2F;&#x2F;data&#x2F;subdata&gt;&amp;color&#x3D;&lt;COLOR&gt;&amp;prefix&#x3D;&lt;PREFIX&gt;&amp;suffix&#x3D;&lt;SUFFIX&gt;</span><br></pre></td></tr></table></figure>
-<p>经过反复调试，最终找出了获取StackOverflow用户的分数Reputation的XPath：<code>/html/body//div[@class='grid--cell fs-title fc-dark']</code>。将这个XPath拼接到Shields.io的URL里面，就可以获取指定用户的分数了。</p>
-<p>这段URL可以根据需要使用指定的样式来显示需要的内容。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;img.shields.io&#x2F;badge&#x2F;dynamic&#x2F;xml?label&#x3D;StackOverflow%20%28Inactive%29&amp;query&#x3D;%2Fhtml%2Fbody%2F%2Fdiv%5B%40class%3D%27grid--cell%20fs-title%20fc-dark%27%5D&amp;url&#x3D;改成StackOverflow用户主页的网址注意转义一次&amp;longCache&#x3D;true&amp;style&#x3D;选择显示的样式&amp;suffix&#x3D;改成数字后面需要显示的后缀&amp;logo&#x3D;stackoverflow&amp;labelColor&#x3D;改成左侧背景的颜色&amp;logoColor&#x3D;改成LOGO图案的颜色&amp;color&#x3D;改成右侧背景的颜色</span><br></pre></td></tr></table></figure>
-<p>可以选择的样式有：<code>plastic</code>, <code>flat</code>, <code>flat-square</code>, <code>for-the-badge</code>, <code>social</code>。</p>
-<p>用MarkDown表示出来就是</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">![</span>](<span class="link">https://img.shields.io/badge/dynamic/xml?label=StackOverflow%20%28Inactive%29&amp;query=%2Fhtml%2Fbody%2F%2Fdiv%5B%40class%3D%27grid--cell%20fs-title%20fc-dark%27%5D&amp;url=改成StackOverflow用户主页的网址注意转义一次&amp;longCache=true&amp;style=选择显示的样式&amp;suffix=改成数字后面需要显示的后缀&amp;logo=stackoverflow&amp;labelColor=改成左侧背景的颜色&amp;logoColor=改成LOGO图案的颜色&amp;color=改成右侧背景的颜色</span>)](<span class="link">要链接的StackOverflow用户主页的地址</span>)</span><br></pre></td></tr></table></figure>
-<p>例如，本示例的写法是</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">![</span>](<span class="link">https://img.shields.io/badge/dynamic/xml?label=StackOverflow%20%28Inactive%29&amp;query=%2Fhtml%2Fbody%2F%2Fdiv%5B%40class%3D%27grid--cell%20fs-title%20fc-dark%27%5D&amp;url=https%3A%2F%2Fstackoverflow.com%2Fusers%2F14547429%2Fno-5972&amp;longCache=true&amp;style=flat-square&amp;suffix=%20Reputations&amp;logo=stackoverflow&amp;labelColor=f48024&amp;logoColor=white&amp;color=F7A05B</span>)](<span class="link">https://stackoverflow.com/users/14547429/no-5972</span>)</span><br></pre></td></tr></table></figure>
-<p>写到Github Profile的效果如图所示。<br />
-<img src="https://img-blog.csdnimg.cn/20210204162052911.jpeg#pic_center" alt="在这里插入图片描述" /></p>
-<p>类似的，其他不能使用JSON方式获取数字的平台也可以通过这种XPath的方式来读取用户或项目主页的DOM节点来获取需要显示的动态内容。这里就不再赘述了。</p>
-]]></content>
-      <categories>
-        <category>Github</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>AX版Flash 1月12日之后继续使用Flash的方法</title>
-    <url>/cms//archivers/65.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"><a class="markdownIt-Anchor" href="#flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"></a> Flash已经停止维护了，大家能不用Flash就尽量不要用Flash，停止维护之后此组件会非常不安全！</h1>
-<p>稍微简化了一下，整了一个BAT加Node.js的脚本。需要把BAT、<code>demo32.js</code>、<code>demo64.js</code>、和<code>node.exe</code>（Node.js的可执行文件）放进同一目录。然后右键BAT文件以管理员身份运行。</p>
-<h1 id="bat文件"><a class="markdownIt-Anchor" href="#bat文件"></a> BAT文件：</h1>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">net</span>.exe session <span class="number">1</span>&gt;<span class="built_in">NUL</span> <span class="number">2</span>&gt;<span class="built_in">NUL</span> &amp;&amp; (</span><br><span class="line">    <span class="keyword">goto</span> as_admin</span><br><span class="line">) || (</span><br><span class="line">    <span class="keyword">goto</span> not_admin</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:as_admin</span><br><span class="line">	<span class="built_in">title</span> 一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">color</span> <span class="number">09</span></span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>      一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">echo</span>                       作者：佚名</span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">echo</span>                    按任意键开始修改！</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">pause</span></span><br><span class="line">	<span class="built_in">echo</span> 开始修改Flash.ocx所有者到Administrators</span><br><span class="line">	TAKEOWN /F <span class="variable">%SystemRoot%</span>\system32\Macromed\Flash\Flash.ocx /a</span><br><span class="line">	TAKEOWN /F <span class="variable">%SystemRoot%</span>\sysWOW64\Macromed\Flash\Flash.ocx /a</span><br><span class="line">	<span class="built_in">echo</span> 开始修改Flash.ocx权限</span><br><span class="line">	ICACLS <span class="variable">%SystemRoot%</span>\system32\Macromed\Flash\Flash.ocx /grant Administrators:F</span><br><span class="line">	ICACLS <span class="variable">%SystemRoot%</span>\sysWOW64\Macromed\Flash\Flash.ocx /grant Administrators:F</span><br><span class="line">	%~dp0\node.exe %~dp0\demo32.js</span><br><span class="line">	%~dp0\node.exe %~dp0\demo64.js</span><br><span class="line">	<span class="built_in">echo</span> 程序结束</span><br><span class="line">	<span class="keyword">goto</span> end</span><br><span class="line"></span><br><span class="line">:not_admin	</span><br><span class="line">	<span class="built_in">title</span> 一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">color</span> <span class="number">09</span></span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>      一键解决Flash <span class="number">1</span>月<span class="number">12</span>日定时自毁的问题 - AX版</span><br><span class="line">	<span class="built_in">echo</span>                       作者：佚名</span><br><span class="line">	<span class="built_in">echo</span> ====================================================</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line">	<span class="built_in">echo</span>    错误：未得到管理员权限，请右键以管理员身份运行！</span><br><span class="line">	<span class="built_in">echo</span>.</span><br><span class="line"></span><br><span class="line">:end</span><br><span class="line">	<span class="built_in">pause</span></span><br><span class="line">	@<span class="built_in">echo</span> on</span><br></pre></td></tr></table></figure>
-<h1 id="demo32js文件"><a class="markdownIt-Anchor" href="#demo32js文件"></a> <code>demo32.js</code>文件：</h1>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>) ;</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>) ;</span><br><span class="line"><span class="keyword">var</span> filePath = path.resolve(<span class="string">"C:/Windows/System32/Macromed/Flash/Flash.ocx"</span>);</span><br><span class="line"></span><br><span class="line">fs.open(filePath, <span class="string">'r'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, fd</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (error) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[31m打开文件错误！没有找到文件或者没有权限，可能已经安装了移除Flash的系统更新\u001b[0m"</span>);</span><br><span class="line">		</span><br><span class="line">		process.exit();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">let</span> size = fs.statSync(filePath).size;</span><br><span class="line">	<span class="keyword">let</span> buf = Buffer.alloc(size);</span><br><span class="line">	fs.read(fd, buf, <span class="number">0</span>, size, <span class="number">0</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, data, buffer</span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件路径："</span> + filePath + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件长度："</span> + buffer.length + <span class="string">"\u001b[0m"</span>) ;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> sourceBytes = [<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x40</span>, <span class="number">0x46</span>, <span class="number">0x3E</span>, <span class="number">0x6F</span>, <span class="number">0x77</span>, <span class="number">0x42</span>];</span><br><span class="line">		<span class="keyword">var</span> isFound = <span class="literal">false</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buffer.length - <span class="number">8</span> &amp;&amp; !isFound; i++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; sourceBytes.length; j++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] != sourceBytes[j]) <span class="keyword">break</span>;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] == sourceBytes[j] &amp;&amp; j == sourceBytes.length - <span class="number">1</span>) isFound = <span class="literal">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"越界！位置："</span> + (i+j));</span><br><span class="line">			<span class="keyword">throw</span>(err);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (i == size - <span class="number">8</span>) &#123;</span><br><span class="line">			<span class="built_in">console</span>.error(<span class="string">"\u001b[31m文件找到了，但是没找到定时自毁的代码！或者已经修改过！\u001b[0m"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"\u001b[37m已找到定时自毁的代码："</span> + (--i) + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">			buffer[i+<span class="number">7</span>] = <span class="number">0x72</span>;</span><br><span class="line">			fs.close(fd, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">				fs.writeFile(filePath, buffer, &#123;<span class="attr">encoding</span>: <span class="string">"ascii"</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">if</span> (err) &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[31m写入失败！错误信息："</span> + err + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[32m"</span> + <span class="string">"写入成功！已去除自毁定时器，现在可以使用AX版Flash了。"</span> + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h1 id="demo64js文件"><a class="markdownIt-Anchor" href="#demo64js文件"></a> <code>demo64.js</code>文件：</h1>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>) ;</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>) ;</span><br><span class="line"><span class="keyword">var</span> filePath = path.resolve(<span class="string">"C:/Windows/SysWOW64/Macromed/Flash/Flash.ocx"</span>);</span><br><span class="line"></span><br><span class="line">fs.open(filePath, <span class="string">'r'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, fd</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (error) &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[31m打开文件错误！没有找到文件或者没有权限，可能已经安装了移除Flash的系统更新\u001b[0m"</span>);</span><br><span class="line">		</span><br><span class="line">		process.exit();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">let</span> size = fs.statSync(filePath).size;</span><br><span class="line">	<span class="keyword">let</span> buf = Buffer.alloc(size);</span><br><span class="line">	fs.read(fd, buf, <span class="number">0</span>, size, <span class="number">0</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, data, buffer</span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件路径："</span> + filePath + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">"\u001b[37m文件长度："</span> + buffer.length + <span class="string">"\u001b[0m"</span>) ;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">var</span> sourceBytes = [<span class="number">0x00</span>, <span class="number">0x00</span>, <span class="number">0x40</span>, <span class="number">0x46</span>, <span class="number">0x3E</span>, <span class="number">0x6F</span>, <span class="number">0x77</span>, <span class="number">0x42</span>];</span><br><span class="line">		<span class="keyword">var</span> isFound = <span class="literal">false</span>;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; buffer.length - <span class="number">8</span> &amp;&amp; !isFound; i++) &#123;</span><br><span class="line">				<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; sourceBytes.length; j++) &#123;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] != sourceBytes[j]) <span class="keyword">break</span>;</span><br><span class="line">					<span class="keyword">if</span> (buffer[i+j] == sourceBytes[j] &amp;&amp; j == sourceBytes.length - <span class="number">1</span>) isFound = <span class="literal">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"越界！位置："</span> + (i+j));</span><br><span class="line">			<span class="keyword">throw</span>(err);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (i == size - <span class="number">8</span>) &#123;</span><br><span class="line">			<span class="built_in">console</span>.error(<span class="string">"\u001b[31m文件找到了，但是没找到定时自毁的代码！或者已经修改过！\u001b[0m"</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"\u001b[37m已找到定时自毁的代码："</span> + (--i) + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">			buffer[i+<span class="number">7</span>] = <span class="number">0x72</span>;</span><br><span class="line">			fs.close(fd, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">				fs.writeFile(filePath, buffer, &#123;<span class="attr">encoding</span>: <span class="string">"ascii"</span>&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">if</span> (err) &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[31m写入失败！错误信息："</span> + err + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">						<span class="built_in">console</span>.log(<span class="string">"\u001b[32m"</span> + <span class="string">"写入成功！已去除自毁定时器，现在可以使用AX版Flash了。"</span> + <span class="string">"\u001b[0m"</span>);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Moving-Away-from-Flash</category>
       </categories>
   </entry>
   <entry>
@@ -1539,6 +1539,24 @@ c124.7 8 235 61.7 331 161 31.3 33.3 59.7 72.7 85 118l7 13v35z'/></svg></span></s
       </categories>
   </entry>
   <entry>
+    <title>根据之前文章整理的在2021年继续使用Flash Player的方法【重新整理】</title>
+    <url>/cms//archivers/68.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"><a class="markdownIt-Anchor" href="#flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"></a> Flash已经停止维护了，大家能不用Flash就尽量不要用Flash，停止维护之后此组件会非常不安全！</h1>
+<hr />
+<p>目前针对国内2021年继续使用Flash Player的方法也已经基本成熟。这里重新做一个汇总。</p>
+<ol>
+<li>Edge、Chrome浏览器提示“Adobe Flash Player已不再受支持”，或者“不支持此插件”：Edge和Chrome的正式版都已经更新到88版本以上，已经原生不支持Flash了。如果仍然有需要使用Flash的特殊需求 <strong>应换用绿色便携版的Edge或Chrome——网传已经有绿色版的Edge出现了，但是Edge和Chrome绿色版都是一定要使用版本小于不等于88的。或者也可以换用国产浏览器——国产浏览器大都集成Flash Player。</strong></li>
+<li>一些客户端程序显示了一个“fi”图标：Flash已经在1月12日自毁了，32.0.0.371是最后一个没有加定时自毁的版本。<strong>需要将<code>C:\Windows\System32\Macromed\Flash\Flash.ocx</code>以及<code>C:\Windows\SysWOW64\Macromed\Flash\Flash.ocx</code>这两个文件里面的十六进制内容<code>3E6F7742</code>的最后的<code>42</code>改成更大的数值，例如<code>72</code>或者<code>7F</code>。可以使用Ultra Edit或者WinHex来修改，但是需要注意必须先把这两个文件的权限改掉。 详细操作可以参考<a href="63.html">Edge、Chrome 1月12日之后继续使用Flash的方法（超级专业，高能预警）</a>。</strong></li>
+<li>一些客户端无法打开，或者加载到Flash就闪退或提示停止工作：这是因为电脑已经安装了“移除Flash Player的系统更新”（若为手动安装则补丁编号为KB4577586），导致Flash组件已经不在电脑上。 <strong><a href="https://www.cr173.com/soft/1311482.html" target="_blank" rel="noopener">西西软件园已将吾爱破解论坛上的Flash破解补丁整合打包</a>，其中的“Flash恢复包”正是针对此系统更新来恢复Flash组件的。注意那个BAT应该右键以管理员身份运行。</strong> 里面的OCX控件是32.0.0.445版本的，并且已经修改掉了自毁的定时器（也是通过最后的<code>42</code>字节改成<code>72</code>），<strong>注意此恢复包仅适用于安装了“移除Flash的系统更新”的机器，未安装此更新的机器不要安装，否则会出现无法恢复的异常情况。</strong></li>
+<li>Firefox看不到Flash内容：Firefox已经更新到85版本以上，已经完全停止支持Flash了。若有需要使用Flash则<strong>需要使用旧版Firefox来使用Flash内容。Firefox也会自动更新，建议使用开发者版来操作。</strong></li>
+<li>IE浏览器的Flash内容看不到：这是因为电脑已经安装了“移除Flash Player的系统更新”（若为手动安装则补丁编号为KB4577586），导致Flash组件已经不在电脑上。<strong>参考第三条。</strong></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Moving-Away-from-Flash</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Hexo Gitee Pages 自动部署站点</title>
     <url>/cms//archivers/70.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>此博客站点使用了Github作为主站，又使用了Gitee作为镜像站。但是Gitee免费账户是不支持提交后自动部署的，所以有大佬开发了在Github上使用的动作：<code>gitee-pages-action</code>（<a href="https://github.com/yanglbme/gitee-pages-action" target="_blank" rel="noopener">点击查看</a>）。只要在某个仓库配置好这个动作就能在往这个仓库提交任何内容时自动让Gitee部署Gitee里面指定仓库的内容。</p>
@@ -1556,6 +1574,28 @@ c124.7 8 235 61.7 331 161 31.3 33.3 59.7 72.7 85 118l7 13v35z'/></svg></span></s
 ]]></content>
       <categories>
         <category>Web-Building</category>
+        <category>Github</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Github 添加一个实时显示StackOverflow分数Reputation的徽章</title>
+    <url>/cms//archivers/69.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我們采用XPath强行解析StackOverflow用户主页的HTML节点来获取用户的Reputation数字。<br />
+Shields.io提供了后端XPath解析网络上XML内容并输出到徽章的接口：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;img.shields.io&#x2F;badge&#x2F;dynamic&#x2F;xml?url&#x3D;&lt;URL&gt;&amp;label&#x3D;&lt;LABEL&gt;&amp;query&#x3D;&lt;&#x2F;&#x2F;data&#x2F;subdata&gt;&amp;color&#x3D;&lt;COLOR&gt;&amp;prefix&#x3D;&lt;PREFIX&gt;&amp;suffix&#x3D;&lt;SUFFIX&gt;</span><br></pre></td></tr></table></figure>
+<p>经过反复调试，最终找出了获取StackOverflow用户的分数Reputation的XPath：<code>/html/body//div[@class='grid--cell fs-title fc-dark']</code>。将这个XPath拼接到Shields.io的URL里面，就可以获取指定用户的分数了。</p>
+<p>这段URL可以根据需要使用指定的样式来显示需要的内容。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;img.shields.io&#x2F;badge&#x2F;dynamic&#x2F;xml?label&#x3D;StackOverflow%20%28Inactive%29&amp;query&#x3D;%2Fhtml%2Fbody%2F%2Fdiv%5B%40class%3D%27grid--cell%20fs-title%20fc-dark%27%5D&amp;url&#x3D;改成StackOverflow用户主页的网址注意转义一次&amp;longCache&#x3D;true&amp;style&#x3D;选择显示的样式&amp;suffix&#x3D;改成数字后面需要显示的后缀&amp;logo&#x3D;stackoverflow&amp;labelColor&#x3D;改成左侧背景的颜色&amp;logoColor&#x3D;改成LOGO图案的颜色&amp;color&#x3D;改成右侧背景的颜色</span><br></pre></td></tr></table></figure>
+<p>可以选择的样式有：<code>plastic</code>, <code>flat</code>, <code>flat-square</code>, <code>for-the-badge</code>, <code>social</code>。</p>
+<p>用MarkDown表示出来就是</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">![</span>](<span class="link">https://img.shields.io/badge/dynamic/xml?label=StackOverflow%20%28Inactive%29&amp;query=%2Fhtml%2Fbody%2F%2Fdiv%5B%40class%3D%27grid--cell%20fs-title%20fc-dark%27%5D&amp;url=改成StackOverflow用户主页的网址注意转义一次&amp;longCache=true&amp;style=选择显示的样式&amp;suffix=改成数字后面需要显示的后缀&amp;logo=stackoverflow&amp;labelColor=改成左侧背景的颜色&amp;logoColor=改成LOGO图案的颜色&amp;color=改成右侧背景的颜色</span>)](<span class="link">要链接的StackOverflow用户主页的地址</span>)</span><br></pre></td></tr></table></figure>
+<p>例如，本示例的写法是</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">![</span>](<span class="link">https://img.shields.io/badge/dynamic/xml?label=StackOverflow%20%28Inactive%29&amp;query=%2Fhtml%2Fbody%2F%2Fdiv%5B%40class%3D%27grid--cell%20fs-title%20fc-dark%27%5D&amp;url=https%3A%2F%2Fstackoverflow.com%2Fusers%2F14547429%2Fno-5972&amp;longCache=true&amp;style=flat-square&amp;suffix=%20Reputations&amp;logo=stackoverflow&amp;labelColor=f48024&amp;logoColor=white&amp;color=F7A05B</span>)](<span class="link">https://stackoverflow.com/users/14547429/no-5972</span>)</span><br></pre></td></tr></table></figure>
+<p>写到Github Profile的效果如图所示。<br />
+<img src="https://img-blog.csdnimg.cn/20210204162052911.jpeg#pic_center" alt="在这里插入图片描述" /></p>
+<p>类似的，其他不能使用JSON方式获取数字的平台也可以通过这种XPath的方式来读取用户或项目主页的DOM节点来获取需要显示的动态内容。这里就不再赘述了。</p>
+]]></content>
+      <categories>
         <category>Github</category>
       </categories>
   </entry>
@@ -1602,43 +1642,30 @@ c124.7 8 235 61.7 331 161 31.3 33.3 59.7 72.7 85 118l7 13v35z'/></svg></span></s
       </categories>
   </entry>
   <entry>
-    <title>提供一个Java SE程序打单个EXE包部署到不带JRE电脑运行的实现（有点复杂）</title>
-    <url>/cms//archivers/56.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>详细步骤：</p>
-<ol>
-<li>在IDE中打一个Runnable JAR。
-<ul>
-<li>Eclipse右键整个项目-Export-Java-Runnable JAR File，Library Handling前两个都可以，第三个比较麻烦不建议用。</li>
-<li>IDEA点击File-Project Structure-Artifacts，点击加号，JAR，From Modules and Dependencies，选中启动的那个模块，选择启动主类，选择Extract to the target JAR。然后点击Build-Build Artifacts，然后选中刚才添加的JAR即可。</li>
-</ul>
-</li>
-<li>将JRE目录拷贝一份出来，重命名为<code>jre</code>。</li>
-<li>使用exe4j把JAR包转换成EXE。
-<ul>
-<li>Project Type选择&quot;JAR in EXE mode&quot;</li>
-<li>Application Info是EXE属性附加信息的内容，以及生成EXE文件的位置。</li>
-<li>Executable Info的Executable Name是生成EXE文件的名字，Icon File可以用来指定生成EXE文件的图标。其他保持默认。</li>
-<li>Java Invocation里面的列表要添加第一步生成的JAR文件。</li>
-<li>JRE那一步的Search Sequence里面别的都不要，只设置一个Directory里面填<code>.\jre</code>。</li>
-<li>Splash Screen用来指定刚运行EXE时显示的Logo界面，可以不指定。</li>
-<li>Messages用来指定如果环境出错显示什么样的错误信息。默认是英文的提示，可以改成中文但是翻译量是比较大的。</li>
-</ul>
-</li>
-<li>把EXE文件和<code>jre</code>目录放在同一个目录。</li>
-<li>使用《单文件软件封装工具》（标题栏有QQ号，右下角状态栏显示压缩率的那个）把存放EXE和<code>jre</code>的目录打包成单个EXE文件。
-<ul>
-<li>选择程序目录，选择这个存放EXE和<code>jre</code>的目录。</li>
-<li>选择执行程序，选择这个EXE文件。</li>
-<li>选择保存路径，选择要导出单个EXE文件的位置。</li>
-<li>选择文件图标，可以指定单独的ICO图标，如果在exe4j中设置了图标也可以指定EXE文件。</li>
-<li>附加信息是EXE属性附加信息的内容，可以选择性设置。</li>
-<li>使用7z模式打包出来的EXE启动稍微快一些。</li>
-</ul>
-</li>
-</ol>
+    <title>利用GitHub Actions每天自动从Pixiv爬虫日推图片并存放到仓库</title>
+    <url>/cms//archivers/73.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>近期注意到有很多使用Python语言编写的爬虫，用来获取Pixiv日推的图片。这里也找了一个大佬开发的这个爬虫：<a href="https://blog.csdn.net/weixin_45826022/article/details/109406389" target="_blank" rel="noopener">https://blog.csdn.net/weixin_45826022/article/details/109406389 </a>，今天拿来放到Repl.it上跑了一下，效果还不错。</p>
+<p>很快联想到GitHub的Actions，如果能把这个爬虫部署到GitHub Actions上，就可以每天自动跑了，还能直接就把图片放到仓库上，直接拿美国GitHub的服务器来跑，也不用考虑网络连接的问题了。但是这个配置Actions的过程还是稍微有点复杂的，要分两个分支，一个用来展示代码，另一个用来存放爬取的图片。</p>
+<p>创建仓库以后，先创建一个分支，专门用来存放爬取的图片，这里假定命名为<code>runner</code>。然后在<code>main</code>分支把这个大佬写的爬虫文件添加，代码就不放了，就在开头那个链接里面的最后面，假定这里命名为<code>pa.py</code>。当然，受限于GitHub，当然不能像原文一样一下子搞500张图，这样对谁都不好，建议只取50张图为要。所以第32行</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">10</span> + <span class="number">1</span>):</span><br></pre></td></tr></table></figure>
+<p>应该改成</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">2</span>):</span><br></pre></td></tr></table></figure>
+<p>当然，考虑到各位画师的辛苦工作，起码把作品的ID也带过来吧，也是对各位画师的一个尊重。所以，从第18行</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = name.group(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>后面继续添加语句（第一行还是原来的）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name = name.group(<span class="number">1</span>)</span><br><span class="line">illust_id = re.search(<span class="string">'"illustId":"(.+?)"'</span>, response.text)</span><br><span class="line">illust_id = illust_id.group(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>原来的第28行</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">f = open(path + <span class="string">'%s.%s'</span> % (name, picture.group(<span class="number">1</span>)[<span class="number">-3</span>:]), <span class="string">'wb'</span>)</span><br></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">f = open(path + <span class="string">'%s_%s.%s'</span> % (illust_id, name, picture.group(<span class="number">1</span>)[<span class="number">-3</span>:]), <span class="string">'wb'</span>)</span><br></pre></td></tr></table></figure>
+<p>将这个<code>pa.py</code>文件在<code>runner</code>分支也添加。</p>
+<p>还是在<code>main</code>分支，创建<code>.github/workflows/xxx.yml</code>，随便起名一个YML文件。配置如下内容。注意把<code>with: ref:</code>配置要放图片的单独分支，<code>user.name</code>配置GitHub账号用户名，<code>user.email</code>配置GitHub登录邮箱，<code>git push -u origin runner</code>也配置成要放图片的单独分支。</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">"Pixiv Crawler"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 6 * * *'</span>  </span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">ACTIONS_ALLOW_UNSECURE_COMMANDS:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">job_1:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Python</span> <span class="string">Crawler</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">ref:</span> <span class="string">runner</span> <span class="comment"># 改成存放图片的分支</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Clear</span> <span class="string">Previous</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">rm</span> <span class="string">-f</span> <span class="string">--</span> <span class="string">*.jpg</span></span><br><span class="line">        <span class="string">rm</span> <span class="string">-f</span> <span class="string">--</span> <span class="string">*.png</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Python</span> <span class="string">environment</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-python@v1.1.1</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Dependence</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">pip</span> <span class="string">install</span> <span class="string">requests</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Run</span> <span class="string">pa.py</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">python</span> <span class="string">pa.py</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">list</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">ls</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">to</span> <span class="string">this</span> <span class="string">repo</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">git</span> <span class="string">config</span> <span class="string">--global</span> <span class="string">user.name</span> <span class="string">"No5972"</span> <span class="comment"># 改成Github账号用户名</span></span><br><span class="line">        <span class="string">git</span> <span class="string">config</span> <span class="string">--global</span> <span class="string">user.email</span> <span class="string">"wujiuqier@foxmail.com"</span> <span class="comment"># 改成GitHub账号的邮箱</span></span><br><span class="line">        <span class="string">git</span> <span class="string">add</span> <span class="string">"*.jpg"</span> <span class="string">"*.png"</span> <span class="string">&amp;&amp;</span> <span class="string">echo</span> <span class="string">"Git Added"</span> <span class="comment"># 参考: https://stackoverflow.com/questions/25083290/git-add-error-unknown-switch</span></span><br><span class="line">        <span class="string">git</span> <span class="string">commit</span> <span class="string">-m</span> <span class="string">'upload pa result'</span> <span class="string">&amp;&amp;</span> <span class="string">echo</span> <span class="string">"Git Committed"</span></span><br><span class="line">        <span class="string">git</span> <span class="string">push</span> <span class="string">-u</span> <span class="string">origin</span> <span class="string">runner</span> <span class="string">&amp;&amp;</span> <span class="string">echo</span> <span class="string">"Git Pushed Origin"</span> <span class="comment"># runner改成存放图片的分支</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Failure</span> <span class="string">test</span></span><br><span class="line">      <span class="attr">if:</span> <span class="string">failure()</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span> </span><br><span class="line">        <span class="string">ls</span></span><br><span class="line">        <span class="string">echo</span> <span class="string">"Error on running!"</span></span><br></pre></td></tr></table></figure>
+<p>这样配置好以后，每天下午两点，或者只要<code>main</code>分支有提交的内容，GitHub就会自动爬取一次Pixiv日推并存放到放置图片的分支去。之后就可以前往该分支查看了。那个CRON表达式也可以根据需要修改成其他的定时。<img src="https://img-blog.csdnimg.cn/20210221224507720.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTc3MTM5,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>代码可以前往 <a href="https://github.com/No5972/pixiv-github-action" target="_blank" rel="noopener">https://github.com/No5972/pixiv-github-action</a> 进行参考。</p>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>Github</category>
       </categories>
   </entry>
   <entry>
