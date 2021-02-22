@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.github.io/cms/confirm.html</loc>
+    
+    <lastmod>2021-02-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/archivers/4.html</loc>
     
     <lastmod>2021-02-22</lastmod>
@@ -110,13 +117,6 @@
     <loc>https://no5972.github.io/cms/archivers/8.html</loc>
     
     <lastmod>2021-02-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.github.io/cms/confirm.html</loc>
-    
-    <lastmod>2021-02-01</lastmod>
     
   </url>
   
@@ -629,13 +629,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
-    <lastmod>2021-02-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.github.io/cms/categories/Moving-Away-from-Flash/</loc>
     <lastmod>2021-02-22</lastmod>
     <changefreq>daily</changefreq>
@@ -650,6 +643,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
+    <lastmod>2021-02-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/categories/Server/</loc>
     <lastmod>2021-02-22</lastmod>
     <changefreq>daily</changefreq>
@@ -657,14 +657,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Github/</loc>
+    <loc>https://no5972.github.io/cms/categories/Other/</loc>
     <lastmod>2021-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Other/</loc>
+    <loc>https://no5972.github.io/cms/categories/Github/</loc>
     <lastmod>2021-02-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
