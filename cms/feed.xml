@@ -968,27 +968,6 @@
   </entry>
   
   <entry>
-    <title>java.math.BigDecimal保留指定位数的有效数字（不算前面的0）</title>
-    <link href="https://no5972.github.io/cms/archivers/28.html"/>
-    <id>https://no5972.github.io/cms/archivers/28.html</id>
-    <published>2020-08-20T03:27:49.000Z</published>
-    <updated>2020-08-20T07:37:30.052Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>百度百科：从一个数的左边第一个非0数字起，到末位数字止，所有的数字都是这个数的有效数字。<br />就是一个数从左边第一个不为0的数字数起到末尾数字为止，所有的数字（包括0，科学计数法不计10的N次方），称为有效数字。简单的说，把一个数字前面的0都去掉，从第一个正整数到精确的数位止所有的都是有效数字了。<br />如：0.0109，前面两个0不是有效数字，后面的109均为有效数字（注意，中间的0也算）。</p></blockquote><p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      BigDecimal类型的小数可以使用MathContext指定有效数字。
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://no5972.github.io/cms/categories/Java/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>我们为什么那么痛恨计算机等级与那些问题（二级党请进）</title>
     <link href="https://no5972.github.io/cms/archivers/27.html"/>
     <id>https://no5972.github.io/cms/archivers/27.html</id>
@@ -1005,6 +984,27 @@
     
     
       <category term="Other" scheme="https://no5972.github.io/cms/categories/Other/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java.math.BigDecimal保留指定位数的有效数字（不算前面的0）</title>
+    <link href="https://no5972.github.io/cms/archivers/28.html"/>
+    <id>https://no5972.github.io/cms/archivers/28.html</id>
+    <published>2020-08-20T03:27:49.000Z</published>
+    <updated>2020-08-20T07:37:30.052Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>百度百科：从一个数的左边第一个非0数字起，到末位数字止，所有的数字都是这个数的有效数字。<br />就是一个数从左边第一个不为0的数字数起到末尾数字为止，所有的数字（包括0，科学计数法不计10的N次方），称为有效数字。简单的说，把一个数字前面的0都去掉，从第一个正整数到精确的数位止所有的都是有效数字了。<br />如：0.0109，前面两个0不是有效数字，后面的109均为有效数字（注意，中间的0也算）。</p></blockquote><p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      BigDecimal类型的小数可以使用MathContext指定有效数字。
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://no5972.github.io/cms/categories/Java/"/>
     
     
   </entry>
@@ -1461,9 +1461,9 @@
     <link href="https://no5972.github.io/cms/archivers/4.html"/>
     <id>https://no5972.github.io/cms/archivers/4.html</id>
     <published>2020-04-16T09:19:00.000Z</published>
-    <updated>2020-10-19T09:55:21.715Z</updated>
+    <updated>2021-02-22T08:49:04.319Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本站开发上线的工具逐渐增多，为改善排版，现将已有的工具链接进行整合，在本文章进行统一集中。大家可以从本文章点击链接进入相应的工具。</p><hr /><p><strong>GIF Extractor / GIF提取器 网页版</strong></p><p><a href="https://no5972.github.io/GIFExtractor/index.html" target="_blank">https://no5972.github.io/GIFExtractor/index.html</a></p><p><strong>DNFHellEmulator / DNF 深渊模拟器 网页版</strong></p><p><a href="https://no5972.github.io/the-hell-emulator/the-hell-emulator.html" target="_blank">https://no5972.github.io/the-hell-emulator/the-hell-emulator.html</a></p><p><strong>Online QQShow Grabber by QQ Number / 在线通过QQ号获取QQ秀 - GIF格式</strong></p><p><a href="https://no5972.github.io/qqshow-api/qqshow-api.html" target="_blank">https://no5972.github.io/qqshow-api/qqshow-api.html</a></p><p><strong>Online Local MIDI File Player Without MIDI Support / 在线播放本地MIDI文件（无需MIDI支持）</strong></p><p><a href="https://no5972.github.io/midi-player/midi-player.html" target="_blank">https://no5972.github.io/midi-player/midi-player.html</a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本站开发上线的工具逐渐增多，为改善排版，现将已有的工具链接进行整合，在本文章进行统一集中。大家可以从本文章点击链接进入相应的工具。</p><hr /><p><strong>GIF Extractor / GIF提取器 网页版</strong></p><p><a href="https://no5972.github.io/GIFExtractor/index.html" target="_blank">https://no5972.github.io/GIFExtractor/index.html</a></p><p><strong>DNFHellEmulator / DNF 深渊模拟器 网页版</strong></p><p><a href="https://no5972.github.io/the-hell-emulator/the-hell-emulator.html" target="_blank">https://no5972.github.io/the-hell-emulator/the-hell-emulator.html</a></p><p><strong>Online QQShow Grabber by QQ Number / 在线通过QQ号获取QQ秀 - GIF格式</strong></p><p><a href="https://no5972.github.io/qqshow-api/qqshow-api.html" target="_blank">https://no5972.github.io/qqshow-api/qqshow-api.html</a></p><p><strong>Online Local MIDI File Player Without MIDI Support / 在线播放本地MIDI文件（无需MIDI支持）</strong></p><p><a href="https://no5972.github.io/midi-player/midi-player.html" target="_blank">https://no5972.github.io/midi-player/midi-player.html</a></p><p><strong>Pixiv Daily Top 50 / Pixiv 日榜 Top 50</strong></p><p><a href="https://no5972.github.io/pixiv-daily-top50/pixiv-daily-top50.html" target="_blank">https://no5972.github.io/pixiv-daily-top50/pixiv-daily-top50.html</a></p>]]></content>
     
     <summary type="html">
     
