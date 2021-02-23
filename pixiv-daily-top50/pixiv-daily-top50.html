@@ -1,11 +1,16 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <title id="t">Pixiv 日榜 Top 50</title>
 	
-<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
-</script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/photoviewer@3.5.4/dist/photoviewer.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/photoviewer@3.5.4/dist/photoviewer.min.js"></script>
+
+
 </head>
 <body>
 
@@ -56,30 +61,20 @@
 		$("#t").text("Pixiv 日榜 Top 50 - " + current.toLocaleDateString());	
 		$("#status").text("正在加载！");	
 
-		var pictures = {	
-			"title": "Pixiv 日榜 " + new Date().toLocaleDateString(),	
-			"id": 123,	
-			"start": 0,	
-			"data": []	
-		}	
+		var items = [];	
 
 		$.get("https://api.github.com/repos/No5972/pixiv-github-action/git/trees/runner", function(data) { 	
 			console.log (data) ;	
 			for (var x in data.tree) {	
 				if (data.tree[x].path.lastIndexOf(".jpg") != -1 || data.tree[x].path.lastIndexOf(".png") != -1) {	
 					var currentUrl = "https://imageproxy.pimg.tw/resize?url=https://raw.githubusercontent.com/No5972/pixiv-github-action/runner/" + encodeURI(data.tree[x].path);	
-					pictures.data.push({"alt": data.tree[x].path.substring(0, data.tree[x].path.indexOf("_")) + " - " + data.tree[x].path.substring(data.tree[x].path.indexOf("_") + 1, data.tree[x].path.length - 4), "pid": data.tree[x].path.substring(0, data.tree[x].path.indexOf("_")), "src": currentUrl, "thumb": currentUrl + "&maxwidth=640"});	
+					items.push({"title": data.tree[x].path.substring(0, data.tree[x].path.indexOf("_")) + " - " + data.tree[x].path.substring(data.tree[x].path.indexOf("_") + 1, data.tree[x].path.length - 4), "src": currentUrl});	
 				}	
-				loadJS("https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.min.js?v=" + new Date().getTime(), function () {	
-					$("#begin").click(function () {	
-						layer.photos({	
-							photos: pictures	
-							,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）	
-						});	
-					});	
-					$("#status").text("加载完成，点击按钮即可开始欣赏");	
-				});	
 			}	
+			$("#begin").click(function () {	
+				var viewer = new PhotoViewer(items, {index: 0});	
+			});
+			$("#status").text("加载完成，点击按钮即可开始欣赏");
 		});	
 	</script>
 
