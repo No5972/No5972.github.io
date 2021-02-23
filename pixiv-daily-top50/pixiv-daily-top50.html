@@ -44,8 +44,8 @@
 			document.getElementsByTagName('head')[0].appendChild(script);	
 		}	
 
-		var current = new Date();	
-		if (current.getUTCHours() < 6) {	
+		var current = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60000);	
+		if (current.getHours() < 6) {	
 			current.setTime(new Date().getTime() - 86400 * 1000)	
 		}	
 
