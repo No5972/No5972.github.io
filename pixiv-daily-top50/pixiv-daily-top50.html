@@ -22,6 +22,7 @@
 图片版权归各作品作者所有，严禁商用。<br/>
 如发现任何不良信息请及时向站长反馈。<br/>
 	</p>
+	<footer><p style="text-align: center">&copy; 2011-20<span id="currentYear"></span> No.5972</p></footer>
 	
 	<script>	
 		function loadJS( url, callback ){	
@@ -49,6 +50,7 @@
 		if (current.getHours() < 6) {	
 			current.setTime(new Date().getTime() - 86400 * 1000)	
 		}	
+		document.getElementById("currentYear").innerText = current.toDateString().substring(current.toDateString().length - 2);
 
 		$("#date").text(current.toLocaleDateString())	
 		$("#t").text("Pixiv 日榜 Top 50 - " + current.toLocaleDateString());	
