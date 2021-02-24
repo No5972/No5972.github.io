@@ -72,7 +72,15 @@
 				}	
 			}	
 			$("#begin").click(function () {	
-				var viewer = new PhotoViewer(items, {index: 0});	
+				var viewer = new PhotoViewer(items, {index: 0, footerToolbar: ['zoomIn','zoomOut','prev','fullscreen','next','actualSize','rotateRight','openInNew'], customButtons: {
+					openInNew: {
+						text: "新标签打开",
+						title: "新标签打开",
+						click: function (context, e) {
+							window.open(context.img.currentSrc);
+						}
+					}
+				}});	
 			});
 			$("#status").text("加载完成，点击按钮即可开始欣赏");
 		});	
