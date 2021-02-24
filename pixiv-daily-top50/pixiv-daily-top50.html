@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,10 +77,12 @@
 
 		$.get("https://api.github.com/repos/No5972/pixiv-github-action/git/trees/runner", function(data) { 	
 			console.log (data) ;	
+			var arr = data.tree;
+			arr = arr.filter(function(e) { return e.path.lastIndexOf(".jpg") != -1 || e.path.lastIndexOf(".png") != -1; });
 			for (var x in data.tree) {	
-				if (data.tree[x].path.lastIndexOf(".jpg") != -1 || data.tree[x].path.lastIndexOf(".png") != -1) {	
+				if (data.tree[x].path.lastIndexOf(".jpg") != -1 || data.tree[x].path.lastIndexOf(".png") != -1) {
 					var currentUrl = "https://imageproxy.pimg.tw/resize?url=https://raw.githubusercontent.com/No5972/pixiv-github-action/runner/" + encodeURI(data.tree[x].path);	
-					items.push({"title": data.tree[x].path.substring(0, data.tree[x].path.indexOf("_")) + " - " + data.tree[x].path.substring(data.tree[x].path.indexOf("_") + 1, data.tree[x].path.length - 4), "src": currentUrl});	
+					items.push({"title": (Number(x) + 1) + "/" + arr.length + " - " + data.tree[x].path.substring(0, data.tree[x].path.indexOf("_")) + " - " + data.tree[x].path.substring(data.tree[x].path.indexOf("_") + 1, data.tree[x].path.length - 4), "src": currentUrl});	
 				}	
 			}	
 			$("#begin").click(function () {	
