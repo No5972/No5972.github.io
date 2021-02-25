@@ -30,7 +30,6 @@
 	<p style="text-align: center"><button id="begin" style="padding: 100px">点击开始欣赏</button></p>
 	
 	<p style="text-align: center">
-本接口调用了pimg.tw的镜像缓存服务。<br/>
 本接口使用了 <a target="_blank" href="https://blog.csdn.net/weixin_45826022/article/details/109406389">CSDN 的 @Eloik 开发的 Crawler</a> ，对此表示感谢。<br/>
 <span style="font-weight: bold; color: red">本接口已经接入百度智能云自动去除部分不适宜图片，所以实际加载的图片可能少于50张。</span><br/>
 <span style="color: blue">若提示“没有图片”则是由于后台调用百度智能云时出现故障。请联系站长反馈。</span></br/>
@@ -81,8 +80,12 @@
 			arr = arr.filter(function(e) { return e.path.lastIndexOf(".jpg") != -1 || e.path.lastIndexOf(".png") != -1; });
 			for (var x in data.tree) {	
 				if (data.tree[x].path.lastIndexOf(".jpg") != -1 || data.tree[x].path.lastIndexOf(".png") != -1) {
-					var currentUrl = "https://imageproxy.pimg.tw/resize?url=https://raw.githubusercontent.com/No5972/pixiv-github-action/runner/" + encodeURI(data.tree[x].path);	
-					items.push({"title": (Number(x) + 1) + "/" + arr.length + " - " + data.tree[x].path.substring(0, data.tree[x].path.indexOf("_")) + " - " + data.tree[x].path.substring(data.tree[x].path.indexOf("_") + 1, data.tree[x].path.length - 4), "src": currentUrl});	
+					var currentUrl = "static/" + encodeURI(data.tree[x].path);	
+					var illustId = data.tree[x].path.substring(0, data.tree[x].path.indexOf("_"));
+					var index = (Number(x) + 1) + "/" + arr.length;
+					var titleAndAuthor = data.tree[x].path.substring(data.tree[x].path.indexOf("_") + 1, data.tree[x].path.length - 4);
+					titleAndAuthor = titleAndAuthor.replaceAll(/\-/g, " ");
+					items.push({"title": index + " - " + illustId + " - " + titleAndAuthor, "src": currentUrl});	
 				}	
 			}	
 			$("#begin").click(function () {	
