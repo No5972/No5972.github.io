@@ -84,7 +84,7 @@
 					var illustId = data.tree[x].path.substring(0, data.tree[x].path.indexOf("_"));
 					var index = (Number(x) + 1) + "/" + arr.length;
 					var titleAndAuthor = data.tree[x].path.substring(data.tree[x].path.indexOf("_") + 1, data.tree[x].path.length - 4);
-					titleAndAuthor = titleAndAuthor.replaceAll(/\-/g, " ");
+					titleAndAuthor = titleAndAuthor.replace(/\-/g, " ");
 					items.push({"title": index + " - " + illustId + " - " + titleAndAuthor, "src": currentUrl});	
 				}	
 			}	
