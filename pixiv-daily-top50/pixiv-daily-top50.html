@@ -74,7 +74,7 @@
 
 		var items = [];	
 
-		$.get("https://api.github.com/repos/No5972/No5972.github.io/git/trees/60cda3351815285fff9e6343f125597357cb2647", function(data) { 	
+		$.get("https://api.github.com/repos/No5972/pixiv-github-action/git/trees/runner", function(data) { 	
 			console.log (data) ;	
 			var arr = data.tree;
 			arr = arr.filter(function(e) { return e.path.lastIndexOf(".jpg") != -1 || e.path.lastIndexOf(".png") != -1; });
