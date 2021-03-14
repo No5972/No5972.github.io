@@ -2,11 +2,12 @@ name: "Fetch FF Cover Every Week"
 
 on:
   schedule: 
-    - cron: '0 6 * * 5'
+    - cron: '0 14 * * 5'
+  push:
     
 jobs:
   job_1:
-    name: Python Crawler
+    name: Fetch FF Cover
     runs-on: ubuntu-latest
     
     steps:
