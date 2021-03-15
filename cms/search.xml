@@ -10,7 +10,7 @@
 <li>Edge、Chrome浏览器提示“Adobe Flash Player已不再受支持”，或者“不支持此插件”：Edge和Chrome的正式版都已经更新到88版本以上，已经原生不支持Flash了。如果仍然有需要使用Flash的特殊需求 <strong>应换用绿色便携版的Edge或Chrome——网传已经有绿色版的Edge出现了，但是Edge和Chrome绿色版都是一定要使用版本小于不等于88的。或者也可以换用国产浏览器——国产浏览器大都集成Flash Player。</strong></li>
 <li>一些客户端程序显示了一个“fi”图标：Flash已经在1月12日自毁了，32.0.0.371是最后一个没有加定时自毁的版本。<strong>需要将<code>C:\Windows\System32\Macromed\Flash\Flash.ocx</code>以及<code>C:\Windows\SysWOW64\Macromed\Flash\Flash.ocx</code>这两个文件里面的十六进制内容<code>3E6F7742</code>的最后的<code>42</code>改成更大的数值，例如<code>72</code>或者<code>7F</code>。可以使用Ultra Edit或者WinHex来修改，但是需要注意必须先把这两个文件的权限改掉。 详细操作可以参考<a href="63.html">Edge、Chrome 1月12日之后继续使用Flash的方法（超级专业，高能预警）</a>。</strong></li>
 <li>一些客户端无法打开，或者加载到Flash就闪退或提示停止工作：这是因为电脑已经安装了“移除Flash Player的系统更新”（若为手动安装则补丁编号为KB4577586），导致Flash组件已经不在电脑上。 <strong><a href="https://www.cr173.com/soft/1311482.html" target="_blank" rel="noopener">西西软件园已将吾爱破解论坛上的Flash破解补丁整合打包</a>，其中的“Flash恢复包”正是针对此系统更新来恢复Flash组件的。注意那个BAT应该右键以管理员身份运行。</strong> 里面的OCX控件是32.0.0.445版本的，并且已经修改掉了自毁的定时器（也是通过最后的<code>42</code>字节改成<code>72</code>），<strong>注意此恢复包仅适用于安装了“移除Flash的系统更新”的机器，未安装此更新的机器不要安装，否则会出现无法恢复的异常情况。</strong></li>
-<li>Firefox看不到Flash内容：Firefox已经更新到85版本以上，已经完全停止支持Flash了。若有需要使用Flash则<strong>需要使用旧版Firefox来使用Flash内容。Firefox也会自动更新，建议使用延长支持版来操作。注意安装后在设置里面的Firefox更新选择“检查更新，但由您决定是否安装”。</strong></li>
+<li>Firefox看不到Flash内容：Firefox已经更新到85版本以上，已经完全停止支持Flash了。若有需要使用Flash则<strong>需要使用旧版Firefox来使用Flash内容。Firefox也会自动更新，建议使用延长支持版来操作。注意安装后在设置里面的Firefox更新选择“检查更新，但由您决定是否安装”，并去掉勾选“使用一项系统服务以静默安装更新”。</strong></li>
 <li>IE浏览器的Flash内容看不到：这是因为电脑已经安装了“移除Flash Player的系统更新”（若为手动安装则补丁编号为KB4577586），导致Flash组件已经不在电脑上。<strong>参考第三条。</strong></li>
 </ol>
 ]]></content>
@@ -2709,6 +2709,21 @@ We recognize that there are legitimate projects that consist of a large number o
       </categories>
   </entry>
   <entry>
+    <title>java.math.BigDecimal保留指定位数的有效数字（不算前面的0）</title>
+    <url>/cms//archivers/28.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>百度百科：从一个数的左边第一个非0数字起，到末位数字止，所有的数字都是这个数的有效数字。<br />
+就是一个数从左边第一个不为0的数字数起到末尾数字为止，所有的数字（包括0，科学计数法不计10的N次方），称为有效数字。简单的说，把一个数字前面的0都去掉，从第一个正整数到精确的数位止所有的都是有效数字了。<br />
+如：0.0109，前面两个0不是有效数字，后面的109均为有效数字（注意，中间的0也算）。</p>
+</blockquote>
+<p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>我们为什么那么痛恨计算机等级与那些问题（二级党请进）</title>
     <url>/cms//archivers/27.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://tieba.baidu.com/p/1877978397" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/C%E8%AF%AD%E8%A8%80%E5%90%A7@%E6%B1%87%E8%93%9D%E9%B8%9F-%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E9%82%A3%E4%B9%88%E7%97%9B%E6%81%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%8E%E9%82%A3%E4%BA%9B%E9%97%AE%E9%A2%98%EF%BC%88%E4%BA%8C%E7%BA%A7%E5%85%9A%E8%AF%B7%E8%BF%9B%EF%BC%89-brightgreen" alt="C语言吧@汇蓝鸟-我们为什么那么痛恨计算机等级与那些问题（二级党请进）" /></a></p>
@@ -2728,21 +2743,6 @@ We recognize that there are legitimate projects that consist of a large number o
 <center>～～面码拜</center>]]></content>
       <categories>
         <category>Other</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>java.math.BigDecimal保留指定位数的有效数字（不算前面的0）</title>
-    <url>/cms//archivers/28.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>百度百科：从一个数的左边第一个非0数字起，到末位数字止，所有的数字都是这个数的有效数字。<br />
-就是一个数从左边第一个不为0的数字数起到末尾数字为止，所有的数字（包括0，科学计数法不计10的N次方），称为有效数字。简单的说，把一个数字前面的0都去掉，从第一个正整数到精确的数位止所有的都是有效数字了。<br />
-如：0.0109，前面两个0不是有效数字，后面的109均为有效数字（注意，中间的0也算）。</p>
-</blockquote>
-<p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Java</category>
       </categories>
   </entry>
   <entry>
