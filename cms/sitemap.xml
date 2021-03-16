@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.github.io/cms/archivers/76.html</loc>
+    
+    <lastmod>2021-03-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/archivers/79.html</loc>
     
     <lastmod>2021-03-16</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://no5972.github.io/cms/archivers/77.html</loc>
     
     <lastmod>2021-03-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.github.io/cms/archivers/76.html</loc>
-    
-    <lastmod>2021-03-03</lastmod>
     
   </url>
   
@@ -657,14 +657,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/JavaScript/</loc>
+    <loc>https://no5972.github.io/cms/categories/Java/</loc>
     <lastmod>2021-03-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Java/</loc>
+    <loc>https://no5972.github.io/cms/categories/JavaScript/</loc>
     <lastmod>2021-03-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
