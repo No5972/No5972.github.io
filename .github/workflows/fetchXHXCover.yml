@@ -3,6 +3,7 @@ name: "Fetch FF Cover Every Week"
 on:
   schedule: 
     - cron: '0 22 * * 4'
+  push:
     
 jobs:
   job_1:
