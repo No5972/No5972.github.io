@@ -23,6 +23,7 @@ jobs:
         java -Xmx3550m -jar ./ffdec.jar -export image ./xhxCover/ ./fisrtPage.swf
     - name: Upload to this repo
       run: |
+        rm -rf xhxCover
         mkdir xhxCover
         cd ffdec/xhxCover
         mv *.png ../../xhxCover/cover.png
