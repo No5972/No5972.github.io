@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.github.io/cms/archivers/80.html</loc>
+    
+    <lastmod>2021-03-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/archivers/20.html</loc>
     
     <lastmod>2021-03-18</lastmod>
@@ -618,14 +625,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/archivers/test3.html</loc>
+    <loc>https://no5972.github.io/cms/archivers/test2.html</loc>
     
     <lastmod>2020-07-17</lastmod>
     
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/archivers/test2.html</loc>
+    <loc>https://no5972.github.io/cms/archivers/test3.html</loc>
     
     <lastmod>2020-07-17</lastmod>
     
@@ -643,14 +650,14 @@
 
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/jekyll-update/</loc>
+    <loc>https://no5972.github.io/cms/categories/jekyll/</loc>
     <lastmod>2021-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/jekyll/</loc>
+    <loc>https://no5972.github.io/cms/categories/jekyll-update/</loc>
     <lastmod>2021-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -671,6 +678,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.github.io/cms/categories/JavaScript/</loc>
+    <lastmod>2021-03-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/categories/Server/</loc>
     <lastmod>2021-03-18</lastmod>
     <changefreq>daily</changefreq>
@@ -678,7 +692,7 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/JavaScript/</loc>
+    <loc>https://no5972.github.io/cms/categories/C/</loc>
     <lastmod>2021-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -693,13 +707,6 @@
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
-    <lastmod>2021-03-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.github.io/cms/categories/C/</loc>
     <lastmod>2021-03-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
