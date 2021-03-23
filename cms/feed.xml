@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.github.io/cms/"/>
-  <updated>2021-03-18T10:04:02.596Z</updated>
+  <updated>2021-03-23T03:43:24.118Z</updated>
   <id>https://no5972.github.io/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>B站 URL转16进制防止评论贴URL被屏蔽</title>
+    <link href="https://no5972.github.io/cms/archivers/81.html"/>
+    <id>https://no5972.github.io/cms/archivers/81.html</id>
+    <published>2021-03-23T03:00:00.000Z</published>
+    <updated>2021-03-23T03:43:24.118Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>封装了一个JS函数，只要运行这个JS函数就可以把URL转换成16进制，浏览器可以直接访问，防止评论直接贴URL被屏蔽的问题。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stringToHex</span>(<span class="params">str</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> protocol = str.lastIndexOf(<span class="string">"https://"</span>) != <span class="number">-1</span> ? <span class="string">"https://"</span> : (str.lastIndexOf(<span class="string">"http://"</span>) != <span class="number">-1</span> ? <span class="string">"http://"</span> : (str.lastIndexOf(<span class="string">"ftp://"</span>) != <span class="number">-1</span> ? <span class="string">"ftp://"</span> : <span class="string">""</span>));</span><br><span class="line">    <span class="keyword">var</span> strRemovingProtocol = <span class="built_in">encodeURI</span>(str.substring(protocol.length))</span><br><span class="line">    <span class="keyword">var</span> val= <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; strRemovingProtocol.length; i++)&#123;</span><br><span class="line">        <span class="keyword">if</span> (strRemovingProtocol.charAt(i) == <span class="string">'/'</span>) &#123; <span class="comment">// 忽略正斜杠</span></span><br><span class="line">            val += <span class="string">"/"</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            val += <span class="string">"%"</span> + strRemovingProtocol.charCodeAt(i).toString( <span class="number">16</span>).toUpperCase();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> protocol + val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>输入：<code>stringToHex(&quot;https://wujiuqier.lanzous.com/ifKbHmsg5sj&quot;)</code><br />输出：<code>https://%77%75%6A%69%75%71%69%65%72%2E%6C%61%6E%7A%6F%75%73%2E%63%6F%6D/%69%66%4B%62%48%6D%73%67%35%73%6A</code><br />参考资料：<a href="https://blog.csdn.net/qmdweb/article/details/80898791" target="_blank" rel="noopener">https://blog.csdn.net/qmdweb/article/details/80898791</a></p>]]></content>
+    
+    <summary type="html">
+    
+      封装了一个JS函数，只要运行这个JS函数就可以把URL转换成16进制，浏览器可以直接访问，防止评论直接贴URL被屏蔽的问题。
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://no5972.github.io/cms/categories/JavaScript/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>小花仙 通过远程Chrome远程调试来高清截图</title>

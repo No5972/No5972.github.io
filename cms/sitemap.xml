@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.github.io/cms/archivers/81.html</loc>
+    
+    <lastmod>2021-03-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/archivers/80.html</loc>
     
     <lastmod>2021-03-18</lastmod>
@@ -641,7 +648,7 @@
 
   <url>
     <loc>https://no5972.github.io/cms</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -651,84 +658,84 @@
   
   <url>
     <loc>https://no5972.github.io/cms/categories/jekyll/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/jekyll-update/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Java/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Server/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/JavaScript/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Moving-Away-from-Flash/</loc>
-    <lastmod>2021-03-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.github.io/cms/categories/C/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Other/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <loc>https://no5972.github.io/cms/categories/C/</loc>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Github/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.github.io/cms/categories/Other/</loc>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Python/</loc>
-    <lastmod>2021-03-18</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
