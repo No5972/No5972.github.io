@@ -4,7 +4,7 @@
 <html>
 
 <head>
-  <title>kaboom</title>
+  <title>Touhou Akamakyou</title>
   <meta charset="utf-8">
   <style>
     * {
@@ -63,7 +63,6 @@ scene("main", (args = {}) => {
   let power = 1;
   let position = 0;
   let life = 3;
-  let isRespawning = false;
 
   gravity(200);
 
@@ -199,8 +198,8 @@ scene("main", (args = {}) => {
 
   collides("player", "powerup-power", (p, pp) => {
     if (power < 10) {
-      //power+=2.3;
-      power+=0.3;
+      power+=2.3;
+      //power+=0.3;
       powerText.text = "Power: " + power.toFixed(1);
       if (power > 10) {
         power = 10;
@@ -212,7 +211,6 @@ scene("main", (args = {}) => {
   });
 
   function playerHit(p, e) {
-    isRespawning = true;
     life--;
     lifeText.text = "Life : " + life;
     if (life < 0) {
@@ -225,7 +223,6 @@ scene("main", (args = {}) => {
       player.pos.x = width() / 2;
       player.pos.y = height() - 15;
       add(player);
-      isRespawning = false;
     });
   }
 
@@ -306,7 +303,7 @@ scene("main", (args = {}) => {
   });
 
   loop(0.05, () => {
-    if (isFiring && !isRespawning) {
+    if (isFiring) {
       console.log("fire")
       for (let i = 0; i < parseInt(power); i++) {
         add([
