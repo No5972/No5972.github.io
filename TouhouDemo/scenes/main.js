@@ -9,6 +9,7 @@
   let power = 1;
   let position = 0;
   let life = 3;
+  let isRespawning = false;
 
   gravity(200);
 
@@ -144,8 +145,8 @@
 
   collides("player", "powerup-power", (p, pp) => {
     if (power < 10) {
-      power+=2.3;
-      //power+=0.3;
+      //power+=2.3;
+      power+=0.3;
       powerText.text = "Power: " + power.toFixed(1);
       if (power > 10) {
         power = 10;
@@ -157,6 +158,7 @@
   });
 
   function playerHit(p, e) {
+    isRespawning = true;
     life--;
     lifeText.text = "Life : " + life;
     if (life < 0) {
@@ -169,6 +171,7 @@
       player.pos.x = width() / 2;
       player.pos.y = height() - 15;
       add(player);
+      isRespawning = false;
     });
   }
 
@@ -249,7 +252,7 @@
   });
 
   loop(0.05, () => {
-    if (isFiring) {
+    if (isFiring && !isRespawning) {
       console.log("fire")
       for (let i = 0; i < parseInt(power); i++) {
         add([
