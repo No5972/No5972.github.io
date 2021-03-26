@@ -22,6 +22,16 @@
     return width() / 3 * 2;
   }
 
+  function getDirection(ex, ey) {
+    var dx = player.pos.x - ex;
+    var dy = player.pos.y - ey;
+    var r = Math.hypot(player.pos.x - ex, player.pos.y - ey);
+    if (dx <= 0 && dy >= 0) return Math.asin(Math.abs(dy) / r);
+    if (dx >= 0 && dy >= 0) return Math.PI - Math.asin(Math.abs(dy) / r);
+    if (dx >= 0 && dy <= 0) return Math.asin(Math.abs(dy) / r) + Math.PI;
+    if (dx <= 0 && dy <= 0) return Math.PI * 2 - Math.asin(Math.abs(dy) / r);
+  }
+
   const enemyALocation = [ 9, 12, 13, 14, 22, 23, 24, 
                          109, 112, 113, 114, 122, 123, 124,
                          209, 212, 213, 214, 222, 223, 224];
@@ -110,9 +120,15 @@
 		}
 	});
 
-	function spawnEnemyA() { return add([	sprite("enemy00"),	pos(rand(0, mapWidth()), 0), "enemyA", ]);}
-  function spawnEnemyB() { return add([	sprite("enemy00"),	pos(0, 48), "enemyB", ]);}
-  function spawnEnemyC() { return add([	sprite("enemy00"),	pos(mapWidth(), 48), "enemyC", ]);}
+	function spawnEnemyA() { return add([	sprite("enemy00"),	pos(rand(0, mapWidth()), 0), "enemyA", {
+    time: 0
+  }]);}
+  function spawnEnemyB() { return add([	sprite("enemy00"),	pos(0, 48), "enemyB", {
+    time: 0
+  }]);}
+  function spawnEnemyC() { return add([	sprite("enemy00"),	pos(mapWidth(), 48), "enemyC", {
+    time: 0
+  }]);}
   function spawnEnemyD() { return add([	sprite("enemy01"),	pos(rand(0, mapWidth()), 0), "enemyD", {
     time: 0
   }]);}
@@ -234,6 +250,7 @@
       go("gameover", score);
       return;
     }
+    destroy(e);
     p.hidden = true;
     player.hidden = true;
     wait(2, () => {
@@ -250,6 +267,7 @@
   }
 
   collides("playerHitJudgePoint", "enemyBullet1", (e, eb) => { playerHit(e, eb); });
+  collides("playerHitJudgePoint", "enemyBullet2", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyA", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyB", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyC", (e, eb) => { playerHit(e, eb); });
@@ -257,6 +275,17 @@
 
 	action("enemyA", (e) => {
 		e.move(0, ENEMY_SPEED);
+    e.time++;
+    if (e.time == 100) { // enemy shoot
+      add([	
+        sprite("eb2"), 
+        rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
+        pos(e.pos.x, e.pos.y), 
+        "enemyBullet2", {
+          direction: getDirection(e.pos.x, e.pos.y)
+        }
+      ]);
+    }
 		if (e.pos.y > height()) {
 			destroy(e);
 		}
@@ -264,13 +293,35 @@
 
   action("enemyB", (e) => {
 		e.move(ENEMY_SPEED, 0);
+    e.time++;
+    if (e.time == 100) { // enemy shoot
+      add([	
+        sprite("eb2"), 
+        rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
+        pos(e.pos.x, e.pos.y), 
+        "enemyBullet2", {
+          direction: getDirection(e.pos.x, e.pos.y)
+        }
+      ]);
+    }
 		if (e.pos.x > mapWidth()) {
 			destroy(e);
 		}
 	});
 
   action("enemyC", (e) => {
+    e.time++;
 		e.move(-ENEMY_SPEED, 0);
+    if (e.time == 100) { // enemy shoot
+      add([	
+        sprite("eb2"), 
+        rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
+        pos(e.pos.x, e.pos.y), 
+        "enemyBullet2", {
+          direction: getDirection(e.pos.x, e.pos.y)
+        }
+      ]);
+    }
 		if (e.pos.x < 0) {
 			destroy(e);
 		}
@@ -311,6 +362,14 @@
   action("enemyBullet1", (eb) => {
     let currentSpeed = ENEMY_BULLET_SPEED;
     eb.move(Math.cos(eb.direction) * currentSpeed, Math.sin(eb.direction) * currentSpeed);
+    if (eb.pos.x < 0 || eb.pos.x > mapWidth() || eb.pos.y < 0 || eb.pos.y > height()) {
+      destroy(eb);
+    }
+  });
+
+  action("enemyBullet2", (eb) => {
+    let currentSpeed = ENEMY_BULLET_SPEED;
+    eb.move(Math.cos(eb.direction) * currentSpeed * -1, Math.sin(eb.direction) * currentSpeed);
     if (eb.pos.x < 0 || eb.pos.x > mapWidth() || eb.pos.y < 0 || eb.pos.y > height()) {
       destroy(eb);
     }
