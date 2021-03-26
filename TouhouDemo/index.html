@@ -55,13 +55,17 @@ init({
 scene("gameover", (args = {}) => {
     add([
       pos(width() / 2, height() / 2),
-      text("Game Over\nContinue?")
+      text("Game Over\nPress Enter to return")
     ]);
+
+    keyPress("enter", () => {
+      go("main", {});
+    })
 });
 scene("level1", (args = {}) => {
 	const BULLET_SPEED = 800;
   const ENEMY_BULLET_SPEED = 100;
-	const ENEMY_SPEED = 60;
+	const ENEMY_SPEED = 100;
 	const PLAYER_SPEED = 200;
   const INITIAL_POWERUP_POINT_SPEED = -60;
   const INITIAL_POWERUP_POWER_SPEED = -50;
@@ -76,6 +80,8 @@ scene("level1", (args = {}) => {
   let isBossExist = false;
 
   gravity(200);
+
+  var bgm = document.getElementById("bgm");
 
   function mapWidth() {
     return width() / 3 * 2;
@@ -94,7 +100,7 @@ scene("level1", (args = {}) => {
                           172, 174, 176, 178, 180, 192, 194, 196, 198, 200,
                           272, 274, 276, 278, 280, 292, 294, 296, 298, 300];
   
-  play("th06_02");
+  // play("th06_02");
 
 	let player = add([
 		sprite("player01"),
@@ -289,6 +295,7 @@ scene("level1", (args = {}) => {
     lifeText.text = "Player  " + life;
     powerText.text = "Power   " + power.toFixed(1);
     if (life < 0) {
+      bgm.pause();
       go("gameover", score);
       return;
     }
@@ -415,7 +422,20 @@ scene("main", (args = {}) => {
 		  origin("topleft"),
     ]);
 
-    play("th06_01");
+    // play("th06_01");
+    var bgm = document.getElementById("bgm");
+
+    if (bgm == undefined) {
+      bgm = document.createElement("audio");
+      bgm.id = "bgm";
+      bgm.loop = true;
+    }
+
+    bgm.src = "./sounds/th06_01.mp3";
+    if (document.getElementById("bgm") == undefined) {
+      document.body.appendChild(bgm);
+    }
+    bgm.play();
     
     add([
       pos(width() / 2, 40),
@@ -456,7 +476,7 @@ scene("main", (args = {}) => {
 
     add([
       pos(width() / 2, height() / 2 + 170),
-      text("@2021 No.5972 . MIT License.")
+      text("(c) 2021 No.5972 . MIT License.")
     ]);
 
     add([
@@ -465,6 +485,10 @@ scene("main", (args = {}) => {
     ]);
 
     keyPress("enter", () => {
+      bgm.pause();
+      bgm.src = "./sounds/th06_02.mp3";
+      bgm.load();
+      bgm.play();
       go("level1", {});
     })
 });

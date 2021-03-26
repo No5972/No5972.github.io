@@ -1,6 +1,6 @@
 	const BULLET_SPEED = 800;
   const ENEMY_BULLET_SPEED = 100;
-	const ENEMY_SPEED = 60;
+	const ENEMY_SPEED = 100;
 	const PLAYER_SPEED = 200;
   const INITIAL_POWERUP_POINT_SPEED = -60;
   const INITIAL_POWERUP_POWER_SPEED = -50;
@@ -15,6 +15,8 @@
   let isBossExist = false;
 
   gravity(200);
+
+  var bgm = document.getElementById("bgm");
 
   function mapWidth() {
     return width() / 3 * 2;
@@ -33,7 +35,7 @@
                           172, 174, 176, 178, 180, 192, 194, 196, 198, 200,
                           272, 274, 276, 278, 280, 292, 294, 296, 298, 300];
   
-  play("th06_02");
+  // play("th06_02");
 
 	let player = add([
 		sprite("player01"),
@@ -228,6 +230,7 @@
     lifeText.text = "Player  " + life;
     powerText.text = "Power   " + power.toFixed(1);
     if (life < 0) {
+      bgm.pause();
       go("gameover", score);
       return;
     }

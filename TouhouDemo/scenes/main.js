@@ -4,7 +4,20 @@
 		  origin("topleft"),
     ]);
 
-    play("th06_01");
+    // play("th06_01");
+    var bgm = document.getElementById("bgm");
+
+    if (bgm == undefined) {
+      bgm = document.createElement("audio");
+      bgm.id = "bgm";
+      bgm.loop = true;
+    }
+
+    bgm.src = "./sounds/th06_01.mp3";
+    if (document.getElementById("bgm") == undefined) {
+      document.body.appendChild(bgm);
+    }
+    bgm.play();
     
     add([
       pos(width() / 2, 40),
@@ -45,7 +58,7 @@
 
     add([
       pos(width() / 2, height() / 2 + 170),
-      text("@2021 No.5972 . MIT License.")
+      text("(c) 2021 No.5972 . MIT License.")
     ]);
 
     add([
@@ -54,5 +67,9 @@
     ]);
 
     keyPress("enter", () => {
+      bgm.pause();
+      bgm.src = "./sounds/th06_02.mp3";
+      bgm.load();
+      bgm.play();
       go("level1", {});
     })
