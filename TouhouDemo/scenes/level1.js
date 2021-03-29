@@ -18,9 +18,18 @@
 
   var bgm = document.getElementById("bgm");
 
+  bgm.ontimeupdate = function () {
+    if (bgm.currentTime >= bgm.duration - 0.2) {
+      bgm.currentTime = 21;
+      bgm.play();
+    }
+  }
+
   function mapWidth() {
     return width() / 3 * 2;
   }
+
+  const MAX_BOSS_HP_BAR_WIDTH = mapWidth() - 50;
 
   function getDirection(ex, ey) {
     var dx = player.pos.x - ex;
@@ -44,6 +53,8 @@
   const enemyDLocation = [72, 74, 76, 78, 80, 92, 94, 96, 98, 100,
                           172, 174, 176, 178, 180, 192, 194, 196, 198, 200,
                           272, 274, 276, 278, 280, 292, 294, 296, 298, 300];
+
+  const boss1Location = [301];
   
   // play("th06_02");
 
@@ -60,6 +71,15 @@
     scale(0.7),
     "playerHitJudgePoint"
   ]);
+
+  let bossHPBar = add([
+    rect(MAX_BOSS_HP_BAR_WIDTH, 10),
+    pos(5, 10),
+    color(1,1,1),
+    origin("left")
+  ]);
+
+  bossHPBar.hidden = true;
 
 	keyDown("left", () => {
     if (player.pos.x > 0) {
@@ -132,6 +152,107 @@
   function spawnEnemyD() { return add([	sprite("enemy01"),	pos(rand(0, mapWidth()), 0), "enemyD", {
     time: 0
   }]);}
+
+  function spawnBoss1() {
+    isBossExist = true;
+    bossHPBar.hidden = false;
+    bossHPBar.width = MAX_BOSS_HP_BAR_WIDTH;
+    return add([
+      sprite("boss01"),
+      pos(mapWidth() / 2, 0),
+      "boss01", {
+        time: 0,
+        life: 200,
+        maxLife: 200,
+        countdown: 60,
+        downspeed: 1,
+        isLanding: true,
+        damaku: [
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 2, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 4, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 6, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 8, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 10, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 12, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 14, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 16, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 18, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 20, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 22, speed: 100, begin: 111},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 24, speed: 100, begin: 111},
+
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 1, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 3, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 5, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 7, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 9, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 11, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 13, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 15, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 17, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 19, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 21, speed: 100, begin: 101},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 23, speed: 100, begin: 101},
+
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 1, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 3, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 5, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 7, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 9, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 11, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 13, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 15, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 17, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 19, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 21, speed: 100, begin: 121},
+          {sprite: "eb1", interval: 100, direction: Math.PI / 12 * 23, speed: 100, begin: 121},
+        ]
+      }
+    ])
+  }
+
+  action("boss01", (e) => {
+    if (e.pos.y < 80 && e.isLanding) {
+      e.pos.y += e.downspeed;
+      return;
+    } else {
+      e.isLanding = false;
+    }
+    e.time++;
+
+    e.pos.x = mapWidth() / 2 + Math.cos(e.time / 100 + Math.PI / 2) * 100;
+    e.pos.y = 60 + Math.sin(e.time / 100 + Math.PI / 2) * 20;
+    
+    for (var x in e.damaku) {
+      if ((e.time - e.damaku[x].begin) % e.damaku[x].interval == 0) {
+        add([	sprite(e.damaku[x].sprite),	pos(e.pos.x, e.pos.y), "bossBullet1", {
+          direction: e.damaku[x].direction,
+          speed: e.damaku[x].speed
+        }]);
+      }
+    }
+    
+  });
+
+  collides("bullet", "boss01", (bullet, boss) => {
+    boss.life--;
+    destroy(bullet);
+    bossHPBar.width = MAX_BOSS_HP_BAR_WIDTH * boss.life / boss.maxLife;
+    if (boss.life <= 0) {
+      play("bossDestroy", {volume : 0.7});
+      destroy(boss);
+      bossHPBar.hidden = true;
+      isBossExist = false;
+    }
+  });
+
+  function convertAllBullets() { // when defeating a rune of a boss
+
+  }
+
+  function removeAllBullets() { // bomb
+
+  }
 
   const hudBorder = add([
     // width, height
@@ -268,15 +389,17 @@
 
   collides("playerHitJudgePoint", "enemyBullet1", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyBullet2", (e, eb) => { playerHit(e, eb); });
+  collides("playerHitJudgePoint", "bossBullet1", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyA", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyB", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyC", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyD", (e, eb) => { playerHit(e, eb); });
+  
 
 	action("enemyA", (e) => {
 		e.move(0, ENEMY_SPEED);
     e.time++;
-    if (e.time == 100) { // enemy shoot
+    if (e.time == 50) { // enemy shoot
       add([	
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
@@ -294,7 +417,7 @@
   action("enemyB", (e) => {
 		e.move(ENEMY_SPEED, 0);
     e.time++;
-    if (e.time == 100) { // enemy shoot
+    if (e.time == 50) { // enemy shoot
       add([	
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
@@ -312,7 +435,7 @@
   action("enemyC", (e) => {
     e.time++;
 		e.move(-ENEMY_SPEED, 0);
-    if (e.time == 100) { // enemy shoot
+    if (e.time == 50) { // enemy shoot
       add([	
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
@@ -375,6 +498,14 @@
     }
   });
 
+  action("bossBullet1", (eb) => {
+    let currentSpeed = eb.speed;
+    eb.move(Math.cos(eb.direction) * currentSpeed, Math.sin(eb.direction) * currentSpeed);
+    if (eb.pos.x < 0 || eb.pos.x > mapWidth() || eb.pos.y < 0 || eb.pos.y > height()) {
+      destroy(eb);
+    }
+  });
+
   action("player", (p) => {
     playerHitJudgePoint.pos.x = p.pos.x + 2;
     playerHitJudgePoint.pos.y = p.pos.y - 2;
@@ -385,6 +516,7 @@
     if (!isBossExist) {
       position++;
     }
+    if (boss1Location.lastIndexOf(position) != -1 && !isBossExist) spawnBoss1();
     if (enemyALocation.lastIndexOf(position) != -1) spawnEnemyA();
     if (enemyBLocation.lastIndexOf(position) != -1) spawnEnemyB();
     if (enemyCLocation.lastIndexOf(position) != -1) spawnEnemyC();
