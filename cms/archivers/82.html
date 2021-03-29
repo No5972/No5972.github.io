@@ -129,30 +129,34 @@
     var CONFIG = {"hostname":"no5972.github.io","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="No.5972 is silly B">
-<meta property="og:type" content="website">
-<meta property="og:title" content="No.5972 Publishment Website">
-<meta property="og:url" content="https://no5972.github.io/cms/page/5/index.html">
+  <meta name="description" content="我們需要调用一个大佬整理的pinyin-util这个JS库来获取各个汉字的汉语拼音。目前暂时只做了单字输入拼音的打字效果。输入词组的效果需要借助分词及其词典，但是网上看的一个词典都有动辄数十兆，并不适合网页加载。所以暂时不做词组拼音输入。暂时没做中英文混输，中英文混输可能会出现错位。可以使用标点符号。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML JS 输入拼音的打字机效果">
+<meta property="og:url" content="https://no5972.github.io/cms/archivers/82.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="No.5972 is silly B">
+<meta property="og:description" content="我們需要调用一个大佬整理的pinyin-util这个JS库来获取各个汉字的汉语拼音。目前暂时只做了单字输入拼音的打字效果。输入词组的效果需要借助分词及其词典，但是网上看的一个词典都有动辄数十兆，并不适合网页加载。所以暂时不做词组拼音输入。暂时没做中英文混输，中英文混输可能会出现错位。可以使用标点符号。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210329170727115.gif#pic_center">
+<meta property="article:published_time" content="2021-03-29T09:00:00.000Z">
+<meta property="article:modified_time" content="2021-03-29T10:09:47.089Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210329170727115.gif#pic_center">
 
-<link rel="canonical" href="https://no5972.github.io/cms/page/5/">
+<link rel="canonical" href="https://no5972.github.io/cms/archivers/82.html">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>No.5972 Publishment Website</title>
+  <title>HTML JS 输入拼音的打字机效果 | No.5972 Publishment Website</title>
   <script>
       if (!!window.ActiveXObject || "ActiveXObject" in window) {
         document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
@@ -584,13 +588,14 @@ window.onload = function () {
       <div class="main-inner">
         
 
-        <div class="content index posts-expand">
+        <div class="content post posts-expand">
           
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/42.html">
+    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/82.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
@@ -602,11 +607,10 @@ window.onload = function () {
       <meta itemprop="name" content="No.5972 Publishment Website">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           
-          
-            <a href="/cms/archivers/42.html" class="post-title-link" itemprop="url">淘米小花仙官方回应Flash停止支持</a>
-        </h2>
+          HTML JS 输入拼音的打字机效果
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -615,7 +619,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-10-29 18:00:00 | Modified: 2020-11-26 18:12:35" itemprop="dateCreated datePublished" datetime="2020-10-29T18:00:00+08:00">2020-10-29 18:00:00</time>
+              <time title="Created: 2021-03-29 17:00:00 | Modified: 2021-03-29 18:09:47" itemprop="dateCreated datePublished" datetime="2021-03-29T17:00:00+08:00">2021-03-29 17:00:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -623,7 +627,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Moving-Away-from-Flash/" itemprop="url" rel="index"><span itemprop="name">Moving-Away-from-Flash</span></a>
+                  <a href="/cms/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
                 </span>
             </span>
 
@@ -636,8 +640,8 @@ window.onload = function () {
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/cms/archivers/42.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/42.html" itemprop="commentCount"></span>
+    <a title="valine" href="/cms/archivers/82.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/82.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -652,840 +656,66 @@ window.onload = function () {
     <div class="post-body" itemprop="articleBody">
 
       
-          对于大家担心的2020年Flash停止更新及下架是否会对小花仙页游有影响，我们想说的是，我们和大家一样，对这方面的消息非常关心，一直在关注着。（新的微端已经集成了Flash控件，并且是直接在窗体中加载Flash，不再通过内嵌浏览器控件加载Flash，无需再单独下载安装Flash了。这个集成的Flash控件经过我们的专业测试，绝无包含窃取隐私的服务和广告弹窗程序）
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/42.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+        <p>我們需要调用一个大佬整理的<code>pinyin-util</code>（<a href="https://www.jsdelivr.com/package/npm/pinyin-util" target="_blank" rel="noopener">点击查看</a>）这个JS库来获取各个汉字的汉语拼音。</p>
+<p>目前暂时只做了单字输入拼音的打字效果。输入词组的效果需要借助分词及其词典，但是网上看的一个词典都有动辄数十兆，并不适合网页加载。所以暂时不做词组拼音输入。</p>
+<p>暂时没做中英文混输，中英文混输可能会出现错位。</p>
+<p>可以使用标点符号。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/pinyin-util@1.2.3/dist/pinyin-util.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"begin()"</span>&gt;</span>开始<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"test"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> str = <span class="string">"鄙人一直在竭力简化小花仙高清截图的操作步骤。这次再来尝试使用原生的远程调试来操作指令。"</span>;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> x = pinyinUtil.getPinyin(str, <span class="string">' '</span>).split(<span class="string">' '</span>);</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">'test'</span>);</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> z = <span class="number">0</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span> <span class="params">(time)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> setTimeout(resolve, time));</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">begin</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> x) &#123;</span></span><br><span class="line"><span class="actionscript">  	<span class="keyword">var</span> pyLength = x[i].length;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span> (<span class="keyword">var</span> y <span class="keyword">in</span> x[i]) &#123;</span></span><br><span class="line">      p.innerText += x[i][y];</span><br><span class="line"><span class="javascript">      <span class="keyword">await</span>(sleep(<span class="number">50</span>));</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="keyword">await</span>(sleep(<span class="number">50</span>));</span></span><br><span class="line">    p.innerText = p.innerText.substring(0, p.innerText.length - pyLength);</span><br><span class="line">    p.innerText += str[i];</span><br><span class="line"><span class="javascript">    <span class="keyword">await</span>(sleep(<span class="number">50</span>));</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果：<br />
+<img src="https://img-blog.csdnimg.cn/20210329170727115.gif#pic_center" alt="在这里插入图片描述" /><br />
+类似的方式还可以做出五笔打字的打字机效果，只要能弄到所有五笔输入码即可。</p>
+
     </div>
 
     
     
     
+        <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.getElementById('post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div id="post-reward">
+      
+      <div>
+        <img src="/cms/sponsor.png" alt="No.5972 Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/41.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/41.html" class="post-title-link" itemprop="url">Chrome/Chromium即将停止支持Flash的详细事宜</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-27 17:30:00 | Modified: 2020-11-26 18:12:47" itemprop="dateCreated datePublished" datetime="2020-10-27T17:30:00+08:00">2020-10-27 17:30:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Moving-Away-from-Flash/" itemprop="url" rel="index"><span itemprop="name">Moving-Away-from-Flash</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/cms/archivers/41.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/41.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          2021.1：从Chromium移除对Flash的支持！
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/41.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1fe0947c0fa73a" async="async"></script>
+  </div>
+  <div class="ad" style="text-align: center;">
+    <a href="https://curl.qcloud.com/rU5hN2sp" target="_blank"><img src="//s3.ax1x.com/2021/01/25/sLsRbt.jpg"></img></a>
+  </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/40.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/40.html" class="post-title-link" itemprop="url">文科生如何成为高级程序员</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-19 17:30:00 | Modified: 2020-10-20 09:01:09" itemprop="dateCreated datePublished" datetime="2020-10-19T17:30:00+08:00">2020-10-19 17:30:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/cms/archivers/40.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/40.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          在半路出家的程序员队伍里，我的经历应该比较有代表性：先在一所师范专科学校接受了三年中文教育，毕业后开始在一个小镇教书，后来通过三年的自学，由一个计算机知识为零的“电脑盲”，拿到了软件水平考试中的高级程序员级别证书，并通过了全国计算机四级考试（成绩优秀）。其中的经验教训有很多，写下来供大家参考。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/40.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/cms/archivers/81.html" rel="prev" title="B站 URL转16进制防止评论贴URL被屏蔽">
+      <i class="fa fa-chevron-left"></i> B站 URL转16进制防止评论贴URL被屏蔽
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/39.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/39.html" class="post-title-link" itemprop="url">一个程序员给初学编程人的建议</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-19 17:00:00 | Modified: 2020-10-19 17:12:31" itemprop="dateCreated datePublished" datetime="2020-10-19T17:00:00+08:00">2020-10-19 17:00:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
     
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/cms/archivers/39.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/39.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          本篇文章是作者多年来的一些感受，主要写给那些想学习程序设计而又很迷惘的朋友，希望可以带来一点帮助。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/39.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/38.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/38.html" class="post-title-link" itemprop="url">小花仙 对Flash页游截取4K级别高清图的方法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-11 09:30:00 | Modified: 2021-01-15 18:06:25" itemprop="dateCreated datePublished" datetime="2020-10-11T09:30:00+08:00">2020-10-11 09:30:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/cms/archivers/38.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/38.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          这是鄙人又摸索出来的一套解决方案，通过Chrome或Chromium的F12工具来截取高清截图。正如[鄙人此前在CSDN发布的笔记](https://blog.csdn.net/qq_35977139/article/details/108988838)一样，Chrome在62版本之后就已经原生支持了截取指定HTML节点的截图，国产浏览器只要不是太老的版本应该都是可以支持的。之前那个通过RDP远程桌面截图的方式实在太过于麻烦，鄙人现在这一套方法比使用远程桌面要简单不少。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/38.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/37.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/37.html" class="post-title-link" itemprop="url">【小花仙】笔记：Chrome 62 新增了对指定HTML元素截图的功能</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-10 23:30:00 | Modified: 2020-11-26 18:12:57" itemprop="dateCreated datePublished" datetime="2020-10-10T23:30:00+08:00">2020-10-10 23:30:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Moving-Away-from-Flash/" itemprop="url" rel="index"><span itemprop="name">Moving-Away-from-Flash</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/cms/archivers/37.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/37.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          Chrome 62在开发人员工具添加了新的功能和变动：
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/37.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/36.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/36.html" class="post-title-link" itemprop="url">重读《由C#风潮想起的－给初学编程者的忠告》有感</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-10-08 17:30:00 | Modified: 2020-10-08 17:40:06" itemprop="dateCreated datePublished" datetime="2020-10-08T17:30:00+08:00">2020-10-08 17:30:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/cms/archivers/36.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/36.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          我大约刚开始学编程时就看到这篇文章了（下面简称《C#风潮》），这是一篇被转载了上万次的名文，可参见这里 文章搜索。今天无意间又看到它，《C#风潮》显然是很不错的文章，作者列举学习中的实例包括自己的经历，将自己对技术学习的深刻理解，清晰地展示给我们，并指出了学习的方向。又一年就要过去了，现在重读，联想这几年的经历和认识的发展，我觉得有一些新的体会。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/36.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/35.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/35.html" class="post-title-link" itemprop="url">（已恢复）Valine评论失效 由于LeanCloud国际版通用域名失效</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-09-24 10:30:00 | Modified: 2020-09-28 09:26:27" itemprop="dateCreated datePublished" datetime="2020-09-24T10:30:00+08:00">2020-09-24 10:30:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Web-Building/" itemprop="url" rel="index"><span itemprop="name">Web-Building</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/cms/archivers/35.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/35.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          现在如果使用国际版LeanCloud作为Valine评论的后端的话则必须指定自定义服务器URL才能正常使用了。自定义服务器的URL需要到LeanCloud后台查看。打开后台之后进入Settings - App Keys，找到Domain whitelist，里面的Request domain里面的那个xxxxxxxx.api.lncldglobal.com就是你需要指定的服务器URL。其中xxxxxxxx就是各位的AppID的前8位字符。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/35.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/34.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/34.html" class="post-title-link" itemprop="url">初学编程者的良言警句</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-09-22 12:00:00 | Modified: 2020-09-21 12:18:47" itemprop="dateCreated datePublished" datetime="2020-09-22T12:00:00+08:00">2020-09-22 12:00:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Other/" itemprop="url" rel="index"><span itemprop="name">Other</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/cms/archivers/34.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/34.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          我始终认为，对一个初学者来说，IT界的技术风潮是不可以追赶的，而且也没有能力去追赶。我时常看 见自己的DDMM们把课本扔了，去卖些价格不菲的诸如C#, VB.Net 这样的大部头，这让我感到非常痛心。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/34.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/33.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/33.html" class="post-title-link" itemprop="url">博客推广及搜索引擎优化</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-09-18 17:30:00 | Modified: 2020-09-26 17:58:18" itemprop="dateCreated datePublished" datetime="2020-09-18T17:30:00+08:00">2020-09-18 17:30:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Web-Building/" itemprop="url" rel="index"><span itemprop="name">Web-Building</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/cms/archivers/33.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/33.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          想自己写的文章被别人看到？希望得到别人的评论肯定？渴望用自己写的文章照亮他人，给整个文明光能？那么这个就不可或缺了。你能看到这篇文章，很大程度上也是因为这个😏。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/33.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
   </article>
   
   
   
 
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/cms/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/cms/">1</a><span class="space">&hellip;</span><a class="page-number" href="/cms/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/cms/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/cms/page/9/">9</a><a class="extend next" rel="next" href="/cms/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
-
 
         </div>
         
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -1653,6 +883,9 @@ window.onload = function () {
   
 
   
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
 
   
 
