@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+
+<!-- MODIFIED BY 5972 -->
+  <script data-ad-client="ca-pub-3179887013052109" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+  <link rel="stylesheet" href="/cms/css/main.css">
+  <link rel="stylesheet" href="/cms/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/cms/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/api/css/share.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/No5972/Live2D@6/live2d/css/live2d.css" />
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1939188_d0c71y2xrhb.css">
+  <!-- <link rel="stylesheet" href="https://fonts.font.im/css?family=Noto%20Serif%20TC&display=swap&subset=latin,latin-ext"/> -->
+  <!-- <link rel="stylesheet" href="https://fonts.font.im/css?family=Noto%20Serif%20SC&display=swap&subset=latin,latin-ext"/> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-TC-CSS@4.0.0/noto_serif_tc_regular/css.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-TC-CSS@4.0.0/noto_serif_tc_bold/css.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-SC-CSS@4.0.0/noto_serif_sc_regular/css.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-SC-CSS@4.0.0/noto_serif_sc_bold/css.css"/>
+  <style>
+    #landlord {
+      bottom: -70px;
+      width: 200px;
+      height: 400px;
+    }
+    
+    #live2d {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/No5972/live2d-widget@20/autoload.js"></script> -->
+  
+  
+  <style>
+    @font-face
+    {
+      font-family: HappyZcool-2016;
+      src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@10/zcoolhappy_1630.6.woff'); /* IE9+ */
+    }
+
+    @font-face
+    {
+      font-family: CCKT;
+      src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@12/cckt.woff'); /* IE9+ */
+    }
+
+    
+    @font-face
+    {
+      font-family: DIN-Bold;
+      src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@10/din-bold-2.otf'); /* IE9+ */
+    }
+
+    @font-face
+    {
+        font-family: FreeSerif;
+        src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerif.otf');
+        font-style: normal;
+        font-weight: normal;
+    }
+	
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerif.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifBold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifItalic.otf');
+    font-style: italic;
+    font-weight: normal;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifBoldItalic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+    .message {
+      font-family: HappyZcool-2016;
+    }
+  </style> 
+  <style>
+    .pace .pace-progress {
+      background: #fff !important;
+    }
+  </style>
+<!-- MODIFIED BY 5972 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/cms/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/cms/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/cms/images/favicon.ico">
+  <link rel="mask-icon" href="/cms/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/cms/css/main.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+  
+  <link rel="stylesheet" href="/cms/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.min.css">
+  <script data-pace-options='{ "ajax": false }' src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"no5972.github.io","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="《大象》的第一章里作者提到了一个小游戏：小的时候，每个人各填一张纸条，丢进代表主体、地点、动作、客体的箱子中，再在里面分别抽一张组成一句完 整的话。因为很无聊，于是就写写看~ 功能很简单，就是可以输入主体、地点、动作、客体（也可以从文件导入，或是导出）。随机在列表中组成一句话。嗯，单击结果会自动复制到剪贴板。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="无聊之作——《随机组句》">
+<meta property="og:url" content="https://no5972.github.io/cms/archivers/85.html">
+<meta property="og:site_name" content="No.5972 Publishment Website">
+<meta property="og:description" content="《大象》的第一章里作者提到了一个小游戏：小的时候，每个人各填一张纸条，丢进代表主体、地点、动作、客体的箱子中，再在里面分别抽一张组成一句完 整的话。因为很无聊，于是就写写看~ 功能很简单，就是可以输入主体、地点、动作、客体（也可以从文件导入，或是导出）。随机在列表中组成一句话。嗯，单击结果会自动复制到剪贴板。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img.shields.io/badge/yahreso-%E6%97%A0%E8%81%8A%E4%B9%8B%E4%BD%9C%E3%80%82%E3%80%82%E9%9A%8F%E6%9C%BA%E7%BB%84%E5%8F%A5%E3%80%82%E3%80%82-brightgreen">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210401175912649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTc3MTM5,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2021-04-01T10:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-01T10:10:03.558Z">
+<meta property="article:author" content="No.5972">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.shields.io/badge/yahreso-%E6%97%A0%E8%81%8A%E4%B9%8B%E4%BD%9C%E3%80%82%E3%80%82%E9%9A%8F%E6%9C%BA%E7%BB%84%E5%8F%A5%E3%80%82%E3%80%82-brightgreen">
+
+<link rel="canonical" href="https://no5972.github.io/cms/archivers/85.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>无聊之作——《随机组句》 | No.5972 Publishment Website</title>
+  <script>
+      if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
+        window.onload = function () {
+          $("style,link").remove();
+        }
+        console.log("IE Found!");
+        
+      }
+
+  </script>
+  <script>
+function loadJS( url, callback ){
+    var script = document.createElement('script'),fn = callback || function(){};
+    script.type = 'text/javascript';
+    //IE
+    if(script.readyState){
+        script.onreadystatechange = function(){
+            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                script.onreadystatechange = null;
+                fn();
+            }
+        };
+    }else{
+        //其他浏览器
+        script.onload = function(){
+            fn();
+        };
+    }
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+
+
+
+  </script>
+  <style>
+#switchBackgroundBtn {
+ right: 30px;
+ opacity: 0 !important;
+ transition: opacity 0.5s;
+}
+
+#switchBackgroundBtn {
+
+} 
+
+#switchBackgroundBtn:hover {
+ opacity: 1 !important;
+} 
+
+@media (max-width: 991px) {
+ #switchBackgroundBtn {
+  right: 20px;
+ } 
+}
+  </style>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/cms/feed.xml" title="No.5972 Publishment Website" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <!-- <div style="position:fixed;width: 100%;height: 100%;background: url(https://cdndata.fairyabc.com/attachment/album/201809/06/161517g07y9z06yfunuuub.jpg);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none;" id="customBackground"></div> -->
+    <div style="position:fixed;width: 100%;height: 100%;background: url(https://img.paulzzh.tech/touhou/random);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none; display: none; filter: blur(3px)" id="randomBackground"></div>
+    <div style="position:fixed;width: 100%;height: 100%;background: url(https://cdn.jsdelivr.net/gh/No5972/Live2D@13/161517g07y9z06yfunuuub.jpg);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none; display: block;" id="customBackground"></div>
+    <div class="back-to-top1" id="switchBackgroundBtn" onclick="toggleRandomBackground()" style="bottom: 60px; box-sizing: border-box; color: #fff; padding: 0 6px; transition: bottom 0.2s ease-in-out; background: #007ff3; cursor: pointer; opacity: 0.6; position: fixed; z-index: 1300; width: 24px; font-size: 12px;"><i class="fa fa-paint-brush"></i></div>
+    <div id="cookie-alert" style="position: absolute; width: 100%; height: fit-content; background: white; left: 0; top: 0; display: none; z-index: 1000;">We use cookies to improve your experience on our website. By browsing this website, you agree to our use of cookies. <a href="#" onclick="agreeCookies()">OK</a>&nbsp;|&nbsp;<a href="/cms/cookie-notice">Learn More &gt;</a></div>
+    <script>
+      
+
+      if(!localStorage.getItem('mask')){
+       document.getElementById("cookie-alert").style.display = "block";
+      }
+
+      function refreshRandomBackgroundStatus() {
+       document.getElementById('randomBackground').style.display = "block";
+       if (localStorage.getItem('randomBackground') == 'true') {
+        document.getElementById('randomBackground').style.display = "block";
+        document.getElementById('customBackground').style.display = "none";
+       } else {
+        document.getElementById('randomBackground').style.display = "none";
+        document.getElementById('customBackground').style.display = "block";
+       }
+      }
+
+      function toggleRandomBackground() {
+       if (localStorage.getItem('randomBackground') == null || localStorage.getItem('randomBackground') == 'false') {
+        localStorage.setItem('randomBackground', 'true');
+       } else {
+        localStorage.setItem('randomBackground', 'false');
+       }
+       refreshRandomBackgroundStatus();
+      }
+
+      refreshRandomBackgroundStatus();
+      
+      function agreeCookies() {
+        document.getElementById("cookie-alert").style.display = "none";
+        localStorage.setItem('mask','true');
+      }
+
+      window.onload = function () {
+        // IE Alert
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+         var p = document.createElement("div");
+         p.style.color="#000";
+         p.style.position="absolute";
+         p.style.width="100%";
+         p.style.height="fit-content";
+         p.style.background="white";
+         p.style.left=0;
+         if(!localStorage.getItem('mask')){
+           p.style.top="32px";
+         } else {
+           p.style.top=0;
+         }
+         p.style.zIndex=1000;
+         p.innerHTML = 'Please note that this site no longer supports Internet Explorer. Please use <a href="https://www.microsoft.com/edge" target="_blank" rel="noopener">Microsoft Edge</a> or other browsers to browse this site.'
+         document.body.insertBefore(p, document.getElementsByClassName("cookie-alert")[0]);
+        }
+
+        const selects = document.querySelectorAll('.lang-select');
+        selects.forEach(sel => {
+          sel.addEventListener('change', () => {
+            const target = sel.options[sel.selectedIndex];
+            sessionStorage.setItem("lang", target.label);
+          });
+        });
+        
+        $("a[target=_blank]").each (function () { $(this).attr("onclick", "window.open('/cms/confirm.html?' + encodeURI($(this).attr(\"href\"))) ; return false;");} )
+
+        var pageLoadTime = new Date().getTime()  - window.performance.timing.navigationStart;
+        if (pageLoadTime > 10000 && location.pathname == "/cms/") {
+         loadJS("https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.min.js?v=" + new Date().getTime(), function () {
+          layer.msg('本次访问网站消耗了 ' + pageLoadTime + ' 毫秒，访问较慢，推荐访问国内镜像站 https://no5972.gitee.io ，访问更快。', {
+            time: 10000, //20s后自动关闭
+            btn: ['确认', '取消'],
+            yes: function () {
+              location.href="https://no5972.gitee.io/cms";
+            }
+          })
+         })
+        }
+      }
+
+      if (sessionStorage.getItem("lang") == "简体中文" && location.href.lastIndexOf("zh-CN") == -1) { 
+        location.href = location.href.replace("/cms/", "/cms/zh-CN/");
+      }
+
+/*
+window.onload = function () {
+	if (navigator.userAgent.lastIndexOf("Macintosh") != -1 || navigator.userAgent.lastIndexOf("Windows NT") != -1) {
+	if (navigator.platform.lastIndexOf("Linux arm") == -1) { // 手机浏览器不支持视频透明
+		var v = document.createElement("video");
+		v.src = "https://cdn.jsdelivr.net/gh/No5972/Live2D@master-1/2ce423abb276a932119.mp4";	
+		v.loop = true;
+		v.autoplay = true;
+		v.currentTime = 40;
+		$(v).css("height" ,"100%");
+		$(v).css("width" ,"100%");
+		$(v).css("object-fit" ,"fill");
+
+
+		$("#customBackground").html("");
+		$("#customBackground").append(v);
+		$("#customBackground").find("video")[0].play();
+	}
+	}
+}
+*/
+
+    </script>
+    <!-- <script>
+      (function(d) {
+        var config = {
+          kitId: 'cwe3tnz',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script> -->
+
+    <main class="main">
+
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/cms/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">No.5972 Publishment Website</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Easier than easy.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-return">
+
+    <a href="https://no5972.github.io/" rel="section"><i class="fa fa-reply fa-fw"></i>Return</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/cms/about.html" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/cms/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/cms/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-toolkit">
+
+    <a href="/cms/archivers/4.html" rel="section"><i class="fa fa-wrench fa-fw"></i>Toolkit</a>
+
+  </li>
+        <li class="menu-item menu-item-donate">
+
+    <a href="/cms/donate/" rel="section"><i class="fa fa-child fa-fw"></i>Donate</a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/cms/links/" rel="section"><i class="fa fa-link fa-fw"></i>Site Navigation</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar" style="background: #fff2; padding: 20px 0;">
+
+    <div class="sidebar-inner sidebar-overview-active" style="display: contents;">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="No.5972"
+      src="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
+  <p class="site-author-name" itemprop="name">No.5972</p>
+  <div class="site-description" itemprop="description">No.5972 is silly B</div>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/No5972" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;No5972" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/14547429/no-5972" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;14547429&#x2F;no-5972" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wujiuqier#foxmail.com" title="E-Mail → mailto:wujiuqier#foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/cms/feed.xml" title="RSS → &#x2F;feed.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_35977139" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_35977139" rel="noopener" target="_blank"><i class="iconfont icon-csdn_new fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/12551304" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;12551304" rel="noopener" target="_blank"><i class="iconfont icon-bilibili-fill fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://tieba.baidu.com/home/main?un=wujiuqier" title="Tieba → https:&#x2F;&#x2F;tieba.baidu.com&#x2F;home&#x2F;main?un&#x3D;wujiuqier" rel="noopener" target="_blank"><i class="iconfont icon-tieba fa-fw"></i></a>
+      </span>
+  </div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/cms/archives/">
+        
+          <span class="site-state-item-count">90</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+
+    
+                <nav class="site-nav">
+                  <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C/">C#</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Github/">Github</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Java/">Java</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/JavaScript/">JavaScript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Moving-Away-from-Flash/">Moving-Away-from-Flash</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Other/">Other</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Python/">Python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Server/">Server</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Web-Building/">Web-Building</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Webapp/">Webapp</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll/">jekyll</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll-update/">jekyll update</a><span class="category-list-count">1</span></li></ul>
+                </nav>
+                <nav class="site-nav" style="width: 80%; overflow-x: hidden;">
+                  <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/85.html" title="无聊之作——《随机组句》">无聊之作——《随机组句》</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/84.html" title="Node.js 将MEGA网盘的指定目录下载并打包成ZIP">Node.js 将MEGA网盘的指定目录下载并打包成ZIP</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/83.html" title="微云不限速下载方法 + 免费扩容">微云不限速下载方法 + 免费扩容</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/82.html" title="HTML JS 输入拼音的打字机效果">HTML JS 输入拼音的打字机效果</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/81.html" title="B站 URL转16进制防止评论贴URL被屏蔽">B站 URL转16进制防止评论贴URL被屏蔽</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/80.html" title="小花仙 通过远程Chrome远程调试来高清截图">小花仙 通过远程Chrome远程调试来高清截图</a></li></ul>
+                </nav>
+              
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/No5972" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/85.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
+      <meta itemprop="name" content="No.5972">
+      <meta itemprop="description" content="No.5972 is silly B">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="No.5972 Publishment Website">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+          无聊之作——《随机组句》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-04-01 18:00:00 | Modified: 2021-04-01 18:10:03" itemprop="dateCreated datePublished" datetime="2021-04-01T18:00:00+08:00">2021-04-01 18:00:00</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/cms/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/cms/archivers/85.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/85.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>来源：<a href="https://blog.csdn.net/yahreso/article/details/6489065" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/yahreso-%E6%97%A0%E8%81%8A%E4%B9%8B%E4%BD%9C%E3%80%82%E3%80%82%E9%9A%8F%E6%9C%BA%E7%BB%84%E5%8F%A5%E3%80%82%E3%80%82-brightgreen" alt="yahreso@CSDN-无聊之作。。随机组句。。" /></a></p>
+<p>《大象》的第一章里作者提到了一个小游戏：小的时候，每个人各填一张纸条，丢进代表主体、地点、动作、客体的箱子中，再在里面分别抽一张组成一句完 整的话。</p>
+<p>因为很无聊，于是就写写看~</p>
+<p>功能很简单，就是可以输入主体、地点、动作、客体（也可以从文件导入，或是导出）。随机在列表中组成一句话。</p>
+<p>嗯，单击结果会自动复制到剪贴板。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210401175912649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTc3MTM5,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.Dimension;</span><br><span class="line"><span class="keyword">import</span> java.awt.FlowLayout;</span><br><span class="line"><span class="keyword">import</span> java.awt.GridLayout;</span><br><span class="line"><span class="keyword">import</span> java.awt.Toolkit;</span><br><span class="line"><span class="keyword">import</span> java.awt.datatransfer.StringSelection;</span><br><span class="line"><span class="keyword">import</span> java.awt.event.ActionEvent;</span><br><span class="line"><span class="keyword">import</span> java.awt.event.ActionListener;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileNotFoundException;</span><br><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.PrintWriter;</span><br><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"><span class="keyword">import</span> java.util.Vector;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.swing.JButton;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JFileChooser;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JFrame;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JLabel;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JList;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JPanel;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JScrollPane;</span><br><span class="line"><span class="keyword">import</span> javax.swing.JTextField;</span><br><span class="line"><span class="keyword">import</span> javax.swing.ListSelectionModel;</span><br><span class="line"><span class="keyword">import</span> javax.swing.event.ListSelectionEvent;</span><br><span class="line"><span class="keyword">import</span> javax.swing.event.ListSelectionListener;</span><br><span class="line"><span class="keyword">import</span> javax.swing.filechooser.FileFilter;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> YOYO</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SuppressWarnings</span>(<span class="string">"serial"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RandomGame</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Labels' String</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String[] title = <span class="keyword">new</span> String[] &#123; <span class="string">"主体："</span>, <span class="string">"地点："</span>, <span class="string">"动作："</span>, <span class="string">"客体："</span> &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Text Field</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> JTextField[] field = <span class="keyword">new</span> JTextField[<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Buttons</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> JButton[] addBtn = <span class="keyword">new</span> JButton[<span class="number">4</span>];</span><br><span class="line">    <span class="keyword">private</span> JButton[] delBtn = <span class="keyword">new</span> JButton[<span class="number">4</span>];</span><br><span class="line">    <span class="keyword">private</span> JButton[] importBtn = <span class="keyword">new</span> JButton[<span class="number">4</span>];</span><br><span class="line">    <span class="keyword">private</span> JButton[] exportBtn = <span class="keyword">new</span> JButton[<span class="number">4</span>];</span><br><span class="line">    <span class="keyword">private</span> JButton generateBtn = <span class="keyword">new</span> JButton(<span class="string">"Generate"</span>);</span><br><span class="line">    <span class="keyword">private</span> JButton exportResultBtn = <span class="keyword">new</span> JButton(<span class="string">"Export Result"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Data Vector</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">    <span class="keyword">private</span> Vector[] data = <span class="keyword">new</span> Vector[<span class="number">4</span>];</span><br><span class="line">    <span class="keyword">private</span> Vector&lt;String&gt; history = <span class="keyword">new</span> Vector&lt;String&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * JList</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> JList[] list = <span class="keyword">new</span> JList[<span class="number">4</span>];</span><br><span class="line">    <span class="keyword">private</span> JList historyList = <span class="keyword">new</span> JList();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Result Field</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> JTextField result = <span class="keyword">new</span> JTextField(<span class="number">30</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Randomer</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Random randomer = <span class="keyword">new</span> Random();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RandomGame</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setTitle(<span class="string">"Random Game"</span>);</span><br><span class="line">        <span class="keyword">this</span>.setSize(<span class="number">630</span>, <span class="number">560</span>);</span><br><span class="line">        <span class="keyword">this</span>.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span><br><span class="line"></span><br><span class="line">        Toolkit tools = Toolkit.getDefaultToolkit();</span><br><span class="line">        <span class="keyword">int</span> screenWidth = tools.getScreenSize().width;</span><br><span class="line">        <span class="keyword">int</span> screenHeight = tools.getScreenSize().height;</span><br><span class="line">        <span class="keyword">this</span>.setLocation((screenWidth - <span class="keyword">this</span>.getWidth()) / <span class="number">2</span>,</span><br><span class="line">                (screenHeight - <span class="keyword">this</span>.getHeight()) / <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.fillComponents();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">fillComponents</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setLayout(<span class="keyword">new</span> FlowLayout(FlowLayout.CENTER));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// input Panel</span></span><br><span class="line">        <span class="keyword">this</span>.add(<span class="keyword">new</span> JPanel() &#123;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">this</span>.setPreferredSize(<span class="keyword">new</span> Dimension(<span class="number">630</span>, <span class="number">270</span>));</span><br><span class="line"></span><br><span class="line">                <span class="keyword">this</span>.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">1</span>, <span class="number">4</span>));</span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; ++i) &#123;</span><br><span class="line">                    <span class="keyword">final</span> <span class="keyword">int</span> j = i;</span><br><span class="line">                    <span class="keyword">this</span>.add(<span class="keyword">new</span> JPanel() &#123;</span><br><span class="line">                        &#123;</span><br><span class="line">                            <span class="keyword">this</span>.add(<span class="keyword">new</span> JLabel(title[j]));</span><br><span class="line"></span><br><span class="line">                            addBtn[j] = <span class="keyword">new</span> JButton(<span class="string">"+"</span>);</span><br><span class="line">                            <span class="keyword">this</span>.add(addBtn[j]);</span><br><span class="line"></span><br><span class="line">                            delBtn[j] = <span class="keyword">new</span> JButton(<span class="string">"-"</span>);</span><br><span class="line">                            <span class="keyword">this</span>.add(delBtn[j]);</span><br><span class="line"></span><br><span class="line">                            field[j] = <span class="keyword">new</span> JTextField(<span class="number">12</span>);</span><br><span class="line">                            <span class="keyword">this</span>.add(field[j]);</span><br><span class="line"></span><br><span class="line">                            data[j] = <span class="keyword">new</span> Vector&lt;String&gt;();</span><br><span class="line"></span><br><span class="line">                            addBtn[j].addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line"></span><br><span class="line">                                <span class="meta">@Override</span></span><br><span class="line">                                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent arg0)</span> </span>&#123;</span><br><span class="line">                                    String text = field[j].getText().trim();</span><br><span class="line">                                    importData(j, text);</span><br><span class="line">                                &#125;</span><br><span class="line"></span><br><span class="line">                            &#125;);</span><br><span class="line"></span><br><span class="line">                            delBtn[j].addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line"></span><br><span class="line">                                <span class="meta">@Override</span></span><br><span class="line">                                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent arg0)</span> </span>&#123;</span><br><span class="line">                                    String text = field[j].getText().trim();</span><br><span class="line">                                    <span class="keyword">if</span> (!text.isEmpty()</span><br><span class="line">                                            &amp;&amp; data[j].contains(text)) &#123;</span><br><span class="line">                                        data[j].remove(text);</span><br><span class="line">                                        list[j].setListData(data[j]);</span><br><span class="line">                                        field[j].setText(<span class="string">""</span>);</span><br><span class="line">                                        field[j].requestFocus();</span><br><span class="line">                                    &#125;</span><br><span class="line">                                &#125;</span><br><span class="line"></span><br><span class="line">                            &#125;);</span><br><span class="line"></span><br><span class="line">                            list[j] = <span class="keyword">new</span> JList();</span><br><span class="line">                            list[j]</span><br><span class="line">                                    .setSelectionMode(ListSelectionModel.SINGLE_SELECTION);</span><br><span class="line">                            list[j].setFixedCellWidth(<span class="number">130</span>);</span><br><span class="line">                            list[j].setFixedCellHeight(<span class="number">20</span>);</span><br><span class="line">                            list[j]</span><br><span class="line">                                    .addListSelectionListener(<span class="keyword">new</span> ListSelectionListener() &#123;</span><br><span class="line"></span><br><span class="line">                                        <span class="meta">@Override</span></span><br><span class="line">                                        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">valueChanged</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">                                                ListSelectionEvent e)</span> </span>&#123;</span><br><span class="line">                                            field[j].setText((String) list[j]</span><br><span class="line">                                                    .getSelectedValue());</span><br><span class="line">                                        &#125;</span><br><span class="line"></span><br><span class="line">                                    &#125;);</span><br><span class="line"></span><br><span class="line">                            JScrollPane pane = <span class="keyword">new</span> JScrollPane(list[j]);</span><br><span class="line">                            pane</span><br><span class="line">                                    .setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);</span><br><span class="line">                            pane</span><br><span class="line">                                    .setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);</span><br><span class="line">                            <span class="keyword">this</span>.add(pane);</span><br><span class="line"></span><br><span class="line">                            importBtn[j] = <span class="keyword">new</span> JButton(<span class="string">"Import"</span>);</span><br><span class="line">                            <span class="keyword">this</span>.add(importBtn[j]);</span><br><span class="line"></span><br><span class="line">                            exportBtn[j] = <span class="keyword">new</span> JButton(<span class="string">"Export"</span>);</span><br><span class="line">                            <span class="keyword">this</span>.add(exportBtn[j]);</span><br><span class="line"></span><br><span class="line">                            importBtn[j]</span><br><span class="line">                                    .addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line"></span><br><span class="line">                                        <span class="meta">@Override</span></span><br><span class="line">                                        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">                                                ActionEvent e)</span> </span>&#123;</span><br><span class="line">                                            JFileChooser chooser = <span class="keyword">new</span> JFileChooser();</span><br><span class="line">                                            chooser.removeChoosableFileFilter(chooser.getFileFilter());</span><br><span class="line">                                            chooser.addChoosableFileFilter(<span class="keyword">new</span> FileFilter() &#123;</span><br><span class="line"></span><br><span class="line">                                                <span class="meta">@Override</span></span><br><span class="line">                                                <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">accept</span><span class="params">(File file)</span> </span>&#123;</span><br><span class="line">                                                    <span class="keyword">if</span> (file.isDirectory()) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                                                    <span class="keyword">return</span> file.getName().endsWith(<span class="string">".txt"</span>);</span><br><span class="line">                                                &#125;</span><br><span class="line"></span><br><span class="line">                                                <span class="meta">@Override</span></span><br><span class="line">                                                <span class="function"><span class="keyword">public</span> String <span class="title">getDescription</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                                                    <span class="keyword">return</span> <span class="string">".txt"</span>;</span><br><span class="line">                                                &#125;</span><br><span class="line"></span><br><span class="line">                                            &#125;);</span><br><span class="line">                                            <span class="keyword">int</span> returnVal = chooser</span><br><span class="line">                                                    .showOpenDialog(RandomGame.<span class="keyword">this</span>);</span><br><span class="line">                                            <span class="keyword">if</span> (returnVal == JFileChooser.APPROVE_OPTION) &#123;</span><br><span class="line">                                                File file = chooser</span><br><span class="line">                                                        .getSelectedFile();</span><br><span class="line">                                                BufferedReader reader = <span class="keyword">null</span>;</span><br><span class="line">                                                <span class="keyword">try</span> &#123;</span><br><span class="line">                                                    reader = <span class="keyword">new</span> BufferedReader(</span><br><span class="line">                                                            <span class="keyword">new</span> FileReader(file));</span><br><span class="line">                                                    String line;</span><br><span class="line">                                                    <span class="keyword">while</span> ((line = reader</span><br><span class="line">                                                            .readLine()) != <span class="keyword">null</span>) &#123;</span><br><span class="line">                                                        importData(j, line);</span><br><span class="line">                                                    &#125;</span><br><span class="line">                                                &#125; <span class="keyword">catch</span> (FileNotFoundException e1) &#123;</span><br><span class="line">                                                    e1.printStackTrace();</span><br><span class="line">                                                &#125; <span class="keyword">catch</span> (IOException e2) &#123;</span><br><span class="line">                                                    e2.printStackTrace();</span><br><span class="line">                                                &#125;</span><br><span class="line">                                                <span class="keyword">try</span> &#123;</span><br><span class="line">                                                    reader.close();</span><br><span class="line">                                                &#125; <span class="keyword">catch</span> (IOException e1) &#123;</span><br><span class="line">                                                    e1.printStackTrace();</span><br><span class="line">                                                &#125;</span><br><span class="line">                                            &#125;</span><br><span class="line">                                        &#125;</span><br><span class="line"></span><br><span class="line">                                    &#125;);</span><br><span class="line"></span><br><span class="line">                            exportBtn[j]</span><br><span class="line">                                    .addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line"></span><br><span class="line">                                        <span class="meta">@Override</span></span><br><span class="line">                                        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">                                                ActionEvent e)</span> </span>&#123;</span><br><span class="line">                                            saveFile(data[j]);</span><br><span class="line">                                        &#125;</span><br><span class="line">                                    &#125;);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// result Panel</span></span><br><span class="line">        <span class="keyword">this</span>.add(<span class="keyword">new</span> JPanel() &#123;</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">this</span>.setPreferredSize(<span class="keyword">new</span> Dimension(<span class="number">600</span>, <span class="number">80</span>));</span><br><span class="line">                <span class="keyword">this</span>.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">2</span>, <span class="number">1</span>));</span><br><span class="line">                <span class="keyword">this</span>.add(<span class="keyword">new</span> JPanel() &#123;</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="keyword">this</span>.add(generateBtn);</span><br><span class="line">                        <span class="keyword">this</span>.add(exportResultBtn);</span><br><span class="line"></span><br><span class="line">                        generateBtn.addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line"></span><br><span class="line">                            <span class="meta">@Override</span></span><br><span class="line">                            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">                                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; ++i) &#123;</span><br><span class="line">                                    <span class="keyword">if</span> (data[i].size() &lt; <span class="number">1</span>) &#123;</span><br><span class="line">                                        result.setText(<span class="string">"请先填入内容"</span>);</span><br><span class="line">                                        <span class="keyword">return</span>;</span><br><span class="line">                                    &#125;</span><br><span class="line">                                &#125;</span><br><span class="line">                                String person = (String) data[<span class="number">0</span>].get(randomer</span><br><span class="line">                                        .nextInt(data[<span class="number">0</span>].size()));</span><br><span class="line">                                String address = (String) data[<span class="number">1</span>].get(randomer</span><br><span class="line">                                        .nextInt(data[<span class="number">1</span>].size()));</span><br><span class="line">                                String dosth = (String) data[<span class="number">2</span>].get(randomer</span><br><span class="line">                                        .nextInt(data[<span class="number">2</span>].size()));</span><br><span class="line">                                String object = (String) data[<span class="number">3</span>].get(randomer</span><br><span class="line">                                        .nextInt(data[<span class="number">3</span>].size()));</span><br><span class="line"></span><br><span class="line">                                result.setText(person + <span class="string">"在"</span> + address + dosth</span><br><span class="line">                                        + object);</span><br><span class="line"></span><br><span class="line">                                history.add(result.getText());</span><br><span class="line">                                historyList.setListData(history);</span><br><span class="line">                                <span class="keyword">int</span> rowIndex = history.size() - <span class="number">1</span>;</span><br><span class="line">                                historyList.scrollRectToVisible(historyList.getCellBounds(rowIndex,</span><br><span class="line">                                        rowIndex));</span><br><span class="line">                            &#125;</span><br><span class="line"></span><br><span class="line">                        &#125;);</span><br><span class="line"></span><br><span class="line">                        exportResultBtn.addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line"></span><br><span class="line">                            <span class="meta">@Override</span></span><br><span class="line">                            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">                                saveFile(history);</span><br><span class="line">                            &#125;</span><br><span class="line"></span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line"></span><br><span class="line">                result.setEditable(<span class="keyword">false</span>);</span><br><span class="line">                <span class="keyword">this</span>.add(result);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.add(<span class="keyword">new</span> JPanel() &#123;</span><br><span class="line">            &#123;</span><br><span class="line">                historyList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);</span><br><span class="line">                historyList.setFixedCellWidth(<span class="number">600</span>);</span><br><span class="line">                historyList.setFixedCellHeight(<span class="number">18</span>);</span><br><span class="line"></span><br><span class="line">                historyList.addListSelectionListener(<span class="keyword">new</span> ListSelectionListener() &#123;</span><br><span class="line"></span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">valueChanged</span><span class="params">(ListSelectionEvent e)</span> </span>&#123;</span><br><span class="line">                        StringSelection stsel = <span class="keyword">new</span> StringSelection((String) historyList.getSelectedValue());</span><br><span class="line">                        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stsel, stsel);</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;);</span><br><span class="line"></span><br><span class="line">                JScrollPane pane = <span class="keyword">new</span> JScrollPane(historyList);</span><br><span class="line">                pane</span><br><span class="line">                        .setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);</span><br><span class="line">                pane</span><br><span class="line">                        .setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);</span><br><span class="line">                <span class="keyword">this</span>.add(pane);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">importData</span><span class="params">(<span class="keyword">int</span> index, String text)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!text.isEmpty() &amp;&amp; !data[index].contains(text)) &#123;</span><br><span class="line">            data[index].add(text);</span><br><span class="line">            list[index].setListData(data[index]);</span><br><span class="line">            <span class="keyword">int</span> rowIndex = data[index].size() - <span class="number">1</span>;</span><br><span class="line">            list[index].scrollRectToVisible(list[index].getCellBounds(rowIndex,</span><br><span class="line">                    rowIndex));</span><br><span class="line">            field[index].setText(<span class="string">""</span>);</span><br><span class="line">            field[index].requestFocus();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">saveFile</span><span class="params">(Vector content)</span> </span>&#123;</span><br><span class="line">        JFileChooser chooser = <span class="keyword">new</span> JFileChooser();</span><br><span class="line">        chooser.removeChoosableFileFilter(chooser.getFileFilter());</span><br><span class="line">        chooser.addChoosableFileFilter(<span class="keyword">new</span> FileFilter() &#123;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">accept</span><span class="params">(File file)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (file.isDirectory()) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">return</span> file.getName().endsWith(<span class="string">".txt"</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> String <span class="title">getDescription</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">".txt"</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">int</span> returnVal = chooser.showSaveDialog(RandomGame.<span class="keyword">this</span>);</span><br><span class="line">        <span class="keyword">if</span> (returnVal == JFileChooser.APPROVE_OPTION) &#123;</span><br><span class="line">            File file = chooser.getSelectedFile();</span><br><span class="line">            PrintWriter writer = <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                String ext = <span class="string">""</span>;</span><br><span class="line">                <span class="keyword">if</span> (!file.getName().endsWith(<span class="string">".txt"</span>)) &#123;</span><br><span class="line">                    ext = <span class="string">".txt"</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                writer = <span class="keyword">new</span> PrintWriter(file.getPath() + ext);</span><br><span class="line">                <span class="keyword">for</span> (Object line : content) &#123;</span><br><span class="line">                    writer.write(line + <span class="string">"\r\n"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                writer.flush();</span><br><span class="line">                writer.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (FileNotFoundException e1) &#123;</span><br><span class="line">                e1.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> RandomGame();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>附几个txt：</p>
+<p>主体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">博丽灵梦</span><br><span class="line">雾雨魔理沙</span><br><span class="line">露米娅</span><br><span class="line">琪露诺</span><br><span class="line">红美铃</span><br><span class="line">帕秋莉诺蕾姬</span><br><span class="line">十六夜咲夜</span><br><span class="line">蕾米莉亚</span><br><span class="line">芙兰朵露</span><br></pre></td></tr></table></figure>
+<p>地点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">教室</span><br><span class="line">图书馆</span><br><span class="line">宿舍</span><br><span class="line">食堂</span><br><span class="line">实验室</span><br><span class="line">篮球场</span><br><span class="line">学生街</span><br><span class="line">健身房</span><br></pre></td></tr></table></figure>
+<p>动作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">吃</span><br><span class="line">喝</span><br><span class="line">玩</span><br><span class="line">打</span><br><span class="line">听</span><br><span class="line">说</span><br><span class="line">读</span><br><span class="line">写</span><br><span class="line">唱</span><br><span class="line">爬</span><br><span class="line">跑</span><br><span class="line">跳</span><br><span class="line">看</span><br><span class="line">养</span><br></pre></td></tr></table></figure>
+<p>客体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">房子</span><br><span class="line">小毛驴</span><br><span class="line">兔子</span><br><span class="line">游戏</span><br><span class="line">电脑</span><br><span class="line">牛排</span><br><span class="line">奶茶</span><br><span class="line">咖啡</span><br><span class="line">豆浆</span><br><span class="line">怪味豆</span><br><span class="line">苏打绿</span><br><span class="line">电视</span><br><span class="line">仓鼠</span><br><span class="line">课本</span><br><span class="line">MP3</span><br><span class="line">楼梯</span><br><span class="line">山</span><br><span class="line">程序</span><br><span class="line">论文</span><br><span class="line">CET6词汇</span><br><span class="line">PSP</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+         <div style="color: #888a; font-family: DIN-Bold; background: #eee5; padding: 10px; margin-bottom: 10px;">Publishing this article is for the purpose of conveying more information, and does not mean agreeing with its views or confirming its description, nor does it mean that we are responsible for its authenticity. Should you have any questions or doubts about the content of the post, please don't hesitate to contact us. We will respond to you and deal with it as quickly as possible.</div>
+
+      <footer class="post-footer">
+
+        
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1fe0947c0fa73a" async="async"></script>
+  </div>
+  <div class="ad" style="text-align: center;">
+    <a href="https://curl.qcloud.com/rU5hN2sp" target="_blank"><img src="//s3.ax1x.com/2021/01/25/sLsRbt.jpg"></img></a>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/cms/archivers/84.html" rel="prev" title="Node.js 将MEGA网盘的指定目录下载并打包成ZIP">
+      <i class="fa fa-chevron-left"></i> Node.js 将MEGA网盘的指定目录下载并打包成ZIP
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2011 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="author" itemprop="copyrightHolder">No.5972</span>
+</div>
+
+<div class="copyright" style="
+    vertical-align: middle;
+">
+<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/" style="
+    padding-right: 10px;
+    border: none;
+"><img alt="Creative Commons License" style="border-width:0;margin: unset;/* max-width: unset; */display: inline;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAABGdBTUEAANbY1E9YMgAAAJZQTFRF////7u7u3d3dys7KzMzMyMzIxsrGxcbFur+6u7u7s7iyq7GqqqqqmZmZlJmTj5CPiIiIh4eHhoaGgICAfYJ9d3d3cnZxZ2tnZmZmW15bVVVVS0xLREREQ0NDQkJCQUJBOz07OTs5MzMzMTMxLjAuJygnJCUjIiIiISEhICAgGRkZERERDxAPDg4ODQ4NDQ0NDQ0MAAAADbeuvgAAANNJREFUeNqtk2kTgiAQhl/KzlWzgw6j+7Ayq/3/f64hTPNLNskOMMwuPLzsAtiygWHVNJC0TThIXSrxierXv/UZoJ8E2SHqQNQeVgSuT7lqh2dEjXk14C2AE7ESiiMHakdU773igF5keu5AKXDEHUQhpIyF50LeiNotEzct4+XO78AxO0JXJdzqO8uEqNvMBKUaYcbXDD8qVNNYSA/yXlRYEISfFNI9gBvzVCje1rDYF3L4sf+d03Lg5my5yv6jnwGXRwvvkMY8SHmrS9WfYvsvW7YnkDuZd7/ChBQAAAAASUVORK5CYII="></a>
+    <p style="display:inline-block;margin:0;">Original content of this site, except those works that are given appropriate credits, is licensed under a<br> <a rel="license noopener" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</div>
+  <div class="powered-by">
+    <a href="/cms/cookie-notice">Cookie Notice</a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/No5972/cms_source" target="_blank" rel="noopener">Site Source</a>
+    &nbsp;|&nbsp;Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 4.2.1 & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 8.0.0-rc.4
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        UV: <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class=""></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        PV: <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span id="daysCount"></span>
+    <script>
+      document.getElementById("daysCount").innerText = " " + parseInt(Math.abs(new Date()  -  new Date("2018-11-14"))  /  1000  /  60  /  60  /24)   + " days since this blog's being founded";
+    </script>
+
+
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.5/source/js/utils.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.5/source/js/motion.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.5/source/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-next@8.0.0-rc.4/source/js/local-search.js"></script>
+
+
+
+<!-- public live2d -->
+<div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="550" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
+<div class="marquee-container" style="position: fixed; width: 100%; height: 30px; color: black; background-color: white; left: 0; bottom: 0;">
+<div class="marquee">推进创文常态化 共建文明襄阳城　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　做文明襄阳人 建文明襄阳城 凝聚文明正能量 筑梦千年古襄阳　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　创建全国文明城市 加快建设汉江流域中心城市　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　讲文明 树新风　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　用微笑融化陌生 用文明美化襄阳　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　争当文明使者 播撒文明新风</div>
+</div>
+<script>$('.marquee').marquee({duration: 25000});</script>
+
+<script type="text/javascript">
+    var message_Path = 'https://cdn.jsdelivr.net/gh/No5972/Live2D@24/live2d/'
+    var home_Path = 'https://no5972.github.io/cms/'  //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/No5972/Live2D@11/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/No5972/Live2D@11/live2d/js/message.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://cdn.jsdelivr.net/gh/QiShaoXuan/live2DModel@1.0.0/live2d-widget-model-miku/assets/miku.model.json");
+    $("#landlord").draggable();
+</script>
+<!-- public live2d -->
+
+
+
+<script>
+    $(document).on('mouseenter', 'button:contains(Donate)', function(){
+        $("#post-reward").show();
+    }).on('mouseleave', 'button:contains(Donate)', function(){
+        $("#post-reward").hide();
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
+
+  
+
+
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: location.pathname,
+    }, {"enable":true,"appId":"nOdccOqHtNBWpnoqXaBLw5Og-MdYXbMMI","appKey":"tYz6qEF31fk2WBHYsyO8RHQP","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"en","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":"https://nodccoqh.api.lncldglobal.com"}
+    ));
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
