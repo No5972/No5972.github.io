@@ -37,10 +37,17 @@ loadSprite("eb2", "sprites/eb2.png");
 loadSprite("enemy00", "sprites/enemy00.png");
 loadSprite("enemy01", "sprites/enemy01.png");
 loadSprite("hitpoint", "sprites/hitpoint.png");
-loadSprite("player00", "sprites/player00.png");
+loadSprite("player00", "sprites/player00.png", {
+  sliceX: 7,
+  sliceY: 5,
+  anims: {
+     idle: [0,1,2,3]
+  }
+});
 loadSprite("player01", "sprites/player01.png");
 loadSprite("point", "sprites/point.png");
 loadSprite("power", "sprites/power.png");
+loadSprite("smallpoint", "sprites/smallpoint.png");
 loadSprite("title00", "sprites/title00.jpg");
 loadSound("bossDestroy", "sounds/bossDestroy.wav");
 loadSound("fire", "sounds/fire.wav");
@@ -71,16 +78,19 @@ scene("gameover", (args = {}) => {
     })
 });
 scene("level1", (args = {}) => {
-	const BULLET_SPEED = 1000;
+  const BULLET_SPEED = 750;
   const ENEMY_BULLET_SPEED = 100;
-	const ENEMY_SPEED = 100;
-	const PLAYER_SPEED = 200;
+  const ENEMY_SPEED = 100;
+  const PLAYER_SPEED = 200;
   const INITIAL_POWERUP_POINT_SPEED = -60;
   const INITIAL_POWERUP_POWER_SPEED = -50;
+  const SMALL_POWERUP_POINT_SPEED = 1000;
 
   let isFiring = false;
   let power = 1.0;
   let position = 0;
+  let graze = 0;
+  let itemCount = 0;
   let life = 3;
   let isRespawning = false;
   let isInvincible = false;
@@ -149,12 +159,13 @@ scene("level1", (args = {}) => {
   
   // play("th06_02");
 
-	let player = add([
-		sprite("player01"),
-		pos(mapWidth() / 2, height() - 15),
-		scale(1),
+  let player = add([
+    sprite("player01"),
+    pos(mapWidth() / 2, height() - 15),
+    scale(1),
     "player"
-	]);
+  ]);
+  player.play("idle");
 
   let playerHitJudgePoint = add([
     sprite("hitpoint"),
@@ -172,87 +183,87 @@ scene("level1", (args = {}) => {
 
   let bossRunes = add([
     pos(5, 7),
-		text("Enemy 0"),
-		// all objects defaults origin to center, we want score text to be top left
-		origin("topleft"),
-		// plain objects becomes fields of score
-		{
-			value: 0,
-		},
+    text("Enemy 0"),
+    // all objects defaults origin to center, we want score text to be top left
+    origin("topleft"),
+    // plain objects becomes fields of score
+    {
+      value: 0,
+    },
   ]);
 
   bossHPBar.hidden = true;
   bossRunes.hidden = true;
 
-	keyDown("left", () => {
+  keyDown("left", () => {
     if (player.pos.x > 0) {
-		  player.move(-PLAYER_SPEED * (isFocusing ? 0.5 : 1), 0);
+      player.move(-PLAYER_SPEED * (isFocusing ? 0.5 : 1), 0);
     } else {
       player.pos.x = 0;
     }
-	});
+  });
 
-	keyDown("right", () => {
+  keyDown("right", () => {
     if (player.pos.x < mapWidth()) {
-		  player.move(PLAYER_SPEED * (isFocusing ? 0.5 : 1), 0);
+      player.move(PLAYER_SPEED * (isFocusing ? 0.5 : 1), 0);
     } else {
       player.pos.x = mapWidth();
     }
-	});
+  });
 
   keyDown("up", () => {
     if (player.pos.y > 0) {
-		  player.move(0, -PLAYER_SPEED * (isFocusing ? 0.5 : 1));
+      player.move(0, -PLAYER_SPEED * (isFocusing ? 0.5 : 1));
     } else {
       player.pos.y = 0;
     }
-	});
+  });
 
   keyDown("down", () => {
     if (player.pos.y < height()) {
-		  player.move(0, PLAYER_SPEED * (isFocusing ? 0.5 : 1));
+      player.move(0, PLAYER_SPEED * (isFocusing ? 0.5 : 1));
     } else {
       player.pos.y = height();
     }
-	});
+  });
 
-  keyDown("z", () => { isFiring = true; });
+  keyDown("x", () => { isFiring = true; });
 
-  keyRelease("z", () => { isFiring = false; });
+  keyRelease("x", () => { isFiring = false; });
 
-  keyDown("shift", () => { isFocusing = true;});
+  keyDown("z", () => { isFocusing = true;});
 
-  keyRelease("shift", () => { isFocusing = false;}); // shift key has issues
+  keyRelease("z", () => { isFocusing = false;}); // shift key has issues
 
 /*
-	keyPress("space", () => {
-		add([
-			sprite("bullet00"),
-			pos(player.pos),
-			// strings here means a tag
-			"bullet",
-		]);
-	});
+  keyPress("space", () => {
+    add([
+      sprite("bullet00"),
+      pos(player.pos),
+      // strings here means a tag
+      "bullet",
+    ]);
+  });
 */
-	// run this callback every frame for all objects with tag "bullet"
-	action("bullet", (b) => {
-		b.move(Math.cos(b.direction) * BULLET_SPEED, -Math.sin(b.direction) * BULLET_SPEED);
-		// remove the bullet if it's out of the scene for performance
-		if (b.pos.y < 0 || b.pos.x < 0 || b.pos.x > mapWidth()) {
-			destroy(b);
-		}
-	});
+  // run this callback every frame for all objects with tag "bullet"
+  action("bullet", (b) => {
+    b.move(Math.cos(b.direction) * BULLET_SPEED, -Math.sin(b.direction) * BULLET_SPEED);
+    // remove the bullet if it's out of the scene for performance
+    if (b.pos.y < 0 || b.pos.x < 0 || b.pos.x > mapWidth()) {
+      destroy(b);
+    }
+  });
 
-	function spawnEnemyA() { return add([	sprite("enemy00"),	pos(rand(0, mapWidth()), 0), "enemyA", {
+  function spawnEnemyA() { return add([  sprite("enemy00"),  pos(rand(0, mapWidth()), 0), "enemyA", {
     time: 0
   }]);}
-  function spawnEnemyB() { return add([	sprite("enemy00"),	pos(0, 48), "enemyB", {
+  function spawnEnemyB() { return add([  sprite("enemy00"),  pos(0, 48), "enemyB", {
     time: 0
   }]);}
-  function spawnEnemyC() { return add([	sprite("enemy00"),	pos(mapWidth(), 48), "enemyC", {
+  function spawnEnemyC() { return add([  sprite("enemy00"),  pos(mapWidth(), 48), "enemyC", {
     time: 0
   }]);}
-  function spawnEnemyD() { return add([	sprite("enemy01"),	pos(rand(0, mapWidth()), 0), "enemyD", {
+  function spawnEnemyD() { return add([  sprite("enemy01"),  pos(rand(0, mapWidth()), 0), "enemyD", {
     time: 0
   }]);}
 
@@ -334,20 +345,22 @@ scene("level1", (args = {}) => {
       if ((e.time - e.damaku[0][x].begin) % e.damaku[0][x].interval == 0) {
         play("se_tan01", {volume: 0.02});
         if (e.damaku[e.maxRune - e.rune][x].direction != null) {
-          add([	
-            sprite(e.damaku[e.maxRune - e.rune][x].sprite),	
+          add([  
+            sprite(e.damaku[e.maxRune - e.rune][x].sprite),  
             pos(e.pos.x, e.pos.y), "bossBullet1", {
               direction: e.damaku[e.maxRune - e.rune][x].direction,
-              speed: e.damaku[e.maxRune - e.rune][x].speed
+              speed: e.damaku[e.maxRune - e.rune][x].speed,
+              isGrazed: false
             }
           ]);
         } else {
-          add([	
-            sprite(e.damaku[e.maxRune - e.rune][x].sprite),	
+          add([  
+            sprite(e.damaku[e.maxRune - e.rune][x].sprite),  
             rotate(getDirection(e.pos.x, e.pos.y)) , 
             pos(e.pos.x, e.pos.y), "bossBullet1", {
               direction: getDirection(e.pos.x, e.pos.y),
-              speed: e.damaku[e.maxRune - e.rune][x].speed
+              speed: e.damaku[e.maxRune - e.rune][x].speed,
+              isGrazed: false
             }
           ]);
         }
@@ -361,9 +374,10 @@ scene("level1", (args = {}) => {
     destroy(bullet);
     bossHPBar.width = MAX_BOSS_HP_BAR_WIDTH * boss.life / boss.maxLife;
     score.value += 11;
-		score.text = "Score   " + score.value;
+    score.text = "Score   " + score.value;
     if (boss.life <= 0) {
       play("bossDestroy", {volume : 0.7});
+      convertAllBullets();
       destroy(boss);
       bossHPBar.hidden = true;
       bossRunes.hidden = true;
@@ -453,20 +467,22 @@ scene("level1", (args = {}) => {
       if ((e.time - e.damaku[e.maxRune - e.rune][x].begin) % e.damaku[e.maxRune - e.rune][x].interval == 0) {
         play("se_tan01", {volume: 0.05});
         if (e.damaku[e.maxRune - e.rune][x].direction != null) {
-          add([	
-            sprite(e.damaku[e.maxRune - e.rune][x].sprite),	
+          add([  
+            sprite(e.damaku[e.maxRune - e.rune][x].sprite),  
             pos(e.pos.x, e.pos.y), "bossBullet1", {
               direction: e.damaku[e.maxRune - e.rune][x].direction,
-              speed: e.damaku[e.maxRune - e.rune][x].speed
+              speed: e.damaku[e.maxRune - e.rune][x].speed,
+              isGrazed: false
             }
           ]);
         } else {
-          add([	
-            sprite(e.damaku[e.maxRune - e.rune][x].sprite),	
+          add([  
+            sprite(e.damaku[e.maxRune - e.rune][x].sprite),  
             rotate(getDirection(e.pos.x, e.pos.y) - e.damaku[e.maxRune - e.rune][x].directionOffset + Math.PI / 2) , 
             pos(e.pos.x, e.pos.y), "bossBullet1", {
               direction: Math.PI - getDirection(e.pos.x, e.pos.y) + e.damaku[e.maxRune - e.rune][x].directionOffset,
-              speed: e.damaku[e.maxRune - e.rune][x].speed
+              speed: e.damaku[e.maxRune - e.rune][x].speed,
+              isGrazed: false
             }
           ]);
         }
@@ -479,8 +495,9 @@ scene("level1", (args = {}) => {
     destroy(bullet);
     bossHPBar.width = MAX_BOSS_HP_BAR_WIDTH * boss.life / boss.maxLife;
     score.value += 11;
-		score.text = "Score   " + score.value;
+    score.text = "Score   " + score.value;
     if (boss.life <= 0) {
+      convertAllBullets();
       play("bossDestroy", {volume : 0.5});
       if (boss.rune <= 1) {
         destroy(boss);
@@ -488,12 +505,16 @@ scene("level1", (args = {}) => {
         bossRunes.hidden = true;
         isBossExist = false;
         bgm.pause();
-        // debugger;
-        go("levelup", {
-          score: score,
-          life: life,
-          power: power
-        });
+        setTimeout(() => {
+          go("levelup", {
+            initScore: score.value,
+            life: life,
+            power: power,
+            graze: graze,
+            itemCount: itemCount,
+            nextLevel: 2
+          });
+        }, 2000);
       } else {
         boss.rune--;
         bossRunes.text = "Enemy " + (boss.rune - 1);
@@ -502,8 +523,38 @@ scene("level1", (args = {}) => {
     }
   });
 
-  function convertAllBullets() { // when defeating a rune of a boss
+  action("small-powerup-point", (e) => {
+    var dx = player.pos.x - e.pos.x;
+    var dy = player.pos.y - e.pos.y;
+    var distance = Math.hypot(dx, dy);
+    e.move(SMALL_POWERUP_POINT_SPEED * dx / distance, SMALL_POWERUP_POINT_SPEED * dy / distance);
+  });
 
+  collides("player", "small-powerup-point", (p, pp) => {
+    if (isRespawning) { return; }
+    play("pick", {volume: 0.5});
+    let getScore = parseInt(100 + height() - p.pos.y);
+    if (getScore > 800) {
+      getScore = 800;
+    }
+    getScore /= 10;
+    getScore = Math.floor(getScore);
+    score.value += getScore;
+    score.text = "Score   " + score.value;
+
+    destroy(pp);
+  });
+
+  function convertAllBullets() { // when defeating a rune of a boss
+    every("bossBullet1", (e) => { 
+      add([
+        sprite("smallpoint"),
+        pos(e.pos),
+        // strings here means a tag
+        "small-powerup-point"
+      ]);
+      destroy(e);
+    });
   }
 
   function removeAllBullets() { // bomb
@@ -524,16 +575,16 @@ scene("level1", (args = {}) => {
     color(0, 0, 0),
   ]);
 
-	const score = add([
-		pos(width() - 200, 12),
-		text("Score   0"),
-		// all objects defaults origin to center, we want score text to be top left
-		origin("topleft"),
-		// plain objects becomes fields of score
-		{
-			value: 0,
-		},
-	]);
+  const score = add([
+    pos(width() - 200, 12),
+    text("Score   0"),
+    // all objects defaults origin to center, we want score text to be top left
+    origin("topleft"),
+    // plain objects becomes fields of score
+    {
+      value: 0,
+    },
+  ]);
 
   const powerText = add([
     pos(width() - 200, 20),
@@ -549,12 +600,26 @@ scene("level1", (args = {}) => {
     {}
   ])
 
+  const grazeText = add([
+    pos(width() - 200, 36),
+    text("Graze   " + graze),
+    origin("topleft"),
+    {}
+  ])
+
+  const itemText = add([
+    pos(width() - 200, 44),
+    text("Items   " + itemCount),
+    origin("topleft"),
+    {}
+  ])
+
   function defeatAnEnemy(b, e) {
     play("kill", {volume: 0.3});
-		destroy(b);
-		destroy(e);
-		score.value += 100;
-		score.text = "Score   " + score.value;
+    destroy(b);
+    destroy(e);
+    score.value += 100;
+    score.text = "Score   " + score.value;
 
     let rand = Math.random();
     if (rand > 0.6) {
@@ -578,8 +643,8 @@ scene("level1", (args = {}) => {
     }
   }
 
-	// if a "bullet" and a "enemy" collides, remove both of them
-	collides("bullet", "enemyA", (b, e) => { defeatAnEnemy(b, e); });
+  // if a "bullet" and a "enemy" collides, remove both of them
+  collides("bullet", "enemyA", (b, e) => { defeatAnEnemy(b, e); });
   collides("bullet", "enemyB", (b, e) => { defeatAnEnemy(b, e); });
   collides("bullet", "enemyC", (b, e) => { defeatAnEnemy(b, e); });
   collides("bullet", "enemyD", (b, e) => { defeatAnEnemy(b, e); });
@@ -594,6 +659,8 @@ scene("level1", (args = {}) => {
     }
     score.value += getScore;
     score.text = "Score   " + score.value;
+    itemCount++;
+    itemText.text = "Items   " + itemCount;
     destroy(pp);
   });
 
@@ -650,77 +717,95 @@ scene("level1", (args = {}) => {
   collides("playerHitJudgePoint", "enemyB", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyC", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyD", (e, eb) => { playerHit(e, eb); });
+
+  function playerGraze(player, bullet) {
+    if (!bullet.isGrazed) {
+      bullet.isGrazed = true;
+      graze++;
+      grazeText.text = "Graze   " + graze;
+      score.value += 10;
+      score.text = "Score   " + score.value;
+    }
+  }
+
+  collides("player", "enemyBullet1", (e, eb) => { playerGraze(e, eb); });
+  collides("player", "enemyBullet2", (e, eb) => { playerGraze(e, eb); });
+  collides("player", "bossBullet1", (e, eb) => { playerGraze(e, eb); });
   
 
-	action("enemyA", (e) => {
-		e.move(0, ENEMY_SPEED);
+  action("enemyA", (e) => {
+    e.move(0, ENEMY_SPEED);
     e.time++;
     if (e.time == 50) { // enemy shoot
-      add([	
+      add([  
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
         pos(e.pos.x, e.pos.y), 
         "enemyBullet2", {
-          direction: getDirection(e.pos.x, e.pos.y)
+          direction: getDirection(e.pos.x, e.pos.y),
+          isGrazed: false
         }
       ]);
     }
-		if (e.pos.y > height()) {
-			destroy(e);
-		}
-	});
+    if (e.pos.y > height()) {
+      destroy(e);
+    }
+  });
 
   action("enemyB", (e) => {
-		e.move(ENEMY_SPEED, 0);
+    e.move(ENEMY_SPEED, 0);
     e.time++;
     if (e.time == 50) { // enemy shoot
-      add([	
+      add([  
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
         pos(e.pos.x, e.pos.y), 
         "enemyBullet2", {
-          direction: getDirection(e.pos.x, e.pos.y)
+          direction: getDirection(e.pos.x, e.pos.y),
+          isGrazed: false
         }
       ]);
     }
-		if (e.pos.x > mapWidth()) {
-			destroy(e);
-		}
-	});
+    if (e.pos.x > mapWidth()) {
+      destroy(e);
+    }
+  });
 
   action("enemyC", (e) => {
     e.time++;
-		e.move(-ENEMY_SPEED, 0);
+    e.move(-ENEMY_SPEED, 0);
     if (e.time == 50) { // enemy shoot
-      add([	
+      add([  
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
         pos(e.pos.x, e.pos.y), 
         "enemyBullet2", {
-          direction: getDirection(e.pos.x, e.pos.y)
+          direction: getDirection(e.pos.x, e.pos.y),
+          isGrazed: false
         }
       ]);
     }
-		if (e.pos.x < 0) {
-			destroy(e);
-		}
-	});
+    if (e.pos.x < 0) {
+      destroy(e);
+    }
+  });
 
   action("enemyD", (e) => {
-		e.move(0, ENEMY_SPEED);
+    e.move(0, ENEMY_SPEED);
     e.time++;
     if (e.time % 100 == 0) { // enemy shoot
       let randDirection = rand(0, Math.PI * 2);
       for (let i = 0; i < 6; i ++) {
-        add([	sprite("eb1"),	pos(e.pos.x, e.pos.y), "enemyBullet1", {
-          direction: randDirection + ((Math.PI / 3) * i)
+        add([  sprite("eb1"),  pos(e.pos.x, e.pos.y), "enemyBullet1", {
+          direction: randDirection + ((Math.PI / 3) * i),
+          isGrazed: false
         }]);
       }
     }
-		if (e.pos.y > height()) {
-			destroy(e);
-		}
-	});
+    if (e.pos.y > height()) {
+      destroy(e);
+    }
+  });
 
   action("powerup-point", (pp) => {
     let currentSpeed = INITIAL_POWERUP_POINT_SPEED;
@@ -767,8 +852,8 @@ scene("level1", (args = {}) => {
     playerHitJudgePoint.pos.y = p.pos.y - 2;
   });
 
-	// spawn an enemy every 1 second
-	loop(0.3, () => {
+  // spawn an enemy every 1 second
+  loop(0.3, () => {
     if (!isBossExist) {
       position++;
     }
@@ -798,18 +883,21 @@ scene("level1", (args = {}) => {
     } 
   });
 });
-scene("level2", (args = {}) => {
-	const BULLET_SPEED = 1000;
+scene("level2", (args) => {
+  const BULLET_SPEED = 1000;
   const ENEMY_BULLET_SPEED = 100;
-	const ENEMY_SPEED = 100;
-	const PLAYER_SPEED = 200;
+  const ENEMY_SPEED = 100;
+  const PLAYER_SPEED = 200;
   const INITIAL_POWERUP_POINT_SPEED = -60;
   const INITIAL_POWERUP_POWER_SPEED = -50;
+  const SMALL_POWERUP_POINT_SPEED = 1000;
 
   let isFiring = false;
-  let power = 1.0;
+  let power = args.power;
   let position = 0;
-  let life = 3;
+  let graze = args.graze;
+  let life = args.life;
+  let itemCount = args.itemCount;
   let isRespawning = false;
   let isInvincible = false;
   let isFocusing = false;
@@ -821,7 +909,7 @@ scene("level2", (args = {}) => {
 
   bgm.ontimeupdate = function () {
     if (bgm.currentTime >= bgm.duration - 0.2) {
-      bgm.currentTime = 21;
+      bgm.currentTime = 7.5;
       bgm.play();
     }
   }
@@ -877,12 +965,12 @@ scene("level2", (args = {}) => {
   
   // play("th06_02");
 
-	let player = add([
-		sprite("player01"),
-		pos(mapWidth() / 2, height() - 15),
-		scale(1),
+  let player = add([
+    sprite("player01"),
+    pos(mapWidth() / 2, height() - 15),
+    scale(1),
     "player"
-	]);
+  ]);
 
   let playerHitJudgePoint = add([
     sprite("hitpoint"),
@@ -900,87 +988,87 @@ scene("level2", (args = {}) => {
 
   let bossRunes = add([
     pos(5, 7),
-		text("Enemy 0"),
-		// all objects defaults origin to center, we want score text to be top left
-		origin("topleft"),
-		// plain objects becomes fields of score
-		{
-			value: 0,
-		},
+    text("Enemy 0"),
+    // all objects defaults origin to center, we want score text to be top left
+    origin("topleft"),
+    // plain objects becomes fields of score
+    {
+      value: 0,
+    },
   ]);
 
   bossHPBar.hidden = true;
   bossRunes.hidden = true;
 
-	keyDown("left", () => {
+  keyDown("left", () => {
     if (player.pos.x > 0) {
-		  player.move(-PLAYER_SPEED * (isFocusing ? 0.5 : 1), 0);
+      player.move(-PLAYER_SPEED * (isFocusing ? 0.5 : 1), 0);
     } else {
       player.pos.x = 0;
     }
-	});
+  });
 
-	keyDown("right", () => {
+  keyDown("right", () => {
     if (player.pos.x < mapWidth()) {
-		  player.move(PLAYER_SPEED * (isFocusing ? 0.5 : 1), 0);
+      player.move(PLAYER_SPEED * (isFocusing ? 0.5 : 1), 0);
     } else {
       player.pos.x = mapWidth();
     }
-	});
+  });
 
   keyDown("up", () => {
     if (player.pos.y > 0) {
-		  player.move(0, -PLAYER_SPEED * (isFocusing ? 0.5 : 1));
+      player.move(0, -PLAYER_SPEED * (isFocusing ? 0.5 : 1));
     } else {
       player.pos.y = 0;
     }
-	});
+  });
 
   keyDown("down", () => {
     if (player.pos.y < height()) {
-		  player.move(0, PLAYER_SPEED * (isFocusing ? 0.5 : 1));
+      player.move(0, PLAYER_SPEED * (isFocusing ? 0.5 : 1));
     } else {
       player.pos.y = height();
     }
-	});
+  });
 
-  keyDown("z", () => { isFiring = true; });
+  keyDown("x", () => { isFiring = true; });
 
-  keyRelease("z", () => { isFiring = false; });
+  keyRelease("x", () => { isFiring = false; });
 
-  keyDown("shift", () => { isFocusing = true;});
+  keyDown("z", () => { isFocusing = true;});
 
-  keyRelease("shift", () => { isFocusing = false;}); // shift key has issues
+  keyRelease("z", () => { isFocusing = false;}); // shift key has issues
 
 /*
-	keyPress("space", () => {
-		add([
-			sprite("bullet00"),
-			pos(player.pos),
-			// strings here means a tag
-			"bullet",
-		]);
-	});
+  keyPress("space", () => {
+    add([
+      sprite("bullet00"),
+      pos(player.pos),
+      // strings here means a tag
+      "bullet",
+    ]);
+  });
 */
-	// run this callback every frame for all objects with tag "bullet"
-	action("bullet", (b) => {
-		b.move(Math.cos(b.direction) * BULLET_SPEED, -Math.sin(b.direction) * BULLET_SPEED);
-		// remove the bullet if it's out of the scene for performance
-		if (b.pos.y < 0 || b.pos.x < 0 || b.pos.x > mapWidth()) {
-			destroy(b);
-		}
-	});
+  // run this callback every frame for all objects with tag "bullet"
+  action("bullet", (b) => {
+    b.move(Math.cos(b.direction) * BULLET_SPEED, -Math.sin(b.direction) * BULLET_SPEED);
+    // remove the bullet if it's out of the scene for performance
+    if (b.pos.y < 0 || b.pos.x < 0 || b.pos.x > mapWidth()) {
+      destroy(b);
+    }
+  });
 
-	function spawnEnemyA() { return add([	sprite("enemy00"),	pos(rand(0, mapWidth()), 0), "enemyA", {
+  function spawnEnemyA() { return add([  sprite("enemy00"),  pos(rand(0, mapWidth()), 0), "enemyA", {
     time: 0
   }]);}
-  function spawnEnemyB() { return add([	sprite("enemy00"),	pos(0, 48), "enemyB", {
+  function spawnEnemyB() { return add([  sprite("enemy00"),  pos(0, 48), "enemyB", {
     time: 0
   }]);}
-  function spawnEnemyC() { return add([	sprite("enemy00"),	pos(mapWidth(), 48), "enemyC", {
+  function spawnEnemyC() { return add([  sprite("enemy00"),  pos(mapWidth(), 48), "enemyC", {
     time: 0
   }]);}
-  function spawnEnemyD() { return add([	sprite("enemy01"),	pos(rand(0, mapWidth()), 0), "enemyD", {
+  function spawnEnemyD() { return add([  sprite("enemy01"),  pos(rand(0, mapWidth()), 0), "enemyD", {
     time: 0
   }]);}
 
@@ -1062,20 +1150,22 @@ scene("level2", (args = {}) => {
       if ((e.time - e.damaku[0][x].begin) % e.damaku[0][x].interval == 0) {
         play("se_tan01", {volume: 0.02});
         if (e.damaku[e.maxRune - e.rune][x].direction != null) {
-          add([	
-            sprite(e.damaku[e.maxRune - e.rune][x].sprite),	
+          add([  
+            sprite(e.damaku[e.maxRune - e.rune][x].sprite),  
             pos(e.pos.x, e.pos.y), "bossBullet1", {
               direction: e.damaku[e.maxRune - e.rune][x].direction,
-              speed: e.damaku[e.maxRune - e.rune][x].speed
+              speed: e.damaku[e.maxRune - e.rune][x].speed,
+              isGrazed: false
             }
           ]);
         } else {
-          add([	
-            sprite(e.damaku[e.maxRune - e.rune][x].sprite),	
+          add([  
+            sprite(e.damaku[e.maxRune - e.rune][x].sprite),  
             rotate(getDirection(e.pos.x, e.pos.y)) , 
             pos(e.pos.x, e.pos.y), "bossBullet1", {
               direction: getDirection(e.pos.x, e.pos.y),
-              speed: e.damaku[e.maxRune - e.rune][x].speed
+              speed: e.damaku[e.maxRune - e.rune][x].speed,
+              isGrazed: false
             }
           ]);
         }
@@ -1089,9 +1179,10 @@ scene("level2", (args = {}) => {
     destroy(bullet);
     bossHPBar.width = MAX_BOSS_HP_BAR_WIDTH * boss.life / boss.maxLife;
     score.value += 11;
-		score.text = "Score   " + score.value;
+    score.text = "Score   " + score.value;
     if (boss.life <= 0) {
       play("bossDestroy", {volume : 0.7});
+      convertAllBullets();
       destroy(boss);
       bossHPBar.hidden = true;
       bossRunes.hidden = true;
@@ -1181,20 +1272,22 @@ scene("level2", (args = {}) => {
       if ((e.time - e.damaku[e.maxRune - e.rune][x].begin) % e.damaku[e.maxRune - e.rune][x].interval == 0) {
         play("se_tan01", {volume: 0.05});
         if (e.damaku[e.maxRune - e.rune][x].direction != null) {
-          add([	
-            sprite(e.damaku[e.maxRune - e.rune][x].sprite),	
+          add([  
+            sprite(e.damaku[e.maxRune - e.rune][x].sprite),  
             pos(e.pos.x, e.pos.y), "bossBullet1", {
               direction: e.damaku[e.maxRune - e.rune][x].direction,
-              speed: e.damaku[e.maxRune - e.rune][x].speed
+              speed: e.damaku[e.maxRune - e.rune][x].speed,
+              isGrazed: false
             }
           ]);
         } else {
-          add([	
-            sprite(e.damaku[e.maxRune - e.rune][x].sprite),	
+          add([  
+            sprite(e.damaku[e.maxRune - e.rune][x].sprite),  
             rotate(getDirection(e.pos.x, e.pos.y) - e.damaku[e.maxRune - e.rune][x].directionOffset + Math.PI / 2) , 
             pos(e.pos.x, e.pos.y), "bossBullet1", {
               direction: Math.PI - getDirection(e.pos.x, e.pos.y) + e.damaku[e.maxRune - e.rune][x].directionOffset,
-              speed: e.damaku[e.maxRune - e.rune][x].speed
+              speed: e.damaku[e.maxRune - e.rune][x].speed,
+              isGrazed: false
             }
           ]);
         }
@@ -1207,8 +1300,9 @@ scene("level2", (args = {}) => {
     destroy(bullet);
     bossHPBar.width = MAX_BOSS_HP_BAR_WIDTH * boss.life / boss.maxLife;
     score.value += 11;
-		score.text = "Score   " + score.value;
+    score.text = "Score   " + score.value;
     if (boss.life <= 0) {
+      convertAllBullets();
       play("bossDestroy", {volume : 0.5});
       if (boss.rune <= 1) {
         destroy(boss);
@@ -1217,11 +1311,16 @@ scene("level2", (args = {}) => {
         isBossExist = false;
         bgm.pause();
         // debugger;
-        go("levelup", {
-          score: score,
-          life: life,
-          power: power
-        });
+        setTimeout(() => {
+          go("levelup", {
+            initScore: score.value,
+            life: life,
+            power: power,
+            graze: graze,
+            itemCount: itemCount,
+            nextLevel: 2
+          });
+        }, 2000);
       } else {
         boss.rune--;
         bossRunes.text = "Enemy " + (boss.rune - 1);
@@ -1230,8 +1329,38 @@ scene("level2", (args = {}) => {
     }
   });
 
-  function convertAllBullets() { // when defeating a rune of a boss
+  action("small-powerup-point", (e) => {
+    var dx = player.pos.x - e.pos.x;
+    var dy = player.pos.y - e.pos.y;
+    var distance = Math.hypot(dx, dy);
+    e.move(SMALL_POWERUP_POINT_SPEED * dx / distance, SMALL_POWERUP_POINT_SPEED * dy / distance);
+  });
 
+  collides("player", "small-powerup-point", (p, pp) => {
+    if (isRespawning) { return; }
+    play("pick", {volume: 0.5});
+    let getScore = parseInt(100 + height() - p.pos.y);
+    if (getScore > 800) {
+      getScore = 800;
+    }
+    getScore /= 10;
+    getScore = Math.floor(getScore);
+    score.value += getScore;
+    score.text = "Score   " + score.value;
+
+    destroy(pp);
+  });
+
+  function convertAllBullets() { // when defeating a rune of a boss
+    every("bossBullet1", (e) => { 
+      add([
+        sprite("smallpoint"),
+        pos(e.pos),
+        // strings here means a tag
+        "small-powerup-point"
+      ]);
+      destroy(e);
+    });
   }
 
   function removeAllBullets() { // bomb
@@ -1252,20 +1381,20 @@ scene("level2", (args = {}) => {
     color(0, 0, 0),
   ]);
 
-	const score = add([
-		pos(width() - 200, 12),
-		text("Score   0"),
-		// all objects defaults origin to center, we want score text to be top left
-		origin("topleft"),
-		// plain objects becomes fields of score
-		{
-			value: 0,
-		},
-	]);
+  const score = add([
+    pos(width() - 200, 12),
+    text("Score   " + args.initScore),
+    // all objects defaults origin to center, we want score text to be top left
+    origin("topleft"),
+    // plain objects becomes fields of score
+    {
+      value: args.initScore,
+    },
+  ]);
 
   const powerText = add([
     pos(width() - 200, 20),
-    text("Power   1.0"),
+    text("Power   " + (power >= 10 ? "MAX" : power)),
     origin("topleft"),
     {}
   ])
@@ -1277,12 +1406,26 @@ scene("level2", (args = {}) => {
     {}
   ])
 
+  const grazeText = add([
+    pos(width() - 200, 36),
+    text("Graze   " + graze),
+    origin("topleft"),
+    {}
+  ])
+
+  const itemText = add([
+    pos(width() - 200, 44),
+    text("Items   " + itemCount),
+    origin("topleft"),
+    {}
+  ])
+
   function defeatAnEnemy(b, e) {
     play("kill", {volume: 0.3});
-		destroy(b);
-		destroy(e);
-		score.value += 100;
-		score.text = "Score   " + score.value;
+    destroy(b);
+    destroy(e);
+    score.value += 100;
+    score.text = "Score   " + score.value;
 
     let rand = Math.random();
     if (rand > 0.6) {
@@ -1306,8 +1449,8 @@ scene("level2", (args = {}) => {
     }
   }
 
-	// if a "bullet" and a "enemy" collides, remove both of them
-	collides("bullet", "enemyA", (b, e) => { defeatAnEnemy(b, e); });
+  // if a "bullet" and a "enemy" collides, remove both of them
+  collides("bullet", "enemyA", (b, e) => { defeatAnEnemy(b, e); });
   collides("bullet", "enemyB", (b, e) => { defeatAnEnemy(b, e); });
   collides("bullet", "enemyC", (b, e) => { defeatAnEnemy(b, e); });
   collides("bullet", "enemyD", (b, e) => { defeatAnEnemy(b, e); });
@@ -1322,6 +1465,8 @@ scene("level2", (args = {}) => {
     }
     score.value += getScore;
     score.text = "Score   " + score.value;
+    itemCount++;
+    itemText.text = "Items   " + itemCount;
     destroy(pp);
   });
 
@@ -1378,77 +1523,96 @@ scene("level2", (args = {}) => {
   collides("playerHitJudgePoint", "enemyB", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyC", (e, eb) => { playerHit(e, eb); });
   collides("playerHitJudgePoint", "enemyD", (e, eb) => { playerHit(e, eb); });
+
+
+  function playerGraze(player, bullet) {
+    if (!bullet.isGrazed) {
+      bullet.isGrazed = true;
+      graze++;
+      grazeText.text = "Graze   " + graze;
+      score.value += 10;
+      score.text = "Score   " + score.value;
+    }
+  }
+
+  collides("player", "enemyBullet1", (e, eb) => { playerGraze(e, eb); });
+  collides("player", "enemyBullet2", (e, eb) => { playerGraze(e, eb); });
+  collides("player", "bossBullet1", (e, eb) => { playerGraze(e, eb); });
   
 
-	action("enemyA", (e) => {
-		e.move(0, ENEMY_SPEED);
+  action("enemyA", (e) => {
+    e.move(0, ENEMY_SPEED);
     e.time++;
     if (e.time == 50) { // enemy shoot
-      add([	
+      add([  
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
         pos(e.pos.x, e.pos.y), 
         "enemyBullet2", {
-          direction: getDirection(e.pos.x, e.pos.y)
+          direction: getDirection(e.pos.x, e.pos.y),
+          isGrazed: false
         }
       ]);
     }
-		if (e.pos.y > height()) {
-			destroy(e);
-		}
-	});
+    if (e.pos.y > height()) {
+      destroy(e);
+    }
+  });
 
   action("enemyB", (e) => {
-		e.move(ENEMY_SPEED, 0);
+    e.move(ENEMY_SPEED, 0);
     e.time++;
     if (e.time == 50) { // enemy shoot
-      add([	
+      add([  
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
         pos(e.pos.x, e.pos.y), 
         "enemyBullet2", {
-          direction: getDirection(e.pos.x, e.pos.y)
+          direction: getDirection(e.pos.x, e.pos.y),
+          isGrazed: false
         }
       ]);
     }
-		if (e.pos.x > mapWidth()) {
-			destroy(e);
-		}
-	});
+    if (e.pos.x > mapWidth()) {
+      destroy(e);
+    }
+  });
 
   action("enemyC", (e) => {
     e.time++;
-		e.move(-ENEMY_SPEED, 0);
+    e.move(-ENEMY_SPEED, 0);
     if (e.time == 50) { // enemy shoot
-      add([	
+      add([  
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
         pos(e.pos.x, e.pos.y), 
         "enemyBullet2", {
-          direction: getDirection(e.pos.x, e.pos.y)
+          direction: getDirection(e.pos.x, e.pos.y),
+          isGrazed: false
         }
       ]);
     }
-		if (e.pos.x < 0) {
-			destroy(e);
-		}
-	});
+    if (e.pos.x < 0) {
+      destroy(e);
+    }
+  });
 
   action("enemyD", (e) => {
-		e.move(0, ENEMY_SPEED);
+    e.move(0, ENEMY_SPEED);
     e.time++;
     if (e.time % 100 == 0) { // enemy shoot
       let randDirection = rand(0, Math.PI * 2);
       for (let i = 0; i < 6; i ++) {
-        add([	sprite("eb1"),	pos(e.pos.x, e.pos.y), "enemyBullet1", {
-          direction: randDirection + ((Math.PI / 3) * i)
+        add([  sprite("eb1"),  pos(e.pos.x, e.pos.y), "enemyBullet1", {
+          direction: randDirection + ((Math.PI / 3) * i),
+          isGrazed: false
         }]);
       }
     }
-		if (e.pos.y > height()) {
-			destroy(e);
-		}
-	});
+    if (e.pos.y > height()) {
+      destroy(e);
+    }
+  });
 
   action("powerup-point", (pp) => {
     let currentSpeed = INITIAL_POWERUP_POINT_SPEED;
@@ -1495,8 +1659,8 @@ scene("level2", (args = {}) => {
     playerHitJudgePoint.pos.y = p.pos.y - 2;
   });
 
-	// spawn an enemy every 1 second
-	loop(0.3, () => {
+  // spawn an enemy every 1 second
+  loop(0.3, () => {
     if (!isBossExist) {
       position++;
     }
@@ -1526,7 +1690,7 @@ scene("level2", (args = {}) => {
     } 
   });
 });
-scene("levelup", (args = {}) => {
+scene("levelup", (args) => {
     add([
       pos(width() / 2, height() / 2),
       text("Stage Clear\nPress Enter to Continue")
@@ -1537,14 +1701,20 @@ scene("levelup", (args = {}) => {
       bgm.src = "./sounds/th06_04.mp3";
       bgm.load();
       bgm.play();
-      go("level2", {});
+      go("level" + args.nextLevel, {
+        power: args.power,
+        life: args.life,
+        initScore: args.initScore,
+        graze: args.graze,
+        itemCount: args.itemCount
+      });
     })
 });
 scene("main", (args = {}) => {
     add([
       sprite("title00"),
       scale(width() / 640, height() / 480),
-		  origin("topleft"),
+      origin("topleft"),
     ]);
 
     // play("th06_01");
@@ -1586,17 +1756,17 @@ scene("main", (args = {}) => {
 
     add([
       pos(width() / 2, height() / 2 + 140),
-      text("Z (Hold): Fire")
+      text("X (Hold): Fire")
     ]);
 
     add([
       pos(width() / 2, height() / 2 + 150),
-      text("X: Bomb")
+      text("C: Bomb")
     ]);
 
     add([
       pos(width() / 2, height() / 2 + 160),
-      text("Shift (Hold): Slow down and concentrate fire")
+      text("Z (Hold): Slow down and concentrate fire")
     ]);
 
     add([
