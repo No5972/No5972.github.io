@@ -47,6 +47,7 @@ loadSprite("player00", "sprites/player00.png", {
 loadSprite("player01", "sprites/player01.png");
 loadSprite("point", "sprites/point.png");
 loadSprite("power", "sprites/power.png");
+loadSprite("bomb", "sprites/bomb.png");
 loadSprite("smallpoint", "sprites/smallpoint.png");
 loadSprite("title00", "sprites/title00.jpg");
 loadSound("bossDestroy", "sounds/bossDestroy.wav");
@@ -54,6 +55,7 @@ loadSound("fire", "sounds/fire.wav");
 loadSound("hit", "sounds/hit.mp3");
 loadSound("kill", "sounds/kill.wav");
 loadSound("pick", "sounds/pick.wav");
+loadSound("bomb", "sounds/bomb.wav");
 loadSound("se_tan00", "sounds/se_tan00.wav");
 loadSound("se_tan01", "sounds/se_tan01.wav");
 loadSound("se_tan02", "sounds/se_tan02.wav");
@@ -92,6 +94,7 @@ scene("level1", (args = {}) => {
   let graze = 0;
   let itemCount = 0;
   let life = 3;
+  let bomb = 3;
   let isRespawning = false;
   let isInvincible = false;
   let isFocusing = false;
@@ -234,6 +237,17 @@ scene("level1", (args = {}) => {
   keyDown("z", () => { isFocusing = true;});
 
   keyRelease("z", () => { isFocusing = false;}); // shift key has issues
+
+  keyPress("c", () => {
+    if (bomb > 0) {
+      play("bomb");
+      bomb--;
+      bombText.text = "Bomb    " + bomb;
+      destroyAll("enemyBullet1");
+      destroyAll("enemyBullet2");
+      destroyAll("bossBullet1");
+    }
+  });
 
 /*
   keyPress("space", () => {
@@ -509,6 +523,7 @@ scene("level1", (args = {}) => {
           go("levelup", {
             initScore: score.value,
             life: life,
+            bomb: bomb,
             power: power,
             graze: graze,
             itemCount: itemCount,
@@ -555,10 +570,6 @@ scene("level1", (args = {}) => {
       ]);
       destroy(e);
     });
-  }
-
-  function removeAllBullets() { // bomb
-
   }
 
   const hudBorder = add([
@@ -614,6 +625,13 @@ scene("level1", (args = {}) => {
     {}
   ])
 
+  const bombText = add([
+    pos(width() - 200, 52),
+    text("Bomb    " + bomb),
+    origin("topleft"),
+    {}
+  ])
+
   function defeatAnEnemy(b, e) {
     play("kill", {volume: 0.3});
     destroy(b);
@@ -622,7 +640,7 @@ scene("level1", (args = {}) => {
     score.text = "Score   " + score.value;
 
     let rand = Math.random();
-    if (rand > 0.6) {
+    if (rand > 0.7) {
       add([
         sprite("point"),
         pos(e.pos),
@@ -632,13 +650,23 @@ scene("level1", (args = {}) => {
       ]);
     }
 
-    if (rand > 0.1 && rand <= 0.4) {
+    if (rand > 0.4 && rand <= 0.7) {
       add([
         sprite("power"),
         pos(e.pos),
         body(),
         // strings here means a tag
         "powerup-power",
+      ]);
+    }
+
+    if (rand > 0.38 && rand <= 0.4) {
+      add([
+        sprite("bomb"),
+        pos(e.pos),
+        body(),
+        // strings here means a tag
+        "powerup-bomb",
       ]);
     }
   }
@@ -649,6 +677,13 @@ scene("level1", (args = {}) => {
   collides("bullet", "enemyC", (b, e) => { defeatAnEnemy(b, e); });
   collides("bullet", "enemyD", (b, e) => { defeatAnEnemy(b, e); });
 
+  collides("player", "powerup-bomb", (p, pp) => {
+    if (isRespawning) { return; }
+    play("pick", {volume: 0.5});
+    bomb++;
+    bombText.text = "Bomb    " + bomb;
+    destroy(pp);
+  });
 
   collides("player", "powerup-point", (p, pp) => {
     if (isRespawning) { return; }
@@ -823,6 +858,14 @@ scene("level1", (args = {}) => {
     }
   });
 
+  action("powerup-bomb", (pp) => {
+    let currentSpeed = INITIAL_POWERUP_POWER_SPEED;
+    pp.move(0, currentSpeed++);
+    if (pp.pos > height()) {
+      destroy(pp);
+    }
+  });
+
   action("enemyBullet1", (eb) => {
     let currentSpeed = ENEMY_BULLET_SPEED;
     eb.move(Math.cos(eb.direction) * currentSpeed, Math.sin(eb.direction) * currentSpeed);
@@ -897,6 +940,7 @@ scene("level2", (args) => {
   let position = 0;
   let graze = args.graze;
   let life = args.life;
+  let bomb = args.bomb;
   let itemCount = args.itemCount;
   let isRespawning = false;
   let isInvincible = false;
@@ -1039,6 +1083,17 @@ scene("level2", (args) => {
   keyDown("z", () => { isFocusing = true;});
 
   keyRelease("z", () => { isFocusing = false;}); // shift key has issues
+
+  keyPress("c", () => {
+    if (bomb > 0) {
+      play("bomb");
+      bomb--;
+      bombText.text = "Bomb    " + bomb;
+      destroyAll("enemyBullet1");
+      destroyAll("enemyBullet2");
+      destroyAll("bossBullet1");
+    }
+  });
 
 /*
   keyPress("space", () => {
@@ -1312,14 +1367,18 @@ scene("level2", (args) => {
         bgm.pause();
         // debugger;
         setTimeout(() => {
+          /*
           go("levelup", {
             initScore: score.value,
             life: life,
+            bomb: bomb,
             power: power,
             graze: graze,
             itemCount: itemCount,
             nextLevel: 2
           });
+          */
+          go("tbc", score.value);
         }, 2000);
       } else {
         boss.rune--;
@@ -1420,6 +1479,13 @@ scene("level2", (args) => {
     {}
   ])
 
+  const bombText = add([
+    pos(width() - 200, 52),
+    text("Bomb    " + bomb),
+    origin("topleft"),
+    {}
+  ])
+
   function defeatAnEnemy(b, e) {
     play("kill", {volume: 0.3});
     destroy(b);
@@ -1428,7 +1494,7 @@ scene("level2", (args) => {
     score.text = "Score   " + score.value;
 
     let rand = Math.random();
-    if (rand > 0.6) {
+    if (rand > 0.7) {
       add([
         sprite("point"),
         pos(e.pos),
@@ -1438,13 +1504,23 @@ scene("level2", (args) => {
       ]);
     }
 
-    if (rand > 0.1 && rand <= 0.4) {
+    if (rand > 0.4 && rand <= 0.7) {
       add([
         sprite("power"),
         pos(e.pos),
         body(),
         // strings here means a tag
         "powerup-power",
+      ]);
+    }
+
+    if (rand > 0.38 && rand <= 0.4) {
+      add([
+        sprite("bomb"),
+        pos(e.pos),
+        body(),
+        // strings here means a tag
+        "powerup-bomb",
       ]);
     }
   }
@@ -1455,6 +1531,13 @@ scene("level2", (args) => {
   collides("bullet", "enemyC", (b, e) => { defeatAnEnemy(b, e); });
   collides("bullet", "enemyD", (b, e) => { defeatAnEnemy(b, e); });
 
+  collides("player", "powerup-bomb", (p, pp) => {
+    if (isRespawning) { return; }
+    play("pick", {volume: 0.5});
+    bomb++;
+    bombText.text = "Bomb    " + bomb;
+    destroy(pp);
+  });
 
   collides("player", "powerup-point", (p, pp) => {
     if (isRespawning) { return; }
@@ -1543,7 +1626,7 @@ scene("level2", (args) => {
   action("enemyA", (e) => {
     e.move(0, ENEMY_SPEED);
     e.time++;
-    if (e.time == 50) { // enemy shoot
+    if (e.time % 10 == 0) { // enemy shoot
       add([  
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
@@ -1562,7 +1645,7 @@ scene("level2", (args) => {
   action("enemyB", (e) => {
     e.move(ENEMY_SPEED, 0);
     e.time++;
-    if (e.time == 50) { // enemy shoot
+    if (e.time % 10 == 0) { // enemy shoot
       add([  
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
@@ -1581,7 +1664,7 @@ scene("level2", (args) => {
   action("enemyC", (e) => {
     e.time++;
     e.move(-ENEMY_SPEED, 0);
-    if (e.time == 50) { // enemy shoot
+    if (e.time % 10 == 0) { // enemy shoot
       add([  
         sprite("eb2"), 
         rotate(getDirection(e.pos.x, e.pos.y) + Math.PI / 2) , 
@@ -1600,7 +1683,7 @@ scene("level2", (args) => {
   action("enemyD", (e) => {
     e.move(0, ENEMY_SPEED);
     e.time++;
-    if (e.time % 100 == 0) { // enemy shoot
+    if (e.time % 50 == 0) { // enemy shoot
       let randDirection = rand(0, Math.PI * 2);
       for (let i = 0; i < 6; i ++) {
         add([  sprite("eb1"),  pos(e.pos.x, e.pos.y), "enemyBullet1", {
@@ -1623,6 +1706,14 @@ scene("level2", (args) => {
   });
 
   action("powerup-power", (pp) => {
+    let currentSpeed = INITIAL_POWERUP_POWER_SPEED;
+    pp.move(0, currentSpeed++);
+    if (pp.pos > height()) {
+      destroy(pp);
+    }
+  });
+
+  action("powerup-bomb", (pp) => {
     let currentSpeed = INITIAL_POWERUP_POWER_SPEED;
     pp.move(0, currentSpeed++);
     if (pp.pos > height()) {
@@ -1704,10 +1795,25 @@ scene("levelup", (args) => {
       go("level" + args.nextLevel, {
         power: args.power,
         life: args.life,
+        bomb: args.bomb,
         initScore: args.initScore,
         graze: args.graze,
         itemCount: args.itemCount
       });
+    })
+});
+scene("tbc", (score) => {
+    add([
+      pos(width() / 2, height() / 2),
+      text("To Be Continued\nPress Enter to Return\n\n Your Final Score: " + score)
+    ]);
+
+    keyPress("enter", () => {
+      bgm.pause();
+      bgm.src = "./sounds/th06_01.mp3";
+      bgm.load();
+      bgm.play();
+      go("main");
     })
 });
 scene("main", (args = {}) => {
@@ -1741,6 +1847,12 @@ scene("main", (args = {}) => {
     add([
       pos(width() / 2, 80),
       text("V3.1"),
+      color(1, 0, 0)
+    ]);
+
+    add([
+      pos(width() / 2, 90),
+      text("(Incomplete - Updated 04-11-2021)"),
       color(1, 0, 0)
     ]);
 
