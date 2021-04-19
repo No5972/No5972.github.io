@@ -28,7 +28,10 @@
 <script src="https://kaboomjs.com/lib/master/kit/starter.js"></script>
 <script src="https://kaboomjs.com/lib/master/kit/level.js"></script>
 
-  <script>kaboom.import();</script>
+  <script>
+kaboom.import();
+// kaboom.global();
+  </script>
   <script>
 loadSprite("boss01", "sprites/boss01.png");
 loadSprite("bullet00", "sprites/bullet00.png");
@@ -37,14 +40,15 @@ loadSprite("eb2", "sprites/eb2.png");
 loadSprite("enemy00", "sprites/enemy00.png");
 loadSprite("enemy01", "sprites/enemy01.png");
 loadSprite("hitpoint", "sprites/hitpoint.png");
-loadSprite("player00", "sprites/player00.png", {
-  sliceX: 7,
-  sliceY: 5,
+loadSprite("player00", "sprites/player02.png", {
+  sliceX: 4,
+  sliceY: 1,
   anims: {
-     idle: [0,1,2,3]
+     idle: [0,3]
   }
 });
 loadSprite("player01", "sprites/player01.png");
+// loadAseprite("player01", "sprites/player02.png", "sprites/player02.json");
 loadSprite("point", "sprites/point.png");
 loadSprite("power", "sprites/power.png");
 loadSprite("bomb", "sprites/bomb.png");
@@ -59,10 +63,10 @@ loadSound("bomb", "sounds/bomb.wav");
 loadSound("se_tan00", "sounds/se_tan00.wav");
 loadSound("se_tan01", "sounds/se_tan01.wav");
 loadSound("se_tan02", "sounds/se_tan02.wav");
-loadSound("th06_01", "sounds/th06_01.mp3");
-loadSound("th06_02", "sounds/th06_02.mp3");
-loadSound("th06_04", "sounds/th06_04.mp3");
-loadSound("th06_09", "sounds/th06_09.mp3");
+// loadSound("th06_01", "sounds/th06_01.mp3");
+// loadSound("th06_02", "sounds/th06_02.mp3");
+// loadSound("th06_04", "sounds/th06_04.mp3");
+// loadSound("th06_09", "sounds/th06_09.mp3");
 
 init({
   width: false ? window.innerWidth / 1 : 640,
@@ -163,7 +167,7 @@ scene("level1", (args = {}) => {
   // play("th06_02");
 
   let player = add([
-    sprite("player01"),
+    sprite("player00"),
     pos(mapWidth() / 2, height() - 15),
     scale(1),
     "player"
@@ -1378,6 +1382,10 @@ scene("level2", (args) => {
             nextLevel: 2
           });
           */
+          bgm.pause();
+          bgm.src = "./sounds/th06_16.mp3";
+          bgm.load();
+          bgm.play();
           go("tbc", score.value);
         }, 2000);
       } else {
@@ -1852,7 +1860,7 @@ scene("main", (args = {}) => {
 
     add([
       pos(width() / 2, 90),
-      text("(Incomplete - Updated 04-19-2021)"),
+      text("(Incomplete - Updated 04-20-2021)"),
       color(1, 0, 0)
     ]);
 
