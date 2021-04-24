@@ -71,6 +71,9 @@ loadSprite("power", "sprites/power.png");
 loadSprite("bomb", "sprites/bomb.png");
 loadSprite("smallpoint", "sprites/smallpoint.png");
 loadSprite("title00", "sprites/title00.jpg");
+loadSprite("bg1", "sprites/bg1.png");
+loadSprite("bg2", "sprites/bg2.png");
+loadSprite("bg3", "sprites/bg3.png");
 loadSound("bossDestroy", "sounds/bossDestroy.wav");
 loadSound("fire", "sounds/fire.wav");
 loadSound("hit", "sounds/hit.mp3");
@@ -182,6 +185,30 @@ scene("level1", (args = {}) => {
   const boss2Location = [601];
   
   // play("th06_02");
+
+  layers([
+    "bg",
+    "game",
+    "ui",
+  ], "game");
+
+  for (var bgi = 0; bgi < 100; bgi++) {
+    add([
+      sprite("bg1"),
+      pos(0, 1000 * 0.76 - 1000 * 0.76 * bgi),
+      scale(0.76),
+      origin("botleft"),
+      layer("bg"),
+      "bg"
+    ]);
+  }
+
+  action("bg", (e) => {
+    e.move(0, 100);
+    if (e.pos.y >= 1500) {
+      destroy(e);
+    }
+  });
 
   let player = add([
     sprite("player00"),
@@ -1029,6 +1056,30 @@ scene("level2", (args) => {
   const boss2Location = [601];
   
   // play("th06_02");
+
+  layers([
+    "bg",
+    "game",
+    "ui",
+  ], "game");
+
+  for (var bgi = 0; bgi < 100; bgi++) {
+    add([
+      sprite("bg2"),
+      pos(0, 1000 * 1.68 - 1000 / 3 * bgi),
+      scale(1.68),
+      origin("botleft"),
+      layer("bg"),
+      "bg"
+    ]);
+  }
+
+  action("bg", (e) => {
+    e.move(0, 100);
+    if (e.pos.y >= 1500) {
+      destroy(e);
+    }
+  });
 
   let player = add([
     sprite("player00"),
@@ -1888,7 +1939,29 @@ scene("level3", (args) => {
   // const boss2Location = [1];
   const boss2Location = [601];
   
-  // play("th06_02");
+  layers([
+    "bg",
+    "game",
+    "ui",
+  ], "game");
+
+  for (var bgi = 0; bgi < 100; bgi++) {
+    add([
+      sprite("bg3"),
+      pos(0, 1000 * 0.76 - 1000 * 0.76 * bgi),
+      scale(0.76),
+      origin("botleft"),
+      layer("bg"),
+      "bg"
+    ]);
+  }
+
+  action("bg", (e) => {
+    e.move(0, 100);
+    if (e.pos.y >= 1500) {
+      destroy(e);
+    }
+  });
 
   let player = add([
     sprite("player00"),
@@ -2249,7 +2322,6 @@ scene("level3", (args) => {
         bgm.pause();
         // debugger;
         setTimeout(() => {
-          /*
           go("levelup", {
             initScore: score.value,
             life: life,
@@ -2257,14 +2329,8 @@ scene("level3", (args) => {
             power: power,
             graze: graze,
             itemCount: itemCount,
-            nextLevel: 2
+            nextLevel: 4
           });
-          */
-          bgm.pause();
-          bgm.src = "./sounds/th06_16.mp3";
-          bgm.load();
-          bgm.play();
-          go("tbc", score.value);
         }, 2000);
       } else {
         boss.rune--;
@@ -2723,8 +2789,63 @@ scene("level3", (args) => {
 });
 scene("levelup", (args) => {
     add([
-      pos(width() / 2, height() / 2),
-      text("Stage Clear\nPress Enter to Continue")
+      pos(width() / 2, height() / 3),
+      text("Stage Clear")
+    ]);
+    add([
+      pos(width() / 2, height() / 2 - 50),
+      text("Stage * 10 = "),
+      origin("right")
+    ]);
+    add([
+      pos(width() / 2 + 75, height() / 2 - 50),
+      text((args.nextLevel - 1) * 10),
+      origin("right")
+    ]);
+    add([
+      pos(width() / 2, height() / 2 - 30),
+      text("Power * 10 = "),
+      origin("right")
+    ]);
+    add([
+      pos(width() / 2 + 75, height() / 2 - 30),
+      text(args.power * 10),
+      origin("right")
+    ]);
+    add([
+      pos(width() / 2, height() / 2 - 10),
+      text("Graze * 1 = "),
+      origin("right")
+    ]);
+    add([
+      pos(width() / 2 + 75, height() / 2 - 10),
+      text(args.graze),
+      origin("right")
+    ]);
+    add([
+      pos(width() / 2, height() / 2 + 10),
+      text("* Point Item"),
+      origin("right")
+    ]);
+    add([
+      pos(width() / 2 + 75, height() / 2 + 10),
+      text(args.itemCount),
+      origin("right")
+    ]);
+    var totalScore = ((args.nextLevel - 1) * 10 + args.power * 10 + args.graze) * args.itemCount;
+    add([
+      pos(width() / 2, height() / 2 + 30),
+      text("Total"),
+      origin("right")
+    ]);
+    add([
+      pos(width() / 2 + 75, height() / 2 + 30),
+      text(totalScore),
+      origin("right")
+    ]);
+    add([
+      pos(width() / 2, height() / 3 * 2),
+      text("Press Enter to Continue")
     ]);
 
     keyPress("enter", () => {
@@ -2741,14 +2862,21 @@ scene("levelup", (args) => {
       }
       bgm.load();
       bgm.play();
-      go("level" + args.nextLevel, {
-        power: args.power,
-        life: args.life,
-        bomb: args.bomb,
-        initScore: args.initScore,
-        graze: args.graze,
-        itemCount: args.itemCount
-      });
+      if (args.nextLevel == 4) {
+        bgm.src = "./sounds/th06_16.mp3";
+        bgm.load();
+        bgm.play();
+        go("tbc", args.initScore + totalScore);
+      } else {
+        go("level" + args.nextLevel, {
+          power: args.power,
+          life: args.life,
+          bomb: args.bomb,
+          initScore: args.initScore + totalScore,
+          graze: args.graze,
+          itemCount: args.itemCount
+        });
+      }
     })
 });
 scene("tbc", (score) => {
@@ -2801,7 +2929,7 @@ scene("main", (args = {}) => {
 
     add([
       pos(width() / 2, 90),
-      text("(Incomplete - Updated 04-20-2021)"),
+      text("(Incomplete - Updated 04-25-2021)"),
       color(1, 0, 0)
     ]);
 
