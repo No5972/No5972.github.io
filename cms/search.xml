@@ -30,8 +30,7 @@
 </ul>
 <p>先通过<code>git clone</code>把源码仓库<code>cms_source</code>拉过来，再把主题仓库<code>hexo_next_source</code>拉过来，把后者仓库全部文件移到<code>cms_source</code>仓库的<code>/themes/next/</code>目录下面去。</p>
 <div class="note warning"><p>拉Github代码有可能会报Permission Denied，遇到此问题需要先配置用户名和邮箱。</p>
-</div>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"No5972"</span></span><br><span class="line">git config --global user.email <span class="string">"wujiuqier@foxmail.com"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"No5972"</span></span><br><span class="line">git config --global user.email <span class="string">"wujiuqier@foxmail.com"</span></span><br></pre></td></tr></table></figure></div>
 <p>进到源码仓库<code>cms_source</code>里面，安装Hexo。执行：<code>npm install hexo-cli</code>。</p>
 <p>需要手动设置一下环境变量<code>PATH</code>添加Hexo可执行文件的路径：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/home/runner/Repl名字/cms_source/node_modules/hexo/bin:/home/runner/bin</span><br></pre></td></tr></table></figure>
