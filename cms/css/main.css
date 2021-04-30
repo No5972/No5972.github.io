@@ -1574,7 +1574,7 @@ pre code {
   display: none;
   max-height: var(--sidebar-wrapper-height);
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 .sidebar-toc-active .post-toc-wrap,
 .sidebar-overview-active .site-overview-wrap {
