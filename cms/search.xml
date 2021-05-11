@@ -41,6 +41,8 @@
 <p>最后显示</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">✅ Production : https://xxxxxx.vercel.app [copied to clipboard] [10s]</span><br></pre></td></tr></table></figure>
 <p>的时候就部署到Vercel上了，其中<code>xxxxxx</code>是项目名称。这个域名就是部署好的域名，从这个网址进去就可以访问博客了。</p>
+<p>以后需要更新博客的话执行下列操作：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; <span class="built_in">cd</span> public &amp;&amp; vercel --prod --confirm &amp;&amp; <span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
 <div class="note info"><p>后续还可以从Vercel网页端的Settings里面绑定自己注册的独立域名，然后在自己的域名解析里面设置解析到<code>76.76.21.21</code>，这样就可以通过独立域名来访问了。</p>
 <blockquote>
 <p>进入这个项目，选择Settings，Domains，添加之前注册的独立域名。添加以后这时候Vercel的界面会提示你需要添加域名的解析。到这个域名解析的后台，添加一个类型为<code>A</code>，主机记录为<code>@</code>的解析记录，如果之前有这个记录则直接修改。记录值按照Vercel的界面提示填写<code>76.76.21.21</code>。其他选项保持默认即可。</p>
