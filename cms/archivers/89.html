@@ -137,8 +137,9 @@
 <meta property="og:description" content="近期，Github国内访问困难，想更新下博客都不行。而网上的博客清一色的写着需要将Vercel接入Github仓库来部署。这里研究一下能不能直接把Hexo博客部署到Vercel而不需要经过Github。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20210511121841353.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTc3MTM5,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210218100218514.png">
 <meta property="article:published_time" content="2021-05-11T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-11T06:55:15.179Z">
+<meta property="article:modified_time" content="2021-05-11T07:22:32.146Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210511121841353.jpeg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTc3MTM5,size_16,color_FFFFFF,t_70#pic_center">
@@ -619,7 +620,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-05-11 15:00:00 | Modified: 2021-05-11 06:55:15" itemprop="dateCreated datePublished" datetime="2021-05-11T15:00:00+00:00">2021-05-11 15:00:00</time>
+              <time title="Created: 2021-05-11 15:00:00 | Modified: 2021-05-11 07:22:32" itemprop="dateCreated datePublished" datetime="2021-05-11T15:00:00+00:00">2021-05-11 15:00:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -670,12 +671,19 @@ window.onload = function () {
 <p>这时候再执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vercel --prod</span><br></pre></td></tr></table></figure>
 <p>然后出现这些提示，按照提示操作！</p>
+<div class="note info"><p>如果需要自动化集成（也就是不用回答下列问题）的话，前面的命令也可以使用<code>vercel --prod --confirm</code>，但是这样的话项目名称会自动使用缺省值，如果需要指定项目名称的话就需要在博客根目录添加<code>vercel.json</code>文件，配置<code>name</code>属性：<code>{ name&quot;: &quot;my-hexo-blog&quot; }</code></p>
+</div>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">? Set up and deploy “/home/runner/no5972tk/my-hexo-blog”? [Y/n] </span><br><span class="line"><span class="comment"># 选择发布到的位置 -&gt; 直接回车</span></span><br><span class="line"><span class="comment"># 默认就是账户名，显示在提示下面</span></span><br><span class="line"><span class="comment"># 可以在官网登录后访问这个地址查看：https://vercel.com/dashboard</span></span><br><span class="line">Which scope <span class="keyword">do</span> you want to deploy to?</span><br><span class="line">·[username]</span><br><span class="line"><span class="comment"># 是否链接到一个存在的项目 -&gt; n</span></span><br><span class="line">? Link to existing project? [y/N]</span><br><span class="line"><span class="comment"># 为项目命名，这里输入的项目名会反映在域名上</span></span><br><span class="line">? What’s your project’s name? (my-hexo-blog)</span><br><span class="line"><span class="comment"># 选择代码的位置，当前代码位置就是根目录 -&gt; 直接回车</span></span><br><span class="line">? In <span class="built_in">which</span> directory is your code located? ./</span><br></pre></td></tr></table></figure>
 <p>最后显示</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">✅ Production : https://xxxxxx.vercel.app [copied to clipboard] [10s]</span><br></pre></td></tr></table></figure>
 <p>的时候就部署到Vercel上了，其中<code>xxxxxx</code>是项目名称。这个域名就是部署好的域名，从这个网址进去就可以访问博客了。</p>
-<p>后续还可以从Vercel网页端的Settings里面绑定自己注册的独立域名，然后在自己的域名解析里面设置解析到<code>76.76.21.21</code>，这样就可以通过独立域名来访问了。</p>
-
+<div class="note info"><p>后续还可以从Vercel网页端的Settings里面绑定自己注册的独立域名，然后在自己的域名解析里面设置解析到<code>76.76.21.21</code>，这样就可以通过独立域名来访问了。</p>
+<blockquote>
+<p>进入这个项目，选择Settings，Domains，添加之前注册的独立域名。添加以后这时候Vercel的界面会提示你需要添加域名的解析。到这个域名解析的后台，添加一个类型为<code>A</code>，主机记录为<code>@</code>的解析记录，如果之前有这个记录则直接修改。记录值按照Vercel的界面提示填写<code>76.76.21.21</code>。其他选项保持默认即可。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210218100218514.png" alt="" /></p>
+<p>稍等片刻，再访问这个域名，即可以更快的速度显示页面了。</p>
+</blockquote>
+</div>
     </div>
 
     
