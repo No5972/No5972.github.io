@@ -19,6 +19,85 @@
       </categories>
   </entry>
   <entry>
+    <title>尽可能简单的搭建Hexo博客并部署到Vercel</title>
+    <url>/cms//archivers/90.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>HEXO是一款非常优秀、易用、美观的开源博客框架。提供非常丰富的，可以随意修改的主题供你使用。这里研究一下如何尽可能简化搭建Hexo博客的步骤。</p>
+</blockquote>
+<p>我们这里还是使用Repl.it和Vercel来搭建Hexo博客。这次不需要弄GitHub，毕竟近期GitHub国内访问困难。</p>
+<p>大致的步骤是这样的：</p>
+<ol>
+<li><a href="#11-%E6%B3%A8%E5%86%8Creplit">注册Repl.it</a></li>
+<li><a href="#12-%E6%B3%A8%E5%86%8Cvercel">注册Vercel</a></li>
+<li><a href="#21-%E5%9C%A8replit%E5%88%9B%E5%BB%BArepl">创建Bash语言的Repl</a></li>
+<li><a href="#22-%E4%B8%80%E5%8F%A5%E8%AF%9D%E5%88%9D%E5%A7%8B%E5%8C%96hexo">初始化Hexo</a></li>
+<li><a href="#31-%E5%AE%89%E8%A3%85vercel">安装Vercel</a></li>
+<li><a href="#32-%E7%99%BB%E9%99%86vercel">登陆Vercel</a></li>
+<li><a href="#33-%E9%83%A8%E7%BD%B2%E5%88%B0vercel">部署到Vercel</a></li>
+</ol>
+<h1 id="1-注册账号"><a class="markdownIt-Anchor" href="#1-注册账号"></a> 1. 注册账号</h1>
+<h2 id="11-注册replit"><a class="markdownIt-Anchor" href="#11-注册replit"></a> 1.1 <a href="http://xn--Repl-9x8f526l.it" target="_blank" rel="noopener">注册Repl.it</a></h2>
+<p>现在的网站变成<a href="https://replit.com" target="_blank" rel="noopener">replit.com</a>了。进去之后点击右上角的Sign Up，Username取一个用户名，Email输入注册邮箱（QQ邮箱也可以），Password输入创建密码。下面那个复选框是如果是教师就勾选，但是似乎作用不大，除非是组织学生使用replit来学习。点击Sign Up之后到填写的邮箱查收验证邮件，并点击里面的验证按钮确认验证。点击之后如果还显示需要验证邮箱就刷新一下。这样注册就完成了。<br />
+<img src="https://img-blog.csdnimg.cn/20210513152605365.png" alt="" /><br />
+<img src="https://img-blog.csdnimg.cn/20210513152752180.png" alt="" /><br />
+<img src="https://img-blog.csdnimg.cn/20210513152953190.png" alt="" /></p>
+<h2 id="12-注册vercel"><a class="markdownIt-Anchor" href="#12-注册vercel"></a> 1.2 注册Vercel</h2>
+<p>打开<a href="https://vercel.com/" target="_blank" rel="noopener">vercel.com</a>，还是点击右上角的Sign Up，然后点击右侧下方的Continue With Email。输入邮箱（也可以使用QQ邮箱），再点击Continue With Email。然后会提示验证邮箱。这时候前往注册邮箱查收验证右键，点击验证按钮，注册就完成了。</p>
+<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column" style="width: 100%;"><img src="https://img-blog.csdnimg.cn/20210511121841353.jpeg" alt="" /></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://img-blog.csdnimg.cn/20210513153337342.png" alt="" /></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://img-blog.csdnimg.cn/20210513153509427.png" alt="" /></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="https://img-blog.csdnimg.cn/20210513153737338.png" alt="" /></div></div></div>
+<h1 id="2-初始化hexo"><a class="markdownIt-Anchor" href="#2-初始化hexo"></a> 2. 初始化Hexo</h1>
+<h2 id="21-在replit创建repl"><a class="markdownIt-Anchor" href="#21-在replit创建repl"></a> 2.1 在Replit创建Repl</h2>
+<p>到Repl的页面，点击左上方的“ + New Repl”，创建一个Bash语言的Repl。如果候选列表看不到Bash也可以输入bash，然后就看到了。给Repl起一个名字。然后点击Create repl，然后就自动跳转到写代码的页面了。<br />
+<img src="https://img-blog.csdnimg.cn/20210513154116948.png" alt="" /></p>
+<h2 id="22-一句话初始化hexo"><a class="markdownIt-Anchor" href="#22-一句话初始化hexo"></a> 2.2 一句话初始化Hexo</h2>
+<p><a href="https://vercel.com/guides/deploying-hexo-with-vercel" target="_blank" rel="noopener">Vercel官网给了一条命令</a>，这一条命令就可以把Hexo初始化了。这里的Repl本身就是一台位于美国的Linux云服务器，所以不需要考虑网速不够的问题，也就不需要配置什么镜像源。</p>
+<p>在Replit页面把右边敲命令的黑框点一下，然后直接输入Linux命令。Replit自带了Node.js，也不用安装了，可以直接输入Node.js 的命令。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx hexo init my-hexo-blog &amp;&amp; <span class="built_in">cd</span> my-hexo-blog</span><br></pre></td></tr></table></figure>
+<p>这样就完成了Hexo的初始化。当然，这样的话<code>hexo</code>命令是不会加载到<code>PATH</code>环境变量的。这样执行之后<code>hexo</code>命令位于<code>/my-hexo-blog/node_modules/.bin</code>中，要把这个<code>hexo</code>加到环境变量里面。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:~/<span class="variable">$REPL_SLUG</span>/my-hexo-blog/node_modules/.bin</span><br></pre></td></tr></table></figure>
+<p>然后<code>cd</code>到<code>my-hexo-blog</code>，执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>就可以看到右上角出现网页了。也可以点击第二个按钮新开一个标签查看。<br />
+<img src="https://img-blog.csdnimg.cn/20210513155633407.png" alt="" /></p>
+<h1 id="3-部署到vercel"><a class="markdownIt-Anchor" href="#3-部署到vercel"></a> 3. 部署到Vercel</h1>
+<h2 id="31-安装vercel"><a class="markdownIt-Anchor" href="#31-安装vercel"></a> 3.1 安装Vercel</h2>
+<p>我们使用<code>npm</code>安装Vercel控制台客户端。<code>cd</code>到<code>my-hexo-blog</code>，执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vercel</span><br></pre></td></tr></table></figure>
+<p>由于这里把Vercel客户端直接安装在博客目录，所以之前配置的环境变量可以直接使用。但是以后重新打开Repl IDE页面的时候需要在右边的shell中重新执行一下设置环境变量，具体操作参考后面的<a href="#33-%E9%83%A8%E7%BD%B2%E5%88%B0vercel">部署到Vercel</a>。</p>
+<h2 id="32-登陆vercel"><a class="markdownIt-Anchor" href="#32-登陆vercel"></a> 3.2 登陆Vercel</h2>
+<p>首次运行Vercel提示你登录。输入你注册Vercel账号的邮箱地址，然后Vercel会给这个邮箱发一封邮件，控制台程序也会等待验证完成，打开这个邮件点击验证（VERIFY）按钮，点击之后就显示验证完成，控制台程序也会提示登录成功。<br />
+<img src="https://img-blog.csdnimg.cn/20210513160536475.png" alt="" /><br />
+<img src="https://img-blog.csdnimg.cn/20210513160536489.png" alt="" /><br />
+<img src="https://img-blog.csdnimg.cn/20210513160536481.png" alt="" /></p>
+<h2 id="33-部署到vercel"><a class="markdownIt-Anchor" href="#33-部署到vercel"></a> 3.3 部署到Vercel</h2>
+<p>登陆上去之后就可以部署了。我们需要把Hexo生成静态站点，然后到生成的站点目录去执行部署到Vercel。</p>
+<p><code>cd</code>到<code>my-hexo-blog</code>，执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>然后<code>cd</code>到<code>public</code>目录，执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vercel --prod --confirm</span><br></pre></td></tr></table></figure>
+<p>，然后显示</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">✅ Production : https://xxxxxx.vercel.app [copied to clipboard] [10s]</span><br></pre></td></tr></table></figure>
+<p>的时候就部署到Vercel上了，其中<code>xxxxxx</code>是项目名称。这个域名就是部署好的域名，从这个网址进去就可以访问博客了。</p>
+<p>以后需要更新博客的话，就可以直接打开Replit，打开这个Repl，在<code>source/_posts</code>目录添加<code>.md</code>格式的博文，然后执行下列操作：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> my-hexo-blog</span><br><span class="line">npm install vercel</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:~/<span class="variable">$REPL_SLUG</span>/my-hexo-blog/node_modules/.bin</span><br><span class="line">vercel</span><br><span class="line"><span class="comment"># 到邮箱查收邮件，验证你的邮箱</span></span><br><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; <span class="built_in">cd</span> public &amp;&amp; vercel --prod --confirm &amp;&amp; <span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
+<div class="note info"><p>后续还可以安装新的主题，在博客站点的<code>themes</code>文件夹<code>git clone</code>想要的主题，然后修改博客的<code>_config.yml</code>文件的<code>theme</code>属性到对应的主题目录，就可以切换新的主题了。也可以在拉取下来的主题修改任意文件设计自己需要的自定义样式。关于主题配置这方面，其他博客写的很详细，这里就不再赘述了。</p>
+</div>
+<div class="note info"><p>后续还可以从Vercel网页端的Settings里面绑定自己注册的独立域名，然后在自己的域名解析里面设置解析到<code>76.76.21.21</code>，这样就可以通过独立域名来访问了。</p>
+<blockquote>
+<p>在Vercel网页端登陆账号，进入这个项目，选择Settings，Domains，添加之前注册的独立域名。添加以后这时候Vercel的界面会提示你需要添加域名的解析。到这个域名解析的后台，添加一个类型为<code>A</code>，主机记录为<code>@</code>的解析记录，如果之前有这个记录则直接修改。记录值按照Vercel的界面提示填写<code>76.76.21.21</code>。其他选项保持默认即可。</p>
+</blockquote>
+<blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20210218100218514.png#pic_center" alt="" /></p>
+</blockquote>
+<blockquote>
+<p>稍等片刻，再访问这个域名，即可以更快的速度显示页面了。</p>
+</blockquote>
+</div>
+]]></content>
+      <categories>
+        <category>Web Building</category>
+      </categories>
+  </entry>
+  <entry>
     <title>将Hexo博客直接部署到Vercel，不经过Github</title>
     <url>/cms//archivers/89.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>近期，Github国内访问困难，想更新下博客都不行。而网上的博客清一色的写着需要将Vercel接入Github仓库来部署。这里研究一下能不能直接把Hexo博客部署到Vercel而不需要经过Github。</p>
@@ -869,8 +948,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 ]]></content>
       <categories>
-        <category>Automation</category>
         <category>Web Building</category>
+        <category>Automation</category>
         <category>Github</category>
       </categories>
   </entry>
