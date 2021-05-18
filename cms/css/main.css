@@ -183,7 +183,7 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: 'DIN-Bold', "PingFang SC", "Noto Serif TC", "Noto Serif SC", sans-serif;
+  font-family: 'DIN-Bold', "PingFang SC", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
   font-size: 1em;
   line-height: 2;
   transition: all 0.2s ease-in-out;
@@ -194,7 +194,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'DIN-Bold', "PingFang SC", "Noto Serif TC", "Noto Serif SC", sans-serif;
+  font-family: 'DIN-Bold', "PingFang SC", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -508,7 +508,7 @@ pre {
 }
 pre,
 code {
-  font-family: consolas, Menlo, monospace, "PingFang SC", "Noto Serif TC", "Noto Serif SC";
+  font-family: consolas, Menlo, monospace, "PingFang SC", "Noto Serif TC", "Noto Serif SC", "Simsun";
 }
 code {
   border-radius: 3px;
@@ -1264,7 +1264,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: 'DIN-Bold', "PingFang SC", "Noto Serif TC", "Noto Serif SC", sans-serif;
+  font-family: 'DIN-Bold', "PingFang SC", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
   font-size: 1.375em;
   font-weight: normal;
   margin: 0;
@@ -1836,7 +1836,7 @@ pre code {
   z-index: 1500;
 }
 .post-body {
-  font-family: 'FreeSerif', 'DIN-Bold', "PingFang SC", "Noto Serif TC", "Noto Serif SC", sans-serif;
+  font-family: 'FreeSerif', 'DIN-Bold', "PingFang SC", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2143,7 +2143,7 @@ pre code {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'FreeSerif', 'DIN-Bold', "PingFang SC", "Noto Serif TC", "Noto Serif SC", sans-serif;
+  font-family: 'FreeSerif', 'DIN-Bold', "PingFang SC", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
