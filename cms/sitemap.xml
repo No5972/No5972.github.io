@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.github.io/cms/links/index.html</loc>
+    
+    <lastmod>2021-06-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/archivers/92.html</loc>
     
     <lastmod>2021-05-28</lastmod>
@@ -695,7 +702,7 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/about/index.html</loc>
+    <loc>https://no5972.github.io/cms/zh-CN/about.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
@@ -709,13 +716,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/zh-CN/about.html</loc>
-    
-    <lastmod>2021-04-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://no5972.github.io/cms/cookie-notice/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
@@ -723,7 +723,7 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/links/index.html</loc>
+    <loc>https://no5972.github.io/cms/about/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
@@ -732,7 +732,7 @@
 
   <url>
     <loc>https://no5972.github.io/cms</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -742,84 +742,84 @@
   
   <url>
     <loc>https://no5972.github.io/cms/categories/jekyll-update/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Java/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Server/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/JavaScript/</loc>
-    <lastmod>2021-05-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.github.io/cms/categories/Moving-Away-from-Flash/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/C/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <loc>https://no5972.github.io/cms/categories/Moving-Away-from-Flash/</loc>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Other/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Automation/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Github/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Python/</loc>
-    <lastmod>2021-05-28</lastmod>
+    <lastmod>2021-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
