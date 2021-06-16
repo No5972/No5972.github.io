@@ -729,8 +729,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>代码已经更正，已经将显示输入的密码改为星号，但不影响回车之后提交的密码内容。但是网络数据包里面的密码仍然是明文，要提防数据包被窃取导致的密码泄露。</p>
 </div>]]></content>
       <categories>
-        <category>JavaScript</category>
         <category>Automation</category>
+        <category>JavaScript</category>
       </categories>
   </entry>
   <entry>
@@ -825,8 +825,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>参考资料：<a href="http://fex.baidu.com/blog/2014/06/remote-debugging-protocol/" target="_blank" rel="noopener">http://fex.baidu.com/blog/2014/06/remote-debugging-protocol/</a></p>
 ]]></content>
       <categories>
-        <category>JavaScript</category>
         <category>Automation</category>
+        <category>JavaScript</category>
       </categories>
   </entry>
   <entry>
