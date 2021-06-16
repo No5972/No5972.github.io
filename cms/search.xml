@@ -1094,8 +1094,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 ]]></content>
       <categories>
-        <category>Web Building</category>
         <category>Automation</category>
+        <category>Web Building</category>
         <category>Github</category>
       </categories>
   </entry>
