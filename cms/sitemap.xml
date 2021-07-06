@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.github.io/cms/archivers/87.html</loc>
+    
+    <lastmod>2021-07-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/archivers/94.html</loc>
     
     <lastmod>2021-07-06</lastmod>
@@ -450,13 +457,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/archivers/87.html</loc>
-    
-    <lastmod>2021-05-13</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://no5972.github.io/cms/archivers/86.html</loc>
     
     <lastmod>2021-05-13</lastmod>
@@ -716,13 +716,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/index.html</loc>
-    
-    <lastmod>2021-04-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://no5972.github.io/cms/zh-CN/about.html</loc>
     
     <lastmod>2021-04-26</lastmod>
@@ -731,6 +724,13 @@
   
   <url>
     <loc>https://no5972.github.io/cms/about/index.html</loc>
+    
+    <lastmod>2021-04-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.github.io/cms/categories/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
@@ -762,14 +762,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Java/</loc>
+    <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
+    <loc>https://no5972.github.io/cms/categories/Java/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -790,13 +790,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.github.io/cms/categories/C/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
@@ -805,6 +798,13 @@
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Moving-Away-from-Flash/</loc>
+    <lastmod>2021-07-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
