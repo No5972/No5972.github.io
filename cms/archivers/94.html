@@ -129,19 +129,22 @@
     var CONFIG = {"hostname":"no5972.github.io","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="目前针对国内2021年继续使用Flash Player的方法也已经基本成熟。这里重新做一个汇总。">
+  <meta name="description" content="微软近期推出了Windows 11操作系统。但是很多同志在切换到Dev渠道的时候遇到了“你的电脑不满足Windows 11的最低硬件要求”的提示。于是尝试直接从ISO启动引导安装，结果又遇到“此电脑不符合安装此版本Windows的最低要求”。这种情况主要还是因为安全启动和TPM没有打开。但是TPM也不是说开就能开的。好在 Windows Latest 的 Mayank Parmar 提供了一个IS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="根据之前文章整理的在2021年继续使用Flash Player的方法【重新整理】">
-<meta property="og:url" content="https://no5972.github.io/cms/archivers/68.html">
+<meta property="og:title" content="Windows 11 ISO引导安装提示此电脑不符合安装此版本Windows的最低要求的解决方法">
+<meta property="og:url" content="https://no5972.github.io/cms/archivers/94.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="目前针对国内2021年继续使用Flash Player的方法也已经基本成熟。这里重新做一个汇总。">
+<meta property="og:description" content="微软近期推出了Windows 11操作系统。但是很多同志在切换到Dev渠道的时候遇到了“你的电脑不满足Windows 11的最低硬件要求”的提示。于是尝试直接从ISO启动引导安装，结果又遇到“此电脑不符合安装此版本Windows的最低要求”。这种情况主要还是因为安全启动和TPM没有打开。但是TPM也不是说开就能开的。好在 Windows Latest 的 Mayank Parmar 提供了一个IS">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-31T02:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-23T18:14:25.968Z">
+<meta property="og:image" content="https://www.windowslatest.com/wp-content/uploads/2021/06/Bypass-Windows-11-TPM-2.0.jpg">
+<meta property="og:image" content="https://dingyue.ws.126.net/2021/0702/a682570cj00qvkufq009hc000jg00elc.jpg">
+<meta property="article:published_time" content="2021-07-06T15:30:00.000Z">
+<meta property="article:modified_time" content="2021-07-06T08:01:49.474Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.windowslatest.com/wp-content/uploads/2021/06/Bypass-Windows-11-TPM-2.0.jpg">
 
-<link rel="canonical" href="https://no5972.github.io/cms/archivers/68.html">
+<link rel="canonical" href="https://no5972.github.io/cms/archivers/94.html">
 
 
 <script class="page-configurations">
@@ -154,7 +157,7 @@
   };
 </script>
 
-  <title>根据之前文章整理的在2021年继续使用Flash Player的方法【重新整理】 | No.5972 Publishment Website</title>
+  <title>Windows 11 ISO引导安装提示此电脑不符合安装此版本Windows的最低要求的解决方法 | No.5972 Publishment Website</title>
   <script>
       if (!!window.ActiveXObject || "ActiveXObject" in window) {
         document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
@@ -494,7 +497,7 @@ window.onload = function () {
 
   <aside class="sidebar" style="background: #fff2; padding: 20px 0;">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active" style="display: contents;">
+    <div class="sidebar-inner sidebar-overview-active" style="display: contents;">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -506,7 +509,6 @@ window.onload = function () {
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"><span class="nav-text"> Flash已经停止维护了，大家能不用Flash就尽量不要用Flash，停止维护之后此组件会非常不安全！</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -594,7 +596,7 @@ window.onload = function () {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/68.html">
+    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/94.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
@@ -608,13 +610,7 @@ window.onload = function () {
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-          
-                <span class="post-meta-item-icon">
-                <i class="fa fa-thumbtack"></i>
-                </span>
-                <font color="#007ff3">PINNED</font>
-                <span class="post-meta-divider">|</span>
-          根据之前文章整理的在2021年继续使用Flash Player的方法【重新整理】
+          Windows 11 ISO引导安装提示此电脑不符合安装此版本Windows的最低要求的解决方法
         </h1>
 
         <div class="post-meta">
@@ -624,7 +620,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-01-31 02:00:00 | Modified: 2021-06-23 18:14:25" itemprop="dateCreated datePublished" datetime="2021-01-31T02:00:00+00:00">2021-01-31 02:00:00</time>
+              <time title="Created: 2021-07-06 15:30:00 | Modified: 2021-07-06 08:01:49" itemprop="dateCreated datePublished" datetime="2021-07-06T15:30:00+00:00">2021-07-06 15:30:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -632,7 +628,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Moving-Away-from-Flash/" itemprop="url" rel="index"><span itemprop="name">Moving Away from Flash</span></a>
+                  <a href="/cms/categories/Webapp/" itemprop="url" rel="index"><span itemprop="name">Webapp</span></a>
                 </span>
             </span>
 
@@ -645,8 +641,8 @@ window.onload = function () {
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/cms/archivers/68.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/68.html" itemprop="commentCount"></span>
+    <a title="valine" href="/cms/archivers/94.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/94.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -661,21 +657,14 @@ window.onload = function () {
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"><a class="markdownIt-Anchor" href="#flash已经停止维护了大家能不用flash就尽量不要用flash停止维护之后此组件会非常不安全"></a> Flash已经停止维护了，大家能不用Flash就尽量不要用Flash，停止维护之后此组件会非常不安全！</h1>
-<hr />
-<p>目前针对国内2021年继续使用Flash Player的方法也已经基本成熟。这里重新做一个汇总。</p>
-<ol>
-<li>Edge、Chrome浏览器提示“Adobe Flash Player已不再受支持”，或者“不支持此插件”：Edge和Chrome的正式版都已经更新到88版本以上，已经原生不支持Flash了。如果仍然有需要使用Flash的特殊需求 <strong>应换用绿色便携版的Edge或Chrome——网传已经有绿色版的Edge出现了，但是Edge和Chrome绿色版都是一定要使用版本小于不等于88的。或者也可以换用国产浏览器——国产浏览器大都集成Flash Player。</strong></li>
-<li>一些客户端程序显示了一个“fi”图标：Flash已经在1月12日自毁了，32.0.0.371是最后一个没有加定时自毁的版本。<strong>需要将<code>C:\Windows\System32\Macromed\Flash\Flash.ocx</code>以及<code>C:\Windows\SysWOW64\Macromed\Flash\Flash.ocx</code>这两个文件里面的十六进制内容<code>3E6F7742</code>的最后的<code>42</code>改成更大的数值，例如<code>72</code>或者<code>7F</code>。可以使用Ultra Edit或者WinHex来修改，但是需要注意必须先把这两个文件的权限改掉。 详细操作可以参考<a href="63.html">Edge、Chrome 1月12日之后继续使用Flash的方法（超级专业，高能预警）</a>。</strong></li>
-<li>一些客户端无法打开，或者加载到Flash就闪退或提示停止工作：这是因为电脑已经安装了“移除Flash Player的系统更新”（若为手动安装则补丁编号为KB4577586），导致Flash组件已经不在电脑上。 <strong><a href="https://www.cr173.com/soft/1311482.html" target="_blank" rel="noopener">西西软件园已将吾爱破解论坛上的Flash破解补丁整合打包</a>，其中的“Flash恢复包”正是针对此系统更新来恢复Flash组件的。注意那个BAT应该右键以管理员身份运行。</strong> 里面的OCX控件是32.0.0.445版本的，并且已经修改掉了自毁的定时器（也是通过最后的<code>42</code>字节改成<code>72</code>），<strong>注意此恢复包仅适用于安装了“移除Flash的系统更新”的机器，未安装此更新的机器不要安装，否则会出现无法恢复的异常情况。</strong>
-<ul>
-<li>检查是否已经安装的方法：20H2或以下的版本根据读者使用系统的版本下载<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4577586" target="_blank" rel="noopener">KB4577586独立更新包</a>，执行，若显示​这台计算机上已安装了Windows更新程序(KB4577586)则说明已经安装，可以安装此恢复包；如果显示确认安装的界面则说明没有安装，请不要直接安装此恢复包，请先安装这个系统更新补丁再安装此恢复包。21H1以及更高版本包括Windows 11等已经不再集成此Flash Player，原有的升级系统前的Flash Player在升级系统后也会自动移除，可以直接安装此恢复包。</li>
-</ul>
-</li>
-<li>Firefox看不到Flash内容：Firefox已经更新到85版本以上，已经完全停止支持Flash了。若有需要使用Flash则<strong>需要使用旧版Firefox来使用Flash内容。Firefox也会自动更新，建议使用延长支持版来操作。注意安装后在设置里面的Firefox更新选择“检查更新，但由您决定是否安装”，并去掉勾选“使用一项系统服务以静默安装更新”。</strong></li>
-<li>IE浏览器的Flash内容看不到：这是因为电脑已经安装了“移除Flash Player的系统更新”（若为手动安装则补丁编号为KB4577586），导致Flash组件已经不在电脑上。<strong>参考第三条。</strong></li>
-</ol>
-
+        <p>微软近期推出了Windows 11操作系统。但是很多同志在切换到Dev渠道的时候遇到了“你的电脑不满足Windows 11的最低硬件要求”的提示。于是尝试直接从ISO启动引导安装，结果又遇到“此电脑不符合安装此版本Windows的最低要求”。这种情况主要还是因为安全启动和TPM没有打开。但是TPM也不是说开就能开的。</p>
+<p><img src="https://www.windowslatest.com/wp-content/uploads/2021/06/Bypass-Windows-11-TPM-2.0.jpg" alt="" /></p>
+<p>好在 Windows Latest 的 Mayank Parmar 提供了一个ISO引导安装无视这两项检测的方法。</p>
+<p>遇到此画面的时候，按快捷键Shift + F10打开命令提示符。输入<code>regedit</code>打开注册表编辑器。定位到<code>HKEY_LOCAL_MACHINE\SYSTEM\Setup</code>。在这个键下面创建一个键<code>LabConfig</code>，选中这个<code>LabConfig</code>，再创建两个“DWORD (32位)”键值<code>BypassTPMCheck</code>和<code>BypassSecureBootCheck</code>，值都是<code>1</code></p>
+<p><img src="https://dingyue.ws.126.net/2021/0702/a682570cj00qvkufq009hc000jg00elc.jpg" alt="" /></p>
+<p>关掉注册表编辑器和命令提示符。如果还是这个提示的话，点击安装窗口左上角的左箭头按钮。回到条款界面，选择“自定义：仅安装 Windows (高级)”。如果看到选择安装分区的界面就可以按照原来的方式来安装Windows 11了。</p>
+<div class="note info"><p>如果需要保留原来的个人文件的话，在选择分区界面不要把原来系统盘格式化，而是直接选择原系统盘来覆盖安装。这样原系统盘<code>Users</code>目录下的个人文件在覆盖安装后将被集中到系统盘根目录的<code>Windows.old</code>目录。但是无法保留其他的文件。</p>
+</div>
     </div>
 
     
@@ -710,13 +699,10 @@ window.onload = function () {
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/cms/archivers/67.html" rel="prev" title="证明0.999...=1 《高等数学》复旦版黄立宏第四版">
-      <i class="fa fa-chevron-left"></i> 证明0.999...=1 《高等数学》复旦版黄立宏第四版
+    <a href="/cms/archivers/93.html" rel="prev" title="仅做笔记用：C语言 Linux控制PC蜂鸣器，相对简单一点的代码">
+      <i class="fa fa-chevron-left"></i> 仅做笔记用：C语言 Linux控制PC蜂鸣器，相对简单一点的代码
     </a></div>
-      <div class="post-nav-item">
-    <a href="/cms/archivers/69.html" rel="next" title="Github 添加一个实时显示StackOverflow分数Reputation的徽章">
-      Github 添加一个实时显示StackOverflow分数Reputation的徽章 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
