@@ -23,6 +23,19 @@
       </categories>
   </entry>
   <entry>
+    <title>C语言的发展和特点</title>
+    <url>/cms//archivers/95.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>祝贺本站文章总数达到 100 篇，感谢各位访客的支持！</p>
+<p>来源：<a href="https://x.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DNAH199924010&amp;dbname=CJFDLASN2019" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%94%B5%E8%84%91%E7%88%B1%E5%A5%BD%E8%80%85%E3%80%8A%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E4%BD%A0%E9%80%89%E5%93%AA%E4%B8%80%E4%B8%AA%E3%80%8B-%E6%AF%9B%E6%AF%9B%E7%86%8A%EF%BC%88MMX%EF%BC%89-brightgreen" alt="电脑爱好者《编程语言你选哪一个》-毛毛熊（MMX）" /></a></p>
+<p>C 语言的发展颇为有趣。它的原型是 ALGOL60 语言。1963 年，剑桥大学将 ALGOL60 语言发展成为 CPL （Combined Programming Language）语言。1967 年，剑桥大学的 Matin Richards 对 CPL 语言进行了简化，于是产生了 BCPL 语言。1970 年，美国贝尔实验室的 <a href="https://baike.baidu.com/item/%E8%82%AF%C2%B7%E6%B1%A4%E6%99%AE%E6%A3%AE/50235682" target="_blank" rel="noopener">Ken Thompson</a> 将 BCPL 进行了修改，并为它起了一个有趣的名字“ B 语言 ”。意思是将 CPL 语言煮干，提炼出它的精华（Boiling CPL down to its basic good features）。并且他用 B 语言写了第一个 UNIX 操作系统。而在 1973 年，B 语言也给人“煮”了一下。美国贝尔实验室的 <a href="https://baike.baidu.com/item/%E4%B8%B9%E5%B0%BC%E6%96%AF%C2%B7%E9%87%8C%E5%A5%87/7267171" target="_blank" rel="noopener">D.M.Ritchie</a> 在 B 语言的基础上最终设计出一种新的语言，他取了 BCPL 的第二个字母作为这种语言的名字，这就是大名鼎鼎的 C 语言。</p>
+<p>最初的 C 语言只是一种在 UNIX 操作系统上的工作语言。1978 年以后，C 语言被移植到了各种机型上。由于它作为系统描述语言，既可以用来写系统软件，又可以用来写应用软件，所以一下子受到了大家的喜爱。许多程序员纷纷从别的编程语言转向 C 语言编程。从而使 C 语言在当时的软件开发中几乎一统天下。</p>
+<p>C 语言有许多优点，它灵活性好、效率高、适用性强，而且对硬件的控制能力很强。人们常把 C 语言称作中级语言，意指它是一门介于高级语言和汇编语言之间的语言。</p>
+]]></content>
+      <categories>
+        <category>C/C++</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Windows 11 ISO引导安装提示此电脑不符合安装此版本Windows的最低要求的解决方法</title>
     <url>/cms//archivers/94.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>微软近期推出了Windows 11操作系统。但是很多同志在切换到Dev渠道的时候遇到了“你的电脑不满足Windows 11的最低硬件要求”的提示。于是尝试直接从ISO启动引导安装，结果又遇到“此电脑不符合安装此版本Windows的最低要求”。这种情况主要还是因为安全启动和TPM没有打开。但是TPM也不是说开就能开的。</p>
