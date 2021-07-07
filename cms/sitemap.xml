@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.github.io/cms/archivers/97.html</loc>
+    
+    <lastmod>2021-07-07</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/archivers/96.html</loc>
     
     <lastmod>2021-07-07</lastmod>
@@ -776,6 +783,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/categories/Java/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
@@ -784,13 +798,6 @@
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Server/</loc>
-    <lastmod>2021-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -811,13 +818,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
-    <lastmod>2021-07-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.github.io/cms/categories/Moving-Away-from-Flash/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
@@ -825,7 +825,7 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Automation/</loc>
+    <loc>https://no5972.github.io/cms/categories/Web-Building/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -833,6 +833,13 @@
   
   <url>
     <loc>https://no5972.github.io/cms/categories/Other/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.github.io/cms/categories/Automation/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
