@@ -797,13 +797,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
-    <lastmod>2021-07-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.github.io/cms/categories/Java/</loc>
     <lastmod>2021-07-12</lastmod>
     <changefreq>daily</changefreq>
@@ -832,6 +825,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
+    <lastmod>2021-07-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/categories/Moving-Away-from-Flash/</loc>
     <lastmod>2021-07-12</lastmod>
     <changefreq>daily</changefreq>
@@ -846,14 +846,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Other/</loc>
+    <loc>https://no5972.github.io/cms/categories/Automation/</loc>
     <lastmod>2021-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Automation/</loc>
+    <loc>https://no5972.github.io/cms/categories/Other/</loc>
     <lastmod>2021-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
