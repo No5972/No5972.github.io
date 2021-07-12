@@ -1198,7 +1198,9 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
   <entry>
     <title>Github 添加一个实时显示StackOverflow分数Reputation的徽章</title>
     <url>/cms//archivers/69.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>我們采用XPath强行解析StackOverflow用户主页的HTML节点来获取用户的Reputation数字。<br />
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>21.07.12更新：有一个class改了，原来的XPath已经不能直接用了。把<code>grid--cell</code>改成<code>flex--item</code>就可以了。</p>
+<hr />
+<p>我們采用XPath强行解析StackOverflow用户主页的HTML节点来获取用户的Reputation数字。<br />
 Shields.io提供了后端XPath解析网络上XML内容并输出到徽章的接口：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;img.shields.io&#x2F;badge&#x2F;dynamic&#x2F;xml?url&#x3D;&lt;URL&gt;&amp;label&#x3D;&lt;LABEL&gt;&amp;query&#x3D;&lt;&#x2F;&#x2F;data&#x2F;subdata&gt;&amp;color&#x3D;&lt;COLOR&gt;&amp;prefix&#x3D;&lt;PREFIX&gt;&amp;suffix&#x3D;&lt;SUFFIX&gt;</span><br></pre></td></tr></table></figure>
 <p>经过反复调试，最终找出了获取StackOverflow用户的分数Reputation的XPath：<code>/html/body//div[@class='grid--cell fs-title fc-dark']</code>。将这个XPath拼接到Shields.io的URL里面，就可以获取指定用户的分数了。</p>
