@@ -29,7 +29,7 @@ jobs:
         rm -rf xhxCover
         mkdir xhxCover
         cd ffdec/xhxCover
-        find . -name "*.[jpg|png]" -exec basename {} ; | xargs -i mv {} ../../xhxCover/cover.png
+        mv *.{jpg,png} ../../xhxCover/cover.png || true
         cd ../..
         rm -rf ffdec
         cd xhxCover
