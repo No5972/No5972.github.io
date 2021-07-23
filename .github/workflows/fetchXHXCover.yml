@@ -29,7 +29,8 @@ jobs:
         rm -rf xhxCover
         mkdir xhxCover
         cd ffdec/xhxCover
-        mv *.{jpg,png} ../../xhxCover/cover.png || true
+        mv *.jpg ../../xhxCover/cover.png || true
+        mv -n *.png ../../xhxCover/cover.png || true
         cd ../..
         rm -rf ffdec
         cd xhxCover
