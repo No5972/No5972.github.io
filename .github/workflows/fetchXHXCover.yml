@@ -1,6 +1,7 @@
 name: "Fetch FF Cover Every Week"
 
 on:
+  push:
   schedule: 
     - cron: '0 22 * * 4'
     
@@ -28,7 +29,7 @@ jobs:
         rm -rf xhxCover
         mkdir xhxCover
         cd ffdec/xhxCover
-        mv *.png ../../xhxCover/cover.png
+        find . -name "*.[jpg|png]" -exec basename {} ; | xargs -i mv {} ../../xhxCover/cover.png
         cd ../..
         rm -rf ffdec
         cd xhxCover
