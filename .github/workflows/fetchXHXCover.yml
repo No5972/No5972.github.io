@@ -30,6 +30,9 @@ jobs:
       run: |
         rm -rf ffdec
         cd xhxCover
+        find ./ -size -500k -exec rm {} \; || true
+        mv *.png cover.png
+        mv -n *.jpg cover.png
         git pull origin master
         git config --global user.name "No5972" # Change to your GitHub user name
         git config --global user.email "wujiuqier@foxmail.com" # Change to your GitHub email address
