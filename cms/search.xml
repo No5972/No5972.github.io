@@ -31,10 +31,11 @@
 <p>两个方面需要完成。可以不分先后。</p>
 <ol>
 <li>官服转B服需要准备<code>PCGameSDK.dll</code>文件。获取方式见上。放到<code>Genshin Impact\Game\Yuanshen_Data\Plugins</code>目录。</li>
-<li>修改<code>Genshin Impact\config.ini</code>和<code>Genshin Impact\Game\config.ini</code>。后者目录不固定，但是一定是有两个<code>config.ini</code>需要修改。修改两处。
+<li>修改<code>Genshin Impact\config.ini</code>和<code>Genshin Impact\Game\config.ini</code>。后者目录不固定，但是一定是有两个<code>config.ini</code>需要修改。修改3处。
 <ul>
 <li>将<code>cps=xxxxxx</code>修改，官服为<code>cps=mihoyo</code>，B服为<code>cps=bilibili</code>。</li>
 <li>将<code>channel=x</code>修改，官服为<code>channel=1</code>，B服为<code>channel=14</code>。</li>
+<li>将<code>sub_channel=x</code>修改，官服为<code>sub_channel=0</code>，B服为<code>sub_channel=1</code>。</li>
 </ul>
 </li>
 </ol>
