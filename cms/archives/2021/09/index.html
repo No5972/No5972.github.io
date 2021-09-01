@@ -129,21 +129,17 @@
     var CONFIG = {"hostname":"no5972.github.io","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="注意到获取datalist目前仍然比较多的使用遍历datalist里面的option来获取选中项的元素(DOM). 如果项目数量比较多的时候效率会比较慢. 如果页面引用的有jquery的话可以直接使用jquery的选择器来快速获取选中项元素. 但是有一个前提, 就是所有option 的某个属性值一定是唯一的, 不能出现重复. 否则将会把全部对应选项都返回出来.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HTML5 datalist 使用jquery快速获取选中项元素">
-<meta property="og:url" content="https://no5972.github.io/cms/archivers/2.html">
+  <meta name="description" content="No.5972 is silly B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="No.5972 Publishment Website">
+<meta property="og:url" content="https://no5972.github.io/cms/archives/2021/09/index.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="注意到获取datalist目前仍然比较多的使用遍历datalist里面的option来获取选中项的元素(DOM). 如果项目数量比较多的时候效率会比较慢. 如果页面引用的有jquery的话可以直接使用jquery的选择器来快速获取选中项元素. 但是有一个前提, 就是所有option 的某个属性值一定是唯一的, 不能出现重复. 否则将会把全部对应选项都返回出来.">
+<meta property="og:description" content="No.5972 is silly B">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20191029161526424.gif">
-<meta property="article:published_time" content="2019-10-29T16:30:00.000Z">
-<meta property="article:modified_time" content="2021-07-10T02:52:23.100Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20191029161526424.gif">
 
-<link rel="canonical" href="https://no5972.github.io/cms/archivers/2.html">
+<link rel="canonical" href="https://no5972.github.io/cms/archives/2021/09/">
 
 
 <script class="page-configurations">
@@ -151,12 +147,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>HTML5 datalist 使用jquery快速获取选中项元素 | No.5972 Publishment Website</title>
+  <title>Archive | No.5972 Publishment Website</title>
   <script>
       if (!!window.ActiveXObject || "ActiveXObject" in window) {
         document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
@@ -588,140 +584,57 @@ window.onload = function () {
       <div class="main-inner">
         
 
-        <div class="content post posts-expand">
+        <div class="content archive">
           
 
-    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/2.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-          HTML5 datalist 使用jquery快速获取选中项元素
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2019-10-29 16:30:00 | Modified: 2021-07-10 02:52:23" itemprop="dateCreated datePublished" datetime="2019-10-29T16:30:00+00:00">2019-10-29 16:30:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-                </span>
-            </span>
-
-          
   
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine: </span>
-    
-    <a title="valine" href="/cms/archivers/2.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/2.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <p>注意到获取datalist目前仍然比较多的使用遍历datalist里面的option来获取选中项的元素(DOM). 如果项目数量比较多的时候效率会比较慢. 如果页面引用的有jquery的话可以直接使用jquery的选择器来快速获取选中项元素. 但是有一个前提, 就是所有option 的某个属性值一定是唯一的, 不能出现重复. 否则将会把全部对应选项都返回出来.</p>
-<p>范例: 已经给一个input输入 框绑定了一个datalist, 现希望在change事件弹出对话框显示datalist选中项的标题.</p>
-<p>HTML:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"type"</span> <span class="attr">list</span>=<span class="string">"dataList"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"dataList"</span>&gt;</span> <span class="comment">&lt;!-- 此范例value属性值必须唯一 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_2"</span>&gt;</span>选项2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_3"</span>&gt;</span>选项3<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"id_4"</span>&gt;</span>选项4<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>JS:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#type"</span>).change(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert($(<span class="string">"#dataList option[value="</span> + <span class="keyword">this</span>.value + <span class="string">"]"</span>).text());</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>效果:</p>
-<p><img src="https://img-blog.csdnimg.cn/20191029161526424.gif" alt="在这里插入图片描述" /></p>
-<p>测试从6 192个选项中定位的计时:</p>
-<p>遍历: 3 680ms</p>
-<p>jquery选择器: 38ms</p>
-
-    </div>
-
-    
-    
-    
-        <div class="reward-container">
-  <div>Buy me a coffee</div>
-  <button onclick="document.getElementById('post-reward').classList.toggle('active');">
-    Donate
-  </button>
-  <div id="post-reward">
-      
-      <div>
-        <img src="/cms/sponsor.png" alt="No.5972 Alipay">
-        <p>Alipay</p>
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        
+        <span class="collection-header">Good! 108 posts in total. Keep on posting.</span>
       </div>
 
-  </div>
-</div>
-
-      <footer class="post-footer">
-
-        
-  <div class="addthis_inline_share_toolbox">
-    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1fe0947c0fa73a" async="async"></script>
-  </div>
-  <div class="ad" style="text-align: center;">
-    <a href="https://curl.qcloud.com/rU5hN2sp" target="_blank"><img src="//img-blog.csdnimg.cn/20210511110042976.jpg"></img></a>
-  </div>
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/cms/archivers/20.html" rel="prev" title="Java树形统计: 各节点追加直属部门人数">
-      <i class="fa fa-chevron-left"></i> Java树形统计: 各节点追加直属部门人数
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/cms/archivers/3.html" rel="next" title="中控CR10MW发卡器开发 (C#)">
-      中控CR10MW发卡器开发 (C#) <i class="fa fa-chevron-right"></i>
-    </a></div>
+      
+    <div class="collection-year">
+      <span class="collection-header">2021</span>
     </div>
-      </footer>
-    
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2021-09-01T15:30:00+00:00"
+              content="2021-09-01">
+          09-01
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/cms/archivers/103.html" itemprop="url">
+            <span itemprop="name">【未经测试】原神2.1 官服与B服互转的方法</span>
+          </a>
+      </div>
+
+    </header>
   </article>
+
+
+    </div>
+  </div>
   
   
+  
+
   
 
 
 
         </div>
         
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
