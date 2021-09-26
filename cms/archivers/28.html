@@ -661,7 +661,7 @@ window.onload = function () {
 </blockquote>
 <p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure>
-
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     

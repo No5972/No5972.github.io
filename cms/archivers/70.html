@@ -674,7 +674,7 @@ window.onload = function () {
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">false</span> <span class="comment"># 添加这个属性值为false</span></span><br><span class="line">  <span class="attr">repo:</span> </span><br><span class="line">    <span class="attr">gitee:</span> <span class="string">git@gitee.com:你的Gitee仓库.git,要使用的分支名</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">git@github.com:你的Github仓库.git,要使用的分支名</span></span><br><span class="line">    <span class="comment"># 可以先提交Gitee然后再提交Github，也就是把这个Gitee的地址放在前面。这样保证Gitee的站点内容能在Github开始动作之前完成提交。</span></span><br></pre></td></tr></table></figure>
 <p>注意Github的部署仓库后台的Settings里面也要按照最上面那个仓库说明中那样配置Secrets（<code>GITEE_RSA_PRIVATE_KEY</code>和<code>GITEE_PASSWORD</code>的两个密钥。其中：<code>GITEE_RSA_PRIVATE_KEY</code>存放<code>id_rsa</code>私钥；<code>GITEE_PASSWORD</code>存放Gitee帐号的密码），这一步不要忘记了。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
-
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     
