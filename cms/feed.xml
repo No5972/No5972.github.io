@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.github.io/cms/"/>
-  <updated>2021-09-23T17:48:02.561Z</updated>
+  <updated>2021-10-05T11:17:02.721Z</updated>
   <id>https://no5972.github.io/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 Windows 11 的“此电脑”窗口添加“控制面板”图标</title>
+    <link href="https://no5972.github.io/cms/archivers/105.html"/>
+    <id>https://no5972.github.io/cms/archivers/105.html</id>
+    <published>2021-10-05T19:30:00.000Z</published>
+    <updated>2021-10-05T11:17:02.721Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>今天，Windows 11 正式发布了。但是紧接着就有人吐槽，“控制面板”不见了。鄙人记得在注册表里面有个地方是可以在“此电脑”窗口中随便自定义图标的。我们研究一下能不能通过修改注册表的方式向“此电脑”窗口添加“控制面板”图标。</p><p>经过一番查找我们得知“控制面板”的 CLSID 为：<code>{26EE0668-A00A-44D7-9371-BEB064C98683}</code>，而“控制面板”的图标显示模式的 CLSID 为：<code>{21EC2020-3AEA-1069-A2DD-08002B30309D}</code>。这样我们只需要将其中一个 CLSID 放到那个地方就行了。</p><p>打开注册表编辑器，定位到<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\</code>。在左边这个项处右键选择“新建-项”。将项命名为上面两个 CLSID 中的一个。确认新建，然后重新打开“此电脑”，就可以看到“控制面板”图标了。双击它就可以打开控制面板了。</p><p><img src="https://img-blog.csdnimg.cn/f4eebdac2a39482f978f8f75c975677d.png" alt="" /><br /><img src="https://img-blog.csdnimg.cn/bb866093a01d476da6deef4a63e20b66.png" alt="" /><br /><img src="https://img-blog.csdnimg.cn/9d447fe4cd5c4929b670e3b7a8b01e24.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      今天，Windows 11 正式发布了。但是紧接着就有人吐槽，“控制面板”不见了。鄙人记得在注册表里面有个地方是可以在“此电脑”窗口中随便自定义图标的。我们研究一下能不能通过修改注册表的方式向“此电脑”窗口添加“控制面板”图标。
+    
+    </summary>
+    
+    
+      <category term="Webapp" scheme="https://no5972.github.io/cms/categories/Webapp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>本站已更换域名到 no5972.moe</title>
