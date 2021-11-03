@@ -842,6 +842,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.github.io/cms/about/index.html</loc>
+    
+    <lastmod>2021-04-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.github.io/cms/categories/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
@@ -850,13 +857,6 @@
   
   <url>
     <loc>https://no5972.github.io/cms/cookie-notice/index.html</loc>
-    
-    <lastmod>2021-04-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.github.io/cms/about/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
@@ -881,14 +881,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
+    <loc>https://no5972.github.io/cms/categories/Java/</loc>
     <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.github.io/cms/categories/Java/</loc>
+    <loc>https://no5972.github.io/cms/categories/Webapp/</loc>
     <lastmod>2021-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
