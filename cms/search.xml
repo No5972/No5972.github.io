@@ -32,7 +32,7 @@
 <p>本篇主要介绍在 SpringBoot 框架下，WebSocket 基于注解使用的 3 种场景：</p>
 <ol>
 <li>自己给自己发消息</li>
-<li>自己给所有客户端发送消息(不包括自己)</li>
+<li>自己给所有客户端发送消息（不包括自己）</li>
 <li>自己给另一个客户端发送消息</li>
 </ol>
 <h1 id="代码示例"><a class="markdownIt-Anchor" href="#代码示例"></a> 代码示例</h1>
