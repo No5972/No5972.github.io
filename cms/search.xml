@@ -27,9 +27,9 @@
     <url>/cms//archivers/111.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://www.cnblogs.com/xuwenjin/p/12664650.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E5%8D%9A%E5%AE%A2%E5%9B%AD-%E4%BB%85%E6%AD%A4%E8%80%8C%E5%B7%B2%E2%80%94%E8%BF%9C%E6%96%B9-brightgreen" alt="博客园-仅此而已-远方" /></a></p>
 <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
-<p>WebSocket 是一种在单个 <a href="https://baike.baidu.com/item/TCP" target="_blank" rel="noopener">TCP</a> 连接上进行<a href="https://baike.baidu.com/item/%E5%85%A8%E5%8F%8C%E5%B7%A5" target="_blank" rel="noopener">全双工</a>通信的协议。WebSocket 通信协议于 2011 年被 <a href="https://baike.baidu.com/item/IETF" target="_blank" rel="noopener">IETF</a> 定为标准 RFC 6455，并由 RFC 7936 补充规范。WebSocket <a href="https://baike.baidu.com/item/API" target="_blank" rel="noopener">API</a> 也被 <a href="https://baike.baidu.com/item/W3C" target="_blank" rel="noopener">W3C</a> 定为标准。WebSocket使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据。在 WebSocket API 中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。</p>
+<p>WebSocket 是一种在单个 <a href="https://baike.baidu.com/item/TCP" target="_blank" rel="noopener">TCP</a> 连接上进行<a href="https://baike.baidu.com/item/%E5%85%A8%E5%8F%8C%E5%B7%A5" target="_blank" rel="noopener">全双工</a>通信的协议。WebSocket 通信协议于 2011 年被 <a href="https://baike.baidu.com/item/IETF" target="_blank" rel="noopener">IETF</a> 定为标准 RFC 6455，并由 RFC 7936 补充规范。WebSocket <a href="https://baike.baidu.com/item/API" target="_blank" rel="noopener">API</a> 也被 <a href="https://baike.baidu.com/item/W3C" target="_blank" rel="noopener">W3C</a> 定为标准。WebSocket 使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据。在 WebSocket API 中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。</p>
 <h1 id="说明"><a class="markdownIt-Anchor" href="#说明"></a> 说明</h1>
-<p>本篇主要介绍在 SpringBoot 框架下，WebSocket 基于注解使用的3种场景：</p>
+<p>本篇主要介绍在 SpringBoot 框架下，WebSocket 基于注解使用的 3 种场景：</p>
 <ol>
 <li>自己给自己发消息</li>
 <li>自己给所有客户端发送消息(不包括自己)</li>
