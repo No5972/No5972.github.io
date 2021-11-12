@@ -129,21 +129,24 @@
     var CONFIG = {"hostname":"no5972.github.io","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="博客很火，但是有的人气很旺，每天都有几千人来访问，而有的却门可罗雀。如果你很低调，不关心人气也就罢了。如果你一直很努力地在经营自己的博客，却不见兴旺，也许你的博客设置已经犯了很多不可饶恕的罪过。迷糊的你，赶紧擦亮眼睛，看看它们到底错在哪里？">
+  <meta name="description" content="关于材质的网上并没有标准的定义，顶点、面、贴图、透明度、反射度、法线贴图、高光贴图、Toon贴图，所有这些基础的材料组成的东西就叫材质。反过来删除材质就代表你把顶点、面、贴图等全部一并删除。我们所说的金属材质，木材材质只是对原始材料参数进行重新设定。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客设置误区多">
-<meta property="og:url" content="https://no5972.github.io/cms/archivers/24.html">
+<meta property="og:title" content="仅作笔记用：PMX Editor 修改贴图材质">
+<meta property="og:url" content="https://no5972.github.io/cms/archivers/112.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="博客很火，但是有的人气很旺，每天都有几千人来访问，而有的却门可罗雀。如果你很低调，不关心人气也就罢了。如果你一直很努力地在经营自己的博客，却不见兴旺，也许你的博客设置已经犯了很多不可饶恕的罪过。迷糊的你，赶紧擦亮眼睛，看看它们到底错在哪里？">
+<meta property="og:description" content="关于材质的网上并没有标准的定义，顶点、面、贴图、透明度、反射度、法线贴图、高光贴图、Toon贴图，所有这些基础的材料组成的东西就叫材质。反过来删除材质就代表你把顶点、面、贴图等全部一并删除。我们所说的金属材质，木材材质只是对原始材料参数进行重新设定。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img.shields.io/badge/%E7%94%B5%E8%84%91%E6%8A%A5-%E5%B0%8F%E6%96%B0-brightgreen">
-<meta property="article:published_time" content="2020-08-11T11:30:00.000Z">
-<meta property="article:modified_time" content="2021-07-10T02:52:23.100Z">
+<meta property="og:image" content="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA%E5%8D%9A%E5%AE%A2-%E5%8A%A8%E7%94%BB%E5%B7%A5%E4%BD%9C%E5%AE%A4Official-brightgreen">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/25b081289157e8807f390cac6d8ff41d.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/e870b5ba5b380a3f162832cac16019d5.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/5a0cdcb0452bd8b642c4a79e186d812f.gif">
+<meta property="article:published_time" content="2021-11-12T16:30:00.000Z">
+<meta property="article:modified_time" content="2021-11-12T08:31:39.348Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.shields.io/badge/%E7%94%B5%E8%84%91%E6%8A%A5-%E5%B0%8F%E6%96%B0-brightgreen">
+<meta name="twitter:image" content="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA%E5%8D%9A%E5%AE%A2-%E5%8A%A8%E7%94%BB%E5%B7%A5%E4%BD%9C%E5%AE%A4Official-brightgreen">
 
-<link rel="canonical" href="https://no5972.github.io/cms/archivers/24.html">
+<link rel="canonical" href="https://no5972.github.io/cms/archivers/112.html">
 
 
 <script class="page-configurations">
@@ -156,7 +159,7 @@
   };
 </script>
 
-  <title>博客设置误区多 | No.5972 Publishment Website</title>
+  <title>仅作笔记用：PMX Editor 修改贴图材质 | No.5972 Publishment Website</title>
   <script>
       if (!!window.ActiveXObject || "ActiveXObject" in window) {
         document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
@@ -496,7 +499,7 @@ window.onload = function () {
 
   <aside class="sidebar" style="background: #fff2; padding: 20px 0;">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active" style="display: contents;">
+    <div class="sidebar-inner sidebar-overview-active" style="display: contents;">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -508,7 +511,6 @@ window.onload = function () {
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#误区一默认播放音乐吓死人"><span class="nav-text"> 误区一：默认播放音乐吓死人</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#误区二首页花哨挂饰过多-严重影响访问速度"><span class="nav-text"> 误区二：首页花哨挂饰过多 严重影响访问速度</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#误区三需要注册才能下载和评论"><span class="nav-text"> 误区三：需要注册才能下载和评论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#误区四对非ie浏览器支持不佳"><span class="nav-text"> 误区四：对非IE浏览器支持不佳</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#误区五无法留言"><span class="nav-text"> 误区五：无法留言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#误区六垃圾留言遍布"><span class="nav-text"> 误区六：垃圾留言遍布</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -599,7 +601,7 @@ window.onload = function () {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/24.html">
+    <link itemprop="mainEntityOfPage" href="https://no5972.github.io/cms/archivers/112.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/No5972/Live2D@10/32865305.jpg">
@@ -613,7 +615,7 @@ window.onload = function () {
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-          博客设置误区多
+          仅作笔记用：PMX Editor 修改贴图材质
         </h1>
 
         <div class="post-meta">
@@ -623,7 +625,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-08-11 11:30:00 | Modified: 2021-07-10 02:52:23" itemprop="dateCreated datePublished" datetime="2020-08-11T11:30:00+00:00">2020-08-11 11:30:00</time>
+              <time title="Created: 2021-11-12 16:30:00 | Modified: 2021-11-12 08:31:39" itemprop="dateCreated datePublished" datetime="2021-11-12T16:30:00+00:00">2021-11-12 16:30:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -631,7 +633,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Web-Building/" itemprop="url" rel="index"><span itemprop="name">Web Building</span></a>
+                  <a href="/cms/categories/Webapp/" itemprop="url" rel="index"><span itemprop="name">Webapp</span></a>
                 </span>
             </span>
 
@@ -644,8 +646,8 @@ window.onload = function () {
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/cms/archivers/24.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/24.html" itemprop="commentCount"></span>
+    <a title="valine" href="/cms/archivers/112.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/112.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -660,33 +662,36 @@ window.onload = function () {
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>来源：<a href="https://navi.cnki.net/knavi/NPaperDetail?pcode=CCND&amp;bzpym=DINA" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E7%94%B5%E8%84%91%E6%8A%A5-%E5%B0%8F%E6%96%B0-brightgreen" alt="电脑报小新" /></a></p>
-<p>博客很火，但是有的人气很旺，每天都有几千人来访问，而有的却门可罗雀。如果你很低调，不关心人气也就罢了。如果你一直很努力地在经营自己的博客，却不见兴旺，也许你的博客设置已经犯了很多不可饶恕的罪过。迷糊的你，赶紧擦亮眼睛，看看它们到底错在哪里？</p>
-<h1 id="误区一默认播放音乐吓死人"><a class="markdownIt-Anchor" href="#误区一默认播放音乐吓死人"></a> 误区一：默认播放音乐吓死人</h1>
-<p><strong>不良指数：</strong> ★★★★★</p>
-<p>有很多人把博客设置为默认播放背景音乐，但是每个人的喜好不同，优美的音乐大家可以一起欣赏，但如果人家在夜深人静之时看你的博客，却突然蹦出一阵劲爆的摇滚背景乐，怕是要吓倒一批人吧。而且不少博客本身服务器不稳定，再加载背景音乐，网页很容易出现假死状态。</p>
-<p><strong>解决方案：</strong> 取消博客的自己播放音乐功能，将自己喜欢的歌曲以列表的形式显示（图1），让访问者选择自己喜欢的歌曲来听。给访问者足够的选择空间，比强制放歌效果要好很多。</p>
-<h1 id="误区二首页花哨挂饰过多-严重影响访问速度"><a class="markdownIt-Anchor" href="#误区二首页花哨挂饰过多-严重影响访问速度"></a> 误区二：首页花哨挂饰过多 严重影响访问速度</h1>
-<p><strong>不良指数：</strong> ★★★★★</p>
-<p>知道互联网中著名的六秒定律吗？那就是无论多好的网站，如果在六秒钟内无法打开首页内容，就会有一半的人不会再去访问该网站。要是在二十秒内还无法打开首页内容，绝大部分人不会再次访问。而加载过多闪闪亮亮的挂件（图2）就会严重影响到博客空间的打开速度。</p>
-<p><strong>解决方案：</strong> 要学会合理地给首页添加挂饰，避免添加大尺寸的Flash和体积大的图片。这样在不失个性的前提下，也大大加快了博客访问速度。</p>
-<h1 id="误区三需要注册才能下载和评论"><a class="markdownIt-Anchor" href="#误区三需要注册才能下载和评论"></a> 误区三：需要注册才能下载和评论</h1>
-<p><strong>不良指数：</strong> ★★★</p>
-<p>很多博客提供了一些实用软件下载，不过在下载的时候却需要注册，有的甚至连对博客评论也需要注册。这样博客的互动性优势就完全体现不出来了。</p>
-<p><strong>解决方案：</strong> 在博客后台对下载和评论选项进行设置，关闭需注册用户才能下载和评论的选项，这样访问者就可以省去注册登录的烦恼，轻松共享博客的资源。</p>
-<h1 id="误区四对非ie浏览器支持不佳"><a class="markdownIt-Anchor" href="#误区四对非ie浏览器支持不佳"></a> 误区四：对非IE浏览器支持不佳</h1>
-<p><strong>不良指数：</strong> ★★★★</p>
-<p>很多朋友喜欢用Flash动画装饰页面，可它们对非IE浏览器的支持不够好，经常会出现一个Flash把整个页面盖住或者页面变形的情况。这样，那些不用IE的网友就无法正常访问你的博客。</p>
-<p><strong>解决方案：</strong> 在给博客添加特效的时候，除了要在IE中进行测试外，还需要在Firefox、TT、傲游等主流浏览器上进行效果测试。</p>
-<h1 id="误区五无法留言"><a class="markdownIt-Anchor" href="#误区五无法留言"></a> 误区五：无法留言</h1>
-<p><strong>不良指数：</strong> ★★★</p>
-<p>大家经常会遇到，在博客上看到一篇好的文章，想留言发表一下自己看法的时候，突然发现因为种种原因，无法进行留言。那这个博客跟普通网站还有区别吗？</p>
-<p><strong>解决方案：</strong> 想要让博客有更多人关注，最好将评论和留言功能打开（图3），让更多的人参与进来。</p>
-<h1 id="误区六垃圾留言遍布"><a class="markdownIt-Anchor" href="#误区六垃圾留言遍布"></a> 误区六：垃圾留言遍布</h1>
-<p><strong>不良指数：</strong> ★★★★★</p>
-<p>在别人的博客留言，却发现在发表评论之前，上面已经有几十条垃圾留言（图4），你是留还是不留呢？留吧，这么多垃圾留言早把你的留言淹没了。不留吧，有些遗憾，毕竟自己还想说些什么。</p>
-<p><strong>解决方案：</strong> 要想尊重别人，首先要尊重自己。就目前来说，要杜绝垃圾留言，能做到的就是常去删除垃圾留言。</p>
-<p>看看你的博客是否存在上面的问题，如果有，赶快改之。相信改正了这些不足，会有更多的人喜欢上你的博客的。</p>
+        <p>来源：<a href="http://blog.sina.com.cn/s/blog_15fe57f4d0102xt4l.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E6%96%B0%E6%B5%AA%E5%8D%9A%E5%AE%A2-%E5%8A%A8%E7%94%BB%E5%B7%A5%E4%BD%9C%E5%AE%A4Official-brightgreen" alt="新浪博客-动画工作室Official" /></a></p>
+<p>关于材质的网上并没有标准的定义，顶点、面、贴图、透明度、反射度、法线贴图、高光贴图、Toon贴图<br />
+所有这些基础的材料组成的东西就叫材质。反过来删除材质就代表你把顶点、面、贴图。。。。<br />
+全部一并删除。我们所说的金属材质，木材材质只是对原始材料参数进行重新设定。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/25b081289157e8807f390cac6d8ff41d.png" alt="" /></p>
+<p><strong>编号1</strong>：PMX2.0材质默认设置为（扩展色=1，反射色=0，环境色=0.5 ）修改材质色跟渲染的品质关联，<br />
+一般不建议修改，你要改的是你渲染包中对应的材质参数<br />
+（外来导入的游戏服装，胖次都要重新设置材质）</p>
+<p><strong>编号2</strong>：**【非透过度】**就是设置材质的透明度（0=不显示，1=显示 0.5=半透明）一般像小姐姐<br />
+跳着跳着衣服就没了就是把衣服设置成透明的🤔</p>
+<p>接着我们来说说**【反射强度】**设置，反射强度设定值越高亮度也就越高【AutoLuminous4】这个灯光<br />
+插件载入后，只要把你需要的材质设置成100以上的参数，任何材质都会发光，当然了你<br />
+也可以设置材质色让发光的材质发出不同的颜色的灯光。</p>
+<p><strong>编号3</strong>：很多人说模型没有影子就是因为**【地面影】<strong>没有√，セルフ影都是自动设置阴影的意思两个打上√。<br />
+而像腿、身体、衣服这些双面材质需要在</strong>【两面描画】**前打，而脸、眼睛、瞳就不用设定。<br />
+**【顶点色】**就是顶点着色用顶点的颜色覆盖材质贴图，一般用不到。</p>
+<p><strong>编号4</strong>：轮廓线不需要设置，因为我们在使用MMD软件时在**【显示-&gt;轮廓线大小】**中设置0就可以关闭，<br />
+轮廓线只是在2D或手绘渲染时才会用到，3D渲染不需要轮廓线的。</p>
+<p><strong>编号5</strong>：**【Tex】**这里设置的就是贴图图片，乱码变成白模就是因为定位不到贴图的文件位置（文件名乱码）</p>
+<p><strong>编号6</strong>：**【Sph高光贴图】**高光贴图主要应用在（G渲、P渲）中，他的作用就是叠加在<br />
+材质表面生成高光，而G渲P渲只有用高光贴图后才能更好的渲染出头发、身体、金属材质的不同光泽，<br />
+网上也有一份这种高光贴图包。为了便于理解我们给眼睛贴上sph贴图演示一下。高光贴图应用非常广泛<br />
+很多游戏盔甲就是用的高光贴图来让金属泛光。。。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/e870b5ba5b380a3f162832cac16019d5.png" alt="" /></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/5a0cdcb0452bd8b642c4a79e186d812f.gif" alt="" /></p>
+<p>ray渲N渲IK渲本身就自带高光贴图设置，这也就是为什么N渲的作者在演示时让你删除Sph的原因，<br />
+你可以在N渲的文件夹中找到这类贴图文件。当然了这里也不需要设置什么法线贴图，<br />
+在N/IK/Ray渲染材质中设置，</p>
+<p><strong>编号7</strong>：Toon就是模型本影贴图。你可以试着删除贴图看看效果，删除toon贴图后模型没有影子<br />
+但有些渲染是自带影子机能的，PmxEditor系统自带10张Toon贴图（按本影的明度排列）。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
@@ -709,13 +714,10 @@ window.onload = function () {
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/cms/archivers/23.html" rel="prev" title="假宽带真相">
-      <i class="fa fa-chevron-left"></i> 假宽带真相
+    <a href="/cms/archivers/111.html" rel="prev" title="SpringBoot 集成 WebSocket">
+      <i class="fa fa-chevron-left"></i> SpringBoot 集成 WebSocket
     </a></div>
-      <div class="post-nav-item">
-    <a href="/cms/archivers/25.html" rel="next" title="商业博客三大误区">
-      商业博客三大误区 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -874,6 +876,9 @@ window.onload = function () {
   
 
   
+      
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
+
 
   
 
