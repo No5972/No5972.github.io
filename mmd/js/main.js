@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>let scene, renderer, camera, mesh, helper, effect;
+let scene, renderer, camera, mesh, helper, effect;
 
 let ready = false;
 
@@ -10,7 +10,7 @@ const windowHeight = window.innerHeight;
 const clock = new THREE.Clock();
 
 
-const Pmx = "./pmx/mlj/mlj.pmx";
+const Pmx = "/mmd/pmx/mlj/mlj.pmx";
 const MotionObjects = [
   { id: "float_with_rotate", VmdClip: null, AudioClip: false },
   { id: "kei_voice_009_1", VmdClip: null, AudioClip: false },
@@ -116,7 +116,7 @@ LoadModeler = async () => {
   //Loading VMD
   LoadVMD = (id) => {
     return new Promise(resolve => {
-      const path = "./vmd/" + id + ".vmd";
+      const path = "/mmd/vmd/" + id + ".vmd";
       const val = MotionObjects.findIndex(MotionObject => MotionObject.id == id);
 
       loader.loadAnimation(path, mesh, (vmd) => {
@@ -132,7 +132,7 @@ LoadModeler = async () => {
   //Load Audio
   LoadAudio = (id) => {
     return new Promise(resolve => {
-      const path = "./audio/" + id + ".mp3";
+      const path = "/mmd/audio/" + id + ".mp3";
       const val = MotionObjects.findIndex(MotionObject => MotionObject.id == id);
 
       if (MotionObjects[val].AudioClip) {
@@ -267,4 +267,4 @@ PoseClickEvent = (id) => {
       VmdControl("loop", true);
       break;
   }
-}<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
+}
