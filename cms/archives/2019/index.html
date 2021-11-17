@@ -26,9 +26,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-SC-CSS@4.0.0/noto_serif_sc_bold/css.css"/>
   <style>
     #landlord {
-      bottom: -70px;
-      width: 200px;
-      height: 400px;
+      bottom: -50px;
+      width: 1000px;
+      height: 550px;
+      left: -300px;
+      pointer-events: none;
     }
     
     #live2d {
@@ -791,10 +793,10 @@ window.onload = function () {
 
 
 
-<!-- public live2d -->
 <div id="landlord">
     <div class="message" style="opacity:0"></div>
-    <canvas id="live2d" width="280" height="550" class="live2d"></canvas>
+    <!-- <canvas id="live2d" width="280" height="550" class="live2d"></canvas> -->
+    <iframe src="https://test-review.bj.bcebos.com/mmd/index.html" frameborder="no" style="pointer-events: none; width: 100%; height: 100%"></iframe>
     <div class="hide-button">隐藏</div>
 </div>
 
@@ -806,6 +808,12 @@ window.onload = function () {
 </div>
 <script>$('.marquee').marquee({duration: 25000});</script>
 
+<!-- mmd3d begin -->
+  
+<!-- mmd3d end -->
+
+<!--
+<!-- public live2d start -->
 <script type="text/javascript">
     var message_Path = 'https://cdn.jsdelivr.net/gh/No5972/Live2D@24/live2d/'
     var home_Path = 'https://no5972.github.io/cms/'  //此处修改为你的域名，必须带斜杠
@@ -814,10 +822,12 @@ window.onload = function () {
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/No5972/Live2D@11/live2d/js/message.js"></script>
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script type="text/javascript">
-    loadlive2d("live2d", "https://raw.githubusercontents.com/No5972/live2DModel/master/live2d-widget-model-miku/assets/miku.model.json");
+    loadlive2d("live2d", "https://cdn.jsdelivr.net/gh/QiShaoXuan/live2DModel@1.0.0/live2d-widget-model-miku/assets/miku.model.json");
     $("#landlord").draggable();
 </script>
-<!-- public live2d -->
+<!-- public live2d end -->
+-->
+
 
 
 
@@ -828,7 +838,6 @@ window.onload = function () {
         $("#post-reward").hide();
     });
 </script>
-
 
 
 

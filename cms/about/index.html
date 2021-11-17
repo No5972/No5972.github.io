@@ -26,9 +26,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jfcherng/Noto-Serif-SC-CSS@4.0.0/noto_serif_sc_bold/css.css"/>
   <style>
     #landlord {
-      bottom: -70px;
-      width: 200px;
-      height: 400px;
+      bottom: -50px;
+      width: 1000px;
+      height: 550px;
+      left: -300px;
+      pointer-events: none;
     }
     
     #live2d {
@@ -129,12 +131,12 @@
     var CONFIG = {"hostname":"no5972.github.io","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="var ap &#x3D; new APlayer({             element: document.getElementById(&quot;aplayer-nURruXra&quot;),             narrow: false,             autoplay: true,">
+  <meta name="description" content="var ap &#x3D; new APlayer({             element: document.getElementById(&quot;aplayer-JSndTABJ&quot;),             narrow: false,             autoplay: true,">
 <meta property="og:type" content="website">
 <meta property="og:title" content="About">
 <meta property="og:url" content="https://no5972.github.io/cms/about/index.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="var ap &#x3D; new APlayer({             element: document.getElementById(&quot;aplayer-nURruXra&quot;),             narrow: false,             autoplay: true,">
+<meta property="og:description" content="var ap &#x3D; new APlayer({             element: document.getElementById(&quot;aplayer-JSndTABJ&quot;),             narrow: false,             autoplay: true,">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://no5972.github.io/cms/static/no5972.png">
 <meta property="og:image" content="https://img.shields.io/badge/dynamic/json?label=GitHub&amp;query=%2524.data.totalSubs&amp;url=https%253A%252F%252Fapi.spencerwoo.com%252Fsubstats%252F%253Fsource%253Dgithub%2526queryKey%253DNo5972&amp;labelColor=525151&amp;color=181717&amp;logo=github&amp;longCache=true&amp;link=https%253A%252F%252Fgithub.com%252FNo5972&amp;style=flat-square&amp;suffix=%20Followers">
@@ -625,12 +627,12 @@ window.onload = function () {
       
       <div class="post-body">
           
-        <div id="aplayer-nURruXra" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-JSndTABJ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-nURruXra"),
+            element: document.getElementById("aplayer-JSndTABJ"),
             narrow: false,
             autoplay: true,
             showlrc: false,
@@ -799,10 +801,10 @@ Original content of this site, except those works that are given appropriate cre
 
 
 
-<!-- public live2d -->
 <div id="landlord">
     <div class="message" style="opacity:0"></div>
-    <canvas id="live2d" width="280" height="550" class="live2d"></canvas>
+    <!-- <canvas id="live2d" width="280" height="550" class="live2d"></canvas> -->
+    <iframe src="https://test-review.bj.bcebos.com/mmd/index.html" frameborder="no" style="pointer-events: none; width: 100%; height: 100%"></iframe>
     <div class="hide-button">隐藏</div>
 </div>
 
@@ -814,6 +816,12 @@ Original content of this site, except those works that are given appropriate cre
 </div>
 <script>$('.marquee').marquee({duration: 25000});</script>
 
+<!-- mmd3d begin -->
+  
+<!-- mmd3d end -->
+
+<!--
+<!-- public live2d start -->
 <script type="text/javascript">
     var message_Path = 'https://cdn.jsdelivr.net/gh/No5972/Live2D@24/live2d/'
     var home_Path = 'https://no5972.github.io/cms/'  //此处修改为你的域名，必须带斜杠
@@ -822,10 +830,12 @@ Original content of this site, except those works that are given appropriate cre
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/No5972/Live2D@11/live2d/js/message.js"></script>
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script type="text/javascript">
-    loadlive2d("live2d", "https://raw.githubusercontents.com/No5972/live2DModel/master/live2d-widget-model-miku/assets/miku.model.json");
+    loadlive2d("live2d", "https://cdn.jsdelivr.net/gh/QiShaoXuan/live2DModel@1.0.0/live2d-widget-model-miku/assets/miku.model.json");
     $("#landlord").draggable();
 </script>
-<!-- public live2d -->
+<!-- public live2d end -->
+-->
+
 
 
 
@@ -836,7 +846,6 @@ Original content of this site, except those works that are given appropriate cre
         $("#post-reward").hide();
     });
 </script>
-
 
 
 
