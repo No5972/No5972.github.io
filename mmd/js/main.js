@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\cms\assets\css\APlayer.min.css"><script src="\cms\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>let scene, renderer, camera, mesh, helper, effect;
+let scene, renderer, camera, mesh, helper, effect;
 
 let ready = false;
 
@@ -267,4 +267,4 @@ PoseClickEvent = (id) => {
       VmdControl("loop", true);
       break;
   }
-}<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
+}
