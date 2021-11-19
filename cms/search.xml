@@ -68,6 +68,8 @@
 <p>其中的 <code>iframe</code>需要改为第二大块你放在 CDN 或者对象存储的HTML文件地址。</p>
 <p>然后通过 CSS 控制模型展示的大小，还有不能影响鼠标点击网页元素了。鄙人写的是</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">  <span class="selector-id">#landlord</span> &#123;</span></span><br><span class="line">    bottom: -50px;</span><br><span class="line">    width: 1000px;</span><br><span class="line">    height: 550px;</span><br><span class="line">    left: -300px;</span><br><span class="line">    pointer-events: none;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"><span class="css">  <span class="selector-id">#live2d</span> &#123;</span></span><br><span class="line">    display: block;</span><br><span class="line">    height: 100%;</span><br><span class="line">    width: 100%;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果之前没有用过这个 Live2D 的话，还要在 <code>head</code>里面加一个 CSS 文件。在<code>themes\next\layout\_partials\head\head.njk</code>中添加</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/live2d/css/live2d.css"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p>此外，鄙人是单独把原来 Live2D 的 Wrapper 放到单独的 NJK 里面了。布局的 NJK <code>themes\next\layout\_third-party\index.njk</code>是这样的。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% include &#39;baidu-push.njk&#39; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% include &#39;rating.njk&#39; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;%- if theme.algolia_search.enable %&#125;</span><br><span class="line">  &#123;% include &#39;search&#x2F;algolia-search.njk&#39; %&#125;</span><br><span class="line">&#123;% elif theme.swiftype_key %&#125;</span><br><span class="line">  &#123;% include &#39;search&#x2F;swiftype.njk&#39; %&#125;</span><br><span class="line">&#123;% elif theme.local_search.enable %&#125;</span><br><span class="line">  &#123;% include &#39;search&#x2F;localsearch.njk&#39; %&#125;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% include &#39;live2d&#x2F;live2d.njk&#39; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% include &#39;chat&#x2F;chatra.njk&#39; %&#125;</span><br><span class="line">&#123;% include &#39;chat&#x2F;tidio.njk&#39; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% include &#39;tags&#x2F;pdf.njk&#39; %&#125;</span><br><span class="line">&#123;% include &#39;tags&#x2F;mermaid.njk&#39; %&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="4效果"><a class="markdownIt-Anchor" href="#4效果"></a> 4.效果</h1>
@@ -1792,8 +1794,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Automation</category>
         <category>Web Building</category>
+        <category>Automation</category>
         <category>Github</category>
       </categories>
   </entry>
