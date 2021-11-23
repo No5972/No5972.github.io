@@ -465,7 +465,8 @@
     <url>/cms//archivers/103.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>根据在B站收集到的线索，现整理出针对2.1版本的原神官服和B服互转的方法。此方法未经测试，不保证有效。</p>
 <p>2.1版本在B服需要另外一个文件才可以运行，不然会报错。<code>PCGameSDK.dll</code></p>
-<p>此文件已上传阿里云盘。截至发表此文时链接为：<a href="https://www.aliyundrive.com/s/VAQ18qqFtff" target="_blank" rel="noopener">https://www.aliyundrive.com/s/VAQ18qqFtff</a></p>
+<p><s>此文件已上传阿里云盘。截至发表此文时链接为：<a href="https://www.aliyundrive.com/s/VAQ18qqFtff" target="_blank" rel="noopener">https://www.aliyundrive.com/s/VAQ18qqFtff</a></s></p>
+<p>阿里云盘已经不能直接下载了，这里传了一份分流在蓝奏云：<a href="https://wujiuqier.lanzoui.com/iNnd9wt9tmb" target="_blank" rel="noopener">https://wujiuqier.lanzoui.com/iNnd9wt9tmb</a></p>
 <p>两个方面需要完成。可以不分先后。</p>
 <ol>
 <li>官服转B服需要准备<code>PCGameSDK.dll</code>文件。获取方式见上。放到<code>Genshin Impact\Game\Yuanshen_Data\Plugins</code>目录。</li>
