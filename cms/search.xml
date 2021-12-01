@@ -2344,6 +2344,9 @@ getFlash_beta, getFlash 页游Flash（NPAPI，装完后看的版本是32，不�
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Flash即将在2020年底停止支持。如果仍然有一些业内业务需要Flash我們应该如何应对，这里找到了更多的线索。</p>
 <ol>
 <li>
+<p>21.11.13更新：360推出了360极速浏览器X的211113版。此版本为95版本的内核，并且实现了支持Flash Player。这可能是国内第一个高于88版本内核且支持Flash Player的浏览器。</p>
+</li>
+<li>
 <p>21.05.08更新：Leaning科技早在去年9月份就推出了一套利用WASM的解决方案，专门解决在HTML5的页面中加载Flash内容而无需安装Flash——<a href="https://leaningtech.com/announcing-cheerpx-for-flash-a-solution-to-extend-the-life-of-flash-applications-post-2020/" target="_blank" rel="noopener">CheerpX for Flash</a>。公告称此解决方案很容易和<code>&lt;embed&gt;</code>标签、<code>&lt;object&gt;</code>标签或者<code>swfobject.js</code>集成，并且已经在数量庞大的AS2、AS3的Flash应用以及Flex、Spark、OpenLaszlo应用通过测试。但是这是一套企业解决方案，需要专门联系付费购买。<br />
 <img src="https://img-blog.csdnimg.cn/20210508102642402.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTc3MTM5,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 </li>
