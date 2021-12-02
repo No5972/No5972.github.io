@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.github.io/cms/"/>
-  <updated>2021-12-02T09:59:28.645Z</updated>
+  <updated>2021-12-02T10:16:22.994Z</updated>
   <id>https://no5972.github.io/cms/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://no5972.github.io/cms/archivers/116.html"/>
     <id>https://no5972.github.io/cms/archivers/116.html</id>
     <published>2021-12-02T18:00:00.000Z</published>
-    <updated>2021-12-02T09:59:28.645Z</updated>
+    <updated>2021-12-02T10:16:22.994Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>IrfanView 其实已经提供了自定义快捷键的功能，但是没有单独的菜单选项或者窗口按钮来对应这个修改快捷键的功能。</p><p>经过前往官方论坛询问得知，快捷键要在菜单项右键，然后就会弹出一个右键菜单，只有一个菜单项，修改快捷键。</p><p>打开“编辑”，然后 <strong>右击</strong> “插入水印”，然后就可以看到修改快捷键的右键菜单。选择之，然后在弹出的窗口指定一个快捷键，点击“设置”，如果没有冲突的快捷键就可以直接确定了，如果有冲突的快捷键会提示有哪个功能冲突了，请先将已有的菜单项右键修改快捷键，然后在输入框中按退格清除掉快捷键，然后点设置。再回到原来的菜单项右键修改快捷键，输入要指定的快捷键，确定设置即可。</p><p><img src="https://img-blog.csdnimg.cn/7055ca6ffc624ed8929aef39cbd00fcd.png" alt="" /></p><p><img src="https://img-blog.csdnimg.cn/e42113de295440d0b956d2b9481a3287.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>IrfanView 其实从 2020 年 10 月 21 日的 4.56 版本就已经提供了自定义快捷键的功能，但是没有单独的菜单选项或者窗口按钮来对应这个修改快捷键的功能。</p><p>经过前往官方论坛询问得知，快捷键要在菜单项右键，然后就会弹出一个右键菜单，只有一个菜单项，修改快捷键。</p><p>打开“编辑”，然后 <strong>右击</strong> “插入水印”，然后就可以看到修改快捷键的右键菜单。选择之，然后在弹出的窗口指定一个快捷键，点击“设置”，如果没有冲突的快捷键就可以直接确定了，如果有冲突的快捷键会提示有哪个功能冲突了，请先将已有的菜单项右键修改快捷键，然后在输入框中按退格清除掉快捷键，然后点设置。再回到原来的菜单项右键修改快捷键，输入要指定的快捷键，确定设置即可。</p><p><img src="https://img-blog.csdnimg.cn/7055ca6ffc624ed8929aef39cbd00fcd.png" alt="" /></p><p><img src="https://img-blog.csdnimg.cn/e42113de295440d0b956d2b9481a3287.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
