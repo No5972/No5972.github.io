@@ -25,15 +25,16 @@
   <entry>
     <title>Win11  在 Edge 浏览器中报名教师资格证</title>
     <url>/cms//archivers/117.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>刚才试了一下，现在的 Edge 浏览器已经可以手动添加以 IE 模式打开 URL 地址了。打开 Edge 的设置，搜索 Internet Explorer，拉到最下面，先把“让 Internet Explorer 在 Microsoft Edge 中打开网站”改成“始终”，然后把“允许在 Internet Explorer 模式下重新加载网站”改成“允许”，然后点击下面的添加，把教师资格证考试报名页面的地址添加进去，就可以在 Edge 浏览器报名教师资格证考试了。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;ntcebm2.neea.edu.cn&#x2F;apply&#x2F;memapp&#x2F;memLogin</span><br></pre></td></tr></table></figure>
-<p>如果在 Edge 浏览器打开之后还是这个提示的话，需要修改兼容性视图设置。但是在 Win11 已经打不开 IE 浏览器了。此时需要修改注册表。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>刚才试了一下，现在的 Edge 浏览器已经可以手动添加以 IE 模式打开 URL 地址了。打开 Edge 的设置，在左侧选择“默认浏览器”，拉到最下面，先把“让 Internet Explorer 在 Microsoft Edge 中打开网站”改成“始终”，然后把“允许在 Internet Explorer 模式下重新加载网站”改成“允许”，然后点击下面的添加，把下面这些教师资格证考试报名页面的地址添加进去（根据所在地区查看对应的网址，怕麻烦的话就全都添加进去），就可以在 Edge 浏览器报名教师资格证考试了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;ntcebm1.neea.edu.cn&#x2F;apply&#x2F;memapp&#x2F;memLogin</span><br><span class="line">http:&#x2F;&#x2F;ntcebm2.neea.edu.cn&#x2F;apply&#x2F;memapp&#x2F;memLogin</span><br><span class="line">http:&#x2F;&#x2F;ntcebm3.neea.edu.cn&#x2F;apply&#x2F;memapp&#x2F;memLogin</span><br><span class="line">http:&#x2F;&#x2F;ntcebm4.neea.edu.cn&#x2F;apply&#x2F;memapp&#x2F;memLogin</span><br><span class="line">http:&#x2F;&#x2F;ntcebm5.neea.edu.cn&#x2F;apply&#x2F;memapp&#x2F;memLogin</span><br><span class="line">http:&#x2F;&#x2F;ntcebm6.neea.edu.cn&#x2F;apply&#x2F;memapp&#x2F;memLogin</span><br><span class="line">http:&#x2F;&#x2F;ntcebm7.neea.edu.cn&#x2F;apply&#x2F;memapp&#x2F;memLogin</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/c3c594727ba14421a4167e210357dfe0.png" alt="" /></p>
+<p>如果在 Edge 浏览器打开之后还是这个“请使用 IE 系列浏览器”提示的话，需要修改兼容性视图设置。但是在 Win11 已经打不开 IE 浏览器了。此时需要修改注册表。</p>
 <p>但是刚才查了一下注册表的位置，发现这个兼容性视图的设置的注册表的键值居然是二进制数据！换了一个能打开 IE 浏览器的 Win10 的电脑，把这个地址 <a href="http://neea.edu.cn" target="_blank" rel="noopener">neea.edu.cn</a> 加到那个列表里面去，然后打开注册表编辑器，找到刚才找到的注册表路径：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\Microsoft\Internet Explorer\BrowserEmulation\ClearableListData\UserFilter</span><br></pre></td></tr></table></figure>
 <p>选中这个二进制值，然后点击文件-导出。这样我们就得到了注册表的 reg 文件。 <strong>好吧，这一段对于非计算机专业而是纯粹来考教师资格证的完全是废话了。接下来是需要大家做的事情了。</strong></p>
 <p>将这个内容输入到记事本保存为一个 <code>.reg</code> 的文件。点击文件-另存为，将保存类型选择所有文件，然后文件名后面加上<code>.reg</code> 后缀。编码选择“UTF-16 LE”。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\BrowserEmulation\ClearableListData]</span><br><span class="line">&quot;UserFilter&quot;&#x3D;hex:41,1f,00,00,53,08,ad,ba,01,00,00,00,34,00,00,00,01,00,00,00,\</span><br><span class="line">  01,00,00,00,0c,00,00,00,20,7c,0c,ac,b8,f0,d7,01,01,00,00,00,0b,00,6e,00,65,\</span><br><span class="line">  00,65,00,61,00,2e,00,65,00,64,00,75,00,2e,00,63,00,6e,00</span><br></pre></td></tr></table></figure>
-<p>双击这个保存的文件，确认导入。然后再到 Edge 重新访问这个页面。看看能不能打开报名页面了。</p>
+<p>双击这个保存的文件，确认导入。然后再到 Edge 重新访问这个页面。看看能不能打开报名页面了。如果还不能访问，请关闭已经打开的报名页面标签页，然后再访问它。</p>
 <p><img src="https://img-blog.csdnimg.cn/014e0d3c49dd4a4db471da6d2a52f885.png" alt="" /></p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
@@ -1846,8 +1847,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Web Building</category>
         <category>Automation</category>
+        <category>Web Building</category>
         <category>Github</category>
       </categories>
   </entry>
