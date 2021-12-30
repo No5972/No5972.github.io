@@ -33,7 +33,7 @@
 <li>Base64 表示了从 0 ～ 63 数值，有 64 个字符（2 的 6 次方是 64，所以是 64 个字符），由 A - Z，a - z，0 - 9，+， / 这 64 个字符组成的（还有一个表示后缀的字符<code>=</code>）</li>
 <li>Base64 把每三个 8 Bit 的字节转换为四个 6 Bit 的字节（8 和 6 的最小公倍数是 24），也就是说，转换后的字符串理论上将要比原来的长 1 / 3，转换前的 ASCII 码字符长度如果不是 3 的倍数，需要将转换二进制数字末尾补 0<br />
 示例：<br />
-<img src="https://img-blog.csdnimg.cn/20200802174845496.PNG" alt="" /></li>
+<img src="https://img-blog.csdnimg.cn/6691a9a9e0fc4ceaaf9a3e2b30432a74.png" alt="" /></li>
 <li>解码的过程：去掉 Base64 字符末尾的<code>=</code>。剩下的 Base64 字符，转为二进制数字，每 8 个 bit 组成一个字节，最后剩余不足 8 位的丢弃即可</li>
 <li>Base64 字符对应表</li>
 </ol>
