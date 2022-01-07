@@ -23,6 +23,47 @@
       </categories>
   </entry>
   <entry>
+    <title>将 Python Django 的 Web 项目部署到 Vercel</title>
+    <url>/cms//archivers/119.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>又是一个国内没有资料的操作。这个要是实现了，那些不太大的 Python 项目就全部免了购买云服务器的成本！这次要做的事情是，把 Django 框架的 Python 项目也部署到 Vercel 上去！当然，并发量和流量都不能太大，免费版对这些都有不少限制，流量太大了搞不好会被 Vercel 封禁（之前看某乎评论有人反映项目被 Vercel 封禁），所以别部署太大的项目！另外，这个部署到 Vercel 是不能用数据库的，他们说是云端编译会出错。</p>
+<ol>
+<li>
+<p>我们还是在 Replit 上创建项目。项目类型我们选择 Django App Template 而不是 Python，也省点事。然后把 urls 和 views 都写好。写好了以后就开始着手配置 Vercel！</p>
+</li>
+<li>
+<p>首先，我们还是把 Vercel 的控制台端整来。直接切换到 Shell，保证在项目目录，然后执行</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vercel</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>然后配置项目的依赖。打开 <code>pyproject.toml</code>，看一下 <code>tool.poetry.dependencies</code> 里面都有什么。然后按照 Python 的依赖格式，在项目目录撰写依赖清单文件 <code>requirements.txt</code>。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">django&#x3D;&#x3D;3.0</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>配置 Vercel 的配置文件。按照 Replit 的模板来配置这个配置文件。在项目目录撰写 Vercel 配置文件 <code>vercel.json</code>。如果没有修改 App 名字的话他默认就是 <code>mysite</code>，这样的话就可以直接使用下面的文件。</li>
+</ol>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"builds"</span>: [&#123;</span><br><span class="line">        <span class="attr">"src"</span>: <span class="string">"mysite/wsgi.py"</span>,</span><br><span class="line">        <span class="attr">"use"</span>: <span class="string">"@ardnt/vercel-python-wsgi"</span>,</span><br><span class="line">        <span class="attr">"config"</span>: &#123; <span class="attr">"maxLambdaSize"</span>: <span class="string">"15mb"</span> &#125;</span><br><span class="line">    &#125;],</span><br><span class="line">    <span class="attr">"routes"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"src"</span>: <span class="string">"/(.*)"</span>,</span><br><span class="line">            <span class="attr">"dest"</span>: <span class="string">"mysite/wsgi.py"</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>把 <code>mysite/settings.py</code> 做一下修改。数据库那个不能要。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">DATABASES = &#123;&#125;</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>然后就可以往 Vercel 部署了。切换到 Shell，确保是在项目目录，然后执行</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./node_modules/.bin/vercel login</span><br></pre></td></tr></table></figure>
+<p>根据情况选择登录方式并登录。没有账号的需要注册账号。注册过程可以参考之前的文章<a href="90.html">《尽可能简单的搭建Hexo博客并部署到Vercel》</a>。</p>
+<ol start="7">
+<li>登录上去以后执行</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./node_modules/.bin/vercel --prod</span><br></pre></td></tr></table></figure>
+<p>还是和刚才提及的那篇文章一样，回答他提出的问题。然后看一看最终完成后输出的访问地址，看看能不能访问了。</p>
+<p><img src="https://img-blog.csdnimg.cn/591f2a79901b4a8fba6063088a534329.png" alt="" /></p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Python 手动实现 Base64 编码</title>
     <url>/cms//archivers/118.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>前段时间看了某篇报纸文章，讲解在 Python 中编码 Base64 的程序。然而那片文章完全只是调用 <code>base64</code> 这个包。Python 调包是相当方便，但是这样除了调包还是调包，根本达不到锻炼编码能力的效果。用人单位招人面试可不看你怎么调包，很多都是自己要手撕实现的。现在的 IT 开发岗位就是这么卷。</p>
