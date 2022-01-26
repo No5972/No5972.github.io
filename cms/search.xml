@@ -23,6 +23,21 @@
       </categories>
   </entry>
   <entry>
+    <title>杀人的网络暴力不整治不行了</title>
+    <url>/cms//archivers/120.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://baijiahao.baidu.com/s?id=1722920372968427694" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E5%8C%97%E4%BA%AC%E6%97%A5%E6%8A%A5%E5%AE%A2%E6%88%B7%E7%AB%AF-brightgreen" alt="北京日报客户端" /></a></p>
+<p>《生来即轻，还时亦净》—— 1 月 24 日，“寻亲男孩”刘学州在发布 7000 字绝笔长文后，离开了这个世界。一个不满 18 岁的少年，做出如此悲怆的选择，让人分外唏嘘。</p>
+<p>从刘学州的自述中，大致可以勾勒出其异常坎坷的生命轨迹：出生时被父母“卖掉”，4 岁养父母双亡，曾是校园霸凌受害者，在寻亲成功后被“二次遗弃”，更因在网上公开自己被生母拉黑的截图以及“要求父母买房子”之类传言，遭遇网暴谩骂。如今，人不在了，很多事实真相难以追索。但可以肯定的是，只凭他刚认亲不久、已分别组建家庭的亲生父母单方面发声，就跑到刘学州社交平台上大肆谩骂、乱扣帽子、宣泄情绪，已经构成了典型的网络暴力。</p>
+<p>网暴如一把“消音的枪”，杀人伤人于无形。从浙江女子取个快递被造谣出轨，到成都女孩流调轨迹泄露被人肉，再到某网红记者所谓“私人信息”曝光后被攻击……在多起事件中，总有一些网民听风是雨，事情尚未厘清，便喊打喊杀；争议观点偏听一方，便启动“无脑喷”模式；信息来源不知何处，就大肆跟风起哄……飞短流长、恶意汹涌，轻则违背公序良俗，重则击穿法律底线，时常搅得舆论场乌烟瘴气，更成为当事人“不能承受之重”。</p>
+<p>细观这些“网暴”狂欢事件，往往都有搬弄是非、强带节奏、掀起舆论风暴的“节点人物”。在“人人都有麦克风”的年代，借助网络扩音器的加持，每一种声音的杀伤力都可能被放大成千上万倍，这更提醒我们：发言需谨慎，表达有边界。尤其对于那些本就拥有大量粉丝，功能等同于媒体的大 V 来说，更要管好自己，绝不能为了逞口舌之快，或是为仨瓜俩枣的流量，就丢掉了良知。</p>
+<p>“雪崩时，没有一片雪花能够幸免”。网络空间的环境生态如何，深度影响每一个人，更依靠着每一个人。如今的互联网上，多的是吐槽题材，多的是情绪诱导，多的是流量生意，每个人在冲浪之时，都必须擦亮眼睛、理性表达，不因主观情绪先行而不负责任轻易置评，不因“法难责众”而口无遮拦喊打喊杀，决不当谣言传声筒、暴力扩散器。人人坚守底线，明白表达的责任、自由的边界，通过切实言行修复网络生态，受益的也将是我们所有人。</p>
+<p>为期 1 个月的“清朗 · 2022 年春节网络环境整治”专项行动正在开展，集中整治网络暴力、散播谣言等问题，正是重点之一。我们相信，随着相关法律的日益健全以及治理重拳的不断祭出，更多人会认识到网暴的可怕之处，也会意识到网络发言的边界之所在。</p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Webapp</category>
+      </categories>
+  </entry>
+  <entry>
     <title>将 Python Django 的 Web 项目部署到 Vercel</title>
     <url>/cms//archivers/119.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>又是一个国内没有资料的操作。这个要是实现了，那些不太大的 Python 项目就全部免了购买云服务器的成本！这次要做的事情是，把 Django 框架的 Python 项目也部署到 Vercel 上去！当然，并发量和流量都不能太大，免费版对这些都有不少限制，流量太大了搞不好会被 Vercel 封禁（之前看某乎评论有人反映项目被 Vercel 封禁），所以别部署太大的项目！另外，这个部署到 Vercel 是不能用数据库的，他们说是云端编译会出错。</p>
@@ -1912,8 +1927,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Web Building</category>
         <category>Automation</category>
+        <category>Web Building</category>
         <category>Github</category>
       </categories>
   </entry>
