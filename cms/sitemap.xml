@@ -898,13 +898,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/about/index.html</loc>
-    
-    <lastmod>2021-04-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/zh-CN/about.html</loc>
     
     <lastmod>2021-04-26</lastmod>
@@ -920,6 +913,13 @@
   
   <url>
     <loc>https://no5972.moe/cms/cookie-notice/index.html</loc>
+    
+    <lastmod>2021-04-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/about/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
@@ -965,14 +965,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/C/</loc>
+    <loc>https://no5972.moe/cms/categories/JavaScript/</loc>
     <lastmod>2022-02-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/JavaScript/</loc>
+    <loc>https://no5972.moe/cms/categories/C/</loc>
     <lastmod>2022-02-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
