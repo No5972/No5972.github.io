@@ -898,14 +898,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/zh-CN/about.html</loc>
+    <loc>https://no5972.moe/cms/about/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/about/index.html</loc>
+    <loc>https://no5972.moe/cms/zh-CN/about.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
@@ -965,13 +965,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/JavaScript/</loc>
-    <lastmod>2022-02-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/categories/C/</loc>
     <lastmod>2022-02-07</lastmod>
     <changefreq>daily</changefreq>
@@ -979,7 +972,21 @@
   </url>
   
   <url>
+    <loc>https://no5972.moe/cms/categories/JavaScript/</loc>
+    <lastmod>2022-02-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
+    <lastmod>2022-02-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/categories/Automation/</loc>
     <lastmod>2022-02-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1000,7 +1007,7 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Automation/</loc>
+    <loc>https://no5972.moe/cms/categories/C-C/</loc>
     <lastmod>2022-02-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1008,13 +1015,6 @@
   
   <url>
     <loc>https://no5972.moe/cms/categories/Github/</loc>
-    <lastmod>2022-02-07</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/categories/C-C/</loc>
     <lastmod>2022-02-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
