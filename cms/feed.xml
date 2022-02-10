@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2022-02-10T09:01:40.941Z</updated>
+  <updated>2022-02-10T09:07:08.813Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://no5972.moe/cms/archivers/122.html"/>
     <id>https://no5972.moe/cms/archivers/122.html</id>
     <published>2022-02-10T17:00:00.000Z</published>
-    <updated>2022-02-10T09:01:40.941Z</updated>
+    <updated>2022-02-10T09:07:08.813Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这是截至 2 月 10 日可以使用的一个手动领取超级 QQ 秀内测资格的操作过程。2022 年 2 月 10 日，老马宣布上线了超级 QQ 秀。如果想玩但是又看不到入口的可以尝试通过此法手动领取内测资格。</p><p>首先点击右下角的“动态”，选择“小世界”。点击右上角的放大镜按钮，然后就可以看到一个“超级 QQ 秀”的选项。这个可能很快就会消失，如果确实消失了看不到了可以使用备用链接进入。备用链接后续看情况要不要贴上去。</p><p>点击后会出现一个横幅“点击查看活动详情”，点开后拉到下边就能看到一个“抢体验资格”按钮。点击后跳转下一个页面，还是往下拉，会看到第二个按钮“抢先体验”。然后，看到“恭喜你获得超级 QQ 秀限量测试资格”字样的时候就成功领取了内测资格。</p><p>接下来，点击“关注公众号”，点击“领取福利”按钮。点击按钮下载资源包，再然后点击“去装扮”。稍等加载，就可以进入超级 QQ 秀的界面了。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这是截至 2 月 10 日可以使用的一个手动领取超级 QQ 秀内测资格的操作过程。2022 年 2 月 10 日，老马宣布上线了超级 QQ 秀。如果想玩但是又看不到入口的可以尝试通过此法手动领取内测资格。</p><p>首先将手机 QQ 更新到最新版。点击右下角的“动态”，选择“小世界”。点击右上角的放大镜按钮，然后就可以看到一个“超级 QQ 秀”的选项。这个可能很快就会消失，如果确实消失了看不到了可以使用备用链接进入。备用链接后续看情况要不要贴上去。</p><p>备用链接（请使用手机 QQ 来访问）：<a href="https://show.qq.com/cp/web202201xnxz/index.html" target="_blank" rel="noopener">https://show.qq.com/cp/web202201xnxz/index.html</a></p><p>点击后会出现一个横幅“点击查看活动详情”，点开后拉到下边就能看到一个“抢体验资格”按钮。点击后跳转下一个页面，还是往下拉，会看到第二个按钮“抢先体验”。然后，看到“恭喜你获得超级 QQ 秀限量测试资格”字样的时候就成功领取了内测资格。</p><p>接下来，点击“关注公众号”，点击“领取福利”按钮。点击按钮下载资源包，再然后点击“去装扮”。稍等加载，就可以进入超级 QQ 秀的界面了。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
@@ -1119,9 +1119,9 @@
     </summary>
     
     
-      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
