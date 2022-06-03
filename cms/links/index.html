@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><link rel=manifest href=/cms/static/manifest.json>
   <meta charset="UTF-8">
 <meta name="renderer" content="webkit"/>
 <meta name="force-rendering" content="webkit"/>
@@ -969,5 +969,10 @@ NexT.utils.loadComments('#valine-comments', () => {
 });
 </script>
 
-</body>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/cms/static/sw.js?t=1654257122275')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
 </html>

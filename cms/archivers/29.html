@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><link rel=manifest href=/cms/static/manifest.json>
   <meta charset="UTF-8">
 <meta name="renderer" content="webkit"/>
 <meta name="force-rendering" content="webkit"/>
@@ -719,8 +719,8 @@ We recognize that there are legitimate projects that consist of a large number o
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/cms/archivers/27.html" rel="prev" title="我们为什么那么痛恨计算机等级与那些问题（二级党请进）">
-      <i class="fa fa-chevron-left"></i> 我们为什么那么痛恨计算机等级与那些问题（二级党请进）
+    <a href="/cms/archivers/28.html" rel="prev" title="java.math.BigDecimal保留指定位数的有效数字（不算前面的0）">
+      <i class="fa fa-chevron-left"></i> java.math.BigDecimal保留指定位数的有效数字（不算前面的0）
     </a></div>
       <div class="post-nav-item">
     <a href="/cms/archivers/30.html" rel="next" title="随机图片API接口">
@@ -911,5 +911,10 @@ NexT.utils.loadComments('#valine-comments', () => {
 });
 </script>
 
-</body>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/cms/static/sw.js?t=1654257122275')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
 </html>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><link rel=manifest href=/cms/static/manifest.json>
   <meta charset="UTF-8">
 <meta name="renderer" content="webkit"/>
 <meta name="force-rendering" content="webkit"/>
@@ -899,11 +899,11 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Automation/" itemprop="url" rel="index"><span itemprop="name">Automation</span></a>
+                  <a href="/cms/categories/Web-Building/" itemprop="url" rel="index"><span itemprop="name">Web Building</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Web-Building/" itemprop="url" rel="index"><span itemprop="name">Web Building</span></a>
+                  <a href="/cms/categories/Automation/" itemprop="url" rel="index"><span itemprop="name">Automation</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -1682,5 +1682,10 @@ NexT.utils.loadComments('#valine-comments', () => {
 });
 </script>
 
-</body>
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/cms/static/sw.js?t=1654257122275')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
 </html>
