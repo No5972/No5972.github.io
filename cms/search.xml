@@ -24,6 +24,17 @@
       </categories>
   </entry>
   <entry>
+    <title>即日起本博客停止在 Gitee 部署</title>
+    <url>/cms//archivers/125.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>鉴于 Gitee 近期大量限制普通用户功能，从即日起本博客停止在 Gitee 部署。请大家从主域名 <a href="https://no5972.moe">https://no5972.moe</a> 访问和浏览本站点。原有的 <a href="https://no5972.gitee.io" target="_blank" rel="noopener">https://no5972.gitee.io</a> 站点及其所有下属子目录页面停止提供，相应域名取消。由此带来不便，还请谅解。</p>
+<p>wujiuqier</p>
+<p>2022-06-13</p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Web Building</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Windows 11 破解新安装系统必须联网的步骤</title>
     <url>/cms//archivers/124.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>新机器的新更新的 Windows 11 系统增设了必须要联网才能通过配置的步骤，也就是那个 OOBE。通过执行命令可以跳过此联网步骤直接到下一步。(图片来自AskVG)</p>
