@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2022-06-13T03:12:01.515Z</updated>
+  <updated>2022-06-13T03:15:34.031Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Windows 11 破解新安装系统必须联网的步骤</title>
-    <link href="https://no5972.moe/cms/archivers/123.html"/>
-    <id>https://no5972.moe/cms/archivers/123.html</id>
+    <link href="https://no5972.moe/cms/archivers/124.html"/>
+    <id>https://no5972.moe/cms/archivers/124.html</id>
     <published>2022-06-13T11:00:00.000Z</published>
-    <updated>2022-06-13T03:12:01.515Z</updated>
+    <updated>2022-06-13T03:15:34.031Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>新机器的新更新的 Windows 11 系统增设了必须要联网才能通过配置的步骤，也就是那个 OOBE。通过执行命令可以跳过此联网步骤直接到下一步。</p><p>在看到“您需要连接到 Internet 才能继续您的设置”这一屏的时候，按下 Shift + F10，此时会弹出命令提示符的界面。输入这个命令回车，就可以跳过此联网步骤直接到下一步，而无需连接网络。此后将创建本地账户。<code>taskkill /F /IM oobenetworkconnectionflow.exe</code></p><p><img src="https://img-blog.csdnimg.cn/4dc3d61a03a84a9a934f28649c27b1b9.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -1161,9 +1161,9 @@
     </summary>
     
     
-      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
