@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2022-06-13T09:12:12.818Z</updated>
+  <updated>2022-06-17T01:50:28.965Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>去除 Windows 11 的“了解此图片”图标</title>
+    <link href="https://no5972.moe/cms/archivers/126.html"/>
+    <id>https://no5972.moe/cms/archivers/126.html</id>
+    <published>2022-06-17T10:00:00.000Z</published>
+    <updated>2022-06-17T01:50:28.965Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Windows 11 近期更新在桌面新增了一个“了解此图片”图标。有不少用户对此图标相当反感，希望去掉它。<a href="https://winaero.com/how-to-remove-learn-more-about-this-picture-icon-in-windows-11/" target="_blank" rel="noopener">Winaero 的 Sergey Tkachenko 前两天提出了一个去除此图标的方法</a>，可以参考一下。</p><p><img src="https://img-blog.csdnimg.cn/img_convert/3d45c9d298c296891a42c534fbbfc595.png" alt="" /></p><p>从注册表中添加有关键值。右键开始按钮，运行，输入 regedit 回车。前往</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel</span><br></pre></td></tr></table></figure><p>右键这个 NewStartPanel，选择新建 - DWORD (32位) 值，命名为</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;2cc5ca98-6485-489a-920e-b3e88a6ccce3&#125;</span><br></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/img_convert/f0067f1b4c3e289f5bd1ac5cb0e880a9.png" alt="" /></p><p>双击新建的键值，将值设置为 1。</p><p><img src="https://img-blog.csdnimg.cn/img_convert/76a73b0efe952ee522fc81b6895da428.png" alt="" /></p><p>关闭注册表编辑器，在桌面空白处右键刷新即可去除“了解此图片”图标。</p><p><img src="https://img-blog.csdnimg.cn/img_convert/de517cbf945453a1132be6db6d0fe308.png" alt="" /></p><p><img src="https://img-blog.csdnimg.cn/img_convert/9edb9497119c3b9ab747934845f3b597.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      Windows 11 近期更新在桌面新增了一个“了解此图片”图标。有不少用户对此图标相当反感，希望去掉它。
+    
+    </summary>
+    
+    
+      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>即日起本博客停止在 Gitee 部署</title>
