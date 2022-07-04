@@ -138,7 +138,7 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/572e4e1178a448649ed1c8fc0082d435.png">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/ab238525f8984600a00587c55b1d288f.png">
 <meta property="article:published_time" content="2022-07-04T17:30:00.000Z">
-<meta property="article:modified_time" content="2022-07-04T10:14:33.431Z">
+<meta property="article:modified_time" content="2022-07-04T10:17:15.815Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/fa50a9881365472e8cfc876c0c75bff4.png">
@@ -624,7 +624,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-07-04 17:30:00 | Modified: 2022-07-04 10:14:33" itemprop="dateCreated datePublished" datetime="2022-07-04T17:30:00+00:00">2022-07-04 17:30:00</time>
+              <time title="Created: 2022-07-04 17:30:00 | Modified: 2022-07-04 10:17:15" itemprop="dateCreated datePublished" datetime="2022-07-04T17:30:00+00:00">2022-07-04 17:30:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -674,7 +674,7 @@ window.onload = function () {
 <p>这样就完成了 Windows 端的打印机共享。</p>
 <h1 id="在-uos-连接由-windows-共享的打印机"><a class="markdownIt-Anchor" href="#在-uos-连接由-windows-共享的打印机"></a> 在 UOS 连接由 Windows 共享的打印机</h1>
 <p>到打印机厂商的网站下载该型号打印机的 Linux 驱动。这里的 UOS 家庭版默认是 64 位的，所以下载 64 bit 的驱动。</p>
-<p>下载好之后开启开发者模式，执行 <code>install.sh</code> 在终端中运行，按提示进行驱动安装。</p>
+<p>下载好之后开启开发者模式，在文件管理器中找到 <code>install.sh</code> ，右键空白处在终端中打开，执行<code>sudo ./install.sh</code>，按提示进行驱动安装。</p>
 <p>安装好之后，在启动器菜单会出现配置打印机的选项，点击添加，选择之前打印机的型号，下一步选择“LPD”，主机名或 IP 地址输入之前 Windows 电脑的 IP 地址斜杠共享的打印机名称（可在 Windows 电脑的命令提示符中执行 <code>ipconfig</code> 来查看），此处测试的为</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.168.49.1&#x2F;CanonLBP62306240</span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/572e4e1178a448649ed1c8fc0082d435.png" alt="" /></p>
@@ -909,7 +909,7 @@ NexT.utils.loadComments('#valine-comments', () => {
 </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/cms/sw.js?t=1656929686913')
+  navigator.serviceWorker.register('/cms/sw.js?t=1656929857441')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
