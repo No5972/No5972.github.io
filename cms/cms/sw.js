@@ -19,7 +19,7 @@
 self.addEventListener('install', function () { return self.skipWaiting(); });
 self.addEventListener('active', function () { return self.clients.claim(); });
 
-toolbox.precache(['/cms/','//archivers/126.html','//archivers/125.html','//archivers/124.html','//archivers/123.html','//archivers/122.html']);
+toolbox.precache(['/cms/','//archivers/127.html','//archivers/126.html','//archivers/125.html','//archivers/124.html','//archivers/123.html']);
 toolbox.options = {"networkTimeoutSeconds":5};
 
 toolbox.router.any(/hm.baidu.com/, toolbox.networkOnly);
