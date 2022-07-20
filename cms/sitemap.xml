@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.moe/cms/archivers/128.html</loc>
+    
+    <lastmod>2022-07-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/archivers/127.html</loc>
     
     <lastmod>2022-07-04</lastmod>
@@ -1000,6 +1007,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.moe/cms/categories/Server/</loc>
+    <lastmod>2022-07-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/categories/JavaScript/</loc>
     <lastmod>2022-07-20</lastmod>
     <changefreq>daily</changefreq>
@@ -1008,13 +1022,6 @@
   
   <url>
     <loc>https://no5972.moe/cms/categories/C/</loc>
-    <lastmod>2022-07-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/categories/Server/</loc>
     <lastmod>2022-07-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1049,14 +1056,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/C-C/</loc>
+    <loc>https://no5972.moe/cms/categories/Github/</loc>
     <lastmod>2022-07-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Github/</loc>
+    <loc>https://no5972.moe/cms/categories/C-C/</loc>
     <lastmod>2022-07-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
