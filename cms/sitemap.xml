@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://no5972.moe/cms/archivers/131.html</loc>
+    <loc>https://no5972.moe/cms/archivers/130.html</loc>
     
     <lastmod>2022-08-04</lastmod>
     
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/archivers/130.html</loc>
+    <loc>https://no5972.moe/cms/archivers/131.html</loc>
     
     <lastmod>2022-08-04</lastmod>
     
@@ -1056,6 +1056,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.moe/cms/categories/Automation/</loc>
+    <lastmod>2022-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
     <lastmod>2022-08-04</lastmod>
     <changefreq>daily</changefreq>
@@ -1070,7 +1077,7 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Automation/</loc>
+    <loc>https://no5972.moe/cms/categories/C-C/</loc>
     <lastmod>2022-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1078,13 +1085,6 @@
   
   <url>
     <loc>https://no5972.moe/cms/categories/Github/</loc>
-    <lastmod>2022-08-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/categories/C-C/</loc>
     <lastmod>2022-08-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
