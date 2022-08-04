@@ -24,6 +24,169 @@
       </categories>
   </entry>
   <entry>
+    <title>DebreateForUOS 打包 UOS Electron 应用</title>
+    <url>/cms//archivers/131.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>接下来，熟悉如何打包一个 UOS 应用。现在不少新的桌面应用开始使用 Electron 作为 GUI 框架，它允许使用 JavaScript 来实现 GUI 及其交互功能，并且跨平台也比较好，无需用户配置专门的运行环境就可以直接开箱即用。</p>
+<h1 id="获取-debreateforuos"><a class="markdownIt-Anchor" href="#获取-debreateforuos"></a> 获取 DebreateForUOS</h1>
+<p>首先“DebreateForUOS”可以在星火应用商店下载得到。当然这个应用商店也是需要开启开发者模式才能安装的。</p>
+<h1 id="准备好软件的文件"><a class="markdownIt-Anchor" href="#准备好软件的文件"></a> 准备好软件的文件</h1>
+<p>假设这是一个已经写好的 HelloWorld 的 Electron 应用，并且带有完整的 Electron 环境。在项目根目录输入 <code>./electron ./app</code> 可以打开 HelloWorld 的界面。完整的 Electron 环境可以在 UOS 应用商店搜索下载 Electron 然后从 <code>/opt/apps/com.electron/files/electron</code> 拷贝出来目录。</p>
+<p><img src="https://img-blog.csdnimg.cn/55af1e9fae0c4a30a2d4ac930abcc526.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="准备好软件的图标文件"><a class="markdownIt-Anchor" href="#准备好软件的图标文件"></a> 准备好软件的图标文件</h1>
+<p>在程序目录添加一个 512 x 512 的 PNG 图标作为应用的图标。因为 UOS 的任务栏可以缩放，如果不搞这么高分辨率的图片，可能会出现图标模糊的情况。如果没有这样高分辨率的图标，也可以使用 SVG 格式的图标作为图标。随便起个名字，放到 <code>electron</code> 目录。</p>
+<p><img src="https://img-blog.csdnimg.cn/d833ef13b20841d6b711486768c4071a.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="打开-debreateforuos从菜单上的页面-control-文件开始"><a class="markdownIt-Anchor" href="#打开-debreateforuos从菜单上的页面-control-文件开始"></a> 打开 DebreateForUOS，从菜单上的页面-Control 文件开始。</h1>
+<ul>
+<li>包名：要求填写域名加点加软件名。</li>
+<li>版本：你自己定义的软件版本号。</li>
+<li>维护者：当然是填自己的网名了。</li>
+<li>电子邮箱：联系邮箱</li>
+<li>分类：根据此应用的用途来选择类型。它将表征为上架应用商店时所属的归类。</li>
+<li>优先级：我们是应用软件，不是系统组件，建议还是选择 optional。</li>
+<li>架构：我们是面向 UOS 家庭版部署的，当然选择 amd64 了。</li>
+<li>短述：它将表征为应用在双击安装包运行时显示的名称。</li>
+<li>详细描述：它将表征为应用商店中显示的应用描述。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/6ec5061665fb4f2abac72ebdd9093131.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="菜单的页面-依赖和冲突"><a class="markdownIt-Anchor" href="#菜单的页面-依赖和冲突"></a> 菜单的页面-依赖和冲突：</h1>
+<p>我们是 Electron 应用，如果没有调用系统 API 的话一般不需要处理这里。</p>
+<h1 id="菜单的页面-info-文件"><a class="markdownIt-Anchor" href="#菜单的页面-info-文件"></a> 菜单的页面-info 文件：</h1>
+<p>也是应用的基本信息，先参考前面的 Control 文件来填写。这里还没搞懂作用，也有博客描述过这里的作用，可以参考《linux中dpkg里的info是干嘛的》这篇文章。</p>
+<ul>
+<li>这里建议如实填写应用权限，如果不如实填写的话有可能 Linux 系统底层会限制一些功能，例如是否使用剪贴板，是否使用通知等。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/dd950e23e261483284a5ef1f4201ffeb.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="菜单的页面-desktop-文件"><a class="markdownIt-Anchor" href="#菜单的页面-desktop-文件"></a> 菜单的页面-Desktop 文件：</h1>
+<p>这一步很重要，它将影响应用在启动器菜单的加载。</p>
+<ul>
+<li>如果我们的应用软件是手动打开的话（而不是作为系统服务来运行的话），就肯定要勾选创建系统菜单启动器。</li>
+<li>我们的应用是一个应用程序，所以类型肯定是选择 Application。</li>
+<li>我们是基于 Electron 的 GUI 应用，所以不需要勾选“终端”。否则就会多出来一个显示调试信息的小黑板，这作为面向大众用户的 GUI 应用是不合适的。</li>
+<li>基于 Electron 的应用编码印象中都是选择 UTF-8 的。</li>
+<li>启动通知没仔细看，他的描述是“启动时在系统面板显示一个通知”，但是之前曾经打包过的应用，运行时没有发现通知。</li>
+<li>Name 将表征为应用在启动器菜单以及 UOS 应用商店的应用管理显示的名称。</li>
+<li>注释将表征为应用在 UOS 应用商店的应用管理的应用列表的应用名称下面显示的简述，以及鼠标悬停在启动器菜单项时显示的提示信息。</li>
+<li>MIME 类型这里没有给出提示，可以先留空。</li>
+<li>可执行命令或路径：这里试了很久，最后是填绝对路径才解决的。这里的 HelloWorld 应用要填写</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/apps/包名/files/electron /opt/apps/包名/files/应用目录</span><br></pre></td></tr></table></figure>
+<p>，其中包名就是最前面指定 Control 文件时填写的包名，而应用目录就是整理软件文件时的实际应用业务代码存放的目录。这里填写的是</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/apps/moe.no5972.electrondemo/files/electron /opt/apps/moe.no5972.electrondemo/files/app</span><br></pre></td></tr></table></figure>
+<ul>
+<li>图标：也是要填写图标文件的绝对路径。这里填写的是</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/apps/moe.no5972.electrondemo/files/icon.png</span><br></pre></td></tr></table></figure>
+<ul>
+<li>分类：程序的类别决定了程序在系统启动器菜单项中的位置。<br />
+<img src="https://img-blog.csdnimg.cn/050d18f9bf5f4cbba0ce2affbb794490.png#pic_center" alt="在这里插入图片描述" /></li>
+</ul>
+<h1 id="菜单的页面-icon-文件"><a class="markdownIt-Anchor" href="#菜单的页面-icon-文件"></a> 菜单的页面-icon 文件：</h1>
+<p>这一步决定了程序在上架时显示的图标。从左侧的树形文件列表找到最开始放进去的图标文件，拖到右边的列表去。然后根据使用图标文件的格式选择文件格式和尺寸。</p>
+<p><img src="https://img-blog.csdnimg.cn/8e3fdb3f4c504a238c10ef24164c4d1f.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="菜单的页面-file-目录文件"><a class="markdownIt-Anchor" href="#菜单的页面-file-目录文件"></a> 菜单的页面- file 目录文件：</h1>
+<p>这一步也很重要，这决定了软件本体文件以及要放置的目标位置。注意首先将目标目录选择自定义，然后把输入框的“{包名}”改成之前在 Control 文件填写的包名。因为这里可能有 bug，如果选择前面的带有“{包名}”的选项，打包出来的程序安装后并不会安装到实际的包名目录，而是就放在了一个叫“{包名}”的目录。这里强调一下。</p>
+<p>然后在左侧找到整理好的 electron 目录，展开，然后使用 Shift 选中目录下的所有文件，然后注意右键选择 Add to project，不要直接拖，否则他只会拖动鼠标指向的那一个文件，这样就得一个一个的拖了。</p>
+<p><img src="https://img-blog.csdnimg.cn/8ad69a664acd4e0a9d99e57788ceeee1.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="菜单的页面-添加脚本"><a class="markdownIt-Anchor" href="#菜单的页面-添加脚本"></a> 菜单的页面-添加脚本：</h1>
+<p>如果需要在安装或者卸载时执行一些系统命令，那么在这里可以配置。注意有些涉及管理员操作的命令还是要加 <code>sudo</code> 前缀的。</p>
+<p><img src="https://img-blog.csdnimg.cn/1315709b90254f2fb6cbed0e9add84af.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="菜单的页面-更新日志"><a class="markdownIt-Anchor" href="#菜单的页面-更新日志"></a> 菜单的页面-更新日志：</h1>
+<p>它将表征为软件在应用商店显示的更新信息。紧迫性表示此次更新的重要程度。如果这是同一个软件的新版本，那么就需要认真填写版本号和更新情况。<br />
+<img src="https://img-blog.csdnimg.cn/07623dca61924801b30d67e56615aa3d.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="菜单的页面-版权文件"><a class="markdownIt-Anchor" href="#菜单的页面-版权文件"></a> 菜单的页面-版权文件：</h1>
+<p>如果这个软件有许可协议，那么可以在此填写。如果是遵循某种开源协议开源的软件，也可以直接选择现成的开源协议模板。</p>
+<p><img src="https://img-blog.csdnimg.cn/12bfbccf6f1c4955b9a17994c9bb6902.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="开始构建"><a class="markdownIt-Anchor" href="#开始构建"></a> 开始构建</h1>
+<p>然后就可以到菜单的页面-构建来开始打包了。点击中间的图标，指定打包 deb 文件的位置。然后稍等片刻，打包完成！</p>
+<p><img src="https://img-blog.csdnimg.cn/85f84683154f4676aedffc8826439eba.png#pic_center" alt="在这里插入图片描述" /><br />
+<img src="https://img-blog.csdnimg.cn/ee2cafe74b4a45259c3aefd3b6fa9af3.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="测试安装"><a class="markdownIt-Anchor" href="#测试安装"></a> 测试安装</h1>
+<p>测试安装打包好的文件，如果启动器的菜单项正常显示，并且可以正常打开，那么打包就是完美的。</p>
+<p><img src="https://img-blog.csdnimg.cn/d7a5bbe9ceea4b0db77d9592157bead3.png#pic_center" alt="在这里插入图片描述" /><br />
+<img src="https://img-blog.csdnimg.cn/50178062cb3244e6bc5c576025f80bf5.png#pic_center" alt="在这里插入图片描述" /><br />
+<img src="https://img-blog.csdnimg.cn/74b62f0c2d2d4083b43b256385aa27bb.png#pic_center" alt="在这里插入图片描述" /></p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Webapp</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>通过 U 盘安装 UOS 家庭版并和原来 Windows 组成双系统</title>
+    <url>/cms//archivers/130.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="本安装记录仅适用于-x86-架构的电脑"><a class="markdownIt-Anchor" href="#本安装记录仅适用于-x86-架构的电脑"></a> 本安装记录仅适用于 x86 架构的电脑。</h1>
+<h1 id="1-腾出要安装系统的分区"><a class="markdownIt-Anchor" href="#1-腾出要安装系统的分区"></a> 1. 腾出要安装系统的分区</h1>
+<p>首先将要安装 UOS 系统的电脑空出来一个分区并随便设置一个卷标，用来装 UOS 系统。这里空出来的分区大小是 200GB。可以把分区保留而不需要删除分区。到时候 UOS 安装程序也可以删除分区。</p>
+<h1 id="2-下载-uos-安装镜像并制作安装盘"><a class="markdownIt-Anchor" href="#2-下载-uos-安装镜像并制作安装盘"></a> 2. 下载 UOS 安装镜像并制作安装盘</h1>
+<p>从 UOS 家庭版官网选择“镜像安装”下载安装的ISO镜像。</p>
+<p>准备一个已制成 Ventoy 启动盘的 U 盘，将下载好的 ISO 镜像拷贝到 U 盘。</p>
+<h1 id="3-设置安装分区并进行安装"><a class="markdownIt-Anchor" href="#3-设置安装分区并进行安装"></a> 3. 设置安装分区并进行安装</h1>
+<p>将 U 盘插入到需要安装的电脑上，进入引导菜单，选择 UEFI 模式的 U 盘进入。看到 Ventoy 的界面后选择 UOS 的安装镜像进入。</p>
+<p><img src="https://img-blog.csdnimg.cn/ae68968ef51b43d6ac1cc416e8f8f07d.jpeg#pic_center" alt="在这里插入图片描述" /></p>
+<p>看到 UOS 的欢迎界面，此时选择自定义设置，然后选择手动安装。</p>
+<p><img src="https://img-blog.csdnimg.cn/4bfaa1b45c2147da923193c7df09905d.png#pic_center" alt="在这里插入图片描述" /><br />
+<img src="https://img-blog.csdnimg.cn/7d07735a523145188f726d66892e12ca.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>原有的安装系统和存放资料的分区不要动，根据最开始设置的卷标找到事先空出来的分区，将其删除，创建一个略小于空出来的分区大小的分区（一般比原来小 1 - 2GB 左右），格式为 ext4，挂载点注意选择“/”。再创建一个分区，格式选择交换分区，大小为原来小出来的那部分大小。选中刚才创建的 ext4 分区，然后他会显示一个“安装到此”的字样。确认无误后点击下一步确认开始。</p>
+<p><img src="https://img-blog.csdnimg.cn/b22a296a3ff347feba918c8daaaff9b3.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>大约 10 到 15 分钟时间可以完成安装。进度条走完后，点击立即重启，点击后立刻拔下 U 盘。</p>
+<p><img src="https://img-blog.csdnimg.cn/359a4752597446bc8d1df09e3be3d86a.png#pic_center" alt="在这里插入图片描述" /><br />
+<img src="https://img-blog.csdnimg.cn/eada7e130bba42429adc137ee83c4620.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>稍等片刻即可进入到 OOBE 界面。此时按照提示输入一个新建用户名，并指定开机密码。确认后会显示正在更新系统配置，稍等片刻就可以进入 UOS 桌面了。</p>
+<h1 id="4-激活系统"><a class="markdownIt-Anchor" href="#4-激活系统"></a> 4. 激活系统</h1>
+<p>未激活的情况下只能使用 30 天。可以到 UOS 家庭版官网寻找激活方式。</p>
+<p><img src="https://img-blog.csdnimg.cn/d8172bd72f8e4b4b94b4b1c5ddbb2768.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>激活需要登录 Union ID 的账号，没有的话需要注册。</p>
+<p><img src="https://img-blog.csdnimg.cn/fe88364197e844fe88b9f721ce51a54a.png#pic_center" alt="在这里插入图片描述" /><br />
+<img src="https://img-blog.csdnimg.cn/98e010e05f974de18851f1e676c4d6df.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>此激活是绑定 Union ID 和设备的。如果系统损坏需要重装系统的话，重装系统后无需重新输入激活码，只要重新登录 Union ID 账号即可自动激活。</p>
+<p><img src="https://img-blog.csdnimg.cn/0722e9130ef542268ab7c1991cde809c.png#pic_center" alt="在这里插入图片描述" /></p>
+<h1 id="5-设置双系统引导"><a class="markdownIt-Anchor" href="#5-设置双系统引导"></a> 5. 设置双系统引导</h1>
+<p><strong>特别注意安装后千万不要在 BIOS 设置里面改启动顺序，尤其是 UEFI 方式引导的电脑。否则就会导致 UOS 系统无法引导。这种情况需要重装 UOS 系统才能解决。</strong></p>
+<p>如果想调整启动顺序，务必在 UOS 的系统设置里面的通用 - 启动菜单里面修改。进入该界面后用鼠标直接在右上角的小窗口点击要默认选中的启动项即可，如果要默认选中 Win10/11 的启动项则在这个小窗口里面点选“Windows Boot Manager”即可。如果有多个分区或者多个硬盘都安装了 Windows 的话，这里的“Windows Boot Manager”后面会有括弧标注分区代号（<code>sda</code>，<code>sdb</code>，<code>sdc</code> 等表示硬盘，字母顺序对应硬盘插在主板上的 SATA1 - 4 的或者主从盘 M.2 插口的顺序，<code>sda</code> 等后面的数字表示分区），按照显示的分区代号来确定。</p>
+<p><img src="https://img-blog.csdnimg.cn/a1e3713fbf0c4f5ca213e318b71f42c8.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>如果无法确定的话可以从文件管理器来确认，双击桌面上的“计算机”图标，找到要默认启动的系统所在的分区后右键在终端中打开，输入 <code>pwd</code>回车看一看路径里面的分区代号是什么。</p>
+<p>部分插图来自 UOS 家庭版官方文档。</p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Webapp</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>UOS 移植 Flash Player 页游微端</title>
+    <url>/cms//archivers/129.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>目前大家可能仍有需要用到 Flash Player 的情况。这里尝试先将部分页游的微端移植到 UOS 上来。鄙人尽最大可能降低操作的复杂度，不会像那篇《GNASH 移植》那样那么复杂！</p>
+<p>从 UOS 的应用商店下载 Electron，下载好以后从</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/opt/apps/com.electron/files</span><br></pre></td></tr></table></figure>
+<p>目录里面把 <code>electron</code>这个目录拷出来，放在一个自己找得到的地方。</p>
+<p>回到 Windows，到小花仙官网下载 win8/win10 版本的微端。然后用 Universal Extractor 的 LessMSI Extraction 解压这个 MSI 文件。把里面的 <code>Binary/resources/app</code>目录上载到 UOS 的刚才拷出来的 <code>electron</code>目录里面。</p>
+<p>在 UOS 里面，把 <code>app/assets</code>里面的 <code>hua.js</code>修改，第 126，127 行的</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">'linux'</span>:</span><br><span class="line">	pluginName = <span class="string">'libpepflashplayer.so'</span></span><br></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="string">'linux'</span>:</span><br><span class="line">	pluginName = <span class="string">'libpepflashplayer.plugin'</span></span><br></pre></td></tr></table></figure>
+<p>之所以这么改，是因为米叔他那个上面的 SWFObject.js 不识别 Linux 系统下的 <code>.so</code>的 Flash Player 组件文件，换一个扩展名才行。</p>
+<p><img src="https://img-blog.csdnimg.cn/d09152098787499dad9f5ed1856a1862.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>从一切可以找得到的地方下载版本 31 的 Flash Player Linux PPAPI 64 位的版本。解压出来的文件名通常是 <code>flash_player_ppapi_linux_x86_64.tar.gz</code>。再从这个 gz 里面提取出 <code>libpepflashplayer.so</code>文件，放到刚才的 <code>app/assets</code>目录，重命名为<code>libpepflashplayer.plugin</code>。</p>
+<p><img src="https://img-blog.csdnimg.cn/c9ad9e776c3146bda859e1467c8c05aa.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>然后修改 hosts，屏蔽掉检测版本的域名。首次运行前务必屏蔽这些域名，否则就会出现“该版本过旧，不支持运行，请升级后使用”的提示，遇到这个提示的话修改起来很麻烦（具体修改参考后面的附注）。到 UOS 应用商店下载 SwitchHosts 并打开，打开 My Hosts，然后添加这些规则，然后点击开关来打开：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">127.0.0.1 geo2.adobe.com</span><br><span class="line">127.0.0.1 fpdownload2.macromedia.com</span><br><span class="line">127.0.0.1 fpdownload.macromedia.com</span><br><span class="line">127.0.0.1 macromedia.com</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/1ef904d0dc2b4397860b61a469f46dc2.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>在 <code>electron</code>目录新建一个 <code>.sh</code>的任意文件名的文件。添加这些内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./electron ./app</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/28e491801397442d8dc67b9277ad0bec.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>之后就可以通过双击此 sh 文件选择“运行”来使用了。</p>
+<p>如果想换成赛尔号，则将 <code>app/assets/</code>的 <code>config.json</code>里面的 <code>player_name</code>改成</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">https:&#x2F;&#x2F;seer.61.com&#x2F;play.shtml?from&#x3D;we_seer</span><br></pre></td></tr></table></figure>
+<p>即可。需要访问其他包含 Flash 内容的网页也可以改成任意网址。</p>
+<hr />
+<h2 id="附注修复该版本过旧不支持运行请升级后使用"><a class="markdownIt-Anchor" href="#附注修复该版本过旧不支持运行请升级后使用"></a> 附注：修复“该版本过旧，不支持运行，请升级后使用”</h2>
+<p>请删除 <code>/data/home/你的用户名/.config/WeHua/Pepper Data</code>这个目录，然后参照前面的说明修改 hosts，如果已经添加了域名则忽略这个 hosts。</p>
+<hr />
+<p>获取 UOS 家庭版欢迎前往 <a href="https://home.uniontech.com" target="_blank" rel="noopener">https://home.uniontech.com</a> 。</p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Webapp</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Leancloud 绑定自定义域名</title>
     <url>/cms//archivers/128.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>昨天收到邮件提醒，Leancloud 共享域名将于 8 月 1 日停止服务，需要使用自己的域名。</p>
