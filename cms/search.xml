@@ -39,7 +39,7 @@
 <p>因为 UOS 商店中没有百度网盘，ARM 架构的鲲鹏 920 运行不了 wine 版，这里测试安装了百度网盘手机客户端，事先已在官网下载好软件包 <code>BaiduNetdisk_11.9.2.apk</code> 文件。</p>
 <p>执行 <code>/usr/bin/android-appmgr.sh install BaiduNetdisk_11.9.2.apk</code></p>
 <p><img src="https://obs.wanpeng.life/wp-content/uploads/2021/05/ad.png" alt="" /></p>
-<p style="align:center">安装成功</p>
+<p style="text-align:center">安装成功</p>
 <div class="note warning"><p>如果没有此脚本，可以在应用商店中安装一个安卓软件（应用名字通常带有“（Android）”后缀），这样会自动安装 kbox，就会生成这个脚本，或者执行命令 <code>apt -y install kbox</code></p>
 </div>
 <p>安装成功后可在 <code>/home/Kbox/desktop</code> 目录下看到已安装软件的启动图标，双击即可启动。</p>
@@ -2338,8 +2338,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Web Building</category>
         <category>Automation</category>
+        <category>Web Building</category>
         <category>Github</category>
       </categories>
   </entry>
