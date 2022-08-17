@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2022-08-10T10:04:58.306Z</updated>
+  <updated>2022-08-17T03:34:13.188Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UOS ARM 安装安卓手机软件 APK 软件包</title>
+    <link href="https://no5972.moe/cms/archivers/133.html"/>
+    <id>https://no5972.moe/cms/archivers/133.html</id>
+    <published>2022-08-17T11:30:00.000Z</published>
+    <updated>2022-08-17T03:34:13.188Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：</p><p><a href="https://www.wanpeng.life/1604.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/%E4%B8%87%E4%B8%87%E6%B2%A1%E6%83%B3%E5%88%B0-UOS%E5%AE%89%E8%A3%85%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E8%BD%AF%E4%BB%B6%20APK%E8%BD%AF%E4%BB%B6%E5%8C%85-brightgreen" alt="万万没想到-UOS安装安卓手机软件APK软件包" /></a></p><p>统信 UOS 系统现在做的真是越来越好用，个人也是非常的喜欢，在平时的工作中也经常使用 UOS 系统，万万使用的是鲲鹏 920 处理器的机器，ARM 架构，和大部分手机架构一样，所以按理来说是可以直接在 UOS 系统上运行手机软件的，此系统天生与手机的生态有着千丝万缕的联系。</p><div class="note success"><p>今天万万跟大家分享一下鲲鹏 920 架构的统信 UOS 上安装手机软件的方法。</p></div><p>其实我们的 UOS 系统上已经内置好了安卓软件的安装脚本。</p><h1 id="如何安装"><a class="markdownIt-Anchor" href="#如何安装"></a> 如何安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/android-appmgr.sh install +软件包名</span><br></pre></td></tr></table></figure><div class="note info"><p>注：软件包可以去各大软件官网下载。</p></div><p>因为 UOS 商店中没有百度网盘，ARM 架构的鲲鹏 920 运行不了 wine 版，这里测试安装了百度网盘手机客户端，事先已在官网下载好软件包 <code>BaiduNetdisk_11.9.2.apk</code> 文件。</p><p>执行 <code>/usr/bin/android-appmgr.sh install BaiduNetdisk_11.9.2.apk</code></p><p><img src="https://obs.wanpeng.life/wp-content/uploads/2021/05/ad.png" alt="" /></p><p style="align:center">安装成功</p><div class="note warning"><p>如果没有此脚本，可以在应用商店中安装一个安卓软件，这样会自动安装 kbox，就会生成这个脚本，或者执行命令 <code>apt -y install kbox</code></p></div><p>安装成功后可在 <code>/home/Kbox/desktop</code> 目录下看到已安装软件的启动图标，双击即可启动。</p><p><img src="https://obs.wanpeng.life/wp-content/uploads/2021/05/rj.png" alt="" /></p><p>实测像开心消消乐、百度网盘、抖音、QQ等都可以安装并正常使用。</p><p>但是像王者荣耀这种大型游戏会因现实问题无法运行。</p><h1 id="提示没有android-appmgrsh"><a class="markdownIt-Anchor" href="#提示没有android-appmgrsh"></a> <a href="http://xn--android-appmgr-9k52af19as9wt05c.sh" target="_blank" rel="noopener">提示没有android-appmgr.sh</a>：文件或目录</h1><p>先去应用商店装一款安卓软件（应用名字通常带有“（Android）”后缀），会把环境及这个脚本自动生成，然后就有了。会多一款叫 Kbox 的 docker 容器。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      统信 UOS 系统现在做的真是越来越好用，个人也是非常的喜欢，在平时的工作中也经常使用 UOS 系统，万万使用的是鲲鹏 920 处理器的机器，ARM 架构，和大部分手机架构一样，所以按理来说是可以直接在 UOS 系统上运行手机软件的，此系统天生与手机的生态有着千丝万缕的联系。
+    
+    </summary>
+    
+    
+      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>UOS 虚拟打印到 PDF 文件</title>
