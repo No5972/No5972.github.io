@@ -2939,7 +2939,7 @@ figure {
   }
 }
 @media print {
-  #cookie-alert,
+  .cookie-alert,
   .post-footer,
   .comments {
     display: none;
