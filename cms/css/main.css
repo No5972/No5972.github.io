@@ -2934,7 +2934,11 @@ figure {
   padding-left: 0;
 }
 @media (max-width: 767px) {
-  .marquee-container,
+  .marquee-container {
+    display: none;
+  }
+}
+@media print {
   #cookie-alert,
   .post-footer,
   .comments {
