@@ -33,7 +33,7 @@
 <p>留意到应用商店里面有一个这个文件对比工具 Beyond Compare，大家如果在安装过此应用之后在 APT 命令出现类似问题的时候可以参考本文章方法来解决。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Webapp</category>
+        <category>AtoW</category>
       </categories>
   </entry>
   <entry>
@@ -131,7 +131,7 @@
 <p>但是像王者荣耀这种大型游戏会因显示问题无法运行。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Webapp</category>
+        <category>AtoW</category>
       </categories>
   </entry>
   <entry>
@@ -149,7 +149,7 @@
 <img src="https://img-blog.csdnimg.cn/6787339b131b48648f7fe37d0e93f1c1.png" alt="" /></p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Webapp</category>
+        <category>AtoW</category>
       </categories>
   </entry>
   <entry>
@@ -236,7 +236,7 @@
 <img src="https://img-blog.csdnimg.cn/74b62f0c2d2d4083b43b256385aa27bb.png#pic_center" alt="在这里插入图片描述" /></p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Webapp</category>
+        <category>AtoW</category>
       </categories>
   </entry>
   <entry>
@@ -276,7 +276,7 @@
 <p>部分插图来自 UOS 家庭版官方文档。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Webapp</category>
+        <category>AtoW</category>
       </categories>
   </entry>
   <entry>
@@ -312,7 +312,7 @@
 <p>获取 UOS 家庭版欢迎前往 <a href="https://home.uniontech.com" target="_blank" rel="noopener">https://home.uniontech.com</a> 。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Webapp</category>
+        <category>AtoW</category>
       </categories>
   </entry>
   <entry>
@@ -355,7 +355,7 @@
 <p><img src="https://img-blog.csdnimg.cn/ab238525f8984600a00587c55b1d288f.png" alt="" /></p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Webapp</category>
+        <category>AtoW</category>
       </categories>
   </entry>
   <entry>
@@ -2183,7 +2183,7 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>部署到GitHub Action，每周五早上六点自动运行:</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">"Fetch FF Cover Every Week"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">schedule:</span> </span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">'0 22 * * 4'</span></span><br><span class="line">    </span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">job_1:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Fetch</span> <span class="string">FF</span> <span class="string">Cover</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    </span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Fetch</span> <span class="string">FF</span> <span class="string">Cover</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">rm</span> <span class="string">-rf</span> <span class="string">ffdec</span></span><br><span class="line">        <span class="string">wget</span> <span class="string">https://github.com/jindrapetrik/jpexs-decompiler/releases/download/version14.2.1/ffdec_14.2.1.zip</span></span><br><span class="line">        <span class="string">mkdir</span> <span class="string">ffdec</span> <span class="string">;</span> <span class="string">mv</span> <span class="string">ffdec_14.2.1.zip</span> <span class="string">./ffdec/</span></span><br><span class="line">        <span class="string">cd</span> <span class="string">ffdec</span></span><br><span class="line">        <span class="string">unzip</span> <span class="string">ffdec_14.2.1.zip</span></span><br><span class="line">        <span class="string">wget</span> <span class="string">http://hua.61.com/resource/baseUI/fisrtPage.swf</span></span><br><span class="line">        <span class="string">java</span> <span class="string">-Xmx3550m</span> <span class="string">-jar</span> <span class="string">./ffdec.jar</span> <span class="string">-export</span> <span class="string">image</span> <span class="string">./xhxCover/</span> <span class="string">./fisrtPage.swf</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">to</span> <span class="string">this</span> <span class="string">repo</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">        <span class="string">mkdir</span> <span class="string">xhxCover</span></span><br><span class="line">        <span class="string">cd</span> <span class="string">ffdec/xhxCover</span></span><br><span class="line">        <span class="string">mv</span> <span class="string">*.png</span> <span class="string">../../xhxCover/cover.png</span></span><br><span class="line">        <span class="string">cd</span> <span class="string">../..</span></span><br><span class="line">        <span class="string">rm</span> <span class="string">-rf</span> <span class="string">ffdec</span></span><br><span class="line">        <span class="string">cd</span> <span class="string">xhxCover</span></span><br><span class="line">        <span class="string">git</span> <span class="string">config</span> <span class="string">--global</span> <span class="string">user.name</span> <span class="string">"No5972"</span> <span class="comment"># Change to your GitHub user name</span></span><br><span class="line">        <span class="string">git</span> <span class="string">config</span> <span class="string">--global</span> <span class="string">user.email</span> <span class="string">"wujiuqier@foxmail.com"</span> <span class="comment"># Change to your GitHub email address</span></span><br><span class="line">        <span class="string">git</span> <span class="string">add</span> <span class="string">"*.png"</span> <span class="string">&amp;&amp;</span> <span class="string">echo</span> <span class="string">"Git Added"</span> <span class="comment"># Guess if there are any other types of pictures - Ref: https://stackoverflow.com/questions/25083290/git-add-error-unknown-switch</span></span><br><span class="line">        <span class="string">git</span> <span class="string">commit</span> <span class="string">-m</span> <span class="string">'Fetch FF Cover'</span> <span class="string">&amp;&amp;</span> <span class="string">echo</span> <span class="string">"Git Committed"</span></span><br><span class="line">        <span class="string">git</span> <span class="string">push</span> <span class="string">-u</span> <span class="string">origin</span> <span class="string">master</span> <span class="string">&amp;&amp;</span> <span class="string">echo</span> <span class="string">"Git Pushed Origin"</span> <span class="comment"># Change to your branch to place crawled pictures</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Server</category>
+        <category>AtoW</category>
         <category>Automation</category>
       </categories>
   </entry>
@@ -6350,7 +6350,7 @@ mi.dll提供的API各种函数 (这里用C# 表示)</p>
 <p>将advertised.listeners=PLAINTEXT://your.host.name:9092注释去掉，your.host.name改成公网IP</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bin/zookeeper-server-start.sh -daemon config/zookeeper.properties</span><br><span class="line">bin/kafka-server-start.sh -daemon config/server.properties</span><br><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic <span class="built_in">test</span></span><br><span class="line">bin/kafka-topics.sh --list --zookeeper localhost:2181</span><br><span class="line">bin/kafka-console-producer.sh --broker-list 公网IP:9092 --topic <span class="built_in">test</span></span><br><span class="line">bin/kafka-console-consumer.sh --bootstrap-server 公网IP:9092 --topic <span class="built_in">test</span> --from-beginning</span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Server</category>
+        <category>AtoW</category>
         <category>Automation</category>
       </categories>
   </entry>
