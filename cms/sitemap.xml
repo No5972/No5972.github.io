@@ -1091,13 +1091,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Automation/</loc>
-    <lastmod>2022-09-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>daily</changefreq>
@@ -1119,7 +1112,7 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Github/</loc>
+    <loc>https://no5972.moe/cms/categories/Automation/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1127,6 +1120,13 @@
   
   <url>
     <loc>https://no5972.moe/cms/categories/C-C/</loc>
+    <lastmod>2022-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/categories/Github/</loc>
     <lastmod>2022-09-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
