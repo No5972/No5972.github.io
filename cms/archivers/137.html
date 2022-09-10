@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel=manifest href=/cms/manifest.json>
+  <meta charset="UTF-8">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+
+<!-- MODIFIED BY 5972 -->
+  <script data-ad-client="ca-pub-3179887013052109" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+  <link rel="stylesheet" href="/cms/css/main.css">
+  <link rel="stylesheet" href="/cms/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/cms/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/api/css/share.min.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/No5972/Live2D@25/live2d/css/live2d.css" />
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_1939188_al9ejbdlvar.css">
+  <!-- <link rel="stylesheet" href="https://fonts.font.im/css?family=Noto%20Serif%20TC&display=swap&subset=latin,latin-ext"/> -->
+  <!-- <link rel="stylesheet" href="https://fonts.font.im/css?family=Noto%20Serif%20SC&display=swap&subset=latin,latin-ext"/> -->
+  <link rel="stylesheet" href="https://fonts.geekzu.org/css?family=Noto+Serif+TC:Regular,Bold"/>
+  <link rel="stylesheet" href="https://fonts.geekzu.org/css?family=Noto+Serif+SC:Regular,Bold"/>
+  <link rel="stylesheet" href="https://fonts.geekzu.org/css?family=ZCOOL+KuaiLe"/>
+  <style>
+    #landlord {
+      bottom: -100px;
+      width: 200px;
+      height: 550px;
+      left: 0;
+    }
+    
+    #live2d {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <!-- <script src="https://fastly.jsdelivr.net/gh/No5972/live2d-widget@20/autoload.js"></script> -->
+  
+  
+  <style>
+/*
+   @font-face
+    {
+      font-family: CCKT;
+      src: url('https://fastly.jsdelivr.net/gh/No5972/Live2D@12/cckt.woff');
+    }
+*/
+    
+    @font-face
+    {
+      font-family: DIN-Bold;
+      src: url('https://fastly.jsdelivr.net/gh/No5972/Live2D@10/din-bold-2.otf');
+    }
+
+    /* @font-face
+    {
+        font-family: FreeSerif;
+        src: url('https://fastly.jsdelivr.net/gh/No5972/Live2D@22/FreeSerif.otf');
+        font-style: normal;
+        font-weight: normal;
+    }
+	
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://fastly.jsdelivr.net/gh/No5972/Live2D@22/FreeSerif.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://fastly.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifBold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://fastly.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifItalic.otf');
+    font-style: italic;
+    font-weight: normal;
+}
+    
+@font-face
+{
+    font-family: FreeSerif;
+    src: url('https://fastly.jsdelivr.net/gh/No5972/Live2D@22/FreeSerifBoldItalic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+*/
+
+    .message {
+      font-family: 'ZCOOL KuaiLe';
+    }
+  </style> 
+  <style>
+    .pace .pace-progress {
+      background: #fff !important;
+    }
+  </style>
+<!-- MODIFIED BY 5972 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/cms/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/cms/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/cms/images/favicon.ico">
+  <link rel="mask-icon" href="/cms/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/cms/css/main.css">
+
+
+<link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free@5.13.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="/cms/lib/animate-css/animate.min.css">
+  <link rel="stylesheet" href="//unpkg.com/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script data-pace-options='{ "ajax": false }' src="//unpkg.com/pace-js@1.2.4/pace.min.js"></script>
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"no5972.moe","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="测试发现 27．0．0．130 及之前的版本无此问题（推荐 26．0．0．151，原因详见推荐26．0．0．151的原因），不但自身没有什么限制，因为没添“料”，也比之后的版本更流畅、更好用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="需要用Flash Player又不想安装重橙版？官方原版插件就可以~">
+<meta property="og:url" content="https://no5972.moe/cms/archivers/137.html">
+<meta property="og:site_name" content="No.5972 Publishment Website">
+<meta property="og:description" content="测试发现 27．0．0．130 及之前的版本无此问题（推荐 26．0．0．151，原因详见推荐26．0．0．151的原因），不但自身没有什么限制，因为没添“料”，也比之后的版本更流畅、更好用。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img.shields.io/badge/lfm09-%E9%9C%80%E8%A6%81%E7%94%A8Flash%20Player%E5%8F%88%E4%B8%8D%E6%83%B3%E5%AE%89%E8%A3%85%E9%87%8D%E6%A9%99%E7%89%88%EF%BC%9F%E5%AE%98%E6%96%B9%E5%8E%9F%E7%89%88%E6%8F%92%E4%BB%B6%E5%B0%B1%E5%8F%AF%E4%BB%A5~-brightgreen">
+<meta property="og:image" content="https://bbs.pcbeta.com/data/attachment/forum/202206/03/104439xs3e6fnhyn3hb8ef.png">
+<meta property="og:image" content="https://bbs.pcbeta.com/data/attachment/forum/202206/08/134604klpu1hs9wguzujs4.png">
+<meta property="article:published_time" content="2022-09-11T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-10T15:56:08.918Z">
+<meta property="article:author" content="No.5972">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.shields.io/badge/lfm09-%E9%9C%80%E8%A6%81%E7%94%A8Flash%20Player%E5%8F%88%E4%B8%8D%E6%83%B3%E5%AE%89%E8%A3%85%E9%87%8D%E6%A9%99%E7%89%88%EF%BC%9F%E5%AE%98%E6%96%B9%E5%8E%9F%E7%89%88%E6%8F%92%E4%BB%B6%E5%B0%B1%E5%8F%AF%E4%BB%A5~-brightgreen">
+
+<link rel="canonical" href="https://no5972.moe/cms/archivers/137.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>需要用Flash Player又不想安装重橙版？官方原版插件就可以~ | No.5972 Publishment Website</title>
+  <script>
+      if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
+        window.onload = function () {
+          $("style,link").remove();
+        }
+        console.log("IE Found!");
+        
+      }
+
+  </script>
+  <script>
+function loadJS( url, callback ){
+    var script = document.createElement('script'),fn = callback || function(){};
+    script.type = 'text/javascript';
+    //IE
+    if(script.readyState){
+        script.onreadystatechange = function(){
+            if( script.readyState == 'loaded' || script.readyState == 'complete' ){
+                script.onreadystatechange = null;
+                fn();
+            }
+        };
+    }else{
+        //其他浏览器
+        script.onload = function(){
+            fn();
+        };
+    }
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+
+
+
+  </script>
+  <style>
+#switchBackgroundBtn {
+ right: 30px;
+ opacity: 0 !important;
+ transition: opacity 0.5s;
+}
+
+#switchBackgroundBtn {
+
+} 
+
+#switchBackgroundBtn:hover {
+ opacity: 1 !important;
+} 
+
+@media (max-width: 991px) {
+ #switchBackgroundBtn {
+  right: 20px;
+ } 
+}
+  </style>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/cms/feed.xml" title="No.5972 Publishment Website" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    <!-- <div style="position:fixed;width: 100%;height: 100%;background: url(https://cdndata.fairyabc.com/attachment/album/201809/06/161517g07y9z06yfunuuub.jpg);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none;" id="customBackground"></div> -->
+    <div style="position:fixed;width: 100%;height: 100%;background: url(https://img.paulzzh.tech/touhou/random);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none; display: none;" id="randomBackground"></div>
+    <!-- <div style="position:fixed;width: 100%;height: 100%;background: url(https://cdn.jsdelivr.net/gh/No5972/Live2D@13/161517g07y9z06yfunuuub.jpg);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none; display: block;" id="customBackground"></div> -->
+    <div style="position:fixed;width: 100%;height: 100%;background: url(https://img-blog.csdnimg.cn/img_convert/c902efd072320739964602515725b3e0.png);opacity: 0.25; background-size:cover ; background-attachment:fixed; pointer-events: none; display: block;" id="customBackground"></div>
+    <div class="back-to-top1" id="switchBackgroundBtn" onclick="toggleRandomBackground()" style="bottom: 60px; box-sizing: border-box; color: #fff; padding: 0 6px; transition: bottom 0.2s ease-in-out; background: #007ff3; cursor: pointer; opacity: 0.6; position: fixed; z-index: 1300; width: 24px; font-size: 12px;"><i class="fa fa-paint-brush"></i></div>
+    <div id="cookie-alert" class="cookie-alert" style="position: absolute; width: 100%; height: fit-content; background: white; left: 0; top: 0; display: none; z-index: 1000;">We use cookies to improve your experience on our website. By browsing this website, you agree to our use of cookies. <a href="#" onclick="agreeCookies()">OK</a>&nbsp;|&nbsp;<a href="/cms/cookie-notice">Learn More &gt;</a></div>
+    <script>
+      
+
+      if(!localStorage.getItem('mask')){
+       document.getElementById("cookie-alert").style.display = "block";
+      }
+
+      function refreshRandomBackgroundStatus() {
+       document.getElementById('randomBackground').style.display = "block";
+       if (localStorage.getItem('randomBackground') == 'true') {
+        document.getElementById('randomBackground').style.display = "block";
+        document.getElementById('customBackground').style.display = "none";
+       } else {
+        document.getElementById('randomBackground').style.display = "none";
+        document.getElementById('customBackground').style.display = "block";
+       }
+      }
+
+      function toggleRandomBackground() {
+       if (localStorage.getItem('randomBackground') == null || localStorage.getItem('randomBackground') == 'false') {
+        localStorage.setItem('randomBackground', 'true');
+       } else {
+        localStorage.setItem('randomBackground', 'false');
+       }
+       refreshRandomBackgroundStatus();
+      }
+
+      refreshRandomBackgroundStatus();
+      
+      function agreeCookies() {
+        document.getElementById("cookie-alert").style.display = "none";
+        localStorage.setItem('mask','true');
+      }
+
+      window.onload = function () {
+        // IE Alert
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+         var p = document.createElement("div");
+         p.style.color="#000";
+         p.style.position="absolute";
+         p.style.width="100%";
+         p.style.height="fit-content";
+         p.style.background="white";
+         p.style.left=0;
+         if(!localStorage.getItem('mask')){
+           p.style.top="32px";
+         } else {
+           p.style.top=0;
+         }
+         p.style.zIndex=1000;
+         p.innerHTML = 'Please note that this site no longer supports Internet Explorer. Please use <a href="https://www.microsoft.com/edge" target="_blank" rel="noopener">Microsoft Edge</a> or other browsers to browse this site.'
+         document.body.insertBefore(p, document.getElementsByClassName("cookie-alert")[0]);
+        }
+
+        const selects = document.querySelectorAll('.lang-select');
+        selects.forEach(sel => {
+          sel.addEventListener('change', () => {
+            const target = sel.options[sel.selectedIndex];
+            sessionStorage.setItem("lang", target.label);
+          });
+        });
+        
+        $("a[target=_blank]").each (function () { $(this).attr("onclick", "window.open('/cms/confirm.html?' + encodeURI($(this).attr(\"href\"))) ; return false;");} )
+
+        var pageLoadTime = new Date().getTime()  - window.performance.timing.navigationStart;
+        if (pageLoadTime > 10000 && location.pathname == "/cms/") {
+         loadJS("https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.min.js?v=" + new Date().getTime(), function () {
+          layer.msg('本次访问网站消耗了 ' + pageLoadTime + ' 毫秒，访问较慢，推荐访问国内镜像站 https://no5972.gitee.io ，访问更快。', {
+            time: 10000, //20s后自动关闭
+            btn: ['确认', '取消'],
+            yes: function () {
+              location.href="https://no5972.gitee.io/cms";
+            }
+          })
+         })
+        }
+      }
+
+      if (sessionStorage.getItem("lang") == "简体中文" && location.href.lastIndexOf("zh-CN") == -1) { 
+        location.href = location.href.replace("/cms/", "/cms/zh-CN/");
+      }
+
+/*
+window.onload = function () {
+	if (navigator.userAgent.lastIndexOf("Macintosh") != -1 || navigator.userAgent.lastIndexOf("Windows NT") != -1) {
+	if (navigator.platform.lastIndexOf("Linux arm") == -1) { // 手机浏览器不支持视频透明
+		var v = document.createElement("video");
+		v.src = "https://cdn.jsdelivr.net/gh/No5972/Live2D@master-1/2ce423abb276a932119.mp4";	
+		v.loop = true;
+		v.autoplay = true;
+		v.currentTime = 40;
+		$(v).css("height" ,"100%");
+		$(v).css("width" ,"100%");
+		$(v).css("object-fit" ,"fill");
+
+
+		$("#customBackground").html("");
+		$("#customBackground").append(v);
+		$("#customBackground").find("video")[0].play();
+	}
+	}
+}
+*/
+
+    </script>
+    <!-- <script>
+      (function(d) {
+        var config = {
+          kitId: 'cwe3tnz',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script> -->
+
+    <main class="main">
+
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/cms/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">No.5972 Publishment Website</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Easier than easy.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-return">
+
+    <a href="https://no5972.github.io/" rel="noopener" target="_blank"><i class="fa fa-reply fa-fw"></i>Return</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/cms/about.html" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/cms/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/cms/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-toolkit">
+
+    <a href="/cms/archivers/4.html" rel="section"><i class="fa fa-wrench fa-fw"></i>Toolkit</a>
+
+  </li>
+        <li class="menu-item menu-item-donate">
+
+    <a href="https://afdian.net/@wujiuqier" rel="noopener" target="_blank"><i class="fa fa-child fa-fw"></i>Donate</a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/cms/links/" rel="section"><i class="fa fa-link fa-fw"></i>Site Navigation</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar" style="background: #fff2; padding: 20px 0;">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active" style="display: contents;">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#以下内容对便捷版和替换版不需要"><span class="nav-text"> 以下内容对便捷版和替换版不需要</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-关于官方安装包"><span class="nav-text"> 一、关于官方安装包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-先卸载旧版插件再安装官方版"><span class="nav-text"> 二、先卸载旧版插件再安装官方版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-如果安装时提示不是最新版本"><span class="nav-text"> 三、如果安装时提示不是最新版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-官方版安装好后再根据不同的浏览器作简单设置"><span class="nav-text"> 四、官方版安装好后再根据不同的浏览器作简单设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ie11旧版-edge"><span class="nav-text"> 1、IE11&#x2F;旧版 Edge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-chrome新版-edge百分浏览器"><span class="nav-text"> 2、Chrome&#x2F;新版 Edge&#x2F;百分浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-firefox"><span class="nav-text"> 3、Firefox</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#以下内容没兴趣的话可以不用看"><span class="nav-text"> 以下内容没兴趣的话可以不用看</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-系统层面"><span class="nav-text"> 一、系统层面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-浏览器层面"><span class="nav-text"> 二、浏览器层面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ie11-和旧版-edge-的限制"><span class="nav-text"> 1、IE11 和旧版 Edge 的限制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a-编辑文件"><span class="nav-text"> A、编辑文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b-组策略解除对控件版本的限制"><span class="nav-text"> B、组策略解除对控件版本的限制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#c-把相关网站加入受信任的站点"><span class="nav-text"> C、把相关网站加入受信任的站点。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#d-提高-fp-版本号修改-ocx-文件版本号"><span class="nav-text"> D、提高 FP 版本号（修改 OCX 文件版本号）。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-firefox-的限制"><span class="nav-text"> 2、Firefox 的限制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-chrome新版-edge-的限制"><span class="nav-text"> 3、Chrome&#x2F;新版 Edge 的限制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-flash-插件自身的限制"><span class="nav-text"> 三、Flash 插件自身的限制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-网站层面"><span class="nav-text"> 四、网站层面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐-2600151-的原因"><span class="nav-text"> 推荐 26．0．0．151 的原因</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="No.5972"
+      src="https://no5972.moe/cms/static/32865305.jpg">
+  <p class="site-author-name" itemprop="name">No.5972</p>
+  <div class="site-description" itemprop="description">No.5972 is silly B</div>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/No5972" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;No5972" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/14547429/no-5972" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;14547429&#x2F;no-5972" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:wujiuqier#foxmail.com" title="E-Mail → mailto:wujiuqier#foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/cms/feed.xml" title="RSS → &#x2F;feed.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/qq_35977139" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_35977139" rel="noopener" target="_blank"><i class="iconfont icon-csdn_new fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/12551304" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;12551304" rel="noopener" target="_blank"><i class="iconfont icon-bilibili-fill fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/wujiuqier" title="Zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;wujiuqier" rel="noopener" target="_blank"><i class="iconfont icon-zhihu fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://tieba.baidu.com/home/main?un=wujiuqier" title="Tieba → https:&#x2F;&#x2F;tieba.baidu.com&#x2F;home&#x2F;main?un&#x3D;wujiuqier" rel="noopener" target="_blank"><i class="iconfont icon-tieba fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.pixiv.net/en/users/17358156/" title="Pixiv → https:&#x2F;&#x2F;www.pixiv.net&#x2F;en&#x2F;users&#x2F;17358156&#x2F;" rel="noopener" target="_blank"><i class="iconfont icon-pixiv fa-fw"></i></a>
+      </span>
+  </div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/cms/archives/">
+        
+          <span class="site-state-item-count">141</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+
+    
+                <nav class="site-nav">
+                  <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cms/categories/AtoW/">AtoW</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Automation/">Automation</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C/">C#</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C-C/">C/C++</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Github/">Github</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Java/">Java</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/JavaScript/">JavaScript</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Moving-Away-from-Flash/">Moving Away from Flash</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Other/">Other</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Python/">Python</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Web-Building/">Web Building</a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Webapp/">Webapp</a><span class="category-list-count">34</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll-update/">jekyll update</a><span class="category-list-count">4</span></li></ul>
+                </nav>
+                <nav class="site-nav" style="width: 80%; overflow-x: hidden;">
+                  <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/137.html">需要用Flash Player又不想安装重橙版？官方原版插件就可以~</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/136.html">仅作笔记用：UOS 解决 APT 报错处理 com.dongpl.beyond (NewVersion2) 时出错</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/135.html">仅作笔记用：何谓“联机帮助”？</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/134.html">Blender MMD 备忘</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/133.html">UOS ARM 安装安卓手机软件 APK 软件包</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/132.html">UOS 虚拟打印到 PDF 文件</a></li></ul>
+                </nav>
+              
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/No5972" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/137.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
+      <meta itemprop="name" content="No.5972">
+      <meta itemprop="description" content="No.5972 is silly B">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="No.5972 Publishment Website">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+          需要用Flash Player又不想安装重橙版？官方原版插件就可以~
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-09-11 00:00:00 | Modified: 2022-09-10 15:56:08" itemprop="dateCreated datePublished" datetime="2022-09-11T00:00:00+00:00">2022-09-11 00:00:00</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/cms/categories/Moving-Away-from-Flash/" itemprop="url" rel="index"><span itemprop="name">Moving Away from Flash</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/cms/archivers/137.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/cms/archivers/137.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>来源：</p>
+<p><a href="https://bbs.pcbeta.com/viewthread-1933780-1-1.html" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/lfm09-%E9%9C%80%E8%A6%81%E7%94%A8Flash%20Player%E5%8F%88%E4%B8%8D%E6%83%B3%E5%AE%89%E8%A3%85%E9%87%8D%E6%A9%99%E7%89%88%EF%BC%9F%E5%AE%98%E6%96%B9%E5%8E%9F%E7%89%88%E6%8F%92%E4%BB%B6%E5%B0%B1%E5%8F%AF%E4%BB%A5~-brightgreen" alt="lfm09-需要用Flash Player又不想安装重橙版？官方原版插件就可以~" /></a></p>
+<p>前段时间帮朋友装Flash Player，之前一直用 29．0．0．171，最近开始会提示“版本过旧、需要升级”而用不了。因为实在不想使用重橙版，就花了点时间来测试。（至于为什么不用重橙版就不多说了，不仅仅是广告的原因）</p>
+<p>测试发现 27．0．0．130 及之前的版本无此问题（推荐 26．0．0．151，原因详见<a href="#%E6%8E%A8%E8%8D%9026%EF%BC%8E0%EF%BC%8E0%EF%BC%8E151%E7%9A%84%E5%8E%9F%E5%9B%A0">推荐26．0．0．151的原因</a>），不但自身没有什么限制，因为没添“料”，也比之后的版本更流畅、更好用。这里是不是有什么特殊的时间点呢？找了一下历史新闻，原来 Adobe 在 2017 年 7 月 26 日就宣布了 Flash Player 将于 2020 年底停止服务，而 26．0．0．151 及 27．0．0．130 正好是分别于 2017 年 7 月和 8 月开发的，（起码 26）很幸运没有受此影响，而在它们之后的版本都增加了暗桩。</p>
+<p><strong>2022．6．12 更新：</strong> 增加 FP 26．0．0．151 全系便捷安装版，以及 Win10 AX 替换安装版，所有 OCX/DLL 文件均为官方原版提取。为方便使用，已作必要的简单设置，相当于懒人包。AX 便捷安装版已整合 Win10 和 Win7 插件，自动识别安装。<em>便捷安装版</em> 支持绝大部分常用的 Win 系统。<em>Win10AX 替换安装版</em> 仅适用于 Win8/10 未打 KB4577586 补丁、且系统预置 AX 保留完整时，替换文件前会先备份原文件（添加&quot;<code>_bak</code>&quot;后缀），可随时手工恢复。安装包基于 423down 脚本制作，在此感谢。</p>
+<p><strong>2022．6．25 更新：</strong> AX/NP 便捷安装版和 Win10AX 替换安装版更新，增加了 OCX/DLL 核心文件的选择，安装时可选择官方原版或修改版 OCX/DLL 文件，后者的唯一区别是文件版本号修改提高为 66．0．0．151，以解决有极个别网站对版本号的限制。一般使用建议选择原版即可。另，PP 版改版本号不用修改 dll，无需更新。</p>
+<h1 id="以下内容对便捷版和替换版不需要"><a class="markdownIt-Anchor" href="#以下内容对便捷版和替换版不需要"></a> 以下内容对便捷版和替换版不需要</h1>
+<p>官方版安装说明：</p>
+<h2 id="一-关于官方安装包"><a class="markdownIt-Anchor" href="#一-关于官方安装包"></a> 一、关于官方安装包</h2>
+<p>文件名带 <code>_win</code> 后缀的是 NPAPI 火狐版插件，<code>_winax</code> 是 Win7 版 IE（ActiveX）插件，<code>_winpep</code> 是 PPAPI 谷歌版插件；KB4034662 补丁是 Win10 1607 的 AX 版FP26．0．0．151，里面的插件仅适合 Win10/8，但该补丁包在其他 Win10 中是无法直接安装的，需要手工解压提取出相关文件来，替换系统 Flash 目录下的原文件即可。<strong>（特别提示：Win10 和 Win7 的 AX 版 FP 是不通用的）</strong></p>
+<h2 id="二-先卸载旧版插件再安装官方版"><a class="markdownIt-Anchor" href="#二-先卸载旧版插件再安装官方版"></a> 二、先卸载旧版插件再安装官方版</h2>
+<p>除 Win10 系统预置 AX 外，其他版本请先正常卸载旧版，然后建议用官方 uninstall 工具再清理一下，重启系统后再安装，安装时选择“从不检查更新”。（注意：PP 版插件除了系统 <code>Flash</code> 目录外，浏览器相关 <code>PepperFlash</code> 目录下可能也有，也要删除或替换）</p>
+<h2 id="三-如果安装时提示不是最新版本"><a class="markdownIt-Anchor" href="#三-如果安装时提示不是最新版本"></a> 三、如果安装时提示不是最新版本</h2>
+<p>定位到以下注册表项，把其中大于 25.0 的键值都删除后再安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Macromedia\FlashPlayer\SafeVersions]</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Macromedia\FlashPlayer\SafeVersions]</span><br></pre></td></tr></table></figure>
+<h2 id="四-官方版安装好后再根据不同的浏览器作简单设置"><a class="markdownIt-Anchor" href="#四-官方版安装好后再根据不同的浏览器作简单设置"></a> 四、官方版安装好后再根据不同的浏览器作简单设置</h2>
+<h3 id="1-ie11旧版-edge"><a class="markdownIt-Anchor" href="#1-ie11旧版-edge"></a> 1、IE11/旧版 Edge</h3>
+<p>编辑文本文件 <code>%LOCALAPPDATA%\Microsoft\Internet Explorer\VersionManager\versionlist.xml</code>，注释掉 <code>Flash</code> 数据段；或者修改组策略解除对控件版本的限制：管理模板 -&gt; Windows 组件 -&gt; Internet Explorer -&gt; 安全功能 -&gt; 加载项管理 -&gt; 关闭 Internet Explorer 的过时 ActiveX 控件的阻止功能，设置为“已启用”。</p>
+<h3 id="2-chrome新版-edge百分浏览器"><a class="markdownIt-Anchor" href="#2-chrome新版-edge百分浏览器"></a> 2、Chrome/新版 Edge/百分浏览器</h3>
+<p>Chrome/Edge 须使用 v87 之前版本，并把插件版本号修改为大于32．0．0．465。PP 版插件的版本号修改很简单，插件所在目录带版本号的就修改目录名，目录不带版本号的就编辑文本文件 <code>manifest.json</code> 。</p>
+<h3 id="3-firefox"><a class="markdownIt-Anchor" href="#3-firefox"></a> 3、Firefox</h3>
+<p>使用 Fx84 之前版本即可，不用作其他修改。</p>
+<p>一般以上设置就可以了，原汁原味、流畅、无暗桩的官方原版，用着放心，也不用频繁更新。</p>
+<h1 id="以下内容没兴趣的话可以不用看"><a class="markdownIt-Anchor" href="#以下内容没兴趣的话可以不用看"></a> 以下内容没兴趣的话可以不用看</h1>
+<p>目前对 Flash 的绞杀、限制几乎是全方位的，包括操作系统、浏览器、插件自身、网站 4 个层面，逼着用户要么放弃 Flash，要么使用重橙版。下面大概说一下有关限制和应对方法：</p>
+<h2 id="一-系统层面"><a class="markdownIt-Anchor" href="#一-系统层面"></a> 一、系统层面</h2>
+<p>Win10 更新补丁 kb4577586 会强制删除系统预置的 Flash 插件，不想安装该补丁的话，可以关闭系统更新，或者使用微软官方工具“<a href="http://download.microsoft.com/download/f/2/2/f22d5fdb-59cd-4275-8c95-1be17bf70b21/wushowhide.diagcab" target="_blank" rel="noopener">Show or hide updates</a>”来屏蔽它。</p>
+<h2 id="二-浏览器层面"><a class="markdownIt-Anchor" href="#二-浏览器层面"></a> 二、浏览器层面</h2>
+<h3 id="1-ie11-和旧版-edge-的限制"><a class="markdownIt-Anchor" href="#1-ie11-和旧版-edge-的限制"></a> 1、IE11 和旧版 Edge 的限制</h3>
+<p>通过版本列表来阻止低版本 Flash 运行，目前版本号小于等于32．0．0．386的都会被阻止运行。</p>
+<p>解决办法有 4 个，哪个都可以：</p>
+<h4 id="a-编辑文件"><a class="markdownIt-Anchor" href="#a-编辑文件"></a> A、编辑文件</h4>
+<p><code>%LOCALAPPDATA%\Microsoft\Internet Explorer\VersionManager\versionlist.xml</code> ，注释掉 <code>Flash</code> 相关数据段。</p>
+<p><img src="https://bbs.pcbeta.com/data/attachment/forum/202206/03/104439xs3e6fnhyn3hb8ef.png" alt="" /></p>
+<h4 id="b-组策略解除对控件版本的限制"><a class="markdownIt-Anchor" href="#b-组策略解除对控件版本的限制"></a> B、组策略解除对控件版本的限制</h4>
+<p>管理模板 -&gt; Windows 组件 -&gt; Internet Explorer -&gt; 安全功能 -&gt; 加载项管理 -&gt; 关闭 Internet Explorer 的过时 ActiveX 控件的阻止功能，设置为“已启用”。</p>
+<h4 id="c-把相关网站加入受信任的站点"><a class="markdownIt-Anchor" href="#c-把相关网站加入受信任的站点"></a> C、把相关网站加入受信任的站点。</h4>
+<h4 id="d-提高-fp-版本号修改-ocx-文件版本号"><a class="markdownIt-Anchor" href="#d-提高-fp-版本号修改-ocx-文件版本号"></a> D、提高 FP 版本号（修改 OCX 文件版本号）。</h4>
+<h3 id="2-firefox-的限制"><a class="markdownIt-Anchor" href="#2-firefox-的限制"></a> 2、Firefox 的限制</h3>
+<p>一是运行 Flash 需手工确认，二是从 Fx85 起不支持 Flash。</p>
+<p>解决办法：使用 Fx84（如果要自动运行 Flash 那还得更早版本的 Fx）。</p>
+<h3 id="3-chrome新版-edge-的限制"><a class="markdownIt-Anchor" href="#3-chrome新版-edge-的限制"></a> 3、Chrome/新版 Edge 的限制</h3>
+<p>一是对 FP 32．0．0．465 及之前的版本直接阻止，无法运行；二是对 FP 版本号大于 32．0．0．465 的也需要手工允许；三是从 v88 起浏览器不支持 Flash。</p>
+<p>解决办法：浏览器使用 v87（如果要自动运行 Flash 那还得更早的版本）、或者使用百分浏览器，并提高 FP 版本号（PPAPI 版修改很简单，插件所在目录的名称带版本号的就修改目录名，目录名不带版本号的就编辑 <code>manifest.json</code> ，比如把其中的 26．0．0．151 修改为 66．0．0．151）。</p>
+<p><img src="https://bbs.pcbeta.com/data/attachment/forum/202206/08/134604klpu1hs9wguzujs4.png" alt="" /></p>
+<h2 id="三-flash-插件自身的限制"><a class="markdownIt-Anchor" href="#三-flash-插件自身的限制"></a> 三、Flash 插件自身的限制</h2>
+<p>一是从 v30 起限制中国区用户不能使用国际版；二是 v32．0．0．387 之后的版本含有时间“炸弹”，2021 年 1 月 12 日起会提示 EOL 生命期终止而无法使用；三是 v27．0．0．159 之后的版本含有限制旧版的暗桩，最近开始会提示“版本过旧、需要升级”而不能使用。</p>
+<p>解决办法：使用 v27．0．0．130 及之前的版本（推荐26．0．0．151）；或使用 v27．0．0．159 ~ v29，并修改 hosts 或 OCX/DLL 文件屏蔽相关域名；或使用 v30 以后版本，需修改 OCX/DLL 文件去除相关限制。</p>
+<h2 id="四-网站层面"><a class="markdownIt-Anchor" href="#四-网站层面"></a> 四、网站层面</h2>
+<p>有些B态网站会对FP插件版本号有要求，碰到这种就只好修改提高版本号了（通过上面所说的修改  <code>manifest.json</code> 文件、修改插件所在目录的文件夹名称、直接修改 OCX/DLL 等方式）。</p>
+<h1 id="推荐-2600151-的原因"><a class="markdownIt-Anchor" href="#推荐-2600151-的原因"></a> 推荐 26．0．0．151 的原因</h1>
+<p>昨天发现 27．0．0．130 AX 版在 Win7 下有时会出现插件文件无缘无故消失的问题，这也许是使用了官方 uninstall 工具或者“一剑全清”工具清理后没有重启系统就安装新版所导致的。（不确定是否 27．0．0．130 的锅）</p>
+<p>另外，其配置文件 <code>settings.sol</code> 会保存当前版本信息和最新版本信息，说不定什么时候又出妖蛾子，所以还是推荐大家使用 26．0．0．151。推荐 26 还有一个原因，前几年用火狐 + FP 29．0．0．171 浏览某个 Flash 网站会明显卡顿，经测试多个大版本发现只有 26 才正常。</p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
+    </div>
+
+    
+    
+    
+         <div style="color: #888a; font-family: DIN-Bold; background: #eee5; padding: 10px; margin-bottom: 10px;">Publishing this article is for the purpose of conveying more information, and does not mean agreeing with its views or confirming its description, nor does it mean that we are responsible for its authenticity. Should you have any questions or doubts about the content of the post, please don't hesitate to contact us. We will respond to you and deal with it as quickly as possible.</div>
+
+      <footer class="post-footer">
+
+        
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1fe0947c0fa73a" async="async"></script>
+  </div>
+  <div class="ad" style="text-align: center;">
+    <a href="https://curl.qcloud.com/WUYKGkn3" target="_blank"><img src="//img-blog.csdnimg.cn/1bc5c422398948feb54ddcb27faeaf04.jpg"></img></a>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/cms/archivers/136.html" rel="prev" title="仅作笔记用：UOS 解决 APT 报错处理 com.dongpl.beyond (NewVersion2) 时出错">
+      <i class="fa fa-chevron-left"></i> 仅作笔记用：UOS 解决 APT 报错处理 com.dongpl.beyond (NewVersion2) 时出错
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2011 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="author" itemprop="copyrightHolder">No.5972</span>
+</div>
+
+<div class="copyright" style="
+    vertical-align: middle;
+">
+<a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/4.0/" style="
+    padding-right: 10px;
+    border: none;
+"><img alt="Creative Commons License" style="border-width:0;margin: unset;/* max-width: unset; */display: inline;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAABGdBTUEAANbY1E9YMgAAAJZQTFRF////7u7u3d3dys7KzMzMyMzIxsrGxcbFur+6u7u7s7iyq7GqqqqqmZmZlJmTj5CPiIiIh4eHhoaGgICAfYJ9d3d3cnZxZ2tnZmZmW15bVVVVS0xLREREQ0NDQkJCQUJBOz07OTs5MzMzMTMxLjAuJygnJCUjIiIiISEhICAgGRkZERERDxAPDg4ODQ4NDQ0NDQ0MAAAADbeuvgAAANNJREFUeNqtk2kTgiAQhl/KzlWzgw6j+7Ayq/3/f64hTPNLNskOMMwuPLzsAtiygWHVNJC0TThIXSrxierXv/UZoJ8E2SHqQNQeVgSuT7lqh2dEjXk14C2AE7ESiiMHakdU773igF5keu5AKXDEHUQhpIyF50LeiNotEzct4+XO78AxO0JXJdzqO8uEqNvMBKUaYcbXDD8qVNNYSA/yXlRYEISfFNI9gBvzVCje1rDYF3L4sf+d03Lg5my5yv6jnwGXRwvvkMY8SHmrS9WfYvsvW7YnkDuZd7/ChBQAAAAASUVORK5CYII="></a>
+    <p style="display:inline-block;margin:0;">Original content of this site, except those works that are given appropriate credits, is licensed under a<br> <a rel="license noopener" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+</div>
+  <div class="powered-by">
+    <a href="/cms/cookie-notice">Cookie Notice</a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/No5972/cms_source" target="_blank" rel="noopener">Site Source</a>
+    &nbsp;|&nbsp;Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 4.2.1 & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 8.0.0-rc.4
+  </div>
+
+        
+<br>
+<span id="daysCount"></span>
+<script>
+  document.getElementById("daysCount").innerText = " " + parseInt(Math.abs(new Date()  -  new Date("2018-11-14"))  /  1000  /  60  /  60  /24)   + " days since this blog's being founded";
+</script>
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="//unpkg.com/animejs@3.1.0/lib/anime.min.js"></script>
+  <script src="//unpkg.com/medium-zoom@1/dist/medium-zoom.min.js"></script>
+
+
+<script src="//unpkg.com/hexo-theme-next@8.0.0-rc.5/source/js/utils.js"></script>
+  <script src="//unpkg.com/hexo-theme-next@8.0.0-rc.5/source/js/motion.js"></script>
+
+
+<script src="//unpkg.com/hexo-theme-next@8.0.0-rc.5/source/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+<script src="//unpkg.com/hexo-theme-next@8.0.0-rc.4/source/js/local-search.js"></script>
+
+
+
+<div id="landlord">
+    <div class="message" style="opacity:0; left: 10px;"></div>
+    <!-- <canvas id="live2d" width="280" height="550" class="live2d"></canvas> -->
+    <iframe src="https://test-review.cdn.bcebos.com/mmd/index.html" frameborder="no" style="width: 100%; height: 100%"></iframe>
+    <div class="hide-button" style="top: 50px !important">隐藏</div>
+</div>
+
+<script src="https://www.unpkg.com/jquery@3.5.1/dist/jquery.min.js"></script>
+
+<script src="https://unpkg.com/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
+<div class="marquee-container" style="position: fixed; width: 100%; height: 30px; color: black; background-color: white; left: 0; bottom: 0;">
+<div class="marquee">推进创文常态化 共建文明襄阳城　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　做文明襄阳人 建文明襄阳城 凝聚文明正能量 筑梦千年古襄阳　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　创建全国文明城市 加快建设汉江流域中心城市　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　讲文明 树新风　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　用微笑融化陌生 用文明美化襄阳　·　🄽🄾5️⃣9️⃣7️⃣2️⃣　·　争当文明使者 播撒文明新风</div>
+</div>
+<script>$('.marquee').marquee({duration: 25000});</script>
+
+<!-- mmd3d begin -->
+<script type="text/javascript">
+    var message_Path = 'https://fastly.jsdelivr.net/gh/No5972/Live2D@25/live2d/'
+    var home_Path = 'https://no5972.github.io/cms/'  //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/No5972/Live2D@25/live2d/js/message.js"></script>
+<!-- mmd3d end -->
+
+<!-- public live2d start -->
+<!--
+<script type="text/javascript">
+    var message_Path = 'https://fastly.jsdelivr.net/gh/No5972/Live2D@24/live2d/'
+    var home_Path = 'https://no5972.github.io/cms/'  //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/No5972/Live2D@11/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/No5972/Live2D@11/live2d/js/message.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "https://fastly.jsdelivr.net/gh/QiShaoXuan/live2DModel@1.0.0/live2d-widget-model-miku/assets/miku.model.json");
+    $("#landlord").draggable();
+</script>
+-->
+<!-- public live2d end -->
+
+
+
+
+<script>
+    $(document).on('mouseenter', 'button:contains(Donate)', function(){
+        $("#post-reward").show();
+    }).on('mouseleave', 'button:contains(Donate)', function(){
+        $("#post-reward").hide();
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<link rel="stylesheet" href="//unpkg.com/katex@0.15.1/dist/katex.min.css">
+
+
+  
+
+
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//unpkg.com/valine-unpkg-avmin@0.0.1/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: location.pathname,
+    }, {"enable":true,"appId":"nOdccOqHtNBWpnoqXaBLw5Og-MdYXbMMI","appKey":"tYz6qEF31fk2WBHYsyO8RHQP","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"en","visitor":false,"comment_count":true,"recordIP":false,"serverURLs":"https://leancloud.no5972.moe"}
+    ));
+  }, window.Valine);
+});
+</script>
+
+<script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/cms/sw.js?t=1662825411393')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+</html>
