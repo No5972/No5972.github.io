@@ -135,7 +135,7 @@
 <p>PMD转PMX：使用Blender和CATS插件。导入PMD然后直接导出PMX即可。</p>
 </li>
 <li>
-<p>对透明底发光贴图材质的发光设置：原贴图是针对MME的Autoluminous而使用的透明底贴图，这种情况把图像纹理或者Mmd Base Tex的Alpha拉一根出来放到混合着色器的系数。加一个原理化BSDF，Alpha调到0。加一个自发光（发射），根据需要设置发光参数。把这两个着色器拉到前述混合着色器即可。<img src="https://img-blog.csdnimg.cn/31f17fef124d4b64bcc5a978c8bfe81e.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>对透明底发光贴图材质的发光设置：原贴图是针对MME的Autoluminous而使用的透明底贴图，这种情况把图像纹理或者Mmd Base Tex的Alpha拉一根出来放到混合着色器的系数。加一个原理化BSDF，Alpha调到0。加一个自发光（发射），根据需要设置发光参数。把这两个着色器拉到前述混合着色器即可。<img src="https://img-blog.csdnimg.cn/31f17fef124d4b64bcc5a978c8bfe81e.png" alt="" /></p>
 </li>
 <li>
 <p>渲染出现贴图混乱的情况：Cycles对相同物体重叠贴图有问题。Eevee不存在这个问题。如果要用Cycles渲染的话需要合并相同位置的贴图且只保留一个这样的物体。</p>
@@ -144,7 +144,7 @@
 <p>部分格式为VRM的饰品，先用VRM2PMXConverter转换成PMX，再导入PMXEditor，将无关的材质删除，只保留饰品本身。然后点击文件-导出，此时就能看到保存类型为“.x”的选项。如果输入文件名中没有出现“.x” 的后缀可以手动填写后缀“.x”。然后就可以作为饰品导入MMD了。将下拉框选择“镜头/灯光/饰品”，然后点击最右边“饰品”里面的载入，选择刚才导出的.x的文件。然后选择要绑定的角色和要绑定的部位（绑骨）。此时此饰品就会跟着这个角色的这个部位一起移动了，如果还发现位置有偏移的话，可以再显式指定调整位置坐标和旋转角度，甚至可以调整大小和透明度。</p>
 </li>
 <li>
-<p>对透明底服装贴图材质的设置：把图像纹理或者Mmd Base Tex的Alpha拉一根出来放到混合着色器的系数。加一个原理化BSDF，Alpha调到0。加上需要使用的着色器，根据需要设置参数。把这两个着色器拉到前述混合着色器。再加一个混合着色器，把MMDShaderDev拉到第二个混合着色器第一个入口，第一个混合着色器拉到第二个着色器第二个入口。将第二个着色器接到材质输出即可。<img src="https://img-blog.csdnimg.cn/70bdf2978e86445b846202945d9876c3.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>对透明底服装贴图材质的设置：把图像纹理或者Mmd Base Tex的Alpha拉一根出来放到混合着色器的系数。加一个原理化BSDF，Alpha调到0。加上需要使用的着色器，根据需要设置参数。把这两个着色器拉到前述混合着色器。再加一个混合着色器，把MMDShaderDev拉到第二个混合着色器第一个入口，第一个混合着色器拉到第二个着色器第二个入口。将第二个着色器接到材质输出即可。<img src="https://img-blog.csdnimg.cn/70bdf2978e86445b846202945d9876c3.png" alt="" /></p>
 </li>
 <li>
 <p>将含有MMD模型的<code>.blend</code>工程文件上载到云电脑渲染的时候，可能会出现丢失贴图的问题。欲解决这个问题，需要在保存之前点击菜单的文件-外部数据-全部打包到blend文件，然后再保存一次。这样，所有的贴图就打包进去了。可能会报错找不到toon的文件，那个是卡通纹理，我们blender暂时用不到，可以忽略，不会影响其他的材质贴图。</p>
@@ -160,6 +160,9 @@
 </li>
 <li>
 <p>某些带马尾头发的角色，马尾不会动，此时可以使用MikuMikuMoving将原本的角色动作VMD转换成带有头发摆动数据的VMD。先导入角色，然后导入动作，然后工具栏打开物理-录制。再回到工具栏首页选择导出动作。选中所有复选框。这样即可导出带有头发飘动的VMD，这个可以导入blender。这比在blender烘焙要快得多。但是穿模的问题未能在此得到解决。</p>
+</li>
+<li>
+<p>设置几何节点之后材质无效：参考StackOverflow上“Material Not Showing on Objects Using Geometry Nodes”的答案，将最后的组输出前面插入一个“材质-设置材质”，然后选择需要的材质即可。 <img src="https://img-blog.csdnimg.cn/fa21de8420c74c47bed7cd3272bd6691.png" alt="" /></p>
 </li>
 </ol>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
@@ -4957,21 +4960,6 @@ We recognize that there are legitimate projects that consist of a large number o
       </categories>
   </entry>
   <entry>
-    <title>java.math.BigDecimal保留指定位数的有效数字（不算前面的0）</title>
-    <url>/cms//archivers/28.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>百度百科：从一个数的左边第一个非0数字起，到末位数字止，所有的数字都是这个数的有效数字。<br />
-就是一个数从左边第一个不为0的数字数起到末尾数字为止，所有的数字（包括0，科学计数法不计10的N次方），称为有效数字。简单的说，把一个数字前面的0都去掉，从第一个正整数到精确的数位止所有的都是有效数字了。<br />
-如：0.0109，前面两个0不是有效数字，后面的109均为有效数字（注意，中间的0也算）。</p>
-</blockquote>
-<p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure>
-<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
     <title>我们为什么那么痛恨计算机等级与那些问题（二级党请进）</title>
     <url>/cms//archivers/27.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<a href="https://tieba.baidu.com/p/1877978397" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/C%E8%AF%AD%E8%A8%80%E5%90%A7@%E6%B1%87%E8%93%9D%E9%B8%9F-%E6%88%91%E4%BB%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E9%82%A3%E4%B9%88%E7%97%9B%E6%81%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AD%89%E7%BA%A7%E4%B8%8E%E9%82%A3%E4%BA%9B%E9%97%AE%E9%A2%98%EF%BC%88%E4%BA%8C%E7%BA%A7%E5%85%9A%E8%AF%B7%E8%BF%9B%EF%BC%89-brightgreen" alt="C语言吧@汇蓝鸟-我们为什么那么痛恨计算机等级与那些问题（二级党请进）" /></a></p>
@@ -4991,6 +4979,21 @@ We recognize that there are legitimate projects that consist of a large number o
 <center>～～面码拜</center><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
         <category>C/C++</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>java.math.BigDecimal保留指定位数的有效数字（不算前面的0）</title>
+    <url>/cms//archivers/28.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>百度百科：从一个数的左边第一个非0数字起，到末位数字止，所有的数字都是这个数的有效数字。<br />
+就是一个数从左边第一个不为0的数字数起到末尾数字为止，所有的数字（包括0，科学计数法不计10的N次方），称为有效数字。简单的说，把一个数字前面的0都去掉，从第一个正整数到精确的数位止所有的都是有效数字了。<br />
+如：0.0109，前面两个0不是有效数字，后面的109均为有效数字（注意，中间的0也算）。</p>
+</blockquote>
+<p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Java</category>
       </categories>
   </entry>
   <entry>

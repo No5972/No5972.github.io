@@ -133,13 +133,14 @@
 <meta property="og:site_name" content="No.5972 Publishment Website">
 <meta property="og:description" content="Blender使用MMD模型需要注意的点">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/31f17fef124d4b64bcc5a978c8bfe81e.png#pic_center">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/70bdf2978e86445b846202945d9876c3.png#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/31f17fef124d4b64bcc5a978c8bfe81e.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/70bdf2978e86445b846202945d9876c3.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/fa21de8420c74c47bed7cd3272bd6691.png">
 <meta property="article:published_time" content="2022-08-24T10:30:00.000Z">
-<meta property="article:modified_time" content="2022-08-29T09:48:58.146Z">
+<meta property="article:modified_time" content="2022-09-13T09:04:04.822Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/31f17fef124d4b64bcc5a978c8bfe81e.png#pic_center">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/31f17fef124d4b64bcc5a978c8bfe81e.png">
 
 <link rel="canonical" href="https://no5972.moe/cms/archivers/134.html">
 
@@ -624,7 +625,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-08-24 10:30:00 | Modified: 2022-08-29 09:48:58" itemprop="dateCreated datePublished" datetime="2022-08-24T10:30:00+00:00">2022-08-24 10:30:00</time>
+              <time title="Created: 2022-08-24 10:30:00 | Modified: 2022-09-13 09:04:04" itemprop="dateCreated datePublished" datetime="2022-08-24T10:30:00+00:00">2022-08-24 10:30:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -684,7 +685,7 @@ window.onload = function () {
 <p>PMD转PMX：使用Blender和CATS插件。导入PMD然后直接导出PMX即可。</p>
 </li>
 <li>
-<p>对透明底发光贴图材质的发光设置：原贴图是针对MME的Autoluminous而使用的透明底贴图，这种情况把图像纹理或者Mmd Base Tex的Alpha拉一根出来放到混合着色器的系数。加一个原理化BSDF，Alpha调到0。加一个自发光（发射），根据需要设置发光参数。把这两个着色器拉到前述混合着色器即可。<img src="https://img-blog.csdnimg.cn/31f17fef124d4b64bcc5a978c8bfe81e.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>对透明底发光贴图材质的发光设置：原贴图是针对MME的Autoluminous而使用的透明底贴图，这种情况把图像纹理或者Mmd Base Tex的Alpha拉一根出来放到混合着色器的系数。加一个原理化BSDF，Alpha调到0。加一个自发光（发射），根据需要设置发光参数。把这两个着色器拉到前述混合着色器即可。<img src="https://img-blog.csdnimg.cn/31f17fef124d4b64bcc5a978c8bfe81e.png" alt="" /></p>
 </li>
 <li>
 <p>渲染出现贴图混乱的情况：Cycles对相同物体重叠贴图有问题。Eevee不存在这个问题。如果要用Cycles渲染的话需要合并相同位置的贴图且只保留一个这样的物体。</p>
@@ -693,7 +694,7 @@ window.onload = function () {
 <p>部分格式为VRM的饰品，先用VRM2PMXConverter转换成PMX，再导入PMXEditor，将无关的材质删除，只保留饰品本身。然后点击文件-导出，此时就能看到保存类型为“.x”的选项。如果输入文件名中没有出现“.x” 的后缀可以手动填写后缀“.x”。然后就可以作为饰品导入MMD了。将下拉框选择“镜头/灯光/饰品”，然后点击最右边“饰品”里面的载入，选择刚才导出的.x的文件。然后选择要绑定的角色和要绑定的部位（绑骨）。此时此饰品就会跟着这个角色的这个部位一起移动了，如果还发现位置有偏移的话，可以再显式指定调整位置坐标和旋转角度，甚至可以调整大小和透明度。</p>
 </li>
 <li>
-<p>对透明底服装贴图材质的设置：把图像纹理或者Mmd Base Tex的Alpha拉一根出来放到混合着色器的系数。加一个原理化BSDF，Alpha调到0。加上需要使用的着色器，根据需要设置参数。把这两个着色器拉到前述混合着色器。再加一个混合着色器，把MMDShaderDev拉到第二个混合着色器第一个入口，第一个混合着色器拉到第二个着色器第二个入口。将第二个着色器接到材质输出即可。<img src="https://img-blog.csdnimg.cn/70bdf2978e86445b846202945d9876c3.png#pic_center" alt="在这里插入图片描述" /></p>
+<p>对透明底服装贴图材质的设置：把图像纹理或者Mmd Base Tex的Alpha拉一根出来放到混合着色器的系数。加一个原理化BSDF，Alpha调到0。加上需要使用的着色器，根据需要设置参数。把这两个着色器拉到前述混合着色器。再加一个混合着色器，把MMDShaderDev拉到第二个混合着色器第一个入口，第一个混合着色器拉到第二个着色器第二个入口。将第二个着色器接到材质输出即可。<img src="https://img-blog.csdnimg.cn/70bdf2978e86445b846202945d9876c3.png" alt="" /></p>
 </li>
 <li>
 <p>将含有MMD模型的<code>.blend</code>工程文件上载到云电脑渲染的时候，可能会出现丢失贴图的问题。欲解决这个问题，需要在保存之前点击菜单的文件-外部数据-全部打包到blend文件，然后再保存一次。这样，所有的贴图就打包进去了。可能会报错找不到toon的文件，那个是卡通纹理，我们blender暂时用不到，可以忽略，不会影响其他的材质贴图。</p>
@@ -709,6 +710,9 @@ window.onload = function () {
 </li>
 <li>
 <p>某些带马尾头发的角色，马尾不会动，此时可以使用MikuMikuMoving将原本的角色动作VMD转换成带有头发摆动数据的VMD。先导入角色，然后导入动作，然后工具栏打开物理-录制。再回到工具栏首页选择导出动作。选中所有复选框。这样即可导出带有头发飘动的VMD，这个可以导入blender。这比在blender烘焙要快得多。但是穿模的问题未能在此得到解决。</p>
+</li>
+<li>
+<p>设置几何节点之后材质无效：参考StackOverflow上“Material Not Showing on Objects Using Geometry Nodes”的答案，将最后的组输出前面插入一个“材质-设置材质”，然后选择需要的材质即可。 <img src="https://img-blog.csdnimg.cn/fa21de8420c74c47bed7cd3272bd6691.png" alt="" /></p>
 </li>
 </ol>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
@@ -942,7 +946,7 @@ NexT.utils.loadComments('#valine-comments', () => {
 </script>
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/cms/sw.js?t=1662825951166')
+  navigator.serviceWorker.register('/cms/sw.js?t=1663059860233')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
