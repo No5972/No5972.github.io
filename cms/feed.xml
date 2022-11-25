@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2022-09-16T08:31:23.320Z</updated>
+  <updated>2022-11-25T03:34:36.367Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 11 通过 VBS 打开 IE 浏览器</title>
+    <link href="https://no5972.moe/cms/archivers/140.html"/>
+    <id>https://no5972.moe/cms/archivers/140.html</id>
+    <published>2022-11-25T11:30:00.000Z</published>
+    <updated>2022-11-25T03:34:36.367Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Windows 11 已经将 IE 浏览器默认跳转到了 Edge。即使是从“运行”输入 <code>iexplore</code> 打开的仍然是 Edge。但是我们仍然可以通过 VBS 脚本来打开 IE 浏览器。此法无需替换 <code>ieframe.dll</code> 文件也可以直接使用。</p><p>右键开始按钮，选择“运行”，输入 <code>notepad</code> 回车，打开记事本，输入以下内容：</p><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CreateObject(<span class="string">"InternetExplorer.Application"</span>).Visible=<span class="literal">true</span></span><br></pre></td></tr></table></figure><p>将其保存为后缀名为 <code>.vbs</code> 的文件，运行就可以在 Windows 11 打开 IE 浏览器了。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      Windows 11 已经将 IE 浏览器默认跳转到了 Edge。即使是从“运行”输入 iexplore 打开的仍然是 Edge。但是我们仍然可以通过 VBS 脚本来打开 IE 浏览器。此法无需替换 ieframe.dll 文件也可以直接使用。
+    
+    </summary>
+    
+    
+      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>上个世纪的垃圾佬——《电脑爱好者》1999 年 DIY 大赛入围作品赏析（5）</title>
