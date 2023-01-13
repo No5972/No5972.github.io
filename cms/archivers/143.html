@@ -126,30 +126,40 @@
     var CONFIG = {"hostname":"no5972.moe","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="No.5972 is silly B">
-<meta property="og:type" content="website">
-<meta property="og:title" content="No.5972 Publishment Website">
-<meta property="og:url" content="https://no5972.moe/cms/page/15/index.html">
+  <meta name="description" content="刚刚看到最新一期《电脑报》刊登了某友商操作系统的创建网页快捷方式的方法，这里就在思考我们的 UOS 有没有类似的办法创建网页快捷方式。刚刚稍微搜集了一下资料，并进行实操，终于调试成功。这里将汇总好的操作过程分享一下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UOS 在桌面创建网页快捷方式">
+<meta property="og:url" content="https://no5972.moe/cms/archivers/143.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="No.5972 is silly B">
+<meta property="og:description" content="刚刚看到最新一期《电脑报》刊登了某友商操作系统的创建网页快捷方式的方法，这里就在思考我们的 UOS 有没有类似的办法创建网页快捷方式。刚刚稍微搜集了一下资料，并进行实操，终于调试成功。这里将汇总好的操作过程分享一下。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/fad39855cb3749cba62ad527cee16f79.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2ccc6d56820b4d428c36368b92303b34.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/180593b2f9bd4aa185c79db9d03b0835.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/a66c949a4dcf4877af7ec49881688780.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/e58ac27d66884af18f8820bb8920016c.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2d638f47c209428b913c435e010bf084.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/23183ae3b2af4e9b9cb657e2602c0624.png">
+<meta property="article:published_time" content="2023-01-13T17:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-13T08:44:38.681Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/fad39855cb3749cba62ad527cee16f79.png">
 
-<link rel="canonical" href="https://no5972.moe/cms/page/15/">
+<link rel="canonical" href="https://no5972.moe/cms/archivers/143.html">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>No.5972 Publishment Website</title>
+  <title>UOS 在桌面创建网页快捷方式 | No.5972 Publishment Website</title>
   <script>
       if (!!window.ActiveXObject || "ActiveXObject" in window) {
         document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
@@ -583,13 +593,14 @@ window.onload = function () {
       <div class="main-inner">
         
 
-        <div class="content index posts-expand">
+        <div class="content post posts-expand">
           
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/1_1.html">
+    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/143.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
@@ -601,11 +612,10 @@ window.onload = function () {
       <meta itemprop="name" content="No.5972 Publishment Website">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           
-          
-            <a href="/cms/archivers/1_1.html" class="post-title-link" itemprop="url">技术层：DFO美服不能通过禁用JS来强行访问登陆注册页面</a>
-        </h2>
+          UOS 在桌面创建网页快捷方式
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -614,157 +624,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2019-02-14 02:00:00 | Modified: 2021-07-10 02:52:23" itemprop="dateCreated datePublished" datetime="2019-02-14T02:00:00+00:00">2019-02-14 02:00:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          除非能骗过DFO美服后台采用的接口的那个服务器，不然就不能通过这个拦截器。结论是这个限制地区ip的页面并不是JS跳转，而是后台拦截器直接返回了“暂时被移动”的状态码。这就是说，试图通过关闭JS来强行访问DFO 的登陆/注册页面也是行不通的。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/1_1.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/springmvc-baiduaip-problem.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/springmvc-baiduaip-problem.html" class="post-title-link" itemprop="url">SpringMVC cannot map requests after importing Baidu Aip into Maven POM/在Maven配置里面添加百度语音之后SpringMVC不能映射请求</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-12-11 17:34:26 | Modified: 2021-07-10 02:52:23" itemprop="dateCreated datePublished" datetime="2018-12-11T17:34:26+00:00">2018-12-11 17:34:26</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          Encountered a problem about SpringMVC and Baidu Aip Speech.
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/springmvc-baiduaip-problem.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/1.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/1.html" class="post-title-link" itemprop="url">【KEX】根据传说的ImagePacks2代码表修改的NPK辞典</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-11-14 17:54:02 | Modified: 2021-07-10 02:52:23" itemprop="dateCreated datePublished" datetime="2018-11-14T17:54:02+00:00">2018-11-14 17:54:02</time>
+              <time title="Created: 2023-01-13 17:00:00 | Modified: 2023-01-13 08:44:38" itemprop="dateCreated datePublished" datetime="2023-01-13T17:00:00+00:00">2023-01-13 17:00:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -787,323 +647,64 @@ window.onload = function () {
     <div class="post-body" itemprop="articleBody">
 
       
-          此贴为鄙人受KEX作者恋恋委托发布，原帖摘自COLG。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/1.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/test3.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/test3.html" class="post-title-link" itemprop="url">Test</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-11-14 17:26:02 | Modified: 2021-07-10 02:52:23" itemprop="dateCreated datePublished" datetime="2018-11-14T17:26:02+00:00">2018-11-14 17:26:02</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/jekyll-update/" itemprop="url" rel="index"><span itemprop="name">jekyll update</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="hello-world2"><a class="markdownIt-Anchor" href="#hello-world2"></a> Hello, world2</h1>
-<p>Hello world2</p>
+        <p>刚刚看到最新一期《电脑报》刊登了某友商操作系统的创建网页快捷方式的方法，这里就在思考我们的 UOS 有没有类似的办法创建网页快捷方式。刚刚稍微搜集了一下资料，并进行实操，终于调试成功。这里将汇总好的操作过程分享一下。</p>
+<p>首先从启动器菜单里面找到大家平时常用的一个浏览器，例如鄙人这里使用的 Firefox ESR。如果此浏览器在桌面上原本就有图标的话，直接在桌面将这个图标 Ctrl + C - Ctrl + V 复制粘贴一份。如果原本没有图标的话，右键这个浏览器，选择发送到桌面。然后会听到一声“巨响”，桌面上就出现了这个浏览器。</p>
+<p><img src="https://img-blog.csdnimg.cn/fad39855cb3749cba62ad527cee16f79.png" alt="" /></p>
+<p>接下来，右键桌面的空白处，选择打开终端。</p>
+<p><img src="https://img-blog.csdnimg.cn/2ccc6d56820b4d428c36368b92303b34.png" alt="" /></p>
+<p>键入<code>ls</code>，如果是之前就有的就找到带有 <code>(copy)</code> 的 desktop 文件，如果之前没有图标的话就找到浏览器名称的 desktop 文件。鄙人之前没有保留浏览器的图标，所以直接找到浏览器名称的 desktop 文件。使用 <code>vi</code> 打开它，键入 <code>vi 刚刚找到的文件名.desktop</code> 的命令。此时很快便找到了 <code>Exec=</code> 以及后面的 <code>%u</code>。按 I 键进入编辑模式，将 <code>%u</code> 修改为要创建的图标的访问网址。另外，最上面的 <code>Name=</code> 那一行也建议修改为需要的名称，此属性将决定在桌面显示的图标名称。两项都修改完毕后，按 Esc 退出编辑模式，键入 <code>:wq</code> 保存退出。</p>
+<p><img src="https://img-blog.csdnimg.cn/180593b2f9bd4aa185c79db9d03b0835.png" alt="" /></p>
+<p><img src="https://img-blog.csdnimg.cn/a66c949a4dcf4877af7ec49881688780.png" alt="" /></p>
+<p><img src="https://img-blog.csdnimg.cn/e58ac27d66884af18f8820bb8920016c.png" alt="" /></p>
+<p>此时观察桌面上刚刚添加的图标，看看是不是修改为需要的快捷方式了。然后双击看一看是否能访问相应的网址！</p>
+<p><img src="https://img-blog.csdnimg.cn/2d638f47c209428b913c435e010bf084.png" alt="" /></p>
+<p><img src="https://img-blog.csdnimg.cn/23183ae3b2af4e9b9cb657e2602c0624.png" alt="" /></p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
-      
     </div>
 
     
     
     
+        <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.getElementById('post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div id="post-reward">
+      
+      <div>
+        <img src="/cms/sponsor.png" alt="No.5972 Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/test2.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/test2.html" class="post-title-link" itemprop="url">Test</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-11-14 17:24:02 | Modified: 2021-07-10 02:52:23" itemprop="dateCreated datePublished" datetime="2018-11-14T17:24:02+00:00">2018-11-14 17:24:02</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/jekyll-update/" itemprop="url" rel="index"><span itemprop="name">jekyll update</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="hello-world"><a class="markdownIt-Anchor" href="#hello-world"></a> Hello, world</h1>
-<p>Hello world</p>
-<h1>Hello, world</h1><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/hello.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/hello.html" class="post-title-link" itemprop="url">Welcome to Jekyll and EasyBook</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2014-12-30 09:00:13 | Modified: 2021-07-10 02:52:23" itemprop="dateCreated datePublished" datetime="2014-12-30T09:00:13+00:00">2014-12-30 09:00:13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/jekyll-update/" itemprop="url" rel="index"><span itemprop="name">jekyll update</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-<p>To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention <code>YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/hello.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1fe0947c0fa73a" async="async"></script>
+  </div>
+  <div class="ad" style="text-align: center;">
+    <a href="https://curl.qcloud.com/WUYKGkn3" target="_blank"><img src="//img-blog.csdnimg.cn/1bc5c422398948feb54ddcb27faeaf04.jpg"></img></a>
+  </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/test.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-          
-            <a href="/cms/archivers/test.html" class="post-title-link" itemprop="url">Style Test</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 1970-01-01 08:00:00 | Modified: 2021-07-10 02:52:23" itemprop="dateCreated datePublished" datetime="1970-01-01T08:00:00+00:00">1970-01-01 08:00:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/jekyll-update/" itemprop="url" rel="index"><span itemprop="name">jekyll update</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          This is just a style test post, filled with LoremIpsue. Feel free to delete the file.
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/cms/archivers/test.html#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/cms/archivers/142.html" rel="prev" title="UOS 录制电脑播放的音频 / 内录音频">
+      <i class="fa fa-chevron-left"></i> UOS 录制电脑播放的音频 / 内录音频
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/cms/page/14/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/cms/">1</a><span class="space">&hellip;</span><a class="page-number" href="/cms/page/14/">14</a><span class="page-number current">15</span>
-  </nav>
 
 
 
