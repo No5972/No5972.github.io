@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2023-01-13T08:44:38.681Z</updated>
+  <updated>2023-01-29T06:22:17.257Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://no5972.moe/cms/archivers/143.html"/>
     <id>https://no5972.moe/cms/archivers/143.html</id>
     <published>2023-01-13T17:00:00.000Z</published>
-    <updated>2023-01-13T08:44:38.681Z</updated>
+    <updated>2023-01-29T06:22:17.257Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>刚刚看到最新一期《电脑报》刊登了某友商操作系统的创建网页快捷方式的方法，这里就在思考我们的 UOS 有没有类似的办法创建网页快捷方式。刚刚稍微搜集了一下资料，并进行实操，终于调试成功。这里将汇总好的操作过程分享一下。</p><p>首先从启动器菜单里面找到大家平时常用的一个浏览器，例如鄙人这里使用的 Firefox ESR。如果此浏览器在桌面上原本就有图标的话，直接在桌面将这个图标 Ctrl + C - Ctrl + V 复制粘贴一份。如果原本没有图标的话，右键这个浏览器，选择发送到桌面。然后会听到一声“巨响”，桌面上就出现了这个浏览器。</p><p><img src="https://img-blog.csdnimg.cn/fad39855cb3749cba62ad527cee16f79.png" alt="" /></p><p>接下来，右键桌面的空白处，选择打开终端。</p><p><img src="https://img-blog.csdnimg.cn/2ccc6d56820b4d428c36368b92303b34.png" alt="" /></p><p>键入<code>ls</code>，如果是之前就有的就找到带有 <code>(copy)</code> 的 desktop 文件，如果之前没有图标的话就找到浏览器名称的 desktop 文件。鄙人之前没有保留浏览器的图标，所以直接找到浏览器名称的 desktop 文件。使用 <code>vi</code> 打开它，键入 <code>vi 刚刚找到的文件名.desktop</code> 的命令。此时很快便找到了 <code>Exec=</code> 以及后面的 <code>%u</code>。按 I 键进入编辑模式，将 <code>%u</code> 修改为要创建的图标的访问网址。另外，最上面的 <code>Name=</code> 那一行也建议修改为需要的名称，此属性将决定在桌面显示的图标名称。两项都修改完毕后，按 Esc 退出编辑模式，键入 <code>:wq</code> 保存退出。</p><p><img src="https://img-blog.csdnimg.cn/180593b2f9bd4aa185c79db9d03b0835.png" alt="" /></p><p><img src="https://img-blog.csdnimg.cn/a66c949a4dcf4877af7ec49881688780.png" alt="" /></p><p><img src="https://img-blog.csdnimg.cn/e58ac27d66884af18f8820bb8920016c.png" alt="" /></p><p>此时观察桌面上刚刚添加的图标，看看是不是修改为需要的快捷方式了。然后双击看一看是否能访问相应的网址！</p><p><img src="https://img-blog.csdnimg.cn/2d638f47c209428b913c435e010bf084.png" alt="" /></p><p><img src="https://img-blog.csdnimg.cn/23183ae3b2af4e9b9cb657e2602c0624.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -32,7 +32,7 @@
     </summary>
     
     
-      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+      <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
     
     
   </entry>
@@ -42,7 +42,7 @@
     <link href="https://no5972.moe/cms/archivers/142.html"/>
     <id>https://no5972.moe/cms/archivers/142.html</id>
     <published>2023-01-10T23:30:00.000Z</published>
-    <updated>2023-01-10T15:23:44.579Z</updated>
+    <updated>2023-01-29T06:22:10.853Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Windows 里面有一个“立体声混音”，可以内录电脑播放的音频，而不受到外界噪音的干扰。前段时间接到反馈说 UOS 的设置里面的音频输入里面没有可以选择的设备，这里就稍微探索了一下，发现 UOS 也是可以配置内录的。这里参考了一下这篇文章。<a href="https://blog.csdn.net/lsheevyfg/article/details/116799564" target="_blank" rel="noopener">Linux上用ALSA aloop driver实现录制其他程序播放的声音</a> <strong>本操作过程适用于 Intel CPU 的电脑。</strong></p><p>UOS 通常已经自带了 aloop 驱动，只是默认没有打开。打开终端，输入 <code>sudo modprobe snd-aloop</code>，如果没有报错的话，打开设置-声音-输入，此时就可以看到一个录音设备“Analog Input (Loopback)”。</p><p><img src="https://img-blog.csdnimg.cn/d066a4cb2beb431a84a7cbfa5d52c0aa.png" alt="" /></p><p><img src="https://img-blog.csdnimg.cn/1273efa53ab240ed8c6a165a3bd858fa.png" alt="" /></p><p>然后把右下角系统托盘的音量打开，切换到“Speakers (HDA Intel PCH)”（AMD的没见到过实机暂时没法复现），如果本来就是的话就直接继续。</p><p><img src="https://img-blog.csdnimg.cn/c2623ce7c3824c6e915738f8b9c838bb.png" alt="" /></p><p>从 Firefox 随便找一个在线录音的网站（这里真的只是随便找的），然后打开录音，这时候 Firefox 会提示要允许网站使用您的麦克风吗，<strong>这里注意录音设备选择“Monitor of Built-in Audio Stereo”</strong> ，然后点击允许，然后就开始录音了，这里录制的就是电脑播放的音频。按照网页的界面完成录音，然后试听效果。</p><p><img src="https://img-blog.csdnimg.cn/f45c03c781984d80923f8f524994d03a.png" alt="" /><br /><img src="https://img-blog.csdnimg.cn/a517e9a8bac34b31a5d5c651c8e1e65f.png" alt="" /><br /><img src="https://img-blog.csdnimg.cn/cfdbb6476c3b4dce8f66a6e93fa84c29.png" alt="" /></p><p><strong>这里的这个内录在每次重启之后都是要重新执行最开始的那条命令的。</strong> 如果需要省去这个手动打开的步骤，据说可以配置 <code>~/.asoundrc</code> 这个文件，但是在 UOS 这里在非 root 用户下并没有在这个路径找到这个文件。具体如何操作就尚待后续研究了。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -53,7 +53,7 @@
     </summary>
     
     
-      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+      <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
     
     
   </entry>
@@ -1562,9 +1562,9 @@
     </summary>
     
     
-      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
