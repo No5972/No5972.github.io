@@ -24,6 +24,30 @@
       </categories>
   </entry>
   <entry>
+    <title>仅作笔记用：Windows 10 继续使用 IE 浏览器（针对23年2月14日的系统更新）</title>
+    <url>/cms//archivers/144.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>2 月 14 日更新后有部分 Windows 10 的用户反映 IE 浏览器无法使用，打开后变成 Edge 浏览器。由于有少数业内业务仍然必须使用 IE 浏览器，这里稍微研究了一下解决方法。</p>
+<p>打开 IE 浏览器的时候会出现“IE已经合并进Edge浏览器”的提示，<strong>此时千万不要点击继续。</strong></p>
+<p>（看最后面的图）</p>
+<p>将鼠标移动到任务栏上出现的 Edge 图标，然后看看哪一个窗口的缩略图是这个提示，然后小心地移动到这个缩略图上面，不要移出这个缩略图。然后按下鼠标中键也就是滚轮，这样便关闭了这个提示。然后在从任务栏的那个打开的 IE 图标切换为 IE 浏览器，这样就回到 IE 了。</p>
+<p>（看最后面的图）</p>
+<h1 id="当然上面那些不是重点-重点是万一点了继续导致后续就打不开-ie-了怎么办"><a class="markdownIt-Anchor" href="#当然上面那些不是重点-重点是万一点了继续导致后续就打不开-ie-了怎么办"></a> 当然，上面那些不是重点。重点是万一点了继续，导致后续就打不开 IE 了怎么办？</h1>
+<p>这个让 IE 打不开的设置选项就位于 Edge 浏览器设置中的“默认浏览器”里面的“让 Internet Explorer 在 Microsoft Edge 中打开网站”。但是关键在于版本大于或等于 110 的版本已经从界面中移除了这个选项。所以我们需要找一个旧版本也就是小于或等于 109 的 Edge 绿色版来显示这个选项。</p>
+<p>我们这里找的一个绿色版是“<strong>Microsoft Edge绿色增强版下载 v92.0.902.55 官方版(集成chromium内核)</strong>”。这个是可以和系统自带的 Edge 浏览器共存且互不干扰的。下载下来后，解压 <code>Edge.zip</code>，然后从解压的目录里面用解压缩软件再解压 <code>Edge_v92.0.902.55_x64_Stable_v1.5.1.exe</code>，注意是解压这个 EXE 文件。然后进入 <code>Edge_v92.0.902.55_x64_Stable_v1.5.1\Edge\App</code>目录，打开	<code>msedge.exe</code>。<img src="https://img-blog.csdnimg.cn/eba63e07e16f47018bef9096fa323240.png" alt="在这里插入图片描述" /><br />
+然后按照界面提示选择“继续但不登录”，然后点击右上角三个点的按钮，打开设置，在左侧选择默认浏览器。注意了！这里我们就重新让这个选项“让 Internet Explorer 在 Microsoft Edge 中打开网站”回来了！然后把这个选项改为“从不”。然后关闭这个浏览器。然后就可以重新使用前面的任务栏方法打开 IE 浏览器了。</p>
+<p><img src="https://img-blog.csdnimg.cn/28794938fa374e53905126bd94dde227.png" alt="在这里插入图片描述" /></p>
+<p>再打开 IE 浏览器，此时还是会出现“IE已经合并进Edge浏览器”的提示，<strong>此时千万不要点击继续。</strong></p>
+<p>（看最后面的图）</p>
+<p>将鼠标移动到任务栏上出现的 Edge 图标，然后看看哪一个窗口的缩略图是这个提示，然后小心地移动到这个缩略图上面，不要移出这个缩略图。然后按下鼠标中键也就是滚轮，这样便关闭了这个提示。然后在从任务栏的那个打开的 IE 图标切换为 IE 浏览器，这样就回到 IE 了。</p>
+<hr />
+<p><img src="https://img-blog.csdnimg.cn/93a600389aa34163ac2386719d51f1c9.png" alt="在这里插入图片描述" /></p>
+<p><img src="https://img-blog.csdnimg.cn/c0838b833c9f480594b98c30104615b7.png" alt="在这里插入图片描述" /></p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Webapp</category>
+      </categories>
+  </entry>
+  <entry>
     <title>UOS 在桌面创建网页快捷方式</title>
     <url>/cms//archivers/143.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>刚刚看到最新一期《电脑报》刊登了某友商操作系统的创建网页快捷方式的方法，这里就在思考我们的 UOS 有没有类似的办法创建网页快捷方式。刚刚稍微搜集了一下资料，并进行实操，终于调试成功。这里将汇总好的操作过程分享一下。</p>
@@ -2676,8 +2700,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Automation</category>
         <category>Web Building</category>
+        <category>Automation</category>
         <category>Github</category>
       </categories>
   </entry>
