@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2023-02-21T00:45:51.068Z</updated>
+  <updated>2023-03-15T08:33:52.025Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>仅作笔记用：Windows 11 通过 PowerShell 打开 IE 浏览器</title>
+    <link href="https://no5972.moe/cms/archivers/145.html"/>
+    <id>https://no5972.moe/cms/archivers/145.html</id>
+    <published>2023-03-15T17:00:00.000Z</published>
+    <updated>2023-03-15T08:33:52.025Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>收到一条传闻，说 Windows 11 在 Dev 的版本 25309 里面移除了 VBS 的支持，此改动预计在正式版 23H2 中实装。这导致原有 VBS 方式打开 IE 浏览器的方法失效。</p><p>去 Microsoft Learn 上查了一下文档，<a href="https://learn.microsoft.com/zh-cn/powershell/scripting/samples/creating-.net-and-com-objects--new-object-?view=powershell-7.2#creating-com-objects-with-new-object" target="_blank" rel="noopener">得知这个 <code>CreateObject</code> 方法在 PowerShell 中也可以使用。</a>那么我们就可以从 PowerShell 中继续使用这个方法来打开 IE 浏览器。<a href="https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_booleans?view=powershell-7.2" target="_blank" rel="noopener">汇总了一下线索</a>之后将语句浓缩成这一行，直接执行就可以了。</p><p>右键开始按钮，运行，输入 <code>powershell</code> 确定。输入这一条语句回车，即可打开 IE 浏览器。</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span>(<span class="built_in">New-Object</span> <span class="literal">-ComObject</span> InternetExplorer.Application).Visible=<span class="variable">$true</span></span><br></pre></td></tr></table></figure><hr /><p>如果需要创建一键执行文件的话，就这样操作。打开开始菜单，输入 <code>notepad</code>回车，打开记事本。然后输入这条语句：</p><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell -command "$(New-Object -ComObject InternetExplorer.Application).Visible=$true"</span><br></pre></td></tr></table></figure><p>然后保存文件，保存类型选择所有文件，保存文件名随便起一个，注意文件名后面加上 <code>.cmd</code>后缀。 <strong>特请注意编码选择 ANSI。</strong> 找一个自己以后找得到的地方保存。然后以后直接双击打开该文件就可以打开 IE 浏览器了。</p><p><strong>参考资料：</strong></p><ol><li><a href="https://learn.microsoft.com/zh-cn/powershell/scripting/samples/creating-.net-and-com-objects--new-object-?view=powershell-7.2#creating-com-objects-with-new-object" target="_blank" rel="noopener">使用 New-Object 创建 COM 对象 - 创建 .NET 和 COM 对象 - PowerShell | Microsoft Learn</a></li><li><a href="https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_booleans?view=powershell-7.2" target="_blank" rel="noopener">关于布尔值 - PowerShell | Microsoft Learn</a></li><li><a href="https://superuser.com/questions/1080239/run-powershell-command-from-cmd" target="_blank" rel="noopener">windows - run powershell command from cmd - Super User</a></li></ol><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      收到一条传闻，说 Windows 11 在 Dev 的版本 25309 里面移除了 VBS 的支持，此改动预计在正式版 23H2 中实装。这导致原有 VBS 方式打开 IE 浏览器的方法失效。去 Microsoft Learn 上查了一下文档，得知这个 CreateObject方法在 PowerShell 中也可以使用。那么我们就可以从 PowerShell 中继续使用这个方法来打开 IE 浏览器。汇总了一下线索之后将语句浓缩成这一行，直接执行就可以了。 
+    
+    </summary>
+    
+    
+      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>仅作笔记用：Windows 10 继续使用 IE 浏览器（针对23年2月14日的系统更新）</title>
@@ -105,9 +126,9 @@
     <link href="https://no5972.moe/cms/archivers/140.html"/>
     <id>https://no5972.moe/cms/archivers/140.html</id>
     <published>2022-11-25T11:30:00.000Z</published>
-    <updated>2022-11-25T03:36:19.227Z</updated>
+    <updated>2023-03-15T08:32:34.953Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Windows 11 已经将 IE 浏览器默认跳转到了 Edge，这导致如果不使用第三方浏览器的话，报名教师资格证变的尤其麻烦。即使是从“运行”输入 <code>iexplore</code> 打开的仍然是 Edge。</p><p>但是我们仍然可以通过 VBS 脚本来打开 IE 浏览器。此法无需替换 <code>ieframe.dll</code> 文件也可以直接使用。</p><p>右键开始按钮，选择“运行”，输入 <code>notepad</code> 回车，打开记事本，输入以下内容：</p><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CreateObject(<span class="string">"InternetExplorer.Application"</span>).Visible=<span class="literal">true</span></span><br></pre></td></tr></table></figure><p>将其保存为后缀名为 <code>.vbs</code> 的文件，运行就可以在 Windows 11 打开 IE 浏览器了。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>Windows 11 在 Dev 25309 里面移除了 VBS 的支持，此改动预计在正式版 23H2 中实装。这导致原有 VBS 方式打开 IE 浏览器的方法失效。这里摸索出来一个使用 PowerShell 方式打开 IE 浏览器的方法，可以参考一下。(145.html)[145.html]</strong></p><hr /><p>Windows 11 已经将 IE 浏览器默认跳转到了 Edge，这导致如果不使用第三方浏览器的话，报名教师资格证变的尤其麻烦。即使是从“运行”输入 <code>iexplore</code> 打开的仍然是 Edge。</p><p>但是我们仍然可以通过 VBS 脚本来打开 IE 浏览器。此法无需替换 <code>ieframe.dll</code> 文件也可以直接使用。</p><p>右键开始按钮，选择“运行”，输入 <code>notepad</code> 回车，打开记事本，输入以下内容：</p><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CreateObject(<span class="string">"InternetExplorer.Application"</span>).Visible=<span class="literal">true</span></span><br></pre></td></tr></table></figure><p>将其保存为后缀名为 <code>.vbs</code> 的文件，运行就可以在 Windows 11 打开 IE 浏览器了。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
@@ -2462,27 +2483,6 @@
   </entry>
   
   <entry>
-    <title>java.math.BigDecimal保留指定位数的有效数字（不算前面的0）</title>
-    <link href="https://no5972.moe/cms/archivers/28.html"/>
-    <id>https://no5972.moe/cms/archivers/28.html</id>
-    <published>2020-08-20T11:27:49.000Z</published>
-    <updated>2021-07-10T02:52:23.100Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>百度百科：从一个数的左边第一个非0数字起，到末位数字止，所有的数字都是这个数的有效数字。<br />就是一个数从左边第一个不为0的数字数起到末尾数字为止，所有的数字（包括0，科学计数法不计10的N次方），称为有效数字。简单的说，把一个数字前面的0都去掉，从第一个正整数到精确的数位止所有的都是有效数字了。<br />如：0.0109，前面两个0不是有效数字，后面的109均为有效数字（注意，中间的0也算）。</p></blockquote><p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
-    
-    <summary type="html">
-    
-      BigDecimal类型的小数可以使用MathContext指定有效数字。
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://no5972.moe/cms/categories/Java/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>我们为什么那么痛恨计算机等级与那些问题（二级党请进）</title>
     <link href="https://no5972.moe/cms/archivers/27.html"/>
     <id>https://no5972.moe/cms/archivers/27.html</id>
@@ -2499,6 +2499,27 @@
     
     
       <category term="C/C++" scheme="https://no5972.moe/cms/categories/C-C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java.math.BigDecimal保留指定位数的有效数字（不算前面的0）</title>
+    <link href="https://no5972.moe/cms/archivers/28.html"/>
+    <id>https://no5972.moe/cms/archivers/28.html</id>
+    <published>2020-08-20T11:27:49.000Z</published>
+    <updated>2021-07-10T02:52:23.100Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>百度百科：从一个数的左边第一个非0数字起，到末位数字止，所有的数字都是这个数的有效数字。<br />就是一个数从左边第一个不为0的数字数起到末尾数字为止，所有的数字（包括0，科学计数法不计10的N次方），称为有效数字。简单的说，把一个数字前面的0都去掉，从第一个正整数到精确的数位止所有的都是有效数字了。<br />如：0.0109，前面两个0不是有效数字，后面的109均为有效数字（注意，中间的0也算）。</p></blockquote><p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      BigDecimal类型的小数可以使用MathContext指定有效数字。
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://no5972.moe/cms/categories/Java/"/>
     
     
   </entry>
