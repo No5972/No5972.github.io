@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://no5972.moe/cms/archivers/146.html</loc>
-    
-    <lastmod>2023-04-27</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/archivers/76.html</loc>
     
     <lastmod>2023-03-24</lastmod>
@@ -1087,14 +1080,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/index.html</loc>
+    <loc>https://no5972.moe/cms/about/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/about/index.html</loc>
+    <loc>https://no5972.moe/cms/categories/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
@@ -1119,14 +1112,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Webapp/</loc>
+    <loc>https://no5972.moe/cms/categories/Java/</loc>
     <lastmod>2023-04-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Java/</loc>
+    <loc>https://no5972.moe/cms/categories/Webapp/</loc>
     <lastmod>2023-04-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1168,14 +1161,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Automation/</loc>
+    <loc>https://no5972.moe/cms/categories/Other/</loc>
     <lastmod>2023-04-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Other/</loc>
+    <loc>https://no5972.moe/cms/categories/Automation/</loc>
     <lastmod>2023-04-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
