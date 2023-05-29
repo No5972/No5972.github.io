@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2023-03-15T08:33:52.025Z</updated>
+  <updated>2023-05-29T09:24:51.426Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>天选键盘 设置和使用键盘宏（不使用奥创中心）</title>
+    <link href="https://no5972.moe/cms/archivers/146.html"/>
+    <id>https://no5972.moe/cms/archivers/146.html</id>
+    <published>2023-05-29T17:30:00.000Z</published>
+    <updated>2023-05-29T09:24:51.426Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="临时记录一下"><a class="markdownIt-Anchor" href="#临时记录一下"></a> 临时记录一下</h1><ol><li><strong>按 Fn + 左 Alt</strong>，此时左 Alt 键会慢速闪烁，表示现在是录入宏的模式。</li><li>然后就<strong>录入宏指令</strong>，此时按下的键会亮灯，并且按下的键也会在电脑生效。</li><li>录入完毕后<strong>再次按 Fn + 左 Alt，然后都松开</strong>。此时左 Alt 键会快速闪烁，同时 F1 到 F8 键会亮灯，已设置宏的键会亮红灯，没有设置宏的键亮绿色灯。</li><li>根据第二步录入的内容和第三步亮灯的情况：<ul><li>如果第二步录入的有宏指令，此时<strong>按亮绿灯的键</strong>则对该键设置第二步录入的宏指令。</li><li>如果第二步录入的有宏指令，此时<strong>按亮红灯的键</strong>则以第二步录入的宏指令覆盖该键已设置的宏。</li><li>如果第二步没有按任何键，此时<strong>按亮绿灯的键</strong>则直接退出设置宏的模式。</li><li>如果第二步没有按任何键，此时<strong>按亮红灯的键</strong>则删除该键已设置的宏。</li></ul></li><li>已设置宏的键位，<strong>直接按对应键位就会执行宏</strong>。原有的键位功能会失效，所以请尽量找一个平时不会使用的键位来设置。</li></ol><p><img src="https://picx.zhimg.com/v2-bd21849c7c18899312006fcf18b680ff_1440w.jpg" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      已设置宏的键位，直接按对应键位就会执行宏。原有的键位功能会失效，所以请尽量找一个平时不会使用的键位来设置。
+    
+    </summary>
+    
+    
+      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>仅作笔记用：Windows 11 通过 PowerShell 打开 IE 浏览器</title>
@@ -368,9 +389,9 @@
     </summary>
     
     
-      <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
-    
       <category term="Moving Away from Flash" scheme="https://no5972.moe/cms/categories/Moving-Away-from-Flash/"/>
+    
+      <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
     
     
   </entry>
@@ -1430,9 +1451,9 @@
     </summary>
     
     
-      <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
     
     
   </entry>
@@ -1537,9 +1558,9 @@
     </summary>
     
     
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
-    
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
+    
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
     
   </entry>
@@ -1606,9 +1627,9 @@
     
       <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
     
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
-    
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
+    
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
     
   </entry>
@@ -1692,9 +1713,9 @@
     </summary>
     
     
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
-    
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
+    
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
     
   </entry>
@@ -3029,9 +3050,9 @@
     </summary>
     
     
-      <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
     
     
   </entry>
