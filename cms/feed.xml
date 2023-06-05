@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2023-05-29T09:24:51.426Z</updated>
+  <updated>2023-06-05T14:12:09.823Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>仅做笔记用：Stable Diffusion 扩展图片 / 扩图</title>
+    <link href="https://no5972.moe/cms/archivers/147.html"/>
+    <id>https://no5972.moe/cms/archivers/147.html</id>
+    <published>2023-06-05T22:30:00.000Z</published>
+    <updated>2023-06-05T14:12:09.823Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>现有的解决方案，包括 Bing 搜出来的，基本上都是要收费的，这些解决方案大多基于 DALL-E。某度也很难搜出来一个图文的介绍。那么就应该研究一下开源的 Stable Diffusion 能不能也实现类似的扩图功能。这里临时记录一下在 Stable Diffusion 怎么操作可以扩展图片。</p><p>这里用的还是秋叶的 v3 整合包。启动 Stable Diffusion 之后，打开图生图，下面就默认的图生图，将一张要扩展的图片拖进来。拉到最下面，脚本选择“ <strong>向外绘制第 X 版</strong> ”。这时候会出现选项，选择向哪个方向扩充。以及输入扩充多少像素。</p><p>和 DALL-E 方式一样，这个扩展同样需要输入提示才能保证正确扩展。在最上面的那两个大输入框输入正向提示和负面提示。然后点击生成。这样就完成了图片的扩展。可以根据需要修改附近的参数来获得更好的效果。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/89f556ef29564c159b675ac5642328c3.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      现有的解决方案，包括 Bing 搜出来的，基本上都是要收费的，这些解决方案大多基于 DALL-E。某度也很难搜出来一个图文的介绍。那么就应该研究一下开源的 Stable Diffusion 能不能也实现类似的扩图功能。这里临时记录一下在 Stable Diffusion 怎么操作可以扩展图片。
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://no5972.moe/cms/categories/Python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>天选键盘 设置和使用键盘宏（不使用奥创中心）</title>
@@ -389,9 +410,9 @@
     </summary>
     
     
-      <category term="Moving Away from Flash" scheme="https://no5972.moe/cms/categories/Moving-Away-from-Flash/"/>
-    
       <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
+    
+      <category term="Moving Away from Flash" scheme="https://no5972.moe/cms/categories/Moving-Away-from-Flash/"/>
     
     
   </entry>
@@ -1451,9 +1472,9 @@
     </summary>
     
     
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
-    
       <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
+    
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
     
   </entry>
@@ -1558,9 +1579,9 @@
     </summary>
     
     
-      <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
     
   </entry>
@@ -1625,11 +1646,11 @@
     </summary>
     
     
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
       <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
-    
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
     
   </entry>
@@ -1713,9 +1734,9 @@
     </summary>
     
     
-      <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
     
   </entry>
@@ -3050,9 +3071,9 @@
     </summary>
     
     
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
-    
       <category term="AtoW" scheme="https://no5972.moe/cms/categories/AtoW/"/>
+    
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
     
   </entry>
