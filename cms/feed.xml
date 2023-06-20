@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2023-06-05T14:12:09.823Z</updated>
+  <updated>2023-06-20T08:16:02.215Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>仅做笔记用：Stable Diffusion 获取历史生成图片的 prompt</title>
+    <link href="https://no5972.moe/cms/archivers/148.html"/>
+    <id>https://no5972.moe/cms/archivers/148.html</id>
+    <published>2023-06-20T16:30:00.000Z</published>
+    <updated>2023-06-20T08:16:02.215Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>不知怎么搞的，图库浏览器点开图片看不到生成图片的信息了。但是据信这些信息是写在 PNG 数据的某个附加区段的（参考博客文章<a href="https://www.aiuai.cn/aifarm1516.html" target="_blank" rel="noopener">《Python - PNG图掺入隐藏文本信息》</a>）。Stable Diffusion 原生支持读取这些信息。并且除了图库浏览器，还有一个地方可以读取。</p><p>从资源管理器里面 SD 目录的 <code>outputs/txt2img-images</code> 里面找到要读取信息的图片。在 SD WebUI 中切换到“图片信息”选项卡，然后将图片拖进来，即可在右侧看到图片生成时输入的 prompt，以及 negative prompt、CFG、步数、模型信息、种子值、分辨率等。（参考博客文章<a href="https://huke88.com/article/8116.html" target="_blank" rel="noopener">《Stable-Diffusion：图片信息（PNG Info）功能介绍》</a>）</p><p><img src="https://images.weserv.nl/?url=https://pic.huke88.com/article/content/image/2023-06-01/6854BFD9-BC5E-1801-D85E-CD9A93C77982.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      不知怎么搞的，图库浏览器点开图片看不到生成图片的信息了。但是据信这些信息是写在 PNG 数据的某个附加区段的（参考博客文章《Python - PNG图掺入隐藏文本信息》）。Stable Diffusion 原生支持读取这些信息。并且除了图库浏览器，还有一个地方可以读取。
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://no5972.moe/cms/categories/Python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>仅做笔记用：Stable Diffusion 扩展图片 / 扩图</title>
@@ -1646,9 +1667,9 @@
     </summary>
     
     
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
-    
       <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
+    
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
