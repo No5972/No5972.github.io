@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2023-07-19T03:40:42.462Z</updated>
+  <updated>2023-07-27T08:03:32.537Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://no5972.moe/cms/archivers/149.html"/>
     <id>https://no5972.moe/cms/archivers/149.html</id>
     <published>2023-07-19T11:30:00.000Z</published>
-    <updated>2023-07-19T03:40:42.462Z</updated>
+    <updated>2023-07-27T08:03:32.537Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>微软近日推送了安全更新，在 Win10 下编号为 KB5028166，在 Win11 下编号为 KB5028185。此补丁会导致部分电脑无法上网，<strong>主要是使用了各种品牌的随身 Wifi 的电脑。</strong> 具体症状表现为从控制面板的网络连接（<code>ncpa.cpl</code>）打开详细信息，会发现里面是空白的，如图所示。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/bf34689f1c094af4a56722b067422236.png" alt="" /></p><p>遇到此类问题的请尝试将此补丁卸载。具体操作方法是右键开始按钮，选择运行，输入 <code>appwiz.cpl</code>，然后点击左侧的查看已安装的更新，找到并右键点击括弧为 KB5028166 的补丁，选择卸载，确认卸载，然后根据提示重新启动计算机。这样就可以恢复上网并继续使用随身 Wifi 了。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/5a6ed2c945c2475b9ca6ca51c6f5aa0e.png" alt="" /></p><p>重新启动计算机后下载并运行 Show or Hide Updates 工具，选择 Hide Updates，将编号为 KB5028166 补丁选中以屏蔽更新，以防后续还会自动更新此补丁。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/35b58be631b24daa8564c1b28a204a20.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>230725 更新：360 已推出临时补丁来解决此问题，使用 360 Wifi 的用户无需再卸载下文所述的系统更新了。下载“360随身Wi-Fi3_解决win10-11更新异常.zip”，然后复制到随身 Wi-Fi 应用程序安装目录下。随身 Wi-Fi 应用程序的默认安装目录为： <code>C:\Program Files (x86)\360AP</code>或者 <code>C:\Program Files (x86)\360\360AP</code>。解压此压缩包到当前目录（如：<code>C:\Program Files (x86)\360AP</code>），然后重启电脑。电脑完成启动后，插上随身 Wi-Fi 3，稍等片刻会提示“是否安装驱动”，选择“安装驱动”。稍等片刻，随身 Wi-Fi 3 就可以正常工作。</p><p>注意：</p><ol><li>复制文件和解压时，系统会提示“需要管理员权限”，选择“允许”。</li><li>解压文件时，会出现“是否允许覆盖”的提示，选择“全部覆盖”。</li><li>重启后，如果插上随身 Wi-Fi 3 后没有提示“是否安装驱动”，应重新手动启动下随身 Wi-Fi 应用程序。</li><li>若受限于 Windows 当前用户权限，无法在上面的步骤中提升管理员权限，请联系您的系统管理员来处理。</li></ol><hr /><p>微软近日推送了安全更新，在 Win10 下编号为 KB5028166，在 Win11 下编号为 KB5028185。此补丁会导致部分电脑无法上网，<strong>主要是使用了各种品牌的随身 Wifi 的电脑。</strong> 具体症状表现为从控制面板的网络连接（<code>ncpa.cpl</code>）打开详细信息，会发现里面是空白的，如图所示。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/bf34689f1c094af4a56722b067422236.png" alt="" /></p><p>遇到此类问题的请尝试将此补丁卸载。具体操作方法是右键开始按钮，选择运行，输入 <code>appwiz.cpl</code>，然后点击左侧的查看已安装的更新，找到并右键点击括弧为 KB5028166 的补丁，选择卸载，确认卸载，然后根据提示重新启动计算机。这样就可以恢复上网并继续使用随身 Wifi 了。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/5a6ed2c945c2475b9ca6ca51c6f5aa0e.png" alt="" /></p><p>重新启动计算机后下载并运行 Show or Hide Updates 工具，选择 Hide Updates，将编号为 KB5028166 补丁选中以屏蔽更新，以防后续还会自动更新此补丁。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/35b58be631b24daa8564c1b28a204a20.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
@@ -1382,9 +1382,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="https://no5972.moe/cms/categories/JavaScript/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="JavaScript" scheme="https://no5972.moe/cms/categories/JavaScript/"/>
     
     
   </entry>
@@ -1468,9 +1468,9 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="https://no5972.moe/cms/categories/JavaScript/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="JavaScript" scheme="https://no5972.moe/cms/categories/JavaScript/"/>
     
     
   </entry>
@@ -1688,9 +1688,9 @@
     </summary>
     
     
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
-    
       <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
+    
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
