@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2023-09-06T08:36:58.938Z</updated>
+  <updated>2023-09-06T08:45:06.044Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://no5972.moe/cms/archivers/150.html"/>
     <id>https://no5972.moe/cms/archivers/150.html</id>
     <published>2023-09-03T00:00:00.000Z</published>
-    <updated>2023-09-06T08:36:58.938Z</updated>
+    <updated>2023-09-06T08:45:06.044Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="就是这一句代码"><a class="markdownIt-Anchor" href="#就是这一句代码"></a> 就是这一句代码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> setTimeout(resolve, <span class="number">2000</span>));</span><br></pre></td></tr></table></figure><p>最后的数字就是延时时长</p><h1 id="示例"><a class="markdownIt-Anchor" href="#示例"></a> 示例</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"延时开始"</span>);</span><br><span class="line"><span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> setTimeout(resolve, <span class="number">2000</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"延时结束"</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure><h1 id="效果"><a class="markdownIt-Anchor" href="#效果"></a> 效果</h1><p><img src="https://picx.zhimg.com/80/v2-1f994b7b7acf5f4db5d0ca5ac6f3d93f.gif" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -32,7 +32,7 @@
     </summary>
     
     
-      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+      <category term="JavaScript" scheme="https://no5972.moe/cms/categories/JavaScript/"/>
     
     
   </entry>
