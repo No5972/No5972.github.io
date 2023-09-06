@@ -24,6 +24,21 @@
       </categories>
   </entry>
   <entry>
+    <title>仅作笔记用：JS 一行代码实现同步的延时语句</title>
+    <url>/cms//archivers/150.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="就是这一句代码"><a class="markdownIt-Anchor" href="#就是这一句代码"></a> 就是这一句代码</h1>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> setTimeout(resolve, <span class="number">2000</span>));</span><br></pre></td></tr></table></figure>
+<p>最后的数字就是延时时长</p>
+<h1 id="示例"><a class="markdownIt-Anchor" href="#示例"></a> 示例</h1>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"延时开始"</span>);</span><br><span class="line"><span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> setTimeout(resolve, <span class="number">2000</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"延时结束"</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<h1 id="效果"><a class="markdownIt-Anchor" href="#效果"></a> 效果</h1>
+<p><img src="https://picx.zhimg.com/80/v2-1f994b7b7acf5f4db5d0ca5ac6f3d93f.gif" alt="" /></p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Webapp</category>
+      </categories>
+  </entry>
+  <entry>
     <title>2023 年 7 月中旬使用各种随身 Wifi 的电脑无法上网的解决方法</title>
     <url>/cms//archivers/149.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>230725 更新：360 已推出临时补丁来解决此问题，使用 360 Wifi 的用户无需再卸载下文所述的系统更新了。下载“360随身Wi-Fi3_解决win10-11更新异常.zip”，然后复制到随身 Wi-Fi 应用程序安装目录下。随身 Wi-Fi 应用程序的默认安装目录为： <code>C:\Program Files (x86)\360AP</code>或者 <code>C:\Program Files (x86)\360\360AP</code>。解压此压缩包到当前目录（如：<code>C:\Program Files (x86)\360AP</code>），然后重启电脑。电脑完成启动后，插上随身 Wi-Fi 3，稍等片刻会提示“是否安装驱动”，选择“安装驱动”。稍等片刻，随身 Wi-Fi 3 就可以正常工作。</p>
@@ -1106,7 +1121,7 @@
 网上也有一份这种高光贴图包。为了便于理解我们给眼睛贴上sph贴图演示一下。高光贴图应用非常广泛<br />
 很多游戏盔甲就是用的高光贴图来让金属泛光。。。</p>
 <p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/img_convert/e870b5ba5b380a3f162832cac16019d5.png" alt="" /></p>
-<p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/img_convert/5a0cdcb0452bd8b642c4a79e186d812f.gif" alt="" /></p>
+<p><img src="https://pic1.zhimg.com/80/v2-0c0a6c802ecec5ae27a91333ed6cfb6d.gif" alt="" /></p>
 <p>ray渲N渲IK渲本身就自带高光贴图设置，这也就是为什么N渲的作者在演示时让你删除Sph的原因，<br />
 你可以在N渲的文件夹中找到这类贴图文件。当然了这里也不需要设置什么法线贴图，<br />
 在N/IK/Ray渲染材质中设置，</p>
@@ -2506,7 +2521,7 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 </div>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/pinyin-util@1.2.3/dist/pinyin-util.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"begin()"</span>&gt;</span>开始<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"test"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> str = <span class="string">"鄙人一直在竭力简化小花仙高清截图的操作步骤。这次再来尝试使用原生的远程调试来操作指令。"</span>;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> x = pinyinUtil.getPinyin(str, <span class="string">' '</span>).split(<span class="string">' '</span>);</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> p = <span class="built_in">document</span>.getElementById(<span class="string">'test'</span>);</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> z = <span class="number">0</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="function"><span class="keyword">function</span> <span class="title">sleep</span> <span class="params">(time)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> setTimeout(resolve, time));</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">begin</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="actionscript">  <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> x) &#123;</span></span><br><span class="line"><span class="actionscript">  	<span class="keyword">var</span> pyLength = x[i].length;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">for</span> (<span class="keyword">var</span> y <span class="keyword">in</span> x[i]) &#123;</span></span><br><span class="line">      p.innerText += x[i][y];</span><br><span class="line"><span class="javascript">      <span class="keyword">await</span>(sleep(<span class="number">50</span>));</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="javascript">    <span class="keyword">await</span>(sleep(<span class="number">50</span>));</span></span><br><span class="line">    p.innerText = p.innerText.substring(0, p.innerText.length - pyLength);</span><br><span class="line">    p.innerText += str[i];</span><br><span class="line"><span class="javascript">    <span class="keyword">await</span>(sleep(<span class="number">50</span>));</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>效果：<br />
-<img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/20210329170727115.gif" alt="在这里插入图片描述" /></p>
+<img src="https://pic1.zhimg.com/80/v2-2b080d43f83aa23f79d500512c5ffa61.gif" alt="在这里插入图片描述" /></p>
 <div class="note info"><p>类似的方式还可以做出五笔打字的打字机效果，只要能弄到所有五笔输入码即可。</p>
 </div><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
@@ -6701,7 +6716,7 @@ mi.dll提供的API各种函数 (这里用C# 表示)</p>
 <p>JS:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="string">"#type"</span>).change(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert($(<span class="string">"#dataList option[value="</span> + <span class="keyword">this</span>.value + <span class="string">"]"</span>).text());</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>效果:</p>
-<p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/20191029161526424.gif" alt="在这里插入图片描述" /></p>
+<p><img src="https://picx.zhimg.com/80/v2-ec599a82b306c2e161274c6083def1cb.gif" alt="在这里插入图片描述" /></p>
 <p>测试从6 192个选项中定位的计时:</p>
 <p>遍历: 3 680ms</p>
 <p>jquery选择器: 38ms</p>
