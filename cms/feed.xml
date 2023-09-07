@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2023-09-06T08:45:06.044Z</updated>
+  <updated>2023-09-07T09:11:03.157Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Civitai 通过 API 下载模型</title>
+    <link href="https://no5972.moe/cms/archivers/151.html"/>
+    <id>https://no5972.moe/cms/archivers/151.html</id>
+    <published>2023-09-07T17:00:00.000Z</published>
+    <updated>2023-09-07T09:11:03.157Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="域名和-web-网站的域名一样"><a class="markdownIt-Anchor" href="#域名和-web-网站的域名一样"></a> 域名和 web 网站的域名一样</h1><h1 id="搜索模型get-apiv1models"><a class="markdownIt-Anchor" href="#搜索模型get-apiv1models"></a> 搜索模型：<code>GET /api/v1/models</code></h1><p>常用参数（都是可选）：</p><ul><li><code>tag</code> 标签</li><li><code>query</code> 标题（模糊查询）</li><li><code>page</code> 页数</li><li><code>limit</code> 每页大小</li><li><code>username</code> 作者用户名</li><li><code>types</code> 模型类型 (<code>Checkpoint, TextualInversion, Hypernetwork, AestheticGradient, LORA, Controlnet, Poses</code>) ，默认加载所有类型</li><li><code>sort</code> 排序方式 (<code>Highest%20Rated, Most%20Downloaded, Newest</code>)</li></ul><p>在返回的数据中：</p><ul><li><code>items[a].creator</code> 作者信息</li><li><code>items[a].name</code> 模型标题</li><li><code>items[a].description</code> 模型介绍（HTML格式）</li><li><code>items[a].modelVersions[b].images[c].url</code> 预览图</li><li><code>items[a].modelVersions[b].images[c].meta</code> 预览图的 AI 参数</li><li><code>items[a].modelVersions[b].downloadUrl</code> <strong>下一步</strong> 要下载要用的地址（有跳转，API 不能直接下）</li></ul><h1 id="下载模型get-apidownloadmodelsid"><a class="markdownIt-Anchor" href="#下载模型get-apidownloadmodelsid"></a> 下载模型：<code>GET /api/download/models/{id}</code></h1><p>请求地址里面的 <code>{id}</code> 就是上一步找到的模型 <strong>版本</strong> 的 ID。</p><p>访问后会返回一个 307 响应码。响应头的 <code>location</code> 就是真实下载地址，但是这个地址是临时的，要尽快完成下载，不久后就会失效。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      请求地址里面的 ```{id}``` 就是上一步找到的模型 **版本** 的 ID。访问后会返回一个 307 响应码。响应头的 ``` location``` 就是真实下载地址，但是这个地址是临时的，要尽快完成下载，不久后就会失效。
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://no5972.moe/cms/categories/Python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>仅作笔记用：JS 一行代码实现同步的延时语句</title>
