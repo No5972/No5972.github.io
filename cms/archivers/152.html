@@ -126,12 +126,12 @@
     var CONFIG = {"hostname":"no5972.moe","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="发觉之前的 Outpainting 脚本效果仍旧不是很理想。这里又找了一下有没有效果更好的途径来扩图。于是就找到了通过 ControlNet 的方式来实现效果更好的扩图。这里临时记录一下在 Stable Diffusion 怎么使用 ControlNet 来扩展图片。&quot;">
+  <meta name="description" content="发觉之前的 Outpainting 脚本效果仍旧不是很理想。这里又找了一下有没有效果更好的途径来扩图。于是就找到了通过 ControlNet 的方式来实现效果更好的扩图。这里临时记录一下在 Stable Diffusion 怎么使用 ControlNet 来扩展图片。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="仅做笔记用：Stable Diffusion 通过 ControlNet 扩展图片 &#x2F; 扩图">
 <meta property="og:url" content="https://no5972.moe/cms/archivers/152.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="发觉之前的 Outpainting 脚本效果仍旧不是很理想。这里又找了一下有没有效果更好的途径来扩图。于是就找到了通过 ControlNet 的方式来实现效果更好的扩图。这里临时记录一下在 Stable Diffusion 怎么使用 ControlNet 来扩展图片。&quot;">
+<meta property="og:description" content="发觉之前的 Outpainting 脚本效果仍旧不是很理想。这里又找了一下有没有效果更好的途径来扩图。于是就找到了通过 ControlNet 的方式来实现效果更好的扩图。这里临时记录一下在 Stable Diffusion 怎么使用 ControlNet 来扩展图片。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/c3176a7e74734f46b777ca9883f3d8d1.png">
 <meta property="og:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/ca979174d2794e1ab1ff870139bf7ece.png">
@@ -139,7 +139,7 @@
 <meta property="og:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/b5701d8683ea44dcbe1f1357aa08b3ed.png">
 <meta property="og:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/d82917bd5ed7418e8cec72e972ce06c3.png">
 <meta property="article:published_time" content="2023-09-12T01:30:00.000Z">
-<meta property="article:modified_time" content="2023-09-11T17:25:53.904Z">
+<meta property="article:modified_time" content="2023-10-24T05:38:05.445Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/c3176a7e74734f46b777ca9883f3d8d1.png">
@@ -549,17 +549,17 @@ window.onload = function () {
       <div class="site-state-item site-state-posts">
           <a href="/cms/archives/">
         
-          <span class="site-state-item-count">156</span>
+          <span class="site-state-item-count">158</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
 
     
                 <nav class="site-nav">
-                  <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cms/categories/AtoW/">AtoW</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Automation/">Automation</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C/">C#</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C-C/">C/C++</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Github/">Github</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Java/">Java</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/JavaScript/">JavaScript</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Moving-Away-from-Flash/">Moving Away from Flash</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Other/">Other</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Python/">Python</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Web-Building/">Web Building</a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Webapp/">Webapp</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll-update/">jekyll update</a><span class="category-list-count">4</span></li></ul>
+                  <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cms/categories/AtoW/">AtoW</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Automation/">Automation</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C/">C#</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C-C/">C/C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Github/">Github</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Java/">Java</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/JavaScript/">JavaScript</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Moving-Away-from-Flash/">Moving Away from Flash</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Other/">Other</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Python/">Python</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Web-Building/">Web Building</a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Webapp/">Webapp</a><span class="category-list-count">43</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll-update/">jekyll update</a><span class="category-list-count">4</span></li></ul>
                 </nav>
                 <nav class="site-nav" style="width: 80%; overflow-x: hidden;">
-                  <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/152.html">仅做笔记用：Stable Diffusion 通过 ControlNet 扩展图片 / 扩图</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/151.html">Civitai 通过 API 下载模型</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/150.html">仅作笔记用：JS 一行代码实现同步的延时语句</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/149.html">2023 年 7 月中旬使用各种随身 Wifi 的电脑无法上网的解决方法</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/148.html">仅做笔记用：Stable Diffusion 获取历史生成图片的 prompt</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/147.html">仅做笔记用：Stable Diffusion 扩展图片 / 扩图</a></li></ul>
+                  <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/154.html">仅作笔记用：C语言 将结构体以二进制形式写入文件</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/153.html">仅做笔记用：PowerShell 关闭显示器</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/152.html">仅做笔记用：Stable Diffusion 通过 ControlNet 扩展图片 / 扩图</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/151.html">Civitai 通过 API 下载模型</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/150.html">仅作笔记用：JS 一行代码实现同步的延时语句</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/149.html">2023 年 7 月中旬使用各种随身 Wifi 的电脑无法上网的解决方法</a></li></ul>
                 </nav>
               
   </nav>
@@ -622,7 +622,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2023-09-12 01:30:00 | Modified: 2023-09-11 17:25:53" itemprop="dateCreated datePublished" datetime="2023-09-12T01:30:00+00:00">2023-09-12 01:30:00</time>
+              <time title="Created: 2023-09-12 01:30:00 | Modified: 2023-10-24 05:38:05" itemprop="dateCreated datePublished" datetime="2023-09-12T01:30:00+00:00">2023-09-12 01:30:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -695,7 +695,10 @@ window.onload = function () {
     <a href="/cms/archivers/151.html" rel="prev" title="Civitai 通过 API 下载模型">
       <i class="fa fa-chevron-left"></i> Civitai 通过 API 下载模型
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/cms/archivers/153.html" rel="next" title="仅做笔记用：PowerShell 关闭显示器">
+      仅做笔记用：PowerShell 关闭显示器 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -871,7 +874,7 @@ window.onload = function () {
   
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/cms/sw.js?t=1694453179067')
+  navigator.serviceWorker.register('/cms/sw.js?t=1698126084336')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

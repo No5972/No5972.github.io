@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2023-09-11T17:25:53.904Z</updated>
+  <updated>2023-10-24T05:40:47.278Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -17,17 +17,59 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>仅作笔记用：C语言 将结构体以二进制形式写入文件</title>
+    <link href="https://no5972.moe/cms/archivers/154.html"/>
+    <id>https://no5972.moe/cms/archivers/154.html</id>
+    <published>2023-10-11T14:00:00.000Z</published>
+    <updated>2023-10-24T05:40:47.278Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>直接以文本文件的方式写入固然也可以，但是如果遇到数据量大的情况，会占用比较多的磁盘空间。这里收集汇总了一下将结构体数据写入二进制文件以及后续读取为结构体的办法。</p><p>写入二进制文件的话，成员变量就可以直接以例如 <code>int</code>、<code>float</code>、<code>double</code> 这样的形式存储到磁盘，而不是转换成字符串，这样不仅节省磁盘空间，也省去了字符串到数值变量的相互转换的程序编写。</p><p>运行写入程序后会在当前目录生成一个 <code>tom.psn</code> 的文件，这是以二进制形式储存的，而不是字符串文本。</p><p>而读取程序则将当前目录的 <code>tom.psn</code> 文件直接转换为相应的结构体实例，并输出需要的成员变量。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 写入文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Person</span> &#123;</span></span><br><span class="line"><span class="keyword">char</span> name[<span class="number">20</span>];</span><br><span class="line"><span class="keyword">int</span> age;</span><br><span class="line"><span class="keyword">float</span> <span class="built_in">height</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Person</span> <span class="title">pWrite</span>;</span></span><br><span class="line">FILE *fp;</span><br><span class="line"></span><br><span class="line">fp = fopen(<span class="string">"tom.psn"</span>, <span class="string">"wb"</span>);</span><br><span class="line"><span class="built_in">strcpy</span>(pWrite.name, <span class="string">"Tom"</span>);</span><br><span class="line">pWrite.age = <span class="number">20</span>;</span><br><span class="line">pWrite.<span class="built_in">height</span> = <span class="number">1.75</span>;</span><br><span class="line">fwrite(&amp;pWrite, <span class="keyword">sizeof</span>(struct Person), <span class="number">1</span>, fp);</span><br><span class="line">fclose(fp);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 读取文件</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Person</span> &#123;</span></span><br><span class="line"><span class="keyword">char</span> name[<span class="number">20</span>];</span><br><span class="line"><span class="keyword">int</span> age;</span><br><span class="line"><span class="keyword">float</span> <span class="built_in">height</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Person</span> <span class="title">pRead</span>;</span></span><br><span class="line">FILE *fp;</span><br><span class="line"></span><br><span class="line">fp = fopen(<span class="string">"tom.psn"</span>, <span class="string">"rb"</span>);</span><br><span class="line">fread(&amp;pRead, <span class="keyword">sizeof</span>(struct Person), <span class="number">1</span>, fp);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"Read result:\nName: %s\nAge: %d\nHeight: %.2f\n"</span>, pRead.name, pRead.age, pRead.<span class="built_in">height</span>);</span><br><span class="line">fclose(fp);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 输出：</span></span><br><span class="line"><span class="comment">Read result:</span></span><br><span class="line"><span class="comment">Name: Tom</span></span><br><span class="line"><span class="comment">Age: 20</span></span><br><span class="line"><span class="comment">Height: 1.75</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      直接以文本文件的方式写入固然也可以，但是如果遇到数据量大的情况，会占用比较多的磁盘空间。这里收集汇总了一下将结构体数据写入二进制文件以及后续读取为结构体的办法。
+    
+    </summary>
+    
+    
+      <category term="C/C++" scheme="https://no5972.moe/cms/categories/C-C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>仅做笔记用：PowerShell 关闭显示器</title>
+    <link href="https://no5972.moe/cms/archivers/153.html"/>
+    <id>https://no5972.moe/cms/archivers/153.html</id>
+    <published>2023-10-09T18:30:00.000Z</published>
+    <updated>2023-10-24T05:40:41.525Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>使用这个命令可以手动关闭显示器，这样就不需要第三方工具甚至自己写C/C++/C#/Python代码了。</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="built_in">Add-Type</span> <span class="string">'[DllImport("user32.dll")]public static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);'</span> <span class="literal">-Name</span> a <span class="literal">-Pas</span>)::SendMessage(<span class="literal">-1</span>,<span class="number">0</span>x0112,<span class="number">0</span>xF170,<span class="number">2</span>)</span><br></pre></td></tr></table></figure><p>也可以写成 CMD 的形式，这样就可以直接放到运行窗口运行或是创建快捷方式了。</p><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell -command "(Add-<span class="built_in">Type</span> '[DllImport(\"user32.dll\")]public static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);' -Name a -Pas)::SendMessage(-<span class="number">1</span>,<span class="number">0</span>x0112,<span class="number">0</span>xF170,<span class="number">2</span>)"</span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      使用这个命令可以手动关闭显示器，这样就不需要第三方工具甚至自己写C/C++/C#/Python代码了。
+    
+    </summary>
+    
+    
+      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>仅做笔记用：Stable Diffusion 通过 ControlNet 扩展图片 / 扩图</title>
     <link href="https://no5972.moe/cms/archivers/152.html"/>
     <id>https://no5972.moe/cms/archivers/152.html</id>
     <published>2023-09-12T01:30:00.000Z</published>
-    <updated>2023-09-11T17:25:53.904Z</updated>
+    <updated>2023-10-24T05:38:05.445Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>发觉之前的 Outpainting 脚本效果仍旧不是很理想。这里又找了一下有没有效果更好的途径来扩图。于是就找到了通过 ControlNet 的方式来实现效果更好的扩图。这里临时记录一下在 Stable Diffusion 怎么使用 ControlNet 来扩展图片。</p><p>下载 <code>control_v11p_sd15_inpaint_fp16.safetentors</code>，放到 SD 目录的 <code>\models\ControlNet</code> 目录。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/c3176a7e74734f46b777ca9883f3d8d1.png" alt="" /></p><p>在 SD WebUI 里面在 ControlNet <strong>勾选启用</strong>。选择<strong>局部重绘</strong>，然后看一看预处理器是不是 <code>inpaint_only</code>，模型是不是刚才下载的文件，如果不是就改一下。</p><p>下边三个滑块不用管。控制模式选择<strong>优先 ControlNet</strong>，画面缩放模式这里一般选择<strong>缩放并填充</strong>。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/ca979174d2794e1ab1ff870139bf7ece.png" alt="" /></p><p>然后在上面的作图尺寸里面根据想要的长宽比输入需要的尺寸（点击图片右下方最右边的按钮，可以直接将导入的图片的尺寸发送到上面的尺寸处）。当然，如果可能的话，请尽量在提示词里面写好背景方面的提示词。然后开始生成。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/83e29154fc114c9bb3cf55e920da4a25.png" alt="" /><br /><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/b5701d8683ea44dcbe1f1357aa08b3ed.png" alt="" /><br /><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/d82917bd5ed7418e8cec72e972ce06c3.png" alt="" /></p><p>可以将生成的图继续放到 ControlNet 的图像里面，然后重复步骤 4，继续扩展图片！</p><p>不同的采样方法效果差别有些大，可以尝试更换不同的采样方法来达到更好的效果。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
-      发觉之前的 Outpainting 脚本效果仍旧不是很理想。这里又找了一下有没有效果更好的途径来扩图。于是就找到了通过 ControlNet 的方式来实现效果更好的扩图。这里临时记录一下在 Stable Diffusion 怎么使用 ControlNet 来扩展图片。&quot;
+      发觉之前的 Outpainting 脚本效果仍旧不是很理想。这里又找了一下有没有效果更好的途径来扩图。于是就找到了通过 ControlNet 的方式来实现效果更好的扩图。这里临时记录一下在 Stable Diffusion 怎么使用 ControlNet 来扩展图片。
     
     </summary>
     
