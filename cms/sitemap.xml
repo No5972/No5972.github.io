@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.moe/cms/archivers/150.html</loc>
+    
+    <lastmod>2023-12-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/archivers/154.html</loc>
     
     <lastmod>2023-10-24</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://no5972.moe/cms/archivers/151.html</loc>
     
     <lastmod>2023-09-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/150.html</loc>
-    
-    <lastmod>2023-09-06</lastmod>
     
   </url>
   
@@ -737,14 +737,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/archivers/27.html</loc>
+    <loc>https://no5972.moe/cms/archivers/28.html</loc>
     
     <lastmod>2021-07-10</lastmod>
     
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/archivers/28.html</loc>
+    <loc>https://no5972.moe/cms/archivers/27.html</loc>
     
     <lastmod>2021-07-10</lastmod>
     
@@ -1231,6 +1231,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.moe/cms/categories/Automation/</loc>
+    <lastmod>2023-12-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
     <lastmod>2023-12-11</lastmod>
     <changefreq>daily</changefreq>
@@ -1239,13 +1246,6 @@
   
   <url>
     <loc>https://no5972.moe/cms/categories/Other/</loc>
-    <lastmod>2023-12-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/categories/Automation/</loc>
     <lastmod>2023-12-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
