@@ -138,7 +138,7 @@
 <meta property="og:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/93a600389aa34163ac2386719d51f1c9.png">
 <meta property="og:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/c0838b833c9f480594b98c30104615b7.png">
 <meta property="article:published_time" content="2023-02-21T09:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-15T10:29:24.583Z">
+<meta property="article:modified_time" content="2024-02-22T03:58:17.654Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/eba63e07e16f47018bef9096fa323240.png">
@@ -622,7 +622,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2023-02-21 09:00:00 | Modified: 2023-03-15 10:29:24" itemprop="dateCreated datePublished" datetime="2023-02-21T09:00:00+00:00">2023-02-21 09:00:00</time>
+              <time title="Created: 2023-02-21 09:00:00 | Modified: 2024-02-22 03:58:17" itemprop="dateCreated datePublished" datetime="2023-02-21T09:00:00+00:00">2023-02-21 09:00:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -645,7 +645,9 @@ window.onload = function () {
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>2 月 14 日更新后有部分 Windows 10 的用户反映 IE 浏览器无法使用，打开后变成 Edge 浏览器。由于有少数业内业务仍然必须使用 IE 浏览器，这里稍微研究了一下解决方法。</p>
+        <p>240222 更新：19041.3989 更新导致了此方法失效。请使用之前的 VBS 或者这个 CMD 命令来打开（复制这一行，右键开始按钮，运行，粘贴并确认）。</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell -command "$(New-Object -ComObject InternetExplorer.Application).Visible=$true"</span><br></pre></td></tr></table></figure>
+<p>2 月 14 日更新后有部分 Windows 10 的用户反映 IE 浏览器无法使用，打开后变成 Edge 浏览器。由于有少数业内业务仍然必须使用 IE 浏览器，这里稍微研究了一下解决方法。</p>
 <p>打开 IE 浏览器的时候会出现“IE已经合并进Edge浏览器”的提示，<strong>此时千万不要点击继续。</strong></p>
 <p>（看最后面的图）</p>
 <p>将鼠标移动到任务栏上出现的 Edge 图标，然后看看哪一个窗口的缩略图是这个提示，然后小心地移动到这个缩略图上面，不要移出这个缩略图。然后按下鼠标中键也就是滚轮，这样便关闭了这个提示。然后在从任务栏的那个打开的 IE 图标切换为 IE 浏览器，这样就回到 IE 了。</p>
@@ -750,7 +752,7 @@ window.onload = function () {
 <div class="copyright">
   
   &copy; 2011 – 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="author" itemprop="copyrightHolder">No.5972</span>
 </div>
 
@@ -878,7 +880,7 @@ window.onload = function () {
   
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/cms/sw.js?t=1702265554247')
+  navigator.serviceWorker.register('/cms/sw.js?t=1708574354254')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
