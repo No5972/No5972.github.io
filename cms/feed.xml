@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2023-12-11T02:30:27.842Z</updated>
+  <updated>2024-03-06T03:05:09.404Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>仅作笔记用：Ventoy 不支持 Windows XP</title>
+    <link href="https://no5972.moe/cms/archivers/157.html"/>
+    <id>https://no5972.moe/cms/archivers/157.html</id>
+    <published>2024-03-05T11:00:00.000Z</published>
+    <updated>2024-03-06T03:05:09.404Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>按照 <a href="https://github.com/ventoy/Ventoy/issues/717#issuecomment-765857583" target="_blank" rel="noopener">Github Issue #717</a> 的说法，Ventoy 官方已明确当前仅支持 Windows 7 或以后的。</p><p>如果需要安装 XP，则应使用此电脑支持的一款 PE 系统（实测旧电脑物理机可以在 Ventoy 使用优启通里面的 2003 PE），在 Ventoy 菜单界面中选择该 PE 系统，从该 PE 系统引导，然后使用该 PE 系统的相应的安装工具对相应的 XP 镜像在此电脑执行安装。</p><p><img src="https://picx.zhimg.com/80/v2-6ef0abefeae2d272b233ded023f29d6e_r.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      按照 Github Issue #717 的说法，Ventoy 官方已明确当前仅支持 Windows 7 或以后的。
+    
+    </summary>
+    
+    
+      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>赛博灯泡：Win10/11 设置屏幕缩放 500﹪ 的还原方法（全称键盘，不用鼠标）</title>
