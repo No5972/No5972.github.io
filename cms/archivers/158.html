@@ -126,23 +126,23 @@
     var CONFIG = {"hostname":"no5972.moe","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="遇到此类问题的请尝试将此补丁卸载。具体操作方法是右键开始按钮，选择运行，输入 appwiz.cpl，然后点击左侧的查看已安装的更新，找到并右键点击括弧为 KB5028166 的补丁，选择卸载，确认卸载，然后根据提示重新启动计算机。这样就可以恢复上网并继续使用随身 Wifi 了。">
+  <meta name="description" content="连接共享打印机时有可能报错“用户账户限制，可能的原因包括不允许空密码，登陆时间限制，或强制的策略限制。”这种问题需要将组策略的计算机配置-Windows 设置-安全设置-本地策略-安全选项的帐户：使用空密码的本地帐户只能进行控制台登录设为已禁用。但是有不少电脑安装的系统是家庭版，家庭版没有组策略，手动添加组策略略微比较费时间。这里给出对应的注册表及其具体操作。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2023 年 7 月中旬使用各种随身 Wifi 的电脑无法上网的解决方法">
-<meta property="og:url" content="https://no5972.moe/cms/archivers/149.html">
+<meta property="og:title" content="解决访问共享打印机提示“用户账户限制，不允许空密码”的问题">
+<meta property="og:url" content="https://no5972.moe/cms/archivers/158.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="遇到此类问题的请尝试将此补丁卸载。具体操作方法是右键开始按钮，选择运行，输入 appwiz.cpl，然后点击左侧的查看已安装的更新，找到并右键点击括弧为 KB5028166 的补丁，选择卸载，确认卸载，然后根据提示重新启动计算机。这样就可以恢复上网并继续使用随身 Wifi 了。">
+<meta property="og:description" content="连接共享打印机时有可能报错“用户账户限制，可能的原因包括不允许空密码，登陆时间限制，或强制的策略限制。”这种问题需要将组策略的计算机配置-Windows 设置-安全设置-本地策略-安全选项的帐户：使用空密码的本地帐户只能进行控制台登录设为已禁用。但是有不少电脑安装的系统是家庭版，家庭版没有组策略，手动添加组策略略微比较费时间。这里给出对应的注册表及其具体操作。">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/bf34689f1c094af4a56722b067422236.png">
-<meta property="og:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/5a6ed2c945c2475b9ca6ca51c6f5aa0e.png">
-<meta property="og:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/35b58be631b24daa8564c1b28a204a20.png">
-<meta property="article:published_time" content="2023-07-19T11:30:00.000Z">
-<meta property="article:modified_time" content="2023-07-27T08:03:32.537Z">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-14b59bf35d5466808a863a1ec0e9e2d3_r.png">
+<meta property="og:image" content="https://picx.zhimg.com/80/v2-c377b884a9ecc0efc105d48621f58ee1_r.png">
+<meta property="og:image" content="https://picx.zhimg.com/80/v2-4a06136fd8c2a559ec1f466b4830507c_r.png">
+<meta property="article:published_time" content="2024-03-14T17:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-14T10:06:00.988Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/bf34689f1c094af4a56722b067422236.png">
+<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-14b59bf35d5466808a863a1ec0e9e2d3_r.png">
 
-<link rel="canonical" href="https://no5972.moe/cms/archivers/149.html">
+<link rel="canonical" href="https://no5972.moe/cms/archivers/158.html">
 
 
 <script class="page-configurations">
@@ -155,7 +155,7 @@
   };
 </script>
 
-  <title>2023 年 7 月中旬使用各种随身 Wifi 的电脑无法上网的解决方法 | No.5972 Publishment Website</title>
+  <title>解决访问共享打印机提示“用户账户限制，不允许空密码”的问题 | No.5972 Publishment Website</title>
   <script>
       if (!!window.ActiveXObject || "ActiveXObject" in window) {
         document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
@@ -596,7 +596,7 @@ window.onload = function () {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/149.html">
+    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/158.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
@@ -610,7 +610,7 @@ window.onload = function () {
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-          2023 年 7 月中旬使用各种随身 Wifi 的电脑无法上网的解决方法
+          解决访问共享打印机提示“用户账户限制，不允许空密码”的问题
         </h1>
 
         <div class="post-meta">
@@ -620,7 +620,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2023-07-19 11:30:00 | Modified: 2023-07-27 08:03:32" itemprop="dateCreated datePublished" datetime="2023-07-19T11:30:00+00:00">2023-07-19 11:30:00</time>
+              <time title="Created: 2024-03-14 17:00:00 | Modified: 2024-03-14 10:06:00" itemprop="dateCreated datePublished" datetime="2024-03-14T17:00:00+00:00">2024-03-14 17:00:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -643,21 +643,25 @@ window.onload = function () {
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>230725 更新：360 已推出临时补丁来解决此问题，使用 360 Wifi 的用户无需再卸载下文所述的系统更新了。下载“360随身Wi-Fi3_解决win10-11更新异常.zip”，然后复制到随身 Wi-Fi 应用程序安装目录下。随身 Wi-Fi 应用程序的默认安装目录为： <code>C:\Program Files (x86)\360AP</code>或者 <code>C:\Program Files (x86)\360\360AP</code>。解压此压缩包到当前目录（如：<code>C:\Program Files (x86)\360AP</code>），然后重启电脑。电脑完成启动后，插上随身 Wi-Fi 3，稍等片刻会提示“是否安装驱动”，选择“安装驱动”。稍等片刻，随身 Wi-Fi 3 就可以正常工作。</p>
-<p>注意：</p>
-<ol>
-<li>复制文件和解压时，系统会提示“需要管理员权限”，选择“允许”。</li>
-<li>解压文件时，会出现“是否允许覆盖”的提示，选择“全部覆盖”。</li>
-<li>重启后，如果插上随身 Wi-Fi 3 后没有提示“是否安装驱动”，应重新手动启动下随身 Wi-Fi 应用程序。</li>
-<li>若受限于 Windows 当前用户权限，无法在上面的步骤中提升管理员权限，请联系您的系统管理员来处理。</li>
-</ol>
-<hr />
-<p>微软近日推送了安全更新，在 Win10 下编号为 KB5028166，在 Win11 下编号为 KB5028185。此补丁会导致部分电脑无法上网，<strong>主要是使用了各种品牌的随身 Wifi 的电脑。</strong> 具体症状表现为从控制面板的网络连接（<code>ncpa.cpl</code>）打开详细信息，会发现里面是空白的，如图所示。</p>
-<p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/bf34689f1c094af4a56722b067422236.png" alt="" /></p>
-<p>遇到此类问题的请尝试将此补丁卸载。具体操作方法是右键开始按钮，选择运行，输入 <code>appwiz.cpl</code>，然后点击左侧的查看已安装的更新，找到并右键点击括弧为 KB5028166 的补丁，选择卸载，确认卸载，然后根据提示重新启动计算机。这样就可以恢复上网并继续使用随身 Wifi 了。</p>
-<p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/5a6ed2c945c2475b9ca6ca51c6f5aa0e.png" alt="" /></p>
-<p>重新启动计算机后下载并运行 Show or Hide Updates 工具，选择 Hide Updates，将编号为 KB5028166 补丁选中以屏蔽更新，以防后续还会自动更新此补丁。</p>
-<p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/35b58be631b24daa8564c1b28a204a20.png" alt="" /></p>
+        <p>连接共享打印机时有可能报错“用户账户限制，可能的原因包括不允许空密码，登陆时间限制，或强制的策略限制。”</p>
+<p><img src="https://pic1.zhimg.com/80/v2-14b59bf35d5466808a863a1ec0e9e2d3_r.png" alt="" /></p>
+<p>这种问题需要将组策略的计算机配置-Windows 设置-安全设置-本地策略-安全选项的帐户：使用空密码的本地帐户只能进行控制台登录设为已禁用。</p>
+<p>但是有不少电脑安装的系统是家庭版，家庭版没有组策略，手动添加组策略略微比较费时间。</p>
+<p>这里给出对应的注册表。</p>
+<div class="note info"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa</span><br></pre></td></tr></table></figure>
+<p>将 <code>LimitBlankPasswordUse</code> 设为 0，即可从其他的电脑访问该共享打印机。</p>
+</div>
+<p><strong>具体操作是在连接打印机欲设置共享的电脑上：</strong></p>
+<p>按 Win + R 打开设置，输入 regedit，定位到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa</span><br></pre></td></tr></table></figure>
+<p>将右侧 <code>LimitBlankPasswordUse</code> 双击，将数值数据改为 0；</p>
+<p>如果没有 <code>LimitBlankPasswordUse</code> 的话，在右侧空白处右键，新建-DWORD（32位）值，命名为 <code>LimitBlankPasswordUse</code> 。</p>
+<p>这样设置后即可从其他的电脑访问该共享打印机。</p>
+<p><img src="https://picx.zhimg.com/80/v2-c377b884a9ecc0efc105d48621f58ee1_r.png" alt="" /></p>
+<p>或者也可以使用 reg 文件，打开开始菜单，输入 <code>notepad</code> 回车，打开记事本，输入这些内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa]</span><br><span class="line">&quot;LimitBlankPasswordUse&quot;&#x3D;dword:00000000</span><br></pre></td></tr></table></figure>
+<p>找一个地方保存，然后到保存的地方双击，确认导入，即可从其他的电脑访问该共享打印机。</p>
+<p><img src="https://picx.zhimg.com/80/v2-4a06136fd8c2a559ec1f466b4830507c_r.png" alt="" /></p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
@@ -693,13 +697,10 @@ window.onload = function () {
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/cms/archivers/148.html" rel="prev" title="仅做笔记用：Stable Diffusion 获取历史生成图片的 prompt">
-      <i class="fa fa-chevron-left"></i> 仅做笔记用：Stable Diffusion 获取历史生成图片的 prompt
+    <a href="/cms/archivers/157.html" rel="prev" title="仅作笔记用：Ventoy 不支持 Windows XP">
+      <i class="fa fa-chevron-left"></i> 仅作笔记用：Ventoy 不支持 Windows XP
     </a></div>
-      <div class="post-nav-item">
-    <a href="/cms/archivers/150.html" rel="next" title="仅作笔记用：JS 一行代码实现同步的延时语句">
-      仅作笔记用：JS 一行代码实现同步的延时语句 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
