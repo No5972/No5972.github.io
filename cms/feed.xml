@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2024-03-14T10:06:00.988Z</updated>
+  <updated>2024-03-14T10:20:07.571Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://no5972.moe/cms/archivers/158.html"/>
     <id>https://no5972.moe/cms/archivers/158.html</id>
     <published>2024-03-14T17:00:00.000Z</published>
-    <updated>2024-03-14T10:06:00.988Z</updated>
+    <updated>2024-03-14T10:20:07.571Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>连接共享打印机时有可能报错“用户账户限制，可能的原因包括不允许空密码，登陆时间限制，或强制的策略限制。”</p><p><img src="https://pic1.zhimg.com/80/v2-14b59bf35d5466808a863a1ec0e9e2d3_r.png" alt="" /></p><p>这种问题需要将组策略的计算机配置-Windows 设置-安全设置-本地策略-安全选项的帐户：使用空密码的本地帐户只能进行控制台登录设为已禁用。</p><p>但是有不少电脑安装的系统是家庭版，家庭版没有组策略，手动添加组策略略微比较费时间。</p><p>这里给出对应的注册表。</p><div class="note info"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa</span><br></pre></td></tr></table></figure><p>将 <code>LimitBlankPasswordUse</code> 设为 0，即可从其他的电脑访问该共享打印机。</p></div><p><strong>具体操作是在连接打印机欲设置共享的电脑上：</strong></p><p>按 Win + R 打开设置，输入 regedit，定位到</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa</span><br></pre></td></tr></table></figure><p>将右侧 <code>LimitBlankPasswordUse</code> 双击，将数值数据改为 0；</p><p>如果没有 <code>LimitBlankPasswordUse</code> 的话，在右侧空白处右键，新建-DWORD（32位）值，命名为 <code>LimitBlankPasswordUse</code> 。</p><p>这样设置后即可从其他的电脑访问该共享打印机。</p><p><img src="https://picx.zhimg.com/80/v2-c377b884a9ecc0efc105d48621f58ee1_r.png" alt="" /></p><p>或者也可以使用 reg 文件，打开开始菜单，输入 <code>notepad</code> 回车，打开记事本，输入这些内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa]</span><br><span class="line">&quot;LimitBlankPasswordUse&quot;&#x3D;dword:00000000</span><br></pre></td></tr></table></figure><p>找一个地方保存，然后到保存的地方双击，确认导入，即可从其他的电脑访问该共享打印机。</p><p><img src="https://picx.zhimg.com/80/v2-4a06136fd8c2a559ec1f466b4830507c_r.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>连接共享打印机时有可能报错“用户账户限制，可能的原因包括不允许空密码，登陆时间限制，或强制的策略限制。”</p><p><img src="https://pic1.zhimg.com/80/v2-14b59bf35d5466808a863a1ec0e9e2d3_r.png" alt="" /></p><p>这种问题需要将组策略的计算机配置-Windows 设置-安全设置-本地策略-安全选项的帐户：使用空密码的本地帐户只能进行控制台登录设为已禁用。</p><p>但是有不少电脑安装的系统是家庭版，家庭版没有组策略，手动添加组策略略微比较费时间。</p><p>这里给出对应的注册表。</p><div class="note info"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa</span><br></pre></td></tr></table></figure><p>将 <code>LimitBlankPasswordUse</code> 设为 0，即可从其他的电脑访问该共享打印机。</p></div><p><strong>具体操作是在连接打印机欲设置共享的电脑上：</strong></p><p>按 Win + R 打开设置，输入 <code>regedit</code>，定位到</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa</span><br></pre></td></tr></table></figure><p>将右侧 <code>LimitBlankPasswordUse</code> 双击，将数值数据改为 0；</p><p>如果没有 <code>LimitBlankPasswordUse</code> 的话，在右侧空白处右键，新建-DWORD（32位）值，命名为 <code>LimitBlankPasswordUse</code> 。</p><p>这样设置后即可从其他的电脑访问该共享打印机。</p><p><img src="https://picx.zhimg.com/80/v2-c377b884a9ecc0efc105d48621f58ee1_r.png" alt="" /></p><p>或者也可以使用 reg 文件，打开开始菜单，输入 <code>notepad</code> 回车，打开记事本，输入这些内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa]</span><br><span class="line">&quot;LimitBlankPasswordUse&quot;&#x3D;dword:00000000</span><br></pre></td></tr></table></figure><p>找一个地方保存，然后到保存的地方双击，确认导入，即可从其他的电脑访问该共享打印机。</p><p><img src="https://picx.zhimg.com/80/v2-4a06136fd8c2a559ec1f466b4830507c_r.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
@@ -1877,9 +1877,9 @@
     </summary>
     
     
-      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
