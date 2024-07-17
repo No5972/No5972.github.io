@@ -126,19 +126,19 @@
     var CONFIG = {"hostname":"no5972.moe","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="和之前的控制仓库语言的原理是一样的，这个功能也是通过统计代码量来统计常用语言的占比。所以我們仍然需要使用各个仓库的.gitattributes文件的linguist-language&#x3D;XXX以及linguist-vendored（后者特别注意）。">
+  <meta name="description" content="使用 JavaScript 实现一个函数，参数是一个 base64 的字符串，将这个字符串解析成二进制数据，并将这个二进制数据的每个字节以一个十六进制两位数表示出来，每个字节的十六进制两位数之间空一格，每行 16 个字节，返回整理好的十六进制形式。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github 个人Profile Readme 常用语言卡片 控制比例">
-<meta property="og:url" content="https://no5972.moe/cms/archivers/64.html">
+<meta property="og:title" content="仅做笔记用：base64字符串转换为十六进制形式表示的二进制数据">
+<meta property="og:url" content="https://no5972.moe/cms/archivers/160.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="和之前的控制仓库语言的原理是一样的，这个功能也是通过统计代码量来统计常用语言的占比。所以我們仍然需要使用各个仓库的.gitattributes文件的linguist-language&#x3D;XXX以及linguist-vendored（后者特别注意）。">
+<meta property="og:description" content="使用 JavaScript 实现一个函数，参数是一个 base64 的字符串，将这个字符串解析成二进制数据，并将这个二进制数据的每个字节以一个十六进制两位数表示出来，每个字节的十六进制两位数之间空一格，每行 16 个字节，返回整理好的十六进制形式。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-13T18:00:00.000Z">
-<meta property="article:modified_time" content="2021-07-10T02:51:47.651Z">
+<meta property="article:published_time" content="2024-07-07T12:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-17T00:48:56.324Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://no5972.moe/cms/archivers/64.html">
+<link rel="canonical" href="https://no5972.moe/cms/archivers/160.html">
 
 
 <script class="page-configurations">
@@ -151,7 +151,7 @@
   };
 </script>
 
-  <title>Github 个人Profile Readme 常用语言卡片 控制比例 | No.5972 Publishment Website</title>
+  <title>仅做笔记用：base64字符串转换为十六进制形式表示的二进制数据 | No.5972 Publishment Website</title>
   <script>
       if (!!window.ActiveXObject || "ActiveXObject" in window) {
         document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
@@ -592,7 +592,7 @@ window.onload = function () {
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/64.html">
+    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/160.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
@@ -606,7 +606,7 @@ window.onload = function () {
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-          Github 个人Profile Readme 常用语言卡片 控制比例
+          仅做笔记用：base64字符串转换为十六进制形式表示的二进制数据
         </h1>
 
         <div class="post-meta">
@@ -616,7 +616,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-01-13 18:00:00 | Modified: 2021-07-10 02:51:47" itemprop="dateCreated datePublished" datetime="2021-01-13T18:00:00+00:00">2021-01-13 18:00:00</time>
+              <time title="Created: 2024-07-07 12:00:00 | Modified: 2024-07-17 00:48:56" itemprop="dateCreated datePublished" datetime="2024-07-07T12:00:00+00:00">2024-07-07 12:00:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -624,7 +624,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Github/" itemprop="url" rel="index"><span itemprop="name">Github</span></a>
+                  <a href="/cms/categories/Webapp/" itemprop="url" rel="index"><span itemprop="name">Webapp</span></a>
                 </span>
             </span>
 
@@ -639,15 +639,8 @@ window.onload = function () {
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>和之前的控制仓库语言的原理是一样的，这个功能也是通过统计代码量来统计常用语言的占比。所以我們仍然需要使用各个仓库的<code>.gitattributes</code>文件的<code>linguist-language=XXX</code>以及<code>linguist-vendored</code>（后者特别注意）。<br />
-前者大家都熟悉了，把指定路径的文件视为XXX语言，可以使用星号通配符。<br />
-主要是后者，这个国内很多地方都没说，统计时忽略指定路径的文件的语言，一般用于引入的现有的第三方提供商JS等代码。</p>
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*.bat linguist-language&#x3D;csharp</span><br><span class="line">miniprogram&#x2F;pages&#x2F;index&#x2F;UPNG.js linguist-vendored</span><br><span class="line">miniprogram&#x2F;pages&#x2F;index&#x2F;gifuct-js.js linguist-vendored</span><br><span class="line">miniprogram&#x2F;pages&#x2F;index&#x2F;pako.min.js linguist-vendored</span><br><span class="line">miniprogram&#x2F;pages&#x2F;index&#x2F;jquery*.js linguist-vendored</span><br></pre></td></tr></table></figure>
-<p>通过这两个设置不仅能控制仓库的代码统计，<strong>也可以控制个人Profile Readme 常用语言卡片的语言占比</strong>。</p>
-<hr />
-<p>此外，Hexo的生成博客仓库可能提交不了<code>.gitattributes</code>文件，这里需要修改两个设置，一个是在<code>source</code>目录的根目录添加<code>.gitattributes</code>文件，另一个是在Hexo的配置文件<code>_config.yml</code>中的<code>deploy</code>设置添加<code>ignore_hidden: false</code>，因为Git Bash会将只有后缀名没有文件名的文件默认视为隐藏文件，这里要把隐藏文件也提交至Github仓库。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">repo:</span> </span><br><span class="line">    <span class="attr">github:</span> <span class="string">git@github.com:XXX/YYY.git,master</span></span><br><span class="line">    <span class="attr">gitee:</span> <span class="string">git@gitee.com:XXX/YYY.git,master</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
+        <p>使用 JavaScript 实现一个函数，参数是一个 base64 的字符串，将这个字符串解析成二进制数据，并将这个二进制数据的每个字节以一个十六进制两位数表示出来，每个字节的十六进制两位数之间空一格，每行 16 个字节，返回整理好的十六进制形式。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">base64ToHex</span>(<span class="params">base64Str</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 解析 base64 字符串为 Uint8Array 类型的二进制数据</span></span><br><span class="line">  <span class="keyword">const</span> binaryData = <span class="built_in">Uint8Array</span>.from(atob(base64Str), c =&gt; c.charCodeAt(<span class="number">0</span>));</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 将每个字节转换为十六进制格式</span></span><br><span class="line">  <span class="keyword">let</span> hexData = <span class="string">''</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; binaryData.length; i++) &#123;</span><br><span class="line">    hexData += binaryData[i].toString(<span class="number">16</span>).padStart(<span class="number">2</span>, <span class="string">'0'</span>) + <span class="string">' '</span>;</span><br><span class="line">    <span class="keyword">if</span> ((i + <span class="number">1</span>) % <span class="number">16</span> === <span class="number">0</span>) &#123;</span><br><span class="line">      hexData += <span class="string">'\n'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> hexData.trim();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输入：eJwFwc8NwWAAh+H3pz6VVpRKI5T4EyQicekBLRdCwjCkQ2hXEAdLuDmYgzks4Hl+BUvWmdIexIwnZRe9UQV5qIXGqI4s5KMaaqAVmqAXTht18Qo4S+Y9tJZZMN1ICZMYhYyONC90UoJIQZ/qAA3xr7IzubmKX8wH+4Z5YO6UtjI7meqQJQtSEk5kOnChR0hMpFz8/hq+FNg=</span></span><br><span class="line"><span class="comment">输出：</span></span><br><span class="line"><span class="comment">78 9c 05 c1 cf 0d c1 60 00 87 e1 f7 a7 3e 95 56 </span></span><br><span class="line"><span class="comment">94 4a 23 94 f8 13 24 22 71 e9 01 2d 17 42 c2 30 </span></span><br><span class="line"><span class="comment">a4 43 68 57 10 07 4b b8 39 98 83 39 2c e0 79 7e </span></span><br><span class="line"><span class="comment">05 4b d6 99 d2 1e c4 8c 27 65 17 bd 51 05 79 a8 </span></span><br><span class="line"><span class="comment">85 c6 a8 8e 2c e4 a3 1a 6a a0 15 9a a0 17 4e 1b </span></span><br><span class="line"><span class="comment">75 f1 0a 38 4b e6 3d b4 96 59 30 dd 48 09 93 18 </span></span><br><span class="line"><span class="comment">85 8c 8e 34 2f 74 52 82 48 41 9f ea 00 0d f1 af </span></span><br><span class="line"><span class="comment">b2 33 b9 b9 8a 5f cc 07 fb 86 79 60 ee 94 b6 32 </span></span><br><span class="line"><span class="comment">3b 99 ea 90 25 0b 52 12 4e 64 3a 70 a1 47 48 4c </span></span><br><span class="line"><span class="comment">a4 5c fc fe 1a be 14 d8</span></span><br><span class="line"><span class="comment">可能是zlib压缩后的数据，使用Nodejs zlib解压出来之后的结果：</span></span><br><span class="line"><span class="comment">f3 02 03 01 03 6e 00 06 45 00 00 01 00 2b 00 b3 </span></span><br><span class="line"><span class="comment">00 08 0b 00 01 be 00 01 0c 00 01 0f 00 01 19 00 </span></span><br><span class="line"><span class="comment">01 25 00 01 11 00 01 03 00 01 12 00 01 10 00 01 </span></span><br><span class="line"><span class="comment">13 00 01 39 00 01 26 00 01 ba 00 0a 1a 00 01 1d </span></span><br><span class="line"><span class="comment">00 0f 02 00 0a 38 00 2e 1f 00 01 3c 01 05 37 00 </span></span><br><span class="line"><span class="comment">29 3d 01 01 3b 00 26 3a 00 01 1b 00 24 49 00 17 </span></span><br><span class="line"><span class="comment">6f 00 1c 71 00 15 33 01 15 20 00 0e 21 00 01 22 </span></span><br><span class="line"><span class="comment">00 12 85 01 07 86 01 0b 87 01 04 d9 00 05 d8 00 </span></span><br><span class="line"><span class="comment">07 98 00 05 9e 00 05 9a 00 06 42 01 05 43 01 05 </span></span><br><span class="line"><span class="comment">0e 22 00 38 00 37 00 71 00 3b 00 4a 00 86 01 46 </span></span><br><span class="line"><span class="comment">00 6f 00 1f 00 1b 00 3a 00 33 01 87 01 00 f3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     
@@ -682,13 +675,10 @@ window.onload = function () {
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/cms/archivers/63.html" rel="prev" title="Edge、Chrome 1月12日之后继续使用Flash的方法（超级专业，高能预警）">
-      <i class="fa fa-chevron-left"></i> Edge、Chrome 1月12日之后继续使用Flash的方法（超级专业，高能预警）
+    <a href="/cms/archivers/159.html" rel="prev" title="计算机扫盲之路：教学还是救赎">
+      <i class="fa fa-chevron-left"></i> 计算机扫盲之路：教学还是救赎
     </a></div>
-      <div class="post-nav-item">
-    <a href="/cms/archivers/65.html" rel="next" title="AX版Flash 1月12日之后继续使用Flash的方法">
-      AX版Flash 1月12日之后继续使用Flash的方法 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -859,6 +849,9 @@ window.onload = function () {
   
 
   
+      
+<link rel="stylesheet" href="//unpkg.com/katex@0.15.1/dist/katex.min.css">
+
 
   
 

@@ -126,19 +126,17 @@
     var CONFIG = {"hostname":"no5972.moe","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="和之前的控制仓库语言的原理是一样的，这个功能也是通过统计代码量来统计常用语言的占比。所以我們仍然需要使用各个仓库的.gitattributes文件的linguist-language&#x3D;XXX以及linguist-vendored（后者特别注意）。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Github 个人Profile Readme 常用语言卡片 控制比例">
-<meta property="og:url" content="https://no5972.moe/cms/archivers/64.html">
+  <meta name="description" content="No.5972 is silly B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="No.5972 Publishment Website">
+<meta property="og:url" content="https://no5972.moe/cms/archives/2024/07/index.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="和之前的控制仓库语言的原理是一样的，这个功能也是通过统计代码量来统计常用语言的占比。所以我們仍然需要使用各个仓库的.gitattributes文件的linguist-language&#x3D;XXX以及linguist-vendored（后者特别注意）。">
+<meta property="og:description" content="No.5972 is silly B">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-13T18:00:00.000Z">
-<meta property="article:modified_time" content="2021-07-10T02:51:47.651Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://no5972.moe/cms/archivers/64.html">
+<link rel="canonical" href="https://no5972.moe/cms/archives/2024/07/">
 
 
 <script class="page-configurations">
@@ -146,12 +144,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>Github 个人Profile Readme 常用语言卡片 控制比例 | No.5972 Publishment Website</title>
+  <title>Archive | No.5972 Publishment Website</title>
   <script>
       if (!!window.ActiveXObject || "ActiveXObject" in window) {
         document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
@@ -585,116 +583,51 @@ window.onload = function () {
       <div class="main-inner">
         
 
-        <div class="content post posts-expand">
+        <div class="content archive">
           
 
-    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://no5972.moe/cms/archivers/64.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://no5972.moe/cms/static/32865305.jpg">
-      <meta itemprop="name" content="No.5972">
-      <meta itemprop="description" content="No.5972 is silly B">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="No.5972 Publishment Website">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-          Github 个人Profile Readme 常用语言卡片 控制比例
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-13 18:00:00 | Modified: 2021-07-10 02:51:47" itemprop="dateCreated datePublished" datetime="2021-01-13T18:00:00+00:00">2021-01-13 18:00:00</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/cms/categories/Github/" itemprop="url" rel="index"><span itemprop="name">Github</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <p>和之前的控制仓库语言的原理是一样的，这个功能也是通过统计代码量来统计常用语言的占比。所以我們仍然需要使用各个仓库的<code>.gitattributes</code>文件的<code>linguist-language=XXX</code>以及<code>linguist-vendored</code>（后者特别注意）。<br />
-前者大家都熟悉了，把指定路径的文件视为XXX语言，可以使用星号通配符。<br />
-主要是后者，这个国内很多地方都没说，统计时忽略指定路径的文件的语言，一般用于引入的现有的第三方提供商JS等代码。</p>
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*.bat linguist-language&#x3D;csharp</span><br><span class="line">miniprogram&#x2F;pages&#x2F;index&#x2F;UPNG.js linguist-vendored</span><br><span class="line">miniprogram&#x2F;pages&#x2F;index&#x2F;gifuct-js.js linguist-vendored</span><br><span class="line">miniprogram&#x2F;pages&#x2F;index&#x2F;pako.min.js linguist-vendored</span><br><span class="line">miniprogram&#x2F;pages&#x2F;index&#x2F;jquery*.js linguist-vendored</span><br></pre></td></tr></table></figure>
-<p>通过这两个设置不仅能控制仓库的代码统计，<strong>也可以控制个人Profile Readme 常用语言卡片的语言占比</strong>。</p>
-<hr />
-<p>此外，Hexo的生成博客仓库可能提交不了<code>.gitattributes</code>文件，这里需要修改两个设置，一个是在<code>source</code>目录的根目录添加<code>.gitattributes</code>文件，另一个是在Hexo的配置文件<code>_config.yml</code>中的<code>deploy</code>设置添加<code>ignore_hidden: false</code>，因为Git Bash会将只有后缀名没有文件名的文件默认视为隐藏文件，这里要把隐藏文件也提交至Github仓库。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">ignore_hidden:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">repo:</span> </span><br><span class="line">    <span class="attr">github:</span> <span class="string">git@github.com:XXX/YYY.git,master</span></span><br><span class="line">    <span class="attr">gitee:</span> <span class="string">git@gitee.com:XXX/YYY.git,master</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
-    </div>
-
-    
-    
-    
-        <div class="reward-container">
-  <div>Buy me a coffee</div>
-  <button onclick="document.getElementById('post-reward').classList.toggle('active');">
-    Donate
-  </button>
-  <div id="post-reward">
-      
-      <div>
-        <img src="/cms/sponsor.png" alt="No.5972 Alipay">
-        <p>Alipay</p>
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        
+        <span class="collection-header">Great! 164 posts in total. Keep on posting.</span>
       </div>
 
-  </div>
-</div>
-
-      <footer class="post-footer">
-
-        
-  <div class="addthis_inline_share_toolbox">
-    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1fe0947c0fa73a" async="async"></script>
-  </div>
-  <div class="ad" style="text-align: center;">
-    <a href="https://curl.qcloud.com/WUYKGkn3" target="_blank"><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/1bc5c422398948feb54ddcb27faeaf04.jpg"></img></a>
-  </div>
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/cms/archivers/63.html" rel="prev" title="Edge、Chrome 1月12日之后继续使用Flash的方法（超级专业，高能预警）">
-      <i class="fa fa-chevron-left"></i> Edge、Chrome 1月12日之后继续使用Flash的方法（超级专业，高能预警）
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/cms/archivers/65.html" rel="next" title="AX版Flash 1月12日之后继续使用Flash的方法">
-      AX版Flash 1月12日之后继续使用Flash的方法 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      
+    <div class="collection-year">
+      <span class="collection-header">2024</span>
     </div>
-      </footer>
-    
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2024-07-07T12:00:00+00:00"
+              content="2024-07-07">
+          07-07
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/cms/archivers/160.html" itemprop="url">
+            <span itemprop="name">仅做笔记用：base64字符串转换为十六进制形式表示的二进制数据</span>
+          </a>
+      </div>
+
+    </header>
   </article>
+
+
+    </div>
+  </div>
   
   
+  
+
   
 
 
