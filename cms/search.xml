@@ -24,6 +24,36 @@
       </categories>
   </entry>
   <entry>
+    <title>赛博文盲式教学：VC6 解决“打开”命令出现闪退、错误的问题</title>
+    <url>/cms//archivers/161.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>用 VC6 写代码的，默认视为电脑新手，因为大部分使用 VC6 的并不是专业人士，而是学业需要不得不使用 VC6。所以需要这种赛博文盲式的手把手教学来书写此文章。</strong></p>
+<p>VC6 打开命令出现闪退、错误的问题，可使用 <code>filetool</code> 项目来解决。但这个项目网上不好找，需要仔细搜索。可以尝试在搜索引擎搜索“VC6 filetool项目下载”看看能不能找到下载。下载得到的是一个 EXE 格式的 WinZip 的自解压程序， <strong>大小是 51432 字节，MD5 码是 <code>e173fb638e8eab8f9864b3186f09e891</code> ，SHA256 码是 <code>29ba2c16ef888e9bc727a051cc2cddb2fa9ada49f4616eff2e829303cdd5fbbc</code> 。</strong></p>
+<p><img src="https://picx.zhimg.com/v2-c0bd68b390d49dbc63393968dc1e3d32_r.jpg" alt="" /></p>
+<p>使用电脑上任意一款解压缩软件解压这个 EXE 文件，找到里面的 DSW 文件，用您的 VC6 开发环境打开它 <em>（可以直接将 DSW 文件拖进 VC6 的窗口里面）</em> 。点击菜单的组建-批组建，然后点击创建，此时即开始编译该项目。</p>
+<p><img src="https://pic1.zhimg.com/v2-6710b9f27c6434a494b907cad4ad73d9_r.png" alt="" /></p>
+<p><img src="https://picx.zhimg.com/v2-565f7563455655207b1d81d257acba41_r.png" alt="" /></p>
+<p><img src="https://picx.zhimg.com/v2-63384a49f9dbcf004f1c4ad97190012e_r.png" alt="" /></p>
+<p>然后前往该目录下的 <code>Release</code> 目录 <em>（尽量不要用 <code>Debug</code> 目录的那个）</em> ，找到 <code>FileTool.dll</code> 文件，将其复制到您的 VC6 安装目录的 <code>Common\MSDev98\AddIns</code> 路径目录下。然后右键开始按钮，Windows PowerShell （管理员），输入 cd 空格，然后把那个 <code>AddIns</code> 文件夹窗口地址栏的 <code>AddIns</code> 拖到 PowerShell 窗口中回车，这样 <code>cd</code> 到这个 <code>Release</code> 目录，输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">regsvr32 FileTool.dll</span><br></pre></td></tr></table></figure>
+<p>并回车，这样将该编译好的 DLL 文件注册。</p>
+<p><img src="https://picx.zhimg.com/v2-356101e89303238caf6155708f13c995_r.png" alt="" /></p>
+<p><img src="https://pic1.zhimg.com/v2-b3d2bb6de87f677dcff38c0335328049_r.png" alt="" /></p>
+<p><img src="https://picx.zhimg.com/v2-52ea4148ae527c2def13203bd9b7c69f_r.png" alt="" /></p>
+<p><img src="https://pic1.zhimg.com/80/v2-03d630fe2376b91babf21504df1110e8_r.png" alt="" /></p>
+<p>关闭并重新打开 VC6。点击工具-定制，附加项和宏文件选项卡，将 <strong>FileTool Developer Studio Add-in</strong> 这一项勾选。</p>
+<p><img src="https://pica.zhimg.com/v2-db2e7c9fc2d526345937d074393a7300_r.png" alt="" /></p>
+<p><img src="https://pica.zhimg.com/v2-366d559c2f2c36a2c470e5dd8abb9cdb_r.png" alt="" /></p>
+<p>此时将出现一个悬浮的工具栏，以后请使用此工具栏上的 O 按钮打开文件，使用此工具栏上的 A 按钮将现有文件添加到项目。或者也可以将这个 O 按钮复制到文件菜单中，具体做法是点击菜单的工具-定制，然后打开菜单的文件，按住 Ctrl，然后将 O 按钮拖放到文件菜单的“打开”旁边。关闭定制对话框。这样文件菜单就多出来了一个 Open 菜单项， <strong>以后就请使用这个 Open 菜单项来打开文件，不要再使用“打开”菜单项来打开了。</strong></p>
+<p><img src="https://pic1.zhimg.com/80/v2-b28329005f4cb89ddfb63154393ffbcd_r.png" alt="" /></p>
+<p><img src="https://picx.zhimg.com/v2-7092807321fe55a011aa0218cf3e347c_r.png" alt="" /></p>
+<p><img src="https://pic1.zhimg.com/80/v2-e448b324e1a156d6904a5de1fc4662a3_r.png" alt="" /></p>
+<p><img src="https://picx.zhimg.com/v2-ac06d747003fa4580d33b940be2fd09c_r.png" alt="" /></p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>C/C++</category>
+      </categories>
+  </entry>
+  <entry>
     <title>仅做笔记用：base64字符串转换为十六进制形式表示的二进制数据</title>
     <url>/cms//archivers/160.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>使用 JavaScript 实现一个函数，参数是一个 base64 的字符串，将这个字符串解析成二进制数据，并将这个二进制数据的每个字节以一个十六进制两位数表示出来，每个字节的十六进制两位数之间空一格，每行 16 个字节，返回整理好的十六进制形式。</p>
