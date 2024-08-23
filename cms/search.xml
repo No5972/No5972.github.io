@@ -28,6 +28,7 @@
     <url>/cms//archivers/162.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>此代码的作用是，将一张 PNG 的图像隐藏到另外一个 PNG 文件中，不改变原 PNG 文件的图像的任何地方。</p>
 <p>大致原理是，通过 PowerShell 向 PNG 文件指定位置添加任意内容，而不破坏 PNG 文件的图像。将要隐藏的 PNG 文件的内容转换为 Base64 字符串，然后将这个 Base64 字符串隐藏到宿主 PNG 文件的指定位置即可。</p>
+<p>隐藏好的 PNG，图像和原来的 PNG 没有任何区别。但用纯文本编辑器强行打开，就能看到后半部分隐藏了另外一张图片的 Base64 内容，这部分 Base64 内容能够还原为另外一张 PNG 图片。此前一些将链接隐藏到一张图片中的“图种”也是类似的原理。</p>
 <table>
 <thead>
 <tr>
@@ -3097,8 +3098,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Web Building</category>
         <category>Automation</category>
+        <category>Web Building</category>
         <category>Github</category>
       </categories>
   </entry>
