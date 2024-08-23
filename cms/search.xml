@@ -3098,8 +3098,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Automation</category>
         <category>Web Building</category>
+        <category>Automation</category>
         <category>Github</category>
       </categories>
   </entry>
@@ -3545,8 +3545,8 @@ c124.7 8 235 61.7 331 161 31.3 33.3 59.7 72.7 85 118l7 13v35z'/></svg></span></s
 把Github上面那个代码<a href="https://github.com/cefsharp/CefSharp/blob/master/CefSharp.Example/DevTools/DevToolsExtensions.cs" target="_blank" rel="noopener">https://github.com/cefsharp/CefSharp/blob/master/CefSharp.Example/DevTools/DevToolsExtensions.cs</a>拷过来，放到项目里面，改一下命名空间。然后就可以对CEF控件直接调用了。这里用的是WinForm显示的GUI。然后在代码里面这样写方法就可以调用了。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">invokeCapture</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">byte</span>[] result = <span class="keyword">await</span> CefSharp.Example.DevTools.DevToolsExtensions.CaptureScreenShotAsPng(browser); <span class="comment">// browser是CEF控件实例</span></span><br><span class="line">        SaveFileDialog dialog = <span class="keyword">new</span> SaveFileDialog();</span><br><span class="line">        dialog.Filter = <span class="string">"PNG图片 (*.PNG)|*.PNG"</span>;</span><br><span class="line">        DialogResult dresult = dialog.ShowDialog();</span><br><span class="line">        <span class="keyword">if</span> (dresult == DialogResult.OK)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">string</span> path = dialog.FileName;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                File.WriteAllBytes(path, result);</span><br><span class="line">                MessageBox.Show(path + <span class="string">"保存成功。"</span>);</span><br><span class="line">                </span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e)</span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(path + <span class="string">"保存失败！错误信息："</span> + e.Message);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span> (Exception ee)</span><br><span class="line">    &#123;</span><br><span class="line">        MessageBox.Show(<span class="string">"目前暂时只支持截一次图，暂时不支持截更多次数的图片，如果要继续截图得退出程序重开。作者确实没法解决这个问题了，谁有好的想法也欢迎提出来，具体详情请关注https://stackoverflow.com/questions/65334430/message-id-went-wrong-when-using-cef-devtools-executedevtoolsmethodasync-and-pag 。相关技术细节："</span> + ee.Message, <span class="string">"暂不支持的操作"</span>, MessageBoxButtons.OK, MessageBoxIcon.Error);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>C#</category>
         <category>Automation</category>
+        <category>C#</category>
       </categories>
   </entry>
   <entry>
