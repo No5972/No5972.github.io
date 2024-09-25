@@ -25,6 +25,21 @@
   </entry>
   <entry>
     <title>PowerShell 编程实例：将一张 PNG 的图像隐藏到另外一个 PNG 文件中，不改变原 PNG 图像</title>
+    <url>/cms//archivers/163.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol>
+<li>这是台惠普 Prodesk 400 G4 的品牌机，主板是 H270，现需要添置一块 M.2 NVMe 的固态硬盘，但这个主板没有 M.2 插槽，故使用 PCI-E 转接卡转接。</li>
+<li><strong>这个品牌机主板的 BIOS 可以直接识别转接卡上的固态硬盘作为启动项，但是貌似只能以传统方式引导转接卡上的 NVMe 硬盘，UEFI 方式会直接失败。</strong> 要用 UEFI 方式的话，除非用 Clover 方式安装，但这个 Clover 的过程过于复杂。</li>
+<li>如果原机械硬盘是 Win7 的系统，DG 转移完数据之后，找一个支持 NVMe 硬盘的 Ghost Win7 系统，使用 Ghost Explorer 将 GHO 镜像里面的 <code>C:\Windows\System32\DriverStore</code> 整个目录提取出来，然后使用 Dism++ 将提取出来的目录添加驱动到新的转接卡的 NVMe 硬盘上。注意所找的 Ghost 系统位数要和原机械硬盘的系统保持一致。</li>
+<li>如果 Win7 系统启动报错 <code>0xc000000e</code>，是因为 BCD 里面存储的启动项信息还是原来机械硬盘的 ID，不是新硬盘的 ID。这种情况一般是切换回原来的机械硬盘或者 U 盘 PE 系统，使用 Dism++ 工具修复新硬盘的引导。</li>
+<li>如果安装 Win10 系统，注意以 MBR 方式安装，不要用 GPT 方式安装。</li>
+</ol>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Webapp</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>PowerShell 编程实例：将一张 PNG 的图像隐藏到另外一个 PNG 文件中，不改变原 PNG 图像</title>
     <url>/cms//archivers/162.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>此代码的作用是，将一张 PNG 的图像隐藏到另外一个 PNG 文件中，不改变原 PNG 文件的图像的任何地方。</p>
 <p>大致原理是，通过 PowerShell 向 PNG 文件指定位置添加任意内容，而不破坏 PNG 文件的图像。将要隐藏的 PNG 文件的内容转换为 Base64 字符串，然后将这个 Base64 字符串隐藏到宿主 PNG 文件的指定位置即可。</p>
@@ -3545,8 +3560,8 @@ c124.7 8 235 61.7 331 161 31.3 33.3 59.7 72.7 85 118l7 13v35z'/></svg></span></s
 把Github上面那个代码<a href="https://github.com/cefsharp/CefSharp/blob/master/CefSharp.Example/DevTools/DevToolsExtensions.cs" target="_blank" rel="noopener">https://github.com/cefsharp/CefSharp/blob/master/CefSharp.Example/DevTools/DevToolsExtensions.cs</a>拷过来，放到项目里面，改一下命名空间。然后就可以对CEF控件直接调用了。这里用的是WinForm显示的GUI。然后在代码里面这样写方法就可以调用了。</p>
 <figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">async</span> <span class="keyword">void</span> <span class="title">invokeCapture</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">byte</span>[] result = <span class="keyword">await</span> CefSharp.Example.DevTools.DevToolsExtensions.CaptureScreenShotAsPng(browser); <span class="comment">// browser是CEF控件实例</span></span><br><span class="line">        SaveFileDialog dialog = <span class="keyword">new</span> SaveFileDialog();</span><br><span class="line">        dialog.Filter = <span class="string">"PNG图片 (*.PNG)|*.PNG"</span>;</span><br><span class="line">        DialogResult dresult = dialog.ShowDialog();</span><br><span class="line">        <span class="keyword">if</span> (dresult == DialogResult.OK)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">string</span> path = dialog.FileName;</span><br><span class="line">            <span class="keyword">try</span></span><br><span class="line">            &#123;</span><br><span class="line">                File.WriteAllBytes(path, result);</span><br><span class="line">                MessageBox.Show(path + <span class="string">"保存成功。"</span>);</span><br><span class="line">                </span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e)</span><br><span class="line">            &#123;</span><br><span class="line">                MessageBox.Show(path + <span class="string">"保存失败！错误信息："</span> + e.Message);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span> (Exception ee)</span><br><span class="line">    &#123;</span><br><span class="line">        MessageBox.Show(<span class="string">"目前暂时只支持截一次图，暂时不支持截更多次数的图片，如果要继续截图得退出程序重开。作者确实没法解决这个问题了，谁有好的想法也欢迎提出来，具体详情请关注https://stackoverflow.com/questions/65334430/message-id-went-wrong-when-using-cef-devtools-executedevtoolsmethodasync-and-pag 。相关技术细节："</span> + ee.Message, <span class="string">"暂不支持的操作"</span>, MessageBoxButtons.OK, MessageBoxIcon.Error);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Automation</category>
         <category>C#</category>
+        <category>Automation</category>
       </categories>
   </entry>
   <entry>
