@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2024-09-25T02:14:06.912Z</updated>
+  <updated>2024-09-25T02:28:10.628Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>PowerShell 编程实例：将一张 PNG 的图像隐藏到另外一个 PNG 文件中，不改变原 PNG 图像</title>
+    <title>仅作笔记用：M.2转接卡转移原机械硬盘系统盘</title>
     <link href="https://no5972.moe/cms/archivers/163.html"/>
     <id>https://no5972.moe/cms/archivers/163.html</id>
     <published>2024-08-23T17:00:00.000Z</published>
-    <updated>2024-09-25T02:14:06.912Z</updated>
+    <updated>2024-09-25T02:28:10.628Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol><li>这是台惠普 Prodesk 400 G4 的品牌机，主板是 H270，现需要添置一块 M.2 NVMe 的固态硬盘，但这个主板没有 M.2 插槽，故使用 PCI-E 转接卡转接。</li><li><strong>这个品牌机主板的 BIOS 可以直接识别转接卡上的固态硬盘作为启动项，但是貌似只能以传统方式引导转接卡上的 NVMe 硬盘，UEFI 方式会直接失败。</strong> 要用 UEFI 方式的话，除非用 Clover 方式安装，但这个 Clover 的过程过于复杂。</li><li>如果原机械硬盘是 Win7 的系统，DG 转移完数据之后，找一个支持 NVMe 硬盘的 Ghost Win7 系统，使用 Ghost Explorer 将 GHO 镜像里面的 <code>C:\Windows\System32\DriverStore</code> 整个目录提取出来，然后使用 Dism++ 将提取出来的目录添加驱动到新的转接卡的 NVMe 硬盘上。注意所找的 Ghost 系统位数要和原机械硬盘的系统保持一致。</li><li>如果 Win7 系统启动报错 <code>0xc000000e</code>，是因为 BCD 里面存储的启动项信息还是原来机械硬盘的 ID，不是新硬盘的 ID。这种情况一般是切换回原来的机械硬盘或者 U 盘 PE 系统，使用 Dism++ 工具修复新硬盘的引导。</li><li>如果安装 Win10 系统，注意以 MBR 方式安装，不要用 GPT 方式安装。</li></ol><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
