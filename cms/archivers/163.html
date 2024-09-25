@@ -126,17 +126,23 @@
     var CONFIG = {"hostname":"no5972.moe","root":"/cms/","scheme":"Pisces","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="这是台惠普 Prodesk 400 G4 的品牌机，主板是 H270，现需要添置一块 M.2 NVMe 的固态硬盘，但这个主板没有 M.2 插槽，故使用 PCI-E 转接卡转接。">
+  <meta name="description" content="近期发现 WPS 2023 这一个非常恼人的特性，在图片文件的属性窗口里面乱加第三方选项卡。同事的电脑安装了这个版本，就让同事从注册表试了一下。还好金山他们藏的不是很深，借助 GPT 很快也就找到了。这里再用鄙人自己的虚拟机演示一遍。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="仅作笔记用：M.2转接卡转移原机械硬盘系统盘">
+<meta property="og:title" content="如何删除 WPS 在图片文件属性中添加的“属性修改”选项卡">
 <meta property="og:url" content="https://no5972.moe/cms/archivers/163.html">
 <meta property="og:site_name" content="No.5972 Publishment Website">
-<meta property="og:description" content="这是台惠普 Prodesk 400 G4 的品牌机，主板是 H270，现需要添置一块 M.2 NVMe 的固态硬盘，但这个主板没有 M.2 插槽，故使用 PCI-E 转接卡转接。">
+<meta property="og:description" content="近期发现 WPS 2023 这一个非常恼人的特性，在图片文件的属性窗口里面乱加第三方选项卡。同事的电脑安装了这个版本，就让同事从注册表试了一下。还好金山他们藏的不是很深，借助 GPT 很快也就找到了。这里再用鄙人自己的虚拟机演示一遍。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-09-25T02:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-25T02:30:17.104Z">
+<meta property="og:image" content="https://pica.zhimg.com/v2-f912effcfb9a122224af41fba66d7c14_r.png">
+<meta property="og:image" content="https://pica.zhimg.com/v2-0acbfc7ef105569648fe67e5e67d7398_r.png">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-2793d50f8a0ac61a65d28d9c6b8c6170_r.png">
+<meta property="og:image" content="https://pica.zhimg.com/v2-534f3b053c7e45e3bcbf803b340699ca_r.png">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-c278d74e99642d692602cbe35603d6a6_r.png">
+<meta property="article:published_time" content="2024-09-12T09:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-25T02:45:24.449Z">
 <meta property="article:author" content="No.5972">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pica.zhimg.com/v2-f912effcfb9a122224af41fba66d7c14_r.png">
 
 <link rel="canonical" href="https://no5972.moe/cms/archivers/163.html">
 
@@ -151,7 +157,7 @@
   };
 </script>
 
-  <title>仅作笔记用：M.2转接卡转移原机械硬盘系统盘 | No.5972 Publishment Website</title>
+  <title>如何删除 WPS 在图片文件属性中添加的“属性修改”选项卡 | No.5972 Publishment Website</title>
   <script>
       if (!!window.ActiveXObject || "ActiveXObject" in window) {
         document.write('Please note that this site no longer supports Internet Explorer. Please use <a href=\"https://www.microsoft.com/edge\">Microsoft Edge</a> or other browsers to browse this site.');
@@ -543,17 +549,17 @@ window.onload = function () {
       <div class="site-state-item site-state-posts">
           <a href="/cms/archives/">
         
-          <span class="site-state-item-count">167</span>
+          <span class="site-state-item-count">168</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
 
     
                 <nav class="site-nav">
-                  <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cms/categories/AtoW/">AtoW</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Automation/">Automation</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C/">C#</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C-C/">C/C++</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Github/">Github</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Java/">Java</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/JavaScript/">JavaScript</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Moving-Away-from-Flash/">Moving Away from Flash</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Other/">Other</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Python/">Python</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Web-Building/">Web Building</a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Webapp/">Webapp</a><span class="category-list-count">51</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll-update/">jekyll update</a><span class="category-list-count">4</span></li></ul>
+                  <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/cms/categories/AtoW/">AtoW</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Automation/">Automation</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C/">C#</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/C-C/">C/C++</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Github/">Github</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Java/">Java</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/JavaScript/">JavaScript</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Moving-Away-from-Flash/">Moving Away from Flash</a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Other/">Other</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Python/">Python</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Web-Building/">Web Building</a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/Webapp/">Webapp</a><span class="category-list-count">52</span></li><li class="category-list-item"><a class="category-list-link" href="/cms/categories/jekyll-update/">jekyll update</a><span class="category-list-count">4</span></li></ul>
                 </nav>
                 <nav class="site-nav" style="width: 80%; overflow-x: hidden;">
-                  <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/163.html">仅作笔记用：M.2转接卡转移原机械硬盘系统盘</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/162.html">PowerShell 编程实例：将一张 PNG 的图像隐藏到另外一个 PNG 文件中，不改变原 PNG 图像</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/161.html">赛博文盲式教学：VC6 解决“打开”命令出现闪退、错误的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/160.html">仅做笔记用：base64字符串转换为十六进制形式表示的二进制数据</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/159.html">计算机扫盲之路：教学还是救赎</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/158.html">解决访问共享打印机提示“用户账户限制，不允许空密码”的问题</a></li></ul>
+                  <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/164.html">仅作笔记用：M.2转接卡转移原机械硬盘系统盘</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/163.html">如何删除 WPS 在图片文件属性中添加的“属性修改”选项卡</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/162.html">PowerShell 编程实例：将一张 PNG 的图像隐藏到另外一个 PNG 文件中，不改变原 PNG 图像</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/161.html">赛博文盲式教学：VC6 解决“打开”命令出现闪退、错误的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/160.html">仅做笔记用：base64字符串转换为十六进制形式表示的二进制数据</a></li><li class="post-list-item"><a class="post-list-link" href="/cms/archivers/159.html">计算机扫盲之路：教学还是救赎</a></li></ul>
                 </nav>
               
   </nav>
@@ -606,7 +612,7 @@ window.onload = function () {
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-          仅作笔记用：M.2转接卡转移原机械硬盘系统盘
+          如何删除 WPS 在图片文件属性中添加的“属性修改”选项卡
         </h1>
 
         <div class="post-meta">
@@ -616,7 +622,7 @@ window.onload = function () {
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2024-09-25 10:00:00 | Modified: 2024-09-25 10:30:17" itemprop="dateCreated datePublished" datetime="2024-09-25T10:00:00+08:00">2024-09-25 10:00:00</time>
+              <time title="Created: 2024-09-12 17:00:00 | Modified: 2024-09-25 10:45:24" itemprop="dateCreated datePublished" datetime="2024-09-12T17:00:00+08:00">2024-09-12 17:00:00</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -639,13 +645,17 @@ window.onload = function () {
     <div class="post-body" itemprop="articleBody">
 
       
-        <ol>
-<li>这是台惠普 Prodesk 400 G4 的品牌机，主板是 H270，现需要添置一块 M.2 NVMe 的固态硬盘，但这个主板没有 M.2 插槽，故使用 PCI-E 转接卡转接。</li>
-<li><strong>这个品牌机主板的 BIOS 可以直接识别转接卡上的固态硬盘作为启动项，但是貌似只能以传统方式引导转接卡上的 NVMe 硬盘，UEFI 方式会直接失败。</strong> 要用 UEFI 方式的话，除非用 Clover 方式安装，但这个 Clover 的过程过于复杂。</li>
-<li>如果原机械硬盘是 Win7 的系统，DG 转移完数据之后，找一个支持 NVMe 硬盘的 Ghost Win7 系统，使用 Ghost Explorer 将 GHO 镜像里面的 <code>C:\Windows\System32\DriverStore</code> 整个目录提取出来，然后使用 Dism++ 将提取出来的目录添加驱动到新的转接卡的 NVMe 硬盘上。注意所找的 Ghost 系统位数要和原机械硬盘的系统保持一致。</li>
-<li>如果 Win7 系统启动报错 <code>0xc000000e</code>，是因为 BCD 里面存储的启动项信息还是原来机械硬盘的 ID，不是新硬盘的 ID。这种情况一般是切换回原来的机械硬盘或者 U 盘 PE 系统，使用 Dism++ 工具修复新硬盘的引导。</li>
-<li>如果安装 Win10 系统，注意以 MBR 方式安装，不要用 GPT 方式安装。</li>
-</ol>
+        <p>近期发现 WPS 2023 这一个非常恼人的特性，在图片文件的属性窗口里面乱加第三方选项卡。同事的电脑安装了这个版本，就让同事从注册表试了一下。还好金山他们藏的不是很深，借助 GPT 很快也就找到了。这里再用鄙人自己的虚拟机演示一遍。</p>
+<p><img src="https://pica.zhimg.com/v2-f912effcfb9a122224af41fba66d7c14_r.png" alt="" /></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CLASSES_ROOT\*\shellex\PropertySheetHandlers\&#123;593F1699-1B70-4443-A2EE-39483EBA4346&#125;</span><br></pre></td></tr></table></figure>
+<p>右键开始按钮，运行，输入 regedit 确定打开注册表编辑器，定位到上面写的这串路径。把左侧这个名为 <code>{593F1699-1B70-4443-A2EE-39483EBA4346}</code> 的目录删除。</p>
+<p><img src="https://pica.zhimg.com/v2-0acbfc7ef105569648fe67e5e67d7398_r.png" alt="" /></p>
+<p>此时再右键图片文件查看属性，WPS 乱加上去的“属性修改”选项卡已成功移除。</p>
+<p><img src="https://pic3.zhimg.com/v2-2793d50f8a0ac61a65d28d9c6b8c6170_r.png" alt="" /></p>
+<hr />
+<p>如果仍有“属性修改”选项卡，则右键任务栏空白处，任务管理器，左侧倒数第二个列表图标的按钮， 把 explorer.exe 这个进程结束进程，然后点击上方运行新任务，输入 explorer 确定。此时再右键图片文件查看属性，WPS 乱加上去的“属性修改”选项卡已成功移除。</p>
+<p><img src="https://pica.zhimg.com/v2-534f3b053c7e45e3bcbf803b340699ca_r.png" alt="" /></p>
+<p><img src="https://pic3.zhimg.com/v2-c278d74e99642d692602cbe35603d6a6_r.png" alt="" /></p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
@@ -684,7 +694,10 @@ window.onload = function () {
     <a href="/cms/archivers/162.html" rel="prev" title="PowerShell 编程实例：将一张 PNG 的图像隐藏到另外一个 PNG 文件中，不改变原 PNG 图像">
       <i class="fa fa-chevron-left"></i> PowerShell 编程实例：将一张 PNG 的图像隐藏到另外一个 PNG 文件中，不改变原 PNG 图像
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/cms/archivers/164.html" rel="next" title="仅作笔记用：M.2转接卡转移原机械硬盘系统盘">
+      仅作笔记用：M.2转接卡转移原机械硬盘系统盘 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -862,7 +875,7 @@ window.onload = function () {
   
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/cms/sw.js?t=1727231538869')
+  navigator.serviceWorker.register('/cms/sw.js?t=1727232339445')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
