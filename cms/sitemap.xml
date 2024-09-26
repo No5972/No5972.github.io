@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.moe/cms/archivers/145.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/archivers/153.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/archivers/162.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/archivers/155.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/confirm.html</loc>
     
     <lastmod>2024-09-26</lastmod>
@@ -23,23 +51,9 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/archivers/162.html</loc>
-    
-    <lastmod>2024-08-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/archivers/161.html</loc>
     
     <lastmod>2024-08-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/155.html</loc>
-    
-    <lastmod>2024-07-17</lastmod>
     
   </url>
   
@@ -94,13 +108,6 @@
   
   <url>
     <loc>https://no5972.moe/cms/archivers/154.html</loc>
-    
-    <lastmod>2023-10-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/153.html</loc>
     
     <lastmod>2023-10-24</lastmod>
     
@@ -493,13 +500,6 @@
   
   <url>
     <loc>https://no5972.moe/cms/archivers/140.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/145.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -1280,14 +1280,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
+    <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
+    <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1330,6 +1330,13 @@
   
   <url>
     <loc>https://no5972.moe/cms/categories/Mathematics/</loc>
+    <lastmod>2024-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/categories/PowerShell/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

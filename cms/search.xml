@@ -82,7 +82,7 @@
 <p>代码如下：</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$sourcePngFilePath</span> = <span class="string">"C:\Users\Administrator\Pictures\qqshow.png"</span>   <span class="comment"># 宿主PNG文件</span></span><br><span class="line"><span class="variable">$dataFilePath</span> = <span class="string">"C:\Users\Administrator\Pictures\watermark.png"</span>  <span class="comment"># 要隐写的PNG文件</span></span><br><span class="line"><span class="variable">$outputPngFilePath</span> = <span class="string">"C:\Users\Administrator\Pictures\qqshow1.png"</span>  <span class="comment"># 输出的PNG文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取数据文件的内容  </span></span><br><span class="line"><span class="variable">$dataContent</span> = [<span class="type">System.IO.File</span>]::ReadAllBytes(<span class="variable">$dataFilePath</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将文件内容转换为 Base64  </span></span><br><span class="line"><span class="variable">$base64Content</span> = [<span class="type">Convert</span>]::ToBase64String(<span class="variable">$dataContent</span>)</span><br><span class="line"><span class="variable">$base64Content</span> = <span class="string">"......data:image/png;base64,<span class="variable">$base64Content</span>"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取源 PNG 文件的内容  </span></span><br><span class="line"><span class="variable">$sourceImageBytes</span> = [<span class="type">System.IO.File</span>]::ReadAllBytes(<span class="variable">$sourcePngFilePath</span>)  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开 PNG 文件并获取文件流  </span></span><br><span class="line"><span class="variable">$fileStream</span> = [<span class="type">System.IO.File</span>]::Create(<span class="variable">$outputPngFilePath</span>)  </span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;  </span><br><span class="line">    <span class="comment"># 写入源 PNG 文件的字节  </span></span><br><span class="line">    <span class="variable">$fileStream</span>.Write(<span class="variable">$sourceImageBytes</span>, <span class="number">0</span>, <span class="variable">$sourceImageBytes</span>.Length)  </span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将 Base64 内容转换为字节数组  </span></span><br><span class="line">    <span class="variable">$base64Bytes</span> = [<span class="type">System.Text.Encoding</span>]::UTF8.GetBytes(<span class="variable">$base64Content</span>)  </span><br><span class="line"></span><br><span class="line">    <span class="comment"># 写入 Base64 字节  </span></span><br><span class="line">    <span class="variable">$fileStream</span>.Write(<span class="variable">$base64Bytes</span>, <span class="number">0</span>, <span class="variable">$base64Bytes</span>.Length)  </span><br><span class="line">&#125; <span class="keyword">finally</span> &#123;  </span><br><span class="line">    <span class="comment"># 确保在完成后关闭文件  </span></span><br><span class="line">    <span class="variable">$fileStream</span>.Close()  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line"><span class="built_in">Write-Host</span> <span class="string">"已成功将 <span class="variable">$dataFilePath</span> 的内容以 Base64 形式添加到新的 PNG 文件：<span class="variable">$outputPngFilePath</span>。"</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Webapp</category>
+        <category>PowerShell</category>
       </categories>
   </entry>
   <entry>
@@ -252,6 +252,7 @@
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
         <category>Webapp</category>
+        <category>PowerShell</category>
       </categories>
   </entry>
   <entry>
@@ -276,7 +277,7 @@
 <figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">powershell -command "(Add-<span class="built_in">Type</span> '[DllImport(\"user32.dll\")]public static extern int SendMessage(int hWnd, int hMsg, int wParam, int lParam);' -Name a -Pas)::SendMessage(-<span class="number">1</span>,<span class="number">0</span>x0112,<span class="number">0</span>xF170,<span class="number">2</span>)"</span><br></pre></td></tr></table></figure>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Webapp</category>
+        <category>PowerShell</category>
       </categories>
   </entry>
   <entry>
@@ -436,6 +437,7 @@
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
         <category>Webapp</category>
+        <category>PowerShell</category>
       </categories>
   </entry>
   <entry>
