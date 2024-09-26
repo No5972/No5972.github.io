@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.moe/cms/archivers/3.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/archivers/7.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/archivers/139.html</loc>
     
     <lastmod>2024-09-26</lastmod>
@@ -919,13 +933,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/archivers/7.html</loc>
-    
-    <lastmod>2021-07-10</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/archivers/6.html</loc>
     
     <lastmod>2021-07-10</lastmod>
@@ -934,13 +941,6 @@
   
   <url>
     <loc>https://no5972.moe/cms/archivers/5.html</loc>
-    
-    <lastmod>2021-07-10</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/3.html</loc>
     
     <lastmod>2021-07-10</lastmod>
     
@@ -1245,14 +1245,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Webapp/</loc>
+    <loc>https://no5972.moe/cms/categories/Java/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Java/</loc>
+    <loc>https://no5972.moe/cms/categories/Webapp/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1294,6 +1294,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.moe/cms/categories/Automation/</loc>
+    <lastmod>2024-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/categories/Other/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -1301,7 +1308,7 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Automation/</loc>
+    <loc>https://no5972.moe/cms/categories/Hardware/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1337,13 +1344,6 @@
   
   <url>
     <loc>https://no5972.moe/cms/categories/Animation/</loc>
-    <lastmod>2024-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/categories/Hardware/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
