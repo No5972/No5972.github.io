@@ -4,7 +4,7 @@
   <url>
     <loc>https://no5972.moe/cms/confirm.html</loc>
     
-    <lastmod>2024-09-25</lastmod>
+    <lastmod>2024-09-26</lastmod>
     
   </url>
   
@@ -1280,20 +1280,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
-    <lastmod>2024-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/categories/Automation/</loc>
-    <lastmod>2024-09-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
@@ -1301,7 +1287,21 @@
   </url>
   
   <url>
+    <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
+    <lastmod>2024-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/categories/Other/</loc>
+    <lastmod>2024-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/categories/Automation/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
