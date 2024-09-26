@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.moe/cms/archivers/139.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/archivers/146.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/archivers/149.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/archivers/158.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/archivers/164.html</loc>
+    
+    <lastmod>2024-09-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/archivers/108.html</loc>
     
     <lastmod>2024-09-26</lastmod>
@@ -86,13 +121,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/archivers/164.html</loc>
-    
-    <lastmod>2024-09-25</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/archivers/161.html</loc>
     
     <lastmod>2024-08-21</lastmod>
@@ -110,13 +138,6 @@
     <loc>https://no5972.moe/cms/archivers/159.html</loc>
     
     <lastmod>2024-06-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/158.html</loc>
-    
-    <lastmod>2024-03-14</lastmod>
     
   </url>
   
@@ -191,13 +212,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/archivers/149.html</loc>
-    
-    <lastmod>2023-07-27</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/archivers/148.html</loc>
     
     <lastmod>2023-06-20</lastmod>
@@ -208,13 +222,6 @@
     <loc>https://no5972.moe/cms/archivers/147.html</loc>
     
     <lastmod>2023-06-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/146.html</loc>
-    
-    <lastmod>2023-05-29</lastmod>
     
   </url>
   
@@ -516,13 +523,6 @@
     <loc>https://no5972.moe/cms/links_temp/index.html</loc>
     
     <lastmod>2022-11-28</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/139.html</loc>
-    
-    <lastmod>2022-09-16</lastmod>
     
   </url>
   
@@ -1337,6 +1337,13 @@
   
   <url>
     <loc>https://no5972.moe/cms/categories/Animation/</loc>
+    <lastmod>2024-09-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/categories/Hardware/</loc>
     <lastmod>2024-09-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
