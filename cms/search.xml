@@ -24,6 +24,32 @@
       </categories>
   </entry>
   <entry>
+    <title>大学 C 语言在线 PTA 平台编译提示警告未使用 scanf 返回值的问题</title>
+    <url>/cms//archivers/165.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>最近在知乎发现有不少大学生在使用 PTA 平台在线编写 C 语言代码，编译时提示警告未使用 <code>scanf</code> 返回值的问题。具体现象是编译器输出显示为类似于这样的提示。</p>
+<p><img src="https://pic1.zhimg.com/v2-49a840da51c32c05bad9caae7d14b102_r.png" alt="" /></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">a.c: In <span class="keyword">function</span> ‘main’:</span><br><span class="line">a.c:9:5: warning: ignoring <span class="built_in">return</span> value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]</span><br><span class="line">    9 |     scanf(<span class="string">"%d"</span>, &amp;num);</span><br><span class="line">      |     ^~~~~~~~~~~~~~~~~</span><br></pre></td></tr></table></figure>
+<p>有不少同学认为程序有问题，要是这样认为倒也是，因为 PTA 平台默认使用的 GCC 编译器希望你重视函数返回值的问题，希望你用上 <code>scanf</code> 函数的返回值。但话又说回来，使用这个 PTA 平台编写 C 语言的大学生基本上都是初学 C 语言的，而教材上的范例程序基本上都不会用到 <code>scanf</code> 的返回值。 <em>都这样了知乎上还有人和鄙人杠说“这个返回值其实是很重要的”。 这显然是为了杠而杠了，C 语言初学阶段先把功能或者是题目需求搞定再说细节上的问题。</em></p>
+<p><strong>不过，还是希望各位初学者重视编译器的警告，虽然这对部分英语基础不是很好的同学可能有些困难，但是根据警告完善代码，还是非常重要的，这更好地保障了应用程序的稳定性。</strong></p>
+<p>这里鄙人专门注册了一个 PTA 平台的账号研究了一下，并且参考了 StackOverflow 上一些大佬的回答，汇总了几种解决这个警告的办法。</p>
+<h1 id="一种方法切换编译器"><a class="markdownIt-Anchor" href="#一种方法切换编译器"></a> 一种方法：切换编译器</h1>
+<p>PTA 平台其实提供了好几种 C 语言的编译器，鄙人实测了一下，只要把编译器切换到 clang，就不会警告未使用 <code>scanf</code> 返回值的问题了。</p>
+<p>切换编译器的下拉框一般位于代码框的上方，他这里默认选择的是“C (gcc)”，我们把这个下拉框选择“C (clang)”，再尝试提交程序，这样就不会警告未使用 <code>scanf</code> 返回值的问题了。</p>
+<p><img src="https://picx.zhimg.com/v2-2757bbebe33b3708d1f5c56ac1c32327_r.png" alt="" /></p>
+<p><img src="https://pic4.zhimg.com/v2-a334f9676dd2ccb61300b10c5336b766_r.png" alt="" /></p>
+<h1 id="另一种方法修改代码"><a class="markdownIt-Anchor" href="#另一种方法修改代码"></a> 另一种方法：修改代码</h1>
+<p>参考 <a href="https://stackoverflow.com/a/7273026" target="_blank" rel="noopener">StackOverflow 上 rivy 大佬在这个回答的评论区里面提供的线索</a> ，只要把 <code>scanf</code> 语句稍微修改一下即可。比如说鄙人这个程序里面有一个</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num);</span><br></pre></td></tr></table></figure>
+<p>只要在 <code>scanf</code> 前面加一个 <code>(void)!</code>，就像这样</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">void</span>)!<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num);</span><br></pre></td></tr></table></figure>
+<p>GCC 编译器就不会再警告未使用 <code>scanf</code> 返回值的问题了。</p>
+<p><img src="https://pic1.zhimg.com/v2-d6091155c84a83af5eca406241e5f558_r.png" alt="" /></p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>C/C++</category>
+      </categories>
+  </entry>
+  <entry>
     <title>仅作笔记用：M.2转接卡转移原机械硬盘系统盘</title>
     <url>/cms//archivers/164.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol>
