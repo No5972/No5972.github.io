@@ -15,7 +15,9 @@
     <img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" id="qqshow" style="width: 140px; height: 226px;margin-top: 10px" onload="display()" onerror="displayError()" />
     <p id="prompt" style="text-align: center"></p>
     <p style="text-align: center">
-        本接口调用了xuehuaimg的镜像缓存服务。<br/>
+        本接口调用了weserv.nl的镜像缓存服务。<br/>
+        <span style="color:red; font-weight: bold;">该镜像服务尚不支持加载动图，目前尚未找到支持动图的镜像缓存（后续可能考虑自建镜像缓存服务），故目前暂时只能显示静态图。</span><br/>
+        <span style="color:red; font-weight: bold;">由此带来不便，我们深表歉意。</span><br/><br/>
         本站该接口无任何本站后台记录的提交数据，源代码可查看。<br/>
         所有加载图片均由QQ秀提供，加载显示的图片内容与本站无关，不代表本站立场。</p>
     <p style="text-align: center">© 2011-2021 No.5972</p>
@@ -25,7 +27,7 @@
     document.querySelector("#qqnumber").addEventListener("keypress" , function (event) {
         if (event.charCode == 13) {
             // alert("simulate query qq show");
-            document.getElementById("qqshow").src="https://pic1.xuehuaimg.com/proxy/https://qs1.qlogo.cn/qs_app/"  + this.value + "/" + this.value + "_qs_bg/140?r=0.67" + new Date().getTime();
+            document.getElementById("qqshow").src="https://images.weserv.nl/?url=https://qs1.qlogo.cn/qs_app/"  + this.value + "/" + this.value + "_qs_bg/140?r=0.67" + new Date().getTime();
             document.getElementById("qqshow").style.filter = "brightness(0.5)";
             document.getElementById("prompt").innerText = "正在加载！";
         }
@@ -33,7 +35,7 @@
 
     document.querySelector("button").addEventListener("click" , function (event) {
         // alert("simulate query qq show");
-        document.getElementById("qqshow").src="https://pic1.xuehuaimg.com/proxy/https://qs1.qlogo.cn/qs_app/"  + document.getElementById("qqnumber").value + "/" + document.getElementById("qqnumber").value + "_qs_bg/140?r=0.67" + new Date().getTime();
+        document.getElementById("qqshow").src="https://images.weserv.nl/?url=https://qs1.qlogo.cn/qs_app/"  + document.getElementById("qqnumber").value + "/" + document.getElementById("qqnumber").value + "_qs_bg/140?r=0.67" + new Date().getTime();
         document.getElementById("qqshow").style.filter = "brightness(0.5)";
         document.getElementById("prompt").innerText = "正在加载！";
     });
