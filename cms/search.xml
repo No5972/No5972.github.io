@@ -51,8 +51,11 @@
 </ul>
 </li>
 <li>
-<p>打开 GPT4All，从左侧按钮切换到模型界面，看看是否识别到了 DeepSeek<br />
-<img src="https://picx.zhimg.com/v2-caf462bd85d51de9365b5f2ef1d6df07_r.png" alt="" /></p>
+<p>打开 GPT4All，从左侧按钮切换到模型界面，看看是否识别到了 DeepSeek</p>
+<ul>
+<li>首次启动时可能会弹出“匿名使用分析，以改进 GPT4All”和“匿名分享聊天到 GPT4All 数据湖”这两个选项，如果在意数据安全的话应都选择“否”。此项可在设置的“开启数据湖”中找到。<br />
+<img src="https://picx.zhimg.com/v2-caf462bd85d51de9365b5f2ef1d6df07_r.png" alt="" /></li>
+</ul>
 </li>
 <li>
 <p>如果识别到了，左侧切换到对话，选择下载的 DeepSeek R1 模型，等待加载完毕。然后就可以开始对话了。</p>

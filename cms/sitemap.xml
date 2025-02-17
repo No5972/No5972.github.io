@@ -1234,14 +1234,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/about/index.html</loc>
+    <loc>https://no5972.moe/cms/categories/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/index.html</loc>
+    <loc>https://no5972.moe/cms/about/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
@@ -1266,14 +1266,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Webapp/</loc>
+    <loc>https://no5972.moe/cms/categories/Java/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Java/</loc>
+    <loc>https://no5972.moe/cms/categories/Webapp/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
