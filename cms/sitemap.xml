@@ -1273,14 +1273,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Webapp/</loc>
+    <loc>https://no5972.moe/cms/categories/AtoW/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/AtoW/</loc>
+    <loc>https://no5972.moe/cms/categories/Webapp/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1301,13 +1301,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
-    <lastmod>2025-02-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>daily</changefreq>
@@ -1315,14 +1308,21 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Other/</loc>
+    <loc>https://no5972.moe/cms/categories/Automation/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Automation/</loc>
+    <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
+    <lastmod>2025-02-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/categories/Other/</loc>
     <lastmod>2025-02-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
