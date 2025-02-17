@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2025-01-23T09:14:36.185Z</updated>
+  <updated>2025-02-17T08:22:06.636Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>仅作笔记用：GPT4All 本地部署 DeepSeek R1 模型，简明说明（手动下载模型）</title>
+    <link href="https://no5972.moe/cms/archivers/167.html"/>
+    <id>https://no5972.moe/cms/archivers/167.html</id>
+    <published>2025-02-17T08:00:00.000Z</published>
+    <updated>2025-02-17T08:22:06.636Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ol><li><p><a href="https://www.nomic.ai/gpt4all" target="_blank" rel="noopener">下载安装 GPT4All 3.8.0 或以上的版本</a></p><ul><li>该版本开始已原生支持 DeepSeek R1 深度推理</li><li>大约需要下载 600 多 MB 的本体包<br /><img src="https://pic1.zhimg.com/v2-774c98158cf16894663f6730aa168dcc_r.png" alt="" /></li></ul></li><li><p>从<a href="https://huggingface.co/models?search=deepseek%20gguf" target="_blank" rel="noopener">抱脸</a>或<a href="https://www.modelscope.cn/search?search=deepseek%20gguf" target="_blank" rel="noopener">魔搭社区</a>下载 gguf 格式的 DeepSeek R1 模型。</p><ul><li>这边 12GB 内存 CPU 硬算可以跑 llama8B 和 Qwen7B 这两个模型。</li><li>请留意找到正确的模型<br /><img src="https://picx.zhimg.com/v2-5736c083a875fc93701225b4abcd9b2f_r.png" alt="" /></li></ul></li><li><p>将下载好的 gguf 格式的模型文件放在 <code>%LOCALAPPDATA%\nomic.ai\GPT4All</code> 目录</p><ul><li>GPT4All 在运行时将自动识别该目录下的模型文件。<br /><img src="https://picx.zhimg.com/v2-07c3fd8a95d1ad99755c19034f361ebf_r.png" alt="" /></li></ul></li><li><p>打开 GPT4All，从左侧按钮切换到模型界面，看看是否识别到了 DeepSeek<br /><img src="https://picx.zhimg.com/v2-caf462bd85d51de9365b5f2ef1d6df07_r.png" alt="" /></p></li><li><p>如果识别到了，左侧切换到对话，选择下载的 DeepSeek R1 模型，等待加载完毕。然后就可以开始对话了。</p><ul><li>这边测试使用 i3-6100 CPU 硬算，大概是 2.4 令牌左右每秒。<br /><img src="https://pica.zhimg.com/v2-86f2b382014ca51e0b79429f80483008_r.png" alt="" /><br /><img src="https://picx.zhimg.com/v2-9063342ea6cd23c83d2d90499655100b_r.png" alt="" /><br /><img src="https://pic1.zhimg.com/v2-3e78cafe3c953a3003d3993733cad688_r.png" alt="" /><br /><img src="https://pica.zhimg.com/v2-957228f710cba37cf5dfe205cc7b345e_r.png" alt="" /></li></ul></li></ol><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      这次我们手动下载模型并放入，而不是通过 GPT4All 里面的模型列表下载
+    
+    </summary>
+    
+    
+      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>大学 C 语言在线 PTA 平台编译提示警告未使用 scanf 返回值的问题</title>
