@@ -1297,7 +1297,7 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>250529 更新：<code>bypassnro</code> 方法可能也已经失效。这里给出另外一个办法。按照原来的步骤到命令提示符的界面时使用</p>
 <figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">start</span> ms-cxh:localonly</span><br></pre></td></tr></table></figure>
 <p>此时将弹出一个旧版的创建用户的窗口，这个也是用来创建本地账户的，密码不写的话就是不创建密码。点击下一步，就直接到“此操作可能需要几分钟”的界面了。</p>
-<p>此方法来源：<a href="https://www.bilibili.com/video/BV1SXZcYzEuh" target="_blank" rel="noopener">B站@世界隐性</a></p>
+<p>此方法来源：<a href="https://www.bilibili.com/video/BV1SXZcYzEuh?p=2" target="_blank" rel="noopener">B站@世界隐性</a></p>
 <p><img src="https://images.weserv.nl/?url=https://img2024.cnblogs.com/blog/2259503/202505/2259503-20250529112152543-1115582199.png" alt="" /></p>
 <hr />
 <p>231009 更新：此法现在可能已经失效。目前通行的做法是按照原来的步骤到命令提示符的界面时使用</p>
@@ -3346,8 +3346,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Automation</category>
         <category>Web Building</category>
+        <category>Automation</category>
         <category>Github</category>
       </categories>
   </entry>
