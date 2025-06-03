@@ -3,5 +3,16 @@
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/cms/404.html" }
+  ],
+  "headers": [
+    {
+      "source": "/xhxCover/cover.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
   ]
 }
