@@ -1,8 +1,7 @@
 {
   "version": 2,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "status": 404, "dest": "/cms/404.html" }
+  "rewrites": [
+    { "source": "/(.*)", "statusCode": 404, "destination": "/cms/404.html" }
   ],
   "headers": [
     {
