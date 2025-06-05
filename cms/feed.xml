@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2025-06-05T14:39:47.076Z</updated>
+  <updated>2025-06-05T14:41:09.905Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://no5972.moe/cms/archivers/171.html"/>
     <id>https://no5972.moe/cms/archivers/171.html</id>
     <published>2025-06-05T14:00:00.000Z</published>
-    <updated>2025-06-05T14:39:47.076Z</updated>
+    <updated>2025-06-05T14:41:09.905Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>DNF 玩家如果电脑只有 16GB 内存的话，通常需要手动设置页面文件，才能保证游戏稳定运行。而 C 盘的页面文件一般不会掉，但是有时候会出现其他盘的页面文件莫名其妙消失的情况，而此时去高级系统设置查看，发现页面文件却还是之前设置好的。两个地方显示的情况是不一样的。这种情况可以手动重新创建一个页面文件，看看能不能恢复。</p><p>打开开始菜单或者系统搜索框，输入高级系统设置，打开高级系统设置，高级选项卡，在“性能”那一栏点击设置，高级选项卡，点击更改，<strong>选择丢失页面文件的那个盘，记下这个设置参数，然后改成无分页文件，点击设置。</strong> 一路确认，然后按照提示重启一遍电脑。</p><p>重启之后再打开高级系统设置，高级选项卡，在“性能”那一栏点击设置，高级选项卡，点击更改，<strong>还选择丢失页面文件的那个盘，改回之前的页面文件设置，如自定义大小等。点击设置。</strong> 一路确认，然后按照提示再次重启一遍电脑。</p><p>然后再看看那个盘页面文件是不是回来了。</p><p><img src="https://images.weserv.nl?url=https://img2024.cnblogs.com/blog/2259503/202506/2259503-20250605222359443-2139334993.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -2156,9 +2156,9 @@
     </summary>
     
     
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
-    
       <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
+    
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
