@@ -119,6 +119,8 @@
 <li>然后将豆包安装包 Doubao_installer.exe 使用解压缩软件（7-Zip、WinRAR 等）直接解压出来 <strong>（建议小白用户不要选择解压到当前目录，小心和当前目录其他文件搅到一起了，清理会很困难。请选择解压到 Doubao_installer 子目录）</strong> 。</li>
 <li>然后在解压的目录中找到 Doubao.exe 这个主程序文件，右键属性，VxKex 选项卡，勾选“为此程序启用 VxKex NEXT”并确定，再看看能不能打开。</li>
 </ol>
+<p><em>如果运行程序时提示的是“Doubao.exe 不是有效的 Win32 应用程序”，而不是“无法定位程序输入点”，那么请先右键桌面上或者开始菜单里面的“计算机”，选择“属性”，看一看电脑的系统是不是 32 位的。</em> <strong>如果是 32 位的 Win7，这种情况就不要看上面的步骤了，请老老实实把电脑的系统重装成 Win10 64 位或 Win11（重装前注意备份好个人资料，例如桌面、文档、下载、图片等）。</strong> <em>豆包电脑版是一个纯 64 位的应用程序，32 位的 Win7 肯定是不支持的。</em></p>
+<p><img src="https://images.weserv.nl?url=https://pic4.zhimg.com/v2-86ee662b5304cb6e491f4b4a665ccd23_r.jpg" alt="" /></p>
 <p><em>不过鄙人这个图是在和 Win7 相同版本内核的 Windows Server 2008 下测试的，不过如果 Windows Server 2008 能跑通，Win7 基本也就八九不离十了，就还是按照上面的步骤设置即可打开豆包桌面版，如下若干张图所示。</em></p>
 <p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-4ea31bba2bc3eef8f7b72c2b1c6fe08d_r.png" alt="" /></p>
 <div class="group-picture"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://images.weserv.nl?url=https://pic3.zhimg.com/v2-a986a3e626c8c2e0774f8bc3e54c5c96_r.png" alt="" /></div><div class="group-picture-column" style="width: 50%;"><img src="https://images.weserv.nl?url=https://pic1.zhimg.com/v2-59ed271749f9c3d77aff048c62ba633e_r.png" alt="" /></div></div></div>
@@ -3358,8 +3360,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Web Building</category>
         <category>Automation</category>
+        <category>Web Building</category>
         <category>Github</category>
       </categories>
   </entry>
