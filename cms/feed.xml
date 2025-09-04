@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2025-07-06T11:30:10.264Z</updated>
+  <updated>2025-09-04T08:58:41.036Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>仅作笔记用：利用 AI 大模型将 DNF 角色截图转换成手办图（推荐模型 Gemini 2.5 Flash Image）</title>
+    <link href="https://no5972.moe/cms/archivers/172.html"/>
+    <id>https://no5972.moe/cms/archivers/172.html</id>
+    <published>2025-08-31T07:00:00.000Z</published>
+    <updated>2025-09-04T08:58:41.036Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-be7a1f53f867b90814811787e380d5b4_r.png" alt="" /></p><p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-4a02f49f23dab43b8481b81e37365a44_r.png" alt="" /></p><p>访问 lmarena 点 ai，选 Battle 模式，点击开启 Image</p><p><strong>（更新：现在可以直接选择 Direct Chat 模式了，把上面的 Battle 改成 Direct Chat，然后点击下边图像按钮开启生成图片的模式，然后模型选择 Google Gemini 2.5 Flash Image Preview (Nano Banana)。那个 nano-banana 其实就是这个，这个现在已经可以直接在 Direct Chat 模式里面调用了。（还得是你谷歌老大哥在行））</strong></p><p><img src="https://images.weserv.nl?url=https://pic1.zhimg.com/v2-6798c021a5ab17d573a135a035dfc27c_r.png" alt="" /></p><p>上传 1:1 比例的角色截图，输入该提示并提交</p><blockquote><p>Realistic PVC figure based on the game screenshot character,<br />exact pose replication<br />highly detailed textures<br />PVC material with subtle sheen and smooth paint finish,<br />placed on an indoor wooden computer desk (with subtle desk items like a figure box/mouse),<br />illuminated by soft indoor light (mix of desk lamp and natural window light) for realistic shadows and highlights,<br />macro photography style, high resolution, sharp focus on the figure, shallow depth of field (desk background slightly blurred but visible),<br />no stylization, true-to-reference color and design, 1:1 scale.</p></blockquote><p>（提示词来源网络）</p><p>如果你的英语好的话，也可以在提示词后面空一行，然后添加服饰方面的提示（空一行主要是方便你自己后续修改、维护这个提示词），这样可以得到更准确、细节更丰富的效果。</p><p>例如鄙人这里示例使用的战灵天舞天空套花仙子的形象可以这样写：</p><blockquote><p>the girl is a young fairy in white stockings and green sandals with pink rose inlay. the skirt is made of pink rose petals.</p></blockquote><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      现在可以直接选择 Direct Chat 模式了，把上面的 Battle 改成 Direct Chat，然后点击下边图像按钮开启生成图片的模式，然后模型选择 Google Gemini 2.5 Flash Image Preview (Nano Banana)。那个 nano-banana 其实就是这个，这个现在已经可以直接在 Direct Chat 模式里面调用了。
+    
+    </summary>
+    
+    
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>仅作笔记用：其他盘的页面文件突然不见了怎么办</title>
     <link href="https://no5972.moe/cms/archivers/171.html"/>
     <id>https://no5972.moe/cms/archivers/171.html</id>
     <published>2025-06-05T14:00:00.000Z</published>
-    <updated>2025-07-06T11:30:10.264Z</updated>
+    <updated>2025-09-04T08:57:05.247Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>DNF 玩家如果电脑只有 16GB 内存的话，通常需要手动设置页面文件，才能保证游戏稳定运行。而 C 盘的页面文件一般不会掉，但是有时候会出现其他盘的页面文件莫名其妙消失的情况，而此时去高级系统设置查看，发现页面文件却还是之前设置好的。两个地方显示的情况是不一样的。这种情况可以手动重新创建一个页面文件，看看能不能恢复。</p><p>打开开始菜单或者系统搜索框，输入高级系统设置，打开高级系统设置，高级选项卡，在“性能”那一栏点击设置，高级选项卡，点击更改，<strong>选择丢失页面文件的那个盘，记下这个设置参数，然后改成无分页文件，点击设置。</strong> 一路确认，然后按照提示重启一遍电脑。</p><p>重启之后再打开高级系统设置，高级选项卡，在“性能”那一栏点击设置，高级选项卡，点击更改，<strong>还选择丢失页面文件的那个盘，改回之前的页面文件设置，如自定义大小等。点击设置。</strong> 一路确认，然后再看看那个盘页面文件是不是回来了，再从任务管理器里面看看虚拟内存是不是恢复正常了。</p><p><img src="https://images.weserv.nl?url=https://img2024.cnblogs.com/blog/2259503/202506/2259503-20250605222359443-2139334993.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -63,7 +84,7 @@
     <link href="https://no5972.moe/cms/archivers/169.html"/>
     <id>https://no5972.moe/cms/archivers/169.html</id>
     <published>2025-04-08T18:00:00.000Z</published>
-    <updated>2025-08-04T08:05:28.569Z</updated>
+    <updated>2025-09-04T08:59:19.946Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><!-- ![](https://images.weserv.nl?url=https://www.callmysoft.com/ueditor/php/upload/image/20250108/1736340480423184.png) --><p><img src="https://images.weserv.nl?url=https://www.callmysoft.com/ueditor/php/upload/image/20250108/1736340480423184.png" width="50%"></img></p><h1 id="先上具体步骤"><a class="markdownIt-Anchor" href="#先上具体步骤"></a> 先上具体步骤：</h1><ol><li>下载并安装 VxKex NEXT 这个开源组件，可以在网上搜索这个开源组件的名字（注意找到正确的下载链接）。</li><li>然后将豆包安装包 Doubao_installer.exe 使用解压缩软件（7-Zip、WinRAR 等）直接解压出来 <strong>（建议小白用户不要选择解压到当前目录，小心和当前目录其他文件搅到一起了，清理会很困难。请选择解压到 Doubao_installer 子目录）</strong> 。</li><li>然后在解压的目录中找到 Doubao.exe 这个主程序文件，右键属性，VxKex 选项卡，勾选“为此程序启用 VxKex NEXT”并确定，再看看能不能打开。</li></ol><p><em>如果运行程序时提示的是“Doubao.exe 不是有效的 Win32 应用程序”，而不是“无法定位程序输入点”，那么请先右键桌面上或者开始菜单里面的“计算机”，选择“属性”，看一看电脑的系统是不是 32 位的。</em> <strong>如果是 32 位的 Win7，这种情况就不要看上面的步骤了，请老老实实把电脑的系统重装成 Win10 64 位或 Win11（重装前注意备份好个人资料，例如桌面、文档、下载、图片等）。</strong> <em>豆包电脑版是一个纯 64 位的应用程序，32 位的 Win7 肯定是不支持的。</em></p><p><img src="https://images.weserv.nl?url=https://pic4.zhimg.com/v2-86ee662b5304cb6e491f4b4a665ccd23_r.jpg" alt="" /></p><p><em>不过鄙人这个图是在和 Win7 相同版本内核的 Windows Server 2008 下测试的，不过如果 Windows Server 2008 能跑通，Win7 基本也就八九不离十了，就还是按照上面的步骤设置即可打开豆包桌面版，如下若干张图所示。</em></p><p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-4ea31bba2bc3eef8f7b72c2b1c6fe08d_r.png" alt="" /></p><div class="group-picture"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://images.weserv.nl?url=https://pic3.zhimg.com/v2-a986a3e626c8c2e0774f8bc3e54c5c96_r.png" alt="" /></div><div class="group-picture-column" style="width: 50%;"><img src="https://images.weserv.nl?url=https://pic1.zhimg.com/v2-59ed271749f9c3d77aff048c62ba633e_r.png" alt="" /></div></div></div><h1 id="事情是这样的"><a class="markdownIt-Anchor" href="#事情是这样的"></a> 事情是这样的：</h1><p>刚刚收到来自 <a href="https://space.bilibili.com/85914396" target="_blank" rel="noopener">@Geeker Z</a> 的最新线索，有一个开源项目 VxKex NEXT 提供了对 Win7 操作系统运行 Win10/11 应用程序的兼容支持。鄙人之前已在某个回答提到过，豆包桌面版其实就是一个 Chromium 浏览器的简单封装，而那个线索视频里面展示的正是在 Win7 下正常运行了新版的谷歌浏览器，所以理论上这个也可以用于在 Win7 里面使用豆包桌面版。不过鄙人这边手头暂时没有 Win7 的测试环境，暂时没法试验可否用于在 Win7 运行豆包桌面版，并且也无法保证有效。</p><p><a href="https://github.com/YuZhouRen86/VxKex-Next/releases/latest" target="_blank" rel="noopener">GitHub YuZhouRen86/VxKex-Next</a></p><p><a href="https://www.bilibili.com/video/BV1SedHYsE6b/" target="_blank" rel="noopener">让 Win7 强行兼容 Win10 应用？VxKex 扩展内核安装体验_哔哩哔哩_bilibili</a></p><p>（篇头图源网络）</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -74,7 +95,7 @@
     </summary>
     
     
-      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
     
     
   </entry>
@@ -105,7 +126,7 @@
     <link href="https://no5972.moe/cms/archivers/167.html"/>
     <id>https://no5972.moe/cms/archivers/167.html</id>
     <published>2025-02-17T08:00:00.000Z</published>
-    <updated>2025-02-19T02:59:14.050Z</updated>
+    <updated>2025-09-04T08:59:27.648Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>GPT4All 内置的模型库，大部分模型是用的抱脸的网址，通常无法直连下载。 <strong>我们这里提出一个手动下载和导入 DeepSeek R1 模型的本地部署方法。本方法的关键是找到 GPT4All 默认的读取路径。</strong> 此外，GPT4All 不仅支持独显推理，也可使用 CPU 硬算。 <em>（不过听别处文章评论区说个别模型用独显是不行的，这个这边也没法证实，鄙人手头暂时没有能跑 AI 的独显；个人猜想 DeepSeek R1 应该不会存在这个问题）</em></p><ol><li><p><a href="https://www.nomic.ai/gpt4all" target="_blank" rel="noopener">下载安装 GPT4All 3.8.0 或以上的版本</a></p><ul><li>该版本开始已原生支持 DeepSeek R1 深度推理</li><li>大约需要下载 600 多 MB 的本体包<br /><img src="https://pic1.zhimg.com/v2-774c98158cf16894663f6730aa168dcc_r.png" alt="" /></li></ul></li><li><p>从<a href="https://huggingface.co/models?search=deepseek%20gguf" target="_blank" rel="noopener">抱脸</a>或<a href="https://www.modelscope.cn/search?search=deepseek%20gguf" target="_blank" rel="noopener">魔搭社区</a>下载 gguf 格式的 DeepSeek R1 模型。</p><ul><li>这边 12GB 内存 CPU 硬算可以跑 llama8B 和 Qwen7B 这两个模型。</li><li>请留意找到正确的模型<br /><img src="https://picx.zhimg.com/v2-5736c083a875fc93701225b4abcd9b2f_r.png" alt="" /></li></ul></li><li><p>将下载好的 gguf 格式的模型文件放在 <code>%LOCALAPPDATA%\nomic.ai\GPT4All</code> 目录</p><ul><li>GPT4All 在运行时将自动识别该目录下的模型文件。<br /><img src="https://picx.zhimg.com/v2-07c3fd8a95d1ad99755c19034f361ebf_r.png" alt="" /></li></ul></li><li><p>打开 GPT4All，从左侧按钮切换到模型界面，看看是否识别到了 DeepSeek</p><ul><li>首次启动时可能会弹出“匿名使用分析，以改进 GPT4All”和“匿名分享聊天到 GPT4All 数据湖”这两个选项，如果在意数据安全的话应都选择“否”。此项可在设置的“开启数据湖”中找到。<br /><img src="https://picx.zhimg.com/v2-caf462bd85d51de9365b5f2ef1d6df07_r.png" alt="" /></li></ul></li><li><p>如果识别到了，左侧切换到对话，选择下载的 DeepSeek R1 模型，等待加载完毕。然后就可以开始对话了。</p><ul><li>这边测试使用 i3-6100 CPU 硬算，大概是 2.4 令牌左右每秒。<br /><img src="https://pica.zhimg.com/v2-86f2b382014ca51e0b79429f80483008_r.png" alt="" /><br /><img src="https://picx.zhimg.com/v2-9063342ea6cd23c83d2d90499655100b_r.png" alt="" /><br /><img src="https://pic1.zhimg.com/v2-3e78cafe3c953a3003d3993733cad688_r.png" alt="" /><br /><img src="https://pica.zhimg.com/v2-957228f710cba37cf5dfe205cc7b345e_r.png" alt="" /></li></ul></li></ol><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -116,7 +137,7 @@
     </summary>
     
     
-      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
     
     
   </entry>
@@ -357,7 +378,7 @@
     <link href="https://no5972.moe/cms/archivers/155.html"/>
     <id>https://no5972.moe/cms/archivers/155.html</id>
     <published>2023-11-16T16:00:00.000Z</published>
-    <updated>2024-09-26T09:51:43.197Z</updated>
+    <updated>2025-09-04T09:00:25.873Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Waifu2x 是一个图片超分的网站，某些图片鄙人经对比发现效果比 Stable Diffusion 的附加功能要好。而 Waifu2x 后续上线的 Unlimited Waifu2x 不仅支持 4 倍超分，而且是使用电脑本地的 CPU/GPU 运行的，也就是通过 WASM 的方式运行的。</p><p>但是直接访问 Unlimited Waifu2x 的话，模型和 JS 都是从网络上加载的，速度很慢。这里决定在本地搭建一个 Unlimited Waifu2x，这样就不用每次都从网络上加载了，所有资源都是在本地加载。这里稍微参考了一下 Waifu2x 的 GitHub 说明，但是发现说明里面说的要下载一个上百兆的压缩包，再次劝退。干脆直接从网站加载的网址把需要的最精简的 onnx 模型弄来。</p><p>从浏览器的 F12 开发者工具的网络找到原来网站加载的 onnx 的模型地址，将这几个 onnx 的模型先下载到本地，然后再把网站上的 HTML、JS、CSS 都 down 下来。然后按照他加载的路径整理成对应的文件结构。（具体文件结构看下面的代码片段）</p><p>这样再看一下站点的大小，只有不到 60MB。如果只想尝试某一种模型的话，甚至可以不用下载其余的超分模型，而只需要下载用的那一个模型，和其他的 util 模型就行，这样需要下载的文件还更少。</p><p>网站原来使用的 cdn.jsdelivr 速度也很慢，目前找到了一个 jsdelivr 的反代，可以很好的适用于本场景。把 index.html 里面 11 行的那个 jsdelivr 的网址域名换成反代的域名。</p><p>按照 GitHub 上的说明，这里需要将该目录作为一个静态的 HTTP 服务运行。但是这里查了不少资料都没找到如何在 PowerShell 里面搭建静态服务器。<strong>后来从 ChatGPT 上找到了使用 PowerShell 的方法，</strong> 这样就不需要单独整一个第三方框架来设立静态服务器了。先把整来的文件整理成下面的结构。</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">PS E:\Downloads\nginx<span class="literal">-1</span>.<span class="number">25.3</span>\html&gt; tree /f</span><br><span class="line">卷 <span class="keyword">Data</span>2 的文件夹 PATH 列表</span><br><span class="line">卷序列号为 <span class="number">6</span>E72<span class="literal">-D95F</span></span><br><span class="line">E:.</span><br><span class="line">│  blank.png</span><br><span class="line">│  index.html</span><br><span class="line">│  script.js</span><br><span class="line">│  style.css</span><br><span class="line">│</span><br><span class="line">└─models</span><br><span class="line">    ├─cunet</span><br><span class="line">    │  └─art</span><br><span class="line">    │          noise3_scale2x.onnx</span><br><span class="line">    │</span><br><span class="line">    ├─swin_unet</span><br><span class="line">    │  ├─art</span><br><span class="line">    │  │      noise3_scale4x.onnx</span><br><span class="line">    │  │</span><br><span class="line">    │  ├─art_scan</span><br><span class="line">    │  │      noise3_scale4x.onnx</span><br><span class="line">    │  │</span><br><span class="line">    │  └─photo</span><br><span class="line">    │          noise3_scale4x.onnx</span><br><span class="line">    │</span><br><span class="line">    └─utils</span><br><span class="line">            create_seam_blending_filter.onnx</span><br><span class="line">            pad.onnx</span><br></pre></td></tr></table></figure><p>然后随便找一个目录新建一个 <code>startup.cmd</code> 的文件，添加这些程序：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">powershell -command "<span class="built_in">Set</span>-ExecutionPolicy RemoteSigned"</span><br><span class="line"><span class="built_in">echo</span> $port = <span class="number">8080</span>  # 指定要使用的端口 &gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span> $root = "E:\Downloads\nginx-<span class="number">1</span>.<span class="number">25</span>.<span class="number">3</span>\html"  # 改成整理好文件结构的目录的路径 &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>. &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span> $listener = New-Object System.<span class="built_in">Net</span>.HttpListener &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span> $listener.Prefixes.Add("http://localhost:$port/") &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span> $listener.<span class="built_in">Start</span>() &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>. &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span> Write-Host "Server is running <span class="built_in">at</span> http://localhost:$port" &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>. &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span> while ($listener.IsListening) &#123; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>     $context = $listener.GetContext() &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>     $response = $context.Response &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>. &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>     $filename = $context.Request.Url.LocalPath.TrimStart('/') &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>     $filepath = Join-<span class="built_in">Path</span> $root $filename &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>. &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>     <span class="keyword">if</span> (Test-<span class="built_in">Path</span> $filepath -PathType Leaf) &#123; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>         $fileBytes = [System.IO.File]::ReadAllBytes($filepath) &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>         $response.OutputStream.Write($fileBytes, <span class="number">0</span>, $fileBytes.Length) &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>     &#125; <span class="keyword">else</span> &#123; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>         Write-Host "Request url [$filename]" &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>         <span class="keyword">if</span> ($filename -eq '') &#123; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             $filepath = Join-<span class="built_in">Path</span> $root 'index.html' &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             <span class="keyword">if</span> (Test-<span class="built_in">Path</span> $filepath -PathType Leaf) &#123; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>                 $fileBytes = [System.IO.File]::ReadAllBytes($filepath) &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>                 $response.OutputStream.Write($fileBytes, <span class="number">0</span>, $fileBytes.Length) &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             &#125; <span class="keyword">else</span> &#123; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>                 $response.StatusCode = <span class="number">404</span> &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             &#125; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>         &#125; elseif ($filename -eq 'shutdown') &#123; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             $response.StatusCode = <span class="number">200</span> &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             $responseContent = '' &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             $responseBytes = [System.Text.Encoding]::UTF8.GetBytes($responseContent) &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             $response.OutputStream.Write($responseBytes, <span class="number">0</span>, $responseBytes.Length) &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             $response.Close() &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             $listener.Stop() &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             <span class="built_in">break</span> &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>         &#125; <span class="keyword">else</span> &#123; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>             $response.StatusCode = <span class="number">404</span> &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>         &#125; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>     &#125; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>. &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>     $response.Close() &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span> &#125; &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span>. &gt;&gt; tmp-startup-server.ps1</span><br><span class="line"><span class="built_in">echo</span> $listener.Stop() &gt;&gt; tmp-startup-server.ps1</span><br><span class="line">powershell .\tmp-startup-server.ps1</span><br><span class="line">powershell -command "<span class="built_in">Set</span>-ExecutionPolicy Default"</span><br><span class="line"><span class="built_in">del</span> tmp-startup-server.ps1</span><br><span class="line">@<span class="built_in">echo</span> on</span><br></pre></td></tr></table></figure><p>保存后直接双击打开这个 cmd 文件，看到类似于 <code>Server is running at http://localhost:8080</code> 的提示后打开浏览器访问 <code>http://localhost:8080</code> （这里的 8080 为 <code>server.ps1</code> 程序第 3 行指定的端口号，下同。如果指定的是 80 的话就是 <code>http://localhost</code> ），放上去需要使用的图片，选择要使用的模型。</p><ul><li>swin_unet / art 立绘模型</li><li>swin_unet / art scan 扫描的纸质立绘模型</li><li>swin_unet / photo 照片模型</li><li>cunet / art (201811) 另一种立绘模型</li></ul><p>选择降噪程度，选择超分倍率，然后就可以点击开始来执行超分了。用完以后别忘了访问 <code>http://localhost:8080/shutdown</code> 停止服务。</p><p><img src="https://picx.zhimg.com/80/v2-e25c6799f10a84b1d69ce967482b1abd.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -368,9 +389,9 @@
     </summary>
     
     
-      <category term="Webapp" scheme="https://no5972.moe/cms/categories/Webapp/"/>
-    
       <category term="PowerShell" scheme="https://no5972.moe/cms/categories/PowerShell/"/>
+    
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
     
     
   </entry>
@@ -422,7 +443,7 @@
     <link href="https://no5972.moe/cms/archivers/152.html"/>
     <id>https://no5972.moe/cms/archivers/152.html</id>
     <published>2023-09-11T17:30:00.000Z</published>
-    <updated>2023-10-24T05:38:05.445Z</updated>
+    <updated>2025-09-04T09:00:17.285Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>发觉之前的 Outpainting 脚本效果仍旧不是很理想。这里又找了一下有没有效果更好的途径来扩图。于是就找到了通过 ControlNet 的方式来实现效果更好的扩图。这里临时记录一下在 Stable Diffusion 怎么使用 ControlNet 来扩展图片。</p><p>下载 <code>control_v11p_sd15_inpaint_fp16.safetentors</code>，放到 SD 目录的 <code>\models\ControlNet</code> 目录。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/c3176a7e74734f46b777ca9883f3d8d1.png" alt="" /></p><p>在 SD WebUI 里面在 ControlNet <strong>勾选启用</strong>。选择<strong>局部重绘</strong>，然后看一看预处理器是不是 <code>inpaint_only</code>，模型是不是刚才下载的文件，如果不是就改一下。</p><p>下边三个滑块不用管。控制模式选择<strong>优先 ControlNet</strong>，画面缩放模式这里一般选择<strong>缩放并填充</strong>。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/ca979174d2794e1ab1ff870139bf7ece.png" alt="" /></p><p>然后在上面的作图尺寸里面根据想要的长宽比输入需要的尺寸（点击图片右下方最右边的按钮，可以直接将导入的图片的尺寸发送到上面的尺寸处）。当然，如果可能的话，请尽量在提示词里面写好背景方面的提示词。然后开始生成。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/83e29154fc114c9bb3cf55e920da4a25.png" alt="" /><br /><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/b5701d8683ea44dcbe1f1357aa08b3ed.png" alt="" /><br /><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/d82917bd5ed7418e8cec72e972ce06c3.png" alt="" /></p><p>可以将生成的图继续放到 ControlNet 的图像里面，然后重复步骤 4，继续扩展图片！</p><p>不同的采样方法效果差别有些大，可以尝试更换不同的采样方法来达到更好的效果。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -433,7 +454,7 @@
     </summary>
     
     
-      <category term="Python" scheme="https://no5972.moe/cms/categories/Python/"/>
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
     
     
   </entry>
@@ -443,7 +464,7 @@
     <link href="https://no5972.moe/cms/archivers/151.html"/>
     <id>https://no5972.moe/cms/archivers/151.html</id>
     <published>2023-09-07T09:00:00.000Z</published>
-    <updated>2023-09-07T09:11:03.157Z</updated>
+    <updated>2025-09-04T09:00:12.363Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="域名和-web-网站的域名一样"><a class="markdownIt-Anchor" href="#域名和-web-网站的域名一样"></a> 域名和 web 网站的域名一样</h1><h1 id="搜索模型get-apiv1models"><a class="markdownIt-Anchor" href="#搜索模型get-apiv1models"></a> 搜索模型：<code>GET /api/v1/models</code></h1><p>常用参数（都是可选）：</p><ul><li><code>tag</code> 标签</li><li><code>query</code> 标题（模糊查询）</li><li><code>page</code> 页数</li><li><code>limit</code> 每页大小</li><li><code>username</code> 作者用户名</li><li><code>types</code> 模型类型 (<code>Checkpoint, TextualInversion, Hypernetwork, AestheticGradient, LORA, Controlnet, Poses</code>) ，默认加载所有类型</li><li><code>sort</code> 排序方式 (<code>Highest%20Rated, Most%20Downloaded, Newest</code>)</li></ul><p>在返回的数据中：</p><ul><li><code>items[a].creator</code> 作者信息</li><li><code>items[a].name</code> 模型标题</li><li><code>items[a].description</code> 模型介绍（HTML格式）</li><li><code>items[a].modelVersions[b].images[c].url</code> 预览图</li><li><code>items[a].modelVersions[b].images[c].meta</code> 预览图的 AI 参数</li><li><code>items[a].modelVersions[b].downloadUrl</code> <strong>下一步</strong> 要下载要用的地址（有跳转，API 不能直接下）</li></ul><h1 id="下载模型get-apidownloadmodelsid"><a class="markdownIt-Anchor" href="#下载模型get-apidownloadmodelsid"></a> 下载模型：<code>GET /api/download/models/{id}</code></h1><p>请求地址里面的 <code>{id}</code> 就是上一步找到的模型 <strong>版本</strong> 的 ID。</p><p>访问后会返回一个 307 响应码。响应头的 <code>location</code> 就是真实下载地址，但是这个地址是临时的，要尽快完成下载，不久后就会失效。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -454,7 +475,7 @@
     </summary>
     
     
-      <category term="Python" scheme="https://no5972.moe/cms/categories/Python/"/>
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
     
     
   </entry>
@@ -506,7 +527,7 @@
     <link href="https://no5972.moe/cms/archivers/148.html"/>
     <id>https://no5972.moe/cms/archivers/148.html</id>
     <published>2023-06-20T08:30:00.000Z</published>
-    <updated>2023-06-20T08:16:02.215Z</updated>
+    <updated>2025-09-04T09:00:03.832Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>不知怎么搞的，图库浏览器点开图片看不到生成图片的信息了。但是据信这些信息是写在 PNG 数据的某个附加区段的（参考博客文章<a href="https://www.aiuai.cn/aifarm1516.html" target="_blank" rel="noopener">《Python - PNG图掺入隐藏文本信息》</a>）。Stable Diffusion 原生支持读取这些信息。并且除了图库浏览器，还有一个地方可以读取。</p><p>从资源管理器里面 SD 目录的 <code>outputs/txt2img-images</code> 里面找到要读取信息的图片。在 SD WebUI 中切换到“图片信息”选项卡，然后将图片拖进来，即可在右侧看到图片生成时输入的 prompt，以及 negative prompt、CFG、步数、模型信息、种子值、分辨率等。（参考博客文章<a href="https://huke88.com/article/8116.html" target="_blank" rel="noopener">《Stable-Diffusion：图片信息（PNG Info）功能介绍》</a>）</p><p><img src="https://images.weserv.nl/?url=https://pic.huke88.com/article/content/image/2023-06-01/6854BFD9-BC5E-1801-D85E-CD9A93C77982.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -517,7 +538,7 @@
     </summary>
     
     
-      <category term="Python" scheme="https://no5972.moe/cms/categories/Python/"/>
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
     
     
   </entry>
@@ -527,7 +548,7 @@
     <link href="https://no5972.moe/cms/archivers/147.html"/>
     <id>https://no5972.moe/cms/archivers/147.html</id>
     <published>2023-06-05T14:30:00.000Z</published>
-    <updated>2023-06-05T14:12:09.823Z</updated>
+    <updated>2025-09-04T08:59:58.446Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>现有的解决方案，包括 Bing 搜出来的，基本上都是要收费的，这些解决方案大多基于 DALL-E。某度也很难搜出来一个图文的介绍。那么就应该研究一下开源的 Stable Diffusion 能不能也实现类似的扩图功能。这里临时记录一下在 Stable Diffusion 怎么操作可以扩展图片。</p><p>这里用的还是秋叶的 v3 整合包。启动 Stable Diffusion 之后，打开图生图，下面就默认的图生图，将一张要扩展的图片拖进来。拉到最下面，脚本选择“ <strong>向外绘制第 X 版</strong> ”。这时候会出现选项，选择向哪个方向扩充。以及输入扩充多少像素。</p><p>和 DALL-E 方式一样，这个扩展同样需要输入提示才能保证正确扩展。在最上面的那两个大输入框输入正向提示和负面提示。然后点击生成。这样就完成了图片的扩展。可以根据需要修改附近的参数来获得更好的效果。</p><p><img src="https://images.weserv.nl/?url=https://img-blog.csdnimg.cn/89f556ef29564c159b675ac5642328c3.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
@@ -538,7 +559,7 @@
     </summary>
     
     
-      <category term="Python" scheme="https://no5972.moe/cms/categories/Python/"/>
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
     
     
   </entry>
