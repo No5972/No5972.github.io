@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: DOS;
-  src: url('https://cdn.jsdelivr.net/gh/No5972/Live2D@9/Moder-DOS-437-Win.ttf');
+  src: url('https://cdn.jsdmirror.com/gh/No5972/Live2D@9/Moder-DOS-437-Win.ttf');
 }
 
 body {
@@ -34,35 +34,33 @@ body {
   <script src="/static/typing.js"></script>
 </head>
 <body>
-  <audio src="https://no5972.moe/cms/static/whxw9.ogg" autoplay loop></audio>
+  <!-- <audio src="https://no5972.moe/cms/static/whxw9.ogg" autoplay loop></audio> -->
   <a href="/cms"><div style="height: 100%;width: 100%;display: block;position: absolute;overflow: hidden;left: 0;top: 0;"></div></a>
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-6" style="display: none;">
         <div id="source">
-Welcome to 5972DOS 0.04...<br>
+Welcome to 5972DOS 0.05...<br>
 Copyright No.5972 All rights reserved.<br>
 <br>
-Start playing WHXW9.OGG ...<br>
-<br>
-Now you are in 5972DOS 0.04 prompt. Type 'HELP' for help.<br>
+Now you are in 5972DOS 0.05 prompt. Type 'HELP' for help.<br>
 <br>
         </div>
         <div id="source2">D:
 <br><br>cd COVER
 <br><br>type HELLO.TXT
-        </div>
+</div>
 
         <div id="source3">
 No.5972 (wujiuqier) Personal Little Nest<br>
 https://no5972.moe<br>
 <br>
-It could be hard to design a website cover, but anyways it has been finished. <br>
+It could be hard to design a website cover, but anyways it has been finished.<br>
 This is only a personal weblog which contains IT articles that are about various fields.<br>
 <br>
-BGM: BGM27 EX - LAMUNATION! (Opening of Wuhan News in 2014-2017 of Wuhan Media Group)<br>
-<br>
 These words might be modified at any time.<br>
+<br>
+Click the flashing cursor to type commands. Type 'HELP' for help.<br>
 <br>
 Just click anywhere on this page using your mouse and you can start browsing my blog. Have fun!<br>
 <br>
@@ -87,6 +85,7 @@ D:\COVER></div>
     }
   </script>
   <script type="text/javascript">
+    var workingDirectory = "D:\\COVER";
     function confirmEnding(str, target) {
         if(str.substr(str.length-target.length,target.length)==target)
             return true;
@@ -99,79 +98,114 @@ D:\COVER></div>
         switch (e.keyCode) {
             case 8: 
                 keyName = "退格"; 
-                if (!confirmEnding(document.getElementById("output3").innerText, "D:\\COVER>")) {
+                if (!confirmEnding(document.getElementById("output3").innerText, workingDirectory + ">")) {
                     document.getElementById("output3").innerText = document.getElementById("output3").innerText.substring(0, document.getElementById("output3").innerText.length - 1);
                 }
                 break;
             case 9: keyName = "Tab"; break;
             case 13: 
-                var input = document.getElementById("output3").innerText.substring(document.getElementById("output3").innerText.lastIndexOf("D:\\COVER>") + 9, document.getElementById("output3").innerText.length);
+                var input = document.getElementById("output3").innerText.substring(document.getElementById("output3").innerText.lastIndexOf(workingDirectory + ">") + (workingDirectory + ">").length, document.getElementById("output3").innerText.length);
                 if (input.toUpperCase().indexOf("ECHO ") == 0) {
-                     document.getElementById("output3").innerHTML += "<br>" + input.substring(5) + "<br><br>D:\\COVER&gt;";
+                     document.getElementById("output3").innerHTML += "<br>" + input.substring(5) + "<br><br>" + workingDirectory + "&gt;";
                      scroll(0,document.body.scrollHeight);
                      break;
                 }
                 switch (input.toUpperCase()) {
                     case 'MUSIC --PAUSE':
-                        document.getElementById("output3").innerHTML += "<br><br>D:\\COVER>";
+                        document.getElementById("output3").innerHTML += "<br><br>" + workingDirectory + ">";
                         document.getElementsByTagName("audio")[0].pause();
                         break;
                     case 'MUSIC --PLAY':
-                        document.getElementById("output3").innerHTML += "<br><br>D:\\COVER>";
+                        document.getElementById("output3").innerHTML += "<br><br>" + workingDirectory + ">";
                         document.getElementsByTagName("audio")[0].play();
                         break;
                     case 'EXIT':
                     case 'REBOOT':
-                        document.getElementById("output3").innerHTML += "<br><br>D:\\COVER>";
+                        document.getElementById("output3").innerHTML += "<br><br>" + workingDirectory + ">";
                         location.reload();
                         break;
                     case 'TYPE HELLO.TXT':
-                        document.getElementById("output3").innerHTML += "<br>" + document.getElementById("source3").innerHTML;
+                        if (workingDirectory == "D:\\COVER") {
+                            document.getElementById("output3").innerHTML += "<br>" + document.getElementById("source3").innerHTML;
+                        } else {
+                            document.getElementById("output3").innerHTML += "<br>File not found - HELLO.TXT<br><br>" + workingDirectory + ">";
+                        }
                         break;
                     case 'BLOG':
-                        document.getElementById("output3").innerHTML += "<br><br>D:\\COVER>";
+                        document.getElementById("output3").innerHTML += "<br><br>" + workingDirectory + ">";
                         location.href="cms";
                         break;             
                     case 'CLS':
                         document.getElementById("output").innerHTML = "";
                         document.getElementById("output2").innerHTML = "";
-                        document.getElementById("output3").innerHTML = "D:\\COVER&gt;";
+                        document.getElementById("output3").innerHTML = workingDirectory + "&gt;";
                         break;
                     case 'VER':
-                        document.getElementById("output3").innerHTML += "<br><br>5972DOS Version 0.04<br><br><br>D:\\COVER>";
+                        document.getElementById("output3").innerHTML += "<br><br>5972DOS Version 0.04<br><br><br>" + workingDirectory + ">";
                         break;
                     case 'COMMAND':
                         document.getElementById("output3").innerHTML += `<br><br>
-No.5972 5972DOS Version 0.04<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(C)Copyright No.5972 2011-2020.<br><br>D:\\COVER>`;
+No.5972 5972DOS Version 0.05<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(C)Copyright No.5972 2011-2020.<br><br>` + workingDirectory + `>`;
                         break;
                     case 'HELP':
                         document.getElementById("output3").innerHTML += `<br>
 BLOG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start browsing this weblog.<br>
+CD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the name of or changes the current directory.<br>
 CLS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears the screen.<br>
 COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the title.<br>
 DIR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays a list of files and subdirectories in a directory.<br>
 ECHO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Displays messages, or turns command echoing on or off.<br>
 EXIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Refresh the page.<br>
 HELP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides all commands information.<br>
-MUSIC --PAUSE&nbsp;&nbsp;&nbsp;&nbsp;Pause the background music.<br>
-MUSIC --PLAY&nbsp;&nbsp;&nbsp;&nbsp; Resume the paused music.<br>
 REBOOT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh the page.<br>
 TYPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the contents of a text file. (Supports HELLO.txt only)<br>
-VER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the DOS version.<br><br>D:\\COVER&gt;`
+VER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Displays the DOS version.<br><br>` + workingDirectory + `&gt;`
                         break;
                     case 'DIR':
-                        document.getElementById("output3").innerHTML += `<br><br>&nbsp;Volume in drive D is 5972DOS<br>
-&nbsp;Directory of D:\\COVER\\<br><br>
-HELLO&nbsp;&nbsp;&nbsp;&nbsp;TXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;465&nbsp;09-29-21&nbsp;&nbsp;03:00p<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;file(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;514&nbsp;bytes
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 bytes free<br><br>D:\\COVER&gt;`;
+                        switch (workingDirectory) {
+                            case 'D:\\COVER':
+                                document.getElementById("output3").innerHTML += `<br><br>&nbsp;Volume in drive D is 5972DOS<br>
+&nbsp;Directory of D:\\COVER<br><br>
+.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;09-29-21&nbsp;&nbsp;03:00p<br>
+..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;09-29-21&nbsp;&nbsp;03:00p<br>
+HELLO&nbsp;&nbsp;&nbsp;&nbsp;TXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;445&nbsp;09-29-21&nbsp;&nbsp;03:00p<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;file(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;445&nbsp;bytes
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 bytes free<br><br>` + workingDirectory + `&gt;`;
+                                break;
+                            case 'D:\\':
+                                document.getElementById("output3").innerHTML += `<br><br>&nbsp;Volume in drive D is 5972DOS<br>
+&nbsp;Directory of D:\\<br><br>
+COVER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DIR&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;09-29-21&nbsp;&nbsp;03:00p<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;file(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;445&nbsp;bytes
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 bytes free<br><br>` + workingDirectory + `&gt;`;
+                                break;
+                            default:
+                                break;
+                        }
                         break;
+                    case 'CD':
+                        document.getElementById("output3").innerHTML += "<br>" + workingDirectory + "<br><br>" + workingDirectory + ">";
+                        break;
+                    case 'CD .':
+                    case 'CD.':
+                        document.getElementById("output3").innerHTML += "<br><br>" + workingDirectory + ">";
+                        break;
+                    case 'CD ..':
+                    case 'CD\\':
+                    case 'CD \\':
+                        workingDirectory = "D:\\";
+                        document.getElementById("output3").innerHTML += "<br><br>" + workingDirectory + ">";
+                        break;
+                    case 'CD COVER':
+                        workingDirectory = "D:\\COVER";
+                        document.getElementById("output3").innerHTML += "<br><br>" + workingDirectory + ">";
+                        break;  
                     case '':
-                        document.getElementById("output3").innerHTML += "<br>D:\\COVER>";
+                        document.getElementById("output3").innerHTML += "<br>" + workingDirectory + ">";
                         break;
                     default:
-                        document.getElementById("output3").innerHTML += "<br>Bad command or file name<br><br>D:\\COVER>";
+                        document.getElementById("output3").innerHTML += "<br>Bad command or file name<br><br>"+ workingDirectory + ">";
                         break;
                 } 
                 scroll(0,document.body.scrollHeight);
@@ -235,7 +269,9 @@ HELLO&nbsp;&nbsp;&nbsp;&nbsp;TXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         console.log('done');
         document.querySelector("#output2-wrap .typing-cursor").style.display = "none";
         document.querySelector("#output3-wrap .typing-cursor").style.display = "inline";
-        typing3.start();
+        // typing3.start();
+        document.querySelector("#output3").innerHTML = document.getElementById("source3").innerHTML;
+        document.onkeydown = typing4;
       },
       typeOne: function() {
         var str = document.getElementById("output2").innerHTML;
@@ -243,11 +279,12 @@ HELLO&nbsp;&nbsp;&nbsp;&nbsp;TXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         for (var i in strArr) {
           if (i == 0 && strArr[i].lastIndexOf("C:\\&gt;") == -1) strArr[i] = "C:\\>" + strArr[i];
           if (i == 2 && strArr[i].lastIndexOf("D:\\&gt;") == -1) strArr[i] = "D:\\>" + strArr[i];
-          if (i == 4 && strArr[i].lastIndexOf("D:\\COVER&gt;") == -1) strArr[i] = "D:\\COVER>" + strArr[i];
+          if (i == 4 && strArr[i].lastIndexOf(workingDirectory + "&gt;") == -1) strArr[i] = workingDirectory + ">" + strArr[i];
         }
         document.getElementById("output2").innerHTML = strArr.join("<br>");
       }
     });
+    /*
     var typing3 = new Typing({
       source: document.getElementById('source3'),
       output: document.getElementById('output3'),
@@ -262,6 +299,7 @@ HELLO&nbsp;&nbsp;&nbsp;&nbsp;TXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         scroll(0,document.body.scrollHeight);
       }
     });
+    */
     typing.start();
     document.querySelector("#output2-wrap .typing-cursor").style.display = "none";
     document.querySelector("#output3-wrap .typing-cursor").style.display = "none";
