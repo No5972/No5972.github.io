@@ -28,7 +28,7 @@
     <url>/cms//archivers/172.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-be7a1f53f867b90814811787e380d5b4_r.png" alt="" /></p>
 <p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-4a02f49f23dab43b8481b81e37365a44_r.png" alt="" /></p>
-<p>访问 lmarena 点 ai，选 Battle 模式，点击开启 Image</p>
+<p>访问 <a href="https://lmarena.ai" target="_blank" rel="noopener">https://lmarena.ai</a> ，选 Battle 模式，点击开启 Image</p>
 <p><strong>（更新：现在可以直接选择 Direct Chat 模式了，把上面的 Battle 改成 Direct Chat，然后点击下边图像按钮开启生成图片的模式，然后模型选择 Google Gemini 2.5 Flash Image Preview (Nano Banana)。那个 nano-banana 其实就是这个，这个现在已经可以直接在 Direct Chat 模式里面调用了。（还得是你谷歌老大哥在行））</strong></p>
 <p><img src="https://images.weserv.nl?url=https://pic1.zhimg.com/v2-6798c021a5ab17d573a135a035dfc27c_r.png" alt="" /></p>
 <p>上传 1:1 比例的角色截图，输入该提示并提交</p>
@@ -496,8 +496,8 @@ no stylization, true-to-reference color and design, 1:1 scale.</p>
 <p><img src="https://picx.zhimg.com/80/v2-e25c6799f10a84b1d69ce967482b1abd.png" alt="" /></p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>PowerShell</category>
         <category>AIGC</category>
+        <category>PowerShell</category>
       </categories>
   </entry>
   <entry>
