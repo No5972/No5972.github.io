@@ -101,17 +101,17 @@
   </entry>
   
   <entry>
-    <title>C 语言 手动给 Win9x/ME 蓝屏</title>
+    <title>C 语言 手动给 Win9x 蓝屏</title>
     <link href="https://no5972.moe/cms/archivers/168.html"/>
     <id>https://no5972.moe/cms/archivers/168.html</id>
     <published>2025-04-07T08:30:00.000Z</published>
-    <updated>2025-04-07T08:20:05.599Z</updated>
+    <updated>2025-09-29T11:58:57.423Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>刚刚在某乎的一个评论区看到<a href="https://www.zhihu.com/question/264036496/answer/277259763" target="_blank" rel="noopener">有人提出了这样的问题</a>，现有的从网上找到的代码基本上都是给 NT 内核的系统手动蓝屏的（如 Win2000、XP、7、8、10、11 等）。但是如果是 Win9x/ME 这样的系统，那就不是 NT 内核，就不能用诸如 <code>NtRaiseHardErr</code> 这样的函数来手动蓝屏，只会弹出一个“该程序执行了非法操作，将被关闭”的提示，因为 9x/ME 的 <code>ntdll.dll</code> 库文件根本就没有这个函数。</p><p>从虚拟机里面稍微研究了一下，其实可以直接用之前广为流传的 Win9x 的那个 con bug 就能实现，就是在 Win + R 的运行窗口输入 <code>con/con</code> 命令，就会直接触发蓝屏。只需要把这个 con bug 封装成一个 C 语言程序就可以了。不过 <code>system</code>  函数直接执行出来的话程序可能只会输出“Bad command or file name”就结束了，所以保险起见，前面再加一个 <code>explorer</code>，这样就可以写一个给 Win9x/ME 系统手动蓝屏的程序了。</p><p><strong>注意该程序仅供试验和研究之用，请备份好相应数据再尝试，不要瞎搞！</strong></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    system(<span class="string">"explorer con/con"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://images.weserv.nl/?url=https://img2024.cnblogs.com/blog/2259503/202504/2259503-20250407155426969-585222943.png" alt="" /></p><p><img src="https://images.weserv.nl/?url=https://img2024.cnblogs.com/blog/2259503/202504/2259503-20250407155433796-400043220.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>刚刚在某乎的一个评论区看到<a href="https://www.zhihu.com/question/264036496/answer/277259763" target="_blank" rel="noopener">有人提出了这样的问题</a>，现有的从网上找到的代码基本上都是给 NT 内核的系统手动蓝屏的（如 Win2000、XP、7、8、10、11 等）。但是如果是 Win9x/ME 这样的系统，那就不是 NT 内核，就不能用诸如 <code>NtRaiseHardErr</code> 这样的函数来手动蓝屏，只会弹出一个“该程序执行了非法操作，将被关闭”的提示，因为 9x/ME 的 <code>ntdll.dll</code> 库文件根本就没有这个函数。</p><p>从虚拟机里面稍微研究了一下，其实可以直接用之前广为流传的 Win9x 的那个 con bug 就能实现，就是在 Win + R 的运行窗口输入 <code>con/con</code> 命令，就会直接触发蓝屏。只需要把这个 con bug 封装成一个 C 语言程序就可以了。不过 <code>system</code>  函数直接执行出来的话程序可能只会输出“Bad command or file name”就结束了，所以保险起见，前面再加一个 <code>explorer</code>，这样就可以写一个给 Win9x 系统手动蓝屏的程序了。</p><p>不过，这个 bug 在 ME 系统已经被修复，已无法使用 con 来触发蓝屏了。所以这个做法只对 Win9x 系统有效。</p><p><strong>注意该程序仅供试验和研究之用，请备份好相应数据再尝试，不要瞎搞！</strong></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    system(<span class="string">"explorer con/con"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://images.weserv.nl/?url=https://img2024.cnblogs.com/blog/2259503/202504/2259503-20250407155426969-585222943.png" alt="" /></p><p><img src="https://images.weserv.nl/?url=https://img2024.cnblogs.com/blog/2259503/202504/2259503-20250407155433796-400043220.png" alt="" /></p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
-      刚刚在某乎的一个评论区看到有人提出了这样的问题，现有的从网上找到的代码基本上都是给 NT 内核的系统手动蓝屏的（如 Win2000、XP、7、8、10、11 等）。但是如果是 Win9x/ME 这样的系统，那就不是 NT 内核，就不能用诸如 NtRaiseHardErr 这样的函数来手动蓝屏，只会弹出一个“该程序执行了非法操作，将被关闭”的提示，因为 9x/ME 的 ntdll.dll 库文件根本就没有这个函数。从虚拟机里面稍微研究了一下，其实可以直接用之前广为流传的 Win9x 的那个 con bug 就能实现，就是在 Win + R 的运行窗口输入 con/con 命令，就会直接触发蓝屏。只需要把这个 con bug 封装成一个 C 语言程序就可以了。
+      刚刚在某乎的一个评论区看到有人提出了这样的问题，现有的从网上找到的代码基本上都是给 NT 内核的系统手动蓝屏的（如 Win2000、XP、7、8、10、11 等）。但是如果是 Win9x 这样的系统，那就不是 NT 内核，就不能用诸如 NtRaiseHardErr 这样的函数来手动蓝屏，只会弹出一个“该程序执行了非法操作，将被关闭”的提示，因为 9x/ME 的 ntdll.dll 库文件根本就没有这个函数。从虚拟机里面稍微研究了一下，其实可以直接用之前广为流传的 Win9x 的那个 con bug 就能实现，就是在 Win + R 的运行窗口输入 con/con 命令，就会直接触发蓝屏。只需要把这个 con bug 封装成一个 C 语言程序就可以了。
     
     </summary>
     
@@ -389,9 +389,9 @@
     </summary>
     
     
-      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
-    
       <category term="PowerShell" scheme="https://no5972.moe/cms/categories/PowerShell/"/>
+    
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
     
     
   </entry>
@@ -2177,9 +2177,9 @@
     </summary>
     
     
-      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
@@ -2565,9 +2565,9 @@
     </summary>
     
     
-      <category term="C#" scheme="https://no5972.moe/cms/categories/C/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="C#" scheme="https://no5972.moe/cms/categories/C/"/>
     
     
   </entry>
