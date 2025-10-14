@@ -6,7 +6,7 @@
   <link href="/cms/feed.xml" rel="self"/>
   
   <link href="https://no5972.moe/cms/"/>
-  <updated>2025-09-04T10:08:37.392Z</updated>
+  <updated>2025-10-14T07:40:41.978Z</updated>
   <id>https://no5972.moe/cms/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://no5972.moe/cms/archivers/172.html"/>
     <id>https://no5972.moe/cms/archivers/172.html</id>
     <published>2025-08-31T07:00:00.000Z</published>
-    <updated>2025-09-04T10:08:37.392Z</updated>
+    <updated>2025-10-14T07:40:41.978Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-be7a1f53f867b90814811787e380d5b4_r.png" alt="" /></p><p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-4a02f49f23dab43b8481b81e37365a44_r.png" alt="" /></p><p>访问 <a href="https://lmarena.ai" target="_blank" rel="noopener">https://lmarena.ai</a> ，选 Battle 模式，点击开启 Image</p><p><strong>（更新：现在可以直接选择 Direct Chat 模式了，把上面的 Battle 改成 Direct Chat，然后点击下边图像按钮开启生成图片的模式，然后模型选择 Google Gemini 2.5 Flash Image Preview (Nano Banana)。那个 nano-banana 其实就是这个，这个现在已经可以直接在 Direct Chat 模式里面调用了。（还得是你谷歌老大哥在行））</strong></p><p><img src="https://images.weserv.nl?url=https://pic1.zhimg.com/v2-6798c021a5ab17d573a135a035dfc27c_r.png" alt="" /></p><p>上传 1:1 比例的角色截图，输入该提示并提交</p><blockquote><p>Realistic PVC figure based on the game screenshot character,<br />exact pose replication<br />highly detailed textures<br />PVC material with subtle sheen and smooth paint finish,<br />placed on an indoor wooden computer desk (with subtle desk items like a figure box/mouse),<br />illuminated by soft indoor light (mix of desk lamp and natural window light) for realistic shadows and highlights,<br />macro photography style, high resolution, sharp focus on the figure, shallow depth of field (desk background slightly blurred but visible),<br />no stylization, true-to-reference color and design, 1:1 scale.</p></blockquote><p>（提示词来源网络）</p><p>如果你的英语好的话，也可以在提示词后面空一行，然后添加服饰方面的提示（空一行主要是方便你自己后续修改、维护这个提示词），这样可以得到更准确、细节更丰富的效果。</p><p>例如鄙人这里示例使用的战灵天舞天空套花仙子的形象可以这样写：</p><blockquote><p>the girl is a young fairy in white stockings and green sandals with pink rose inlay. the skirt is made of pink rose petals.</p></blockquote><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-be7a1f53f867b90814811787e380d5b4_r.png" alt="" /></p><p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-4a02f49f23dab43b8481b81e37365a44_r.png" alt="" /></p><h1 id="更新一个使用-openrouter-调用这个模型的办法"><a class="markdownIt-Anchor" href="#更新一个使用-openrouter-调用这个模型的办法"></a> 更新一个使用 OpenRouter 调用这个模型的办法</h1><p>这个方法需要一点 $，大概一张图 $0.04。在这个网站注册一个账号，可以使用邮箱，也可以使用 GitHub 等平台第三方登录。然后进入右上角头像，Credits，点击 Add Credits，然后在面板的下方点击开启 Use one-time payment methods，里面有国内常用的两大平台的之父方式，5 刀起充。</p><p>准备好额度之后，点击右上角 Chat，再点击左上方 Add Model，然后搜索 flash image，选择 Google: Gemini 2.5 Flash Image Preview (Nano Banana)，然后下方聊天输入框点击上面的 Image 开启生成图片的模式。然后上传要使用的图片，把本文下面原来放上去的那个提示词输入，并根据实际情况调整。最后点击右下方紫色的按钮提交，稍等片刻就得到生成的图片了。</p><h1 id="原来的-lmarena-的方法"><a class="markdownIt-Anchor" href="#原来的-lmarena-的方法"></a> 原来的 LMArena 的方法</h1><p>访问 <a href="https://lmarena.ai" target="_blank" rel="noopener">https://lmarena.ai</a> ，选 Battle 模式，点击开启 Image</p><p><strong>（更新：现在可以直接选择 Direct Chat 模式了，把上面的 Battle 改成 Direct Chat，然后点击下边图像按钮开启生成图片的模式，然后模型选择 Google Gemini 2.5 Flash Image Preview (Nano Banana)。那个 nano-banana 其实就是这个，这个现在已经可以直接在 Direct Chat 模式里面调用了。（还得是你谷歌老大哥在行））</strong></p><p><img src="https://images.weserv.nl?url=https://pic1.zhimg.com/v2-6798c021a5ab17d573a135a035dfc27c_r.png" alt="" /></p><p>上传 1:1 比例的角色截图，输入该提示并提交</p><blockquote><p>Realistic PVC figure based on the game screenshot character,<br />exact pose replication<br />highly detailed textures<br />PVC material with subtle sheen and smooth paint finish,<br />placed on an indoor wooden computer desk (with subtle desk items like a figure box/mouse),<br />illuminated by soft indoor light (mix of desk lamp and natural window light) for realistic shadows and highlights,<br />macro photography style, high resolution, sharp focus on the figure, shallow depth of field (desk background slightly blurred but visible),<br />no stylization, true-to-reference color and design, 1:1 scale.</p></blockquote><p>（提示词来源网络）</p><p>如果你的英语好的话，也可以在提示词后面空一行，然后添加服饰方面的提示（空一行主要是方便你自己后续修改、维护这个提示词），这样可以得到更准确、细节更丰富的效果。</p><p>例如鄙人这里示例使用的战灵天舞天空套花仙子的形象可以这样写：</p><blockquote><p>the girl is a young fairy in white stockings and green sandals with pink rose inlay. the skirt is made of pink rose petals.</p></blockquote><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
@@ -389,9 +389,9 @@
     </summary>
     
     
-      <category term="PowerShell" scheme="https://no5972.moe/cms/categories/PowerShell/"/>
-    
       <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
+    
+      <category term="PowerShell" scheme="https://no5972.moe/cms/categories/PowerShell/"/>
     
     
   </entry>
@@ -2177,9 +2177,9 @@
     </summary>
     
     
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
-    
       <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
+    
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     
@@ -2565,9 +2565,9 @@
     </summary>
     
     
-      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
-    
       <category term="C#" scheme="https://no5972.moe/cms/categories/C/"/>
+    
+      <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
     
     
   </entry>
