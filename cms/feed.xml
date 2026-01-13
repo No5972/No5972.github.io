@@ -126,9 +126,9 @@
     <link href="https://no5972.moe/cms/archivers/169.html"/>
     <id>https://no5972.moe/cms/archivers/169.html</id>
     <published>2025-04-08T18:00:00.000Z</published>
-    <updated>2025-09-04T08:59:19.946Z</updated>
+    <updated>2026-01-13T06:57:25.999Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><!-- ![](https://images.weserv.nl?url=https://www.callmysoft.com/ueditor/php/upload/image/20250108/1736340480423184.png) --><p><img src="https://images.weserv.nl?url=https://www.callmysoft.com/ueditor/php/upload/image/20250108/1736340480423184.png" width="50%"></img></p><h1 id="先上具体步骤"><a class="markdownIt-Anchor" href="#先上具体步骤"></a> 先上具体步骤：</h1><ol><li>下载并安装 VxKex NEXT 这个开源组件，可以在网上搜索这个开源组件的名字（注意找到正确的下载链接）。</li><li>然后将豆包安装包 Doubao_installer.exe 使用解压缩软件（7-Zip、WinRAR 等）直接解压出来 <strong>（建议小白用户不要选择解压到当前目录，小心和当前目录其他文件搅到一起了，清理会很困难。请选择解压到 Doubao_installer 子目录）</strong> 。</li><li>然后在解压的目录中找到 Doubao.exe 这个主程序文件，右键属性，VxKex 选项卡，勾选“为此程序启用 VxKex NEXT”并确定，再看看能不能打开。</li></ol><p><em>如果运行程序时提示的是“Doubao.exe 不是有效的 Win32 应用程序”，而不是“无法定位程序输入点”，那么请先右键桌面上或者开始菜单里面的“计算机”，选择“属性”，看一看电脑的系统是不是 32 位的。</em> <strong>如果是 32 位的 Win7，这种情况就不要看上面的步骤了，请老老实实把电脑的系统重装成 Win10 64 位或 Win11（重装前注意备份好个人资料，例如桌面、文档、下载、图片等）。</strong> <em>豆包电脑版是一个纯 64 位的应用程序，32 位的 Win7 肯定是不支持的。</em></p><p><img src="https://images.weserv.nl?url=https://pic4.zhimg.com/v2-86ee662b5304cb6e491f4b4a665ccd23_r.jpg" alt="" /></p><p><em>不过鄙人这个图是在和 Win7 相同版本内核的 Windows Server 2008 下测试的，不过如果 Windows Server 2008 能跑通，Win7 基本也就八九不离十了，就还是按照上面的步骤设置即可打开豆包桌面版，如下若干张图所示。</em></p><p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-4ea31bba2bc3eef8f7b72c2b1c6fe08d_r.png" alt="" /></p><div class="group-picture"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://images.weserv.nl?url=https://pic3.zhimg.com/v2-a986a3e626c8c2e0774f8bc3e54c5c96_r.png" alt="" /></div><div class="group-picture-column" style="width: 50%;"><img src="https://images.weserv.nl?url=https://pic1.zhimg.com/v2-59ed271749f9c3d77aff048c62ba633e_r.png" alt="" /></div></div></div><h1 id="事情是这样的"><a class="markdownIt-Anchor" href="#事情是这样的"></a> 事情是这样的：</h1><p>刚刚收到来自 <a href="https://space.bilibili.com/85914396" target="_blank" rel="noopener">@Geeker Z</a> 的最新线索，有一个开源项目 VxKex NEXT 提供了对 Win7 操作系统运行 Win10/11 应用程序的兼容支持。鄙人之前已在某个回答提到过，豆包桌面版其实就是一个 Chromium 浏览器的简单封装，而那个线索视频里面展示的正是在 Win7 下正常运行了新版的谷歌浏览器，所以理论上这个也可以用于在 Win7 里面使用豆包桌面版。不过鄙人这边手头暂时没有 Win7 的测试环境，暂时没法试验可否用于在 Win7 运行豆包桌面版，并且也无法保证有效。</p><p><a href="https://github.com/YuZhouRen86/VxKex-Next/releases/latest" target="_blank" rel="noopener">GitHub YuZhouRen86/VxKex-Next</a></p><p><a href="https://www.bilibili.com/video/BV1SedHYsE6b/" target="_blank" rel="noopener">让 Win7 强行兼容 Win10 应用？VxKex 扩展内核安装体验_哔哩哔哩_bilibili</a></p><p>（篇头图源网络）</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><!-- ![](https://images.weserv.nl?url=https://www.callmysoft.com/ueditor/php/upload/image/20250108/1736340480423184.png) --><p><img src="https://images.weserv.nl?url=https://www.callmysoft.com/ueditor/php/upload/image/20250108/1736340480423184.png" width="50%"></img></p><h1 id="先上具体步骤"><a class="markdownIt-Anchor" href="#先上具体步骤"></a> 先上具体步骤：</h1><ol><li>下载并安装 VxKex NEXT 这个开源组件，可以在网上搜索这个开源组件的名字（注意找到正确的下载链接）。</li><li>然后正常安装豆包桌面版，安装好之后定位到安装豆包应用程序的目录，默认的目录位于 <code>%LOCALAPPDATA%\Doubao\Application</code>，在安装好的目录中找到 <code>Doubao.exe</code> 这个主程序文件，右键属性，VxKex 选项卡，勾选“为此程序启用 VxKex NEXT”并确定，再看看能不能打开。</li><li>如有必要，将 <code>%TEMP%\doubao_ext\</code> 、 <code>%LOCALAPPDATA%\Doubao\Application\app\</code> 目录及其子目录下所有 <code>shellext.dll</code>、 <code>shellextcore.dll</code> 删除，并想办法阻止豆包在此目录及其子目录下创建这些文件（可通过设置文件夹权限等手段），防止资源管理器崩溃等异常情况。</li></ol><p><em>如果运行程序时提示的是“Doubao.exe 不是有效的 Win32 应用程序”，而不是“无法定位程序输入点”，那么请先右键桌面上或者开始菜单里面的“计算机”，选择“属性”，看一看电脑的系统是不是 32 位的。</em> <strong>如果是 32 位的 Win7，这种情况就不要看上面的步骤了，请老老实实把电脑的系统重装成 Win10 64 位或 Win11（重装前注意备份好个人资料，例如桌面、文档、下载、图片等）。</strong> <em>豆包电脑版是一个纯 64 位的应用程序，32 位的 Win7 肯定是不支持的。</em></p><p><img src="https://images.weserv.nl?url=https://pic4.zhimg.com/v2-86ee662b5304cb6e491f4b4a665ccd23_r.jpg" alt="" /></p><p><em>不过鄙人这个图是在和 Win7 相同版本内核的 Windows Server 2008 下测试的，不过如果 Windows Server 2008 能跑通，Win7 基本也就八九不离十了，就还是按照上面的步骤设置即可打开豆包桌面版，如下若干张图所示。</em></p><p><img src="https://images.weserv.nl?url=https://picx.zhimg.com/v2-4ea31bba2bc3eef8f7b72c2b1c6fe08d_r.png" alt="" /></p><div class="group-picture"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="https://images.weserv.nl?url=https://pic3.zhimg.com/v2-a986a3e626c8c2e0774f8bc3e54c5c96_r.png" alt="" /></div><div class="group-picture-column" style="width: 50%;"><img src="https://images.weserv.nl?url=https://pic1.zhimg.com/v2-59ed271749f9c3d77aff048c62ba633e_r.png" alt="" /></div></div></div><h1 id="事情是这样的"><a class="markdownIt-Anchor" href="#事情是这样的"></a> 事情是这样的：</h1><p>刚刚收到来自 <a href="https://space.bilibili.com/85914396" target="_blank" rel="noopener">@Geeker Z</a> 的最新线索，有一个开源项目 VxKex NEXT 提供了对 Win7 操作系统运行 Win10/11 应用程序的兼容支持。鄙人之前已在某个回答提到过，豆包桌面版其实就是一个 Chromium 浏览器的简单封装，而那个线索视频里面展示的正是在 Win7 下正常运行了新版的谷歌浏览器，所以理论上这个也可以用于在 Win7 里面使用豆包桌面版。不过鄙人这边手头暂时没有 Win7 的测试环境，暂时没法试验可否用于在 Win7 运行豆包桌面版，并且也无法保证有效。</p><p><a href="https://github.com/YuZhouRen86/VxKex-Next/releases/latest" target="_blank" rel="noopener">GitHub YuZhouRen86/VxKex-Next</a></p><p><a href="https://www.bilibili.com/video/BV1SedHYsE6b/" target="_blank" rel="noopener">让 Win7 强行兼容 Win10 应用？VxKex 扩展内核安装体验_哔哩哔哩_bilibili</a></p><p>（篇头图源网络）</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
@@ -431,9 +431,9 @@
     </summary>
     
     
-      <category term="PowerShell" scheme="https://no5972.moe/cms/categories/PowerShell/"/>
-    
       <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
+    
+      <category term="PowerShell" scheme="https://no5972.moe/cms/categories/PowerShell/"/>
     
     
   </entry>
@@ -3098,27 +3098,6 @@
   </entry>
   
   <entry>
-    <title>java.math.BigDecimal保留指定位数的有效数字（不算前面的0）</title>
-    <link href="https://no5972.moe/cms/archivers/28.html"/>
-    <id>https://no5972.moe/cms/archivers/28.html</id>
-    <published>2020-08-20T03:27:49.000Z</published>
-    <updated>2021-07-10T02:52:23.100Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>百度百科：从一个数的左边第一个非0数字起，到末位数字止，所有的数字都是这个数的有效数字。<br />就是一个数从左边第一个不为0的数字数起到末尾数字为止，所有的数字（包括0，科学计数法不计10的N次方），称为有效数字。简单的说，把一个数字前面的0都去掉，从第一个正整数到精确的数位止所有的都是有效数字了。<br />如：0.0109，前面两个0不是有效数字，后面的109均为有效数字（注意，中间的0也算）。</p></blockquote><p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
-    
-    <summary type="html">
-    
-      BigDecimal类型的小数可以使用MathContext指定有效数字。
-    
-    </summary>
-    
-    
-      <category term="Java" scheme="https://no5972.moe/cms/categories/Java/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>我们为什么那么痛恨计算机等级与那些问题（二级党请进）</title>
     <link href="https://no5972.moe/cms/archivers/27.html"/>
     <id>https://no5972.moe/cms/archivers/27.html</id>
@@ -3135,6 +3114,27 @@
     
     
       <category term="C/C++" scheme="https://no5972.moe/cms/categories/C-C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>java.math.BigDecimal保留指定位数的有效数字（不算前面的0）</title>
+    <link href="https://no5972.moe/cms/archivers/28.html"/>
+    <id>https://no5972.moe/cms/archivers/28.html</id>
+    <published>2020-08-20T03:27:49.000Z</published>
+    <updated>2021-07-10T02:52:23.100Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote><p>百度百科：从一个数的左边第一个非0数字起，到末位数字止，所有的数字都是这个数的有效数字。<br />就是一个数从左边第一个不为0的数字数起到末尾数字为止，所有的数字（包括0，科学计数法不计10的N次方），称为有效数字。简单的说，把一个数字前面的0都去掉，从第一个正整数到精确的数位止所有的都是有效数字了。<br />如：0.0109，前面两个0不是有效数字，后面的109均为有效数字（注意，中间的0也算）。</p></blockquote><p> <code>BigDecimal</code>类型的小数可以使用<code>MathContext</code>指定有效数字。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 写法来自StackOverflow的Kru </span></span><br><span class="line"><span class="comment"> * https://stackoverflow.com/questions/7572309/any-neat-way-to-limit-significant-figures-with-bigdecimal</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">0.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">3</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：0.0222</span></span><br><span class="line"></span><br><span class="line">System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">144.022223</span>).round(<span class="keyword">new</span> MathContext(<span class="number">5</span>, RoundingMode.HALF_UP)));</span><br><span class="line"><span class="comment">// （四舍五入）输出：144.02</span></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      BigDecimal类型的小数可以使用MathContext指定有效数字。
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://no5972.moe/cms/categories/Java/"/>
     
     
   </entry>
