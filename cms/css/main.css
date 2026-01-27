@@ -2920,6 +2920,9 @@ ul.breadcrumb li + li:last-child {
 .post-meta {
   text-align: left !important;
 }
+.post-body .note {
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
 figure {
   display: block;
 }
