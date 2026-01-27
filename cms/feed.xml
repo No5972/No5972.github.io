@@ -431,9 +431,9 @@
     </summary>
     
     
-      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
-    
       <category term="PowerShell" scheme="https://no5972.moe/cms/categories/PowerShell/"/>
+    
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
     
     
   </entry>
@@ -2219,9 +2219,9 @@
     </summary>
     
     
-      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
-    
       <category term="Automation" scheme="https://no5972.moe/cms/categories/Automation/"/>
+    
+      <category term="Web Building" scheme="https://no5972.moe/cms/categories/Web-Building/"/>
     
       <category term="Github" scheme="https://no5972.moe/cms/categories/Github/"/>
     

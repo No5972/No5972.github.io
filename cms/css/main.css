@@ -2923,6 +2923,9 @@ ul.breadcrumb li + li:last-child {
 .post-body .note {
   box-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
+.post-body .note:not(.no-icon)::before {
+  text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
 figure {
   display: block;
 }
