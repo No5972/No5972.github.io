@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.moe/cms/archivers/129.html</loc>
+    
+    <lastmod>2026-04-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/archivers/156.html</loc>
     
     <lastmod>2026-04-03</lastmod>
@@ -381,13 +388,6 @@
   
   <url>
     <loc>https://no5972.moe/cms/archivers/130.html</loc>
-    
-    <lastmod>2023-03-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/129.html</loc>
     
     <lastmod>2023-03-15</lastmod>
     
@@ -1364,20 +1364,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/categories/Automation/</loc>
-    <lastmod>2026-04-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>daily</changefreq>
@@ -1385,7 +1371,21 @@
   </url>
   
   <url>
+    <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/categories/Other/</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/categories/Automation/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
