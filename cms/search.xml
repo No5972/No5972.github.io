@@ -24,6 +24,17 @@
       </categories>
   </entry>
   <entry>
+    <title>仅作笔记用：PS 添加参考线，以像素为单位</title>
+    <url>/cms//archivers/176.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在 PhotoShop 中添加参考线时，对话框默认填入的数值单位为“厘米”。</p>
+<p>如果要使用像素单位的数值，直接在这个输入框中填入数字 + “像素”两个字，就可以以像素为单位添加参考线。这样就不需要按照 DPI 计算成厘米单位的数值了（图片来源：脚本之家）。</p>
+<p><img src="https://images.weserv.nl/?url=https://picx.zhimg.com/v2-fef651e4b0cc584d60ad39408623a4e9_r.jpg" alt="" /></p>
+<link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>Other</category>
+      </categories>
+  </entry>
+  <entry>
     <title>仅作笔记用：安卓系统提前运行小花仙互通微端的临时方案，本地运行，不借助云电脑</title>
     <url>/cms//archivers/175.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>这只是官方未推出移动端之前的在手机上游玩小花仙互通版的临时方案，鄙人当然还是推荐等一等官方推出的移动端。关于怎么把游戏传到手机上，先在电脑上把互通微端下载下来，不要安装，用 7-zip 等解压缩工具强行打开，里面有一个 <code>app.7z</code>，打开这个 7z，然后此时不要选中任何条目，点击工具栏上的提取或者解压到，找一个地方新建文件夹然后解压到这个新建的文件夹里面。</p>
@@ -591,8 +602,8 @@ no stylization, true-to-reference color and design, 1:1 scale.</p>
 <p><img src="https://picx.zhimg.com/80/v2-e25c6799f10a84b1d69ce967482b1abd.png" alt="" /></p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>AIGC</category>
         <category>PowerShell</category>
+        <category>AIGC</category>
       </categories>
   </entry>
   <entry>
