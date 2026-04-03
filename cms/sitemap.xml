@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.moe/cms/archivers/156.html</loc>
+    
+    <lastmod>2026-04-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/archivers/166.html</loc>
     
     <lastmod>2026-04-03</lastmod>
@@ -292,13 +299,6 @@
     <loc>https://no5972.moe/cms/archivers/144.html</loc>
     
     <lastmod>2024-02-22</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/156.html</loc>
-    
-    <lastmod>2023-12-11</lastmod>
     
   </url>
   
@@ -1290,13 +1290,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/index.html</loc>
-    
-    <lastmod>2021-04-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/zh-CN/about.html</loc>
     
     <lastmod>2021-04-26</lastmod>
@@ -1305,6 +1298,13 @@
   
   <url>
     <loc>https://no5972.moe/cms/about/index.html</loc>
+    
+    <lastmod>2021-04-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/categories/index.html</loc>
     
     <lastmod>2021-04-26</lastmod>
     
@@ -1371,14 +1371,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
+    <loc>https://no5972.moe/cms/categories/Automation/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Automation/</loc>
+    <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1434,14 +1434,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/AIGC/</loc>
+    <loc>https://no5972.moe/cms/categories/PowerShell/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/PowerShell/</loc>
+    <loc>https://no5972.moe/cms/categories/AIGC/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

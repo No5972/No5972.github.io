@@ -441,9 +441,9 @@
     <link href="https://no5972.moe/cms/archivers/156.html"/>
     <id>https://no5972.moe/cms/archivers/156.html</id>
     <published>2023-12-11T02:00:00.000Z</published>
-    <updated>2023-12-11T02:30:27.842Z</updated>
+    <updated>2026-04-03T02:32:57.230Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>近期注意到因误操作将屏幕缩放设置为 500% 后无法还原的情况，因为网上有人提出此问题，而其他人尝试复现时也无法解决了，这里给出一种可能的解决办法。</p><p><strong>因为不同人的分辨率是不一样的，有些电脑分辨率设置的不高，如果低于 900P 的话有可能界面是显示不完整的，此时无法使用鼠标操作，所以还是要全程使用键盘。</strong></p><p>Win11 系统下按 Win + I 键打开设置。等待出现窗口界面，然后按回车键展开菜单，按一下 Tab 键将焦点定位到搜索框，输入 scale，然后按“下方向键”，再按回车键。在这里按 9 次 Tab 键，将焦点框框住“关闭自定义缩放并注销”然后按回车键。重新登录即可恢复原始的 100% 缩放。</p><p>按键顺序是 Win + I，等待出现设置窗口界面，Enter，Tab，s，c，a，l，e，下方向键，Enter，Tab，Tab，Tab，Tab，Tab，Tab，Tab，Tab，Tab，Enter，然后重新登录。</p><p>此法适用于 Windows 11 23H2 版本。</p><hr /><p>Win10 系统下按 Win + I 键打开设置。等待出现窗口界面，然后直接输入 scale，按两次“下方向键”，再按回车键。在这里按 4 次 Tab 键，将焦点框框住“关闭自定义缩放并注销”然后按回车键。重新登录即可恢复原始的 100% 缩放。</p><p>按键顺序是 Win + I，等待出现设置窗口界面，s，c，a，l，e，下方向键，下方向键，Enter，Tab，Tab，Tab，Tab，Enter，然后重新登录。</p><p>此法适用于 Windows 10 19045.3693 版本。</p><p>没有这样设置缩放的电脑就不要轻易这样尝试了，毕竟这影响电脑使用。</p><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>近期注意到因误操作将屏幕缩放设置为 500% 后无法还原的情况，因为网上有人提出此问题，而其他人尝试复现时也无法解决了，这里给出一种可能的解决办法。</p><p><strong>因为不同人的分辨率是不一样的，有些电脑分辨率设置的不高，如果低于 900P 的话有可能界面是显示不完整的，此时无法使用鼠标操作，所以还是要全程使用键盘。</strong></p><p>Win11 系统下按 Win + I 键打开设置。等待出现窗口界面，然后按回车键展开菜单，按一下 Tab 键将焦点定位到搜索框，输入 scale，然后按“下方向键”，再按回车键。在这里按 9 次 Tab 键，将焦点框框住“关闭自定义缩放并注销”然后按回车键。重新登录即可恢复原始的 100% 缩放。</p><p>按键顺序是 Win + I，等待出现设置窗口界面，Enter，Tab，s，c，a，l，e，下方向键，Enter，Tab，Tab，Tab，Tab，Tab，Tab，Tab，Tab，Tab，Enter，然后重新登录。</p><p>此法适用于 Windows 11 23H2 版本。</p><hr /><p>Win10 系统下按 Win + I 键打开设置。等待出现窗口界面，然后直接输入 scale，按两次“下方向键”，再按回车键。在这里按 4 次 Tab 键，将焦点框框住“关闭自定义缩放并注销”然后按回车键。重新登录即可恢复原始的 100% 缩放。</p><p>按键顺序是 Win + I，等待出现设置窗口界面，s，c，a，l，e，下方向键，下方向键，Enter，Tab，Tab，Tab，Tab，Enter，然后重新登录。</p><p>此法适用于 Windows 10 19045.3693 版本。</p><div class="note danger"><p>没有这样设置缩放的电脑就不要轻易这样尝试了，毕竟这影响电脑使用。</p></div><link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
@@ -473,9 +473,9 @@
     </summary>
     
     
-      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
-    
       <category term="PowerShell" scheme="https://no5972.moe/cms/categories/PowerShell/"/>
+    
+      <category term="AIGC" scheme="https://no5972.moe/cms/categories/AIGC/"/>
     
     
   </entry>
