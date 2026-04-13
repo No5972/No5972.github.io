@@ -245,7 +245,7 @@ no stylization, true-to-reference color and design, 1:1 scale.</p>
 <p>鉴于豆包安装包现已增强了系统版本检测，本文步骤可能会比较复杂，如果读者看不懂的话，鄙人建议读者找一个身边懂电脑的朋友或者贵单位的信息部门，把本文交给他们，然后让他们指导读者来操作或者直接代为操作。</p>
 <h1 id="先上具体步骤"><a class="markdownIt-Anchor" href="#先上具体步骤"></a> 先上具体步骤：</h1>
 <p>一、下载并安装 VxKex NEXT 这个开源组件，可以在网上搜索这个开源组件的名字（注意找到正确的下载链接）。<br />
-二、从一个特殊的网页下载豆包离线版安装包（即在豆包桌面版的下载引导网页的网址后面加一串参数）：<a href="https://www.doubao.com/download/desktop?ug_apk_token=dnsqL" target="_blank" rel="noopener">https://www.doubao.com/download/desktop?ug_apk_token=dnsqL</a></p>
+二、从一个特殊的网页下载<strong>豆包离线版安装包</strong>（即在豆包桌面版的下载引导网页的网址后面加一串参数）：<a href="https://www.doubao.com/download/desktop?ug_apk_token=dnsqL" target="_blank" rel="noopener">https://www.doubao.com/download/desktop?ug_apk_token=dnsqL</a></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">?ug_apk_token&#x3D;dnsqL</span><br></pre></td></tr></table></figure>
 <p>然后将 <code>.exe</code> 格式的豆包安装包使用解压缩软件（7-Zip、WinRAR 等）直接解压出来。右键这个 <code>.exe</code> 的安装包文件，选择 7-Zip - 解压文件，或者带有 WinRAR 图标的“解压文件”，或者其他解压缩软件的选项，或者解压缩到什么什么目录的选项（不要选择解压缩到当前目录），指定一个尽可能干净的目录来解压。</p>
 <ul>
@@ -3502,8 +3502,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Web Building</category>
         <category>Automation</category>
+        <category>Web Building</category>
         <category>Github</category>
       </categories>
   </entry>
