@@ -30,6 +30,7 @@ jobs:
       run: |
         rm -rf ffdec
         cd xhxCover
+        tree ./
         find ./ -size -500k -exec rm {} \; || true
         mv -n *.png cover.png || true
         mv -n *.jpg cover.png || true
