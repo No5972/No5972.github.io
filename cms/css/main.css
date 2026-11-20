@@ -2917,7 +2917,7 @@ ul.breadcrumb li + li:last-child {
 }
 .post-title {
   text-align: left !important;
-  font-family: 'DIN-Bold', 'DFKai-SB', 'Kaiti', '楷体_GB2312', 'CCKT';
+  font-family: 'DIN-Bold', 'TW-Kai', 'DFKai-SB', 'Kaiti', '楷体_GB2312', 'CCKT';
 }
 .post-meta {
   text-align: left !important;
