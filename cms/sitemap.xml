@@ -1364,13 +1364,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>daily</changefreq>
@@ -1386,6 +1379,13 @@
   
   <url>
     <loc>https://no5972.moe/cms/categories/Other/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://no5972.moe/cms/categories/Moving-Away-from-Flash/</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
