@@ -184,8 +184,8 @@ body {
   background: var(--body-bg-color);
   color: var(--text-color);
   font-family: 'DIN-Bold', "PingFang SC", "Noto Serif CJK", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
-  font-language-override: "ZHT";
   font-size: 1em;
+  font-language-override: "ZHT";
   line-height: 2;
   transition: all 0.2s ease-in-out;
 }
@@ -195,7 +195,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'DIN-Bold', "PingFang SC", "Noto Serif CJK", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
+  font-language-override: "ZHT";
+  font-size: 1em;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
