@@ -1838,7 +1838,7 @@ pre code {
   z-index: 1500;
 }
 .post-body {
-  font-family: 'Times', 'DIN-Bold', "PingFang SC", "Noto Serif CJK", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
+  font-family: 'FreeSerif', 'DIN-Bold', "PingFang SC", "Noto Serif CJK", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2145,7 +2145,7 @@ pre code {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'Times', 'DIN-Bold', "PingFang SC", "Noto Serif CJK", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
+  font-family: 'FreeSerif', 'DIN-Bold', "PingFang SC", "Noto Serif CJK", "Noto Serif TC", "Noto Serif SC", "Simsun", serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
   text-align: center;
