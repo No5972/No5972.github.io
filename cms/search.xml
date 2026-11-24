@@ -26,7 +26,7 @@
   <entry>
     <title>2000 年的黑科技：将 EXE 文件转换成网页</title>
     <url>/cms//archivers/177.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<img src="https://img.shields.io/badge/%E7%94%B5%E8%84%91%E6%8A%A5-brightgreen" alt="电脑报" /></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/cms/assets/css/APlayer.min.css"><script src="/cms/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>来源：<img src="https://img.shields.io/badge/%E7%94%B5%E8%84%91%E6%8A%A5-%E9%99%88%E6%BB%A8%E4%BD%B3%20%E8%81%82%E8%BE%89-brightgreen" alt="电脑报" /></p>
 <p>HTML 网页文件是 Internet 运行的最基本形式，其中可嵌入图像、动画、flash、音频、视频等多媒体文件，借以组成绚丽多彩的网络世界。HTML 中可以嵌入众多的多媒体文件，能否嵌入可执行文件（exe、com）呢？回答是肯定的，但在 Tegosoft 工具软件出现以前，要将可执行文件嵌入到 HTML 文件中运行，必须手工编写复杂的程序，这对普遍的“菜鸟玩家”来说比登天还难。Tegosoft 通过 ActiveX 技术可以十分方便地将可执行文件嵌入到 HTML 文件中运行，Tegosoft 对可执行文件的嵌入并非像其他媒体文件一样是整体的移入，而是由 Tegosoft 生成一个含有 ActiveX 的 30KB 以上的调用程序，将这个调用程序整体嵌入到 HTML 中，而可执行文件及相关文件则由 Tegosoft 打成一个压缩包放在网站上，当嵌有 ActiveX 调用程序的 HTML 文件被浏览器解释时，再通过网络将压缩包中的数据传输至用户端执行。</p>
 <p>下面就结合将一个著名俄罗斯方块游戏文件 <code>tetris.exe</code>（109KB）“嵌入”网页的过程，介绍一下 Tegosoft 的使用。</p>
 <p>第一步：启动 Tegosoft，在出现初始界面后选 next 下一步按钮，进入如（图1）所示界面。填入欲“嵌入”网页的可执行文件所在目录及发布网站地址。</p>
@@ -637,8 +637,8 @@ no stylization, true-to-reference color and design, 1:1 scale.</p>
 <p><img src="https://picx.zhimg.com/80/v2-e25c6799f10a84b1d69ce967482b1abd.png" alt="" /></p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>PowerShell</category>
         <category>AIGC</category>
+        <category>PowerShell</category>
       </categories>
   </entry>
   <entry>
@@ -3530,8 +3530,8 @@ XSSF － 提供读写Microsoft Excel OOXML格式档案的功能。</p>
 <p>这样设置之后就可以在Github完成部署仓库提交之后通过配置的动作自动使Gitee也部署站点。</p>
 <link rel="stylesheet" href="/cms/css/spoiler.css" type="text/css"><script src="/cms/js/spoiler.js" type="text/javascript" async></script>]]></content>
       <categories>
-        <category>Automation</category>
         <category>Web Building</category>
+        <category>Automation</category>
         <category>Github</category>
       </categories>
   </entry>
