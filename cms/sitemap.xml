@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://no5972.moe/cms/archivers/175.html</loc>
+    
+    <lastmod>2026-11-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/archivers/177.html</loc>
     
     <lastmod>2026-11-24</lastmod>
@@ -45,13 +52,6 @@
   
   <url>
     <loc>https://no5972.moe/cms/archivers/176.html</loc>
-    
-    <lastmod>2026-11-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://no5972.moe/cms/archivers/175.html</loc>
     
     <lastmod>2026-11-24</lastmod>
     
@@ -1385,6 +1385,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.moe/cms/categories/Other/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/categories/Automation/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
@@ -1413,13 +1420,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Other/</loc>
-    <lastmod>2026-11-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/categories/Python/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
@@ -1441,14 +1441,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/AIGC/</loc>
+    <loc>https://no5972.moe/cms/categories/PowerShell/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/PowerShell/</loc>
+    <loc>https://no5972.moe/cms/categories/AIGC/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
