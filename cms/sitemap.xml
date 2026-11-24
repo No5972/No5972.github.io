@@ -1378,13 +1378,6 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
-    <lastmod>2026-11-24</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://no5972.moe/cms/categories/Other/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
@@ -1399,6 +1392,13 @@
   </url>
   
   <url>
+    <loc>https://no5972.moe/cms/categories/Web-Building/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://no5972.moe/cms/categories/Hardware/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
@@ -1406,14 +1406,14 @@
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/Github/</loc>
+    <loc>https://no5972.moe/cms/categories/C-C/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://no5972.moe/cms/categories/C-C/</loc>
+    <loc>https://no5972.moe/cms/categories/Github/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
